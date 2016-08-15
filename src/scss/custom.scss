@@ -241,8 +241,8 @@ $tenPx: 10px;
 }
 .nav_menu {
   float: left;
-  background: $primaryColor;
-  // @include linear-gradient(45deg, #fff, #60c347);
+  // background: $primaryColor;
+  @include linear-gradient(-45deg, #A2DB96, #22CCAA);
   border-bottom: 1px solid #D9DEE4;
   margin-bottom: 10px;
   width: 100%;
@@ -643,11 +643,6 @@ a:hover, a:focus {
 }
 .nav.side-menu> li.active > a {
   text-shadow: rgba(0, 0, 0, 0.25) 0 -1px 0;
-  // background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5b6479), color-stop(100%, #4c5566)), #686e78;
-  // background: -webkit-linear-gradient($sideMenuGradientTop,$sideMenuGradientBottom), #2A3F54;
-  // background: -moz-linear-gradient($sideMenuGradientTop,$sideMenuGradientBottom), #2A3F54;
-  // background: -o-linear-gradient($sideMenuGradientTop,$sideMenuGradientBottom), #2A3F54;
-  // background: linear-gradient($sideMenuGradientTop,$sideMenuGradientBottom), #2A3F54;
   @include linear-gradient();
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
@@ -1637,6 +1632,7 @@ span.right {
     background: $sidebarFooterABg;
     &:hover {
       background: $sidebarFooterAHaverBg;
+      color: #fff;
     }
   }
 }
