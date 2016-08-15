@@ -181,7 +181,7 @@
 
 .nav_menu {
   float: left;
-  background: #1ABB9C;
+  background: linear-gradient(-45deg, #A2DB96, #22CCAA);
   border-bottom: 1px solid #D9DEE4;
   margin-bottom: 10px;
   width: 100%;
@@ -1440,7 +1440,8 @@ span.right {
     color: #5A738E;
     background: #172D44; }
     .sidebar-footer a:hover {
-      background: #425567; }
+      background: #425567;
+      color: #fff; }
 
 /** top tiles  */
 .tile_count {
