@@ -1,49 +1,49 @@
-$bodyFontFamily: 微軟正黑體; //網站字體
-$colPadding: 10px;  //col padding
+$bodyFontFamily:Microsoft JhengHei, Helvetica, Arial, sans-serif, MingLiU;
+$colPadding: 10px;   
 
-$primaryColor: #1ABB9C;  //主色
-$contrastColor: #1bae92;  //輔助色
-$adornColor: #fff;  //點綴色
-$primaryBgColor: #F7F7F7;  //背景色
-$formBgColor: #fff;  //form背景色
+$primaryColor: #1ABB9C;   
+$contrastColor: #1bae92;   
+$adornColor: #fff;  
+$primaryBgColor: #F7F7F7;   
+$formBgColor: #fff;   
 
-$toggleTop: 12px;  //漢堡選單-padding-top
-$navLiAPadding: 9px 15px 8px;  //又上方選單-padding
+$toggleTop: 12px;   
+$navLiAPadding: 9px 15px 8px;   
 
 
-$pickerBgColor: #34495E;  //日期元件-背景色
-$pickerColor: #ECF0F1;  //日期元件-文字顏色
-$pickerTrBg: #213345;  //日期元件-星期區塊背景色
-$pickerFirstTrBg: #1ABB9C;  //日期元件-月份區塊背景色
+$pickerBgColor: #34495E;   
+$pickerColor: #ECF0F1;   
+$pickerTrBg: #213345;   
+$pickerFirstTrBg: #1ABB9C;   
 
-$sideMenuBg: #2A3F54;  //左邊選單-背景色
-$sideMenuColor: #E7E7E7;  //左邊選單-文字顏色
-$sideMenuGradientTop: #334556;  //左邊選單-active漸層(上)
-$sideMenuGradientBottom: #2C4257;  //左邊選單-active漸層(下)
+$sideMenuBg: #2A3F54;   
+$sideMenuColor: #E7E7E7;   
+$sideMenuGradientTop: #334556;   
+$sideMenuGradientBottom: #2C4257;   
 
-$sidebarFooterBg: #2A3F54;  //左邊選單-功能區背景色
-$sidebarFooterAColor: #5A738E;  //左邊選單-功能區文字顏色
-$sidebarFooterABg: #172D44;  //左邊選單-功能區連結背景色
-$sidebarFooterAHaverBg: #425567;  //左邊選單-功能區連結haver背景色
+$sidebarFooterBg: #2A3F54;   
+$sidebarFooterAColor: #5A738E;   
+$sidebarFooterABg: #172D44;   
+$sidebarFooterAHaverBg: #425567;   
 
-$tagBg: #1ABB9C;  //Input Tags-背景色
-$tagColor: #fff;  //Input Tags-文字顏色
-$tagCloseColor: #fff;  //Input Tags-叉叉顏色
+$tagBg: #1ABB9C;   
+$tagColor: #fff;   
+$tagCloseColor: #fff;   
 
-$switchColor: #26B99A;  //Switch-顏色
+$switchColor: #26B99A;   
 
-$btnSuccessBg: #26B99A;  //btn-success-背景顏色
-$btnSuccessBorder: 1px solid #169F85;  //btn-success-邊框
-$btnSuccessDisabledBg: #9EE0D2; //btn-success hover-背景顏色
-$btnSuccessDisabledBorder: 1px solid #A3D2C7; //btn-success hover-邊框
-$btnDisabledOpacity: .45;  //btn disabled-能見度
-$btnDisabledOpacityH: 1;  //btn disabled hover-能見度
+$btnSuccessBg: #26B99A;   
+$btnSuccessBorder: 1px solid #169F85;   
+$btnSuccessDisabledBg: #9EE0D2;  
+$btnSuccessDisabledBorder: 1px solid #A3D2C7;  
+$btnDisabledOpacity: .45;   
+$btnDisabledOpacityH: 1;   
 
-$btnDarkColor: #E9EDEF; //btn-dark-文字顏色
-$btnDarkBg: #4B5F71;  //btn-dark-背景顏色
-$btnDarkBorder: #364B5F;  //btn-dark-邊框顏色
-$btnDarkDisabledBg: #AEB7C0;  //btn-dark hover-背景顏色
-$btnDarkDisabledBorder: 1px solid #A7ACB3;  //btn-dark hover-邊框
+$btnDarkColor: #E9EDEF;  
+$btnDarkBg: #4B5F71;   
+$btnDarkBorder: #364B5F;  
+$btnDarkDisabledBg: #AEB7C0;   
+$btnDarkDisabledBorder: 1px solid #A7ACB3;  
 
 $tenPx: 10px;
 
@@ -54,7 +54,7 @@ $tenPx: 10px;
   background: linear-gradient($rotate, $topＣolor, $bottomColor);
 }
 
-.js-switch{  //Switch-顏色
+.js-switch{   
   color: $switchColor;
 }
 
