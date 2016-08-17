@@ -2,26 +2,31 @@ var webpack = require("webpack");
 var BowerWebpackPlugin = require('bower-webpack-plugin');
 var minimize = process.argv.indexOf('--minimize') !== -1;
 var plugins = [];
-if(minimize){
-    plugins.push(new webpack.optimize.UglifyJsPlugin({      include: /\.min\.js$/ , minimize: true }));
-}
-
 plugins.push(new BowerWebpackPlugin({
     modulesDirectories: ["vendors"],
     manifestFiles: "bower.json",
     excludes: /.*\.less/
 }));
 plugins.push(new webpack.ProvidePlugin({
-    $: "jquery",
-    jQuery: "jquery"
+            'window.jQuery': 'jquery',
+            'window.$': 'jquery',
+            jQuery:'jquery',
+            $:'jquery'
 }));
 
+if(minimize){
+    plugins.push(new webpack.optimize.UglifyJsPlugin({      include: /\.min\.js$/ , minimize: true }));
+}
+
+
+
 module.exports = {
-    entry: "./src/entry.js",
+    entry: "./src/vendors.js",
     output: {
         path: "./production/js/",
         filename: minimize ?"vendors.min.js": "vendors.js"
     },
+        devtool:'source-map',
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" },

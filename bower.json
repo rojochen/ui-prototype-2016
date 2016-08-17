@@ -20,11 +20,14 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "documentation"
+    "documentation",
+    "index.html"
   ],
   "devDependencies": {
     "jquery": "^2.2.3",
-    "angular": "1.5.6",
+    "angular": "1.5.8",
+    "angular-route":"1.5.8",
+    "angular-resource":"1.5.8",
     "bootstrap": "^3.3.6",
     "font-awesome": "fontawesome#^4.6.1",
     "fastclick": "^1.0.6",
@@ -78,10 +81,11 @@
     "DateJS": "^1.0.0-rc3",
     "flot.curvedlines": "^1.1.1",
     "flot.orderbars": "*",
-    "flot-spline": "^0.8.2"
+    "flot-spline": "^0.8.2",
+    "moment": "~2.14.1"
   },
   "resolutions": {
     "jquery": "^2.2.3",
     "fastclick": "^1.0.6"
-  }
+  } 
 }
