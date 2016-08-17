@@ -130,10 +130,10 @@
 	    __webpack_require__(136);
 	});
 	//angular module
-	!/* require.ensure */(function (require) {
-	     __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"angular-route\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	     __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"angular-resource\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	}(__webpack_require__));
+	__webpack_require__.e/* nsure */(2, function (require) {
+	     __webpack_require__(139);
+	     __webpack_require__(141);
+	});
 	
 	
 	
