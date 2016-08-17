@@ -15,6 +15,8 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <!--sweetAlert-->
+    <link href="../vendors/bootstrap-sweetalert/dist/sweetalert.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -697,131 +699,103 @@
                                 </ul>
                                 <div class="clearfix"></div>
                             </div>
+                            <div class="x_content">
+                                <p>Regular notifications</p>
+                                <button class="btn btn-default btn-primary sweet-10" onclick="_gaq.push(['_trackEvent', 'example, 'try', 'Primary']);">Primary</button>
+                                <button class="btn btn-default btn-info sweet-11" onclick="_gaq.push(['_trackEvent', 'example, 'try', 'Info']);">Info</button>
+                                <button class="btn btn-default btn-success sweet-12" onclick="_gaq.push(['_trackEvent', 'example, 'try', 'Success']);">Success</button>
+                                <button class="btn btn-default btn-warning sweet-13" onclick="_gaq.push(['_trackEvent', 'example, 'try', 'Warning']);">Warning</button>
+                                <button class="btn btn-default btn-danger sweet-14" onclick="_gaq.push(['_trackEvent', 'example, 'try', 'Danger']);">Danger</button>
+                            </div>
                         </div>
                     </div>
                     <!--sweetalert-->
-                    <div class="col-md-12 col-sm-6 col-xs-12">
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h2><i class="fa fa-bell"></i> Notifications <small>Styled & Custom notifications</small></h2>
-                                <ul class="nav navbar-right panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    <div class=" col-md-12 col-sm-6 col-xs-12 ">
+                        <div class="x_panel ">
+                            <div class="x_title ">
+                                <h2><i class="fa fa-bell "></i> Notifications <small>Styled & Custom notifications</small></h2>
+                                <ul class="nav navbar-right panel_toolbox ">
+                                    <li><a class="collapse-link "><i class="fa fa-chevron-up "></i></a>
                                     </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Settings 1</a>
+                                    <li class="dropdown ">
+                                        <a href="# " class="dropdown-toggle " data-toggle="dropdown " role="button " aria-expanded="false "><i class="fa fa-wrench "></i></a>
+                                        <ul class="dropdown-menu " role="menu ">
+                                            <li><a href="# ">Settings 1</a>
                                             </li>
-                                            <li><a href="#">Settings 2</a>
+                                            <li><a href="# ">Settings 2</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    <li><a class="close-link "><i class="fa fa-close "></i></a>
                                     </li>
                                 </ul>
-                                <div class="clearfix"></div>
+                                <div class="clearfix "></div>
                             </div>
-                            <div class="x_content">
+                            <div class="x_content ">
 
                                 <p>Regular notifications</p>
-                                <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Regular Success',
-                                  text: 'That thing that you were trying to do worked!',
-                                  type: 'success',
-                                  styling: 'bootstrap3'
-                              });">Success</button>
+                                <button class="btn btn-default source " onclick="new PNotify({ title: 'Regular Success', text: 'That thing that you were trying to do worked!', type: 'success', styling: 'bootstrap3' }); ">Success</button>
 
-                                <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'New Thing',
-                                  text: 'Just to let you know, something happened.',
-                                  type: 'info',
-                                  styling: 'bootstrap3'
-                              });">Info</button>
+                                <button class="btn btn-default source " onclick="new PNotify({ title: 'New Thing', text: 'Just to let you know, something happened.', type: 'info', styling: 'bootstrap3' }); ">Info</button>
 
-                                <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Regular Notice',
-                                  text: 'Check me out! I\'m a notice.',
-                                  styling: 'bootstrap3'
+                                <button class="btn btn-default source " onclick="new PNotify({ title: 'Regular Notice', text: 'Check me out! I\'m a notice. ',
+                                  styling: 'bootstrap3 '
                               });">Notice</button>
 
                                 <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Oh No!',
-                                  text: 'Something terrible happened.',
-                                  type: 'error',
-                                  styling: 'bootstrap3'
+                                  title: 'Oh No! ',
+                                  text: 'Something terrible happened. ',
+                                  type: 'error ',
+                                  styling: 'bootstrap3 '
                               });">Error</button>
 
                                 <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Oh No!',
-                                  text: 'Something terrible happened.',
-                                  type: 'info',
-                                  styling: 'bootstrap3',
-                                  addclass: 'dark'
+                                  title: 'Oh No! ',
+                                  text: 'Something terrible happened. ',
+                                  type: 'info ',
+                                  styling: 'bootstrap3 ',
+                                  addclass: 'dark '
                               });">Dark</button>
 
                                 <hr />
 
                                 <p>Sticky notifications.. these wont close unless user closes them.</p>
                                 <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Success',
-                                  text: 'Sticky success... I\'m not even gonna make a joke.',
-                                  type: 'success',
-                                  hide: false,
-                                  styling: 'bootstrap3'
-                              });">Success</button>
+                                  title: 'Sticky Success ',
+                                  text: 'Sticky success... I\ 'm not even gonna make a joke.', type: 'success', hide: false, styling: 'bootstrap3' }); ">Success</button>
 
 
-                                <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Info',
-                                  text: 'Sticky Info... I\'m not even gonna make a joke.',
-                                  type: 'info',
+                                <button class="btn btn-default source " onclick="new PNotify({ title: 'Sticky Info', text: 'Sticky Info... I\'m not even gonna make a joke. ',
+                                  type: 'info ',
                                   hide: false,
-                                  styling: 'bootstrap3'
+                                  styling: 'bootstrap3 '
                               });">Info</button>
 
 
                                 <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Warning',
-                                  text: 'Sticky Warning... I\'m not even gonna make a joke.',
-                                  hide: false,
-                                  styling: 'bootstrap3'
-                              });">Warning</button>
+                                  title: 'Sticky Warning ',
+                                  text: 'Sticky Warning... I\ 'm not even gonna make a joke.', hide: false, styling: 'bootstrap3' }); ">Warning</button>
 
 
-                                <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Danger',
-                                  text: 'Sticky Danger... I\'m not even gonna make a joke.',
-                                  type: 'error',
+                                <button class="btn btn-default source " onclick="new PNotify({ title: 'Sticky Danger', text: 'Sticky Danger... I\'m not even gonna make a joke. ',
+                                  type: 'error ',
                                   hide: false,
-                                  styling: 'bootstrap3'
+                                  styling: 'bootstrap3 '
                               });">Error</button>
 
 
                                 <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Success',
-                                  text: 'Sticky success... I\'m not even gonna make a joke.',
-                                  type: 'info',
-                                  hide: false,
-                                  styling: 'bootstrap3',
-                                  addclass: 'dark'
-                              });">Dark</button>
+                                  title: 'Sticky Success ',
+                                  text: 'Sticky success... I\ 'm not even gonna make a joke.', type: 'info', hide: false, styling: 'bootstrap3', addclass: 'dark' }); ">Dark</button>
 
                                 <hr/>
 
-                                <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Non-Blocking Notice',
-                                  type: 'info',
-                                  text: 'When you hover over me I\'ll fade to show the elements underneath. Feel free to click any of them just like I wasn\'t even here.',
-                                  nonblock: {
-                                      nonblock: true
-                                  },
-                                  styling: 'bootstrap3',
-                                  addclass: 'dark'
-                              });">Non-Blocking Notice</button>
+                                <button class="btn btn-default source " onclick="new PNotify({ title: 'Non-Blocking Notice', type: 'info', text: 'When you hover over me I\'ll fade to show the elements underneath. Feel free to click any of them just
+                                    like I wasn\ 't even here.', nonblock: { nonblock: true }, styling: 'bootstrap3', addclass: 'dark' }); ">Non-Blocking Notice</button>
 
                                 <hr />
 
-                                <div id="antoox">
+                                <div id="antoox ">
                                     <div>
                                         <div></div>
                                         <div></div>
@@ -830,38 +804,31 @@
 
                                 </div>
 
-                                <button class="btn btn-default source" onclick="new TabbedNotification({
-                                  title: 'Tabbed Notificat',
-                                  text: 'Sticky success... Raw denim you probably haven\'t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ',
-                                  type: 'success',
+                                <button class="btn btn-default source " onclick="new TabbedNotification({ title: 'Tabbed Notificat', text: 'Sticky success... Raw denim you probably haven\'t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                                    retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ',
+                                  type: 'success ',
                                   sound: false
                               })">Success</button>
 
                                 <button class="btn btn-default source" onclick="new TabbedNotification({
-                                  title: 'Tabbed Notificat',
-                                  text: 'Custom Info... Raw denim you probably haven\'t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.',
-                                  type: 'info',
-                                  sound: false
-                              })">Info</button>
+                                  title: 'Tabbed Notificat ',
+                                  text: 'Custom Info... Raw denim you probably haven\ 't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.', type:
+                                    'info', sound: false }) ">Info</button>
 
-                                <button class="btn btn-default source" onclick="new TabbedNotification({
-                                  title: 'Tabbed Notificat',
-                                  text: 'Custom Warning... Raw denim you probably haven\'t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ',
-                                  type: 'warning',
+                                <button class="btn btn-default source " onclick="new TabbedNotification({ title: 'Tabbed Notificat', text: 'Custom Warning... Raw denim you probably haven\'t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                                    retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ',
+                                  type: 'warning ',
                                   sound: false
                               })">Warning</button>
 
                                 <button class="btn btn-default source" onclick="new TabbedNotification({
-                                  title: 'Custom Notification error',
-                                  text: 'Custom Error... Raw denim you probably haven\'t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ',
-                                  type: 'error',
-                                  sound: false
-                              })">Error</button>
+                                  title: 'Custom Notification error ',
+                                  text: 'Custom Error... Raw denim you probably haven\ 't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ', type:
+                                    'error', sound: false }) ">Error</button>
 
-                                <button class="btn btn-default source" onclick="new TabbedNotification({
-                                  title: 'Tabbed notification dark',
-                                  text: 'Custom Dark... Raw denim you probably haven\'t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ',
-                                  type: 'dark',
+                                <button class="btn btn-default source " onclick="new TabbedNotification({ title: 'Tabbed notification dark', text: 'Custom Dark... Raw denim you probably haven\'t heard of them jean shorts Austin. Nesciunt tofu stumptown
+                                    aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ',
+                                  type: 'dark ',
                                   sound: false
                               })">Dark</button>
 
@@ -897,27 +864,26 @@
                   <div class="alert alert-success alert-dismissible fade in" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
-                    <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
-                  </div>
-                  <div class="alert alert-info alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                    <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good. </div>
+                                    <div class="alert alert-info alert-dismissible fade in" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
-                    <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
-                  </div>
-                  <div class="alert alert-warning alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                                        <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+                                    </div>
+                                    <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
-                    <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
-                  </div>
-                  <div class="alert alert-danger alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                                        <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+                                    </div>
+                                    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
-                    <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
-                  </div>
+                                        <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+                                    </div>
 
-                </div>
-              </div>
-            </div> -->
+                                </div>
+                            </div>
+                        </div> -->
 
 
 
@@ -1263,22 +1229,25 @@
     <script src="../vendors/pnotify/dist/pnotify.js"></script>
     <script src="../vendors/pnotify/dist/pnotify.buttons.js"></script>
     <script src="../vendors/pnotify/dist/pnotify.nonblock.js"></script>
-
+    <!--sweetAlet-->
+    <script src="../vendors/bootstrap-sweetalert/dist/sweetalert.js"></script>
+    <script></script>
+    </script>
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <script src=" ../build/js/custom.min.js "></script>
 
     <!-- PNotify -->
     <script>
         // $(document).ready(function() {
         //   new PNotify({
-        //     title: "PNotify",
-        //     type: "info",
-        //     text: "Welcome. Try hovering over me. You can click things behind me, because I'm non-blocking.",
+        //     title: "PNotify ",
+        //     type: "info ",
+        //     text: "Welcome. Try hovering over me. You can click things behind me, because I 'm non-blocking.",
         //     nonblock: {
         //         nonblock: true
         //     },
-        //     addclass: 'dark',
-        //     styling: 'bootstrap3',
+        //     addclass: 'dark ',
+        //     styling: 'bootstrap3 ',
         //     hide: false,
         //     before_close: function(PNotify) {
         //       PNotify.update({
@@ -1302,21 +1271,21 @@
             var cnt = 10;
 
             TabbedNotification = function(options) {
-                var message = "<div id='ntf" + cnt + "' class='text alert-" + options.type + "' style='display:none'><h2><i class='fa fa-bell'></i> " + options.title +
-                    "</h2><div class='close'><a href='javascript:;' class='notification_close'><i class='fa fa-close'></i></a></div><p>" + options.text + "</p></div>";
+                var message = "<div id='ntf " + cnt + " ' class='text alert- " + options.type + " ' style='display:none '><h2><i class='fa fa-bell '></i> " + options.title +
+                    "</h2><div class='close '><a href='javascript:; ' class='notification_close '><i class='fa fa-close '></i></a></div><p>" + options.text + "</p></div>";
 
-                if (!document.getElementById('custom_notifications')) {
-                    alert('doesnt exists');
+                if (!document.getElementById('custom_notifications ')) {
+                    alert('doesnt exists ');
                 } else {
-                    $('#custom_notifications ul.notifications').append("<li><a id='ntlink" + cnt + "' class='alert-" + options.type + "' href='#ntf" + cnt + "'><i class='fa fa-bell animated shake'></i></a></li>");
-                    $('#custom_notifications #notif-group').append(message);
+                    $('#custom_notifications ul.notifications ').append("<li><a id='ntlink " + cnt + " ' class='alert- " + options.type + " ' href='#ntf " + cnt + " '><i class='fa fa-bell animated shake '></i></a></li>");
+                    $('#custom_notifications #notif-group ').append(message);
                     cnt++;
                     CustomTabs(options);
                 }
             };
 
             CustomTabs = function(options) {
-                $('.tabbed_notifications > div').hide();
+                $('.tabbed_notifications> div').hide();
                 $('.tabbed_notifications > div:first-of-type').show();
                 $('#custom_notifications').removeClass('dsp_none');
                 $('.notifications a').click(function(e) {
@@ -1331,11 +1300,8 @@
                     $(target).show();
                 });
             };
-
             CustomTabs();
-
             var tabid = idname = '';
-
             $(document).on('click', '.notification_close', function(e) {
                 idname = $(this).parent().parent().attr("id");
                 tabid = idname.substr(-2);
@@ -1347,6 +1313,64 @@
         });
     </script>
     <!-- /Custom Notification -->
+    <!--sweetAlertJs-->
+    <script>
+      document.querySelector('.sweet-10').onclick = function(){
+        swal({
+          title: "Are you sure?",
+          text: "You will not be able to recover this imaginary file!",
+          type: "info",
+          showCancelButton: true,
+          confirmButtonClass: 'btn-primary',
+          confirmButtonText: 'Primary!'
+        });
+      };
+
+      document.querySelector('.sweet-11').onclick = function(){
+        swal({
+          title: "Are you sure?",
+          text: "You will not be able to recover this imaginary file!",
+          type: "info",
+          showCancelButton: true,
+          confirmButtonClass: 'btn-info',
+          confirmButtonText: 'Info!'
+        });
+      };
+
+      document.querySelector('.sweet-12').onclick = function(){
+        swal({
+          title: "Are you sure?",
+          text: "You will not be able to recover this imaginary file!",
+          type: "success",
+          showCancelButton: true,
+          confirmButtonClass: 'btn-success',
+          confirmButtonText: 'Success!'
+        });
+      };
+
+      document.querySelector('.sweet-13').onclick = function(){
+        swal({
+          title: "Are you sure?",
+          text: "You will not be able to recover this imaginary file!",
+          type: "warning",
+          showCancelButton: true,
+          confirmButtonClass: 'btn-warning',
+          confirmButtonText: 'Warning!'
+        });
+      };
+
+      document.querySelector('.sweet-14').onclick = function(){
+        swal({
+          title: "Are you sure?",
+          text: "You will not be able to recover this imaginary file!",
+          type: "error",
+          showCancelButton: true,
+          confirmButtonClass: 'btn-danger',
+          confirmButtonText: 'Danger!'
+        });
+      };
+    </script>
+    <!--sweetAlertJs-->
 </body>
 
 </html>
