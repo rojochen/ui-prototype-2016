@@ -24,7 +24,7 @@ $sideMenuGradientBottom: #2C4257;
 $sidebarFooterBg: #2A3F54;   
 $sidebarFooterAColor: #5A738E;   
 $sidebarFooterABg: #172D44;   
-$sidebarFooterAHaverBg: #425567;   
+$sidebarFooterAHoverBg: #425567;   
 
 $tagBg: #1ABB9C;   
 $tagColor: #fff;   
@@ -272,7 +272,7 @@ body .container.body .right_col {
 .nav-md .container.body .right_col {
   padding: 10px 20px 0;
   margin-left: 230px;
-  margin-bottom: 38px;
+  // margin-bottom: 38px;
 }
 .nav_title {
   width: 230px;
@@ -1637,7 +1637,7 @@ span.right {
     color: $sidebarFooterAColor;
     background: $sidebarFooterABg;
     &:hover {
-      background: $sidebarFooterAHaverBg;
+      background: $sidebarFooterAHoverBg;
       color: #fff;
     }
   }
@@ -1780,7 +1780,7 @@ h4.graph_title {
 /* *********  iconts-display  **************************** */
 
 .fontawesome-icon-list .fa-hover a:hover {
-  background-color: #ddd;
+  background-color: $primaryColor;
   color: #fff;
   text-decoration: none;
 }
@@ -2168,9 +2168,9 @@ button,
   padding: 3px 0;
   border: 1px solid #EFEFEF;
 }
-.input-group {
-  margin-bottom: 10px;
-}
+// .input-group {
+//   margin-bottom: 10px;
+// }
 .ln_solid {
   border-top: 1px solid #e5e5e5;
   color: #ffffff;
@@ -2527,7 +2527,7 @@ textarea:focus {
 }
 .bs-glyphicons li:hover {
   color: #fff;
-  background-color: #1ABB9C
+  background-color: $primaryColor
 }
 @media (min-width: 768px) {
   .bs-glyphicons {
