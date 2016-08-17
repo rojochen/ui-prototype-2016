@@ -7,9 +7,9 @@ $adornColor: #fff;
 $primaryBgColor: #F7F7F7;   
 $formBgColor: #fff;   
 
-$toggleTop: 12px;   
+$toggleTop: 10px;   
 $navLiAPadding: 9px 15px 8px;   
-
+$topNavLiAPadding: 6px 15px;
 
 $pickerBgColor: #34495E;   
 $pickerColor: #ECF0F1;   
@@ -24,7 +24,7 @@ $sideMenuGradientBottom: #2C4257;
 $sidebarFooterBg: #2A3F54;   
 $sidebarFooterAColor: #5A738E;   
 $sidebarFooterABg: #172D44;   
-$sidebarFooterAHaverBg: #425567;   
+$sidebarFooterAHoverBg: #425567;   
 
 $tagBg: #1ABB9C;   
 $tagColor: #fff;   
@@ -269,7 +269,7 @@ body .container.body .right_col {
 .nav-md .container.body .right_col {
   padding: 10px 20px 0;
   margin-left: 230px;
-  margin-bottom: 38px;
+  // margin-bottom: 38px;
 }
 .nav_title {
   width: 230px;
@@ -629,6 +629,9 @@ a:hover, a:focus {
   display: block;
   padding: $navLiAPadding;
 }
+.nav>li>a.user-profile, .nav>li>a.info-number {
+  padding: $topNavLiAPadding;
+}
 .nav.side-menu> li.current-page, .nav.side-menu> li.active {
   border-right: 5px solid $primaryColor;
 }
@@ -768,13 +771,13 @@ a:hover, a:focus {
 
 footer {
   background: #fff;
-  padding: $tenPx*1 $tenPx*2;
+  padding: 0 $tenPx*2 $tenPx*2-3;
   display: block;
-  position: fixed;
-  bottom: 0;
-  width: calc(100% - 230px);
   @media (min-width: 992px) {
     margin-left: $tenPx*23;
+  }
+  .pull-right {
+    transform: translateY(9px);
   }
 }
 
@@ -1631,7 +1634,7 @@ span.right {
     color: $sidebarFooterAColor;
     background: $sidebarFooterABg;
     &:hover {
-      background: $sidebarFooterAHaverBg;
+      background: $sidebarFooterAHoverBg;
       color: #fff;
     }
   }
@@ -1774,7 +1777,7 @@ h4.graph_title {
 /* *********  iconts-display  **************************** */
 
 .fontawesome-icon-list .fa-hover a:hover {
-  background-color: #ddd;
+  background-color: $primaryColor;
   color: #fff;
   text-decoration: none;
 }
@@ -2162,9 +2165,9 @@ button,
   padding: 3px 0;
   border: 1px solid #EFEFEF;
 }
-.input-group {
-  margin-bottom: 10px;
-}
+// .input-group {
+//   margin-bottom: 10px;
+// }
 .ln_solid {
   border-top: 1px solid #e5e5e5;
   color: #ffffff;
@@ -2521,7 +2524,7 @@ textarea:focus {
 }
 .bs-glyphicons li:hover {
   color: #fff;
-  background-color: #1ABB9C
+  background-color: $primaryColor
 }
 @media (min-width: 768px) {
   .bs-glyphicons {
