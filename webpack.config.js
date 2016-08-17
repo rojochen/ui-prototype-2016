@@ -26,7 +26,7 @@ module.exports = {
         path: "./production/js/",
         filename: minimize ?"vendors.min.js": "vendors.js"
     },
-        devtool:'source-map',
+    devtool:'source-map',
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" },
