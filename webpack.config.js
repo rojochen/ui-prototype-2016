@@ -15,16 +15,17 @@ plugins.push(new webpack.ProvidePlugin({
 }));
 
 if(minimize){
-    plugins.push(new webpack.optimize.UglifyJsPlugin({      include: /\.min\.js$/ , minimize: true }));
+    plugins.push(new webpack.optimize.UglifyJsPlugin({      exclude: /\.min\.js$/ , minimize: true }));
 }
 
 
 
 module.exports = {
-    entry: "./src/vendors.js",
+    entry: {"vendors":"./src/vendors.js"},
     output: {
-        path: "./production/js/",
-        filename: minimize ?"vendors.min.js": "vendors.js"
+        path: "./production/js/vendors/",
+        filename: minimize ?"[name].min.js": "[name].js",
+        chunkFilename: "vendors.chunk.js"
     },
     devtool:'source-map',
     module: {
