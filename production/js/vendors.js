@@ -127,12 +127,12 @@
 	    __webpack_require__(135);
 	    __webpack_require__(9);
 	 
-	    __webpack_require__(136);
+	    __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../build/js/custom.min.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	});
 	//angular module
 	__webpack_require__.e/* nsure */(2, function (require) {
-	     __webpack_require__(139);
-	     __webpack_require__(141);
+	     __webpack_require__(138);
+	     __webpack_require__(140);
 	});
 	
 	
