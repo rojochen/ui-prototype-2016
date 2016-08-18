@@ -31,12 +31,11 @@ var jqueryGroup = require.ensure(['../vendors/jquery/dist/jquery.min.js', '../ve
     require('../vendors/bootstrap-daterangepicker/daterangepicker.js');
  
     require('../build/js/custom.min.js');
-});
-//angular module
-require.ensure(['angular'], function (require) {
-     require('angular-route');
+     require('angular');
+         require('angular-route');
      require('angular-resource');
 });
+ 
 
 
 
