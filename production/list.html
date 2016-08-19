@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -9,14 +10,8 @@
 
     <title>New Prototype</title>
 
-    <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- jQuery custom content scroller -->
-    <link href="../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+    <!-- framework style -->
+    <link href="../production/css/style.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -25,7 +20,7 @@
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-        <div class="col-md-3 left_col menu_fixed">
+        <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
               <a href="index.html" class="site_title">
@@ -227,7 +222,7 @@
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
-                          登入店組當日已啟用門號(當天)，恭喜開通。...
+                          登入店組當日已啟用門號(當天)，恭喜開通。... 
                         </span>
                       </a>
                     </li>
@@ -239,7 +234,7 @@
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
-                          登入店組當日已啟用門號(當天)，恭喜開通。...
+                          登入店組當日已啟用門號(當天)，恭喜開通。... 
                         </span>
                       </a>
                     </li>
@@ -251,7 +246,7 @@
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
-                          登入店組當日已啟用門號(當天)，恭喜開通。...
+                          登入店組當日已啟用門號(當天)，恭喜開通。... 
                         </span>
                       </a>
                     </li>
@@ -263,7 +258,7 @@
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
-                          登入店組當日已啟用門號(當天)，恭喜開通。...
+                          登入店組當日已啟用門號(當天)，恭喜開通。... 
                         </span>
                       </a>
                     </li>
@@ -288,10 +283,83 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>固定側邊欄 <small> <code>新增class="<strong>menu_fixed</strong>"</code></small></h3>
+                <h3>待辦事項</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="搜尋">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <div class="clearfix"></div>
+
+
+            <!-- Start to do list -->
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>待辦事項</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">設定 1</a>
+                        </li>
+                        <li><a href="#">設定 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+
+                  <div class="">
+                    <ul class="to_do">
+                      <li>
+                        <p>
+                          <input type="checkbox" class="flat"> 與新客戶的進度會議 </p>
+                      </li>
+                      <li>
+                        <p>
+                          <input type="checkbox" class="flat"> 創建新人的email信箱</p>
+                      </li>
+                      <li>
+                        <p>
+                          <input type="checkbox" class="flat"> 購買新影印機X台</p>
+                      </li>
+                      <li>
+                        <p>
+                          <input type="checkbox" class="flat"> 備份專案資料</p>
+                      </li>
+                      <li>
+                        <p>
+                          <input type="checkbox" class="flat"> 準備新人教育訓練</p>
+                      </li>
+                      <li>
+                        <p>
+                          <input type="checkbox" class="flat"> 新專案進度諮詢</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End to do list -->
+
           </div>
+          <div class="clearfix"></div>
         </div>
         <!-- /page content -->
 
@@ -306,6 +374,13 @@
       </div>
     </div>
 
+    <div id="custom_notifications" class="custom-notifications dsp_none">
+      <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+      </ul>
+      <div class="clearfix"></div>
+      <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
+
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -314,10 +389,62 @@
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- jQuery custom content scroller -->
-    <script src="../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
+
+    <!-- Custom Notification -->
+    <script>
+      $(document).ready(function() {
+        var cnt = 10;
+
+        TabbedNotification = function(options) {
+          var message = "<div id='ntf" + cnt + "' class='text alert-" + options.type + "' style='display:none'><h2><i class='fa fa-bell'></i> " + options.title +
+            "</h2><div class='close'><a href='javascript:;' class='notification_close'><i class='fa fa-close'></i></a></div><p>" + options.text + "</p></div>";
+
+          if (!document.getElementById('custom_notifications')) {
+            alert('doesnt exists');
+          } else {
+            $('#custom_notifications ul.notifications').append("<li><a id='ntlink" + cnt + "' class='alert-" + options.type + "' href='#ntf" + cnt + "'><i class='fa fa-bell animated shake'></i></a></li>");
+            $('#custom_notifications #notif-group').append(message);
+            cnt++;
+            CustomTabs(options);
+          }
+        };
+
+        CustomTabs = function(options) {
+          $('.tabbed_notifications > div').hide();
+          $('.tabbed_notifications > div:first-of-type').show();
+          $('#custom_notifications').removeClass('dsp_none');
+          $('.notifications a').click(function(e) {
+            e.preventDefault();
+            var $this = $(this),
+              tabbed_notifications = '#' + $this.parents('.notifications').data('tabbed_notifications'),
+              others = $this.closest('li').siblings().children('a'),
+              target = $this.attr('href');
+            others.removeClass('active');
+            $this.addClass('active');
+            $(tabbed_notifications).children('div').hide();
+            $(target).show();
+          });
+        };
+
+        CustomTabs();
+
+        var tabid = idname = '';
+
+        $(document).on('click', '.notification_close', function(e) {
+          idname = $(this).parent().parent().attr("id");
+          tabid = idname.substr(-2);
+          $('#ntf' + tabid).remove();
+          $('#ntlink' + tabid).parent().remove();
+          $('.notifications a').first().addClass('active');
+          $('#notif-group div').first().css('display', 'block');
+        });
+      });
+    </script>
+    <!-- /Custom Notification -->
   </body>
 </html>

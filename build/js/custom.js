@@ -33,6 +33,7 @@
     jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
 })(jQuery,'smartresize');
+
 /**
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -285,3 +286,12 @@ if (typeof NProgress != 'undefined') {
         NProgress.done();
     });
 }
+//load vendors js export vendors.min.js
+//copy to production/js/vendors.min.js
+//load vendors js export vendors.min.css 
+//copy to production/css/vendors.min.css
+//transfer TS to JS in app/
+//load app/* js export app.min.js 
+//copy to production/js/app.min.js ->for module
+//transfer SCSS to CSS in src/css
+//copy to production/css/app.min.css
