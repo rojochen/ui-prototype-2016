@@ -4,4 +4,4 @@ node_modules
 .sass-cache
 build
 vendors
-production/js/vendors
+
