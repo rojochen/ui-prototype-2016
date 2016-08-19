@@ -3,6 +3,6 @@ npm-debug.log
 node_modules
 .sass-cache
 build
-
+vendors
 production/js/vendors
-
+vendors/Flot
