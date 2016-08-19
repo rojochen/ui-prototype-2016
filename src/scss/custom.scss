@@ -73,7 +73,7 @@ $tenPx: 10px;
 
 
 
-.left_col {  //左方選單
+.left_col {  
   background: $sideMenuBg;
 }
 
@@ -766,7 +766,7 @@ a:hover, a:focus {
 
 
 
-.toggle {  //漢堡選單
+.toggle {  
   float: left;
   margin: 0;
   padding-top: $toggleTop;
@@ -1303,7 +1303,7 @@ span.right {
   font-size: 14px !important
 }
 
-.sidebar-footer {  //左下方選單
+.sidebar-footer {  
   bottom: 0px;
   clear: both;
   display: block;
@@ -4012,7 +4012,7 @@ ul.notifications {
   padding-bottom: 10px;
 }
 
-.daterangepicker.picker_1 {  //日期選單
+.daterangepicker.picker_1 {  
   background: $pickerBgColor;
   color: $pickerColor;
   table.table-condensed {

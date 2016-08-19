@@ -21,7 +21,7 @@ if(minimize){
 
 
 module.exports = {
-    entry: {"vendors":"./src/vendors.js"},
+    entry: {"vendors":"./src/config/vendors.js"},
     output: {
         path: "./production/js/vendors/",
         filename: minimize ?"[name].min.js": "[name].js",
