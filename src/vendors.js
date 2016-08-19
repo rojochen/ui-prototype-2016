@@ -30,7 +30,7 @@ var jqueryGroup = require.ensure(['../vendors/jquery/dist/jquery.min.js', '../ve
     require('../vendors/moment/min/moment.min.js');
     require('../vendors/bootstrap-daterangepicker/daterangepicker.js');
  
-    require('../build/js/custom.min.js');
+    // require('../build/js/custom.min.js');
      require('angular');
          require('angular-route');
      require('angular-resource');
