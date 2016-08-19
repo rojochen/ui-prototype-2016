@@ -5,7 +5,7 @@ var jqueryGroup = require.ensure(['../vendors/jquery/dist/jquery.min.js', '../ve
     require('../vendors/nprogress/nprogress.js');
     require('bootstrap-daterangepicker');
     require('../vendors/bootstrap-progressbar/bootstrap-progressbar.js');
-    require('../vendors/Chart.js/dist/Chart.min.js');
+    // require('../vendors/Chart.js/dist/Chart.min.js');
     require('../vendors/gauge.js/dist/gauge.min.js');
 
     require('../vendors/iCheck/icheck.min.js');
