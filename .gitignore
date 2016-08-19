@@ -5,4 +5,4 @@ node_modules
 build
 vendors
 production/js/vendors
-vendors/Flot
+
