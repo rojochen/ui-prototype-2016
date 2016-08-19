@@ -69,22 +69,28 @@ $(document).ready(function() {
 
     $SIDEBAR_MENU.find('a').on('click', function(ev) {
         var $li = $(this).parent();
+        var $slideUpTime = 300;
+        if ($BODY.hasClass('nav-md')) {
+            $slideUpTime = 300;
+        } else {
+            $slideUpTime = 0;
+        }
 
         if ($li.is('.active')) {
             $li.removeClass('active active-sm');
-            $('ul:first', $li).slideUp(function() {
+            $('ul:first', $li).slideUp($slideUpTime, function() {
                 setContentHeight();
             });
         } else {
             // prevent closing menu if we are on child menu
             if (!$li.parent().is('.child_menu')) {
                 $SIDEBAR_MENU.find('li').removeClass('active active-sm');
-                $SIDEBAR_MENU.find('li ul').slideUp();
+                $SIDEBAR_MENU.find('li ul').slideUp($slideUpTime);
             }
             
             $li.addClass('active');
 
-            $('ul:first', $li).slideDown(function() {
+            $('ul:first', $li).slideDown($slideUpTime, function() {
                 setContentHeight();
             });
         }
@@ -176,14 +182,16 @@ if ($(".progress .progress-bar")[0]) {
 
 // Switchery
 $(document).ready(function() {
+    var switchColor = $('.js-switch').css('color');
     if ($(".js-switch")[0]) {
         var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
         elems.forEach(function (html) {
             var switchery = new Switchery(html, {
-                color: '#26B99A'
+                color: switchColor  //#26B99A
             });
         });
     }
+    
 });
 // /Switchery
 
