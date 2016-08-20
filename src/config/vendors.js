@@ -1,6 +1,7 @@
 
 
-var jqueryGroup = require.ensure(['../../vendors/jquery/dist/jquery.min.js', '../../vendors/bootstrap/dist/js/bootstrap.min.js'], function (require) {
+ require('../../vendors/jquery/dist/jquery.min.js');
+ require('../../vendors/bootstrap/dist/js/bootstrap.min.js');
     require('../../vendors/fastclick/lib/fastclick.js');
     require('../../vendors/nprogress/nprogress.js');
     require('bootstrap-daterangepicker');
@@ -30,12 +31,11 @@ var jqueryGroup = require.ensure(['../../vendors/jquery/dist/jquery.min.js', '..
     require('../../vendors/moment/min/moment.min.js');
     require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
  
-    // require('../../build/js/custom.min.js');
+    require('../../build/js/custom.min.js');
+   //     require('../js/helpers/smartresize.js');
+    //require('../js/custom.js');
      require('angular');
-         require('angular-route');
+    // require('angular-route');
      require('angular-resource');
-});
- 
-
-
-
+      require('../../src/scss/custom.scss');
+      //@import "../../src/scss/custom.scss";
