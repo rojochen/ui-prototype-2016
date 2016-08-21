@@ -28,7 +28,7 @@
     require('../../vendors/jqvmap/dist/maps/jquery.vmap.world.js');
     require('../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js');
 
-    require('../../vendors/moment/min/moment.min.js');
+ 
     require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
  
     require('../../build/js/custom.min.js');
@@ -37,5 +37,5 @@
      require('angular');
     // require('angular-route');
      require('angular-resource');
-      require('../../src/scss/custom.scss');
+      //require('../../src/scss/custom.scss');
       //@import "../../src/scss/custom.scss";

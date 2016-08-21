@@ -2,6 +2,7 @@ var webpack = require("webpack");
 var BowerWebpackPlugin = require('bower-webpack-plugin');
 var minimize = process.argv.indexOf('--minimize') !== -1;
 var plugins = [];
+var jquery = require('./vendors/jquery/dist/jquery.min.js');
 plugins.push(new BowerWebpackPlugin({
     modulesDirectories: ["vendors"],
     manifestFiles: "bower.json",
@@ -14,23 +15,26 @@ plugins.push(new webpack.ProvidePlugin({
             $:'jquery'
 }));
 
-if(minimize){
-    plugins.push(new webpack.optimize.UglifyJsPlugin({      exclude: /\.min\.js$/ , minimize: true }));
-}
+ 
+plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /\.min\.js$/ , minimize: true }));
 
-
-
+console.log();
 module.exports = {
-    entry: {"vendors":"./src/config/vendors.js"},
+    context: __dirname ,
+    entry: {"vendors":__dirname+ "/src/config/vendors.js",'style':__dirname+ "/src/config/style.js"},
     output: {
-        path: "./production/js/vendors/",
-        filename: minimize ?"[name].min.js": "[name].js",
-        chunkFilename: "vendors.chunk.js"
+        path: "./production/js/",
+        filename:  "[name].js",
+        
     },
     devtool:'source-map',
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" },
+            {
+             test: /\.scss$/,
+             loaders: ["style", "css", "sass"]
+            },
             { test: /\.(woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=[name].[ext]" }
         ]
     },
