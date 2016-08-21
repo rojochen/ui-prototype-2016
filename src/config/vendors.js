@@ -12,17 +12,17 @@
     require('../../vendors/iCheck/icheck.min.js');
     require('../../vendors/skycons/skycons.js');
 
-    require('../../vendors/Flot/jquery.flot.js');
-    require('../../vendors/Flot/jquery.flot.pie.js');
-    require('../../vendors/Flot/jquery.flot.time.js');
-    require('../../vendors/Flot/jquery.flot.stack.js');
-    require('../../vendors/Flot/jquery.flot.resize.js');
+    // require('../../vendors/Flot/jquery.flot.js');
+    // require('../../vendors/Flot/jquery.flot.pie.js');
+    // require('../../vendors/Flot/jquery.flot.time.js');
+    // require('../../vendors/Flot/jquery.flot.stack.js');
+    // require('../../vendors/Flot/jquery.flot.resize.js');
 
-    require('../../vendors/flot.orderbars/js/jquery.flot.orderBars.js');
-    require('../../vendors/flot-spline/js/jquery.flot.spline.min.js');
-    require('../../vendors/flot.curvedlines/curvedLines.js');
+    // require('../../vendors/flot.orderbars/js/jquery.flot.orderBars.js');
+    // require('../../vendors/flot-spline/js/jquery.flot.spline.min.js');
+    // require('../../vendors/flot.curvedlines/curvedLines.js');
 
-    require('../../vendors/DateJS/build/date.js');
+    // require('../../vendors/DateJS/build/date.js');
 
     require('../../vendors/jqvmap/dist/jquery.vmap.js');
     require('../../vendors/jqvmap/dist/maps/jquery.vmap.world.js');
