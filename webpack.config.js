@@ -23,9 +23,9 @@ module.exports = {
     context: __dirname ,
     entry: {"vendors":__dirname+ "/src/config/vendors.js",'style':__dirname+ "/src/config/style.js"},
     output: {
-        path: "./production/js/",
+        path: "./production/assets/",
         filename:  "[name].js",  
-        publicPath:'./js/'      
+        publicPath:'./assets/'      
     },
     devtool:'source-map',
     module: {
