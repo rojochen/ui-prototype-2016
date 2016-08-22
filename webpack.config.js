@@ -16,7 +16,7 @@ plugins.push(new webpack.ProvidePlugin({
 }));
 
  
-//plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /\.min\.js$/ , minimize: true }));
+plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /\.min\.js$/ , minimize: true }));
 
 console.log();
 module.exports = {
