@@ -943,34 +943,324 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="item">
-                                        <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojN2E3YTdhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+">
-                                        <div class="container">
-                                            <div class="carousel-caption">
-                                                <h1>Example headline.</h1>
-                                                <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                                            </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped jambo_table bulk_action">
+                                                <thead>
+                                                    <tr class="headings">
+                                                        <th>
+                                                            <input type="checkbox" id="check-all" class="flat">
+                                                        </th>
+                                                        <th class="column-title">Invoice </th>
+                                                        <th class="column-title">Invoice Date </th>
+                                                        <th class="column-title">Order </th>
+                                                        <th class="column-title">Bill to Name </th>
+                                                        <th class="column-title">Status </th>
+                                                        <th class="column-title">Amount </th>
+                                                        <th class="column-title no-link last"><span class="nobr">Action</span>
+                                                        </th>
+                                                        <th class="bulk-actions" colspan="7">
+                                                            <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="even pointer">
+                                                        <td class="a-center ">
+                                                            <input type="checkbox" class="flat" name="table_records">
+                                                        </td>
+                                                        <td class=" ">121000040</td>
+                                                        <td class=" ">May 23, 2014 11:47:56 PM </td>
+                                                        <td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
+                                                        <td class=" ">John Blank L</td>
+                                                        <td class=" ">Paid</td>
+                                                        <td class="a-right a-right ">$7.45</td>
+                                                        <td class=" last"><a href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="odd pointer">
+                                                        <td class="a-center ">
+                                                            <input type="checkbox" class="flat" name="table_records">
+                                                        </td>
+                                                        <td class=" ">121000039</td>
+                                                        <td class=" ">May 23, 2014 11:30:12 PM</td>
+                                                        <td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+                                                        </td>
+                                                        <td class=" ">John Blank L</td>
+                                                        <td class=" ">Paid</td>
+                                                        <td class="a-right a-right ">$741.20</td>
+                                                        <td class=" last"><a href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="even pointer">
+                                                        <td class="a-center ">
+                                                            <input type="checkbox" class="flat" name="table_records">
+                                                        </td>
+                                                        <td class=" ">121000038</td>
+                                                        <td class=" ">May 24, 2014 10:55:33 PM</td>
+                                                        <td class=" ">121000203 <i class="success fa fa-long-arrow-up"></i>
+                                                        </td>
+                                                        <td class=" ">Mike Smith</td>
+                                                        <td class=" ">Paid</td>
+                                                        <td class="a-right a-right ">$432.26</td>
+                                                        <td class=" last"><a href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="odd pointer">
+                                                        <td class="a-center ">
+                                                            <input type="checkbox" class="flat" name="table_records">
+                                                        </td>
+                                                        <td class=" ">121000037</td>
+                                                        <td class=" ">May 24, 2014 10:52:44 PM</td>
+                                                        <td class=" ">121000204</td>
+                                                        <td class=" ">Mike Smith</td>
+                                                        <td class=" ">Paid</td>
+                                                        <td class="a-right a-right ">$333.21</td>
+                                                        <td class=" last"><a href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="even pointer">
+                                                        <td class="a-center ">
+                                                            <input type="checkbox" class="flat" name="table_records">
+                                                        </td>
+                                                        <td class=" ">121000040</td>
+                                                        <td class=" ">May 24, 2014 11:47:56 PM </td>
+                                                        <td class=" ">121000210</td>
+                                                        <td class=" ">John Blank L</td>
+                                                        <td class=" ">Paid</td>
+                                                        <td class="a-right a-right ">$7.45</td>
+                                                        <td class=" last"><a href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="odd pointer">
+                                                        <td class="a-center ">
+                                                            <input type="checkbox" class="flat" name="table_records">
+                                                        </td>
+                                                        <td class=" ">121000039</td>
+                                                        <td class=" ">May 26, 2014 11:30:12 PM</td>
+                                                        <td class=" ">121000208 <i class="error fa fa-long-arrow-down"></i>
+                                                        </td>
+                                                        <td class=" ">John Blank L</td>
+                                                        <td class=" ">Paid</td>
+                                                        <td class="a-right a-right ">$741.20</td>
+                                                        <td class=" last"><a href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="even pointer">
+                                                        <td class="a-center ">
+                                                            <input type="checkbox" class="flat" name="table_records">
+                                                        </td>
+                                                        <td class=" ">121000038</td>
+                                                        <td class=" ">May 26, 2014 10:55:33 PM</td>
+                                                        <td class=" ">121000203</td>
+                                                        <td class=" ">Mike Smith</td>
+                                                        <td class=" ">Paid</td>
+                                                        <td class="a-right a-right ">$432.26</td>
+                                                        <td class=" last"><a href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="odd pointer">
+                                                        <td class="a-center ">
+                                                            <input type="checkbox" class="flat" name="table_records">
+                                                        </td>
+                                                        <td class=" ">121000037</td>
+                                                        <td class=" ">May 26, 2014 10:52:44 PM</td>
+                                                        <td class=" ">121000204</td>
+                                                        <td class=" ">Mike Smith</td>
+                                                        <td class=" ">Paid</td>
+                                                        <td class="a-right a-right ">$333.21</td>
+                                                        <td class=" last"><a href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="even pointer">
+                                                        <td class="a-center ">
+                                                            <input type="checkbox" class="flat" name="table_records">
+                                                        </td>
+                                                        <td class=" ">121000040</td>
+                                                        <td class=" ">May 27, 2014 11:47:56 PM </td>
+                                                        <td class=" ">121000210</td>
+                                                        <td class=" ">John Blank L</td>
+                                                        <td class=" ">Paid</td>
+                                                        <td class="a-right a-right ">$7.45</td>
+                                                        <td class=" last"><a href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="odd pointer">
+                                                        <td class="a-center ">
+                                                            <input type="checkbox" class="flat" name="table_records">
+                                                        </td>
+                                                        <td class=" ">121000039</td>
+                                                        <td class=" ">May 28, 2014 11:30:12 PM</td>
+                                                        <td class=" ">121000208</td>
+                                                        <td class=" ">John Blank L</td>
+                                                        <td class=" ">Paid</td>
+                                                        <td class="a-right a-right ">$741.20</td>
+                                                        <td class=" last"><a href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNmE2YTZhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+U2Vjb25kIHNsaWRlPC90ZXh0Pjwvc3ZnPg==">
-                                        <div class="container">
-                                            <div class="carousel-caption">
-                                                <h1>Another example headline.</h1>
-                                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                                            </div>
-                                        </div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Username</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td>@fat</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">6</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">7</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">8</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">9</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">10</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">11</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
                                     </div>
                                     <div class="item active">
-                                        <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNWE1YTVhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+VGhpcmQgc2xpZGU8L3RleHQ+PC9zdmc+">
-                                        <div class="container">
-                                            <div class="carousel-caption">
-                                                <h1>One more for good measure.</h1>
-                                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                                            </div>
-                                        </div>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Username</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td>@fat</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">6</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">7</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">8</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">9</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">10</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">11</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
