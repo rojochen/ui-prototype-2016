@@ -37,5 +37,6 @@ require('../../build/js/custom.min.js');
 require('angular');
 require('../../vendors/angular-route/angular-route.min.js');
 require('angular-resource');
+ 
       //require('../../src/scss/custom.scss');
       //@import "../../src/scss/custom.scss";
