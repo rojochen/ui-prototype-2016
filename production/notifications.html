@@ -697,26 +697,33 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
-                            <p>SweetAlert1</p>
-                            <button class="btn btn-default btn-primary sweet">Primary</button>
+                            <p>MODAL TYPES</p>
+                            <button class="btn btn-default  sweet">Question</button>
                             <button class="btn btn-default btn-info sweet">Info</button>
                             <button class="btn btn-default btn-success sweet">Success</button>
                             <button class="btn btn-default btn-warning sweet">Warning</button>
                             <button class="btn btn-default btn-danger sweet">Danger</button>
                             <hr>
-                            <p>SweetAlret2</p>
-                            <button class="btn btn-default  sweet">預設</button>
-                            <button class="btn btn-default  sweet">Question</button>
-                            <button class="btn btn-default  sweet">Success</button>
-                            <button class="btn btn-default  sweet">定時關閉</button>
-                            <button class="btn btn-default  sweet">自訂Button</button>
-                            <button class="btn btn-default  sweet">自訂Div</button>
-                            <button class="btn btn-default  sweet">判斷按鈕1</button>
-                            <button class="btn btn-default  sweet">判斷按鈕2</button>
-                            <button class="btn btn-default  sweet">可放入圖片</button>
-                            <button class="btn btn-default  sweet">可設定背景</button>
+                            <p>Custom</p>
+                            <button class="btn btn-default  sweet">TimeOut</button>
+                            <button class="btn btn-default  sweet">CustomButton</button>
+                            <button class="btn btn-default  sweet">CustomDiv</button>
+                            <button class="btn btn-default  sweet">If/Else-1</button>
+                            <button class="btn btn-default  sweet">If/Else-2</button>
+                            <button class="btn btn-default  sweet">SetPicture</button>
+                            <button class="btn btn-default  sweet">SetBackgroundImage</button>
                             <button class="btn btn-default  sweet">Ajax</button>
-                            <button class="btn btn-default  sweet">下一步</button>
+                            <button class="btn btn-default  sweet">The next step</button>
+                            <hr>
+                            <p>Input</p>
+                            <button class="btn btn-default  sweet">InputText</button>
+                            <button class="btn btn-default  sweet">InputMail</button>
+                            <button class="btn btn-default  sweet">InputPassword</button>
+                            <button class="btn btn-default  sweet">InputTextarea</button>
+                            <button class="btn btn-default  sweet">InputSelect</button>
+                            <button class="btn btn-default  sweet">InputRadio</button>
+                            <button class="btn btn-default  sweet">InputCheckbox</button>
+                            <button class="btn btn-default  sweet">InputFile</button>
                         </div>
                     </div>
                 </div>
@@ -1379,6 +1386,8 @@
 </body>
 <!--sweetAlert-->
 <script src="../vendors/sweetalert2/dist/sweetalert2.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/es6-promise/latest/es6-promise.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/promise.prototype.finally/1.0.1/finally.js"></script>
 <script>
     $('.x_content .sweet').on('click', function() {
         var num = $(".x_content .sweet").index(this);
@@ -1386,11 +1395,11 @@
         switch (num) {
             case 0:
                 swal({
-                    type: 'info',
+                    type: 'question',
                     title: 'Are you sure?',
                     text: 'You will not be able to recover this imaginary file1!',
                     showCancelButton: true,
-                    confirmButtonText: 'Primary!'
+                    confirmButtonText: 'Question!'
                 }).done();
                 break;
             case 1:
@@ -1430,30 +1439,13 @@
                 }).done();
                 break;
             case 5:
-                swal('Any fool can use a computer').done();
-                break;
-            case 6:
-                swal(
-                    'The Internet?',
-                    'That thing is still around?',
-                    'question'
-                ).done();
-                break;
-            case 7:
-                swal(
-                    'Good job!',
-                    'You clicked the button!',
-                    'success'
-                ).done();
-                break;
-            case 8:
                 swal({
                     title: 'Auto close alert!',
                     text: 'I will close in 2 seconds.',
                     timer: 2000
                 }).done();
                 break;
-            case 9:
+            case 6:
                 swal({
                     title: '<i>HTML</i> <u>example</u>',
                     type: 'info',
@@ -1466,7 +1458,7 @@
                     cancelButtonText: '<i class="fa fa-thumbs-down"></i>'
                 }).done();
                 break;
-            case 10:
+            case 7:
                 swal({
                     title: 'jQuery HTML example',
                     html: $('<div>')
@@ -1474,7 +1466,7 @@
                         .text('jQuery is everywhere!!.')
                 }).done();
                 break;
-            case 11:
+            case 8:
                 swal({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -1491,7 +1483,7 @@
                     );
                 }).done();
                 break;
-            case 12:
+            case 9:
                 swal({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -1521,7 +1513,7 @@
                     }
                 }).done();
                 break;
-            case 13:
+            case 10:
                 swal({
                     title: 'Sweet!',
                     text: 'Modal with a custom image.',
@@ -1531,7 +1523,7 @@
                     animation: false
                 }).done();
                 break;
-            case 14:
+            case 11:
                 swal({
                     title: 'Custom width, padding, background.',
                     width: 600,
@@ -1539,7 +1531,7 @@
                     background: '#fff url(//bit.ly/1Nqn9HU)'
                 }).done();
                 break;
-            case 15:
+            case 12:
                 swal({
                     title: 'Submit email to run ajax request',
                     input: 'email',
@@ -1566,12 +1558,13 @@
                     });
                 }).done();
                 break;
-            case 16:
+            case 13:
                 swal.setDefaults({
                     confirmButtonText: 'Next &rarr;',
                     showCancelButton: true,
                     animation: false
                 });
+
                 var steps = [{
                         title: 'Step 1',
                         text: 'Chaining swal2 modals is easy'
@@ -1579,16 +1572,174 @@
                     'Step 2',
                     'Step 3'
                 ];
-                swal.queue(steps)
-                    .then(function() {
-                        swal({
-                            title: 'All done!',
-                            confirmButtonText: 'Lovely!',
-                            showCancelButton: false
-                        });
-                    }).finally(function() {
-                        swal.resetDefaults();
+
+                swal.queue(steps).then(function() {
+                    swal({
+                        title: 'All done!',
+                        confirmButtonText: 'Lovely!',
+                        showCancelButton: false
                     });
+                }).finally(function() {
+                    swal.resetDefaults();
+                }).done();
+                break;
+            case 14:
+                swal({
+                    title: 'Input something',
+                    input: 'text',
+                    showCancelButton: true,
+                    inputValidator: function(value) {
+                        return new Promise(function(resolve, reject) {
+                            if (value) {
+                                resolve();
+                            } else {
+                                reject('You need to write something!');
+                            }
+                        });
+                    }
+                }).then(function(result) {
+                    swal({
+                        type: 'success',
+                        html: 'You entered: ' + result
+                    });
+                })
+                break;
+            case 15:
+                swal({
+                    title: 'Input email address',
+                    input: 'email'
+                }).then(function(email) {
+                    swal({
+                        type: 'success',
+                        html: 'Entered email: ' + email
+                    });
+                })
+                break;
+            case 16:
+                swal({
+                    title: 'Enter your password',
+                    input: 'password',
+                    inputAttributes: {
+                        'maxlength': 10,
+                        'autocapitalize': 'off',
+                        'autocorrect': 'off'
+                    }
+                }).then(function(password) {
+                    if (password) {
+                        swal({
+                            type: 'success',
+                            html: 'Entered password: ' + password
+                        });
+                    }
+                })
+                break;
+            case 17:
+                swal({
+                    input: 'textarea',
+                    showCancelButton: true
+                }).then(function(text) {
+                    if (text) {
+                        swal(text);
+                    }
+                })
+                break;
+            case 18:
+                swal({
+                    title: 'Select Ukraine',
+                    input: 'select',
+                    inputOptions: {
+                        'SRB': 'Serbia',
+                        'UKR': 'Ukraine',
+                        'HRV': 'Croatia'
+                    },
+                    inputPlaceholder: 'Select country',
+                    showCancelButton: true,
+                    inputValidator: function(value) {
+                        return new Promise(function(resolve, reject) {
+                            if (value === 'UKR') {
+                                resolve();
+                            } else {
+                                reject('You need to select Ukraine :)');
+                            }
+                        });
+                    }
+                }).then(function(result) {
+                    swal({
+                        type: 'success',
+                        html: 'You selected: ' + result
+                    });
+                })
+                break;
+            case 19:
+                var inputOptions = new Promise(function(resolve) {
+                    setTimeout(function() {
+                        resolve({
+                            '#ff0000': 'Red',
+                            '#00ff00': 'Green',
+                            '#0000ff': 'Blue'
+                        });
+                    }, 2000);
+                });
+
+                swal({
+                    title: 'Select color',
+                    input: 'radio',
+                    inputOptions: inputOptions,
+                    inputValidator: function(result) {
+                        return new Promise(function(resolve, reject) {
+                            if (result) {
+                                resolve();
+                            } else {
+                                reject('You need to select something!');
+                            }
+                        });
+                    }
+                }).then(function(result) {
+                    swal({
+                        type: 'success',
+                        html: 'You selected: ' + result
+                    });
+                })
+                break;
+            case 20:
+                swal({
+                    title: 'Terms and conditions',
+                    input: 'checkbox',
+                    inputValue: 1,
+                    inputPlaceholder: 'I agree with the terms and conditions',
+                    confirmButtonText: 'Continue <i class="fa fa-arrow-right></i>',
+                    inputValidator: function(result) {
+                        return new Promise(function(resolve, reject) {
+                            if (result) {
+                                resolve();
+                            } else {
+                                reject('You need to agree with T&C');
+                            }
+                        });
+                    }
+                }).then(function(result) {
+                    swal({
+                        type: 'success',
+                        text: 'You agreed with T&C :)'
+                    });
+                })
+                break;
+            case 21:
+                swal({
+                    title: 'Select image',
+                    input: 'file',
+                    inputAttributes: {
+                        accept: 'image/*'
+                    }
+                }).then(function(file) {
+                    var reader = new FileReader;
+                    reader.onload = function(e) {
+                        swal({
+                            imageUrl: e.target.result
+                        });
+                    };
+                    reader.readAsDataURL(file);
+                })
                 break;
         }
     });
