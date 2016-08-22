@@ -1,5 +1,6 @@
 
-
+var $ = require('../../vendors/jquery/dist/jquery.min.js');
+ 
 require('../../vendors/jquery/dist/jquery.min.js');
 require('../../vendors/bootstrap/dist/js/bootstrap.min.js');
 require('../../vendors/fastclick/lib/fastclick.js');
@@ -31,12 +32,11 @@ require('../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js');
 
 require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
 
-require('../../build/js/custom.min.js');
-//     require('../js/helpers/smartresize.js');
-//require('../js/custom.js');
+// require('../../build/js/custom.min.js');
 require('angular');
 require('../../vendors/angular-route/angular-route.min.js');
 require('angular-resource');
+require('../js/helpers/smartresize.js');
+require('../js/custom.js');
  
-      //require('../../src/scss/custom.scss');
-      //@import "../../src/scss/custom.scss";
+require('../js/page/index.js');

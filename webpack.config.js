@@ -9,10 +9,10 @@ plugins.push(new BowerWebpackPlugin({
     excludes: /.*\.less/
 }));
 plugins.push(new webpack.ProvidePlugin({
-            'window.jQuery': 'jquery',
-            'window.$': 'jquery',
-            jQuery:'jquery',
-            $:'jquery'
+        'window.jQuery': 'jquery',
+        'window.$': 'jquery',
+        jQuery:'jquery',
+        $:'jquery'
 }));
 
  
@@ -21,7 +21,7 @@ plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /\.min\.js$/ , minim
 console.log();
 module.exports = {
     context: __dirname ,
-    entry: {"vendors":__dirname+ "/src/config/vendors.js",'style':__dirname+ "/src/config/style.js"},
+    entry: {"js/vendors":__dirname+ "/src/config/vendors.js",'css/style':__dirname+ "/src/config/style.js"},
     output: {
         path: "./production/assets/",
         filename:  "[name].js",  
@@ -36,7 +36,7 @@ module.exports = {
              test: /\.scss$/,
              loaders: ["style", "css", "sass"]
             },
-            { test: /\.(png|jpg|woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=[name].[ext]" }
+            { test: /\.(png|jpg|woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=img/[name].[ext]" }
         ]
     },
     plugins: plugins

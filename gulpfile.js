@@ -51,10 +51,10 @@ gulp.task('watch', function() {
   // Watch .html files
   gulp.watch('production/*.html', browserSync.reload);
   // Watch .js files
-  gulp.watch('src/js/*.js', ['scripts']);
+  //gulp.watch('src/js/*.js', ['scripts']);
   // Watch .scss files
   gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
 });
 
 // Default Task
-gulp.task('default', ['browser-sync', 'watch','scripts' ]);
+gulp.task('default', ['browser-sync', 'watch'  ]);
