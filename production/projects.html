@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>New Prototype</title>
-
+    <link href="../production/css/style.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -18,9 +18,9 @@
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+
 </head>
 
 <body class="nav-md">
@@ -342,10 +342,10 @@
                                                 <td>
                                                     <ul class="list-inline">
                                                         <li>
-                                                            <input type="radio" name="" id="">男
+                                                            <input type="checkbox" class="flat" name="iCheck" checked> 女士
                                                         </li>
                                                         <li>
-                                                            <input type="radio" name="" id="">女
+                                                            <input type="checkbox" class="flat" name="iCheck"> 男士
                                                         </li>
 
                                                     </ul>
@@ -375,10 +375,10 @@
                                                 <td>
                                                     <ul class="list-inline">
                                                         <li>
-                                                            <input type="checkbox" name="" id="">男
+                                                            <input type="radio" class="flat" name="iCheck"> 女士
                                                         </li>
                                                         <li>
-                                                            <input type="checkbox" name="" id="">女
+                                                            <input type="radio" class="flat" checked name="iCheck"> 先生
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -407,13 +407,14 @@
                                                 <td>
                                                     <ul class="list-inline">
                                                         <li>
-                                                            <img src="images/user.png" class="avatar" alt="Avatar">
+                                                            <label>
+                                                                 <input type="checkbox" class="js-switch" checked /> 選項 1
+                                                            </label>
                                                         </li>
                                                         <li>
-                                                            <img src="images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="images/user.png" class="avatar" alt="Avatar">
+                                                            <label>
+                                                                <input type="checkbox" class="js-switch"  /> 選項 2
+                                                            </label>
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -681,9 +682,12 @@
     <script src="../vendors/nprogress/nprogress.js"></script>
     <!-- bootstrap-progressbar -->
     <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Switchery -->
+    <script src="../vendors/switchery/dist/switchery.min.js"></script>
 </body>
 
 </html>
