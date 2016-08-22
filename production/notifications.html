@@ -621,14 +621,12 @@
                             <!-- modals -->
                             <!-- Large modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-
                             <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
 
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
-                          </button>
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
                                             <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                                         </div>
                                         <div class="modal-body">
@@ -644,17 +642,15 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- Large modal -->
                             <!-- Small modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
-
                             <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
 
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                          </button>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                             <h4 class="modal-title" id="myModalLabel2">Modal title</h4>
                                         </div>
                                         <div class="modal-body">
@@ -666,11 +662,26 @@
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                             <button type="button" class="btn btn-primary">Save changes</button>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                            <!-- /modals -->
+                            <!-- Small modal -->
+                            <!--Youtube modal-->
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/loFtozxZG0s">VIDEO</a>
+                            <div class="modal " id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <div>
+                                                <iframe width="100%" height="350" src=""></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Youtube modal-->
+                            <!-- modals -->
                         </div>
                     </div>
                 </div>
@@ -724,6 +735,9 @@
                             <button class="btn btn-default  sweet">InputRadio</button>
                             <button class="btn btn-default  sweet">InputCheckbox</button>
                             <button class="btn btn-default  sweet">InputFile</button>
+                            <hr>
+                            <p>Multiple inputs</p>
+                            <button class="btn btn-default  sweet">MultipleInputs</button>
                         </div>
                     </div>
                 </div>
@@ -1279,7 +1293,6 @@
         <div class="clearfix"></div>
         <div id="notif-group" class="tabbed_notifications"></div>
     </div>
-    <!--TEST-->
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -1296,13 +1309,9 @@
     <script src="../vendors/pnotify/dist/pnotify.js"></script>
     <script src="../vendors/pnotify/dist/pnotify.buttons.js"></script>
     <script src="../vendors/pnotify/dist/pnotify.nonblock.js"></script>
-
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
     <!-- PNotify -->
-    <!--sweetAlert-->
-
-    <!--TEST-->
     <script>
         // $(document).ready(function() {
         //   new PNotify({
@@ -1330,7 +1339,6 @@
         // });
     </script>
     <!-- /PNotify -->
-
     <!-- Custom Notification -->
     <script>
         $(document).ready(function() {
@@ -1382,11 +1390,9 @@
         });
     </script>
     <!-- /Custom Notification -->
-
 </body>
 <!--sweetAlert-->
 <script src="../vendors/sweetalert2/dist/sweetalert2.min.js"></script>
-<!--<script src="https://cdn.jsdelivr.net/es6-promise/latest/es6-promise.min.js"></script>-->
 <script src="https://cdn.jsdelivr.net/promise.prototype.finally/1.0.1/finally.js"></script>
 <script>
     $('.x_content .sweet').on('click', function() {
@@ -1741,11 +1747,46 @@
                     reader.readAsDataURL(file);
                 })
                 break;
+            case 22:
+                swal({
+                    title: 'Multiple inputs',
+                    html: '<input id="swal-input1" class="swal2-input" autofocus>' +
+                        '<input id="swal-input2" class="swal2-input" type="password">',
+                    preConfirm: function() {
+                        return new Promise(function(resolve) {
+                            if (result) {
+                                resolve([
+                                    $('#swal-input1').val(),
+                                    $('#swal-input2').val()
+                                ]);
+                            }
+                        });
+                    }
+                }).then(function(result) {
+                    swal(JSON.stringify(result));
+                })
+                break;
         }
     });
 </script>
 <!--sweetAlert-->
+<!--Youtube modal-->
+<script>
+    autoPlayYouTubeModal();
 
-
+    function autoPlayYouTubeModal() {
+        var trigger = $("body").find('[data-toggle="modal"]');
+        trigger.click(function() {
+            var theModal = $(this).data("target"),
+                videoSRC = $(this).attr("data-theVideo"),
+                videoSRCauto = videoSRC + "?autoplay=1";
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function() {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+        });
+    }
+</script>
+<!--Youtube modal-->
 
 </html>
