@@ -40,6 +40,5 @@ require('../../vendors/angular-route/angular-route.min.js');
 require('angular-resource');
 require('../js/helpers/smartresize.js');
 require('../js/custom.js');
- 
-require('../js/page/index.js');
-require('../js/page/blockUI.js');
+
+require('../js/page/blockUI.js'); 
