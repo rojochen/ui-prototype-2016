@@ -3061,10 +3061,31 @@ ul.project_files li a i {
 
 /** login **/
 .login {
-  background:#F7F7F7;
-}
-.login .fa-paw {
-  font-size: 26px;
+  color: #D9E0E8;
+  background-color: #2A3F54;
+  .login_content {
+    .form-control-feedback.left {
+      left: 2px;
+    }
+    button {
+      width: 350px;
+      height: 35px;
+      a {
+        display: block;
+        margin: 0;
+        color: #FFF;
+        &:hover {
+          text-decoration: none;
+        }
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+    a {
+      color: #D9E0E8;
+    }
+  }
 }
 a.hiddenanchor {
   display: none;
@@ -3156,7 +3177,7 @@ a.hiddenanchor {
   padding: 25px 0 0;
   position: relative;
   text-align: center;
-  text-shadow: 0 1px 0 #fff;
+  // text-shadow: 0 1px 0 #fff;
   min-width: 280px;
 }
 .login_content a,
@@ -3180,21 +3201,21 @@ a.hiddenanchor {
   width: 27%;
 }
 .login_content h1:after {
-  background: rgb(126, 126, 126);
-  background: -moz-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: -webkit-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: -o-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: -ms-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: rgb(217, 224, 232);
+  background: -moz-linear-gradient(left, rgba(217, 224, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(left, rgba(217, 224, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -o-linear-gradient(left, rgba(217, 224, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(217, 224, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(left, rgba(217, 224, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
   right: 0;
 }
 .login_content h1:before {
-  background: rgb(126, 126, 126);
-  background: -moz-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: -webkit-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: -o-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: -ms-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background: linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: rgb(217, 224, 232);
+  background: -moz-linear-gradient(right, rgba(217, 224, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(right, rgba(217, 224, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -o-linear-gradient(right, rgba(217, 224, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -ms-linear-gradient(right, rgba(217, 224, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(right, rgba(217, 224, 232, 1) 0%, rgba(255, 255, 255, 1) 100%);
   left: 0;
 }
 .login_content h1:before, .login_content h1:after {
@@ -3260,7 +3281,7 @@ a.hiddenanchor {
 }
 .login_content form div a {
   font-size: 12px;
-  margin: 10px 15px 0 0;
+  margin: 10px 0 0;
 }
 .reset_pass {
   margin-top: 10px !important;
@@ -4328,3 +4349,19 @@ ul.notifications {
   border: 1px solid #e5e5e5;
 }
 /** /Dropzone.js **/
+
+
+.carousel-control {
+  width: 0%;
+  display: none;
+}
+
+.carousel-control:hover {
+  color: #1ABB9C;
+}
+
+.carousel-inner {
+  /*outline: 1px solid;*/
+  width: 96%;
+  margin: auto;
+}
