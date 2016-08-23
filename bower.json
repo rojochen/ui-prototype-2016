@@ -83,7 +83,8 @@
     "flot.orderbars": "*",
     "flot-spline": "^0.8.2",
     "moment": "~2.14.1",
-    "sweetalert2": "~4.1.7"
+    "sweetalert2": "~4.1.7",
+    "blockUI": "*"
   },
   "resolutions": {
     "jquery": "^2.2.3",
