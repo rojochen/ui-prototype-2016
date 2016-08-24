@@ -25,4 +25,7 @@ require("../../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css
 require('../../vendors/bootstrap-switch/dist/css/bootstrap2/bootstrap-switch.min.css');
 require('../../vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css');
 //  bootstrap-switch
+// icheckout
+require('../../build/css/custom.min.css');
+// icheckout
 require('../../src/scss/custom.scss');
