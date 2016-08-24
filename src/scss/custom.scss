@@ -4354,10 +4354,10 @@ ul.notifications {
 .carousel-control {
   width: 0%;
   display: none;
-}
-
-.carousel-control:hover {
   color: #1ABB9C;
+  &:hover {
+    color: #1ABB9C;
+  }
 }
 
 .carousel-inner {
