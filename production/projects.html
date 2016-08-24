@@ -20,11 +20,9 @@
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <!--bsSwitch-->
     <link href="../vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet">
-    <link href="../vendors/bootstrap-switch/dist/css/bootstrap2" rel="stylesheet">
-    <style>
-       
-    </style>
+    <link href="../vendors/bootstrap-switch/dist/css/bootstrap2/bootstrap-switch.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -301,6 +299,78 @@
                     <div class="clearfix"></div>
 
                     <div class="row">
+                        <div class="col-md-12 col-sm-6 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>BootStrap-Switch</h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">設定 1</a>
+                                                </li>
+                                                <li><a href="#">設定 2</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+                                    <p>Size</p>
+                                    <div class="bs-example-popovers">
+                                        <ul class="list-inline size">
+                                            <li><input type="checkbox" name="my-checkbox" checked></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-size="mini"></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-size="small"></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-size="normal"></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-size="large"></li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="bs-example-popovers">
+                                        <p>Color</p>
+                                        <ul class="list-inline size">
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="primary" data-off-color="info" checked></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="info" data-off-color="success"></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="success" data-off-color="warning"></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="warning" data-off-color="danger"></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="danger" data-off-color="primary"></li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="bs-example-popovers">
+                                        <p>Animation</p>
+                                        <ul class="list-inline size">
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="primary" data-off-color="info" data-animate="false" checked></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="info" data-off-color="success" data-animate="true"></li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="bs-example-popovers">
+                                        <p>Disabled</p>
+                                        <ul class="list-inline size">
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="primary" data-off-color="info" data-animate="false" checked disabled></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="info" data-off-color="success" data-animate="true"></li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="bs-example-popovers">
+                                        <p>Text</p>
+                                        <ul class="list-inline size">
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="primary" data-off-color="info" data-animate="false" data-on-text="Hello" checked></li>
+                                            <li><input type="checkbox" name="my-checkbox" data-on-color="info" data-off-color="success" data-animate="true" data-off-text="Bye"></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-12">
                             <div class="x_panel">
                                 <div class="x_title">
@@ -414,10 +484,16 @@
                                                 <td>
                                                     <ul class="list-inline">
                                                         <li>
-
+                                                            <img src="images/user.png" class="avatar" alt="Avatar">
                                                         </li>
                                                         <li>
-
+                                                            <img src="images/user.png" class="avatar" alt="Avatar">
+                                                        </li>
+                                                        <li>
+                                                            <img src="images/user.png" class="avatar" alt="Avatar">
+                                                        </li>
+                                                        <li>
+                                                            <img src="images/user.png" class="avatar" alt="Avatar">
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -676,23 +752,30 @@
     </div>
 
     <!-- jQuery -->
-    <!--<script src="../vendors/jquery/dist/jquery.min.js"></script>-->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <!--<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <!--<script src="../vendors/fastclick/lib/fastclick.js"></script>-->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <!--<script src="../vendors/nprogress/nprogress.js"></script>-->
+    <script src="../vendors/nprogress/nprogress.js"></script>
     <!-- bootstrap-progressbar -->
-    <!--<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>-->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- Custom Theme Scripts -->
-    <!--<script src="../build/js/custom.min.js"></script>-->
+    <script src="../build/js/custom.min.js"></script>
     <!-- iCheck -->
-    <!--<script src="../vendors/iCheck/icheck.min.js"></script>-->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
     <!-- Switchery Error-->
-    <!--<script src="../vendors/switchery/dist/switchery.min.js"></script>-->
-    
-    <script src="assets/js/vendors.js"></script>
+    <script src="../vendors/switchery/dist/switchery.min.js"></script>
+    <!--bootstrapSwitch-->
+    <script src="../vendors/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+    <script>
+        $("[name='my-checkbox']").bootstrapSwitch();
+    </script>
+    <!--<script src="assets/js/vendors.js"></script>-->
+    <!--<script src="assets/css/style.js"></script>-->
+
 </body>
-<script src="assets/css/style.js"></script>
+
+
 </html>
