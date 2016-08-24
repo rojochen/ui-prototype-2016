@@ -84,7 +84,8 @@
     "flot-spline": "^0.8.2",
     "moment": "~2.14.1",
     "sweetalert2": "~4.1.7",
-    "blockUI": "*"
+    "blockUI": "*",
+    "bootstrap-switch": "^3.3.2"
   },
   "resolutions": {
     "jquery": "^2.2.3",
