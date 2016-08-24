@@ -330,7 +330,7 @@
                   <div class="x_title">
                     <h2>長條圖</h2>
                     <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="blockUI-link"><i class="fa fa-spinner"></i></a>
+                      <li><a class="blockUI-link"><i class="fa fa-refresh"></i></a>
                       </li>
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -361,7 +361,7 @@
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>sss</h2>
+                    <h2>圓餅圖</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="blockUI-link"><i class="fa fa-refresh"></i></a>
                       </li>
@@ -383,7 +383,7 @@
                   </div>
                   <div class="x_content">
 
-                    <div id="sss" style="height:300px;"></div>
+                    <div id="pieChart" style="height:300px;"></div>
 
                   </div>
                 </div>
@@ -391,9 +391,9 @@
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>sss</h2>
+                    <h2>圓餅圖</h2>
                     <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="blockUI-link"><i class="fa fa-spinner"></i></a>
+                      <li><a class="blockUI-link"><i class="fa fa-refresh"></i></a>
                       </li>
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -413,7 +413,70 @@
                   </div>
                   <div class="x_content">
 
-                    sss
+                    <div id="donutPieChart" style="height:300px;"></div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>散點圖</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="blockUI-link"><i class="fa fa-refresh"></i></a>
+                      </li>
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <div id="scatterChart" style="height:300px;"></div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>折線圖</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="blockUI-link"><i class="fa fa-refresh"></i></a>
+                      </li>
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <div id="lineChart" style="height:300px;"></div>
 
                   </div>
                 </div>
@@ -490,7 +553,6 @@
                 trigger: 'axis'  
             },
             legend: {
-                // x: 100,  //位置
                 data:['joe捕獲數','Yvonne捕獲數']
             },
             toolbox: {
@@ -502,7 +564,6 @@
                     }
                 }
             },
-            // calculable: true,   //?
             xAxis: {
                 data: ["伊布","妙蛙種子","小拉達","超音蝠"]
             },
@@ -518,6 +579,323 @@
             }]
         });
 
+        var horizontalBarChart = echarts.init(document.getElementById('pieChart'), theme);
+        horizontalBarChart.setOption({
+            title: {
+                text: 'pokemon',
+                subtext: '出現機率圖'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} 隻 ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                y: 'bottom',
+                data: ["妙蛙種子","小拉達","伊布","超音蝠"]
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    saveAsImage: {
+                    show: true,
+                    title: "Save Image"
+                    }
+                }
+            },
+            series: [{
+                name: '出現率',
+                type: 'pie',
+                radius: '55%',
+                data: [{
+                  value: 5,
+                  name: '妙蛙種子'
+                }, {
+                  value: 7,
+                  name: '小拉達'
+                }, {
+                  value: 3,
+                  name: '伊布'
+                }, {
+                  value: 3,
+                  name: '超音蝠'
+                }]
+            }]
+        });
+
+        var horizontalBarChart = echarts.init(document.getElementById('donutPieChart'), theme);
+        horizontalBarChart.setOption({
+            title: {
+                text: 'pokemon',
+                subtext: '出現機率圖'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} 隻 ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                y: 'bottom',
+                data: ["妙蛙種子","小拉達","伊布","超音蝠"]
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    // restore: {
+                    //   show: true,
+                    //   title: "Restore"
+                    // },
+                    saveAsImage: {
+                    show: true,
+                    title: "Save Image"
+                    }
+                }
+            },
+            series: [{
+                name: '出現率',
+                type: 'pie',
+                radius: ['35%','55%'],
+                data: [{
+                  value: 5,
+                  name: '妙蛙種子'
+                }, {
+                  value: 7,
+                  name: '小拉達'
+                }, {
+                  value: 3,
+                  name: '伊布'
+                }, {
+                  value: 3,
+                  name: '超音蝠'
+                }]
+            }]
+        });
+
+        var echartScatter = echarts.init(document.getElementById('scatterChart'), theme);
+        echartScatter.setOption({
+          title: {
+            text: 'pokemon',
+            subtext: '精靈身高體重圖'
+          },
+          tooltip: {
+            trigger: 'axis',
+            showDelay: 0,
+            axisPointer: {
+              type: 'cross',
+              lineStyle: {
+                type: 'dashed',
+                width: 1
+              }
+            }
+          },
+          legend: {
+            data: ['妙蛙種子', '傑尼龜']
+          },
+          toolbox: {
+            show: true,
+            feature: {
+              saveAsImage: {
+                show: true,
+                title: "Save Image"
+              }
+            }
+          },
+          xAxis: [{
+            type: 'value',
+            scale: true,
+            axisLabel: {
+              formatter: '{value} cm'
+            }
+          }],
+          yAxis: [{
+            type: 'value',
+            scale: true,
+            axisLabel: {
+              formatter: '{value} kg'
+            }
+          }],
+          series: [{
+            name: '妙蛙種子',
+            type: 'scatter',
+            tooltip: {
+              trigger: 'item',
+              formatter: function(params) {
+                if (params.value.length > 1) {
+                  return params.seriesName + ' :<br/>' + params.value[0] + 'cm ' + params.value[1] + 'kg ';
+                } else {
+                  return params.seriesName + ' :<br/>' + params.name + ' : ' + params.value + 'kg ';
+                }
+              }
+            },
+            data: [
+              [161.2, 51.6],
+              [167.5, 59.0],
+              [159.5, 49.2],
+              [157.0, 63.0],
+              [155.8, 53.6],
+              [170.0, 59.0],
+              [159.1, 47.6],
+              [166.0, 69.8],
+              [176.2, 66.8],
+              [160.2, 75.2],
+              [172.5, 55.2],
+              [170.9, 54.2],
+              [172.9, 62.5],
+              [153.4, 42.0],
+              [160.0, 50.0]
+            ],
+            markPoint: {
+              data: [{
+                type: 'max',
+                name: 'Max'
+              }, {
+                type: 'min',
+                name: 'Min'
+              }]
+            },
+            markLine: {
+              data: [{
+                type: 'average',
+                name: 'Mean'
+              }]
+            }
+          }, {
+            name: '傑尼龜',
+            type: 'scatter',
+            tooltip: {
+              trigger: 'item',
+              formatter: function(params) {
+                if (params.value.length > 1) {
+                  return params.seriesName + ' :<br/>' + params.value[0] + 'cm ' + params.value[1] + 'kg ';
+                } else {
+                  return params.seriesName + ' :<br/>' + params.name + ' : ' + params.value + 'kg ';
+                }
+              }
+            },
+            data: [
+              [174.0, 65.6],
+              [175.3, 71.8],
+              [193.5, 80.7],
+              [186.5, 72.6],
+              [187.2, 78.8],
+              [181.5, 74.8],
+              [184.0, 86.4],
+              [184.5, 78.4],
+              [175.0, 62.0],
+              [184.0, 81.6],
+              [180.0, 76.6],
+              [177.8, 83.6],
+              [192.0, 90.0],
+              [176.0, 74.6],
+              [174.0, 71.0]
+            ],
+            markPoint: {
+              data: [{
+                type: 'max',
+                name: 'Max'
+              }, {
+                type: 'min',
+                name: 'Min'
+              }]
+            },
+            markLine: {
+              data: [{
+                type: 'average',
+                name: 'Mean'
+              }]
+            }
+          }]
+        });
+
+
+
+
+
+
+        var echartLine = echarts.init(document.getElementById('lineChart'), theme);
+        echartLine.setOption({
+          title: {
+            text: 'pokemon',
+            subtext: '出現機率圖'
+          },
+          tooltip: {
+            trigger: 'axis'
+          },
+          legend: {
+            x: 220,
+            y: 40,
+            data: ['妙蛙種子', '傑尼龜', '皮卡丘']
+          },
+          toolbox: {
+            show: true,
+            feature: {
+              magicType: {
+                show: true,
+                title: {
+                  line: 'Line',
+                  bar: 'Bar',
+                  stack: 'Stack',
+                  tiled: 'Tiled'
+                },
+                type: ['line', 'bar', 'stack', 'tiled']
+              },
+              restore: {
+                show: true,
+                title: "Restore"
+              },
+              saveAsImage: {
+                show: true,
+                title: "Save Image"
+              }
+            }
+          },
+          calculable: true,
+          xAxis: [{
+            type: 'category',
+            boundaryGap: false,
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+          }],
+          yAxis: [{
+            type: 'value'
+          }],
+          series: [{
+            name: '妙蛙種子',
+            type: 'line',
+            smooth: true,
+            itemStyle: {
+              normal: {
+                areaStyle: {
+                  type: 'default'
+                }
+              }
+            },
+            data: [10, 12, 21, 54, 260, 830, 710]
+          }, {
+            name: '傑尼龜',
+            type: 'line',
+            smooth: true,
+            itemStyle: {
+              normal: {
+                areaStyle: {
+                  type: 'default'
+                }
+              }
+            },
+            data: [30, 182, 434, 791, 390, 30, 10]
+          }, {
+            name: '皮卡丘',
+            type: 'line',
+            smooth: true,
+            itemStyle: {
+              normal: {
+                areaStyle: {
+                  type: 'default'
+                }
+              }
+            },
+            data: [1320, 1132, 601, 234, 120, 90, 20]
+          }]
+        });
     </script>
   </body>
 </html>
