@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  var echarts = require('../../../vendors/echarts/dist/echarts.min.js');
     var theme = {
             color: ['rgba(38,185,154,0.88)',  'rgba(52,152,219,0.88)', 'rgba(243,156,18,0.88)', 'rgba(231,76,60,0.88)'],
             title: {
