@@ -33,6 +33,7 @@ require('../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js');
 require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
 
 require('../../vendors/blockUI/jquery.blockUI.js');
+require('../../vendors/echarts/dist/echarts.min.js');
 
 // require('../../build/js/custom.min.js');
 require('angular');
@@ -42,3 +43,4 @@ require('../js/helpers/smartresize.js');
 require('../js/custom.js');
 
 require('../js/page/blockUI.js'); 
+require('../js/page/echarts.js'); 
