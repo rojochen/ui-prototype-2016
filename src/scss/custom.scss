@@ -357,7 +357,7 @@ body .container.body .right_col {
 }
 /**  ------------------------------------------  **/
 
-.blue {
+.blue {  //try
   color: #3498DB;
 }
 .purple {
@@ -4365,3 +4365,210 @@ ul.notifications {
   width: 96%;
   margin: auto;
 }
+
+
+
+
+
+/* three col */
+#right-sidebar {
+  width: 230px;
+  height: auto;
+  float: right;
+  padding-top: 50px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  &:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 230px;
+    background: #ffffff;
+    border-left: 1px solid #e3e3e3;
+    z-index: -1;
+  }
+  .tabs {
+    padding: 0 0 0 1px;
+    .nav-tabs li{
+      a{
+        border-radius: 0;
+        background-color: #ffffff;
+        padding: 15px 15px 14px;
+        box-shadow: none;
+        border-bottom: 1px solid #e3e3e3;
+        i {
+          color: #777777;
+        }
+        &:hover{
+          border-top-color: #fff;
+          border-left-color: #fff;
+          border-right-color: #fff;
+        }
+      }
+      &.active a {
+        border: 1px solid #fff; 
+        border-bottom: 1px solid $primaryColor;
+        &:after {
+          right: auto;
+          left: auto;
+          bottom: auto;
+        }
+      }
+    }
+    .tab-content {
+      .tab-pane {
+        padding: 15px;
+        ul.timeline li {
+          border-bottom: 0px solid #e8e8e8;
+        }
+      }
+    }
+    .top_search{
+      margin-bottom:10px;
+    }
+  }
+  .user-list {
+    margin-left: -15px;
+    margin-right: -15px;
+    .list-group-item {
+      border: none;
+      line-height: 16px;
+      position: relative;
+      padding: 5px 15px;
+      a {
+        display: block;
+        line-height: 16px;
+        position: relative;
+        padding: 5px 0;
+        text-decoration: none;
+        color: #555555;
+        .avatar {
+          float: left;
+          margin-right: 10px;
+          border-radius: 50%;
+          border: 2px solid #eeeeee;
+          width: 42px;
+          height: 42px;
+        }
+        .name {
+          display: block;
+          font-weight: bold;
+          width: 100%;
+          margin-top: 5px;
+        }
+        .status {
+          width: 100%;
+          display: block;
+          font-size: 13px;
+          &:before {
+            content: "";
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            position: relative;
+            float: left;
+            margin-top: 4px;
+            margin-right: 5px;
+          }
+          &.status-online:before {
+            background-color: #51bf87;
+          }
+          &.status-offline:before {
+            background-color: #db5565;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+  &:after {
+    content: "";
+    height: auto;
+    width: 1px;
+    background: #e3e3e3;
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    bottom: 25px;
+  }
+  li {
+    position: relative;
+    padding-left: 70px;
+    margin-bottom: 20px;
+    &:after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #e3e3e3;
+      position: absolute;
+      left: 24px;
+      top: 5px;
+    }
+    .timeline-date {
+      display: inline-block;
+      width: 100%;
+      color: #a6a6a6;
+      font-style: italic;
+      font-size: 13px;
+    }
+  }
+  &.timeline-icons li {
+    padding-top: 7px;
+    &:after {
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      border: 1px solid #e3e3e3;
+      left: 14px;
+      top: 0;
+      z-index: 11;
+    }
+    .timeline-icon {
+      position: absolute;
+      left: 23.5px;
+      top: 7px;
+      z-index: 12;
+    }
+  }
+  &.timeline-sm {
+    &:after {
+      left: 12px;
+    }
+    li {
+      padding-left: 40px;
+      margin-bottom: 10px;
+      &:after {
+        left: -5px;
+      }
+      .timeline-icon {
+        left: 4.5px;
+      }
+    }
+  }
+}
+/* three col*/
+
+
+
+
