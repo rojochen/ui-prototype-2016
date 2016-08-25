@@ -16,7 +16,7 @@ plugins.push(new webpack.ProvidePlugin({
 }));
 
  
-plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /\.min\.js$/ , minimize: true }));
+plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /png|jpg|gif｜\.min\.js$/ , minimize: true }));
 
 console.log();
 module.exports = {
@@ -30,7 +30,7 @@ module.exports = {
     devtool:'source-map',
     module: {
         loaders: [
-            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=100000' },            
+            // { test: /\.(png|jpg)$/, loader: 'url-loader?limit=100000' },            
             { test: /\.css$/, loader: "style!css" },
             {
              test: /\.scss$/,
