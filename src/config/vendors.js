@@ -45,6 +45,5 @@ require('../js/custom.js');
 
 
 require('../js/page/projects.js');
-
 require('../js/page/blockUI.js');
 require('../js/page/echarts.js');
