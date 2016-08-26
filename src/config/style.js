@@ -1,5 +1,5 @@
 require("../../vendors/bootstrap/dist/css/bootstrap.min.css");
-// require("../../vendors/font-awesome/scss/font-awesome.scss");
+require("../../vendors/font-awesome/scss/font-awesome.scss");
 require("../../vendors/nprogress/nprogress.css");
 
 require("../../vendors/iCheck/skins/flat/green.css");
