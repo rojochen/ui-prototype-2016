@@ -4,8 +4,13 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    webpack =  require('webpack-stream');
 
+gulp.task('css-build', function() {
+  return gulp.src('/src/config/style.js')
+    .pipe(webpack());
+});
 var DEST = 'build/';
 
 gulp.task('scripts', function() {
