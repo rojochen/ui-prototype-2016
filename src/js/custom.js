@@ -79,10 +79,11 @@ $(document).ready(function() {
 
     //three collapse  try
     $right_Menu_TOGGLE.on('click', function(){
+        var rightSidebar = $('#right-sidebar').width();
         if($('#right-sidebar').css('display') == 'none'){
             $('#right-sidebar').css('display','block')
-            $('.right_col').css('margin-right','230px');
-            $('footer').css('margin-right','230px');
+            $('.right_col').css('margin-right',rightSidebar);
+            $('footer').css('margin-right',rightSidebar);
         }else{
             $('#right-sidebar').css('display','none')
             $('.right_col').css('margin-right','0px');

@@ -320,14 +320,14 @@ body .container.body .right_col {
 }
 @media (max-width: 991px) {
   .nav-md .container.body .right_col, .nav-md .container.body .top_nav {
-    width: 100%;
+    // width: 100%;
     margin: 0;
   }
   .nav-md .container.body .col-md-3.left_col {
     display: none;
   }
   .nav-md .container.body .right_col {
-    width: 100%;
+    // width: 100%;
     padding-right: 0
   }
   .right_col {
@@ -4372,14 +4372,8 @@ ul.notifications {
 
 /* three col */
 #right-sidebar {
-  width: 230px;
-  height: auto;
+  width: $rightMenuWidth;
   float: right;
-  padding-top: 50px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
   display: none;
   &:after {
     content: "";
@@ -4387,7 +4381,7 @@ ul.notifications {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 230px;
+    width: $rightMenuWidth;
     background: #ffffff;
     border-left: 1px solid #e3e3e3;
     z-index: -1;
@@ -4398,9 +4392,14 @@ ul.notifications {
       a{
         border-radius: 0;
         background-color: #ffffff;
-        padding: 15px 15px 14px;
         box-shadow: none;
         border-bottom: 1px solid #e3e3e3;
+        &.addIcon {
+          padding: 15px 15px 14px;
+        }
+        &.addImage {
+          padding: 5px 1px 5px;
+        }
         i {
           color: #777777;
         }
@@ -4408,6 +4407,12 @@ ul.notifications {
           border-top-color: #fff;
           border-left-color: #fff;
           border-right-color: #fff;
+        }
+        img {
+          width: 30px;
+        }
+        span {
+          font-size: 12px;
         }
       }
       &.active a {
@@ -4455,11 +4460,25 @@ ul.notifications {
           width: 42px;
           height: 42px;
         }
+        .activity {
+          float: left;
+          margin-right: 10px;
+          border: 2px solid #eeeeee;
+          width: 90px;
+          height: 60px;
+          padding: 2px;
+        }
         .name {
           display: block;
           font-weight: bold;
           width: 100%;
           margin-top: 5px;
+        }
+        .activityName{
+          display: block;
+          font-weight: bold;
+          width: 100%;
+          margin-top: 20px;
         }
         .status {
           width: 100%;
