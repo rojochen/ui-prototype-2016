@@ -42,10 +42,9 @@ require('angular-resource');
 require('../js/helpers/smartresize.js');
 require('../js/custom.js');
 
-<<<<<<< HEAD
-require('../js/page/blockUI.js');
+
+
 require('../js/page/projects.js');
-=======
-require('../js/page/blockUI.js'); 
-require('../js/page/echarts.js'); 
->>>>>>> develop
+
+require('../js/page/blockUI.js');
+require('../js/page/echarts.js');
