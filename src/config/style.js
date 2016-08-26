@@ -22,6 +22,7 @@ require("../../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.m
 require("../../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css");
 require("../../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css");
 require('../../vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css');
+require('../../vendors/sweetalert2/dist/sweetalert2.min.css');
 
 
 

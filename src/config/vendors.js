@@ -35,6 +35,7 @@ require('../../vendors/blockUI/jquery.blockUI.js');
 require('../../vendors/echarts/dist/echarts.min.js');
 
 require('../../vendors/bootstrap-switch/dist/js/bootstrap-switch.js');
+require('../../vendors/sweetalert2/dist/sweetalert2.min.js');
 // require('../../build/js/custom.min.js');
 require('angular');
 require('../../vendors/angular-route/angular-route.min.js');
