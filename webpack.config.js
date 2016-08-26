@@ -30,7 +30,7 @@ module.exports = {
     devtool: 'source-map',
     module: {
         loaders: [
-            // { test: /\.(png|jpg)$/, loader: 'url-loader?limit=100000' },
+            // { test: /\.(png|jpg)$/, loader: 'url-loader?limit=100000' },            
             { test: /\.css$/, loader: "style!css" }, {
                 test: /\.scss$/,
                 loaders: ["style", "css", "sass"]
