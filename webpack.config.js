@@ -27,7 +27,7 @@ var entry = {};
 if(!css){
     //"js/vendors":__dirname+ "/src/config/vendors.js",'css/style':__dirname+ "/src/config/style.js"
     
-     entry["css/styles"] = __dirname+ "/src/config/style.js";
+     entry["css/style"] = __dirname+ "/src/config/style.js";
 }
 if(!vendors){
   entry["js/vendors"] = __dirname+ "/src/config/vendors.js";
