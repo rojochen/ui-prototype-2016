@@ -8,6 +8,7 @@ var vendors = process.argv.indexOf('--vendors') === -1;
 var joe = process.argv.indexOf('--joe') === -1;
 var louis = process.argv.indexOf('--louis') === -1;
 
+
 plugins.push(new BowerWebpackPlugin({
     modulesDirectories: ["vendors"],
     manifestFiles: "bower.json",
@@ -21,7 +22,8 @@ plugins.push(new webpack.ProvidePlugin({
 }));
 
 
-plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /\.min\.js$/, minimize: true }));
+// plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /\.min\.js$/, minimize: true }));
+plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /png|jpg|gif｜\.min\.js$/, minimize: true }));
 
 var entry = {};
 if (!css) {

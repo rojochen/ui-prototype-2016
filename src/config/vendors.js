@@ -1,6 +1,5 @@
+// var $ = require('../../vendors/jquery/dist/jquery.min.js');
 
-var $ = require('../../vendors/jquery/dist/jquery.min.js');
- 
 require('../../vendors/jquery/dist/jquery.min.js');
 require('../../vendors/bootstrap/dist/js/bootstrap.min.js');
 require('../../vendors/fastclick/lib/fastclick.js');
@@ -43,4 +42,4 @@ require('../js/helpers/smartresize.js');
 require('../js/custom.js');
 
 // require('../js/page/blockUI.js'); 
-// require('../js/page/echarts.js'); 
+// require('../js/page/echarts.js');
