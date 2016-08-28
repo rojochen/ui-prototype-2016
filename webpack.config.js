@@ -6,7 +6,8 @@ var jquery = require('./vendors/jquery/dist/jquery.min.js');
 var css = process.argv.indexOf('--css') === -1;
 var vendors = process.argv.indexOf('--vendors') === -1;
 var joe = process.argv.indexOf('--joe') === -1;
-var louis = process.argv.indexOf('--louse') === -1;
+var louis = process.argv.indexOf('--louis') === -1;
+
 
 plugins.push(new BowerWebpackPlugin({
     modulesDirectories: ["vendors"],
