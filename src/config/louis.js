@@ -1,0 +1,1 @@
+require('../../vendors/bootstrap-switch/dist/js/bootstrap-switch.min.js');
