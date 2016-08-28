@@ -1,4 +1,4 @@
-var $ = require('../../vendors/jquery/dist/jquery.min.js');
+// var $ = require('../../vendors/jquery/dist/jquery.min.js');
 
 require('../../vendors/jquery/dist/jquery.min.js');
 require('../../vendors/bootstrap/dist/js/bootstrap.min.js');
@@ -7,7 +7,7 @@ require('../../vendors/nprogress/nprogress.js');
 require('bootstrap-daterangepicker');
 require('../../vendors/bootstrap-progressbar/bootstrap-progressbar.js');
 // require('../../vendors/Chart.js/dist/Chart.min.js');
-require('../../vendors/gauge.js/dist/gauge.min.js');
+//require('../../vendors/gauge.js/dist/gauge.min.js');
 
 require('../../vendors/iCheck/icheck.min.js');
 require('../../vendors/skycons/skycons.js');
@@ -24,27 +24,22 @@ require('../../vendors/skycons/skycons.js');
 
 // require('../../vendors/DateJS/build/date.js');
 
-require('../../vendors/jqvmap/dist/jquery.vmap.js');
-require('../../vendors/jqvmap/dist/maps/jquery.vmap.world.js');
-require('../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js');
+// require('../../vendors/jqvmap/dist/jquery.vmap.js');
+// require('../../vendors/jqvmap/dist/maps/jquery.vmap.world.js');
+// require('../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js');
 
 
 require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
 
-require('../../vendors/blockUI/jquery.blockUI.js');
-require('../../vendors/echarts/dist/echarts.min.js');
-
-require('../../vendors/bootstrap-switch/dist/js/bootstrap-switch.js');
-require('../../vendors/sweetalert2/dist/sweetalert2.min.js');
+// require('../../vendors/blockUI/jquery.blockUI.js');
+// require('../../vendors/echarts/dist/echarts.min.js');
+//remove [name].js
 // require('../../build/js/custom.min.js');
-require('angular');
-require('../../vendors/angular-route/angular-route.min.js');
-require('angular-resource');
+// require('angular');
+// require('../../vendors/angular-route/angular-route.min.js');
+// require('angular-resource');
 require('../js/helpers/smartresize.js');
 require('../js/custom.js');
 
-
-
-require('../js/page/projects.js');
-require('../js/page/blockUI.js');
-require('../js/page/echarts.js');
+// require('../js/page/blockUI.js'); 
+// require('../js/page/echarts.js');
