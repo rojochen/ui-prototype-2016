@@ -1,7 +1,6 @@
-//project.htmk
 require('../../vendors/bootstrap-switch/dist/js/bootstrap-switch.min.js');
 require('../js/page/projects.js');
-// notifications.html
+
 require('../../vendors/pnotify/dist/pnotify.js');
 require('../../vendors/pnotify/dist/pnotify.confirm.js');
 require('../../vendors/pnotify/dist/pnotify.buttons.js');
