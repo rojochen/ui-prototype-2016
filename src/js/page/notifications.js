@@ -4,10 +4,10 @@ $('[data-toggle = "popover"]').popover();
 $('[data-toggle="tooltip"]').tooltip();
 // TabbedNotification
 $('body').on('click', '.TabbedNotification', function() {
-    var title = $(this).attr('data-title');
-    var text = $(this).attr('data-text');
-    var type = $(this).attr('data-type');
-    var sound = $(this).attr('data-sound');
+    var title = $(this).data('title');
+    var text = $(this).data('text');
+    var type = $(this).data('type');
+    var sound = $(this).data('sound');
     var options = {
         title: title,
         text: text,
