@@ -1,5 +1,5 @@
-
-    // load check
+$(document).ready(function(){
+ // load check
     if(typeof jQuery == 'undefined') {
         var script = document.createElement('script');
         script.type = "text/javascript";
@@ -9,7 +9,6 @@
         console.log('load Sussess');
     }
     // relationshipChart
-    
     if($('body').find('#relationshipChart')){
         var echarts = require('../../../vendors/echarts/dist/echarts.min.js');
         var relationshipChart=echarts.init(document.getElementById('relationshipChart'));
@@ -79,5 +78,6 @@
 
         relationshipChart.setOption(option);
     }, 'xml');
-
-    
+    }
+});
+   
