@@ -11,3 +11,4 @@ require('../js/page/notifications.js');
 
 // echarts2
 require('../../vendors/echarts/dist/echarts.min.js');
+require('../js/page/test.js');
