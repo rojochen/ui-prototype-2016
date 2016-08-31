@@ -28,43 +28,43 @@ $switchColor: #26B99A;
 
 
 /* btn style*/
-$btnSuccessBg: #3FC1A5;   
-$btnSuccessBorder: 1px solid #26B99A;  
-$btnSuccessFocusBg:#26B99A; 
+$btnSuccessBg: rgba(38, 185, 154, 0.88);   
+$btnSuccessBorder: 1px solid rgba(38, 185, 154, 0.88);  
+$btnSuccessFocusBg:rgba(38, 185, 154, 0.88); 
 $btnSuccessDisabledBg: #A9E3D7;  
 $btnSuccessDisabledBorder: 1px solid #A9E3D7;  
 $btnDisabledOpacity: .45;   
 $btnDisabledOpacityH: 1; 
 
-$btnPrimaryBg: #4BA4DF;
-$btnPrimaryBorder: 1px solid #369ADC; 
-$btnPrimaryFocusBg: #369ADC;
+$btnPrimaryBg: rgba(52,152,219,0.88);
+$btnPrimaryBorder: 1px solid rgba(52,152,219,0.88); 
+$btnPrimaryFocusBg: rgba(52,152,219,0.88);
 $btnPrimaryDisabledBg: #AED6F1;
 $btnPrimaryDisabledBorder: 1px solid #AED6F1;
 
 $btnInfoBg: #5bc0de;
-$btnInfoBorder: 1px solid #46b8da; 
-$btnInfoFocusBg: #46b8da;
+$btnInfoBorder: 1px solid #5bc0de; 
+$btnInfoFocusBg: #5bc0de;
 $btnInfoDisabledBg: #B5E3F0;
 $btnInfoDisabledBorder: 1px solid #B5E3F0;
 
-$btnWarningBg: #F4A72D;
-$btnWarningBorder: 1px solid #F39D15; 
-$btnWarningFocusBg: #F39D15;
+$btnWarningBg: rgba(243,156,18,0.88);
+$btnWarningBorder: 1px solid rgba(243,156,18,0.88); 
+$btnWarningFocusBg: rgba(243,156,18,0.88);
 $btnWarningDisabledBg: #FAD8A1;
 $btnWarningDisabledBorder: 1px solid #FAD8A1;
 
 
-$btnDangerBg: #E96152;
-$btnDangerBorder: 1px solid #E74F3E; 
-$btnDangerFocusBg: #E74F3E;
+$btnDangerBg: rgba(231,76,60,0.88);
+$btnDangerBorder: 1px solid rgba(231,76,60,0.88); 
+$btnDangerFocusBg: rgba(231,76,60,0.88);
 $btnDangerDisabledBg: #F5B8B1;
 $btnDangerDisabledBorder: 1px solid #F5B8B1;
 
 $btnDarkColor: #E9EDEF;
 $btnDarkBg: #4B5F71;
-$btnDarkBorder: 1px solid #364B5F; 
-$btnDarkFocusBg: #364B5F;
+$btnDarkBorder: 1px solid #4B5F71; 
+$btnDarkFocusBg: #4B5F71;
 $btnDarkDisabledColor: #F5F7F8;
 $btnDarkDisabledBg: #AEB7BF;
 $btnDarkDisabledBorder: 1px solid #AEB7BF;

@@ -3915,7 +3915,7 @@ ul.verticle_bars li {
   border-color: rgba(38, 185, 154, 0.88);
 }
 
-.alert-info {
+.alert-primary {
   color: #E9EDEF;
   background-color: rgba(52, 152, 219, 0.88);
   border-color: rgba(52, 152, 219, 0.88);
@@ -3932,6 +3932,24 @@ ul.verticle_bars li {
   color: #E9EDEF;
   background-color: rgba(231, 76, 60, 0.88);
   border-color: rgba(231, 76, 60, 0.88);
+}
+
+.alert-info {
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+.alert-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.alert-dark {
+  color: #e9edef;
+  background-color: #4b5f71;
+  border-color: #364b5f;
 }
 
 .ui-pnotify.dark .ui-pnotify-container {
