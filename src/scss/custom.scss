@@ -399,23 +399,33 @@ body .container.body .right_col {
   color: #73879C;
 }
 .bg-green {
-  background: #1ABB9C !important;
-  border: 1px solid #1ABB9C !important;
+  background: $btnSuccessBg !important;
+  border: $btnSuccessBorder !important;
   color: #fff;
 }
 .bg-red {
-  background: #E74C3C !important;
-  border: 1px solid #E74C3C !important;
+  background: $btnDangerBg !important;
+  border: $btnDangerBorder !important;
   color: #fff;
 }
 .bg-blue {
-  background: #3498DB !important;
-  border: 1px solid #3498DB !important;
+  background: $btnPrimaryBg !important;
+  border: $btnPrimaryBorder !important;
   color: #fff;
 }
 .bg-orange {
-  background: #F39C12 !important;
-  border: 1px solid #F39C12 !important;
+  background: $btnWarningBg !important;
+  border: $btnWarningBorder !important;
+  color: #fff;
+}
+.bg-info {
+  background: $btnInfoBg !important;
+  border: $btnInfoBorder !important;
+  color: #fff;
+}
+.bg-dark {
+  background: $btnDarkBg !important;
+  border: $btnDarkBorder !important;
   color: #fff;
 }
 .bg-purple {
@@ -4742,6 +4752,8 @@ ul.notifications {
   }
 }
 /* three col*/
+
+
 
 
 

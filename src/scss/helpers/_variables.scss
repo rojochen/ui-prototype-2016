@@ -28,19 +28,46 @@ $switchColor: #26B99A;
 
 
 /* btn style*/
-$btnSuccessBg: #26B99A;   
-$btnSuccessBorder: 1px solid #169F85;  
-$btnSuccessFocus:#169F85;
-$btnSuccessDisabledBg: #9EE0D2;  
-$btnSuccessDisabledBorder: 1px solid #A3D2C7;  
+$btnSuccessBg: #3FC1A5;   
+$btnSuccessBorder: 1px solid #26B99A;  
+$btnSuccessFocusBg:#26B99A; 
+$btnSuccessDisabledBg: #A9E3D7;  
+$btnSuccessDisabledBorder: 1px solid #A9E3D7;  
 $btnDisabledOpacity: .45;   
-$btnDisabledOpacityH: 1;  
+$btnDisabledOpacityH: 1; 
 
-$btnDarkColor: #E9EDEF;  
-$btnDarkBg: #4B5F71;   
-$btnDarkBorder: #364B5F;  
-$btnDarkDisabledBg: #AEB7C0;   
-$btnDarkDisabledBorder: 1px solid #A7ACB3; 
+$btnPrimaryBg: #4BA4DF;
+$btnPrimaryBorder: 1px solid #369ADC; 
+$btnPrimaryFocusBg: #369ADC;
+$btnPrimaryDisabledBg: #AED6F1;
+$btnPrimaryDisabledBorder: 1px solid #AED6F1;
+
+$btnInfoBg: #5bc0de;
+$btnInfoBorder: 1px solid #46b8da; 
+$btnInfoFocusBg: #46b8da;
+$btnInfoDisabledBg: #B5E3F0;
+$btnInfoDisabledBorder: 1px solid #B5E3F0;
+
+$btnWarningBg: #F4A72D;
+$btnWarningBorder: 1px solid #F39D15; 
+$btnWarningFocusBg: #F39D15;
+$btnWarningDisabledBg: #FAD8A1;
+$btnWarningDisabledBorder: 1px solid #FAD8A1;
+
+
+$btnDangerBg: #E96152;
+$btnDangerBorder: 1px solid #E74F3E; 
+$btnDangerFocusBg: #E74F3E;
+$btnDangerDisabledBg: #F5B8B1;
+$btnDangerDisabledBorder: 1px solid #F5B8B1;
+
+$btnDarkColor: #E9EDEF;
+$btnDarkBg: #4B5F71;
+$btnDarkBorder: 1px solid #364B5F; 
+$btnDarkFocusBg: #364B5F;
+$btnDarkDisabledColor: #F5F7F8;
+$btnDarkDisabledBg: #AEB7BF;
+$btnDarkDisabledBorder: 1px solid #AEB7BF;
 /* btn style*/
 
 /* btn app */
