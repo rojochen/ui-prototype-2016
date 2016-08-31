@@ -29,24 +29,7 @@ $sidebarFooterAColor: #5A738E;
 $sidebarFooterABg: #172D44;   
 $sidebarFooterAHoverBg: #425567;   
 
-$tagBg: #1ABB9C;   
-$tagColor: #fff;   
-$tagCloseColor: #fff;   
 
-$switchColor: #26B99A;   
-
-$btnSuccessBg: #26B99A;   
-$btnSuccessBorder: 1px solid #169F85;   
-$btnSuccessDisabledBg: #9EE0D2;  
-$btnSuccessDisabledBorder: 1px solid #A3D2C7;  
-$btnDisabledOpacity: .45;   
-$btnDisabledOpacityH: 1;   
-
-$btnDarkColor: #E9EDEF;  
-$btnDarkBg: #4B5F71;   
-$btnDarkBorder: #364B5F;  
-$btnDarkDisabledBg: #AEB7C0;   
-$btnDarkDisabledBorder: 1px solid #A7ACB3;  
  
 $tenPx: 10px;
 
@@ -3910,32 +3893,33 @@ ul.verticle_bars li {
 
 /** PNotify **/
 .alert-success {
-  color: #ffffff;
+  color: $btnDarkColor;
   background-color: rgba(38, 185, 154, 0.88);
   border-color: rgba(38, 185, 154, 0.88);
 }
 
 .alert-primary {
-  color: #E9EDEF;
+  color: $btnDarkColor;
   background-color: rgba(52, 152, 219, 0.88);
   border-color: rgba(52, 152, 219, 0.88);
 }
 
 .alert-warning {
-  color: #E9EDEF;
+  color: $btnDarkColor;
   background-color: rgba(243, 156, 18, 0.88);
   border-color: rgba(243, 156, 18, 0.88);
 }
 
 .alert-danger,
 .alert-error {
-  color: #E9EDEF;
+  color: $btnDarkColor;
   background-color: rgba(231, 76, 60, 0.88);
   border-color: rgba(231, 76, 60, 0.88);
 }
 
+
 .alert-info {
-  color: #ffffff;
+  color: $btnDarkColor;
   background-color: #5bc0de;
   border-color: #5bc0de;
 }
@@ -3947,7 +3931,7 @@ ul.verticle_bars li {
 }
 
 .alert-dark {
-  color: #e9edef;
+  color: $btnDarkColor;
   background-color: #4b5f71;
   border-color: #364b5f;
 }
@@ -4770,6 +4754,7 @@ ul.notifications {
   }
 }
 /* three col*/
+
 
 
 
