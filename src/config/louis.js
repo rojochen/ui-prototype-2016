@@ -11,6 +11,7 @@ require('../../vendors/sweetalert2/dist/sweetalert2.js');
 
 // echarts2
 require('../../vendors/echarts/dist/echarts.min.js');
+require('../../vendors/echarts/dist/extension/dataTool.min.js');
 
 
 // page

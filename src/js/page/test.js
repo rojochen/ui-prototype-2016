@@ -1,26 +1,26 @@
 $(document).ready(function() {
-    var echarts = require('../../../vendors/echarts/dist/echarts.min.js');
+
+    // var echarts = require('../../../vendors/echarts/dist/echarts.min.js');
     // relationshipChart
     if ($('body').find('#relationshipChart')) {
-        var relationshipChart = document.getElementById("relationshipChart");
-        var myChart = echarts.init(relationshipChart);
+        // var relationshipChart = document.getElementById("relationshipChart");
+        var relationshipChart = echarts.init(document.getElementById("relationshipChart"));
         var app = {};
         option = null;
-        myChart.showLoading();
-        $.get('../../data/relationshipChart.gexf', function(xml) {
-            myChart.hideLoading();
+        relationshipChart.showLoading();
+        $.get('../src/data/les-miserables.gexf', function(xml) {
+            relationshipChart.hideLoading();
 
             var graph = echarts.dataTool.gexf.parse(xml);
             var categories = [];
             for (var i = 0; i < 9; i++) {
                 categories[i] = {
-                    name: '类目' + i
+                    name: '系列' + i
                 };
             }
             graph.nodes.forEach(function(node) {
                 node.itemStyle = null;
                 node.value = node.symbolSize;
-                node.symbolSize /= 1.5;
                 node.label = {
                     normal: {
                         show: node.symbolSize > 30
@@ -60,27 +60,34 @@ $(document).ready(function() {
                     },
                     lineStyle: {
                         normal: {
-                            color: 'source',
                             curveness: 0.3
                         }
                     }
                 }]
             };
 
-            myChart.setOption(option);
-        }, 'xml');
+            relationshipChart.setOption(option);
+        }, 'xml');;
+        if (option && typeof option === "object") {
+            var startTime = +new Date();
+            relationshipChart.setOption(option, true);
+            var endTime = +new Date();
+            var updateTime = endTime - startTime;
+            console.log("Time used:", updateTime);
+        }
     }
     // rectangleTreesChart
     if ($('body').find('#rectangleTreesChart')) {
-        var rectangleTreesChart = document.getElementById("rectangleTreesChart");
-        var myChart = echarts.init(rectangleTreesChart);
+        // var rectangleTreesChart = document.getElementById("rectangleTreesChart");
+        var rectangleTreesChart = echarts.init(document.getElementById("rectangleTreesChart"));
         var app = {};
         option = null;
-        myChart.showLoading();
+        rectangleTreesChart.showLoading();
 
         var household_america_2012 = 113616229;
-        $.get('../../data/rectangleTreesChart.json', function(obama_budget_2012) {
-            myChart.hideLoading();
+        $.get('../src/data/rectangleTreesChart.json', function(obama_budget_2012) {
+            console.log('rectangleTreesChart success');
+            rectangleTreesChart.hideLoading();
 
             var formatUtil;
 
@@ -217,7 +224,7 @@ $(document).ready(function() {
             formatUtil = echarts.format;
             var modes = ['2012Budget', '2011Budget', 'Growth'];
 
-            myChart.setOption(option = {
+            rectangleTreesChart.setOption(option = {
                 title: {
                     left: 'center',
                     text: 'How $3.7 Trillion is Spent',
@@ -252,14 +259,15 @@ $(document).ready(function() {
     }
     // sankeyChart
     if ($('body').find('#sankeyChart')) {
-        var sankeyChart = document.getElementById("sankeyChart");
-        var myChart = echarts.init(sankeyChart);
+        // var sankeyChart = document.getElementById("sankeyChart");
+        var sankeyChart = echarts.init(document.getElementById("sankeyChart"));
         var app = {};
         option = null;
-        myChart.showLoading();
-        $.get('../../data/sankeyChart.json', function(data) {
-            myChart.hideLoading();
-            myChart.setOption(option = {
+        sankeyChart.showLoading();
+        $.get('../src/data/sankeyChart.json', function(data) {
+            console.log('sankeyChart success');
+            sankeyChart.hideLoading();
+            sankeyChart.setOption(option = {
                 title: {
                     text: 'Sankey Diagram'
                 },
@@ -288,7 +296,7 @@ $(document).ready(function() {
             });
         });
         if (option && typeof option === "object") {
-            myChart.setOption(option, true);
+            sankeyChart.setOption(option, true);
         }
     }
     // funnelChart
@@ -299,8 +307,8 @@ $(document).ready(function() {
         option = null;
         option = {
             title: {
-                text: '漏斗图',
-                subtext: '纯属虚构'
+                text: '漏斗圖',
+                subtext: '純屬虛構'
             },
             tooltip: {
                 trigger: 'item',
@@ -316,7 +324,7 @@ $(document).ready(function() {
                 }
             },
             legend: {
-                data: ['展现', '点击', '访问', '咨询', '订单']
+                data: ['展現', '點擊', '訪問', '諮詢', '訂單']
             },
             calculable: true,
             series: [{
@@ -362,19 +370,19 @@ $(document).ready(function() {
                 },
                 data: [{
                     value: 60,
-                    name: '访问'
+                    name: '訪問'
                 }, {
                     value: 40,
-                    name: '咨询'
+                    name: '諮詢'
                 }, {
                     value: 20,
-                    name: '订单'
+                    name: '訂單'
                 }, {
                     value: 80,
-                    name: '点击'
+                    name: '點擊'
                 }, {
                     value: 100,
-                    name: '展现'
+                    name: '展現'
                 }]
             }]
         };
