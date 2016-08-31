@@ -7,7 +7,7 @@ $(document).ready(function() {
         var app = {};
         option = null;
         myChart.showLoading();
-        $.get('http://echarts.baidu.com/data/asset/data/les-miserables.gexf', function(xml) {
+        $.get('../../data/relationshipChart.gexf', function(xml) {
             myChart.hideLoading();
 
             var graph = echarts.dataTool.gexf.parse(xml);
@@ -79,7 +79,7 @@ $(document).ready(function() {
         myChart.showLoading();
 
         var household_america_2012 = 113616229;
-        $.get('http://echarts.baidu.com/gallery/data/asset/data/obama_budget_proposal_2012.json', function(obama_budget_2012) {
+        $.get('../../data/rectangleTreesChart.json', function(obama_budget_2012) {
             myChart.hideLoading();
 
             var formatUtil;
@@ -246,6 +246,9 @@ $(document).ready(function() {
                 })
             });
         });
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
     }
     // sankeyChart
     if ($('body').find('#sankeyChart')) {
@@ -254,9 +257,8 @@ $(document).ready(function() {
         var app = {};
         option = null;
         myChart.showLoading();
-        $.get('http://echarts.baidu.com/gallery/data/asset/data/energy.json', function(data) {
+        $.get('../../data/sankeyChart.json', function(data) {
             myChart.hideLoading();
-
             myChart.setOption(option = {
                 title: {
                     text: 'Sankey Diagram'
@@ -286,8 +288,8 @@ $(document).ready(function() {
             });
         });
         if (option && typeof option === "object") {
-        myChart.setOption(option, true);
-    }
+            myChart.setOption(option, true);
+        }
     }
     // funnelChart
     if ($('body').find('#funnelChart')) {
@@ -375,7 +377,7 @@ $(document).ready(function() {
                     name: '展现'
                 }]
             }]
-        };;
+        };
         if (option && typeof option === "object") {
             myChart.setOption(option, true);
         }
