@@ -8,51 +8,51 @@
   }
 }
 .panel-primary {
-  border-color: rgba(46,109,164,.85);
+  border-color: $btnPrimaryBg;
   .panel-heading {
-    color: #fff;
-    background-color: rgba(46,109,164,.85);
-    border-color: rgba(46,109,164,.85);
+    color: $btnDarkColor;
+    background-color: $btnPrimaryBg;
+    border-color: $btnPrimaryBg;
   }
 }
 .panel-success {
-  border-color: rgba(38,185,154,.85);
+  border-color: $btnSuccessBg;
   .panel-heading {
-    color: #fff;
-    background-color: rgba(38,185,154,.85);
-    border-color: rgba(38,185,154,.85);
+    color: $btnDarkColor;
+    background-color: $btnSuccessBg;
+    border-color: $btnSuccessBg;
   }
 }
 .panel-info {
-  border-color: rgba(52,152,219,.85);
+  border-color: $btnInfoBg;
   .panel-heading {
-    color: #fff;
-    background-color: rgba(52,152,219,.85);
-    border-color: rgba(52,152,219,.85);
+    color: $btnDarkColor;
+    background-color: $btnInfoBg;
+    border-color: $btnInfoBg;
   }
 }
 .panel-warning {
-  border-color: rgba(243,156,18,.85);
+  border-color: $btnWarningBg;
   .panel-heading {
-    color: #fff;
-    background-color: rgba(243,156,18,.85);
-    border-color: rgba(243,156,18,.85);
+    color: $btnDarkColor;
+    background-color: $btnWarningBg;
+    border-color: $btnWarningBg;
   }
 }
 .panel-danger {
-  border-color: rgba(231,76,60,.85);
+  border-color: $btnDangerBg;
   .panel-heading {
-    color: #fff;
-    background-color: rgba(231,76,60,.85);
-    border-color: rgba(231,76,60,.85);
+    color: $btnDarkColor;
+    background-color: $btnDangerBg;
+    border-color: $btnDangerBg;
   }
 }
 .panel-dark {
-  border-color: rgba(57,77,95,.85);
+  border-color: $btnDarkBg;
   .panel-heading {
-    color: #fff;
-    background-color: rgba(57,77,95,.85);
-    border-color: rgba(57,77,95,.85);
+    color: $btnDarkColor;
+    background-color: $btnDarkBg;
+    border-color: $btnDarkBg;
   }
 }
 /* ***** /panel *******/
