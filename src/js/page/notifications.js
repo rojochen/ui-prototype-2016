@@ -2,6 +2,9 @@
 $('[data-toggle = "popover"]').popover();
 // Tooltips
 $('[data-toggle="tooltip"]').tooltip();
+// PNotify
+var PNotify = require('../../../vendors/pnotify/dist/pnotify.js');
+
 // TabbedNotification
 $('body').on('click', '.TabbedNotification', function() {
     var title = $(this).data('title');
