@@ -312,10 +312,10 @@
                                 <p>Add small overlays of content for housing secondary information.</p>
                                 <!-- start pop-over -->
                                 <div class="bs-example-popovers">
-                                    <button type="button" class="btn btn-default" title="Popover title" data-container="body" data-toggle="popover" data-trigger="hover"; data-placement="left" data-content="Some content in Popover on left">Popover on left</button>
-                                    <button type="button" class="btn btn-default" title="Popover title" data-container="body" data-toggle="popover" data-trigger="hover"; data-placement="top" data-content="Some content in Popover on top">Popover on top</button>
-                                    <button type="button" class="btn btn-default" title="Popover title" data-container="body" data-toggle="popover" data-trigger="hover"; data-placement="bottom" data-content="Some content in Popover on bottom">Popover on bottom</button>
-                                    <button type="button" class="btn btn-default" title="Popover title" data-container="body" data-toggle="popover" data-trigger="hover"; data-placement="right" data-content="Some content in Popover on right">Popover on right</button>
+                                    <button type="button" class="btn btn-default" title="Popover title" data-container="body" data-toggle="popover" data-trigger="hover" ; data-placement="left" data-content="Some content in Popover on left">Popover on left</button>
+                                    <button type="button" class="btn btn-default" title="Popover title" data-container="body" data-toggle="popover" data-trigger="hover" ; data-placement="top" data-content="Some content in Popover on top">Popover on top</button>
+                                    <button type="button" class="btn btn-default" title="Popover title" data-container="body" data-toggle="popover" data-trigger="hover" ; data-placement="bottom" data-content="Some content in Popover on bottom">Popover on bottom</button>
+                                    <button type="button" class="btn btn-default" title="Popover title" data-container="body" data-toggle="popover" data-trigger="hover" ; data-placement="right" data-content="Some content in Popover on right">Popover on right</button>
                                 </div>
                                 <!-- end pop-over -->
                             </div>
@@ -518,202 +518,138 @@
                         </div>
                         <div class="x_content">
                             <p>Regular notifications</p>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Regular Success',
-                                  text: 'That thing that you were trying to do worked!',
-                                  type: 'success',
-                                  styling: 'bootstrap3'
-                              });">Success</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'New Thing',
-                                  text: 'Just to let you know, something happened.',
-                                  type: 'info',
-                                  styling: 'bootstrap3'
-                              });">Info</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Regular Notice',
-                                  text: 'Check me out! I\'m a notice.',
-                                  styling: 'bootstrap3'
-                              });">Notice</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Oh No!',
-                                  text: 'Something terrible happened.',
-                                  type: 'error',
-                                  styling: 'bootstrap3'
-                              });">Error</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Oh No!',
-                                  text: 'Something terrible happened.',
-                                  type: 'info',
-                                  styling: 'bootstrap3',
-                                  addclass: 'dark'
-                              });">Dark</button>
+                            <button class="btn btn-default source"  data-title='Regular Success' data-text='That thing that you were trying to do worked!' data-type='success' data-styling='bootstrap3' ">Success</button>
+                            <button class="btn btn-default source " data-title='New Thing'       data-text= 'Just to let you know, something happened.'    data-type= 'info' data-styling= 'bootstrap3' ">Info</button>
+                            <button class="btn btn-default source " data-title='Regular Notice'  data-text='Check me out! I am a notice. ' data-styling='bootstrap3 ' ">Notice</button>
+                            <button class="btn btn-default source " data-title= 'Oh No! '        data-text= 'Something terrible happened. ' data-type= 'error ' data-styling= 'bootstrap3 '">Error</button>
+                            <button class="btn btn-default source " data-title='Oh No! '         data-text:='Something terrible happened. ' data-type='info ' data-styling='bootstrap3 ' data-addclass='dark ' ">Dark</button>
                             <hr />
                             <p>Sticky notifications.. these wont close unless user closes them.</p>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Success',
-                                  text: 'Sticky success... I\'m not even gonna make a joke.',
-                                  type: 'success',
-                                  hide: false,
-                                  styling: 'bootstrap3'
-                              });">Success</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Info',
-                                  text: 'Sticky Info... I\'m not even gonna make a joke.',
-                                  type: 'info',
-                                  hide: false,
-                                  styling: 'bootstrap3'
-                              });">Info</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Warning',
-                                  text: 'Sticky Warning... I\'m not even gonna make a joke.',
-                                  hide: false,
-                                  styling: 'bootstrap3'
-                              });">Warning</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Danger',
-                                  text: 'Sticky Danger... I\'m not even gonna make a joke.',
-                                  type: 'error',
-                                  hide: false,
-                                  styling: 'bootstrap3'
-                              });">Error</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Success',
-                                  text: 'Sticky success... I\'m not even gonna make a joke.',
-                                  type: 'info',
-                                  hide: false,
-                                  styling: 'bootstrap3',
-                                  addclass: 'dark'
-                              });">Dark</button>
+                            <button class="btn btn-default source " data-title= 'Sticky Success ' data-text= 'Sticky success... I am not even gonna make a joke. ' data-type= 'success ' data-hide= 'false' data-styling= 'bootstrap3 ' ">Success</button>
+                            <button class="btn btn-default source " data-title='Sticky Info '     data-text='Sticky Info... I am not even gonna make a joke. ' data-type='info ' data-hide='false' data-styling='bootstrap3 ' ">Info</button>
+                            <button class="btn btn-default source " data-title='Sticky Warning '  data-text= 'Sticky Warning... I am not even gonna make a joke. ' data-hide= 'false' data-styling= 'bootstrap3 ' ">Warning</button>
+                            <button class="btn btn-default source " data-title='Sticky Danger '   data-text='Sticky Danger... I am not even gonna make a joke. ' data-type='error ' data-hide='false' data-styling='bootstrap3 ' ">Error</button>
+                            <button class="btn btn-default source " data-title= 'Sticky Success ' data-text= 'Sticky success... I am not even gonna make a joke. ' data-type= 'info ' data-hide= 'false' data-styling= 'bootstrap3 ' data-addclass= 'dark ' ">Dark</button>
                             <hr/>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Non-Blocking Notice',
-                                  type: 'info',
-                                  text: 'When you hover over me I\'ll fade to show the elements underneath. Feel free to click any of them just like I wasn\'t even here.',
-                                  nonblock: {
-                                      nonblock: true
-                                  },
-                                  styling: 'bootstrap3',
-                                  addclass: 'dark'
-                              });">Non-Blocking Notice</button>
+                            <button class="btn btn-default source " data-title='Non-Blocking Notice '   data-type= 'info ' data-text='When you hover over me I wll fade to show the elements underneath. Feel free to click any of them just like
+                                I was not even here. ' data-nonblock='true' data-styling= 'bootstrap3 ' data-addclass= 'dark '">Non-Blocking Notice</button>
                             <hr />
-                            <div id="antoox">
+                            <div id="antoox ">
                                 <div>
                                     <div></div>
                                     <div></div>
                                     <div></div>
                                 </div>
                             </div>
-                            <button class="btn btn-default source TabbedNotification" data-title='Tabbed Notificat' data-text='Sticky success... Raw denim you probably haven\ t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.' data-type='success' data-sound='false'>Success</button>
-                            <button class="btn btn-default source " onclick="new TabbedNotification({ title: 'Tabbed Notificat ', text: 'Custom Info... Raw denim you probably haven\ 't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche
-                                tempor, williamsburg carles vegan helvetica. ', type: 'info ', sound: false }) ">Info</button>
-                            <button class="btn btn-default source " onclick="new TabbedNotification({ title: 'Tabbed Notificat ', text: 'Custom Warning... Raw denim you probably haven\ 't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
-                                cliche tempor, williamsburg carles vegan helvetica. ',
-                                type: 'warning ', sound: false }) ">Warning</button>
+                            <button class="btn btn-default source TabbedNotification " data-title='Tabbed Notificat ' data-text='Sticky success... Raw denim you probably haven\ t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro
+                                synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ' data-type='success ' data-sound='false '>Success</button>
+                            <button class="btn btn-default source " onclick="new TabbedNotification({ title: 'Tabbed Notificat ', text: 'Custom Info... Raw denim you probably haven\ 't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                                retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ', type: 'info ', sound: false }) ">Info</button>
+                            <button class="btn btn-default source " onclick="new TabbedNotification({ title: 'Tabbed Notificat ', text: 'Custom Warning... Raw denim you probably haven\ 't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                                retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ', type: 'warning ', sound: false }) ">Warning</button>
                             <button class="btn btn-default source " onclick="new TabbedNotification({ title: 'Custom Notification error ', text: 'Custom Error... Raw denim you probably haven\ 't heard of them jean shorts Austin. Nesciunt tofu stumptown
                                 aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ', type: 'error ', sound: false }) ">Error</button>
                             <button class="btn btn-default source " onclick="new TabbedNotification({ title: 'Tabbed notification dark ', text: 'Custom Dark... Raw denim you probably haven\ 't heard of them jean shorts Austin. Nesciunt tofu stumptown
-                                aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ', type:
-                                'dark ', sound: false }) ">Dark</button>
+                                aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. ', type: 'dark ', sound: false }) ">Dark</button>
                         </div>
                     </div>
                 </div>
                 <div class="clearfix "></div>
-                <div class="col-md-12 col-sm-6 col-xs-12">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2><i class="fa fa-bell"></i> Carousel <small>轉吧轉吧！</small></h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                <div class="col-md-12 col-sm-6 col-xs-12 ">
+                    <div class="x_panel ">
+                        <div class="x_title ">
+                            <h2><i class="fa fa-bell "></i> Carousel <small>轉吧轉吧！</small></h2>
+                            <ul class="nav navbar-right panel_toolbox ">
+                                <li><a class="collapse-link "><i class="fa fa-chevron-up "></i></a>
                                 </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Settings 1</a>
+                                <li class="dropdown ">
+                                    <a href="# " class="dropdown-toggle " data-toggle="dropdown " role="button " aria-expanded="false "><i class="fa fa-wrench "></i></a>
+                                    <ul class="dropdown-menu " role="menu ">
+                                        <li><a href="# ">Settings 1</a>
                                         </li>
-                                        <li><a href="#">Settings 2</a>
+                                        <li><a href="# ">Settings 2</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                <li><a class="close-link "><i class="fa fa-close "></i></a>
                                 </li>
                             </ul>
-                            <div class="clearfix"></div>
+                            <div class="clearfix "></div>
                         </div>
-                        <div class="x_content">
-                            <div id="carousel-id" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carousel-id" data-slide-to="0" class=""></li>
-                                    <li data-target="#carousel-id" data-slide-to="1" class=""></li>
-                                    <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+                        <div class="x_content ">
+                            <div id="carousel-id " class="carousel slide " data-ride="carousel ">
+                                <ol class="carousel-indicators ">
+                                    <li data-target="#carousel-id " data-slide-to="0 " class=" "></li>
+                                    <li data-target="#carousel-id " data-slide-to="1 " class=" "></li>
+                                    <li data-target="#carousel-id " data-slide-to="2 " class="active "></li>
                                 </ol>
-                                <div class="carousel-inner">
-                                    <div class="item">
-                                        <div class="table-responsive">
-                                            <table class="table table-striped jambo_table bulk_action">
+                                <div class="carousel-inner ">
+                                    <div class="item ">
+                                        <div class="table-responsive ">
+                                            <table class="table table-striped jambo_table bulk_action ">
                                                 <thead>
-                                                    <tr class="headings">
+                                                    <tr class="headings ">
                                                         <th>
-                                                            <input type="checkbox" id="check-all" class="flat">
+                                                            <input type="checkbox " id="check-all " class="flat ">
                                                         </th>
-                                                        <th class="column-title">Invoice </th>
-                                                        <th class="column-title">Invoice Date </th>
-                                                        <th class="column-title">Order </th>
-                                                        <th class="column-title">Bill to Name </th>
-                                                        <th class="column-title">Status </th>
-                                                        <th class="column-title">Amount </th>
-                                                        <th class="column-title no-link last"><span class="nobr">Action</span>
+                                                        <th class="column-title ">Invoice </th>
+                                                        <th class="column-title ">Invoice Date </th>
+                                                        <th class="column-title ">Order </th>
+                                                        <th class="column-title ">Bill to Name </th>
+                                                        <th class="column-title ">Status </th>
+                                                        <th class="column-title ">Amount </th>
+                                                        <th class="column-title no-link last "><span class="nobr ">Action</span>
                                                         </th>
-                                                        <th class="bulk-actions" colspan="7">
-                                                            <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                                                        <th class="bulk-actions " colspan="7 ">
+                                                            <a class="antoo " style="color:#fff; font-weight:500; ">Bulk Actions ( <span class="action-cnt "> </span> ) <i class="fa fa-chevron-down "></i></a>
                                                         </th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr class="even pointer">
+                                                    <tr class="even pointer ">
                                                         <td class="a-center ">
-                                                            <input type="checkbox" class="flat" name="table_records">
+                                                            <input type="checkbox " class="flat " name="table_records ">
                                                         </td>
                                                         <td class=" ">121000040</td>
                                                         <td class=" ">May 23, 2014 11:47:56 PM </td>
-                                                        <td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
+                                                        <td class=" ">121000210 <i class="success fa fa-long-arrow-up "></i></td>
                                                         <td class=" ">John Blank L</td>
                                                         <td class=" ">Paid</td>
                                                         <td class="a-right a-right ">$7.45</td>
-                                                        <td class=" last"><a href="#">View</a>
+                                                        <td class=" last "><a href="# ">View</a>
                                                         </td>
                                                     </tr>
-                                                    <tr class="odd pointer">
+                                                    <tr class="odd pointer ">
                                                         <td class="a-center ">
-                                                            <input type="checkbox" class="flat" name="table_records">
+                                                            <input type="checkbox " class="flat " name="table_records ">
                                                         </td>
                                                         <td class=" ">121000039</td>
                                                         <td class=" ">May 23, 2014 11:30:12 PM</td>
-                                                        <td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+                                                        <td class=" ">121000208 <i class="success fa fa-long-arrow-up "></i>
                                                         </td>
                                                         <td class=" ">John Blank L</td>
                                                         <td class=" ">Paid</td>
                                                         <td class="a-right a-right ">$741.20</td>
-                                                        <td class=" last"><a href="#">View</a>
+                                                        <td class=" last "><a href="# ">View</a>
                                                         </td>
                                                     </tr>
-                                                    <tr class="even pointer">
+                                                    <tr class="even pointer ">
                                                         <td class="a-center ">
-                                                            <input type="checkbox" class="flat" name="table_records">
+                                                            <input type="checkbox " class="flat " name="table_records ">
                                                         </td>
                                                         <td class=" ">121000038</td>
                                                         <td class=" ">May 24, 2014 10:55:33 PM</td>
-                                                        <td class=" ">121000203 <i class="success fa fa-long-arrow-up"></i>
+                                                        <td class=" ">121000203 <i class="success fa fa-long-arrow-up "></i>
                                                         </td>
                                                         <td class=" ">Mike Smith</td>
                                                         <td class=" ">Paid</td>
                                                         <td class="a-right a-right ">$432.26</td>
-                                                        <td class=" last"><a href="#">View</a>
+                                                        <td class=" last "><a href="# ">View</a>
                                                         </td>
                                                     </tr>
-                                                    <tr class="odd pointer">
+                                                    <tr class="odd pointer ">
                                                         <td class="a-center ">
-                                                            <input type="checkbox" class="flat" name="table_records">
+                                                            <input type="checkbox " class="flat " name="table_records ">
                                                         </td>
                                                         <td class=" ">121000037</td>
                                                         <td class=" ">May 24, 2014 10:52:44 PM</td>
@@ -721,12 +657,12 @@
                                                         <td class=" ">Mike Smith</td>
                                                         <td class=" ">Paid</td>
                                                         <td class="a-right a-right ">$333.21</td>
-                                                        <td class=" last"><a href="#">View</a>
+                                                        <td class=" last "><a href="# ">View</a>
                                                         </td>
                                                     </tr>
-                                                    <tr class="even pointer">
+                                                    <tr class="even pointer ">
                                                         <td class="a-center ">
-                                                            <input type="checkbox" class="flat" name="table_records">
+                                                            <input type="checkbox " class="flat " name="table_records ">
                                                         </td>
                                                         <td class=" ">121000040</td>
                                                         <td class=" ">May 24, 2014 11:47:56 PM </td>
@@ -734,26 +670,26 @@
                                                         <td class=" ">John Blank L</td>
                                                         <td class=" ">Paid</td>
                                                         <td class="a-right a-right ">$7.45</td>
-                                                        <td class=" last"><a href="#">View</a>
+                                                        <td class=" last "><a href="# ">View</a>
                                                         </td>
                                                     </tr>
-                                                    <tr class="odd pointer">
+                                                    <tr class="odd pointer ">
                                                         <td class="a-center ">
-                                                            <input type="checkbox" class="flat" name="table_records">
+                                                            <input type="checkbox " class="flat " name="table_records ">
                                                         </td>
                                                         <td class=" ">121000039</td>
                                                         <td class=" ">May 26, 2014 11:30:12 PM</td>
-                                                        <td class=" ">121000208 <i class="error fa fa-long-arrow-down"></i>
+                                                        <td class=" ">121000208 <i class="error fa fa-long-arrow-down "></i>
                                                         </td>
                                                         <td class=" ">John Blank L</td>
                                                         <td class=" ">Paid</td>
                                                         <td class="a-right a-right ">$741.20</td>
-                                                        <td class=" last"><a href="#">View</a>
+                                                        <td class=" last "><a href="# ">View</a>
                                                         </td>
                                                     </tr>
-                                                    <tr class="even pointer">
+                                                    <tr class="even pointer ">
                                                         <td class="a-center ">
-                                                            <input type="checkbox" class="flat" name="table_records">
+                                                            <input type="checkbox " class="flat " name="table_records ">
                                                         </td>
                                                         <td class=" ">121000038</td>
                                                         <td class=" ">May 26, 2014 10:55:33 PM</td>
@@ -761,12 +697,12 @@
                                                         <td class=" ">Mike Smith</td>
                                                         <td class=" ">Paid</td>
                                                         <td class="a-right a-right ">$432.26</td>
-                                                        <td class=" last"><a href="#">View</a>
+                                                        <td class=" last "><a href="# ">View</a>
                                                         </td>
                                                     </tr>
-                                                    <tr class="odd pointer">
+                                                    <tr class="odd pointer ">
                                                         <td class="a-center ">
-                                                            <input type="checkbox" class="flat" name="table_records">
+                                                            <input type="checkbox " class="flat " name="table_records ">
                                                         </td>
                                                         <td class=" ">121000037</td>
                                                         <td class=" ">May 26, 2014 10:52:44 PM</td>
@@ -774,12 +710,12 @@
                                                         <td class=" ">Mike Smith</td>
                                                         <td class=" ">Paid</td>
                                                         <td class="a-right a-right ">$333.21</td>
-                                                        <td class=" last"><a href="#">View</a>
+                                                        <td class=" last "><a href="# ">View</a>
                                                         </td>
                                                     </tr>
-                                                    <tr class="even pointer">
+                                                    <tr class="even pointer ">
                                                         <td class="a-center ">
-                                                            <input type="checkbox" class="flat" name="table_records">
+                                                            <input type="checkbox " class="flat " name="table_records ">
                                                         </td>
                                                         <td class=" ">121000040</td>
                                                         <td class=" ">May 27, 2014 11:47:56 PM </td>
@@ -787,12 +723,12 @@
                                                         <td class=" ">John Blank L</td>
                                                         <td class=" ">Paid</td>
                                                         <td class="a-right a-right ">$7.45</td>
-                                                        <td class=" last"><a href="#">View</a>
+                                                        <td class=" last "><a href="# ">View</a>
                                                         </td>
                                                     </tr>
-                                                    <tr class="odd pointer">
+                                                    <tr class="odd pointer ">
                                                         <td class="a-center ">
-                                                            <input type="checkbox" class="flat" name="table_records">
+                                                            <input type="checkbox " class="flat " name="table_records ">
                                                         </td>
                                                         <td class=" ">121000039</td>
                                                         <td class=" ">May 28, 2014 11:30:12 PM</td>
@@ -800,15 +736,15 @@
                                                         <td class=" ">John Blank L</td>
                                                         <td class=" ">Paid</td>
                                                         <td class="a-right a-right ">$741.20</td>
-                                                        <td class=" last"><a href="#">View</a>
+                                                        <td class=" last "><a href="# ">View</a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <table class="table table-hover">
+                                    <div class="item ">
+                                        <table class="table table-hover ">
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
@@ -819,67 +755,67 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">1</th>
+                                                    <th scope="row ">1</th>
                                                     <td>Mark</td>
                                                     <td>Otto</td>
                                                     <td>@mdo</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">2</th>
+                                                    <th scope="row ">2</th>
                                                     <td>Jacob</td>
                                                     <td>Thornton</td>
                                                     <td>@fat</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">3</th>
+                                                    <th scope="row ">3</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">4</th>
+                                                    <th scope="row ">4</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">5</th>
+                                                    <th scope="row ">5</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">6</th>
+                                                    <th scope="row ">6</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">7</th>
+                                                    <th scope="row ">7</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">8</th>
+                                                    <th scope="row ">8</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">9</th>
+                                                    <th scope="row ">9</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">10</th>
+                                                    <th scope="row ">10</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">11</th>
+                                                    <th scope="row ">11</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
@@ -888,8 +824,8 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="item active">
-                                        <table class="table table-bordered">
+                                    <div class="item active ">
+                                        <table class="table table-bordered ">
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
@@ -900,67 +836,67 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">1</th>
+                                                    <th scope="row ">1</th>
                                                     <td>Mark</td>
                                                     <td>Otto</td>
                                                     <td>@mdo</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">2</th>
+                                                    <th scope="row ">2</th>
                                                     <td>Jacob</td>
                                                     <td>Thornton</td>
                                                     <td>@fat</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">3</th>
+                                                    <th scope="row ">3</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">4</th>
+                                                    <th scope="row ">4</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">5</th>
+                                                    <th scope="row ">5</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">6</th>
+                                                    <th scope="row ">6</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">7</th>
+                                                    <th scope="row ">7</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">8</th>
+                                                    <th scope="row ">8</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">9</th>
+                                                    <th scope="row ">9</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">10</th>
+                                                    <th scope="row ">10</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">11</th>
+                                                    <th scope="row ">11</th>
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
@@ -969,8 +905,8 @@
                                         </table>
                                     </div>
                                 </div>
-                                <a class="left carousel-control" href="#carousel-id" data-slide="prev" style="background-image:none"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                                <a class="right carousel-control" href="#carousel-id" data-slide="next" style="background-image:none"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                                <a class="left carousel-control " href="#carousel-id " data-slide="prev " style="background-image:none "><span class="glyphicon glyphicon-chevron-left "></span></a>
+                                <a class="right carousel-control " href="#carousel-id " data-slide="next " style="background-image:none "><span class="glyphicon glyphicon-chevron-right "></span></a>
                             </div>
                         </div>
                     </div>
@@ -982,7 +918,7 @@
         <!-- /page content -->
         <!-- footer content -->
         <footer>
-            <div class="pull-right">
+            <div class="pull-right ">
                 New Prototype - 2016
             </div>
             <div class="clearfix "></div>
@@ -990,17 +926,21 @@
         <!-- /footer content -->
     </div>
     </div>
-    <div id="custom_notifications" class="custom-notifications dsp_none">
-        <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+    <div id="custom_notifications " class="custom-notifications dsp_none ">
+        <ul class="list-unstyled notifications clearfix " data-tabbed_notifications="notif-group ">
         </ul>
-        <div class="clearfix"></div>
-        <div id="notif-group" class="tabbed_notifications"></div>
+        <div class="clearfix "></div>
+        <div id="notif-group " class="tabbed_notifications "></div>
     </div>
-    <script src="assets/css/style.js"></script>
-    <script type="text/javascript" src="assets/js/vendors.js"></script>
-    <script src="../vendors/pnotify/dist/pnotify.js"></script>
-    <script type="text/javascript" src="assets/js/louis.js"></script>
-  
+    <script src="assets/css/style.js "></script>
+    <script type="text/javascript " src="assets/js/vendors.js "></script>   
+    <!--<script type="text/javascript " src="assets/js/louis.js "></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../vendors/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="../vendors/pnotify/dist/pnotify.js "></script>
+    <script src="../src/js/page/notifications.js"></script>
+
 </body>
 
 </html>
