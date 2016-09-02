@@ -326,4 +326,10 @@ $(document).ready(function() {
         }
 
     }
+
+    window.onresize = function() {
+        rectangleTreesChart.resize();
+        sankeyChart.resize();
+        myChart.resize();
+    };
 });

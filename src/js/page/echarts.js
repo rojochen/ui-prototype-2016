@@ -45,9 +45,6 @@ $(document).ready(function() {
                 data: [5, 1, 3, 2, 1, 2]
             }]
         });
-        window.onresize = function() {
-            barChart.resize();
-        };
     }
 
     if ($('body').find('#horizontalBarChart')) {
@@ -86,9 +83,6 @@ $(document).ready(function() {
                 data: [2, 2, 4, 1]
             }]
         });
-        window.onresize = function() {
-            horizontalBarChart.resize();
-        };
     }
 
     if ($('body').find('#pieChart')) {
@@ -135,9 +129,6 @@ $(document).ready(function() {
                 }]
             }]
         });
-        window.onresize = function() {
-            pieChart.resize();
-        };
     }
 
     if ($('body').find('#donutPieChart')) {
@@ -188,9 +179,6 @@ $(document).ready(function() {
                 }]
             }]
         });
-        window.onresize = function() {
-            donutPieChart.resize();
-        };
     }
 
     if ($('body').find('#scatterChart')) {
@@ -329,9 +317,6 @@ $(document).ready(function() {
                 }
             }]
         });
-        window.onresize = function() {
-            scatterChart.resize();
-        };
     }
 
     if ($('body').find('#lineChart')) {
@@ -419,8 +404,14 @@ $(document).ready(function() {
                 data: [1320, 1132, 601, 234, 120, 90, 20]
             }]
         });
-        window.onresize = function() {
-            lineChart.resize();
-        };
     }
+
+    window.onresize = function() {
+        barChart.resize();
+        horizontalBarChart.resize();
+        pieChart.resize();
+        donutPieChart.resize();
+        scatterChart.resize();
+        lineChart.resize();
+    };
 });
