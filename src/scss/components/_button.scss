@@ -8,6 +8,29 @@
 a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
   color: #fff;
 }
+
+.btn-default {
+  background: $btnDefaultBg;
+  border: $btnDefaultBorder;
+  &:hover, &:focus, &:active{
+    background: $btnDefaultFocusBg;
+  }
+  &:active:focus{
+    background: darken($btnDefaultBg, 5%);
+  }
+  &.active{
+    background: $btnDefaultFocusBg;
+  }
+  &.disabled:hover{
+    background: $btnDefaultDisabledBg;
+    border: $btnDefaultDisabledBorder;
+  }
+  &.disabled:focus {
+    background: $btnDefaultDisabledBg;
+    border: $btnDefaultDisabledBorder;
+  }
+}
+
 .btn-success {
   background: $btnSuccessBg;
   border: $btnSuccessBorder;
