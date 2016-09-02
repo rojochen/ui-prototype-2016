@@ -18,48 +18,48 @@ $('body').on('click', '.TabbedNotification', function() {
     TabbedNotification(options);
 });
 // TabbedNotification
-$(function () {
-        var cnt = 10; //$("#custom_notifications ul.notifications li").length + 1;
-        TabbedNotification = function (options) {
-            var message = "<div id='ntf" + cnt + "' class='text alert-" + options.type + "' style='display:none'><h2><i class='fa fa-bell'></i> " + options.title + "</h2><div class='close'><a href='javascript:;' class='notification_close'><i class='fa fa-close'></i></a></div><p>" + options.text + "</p></div>";
+$(function() {
+    var cnt = 10; //$("#custom_notifications ul.notifications li").length + 1;
+    TabbedNotification = function(options) {
+        var message = "<div id='ntf" + cnt + "' class='text alert-" + options.type + "' style='display:none'><h2><i class='fa fa-bell'></i> " + options.title + "</h2><div class='close'><a href='javascript:;' class='notification_close'><i class='fa fa-close'></i></a></div><p>" + options.text + "</p></div>";
 
-            if (document.getElementById('custom_notifications') == null) {
-                alert('doesnt exists');
-            } else {
-                $('#custom_notifications ul.notifications').append("<li><a id='ntlink" + cnt + "' class='alert-" + options.type + "' href='#ntf" + cnt + "'><i class='fa fa-bell animated shake'></i></a></li>");
-                $('#custom_notifications #notif-group').append(message);
-                cnt++;
-                CustomTabs(options);
-            }
+        if (document.getElementById('custom_notifications') == null) {
+            alert('doesnt exists');
+        } else {
+            $('#custom_notifications ul.notifications').append("<li><a id='ntlink" + cnt + "' class='alert-" + options.type + "' href='#ntf" + cnt + "'><i class='fa fa-bell animated shake'></i></a></li>");
+            $('#custom_notifications #notif-group').append(message);
+            cnt++;
+            CustomTabs(options);
         }
+    }
 
-        CustomTabs = function (options) {
-            $('.tabbed_notifications > div').hide();
-            $('.tabbed_notifications > div:first-of-type').show();
-            $('#custom_notifications').removeClass('dsp_none');
-            $('.notifications a').click(function (e) {
-                e.preventDefault();
-                var $this = $(this),
-                        tabbed_notifications = '#' + $this.parents('.notifications').data('tabbed_notifications'),
-                        others = $this.closest('li').siblings().children('a'),
-                        target = $this.attr('href');
-                others.removeClass('active');
-                $this.addClass('active');
-                $(tabbed_notifications).children('div').hide();
-                $(target).show();
-            });
-        }
-        CustomTabs();
-        var tabid = idname = '';
-        $(document).on('click', '.notification_close', function (e) {
-            idname = $(this).parent().parent().attr("id");
-            tabid = idname.substr(-2);
-            $('#ntf' + tabid).remove();
-            $('#ntlink' + tabid).parent().remove();
-            $('.notifications a').first().addClass('active');
-            $('#notif-group div').first().css('display','block');
+    CustomTabs = function(options) {
+        $('.tabbed_notifications > div').hide();
+        $('.tabbed_notifications > div:first-of-type').show();
+        $('#custom_notifications').removeClass('dsp_none');
+        $('.notifications a').click(function(e) {
+            e.preventDefault();
+            var $this = $(this),
+                tabbed_notifications = '#' + $this.parents('.notifications').data('tabbed_notifications'),
+                others = $this.closest('li').siblings().children('a'),
+                target = $this.attr('href');
+            others.removeClass('active');
+            $this.addClass('active');
+            $(tabbed_notifications).children('div').hide();
+            $(target).show();
         });
+    }
+    CustomTabs();
+    var tabid = idname = '';
+    $(document).on('click', '.notification_close', function(e) {
+        idname = $(this).parent().parent().attr("id");
+        tabid = idname.substr(-2);
+        $('#ntf' + tabid).remove();
+        $('#ntlink' + tabid).parent().remove();
+        $('.notifications a').first().addClass('active');
+        $('#notif-group div').first().css('display', 'block');
     });
+});
 // sweetAlert
 $('.x_content .sweet').on('click', function() {
     var num = $(".x_content .sweet").index(this);
@@ -437,6 +437,7 @@ $('.x_content .sweet').on('click', function() {
 
 // Youtube modal
 autoPlayYouTubeModal();
+
 function autoPlayYouTubeModal() {
     var trigger = $("body").find('[data-toggle="modal"]');
     trigger.click(function() {
@@ -451,7 +452,7 @@ function autoPlayYouTubeModal() {
 }
 
 // Carousel
-$(document).ready(function(){
+$(document).ready(function() {
     $("#carousel-id").mouseover(function() {
         $(".carousel-control").css('display', 'block');
     });
@@ -481,4 +482,110 @@ $(document).ready(function(){
 //         return false;
 //     }
 // });
+$('body').on('click', '.pnotify', function() {
+    var pnotifyNum = $('.x_content .pnotify').index(this);
+    var name = $(this).text();
+    var functionName = name + pnotifyNum;
+    console.log(functionName);
+    switch (pnotifyNum) {
+        case 0:
+            new PNotify({
+                title: 'New Thing',
+                text: 'Just to let you know, something happened.',
+                type: 'success',
+                styling: 'bootstrap3'
+            });
+            break;
+        case 1:
+            new PNotify({
+                title: 'New Thing',
+                text: 'Just to let you know, something happened.',
+                type: 'info',
+                styling: 'bootstrap3'
+            });
+            break;
+        case 2:
+            new PNotify({
+                title: 'Regular Notice',
+                text: 'Check me out! I\'m a notice.',
+                styling: 'bootstrap3'
+            });
+            break;
+        case 3:
+            new PNotify({
+                title: 'Oh No!',
+                text: 'Something terrible happened.',
+                type: 'error',
+                styling: 'bootstrap3'
+            });
+            break;
+        case 4:
+            new PNotify({
+                title: 'Oh No!',
+                text: 'Something terrible happened.',
+                type: 'info',
+                styling: 'bootstrap3',
+                addclass: 'dark'
+            });
+            break;
+        case 5:
+            new PNotify({
+                title: 'Sticky Success',
+                text: 'Sticky success... I\'m not even gonna make a joke.',
+                type: 'success',
+                hide: false,
+                styling: 'bootstrap3'
+            });
+            break;
+        case 6:
+            new PNotify({
+                title: 'Sticky Info',
+                text: 'Sticky Info... I\'m not even gonna make a joke.',
+                type: 'info',
+                hide: false,
+                styling: 'bootstrap3'
+            });
+            break;
+        case 7:
+            new PNotify({
+                title: 'Sticky Warning',
+                text: 'Sticky Warning... I\'m not even gonna make a joke.',
+                hide: false,
+                styling: 'bootstrap3'
+            });
+            break;
+        case 8:
+            new PNotify({
+                title: 'Sticky Danger',
+                text: 'Sticky Danger... I\'m not even gonna make a joke.',
+                type: 'error',
+                hide: false,
+                styling: 'bootstrap3'
+            });
+            break;
+        case 9:
+            new PNotify({
+                title: 'Sticky Success',
+                text: 'Sticky success... I\'m not even gonna make a joke.',
+                type: 'info',
+                hide: false,
+                styling: 'bootstrap3',
+                addclass: 'dark'
+            });
+            break;
+        case 10:
+            new PNotify({
+                title: 'Non-Blocking Notice',
+                type: 'info',
+                text: 'When you hover over me I\'ll fade to show the elements underneath. Feel free to click any of them just like I wasn\'t even here.',
+                nonblock: {
+                    nonblock: true
+                },
+                styling: 'bootstrap3',
+                addclass: 'dark'
+            });
+            break;
+    }
 
+
+});

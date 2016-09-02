@@ -522,84 +522,20 @@
                         </div>
                         <div class="x_content">
                             <p>Regular notifications</p>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Regular Success',
-                                  text: 'That thing that you were trying to do worked!',
-                                  type: 'success',
-                                  styling: 'bootstrap3'
-                              });">Success</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'New Thing',
-                                  text: 'Just to let you know, something happened.',
-                                  type: 'info',
-                                  styling: 'bootstrap3'
-                              });">Info</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Regular Notice',
-                                  text: 'Check me out! I\'m a notice.',
-                                  styling: 'bootstrap3'
-                              });">Notice</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Oh No!',
-                                  text: 'Something terrible happened.',
-                                  type: 'error',
-                                  styling: 'bootstrap3'
-                              });">Error</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Oh No!',
-                                  text: 'Something terrible happened.',
-                                  type: 'info',
-                                  styling: 'bootstrap3',
-                                  addclass: 'dark'
-                              });">Dark</button>
+                            <button class="btn btn-default source pnotify">Success</button>
+                            <button class="btn btn-default source pnotify" >Info</button>
+                            <button class="btn btn-default source pnotify" >Notice</button>
+                            <button class="btn btn-default source pnotify" >Error</button>
+                            <button class="btn btn-default source pnotify" >Dark</button>
                             <hr />
                             <p>Sticky notifications.. these wont close unless user closes them.</p>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Success',
-                                  text: 'Sticky success... I\'m not even gonna make a joke.',
-                                  type: 'success',
-                                  hide: false,
-                                  styling: 'bootstrap3'
-                              });">Success</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Info',
-                                  text: 'Sticky Info... I\'m not even gonna make a joke.',
-                                  type: 'info',
-                                  hide: false,
-                                  styling: 'bootstrap3'
-                              });">Info</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Warning',
-                                  text: 'Sticky Warning... I\'m not even gonna make a joke.',
-                                  hide: false,
-                                  styling: 'bootstrap3'
-                              });">Warning</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Danger',
-                                  text: 'Sticky Danger... I\'m not even gonna make a joke.',
-                                  type: 'error',
-                                  hide: false,
-                                  styling: 'bootstrap3'
-                              });">Error</button>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Sticky Success',
-                                  text: 'Sticky success... I\'m not even gonna make a joke.',
-                                  type: 'info',
-                                  hide: false,
-                                  styling: 'bootstrap3',
-                                  addclass: 'dark'
-                              });">Dark</button>
+                            <button class="btn btn-default source pnotify" >Success</button>
+                            <button class="btn btn-default source pnotify" >Info</button>
+                            <button class="btn btn-default source pnotify" >Warning</button>
+                            <button class="btn btn-default source pnotify" >Error</button>
+                            <button class="btn btn-default source pnotify">Dark</button>
                             <hr/>
-                            <button class="btn btn-default source" onclick="new PNotify({
-                                  title: 'Non-Blocking Notice',
-                                  type: 'info',
-                                  text: 'When you hover over me I\'ll fade to show the elements underneath. Feel free to click any of them just like I wasn\'t even here.',
-                                  nonblock: {
-                                      nonblock: true
-                                  },
-                                  styling: 'bootstrap3',
-                                  addclass: 'dark'
-                              });">Non-Blocking Notice</button>
+                            <button class="btn btn-default source pnotify">Non-Blocking Notice</button>
                             <hr />
                             <div id="antoox">
                                 <div>
@@ -1015,9 +951,18 @@
         <div id="notif-group" class="tabbed_notifications"></div>
     </div>
     <script src="assets/css/style.js"></script>
-    <script type="text/javascript" src="assets/js/vendors.js"></script>
+    <!--<script type="text/javascript" src="assets/js/vendors.js"></script>-->
+    <!--<script type="text/javascript" src="assets/js/louis.js"></script>-->
+    
+    <!--test-->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../vendors/sweetalert2/dist/sweetalert2.min.js"></script>
     <script src="../vendors/pnotify/dist/pnotify.js"></script>
-    <script type="text/javascript" src="assets/js/louis.js"></script>
+    <script src="../vendors/pnotify/dist/pnotify.buttons.js"></script>
+    <script src="../vendors/pnotify/dist/pnotify.nonblock.js"></script>
+    <script src="../src/js/page/notifications.js"></script>
+    
   
 </body>
 
