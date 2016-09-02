@@ -1,7 +1,11 @@
-// popover
-$('[data-toggle = "popover"]').popover();
-// Tooltips
-$('[data-toggle="tooltip"]').tooltip();
+$(document).ready(function() {
+    // popover
+    $('[data-toggle = "popover"]').popover();
+    // Tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+}); 
+
+
 // TabbedNotification
 $('body').on('click', '.TabbedNotification', function() {
     var title = $(this).attr('data-title');
@@ -483,6 +487,7 @@ $(document).ready(function() {
 //     }
 // });
 $('body').on('click', '.pnotify', function() {
+    var PNotify = require("../../../vendors/pnotify/dist/pnotify.js");
     var pnotifyNum = $('.x_content .pnotify').index(this);
     var name = $(this).text();
     var functionName = name + pnotifyNum;

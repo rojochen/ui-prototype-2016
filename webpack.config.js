@@ -23,7 +23,7 @@ plugins.push(new webpack.ProvidePlugin({
 
 
 // plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /\.min\.js$/, minimize: true }));
-plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /png|jpg|gif｜\.min\.js$/, minimize: true }));
+// plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /png|jpg|gif｜\.min\.js$/, minimize: true }));
 
 var entry = {};
 if (!css) {
@@ -50,13 +50,19 @@ module.exports = {
         filename: "[name].js",
         publicPath: './assets/'
     },
+
     devtool: 'source-map',
     module: {
         loaders: [
             // { test: /\.(png|jpg)$/, loader: 'url-loader?limit=100000' },
+            { test: /bootstrap\/js\//, loader: 'imports?jQuery=jquery' },
             { test: /\.css$/, loader: "style!css" }, {
                 test: /\.scss$/,
                 loaders: ["style", "css", "sass"]
+            },
+            {
+                test: /pnotify.*\.js$/,
+                loader: "imports?define=>false,global=>window"
             },
             { test: /\.(png|jpg|woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=img/[name].[ext]" }
         ]
