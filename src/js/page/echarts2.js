@@ -1,11 +1,19 @@
 $(document).ready(function() {
 
     var echarts = require('../../../vendors/echarts/dist/echarts.min.js');
+    var theme = {
+        color: ['rgba(38,185,154,0.88)', 'rgba(52,152,219,0.88)', 'rgba(243,156,18,0.88)', 'rgba(231,76,60,0.88)', '#5bc0de', '#4b5f71'],
+        title: {
+            textStyle: {
+                // fontWeight: 'normal',
+                color: '#1ABB9C'
+            }
+        }
+    };
     
     // rectangleTreesChart
     if ($('body').find('#rectangleTreesChart')) {
-        // var rectangleTreesChart = document.getElementById("rectangleTreesChart");
-        var rectangleTreesChart = echarts.init(document.getElementById("rectangleTreesChart"));
+        var rectangleTreesChart = echarts.init(document.getElementById("rectangleTreesChart"), theme);
         var app = {};
         option = null;
         rectangleTreesChart.showLoading();
@@ -183,10 +191,10 @@ $(document).ready(function() {
             myChart.setOption(option, true);
         }
     }
+
     // sankeyChart
     if ($('body').find('#sankeyChart')) {
-        // var sankeyChart = document.getElementById("sankeyChart");
-        var sankeyChart = echarts.init(document.getElementById("sankeyChart"));
+        var sankeyChart = echarts.init(document.getElementById("sankeyChart"), theme);
         var app = {};
         option = null;
         sankeyChart.showLoading();
@@ -225,10 +233,11 @@ $(document).ready(function() {
             sankeyChart.setOption(option, true);
         }
     }
+
     // funnelChart
     if ($('body').find('#funnelChart')) {
         var funnelChart = document.getElementById("funnelChart");
-        var myChart = echarts.init(funnelChart);
+        var myChart = echarts.init(funnelChart, theme);
         var app = {};
         option = null;
         option = {
@@ -295,20 +304,20 @@ $(document).ready(function() {
                     }
                 },
                 data: [{
-                    value: 60,
-                    name: '訪問'
-                }, {
-                    value: 40,
-                    name: '諮詢'
-                }, {
-                    value: 20,
-                    name: '訂單'
+                    value: 100,
+                    name: '展現'
                 }, {
                     value: 80,
                     name: '點擊'
                 }, {
-                    value: 100,
-                    name: '展現'
+                    value: 40,
+                    name: '諮詢'
+                }, {
+                    value: 60,
+                    name: '訪問'
+                }, {
+                    value: 20,
+                    name: '訂單'
                 }]
             }]
         };
