@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create();
 
 var DEST = 'build/';
-
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 gulp.task('scripts', function () {
     return gulp.src([
         'src/js/helpers/*.js',
@@ -71,6 +71,7 @@ plugins.push(new BowerWebpackPlugin({
     manifestFiles: "bower.json",
     excludes: /.*\.less/
 }));
+
 plugins.push(new webpack.ProvidePlugin({
     'window.jQuery': 'jquery',
     'window.$': 'jquery',
@@ -79,26 +80,51 @@ plugins.push(new webpack.ProvidePlugin({
 }));
 
 
+var getStyleConfig = function () {
+    plugins = [];
+    plugins.push(new BowerWebpackPlugin({
+        modulesDirectories: ["vendors"],
+        manifestFiles: "bower.json",
+        excludes: /.*\.less/
+    }));
 
+    plugins.push(new webpack.ProvidePlugin({
+        'window.jQuery': 'jquery',
+        'window.$': 'jquery',
+        jQuery: 'jquery',
+        $: 'jquery'
+    }));
 
-
-gulp.task('build-style', function () {
-    return gulp.src('src/config/style.js')
+    return {
+        devtool: 'source-map',
+        module: {
+            loaders: [
+                { test: /\.png$/, loader: 'url-loader?limit=100000' },
+                { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css?minimize!sass") },
+                {
+                    test: /\.scss$/,
+                    loader: ExtractTextPlugin.extract("style", "css?minimize!sass")
+                },
+                { test: /\.(jpg|woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=img/[name].[ext]" }
+            ]
+        },
+        plugins: plugins
+    };
+};
+gulp.task('build-common-style', function () {
+    let config = getStyleConfig();
+    config.plugins.push(new ExtractTextPlugin("common.style.css"));
+    return gulp.src('src/config/common-style.js')
         .pipe(named())
-        .pipe(webpackStream({
-            devtool: 'source-map',
-            module: {
-                loaders: [
-                    // { test: /\.(png|jpg)$/, loader: 'url-loader?limit=100000' },
-                    { test: /\.css$/, loader: "style!css" }, {
-                        test: /\.scss$/,
-                        loaders: ["style", "css", "sass"]
-                    },
-                    { test: /\.(png|jpg|woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=assets/css/img/[name].[ext]" }
-                ]
-            },
-            plugins: plugins
-        }))
+        .pipe(webpackStream(config))
+        .pipe(gulp.dest('production/assets/css/'));
+});
+gulp.task('build-custom-style', function () {
+    var config = getStyleConfig();
+    config.plugins.push(new ExtractTextPlugin("custom.style.css"));
+    return gulp.src('src/config/custom-style.js')
+        .pipe(named())
+        .pipe(webpackStream(config))
         .pipe(gulp.dest('production/assets/css/'));
 });
 var jsDist = 'production/assets/js/';
@@ -115,7 +141,8 @@ gulp.task('build-vendors', function () {
             devtool: 'eval-source-map',
             module: {
                 loaders: [
-                    { test: /\.css$/, loader: "style!css" }, {
+                    { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
+                    {
                         test: /\.scss$/,
                         loaders: ["style", "css", "sass"]
                     }
@@ -134,7 +161,9 @@ gulp.task('joe', function () {
             devtool: 'eval-source-map',
             module: {
                 loaders: [
-                    { test: /\.css$/, loader: "style!css" }, {
+
+                    { test: /\.css$/, loader: "style!css" },
+                    {
                         test: /\.scss$/,
                         loaders: ["style", "css", "sass"]
                     }
