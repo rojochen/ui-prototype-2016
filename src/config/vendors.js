@@ -1,6 +1,7 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
 
 require('../../vendors/jquery/dist/jquery.min.js');
+require('../../vendors/bootstrap/dist/js/bootstrap.min.js');
 
 // require('../../vendors/fastclick/lib/fastclick.js');
 require('../../vendors/nprogress/nprogress.js');

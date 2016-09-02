@@ -98,7 +98,7 @@ plugins.push(new webpack.optimize.DedupePlugin());
                     test: /\.scss$/,
                     loaders: ["style", "css", "sass"]
                 },
-                { test: /\.(png|jpg|woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=img/[name].[ext]" }
+                { test: /\.(png|jpg|woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=assets/css/img/[name].[ext]" }
             ]
         },
         plugins: plugins
@@ -109,6 +109,25 @@ plugins.push(new webpack.optimize.DedupePlugin());
 gulp.task('build-vendors', function() {
   return gulp.src('src/config/vendors.js')
       .pipe(named())
+    .pipe(webpackStream({
+        devtool: 'source-map',
+        module: {
+            loaders: [
+                { test: /\.css$/, loader: "style!css" }, {
+                    test: /\.scss$/,
+                    loaders: ["style", "css", "sass"]
+                }
+            ]
+        },
+        plugins: plugins
+    }))
+    .pipe(gulp.dest('production/assets/js/'));
+});
+
+
+gulp.task('joe', function() {
+  return gulp.src('src/config/joe.js')
+    .pipe(named())
     .pipe(webpackStream({
         devtool: 'source-map',
         module: {
