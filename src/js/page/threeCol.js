@@ -1,17 +1,43 @@
 $(document).ready(function() {
-            $('body').dynamic({});
 
-            $(document).scroll(function(){
-              // console.log($(this).scrollTop());
-              if($(this).scrollTop() >= 45){
-                $('#right-sidebar').find('.chat-messages.open').css('top','0');
-              }
-              if($(this).scrollTop() < 45){
-                $('#right-sidebar').find('.chat-messages.open').css('top','45px');
-              }
-            });
-            
-        });
+    var $right_Menu_TOGGLE = $('#rightMenu_toggle');
+    $right_Menu_TOGGLE.on('click', function(){
+        var rightSidebar = $('#right-sidebar').width();
+        if($('#right-sidebar').css('display') == 'none'){
+            $('#right-sidebar').css('display','block')
+            $('.right_col').css('margin-right',rightSidebar);
+            $('footer').css('margin-right',rightSidebar);
+        }else{
+            $('#right-sidebar').css('display','none')
+            $('.right_col').css('margin-right','0px');
+            $('footer').css('margin-right','0px');
+        }
+    });
+    $(window).resize(function() {
+        if($('#right-sidebar').css('display') == 'block'){
+            var rightSidebar = $('#right-sidebar').width();
+            console.log(rightSidebar);
+            $('.right_col').css('margin-right',rightSidebar);
+            $('footer').css('margin-right',rightSidebar);
+        }else{
+            $('.right_col').css('margin-right','0px');
+            $('footer').css('margin-right','0px');
+        }
+    });
+
+
+    $('body').dynamic({});
+
+    $(document).scroll(function(){
+        // console.log($(this).scrollTop());
+        if($(this).scrollTop() >= 45){
+            $('#right-sidebar').find('.chat-messages.open').css('top','0');
+        }
+        if($(this).scrollTop() < 45){
+            $('#right-sidebar').find('.chat-messages.open').css('top','45px');
+        }
+    });
+});
 
 
 (function($) {

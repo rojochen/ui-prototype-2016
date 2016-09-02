@@ -7,7 +7,6 @@
 var CURRENT_URL = window.location.href.split('?')[0],
     $BODY = $('body'),
     $MENU_TOGGLE = $('#menu_toggle'),
-    $right_Menu_TOGGLE = $('#rightMenu_toggle'),
     $SIDEBAR_MENU = $('#sidebar-menu'),
     $SIDEBAR_FOOTER = $('.sidebar-footer'),
     $LEFT_COL = $('.left_col'),
@@ -75,20 +74,6 @@ $(document).ready(function() {
         $BODY.toggleClass('nav-md nav-sm');
 
         setContentHeight();
-    });
-
-    //three collapse  try
-    $right_Menu_TOGGLE.on('click', function(){
-        var rightSidebar = $('#right-sidebar').width();
-        if($('#right-sidebar').css('display') == 'none'){
-            $('#right-sidebar').css('display','block')
-            $('.right_col').css('margin-right',rightSidebar);
-            $('footer').css('margin-right',rightSidebar);
-        }else{
-            $('#right-sidebar').css('display','none')
-            $('.right_col').css('margin-right','0px');
-            $('footer').css('margin-right','0px');
-        }
     });
 
     // check active menu

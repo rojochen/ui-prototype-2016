@@ -46,6 +46,13 @@ $tenPx: 10px;
   box-shadow: $tInset $tColor $tHShadow $tVShadow $tBlur, $bInset $bColor $bHShadow $bVShadow $bBlur;
 }
 
+@mixin rightSidebarWidth(){
+  @media (max-width: 480px) {width: $rightMenuWidth_XS;}
+  @media (min-width: 481px) and (max-width:768px) {width: $rightMenuWidth_S;}
+  @media (min-width: 769px) and (max-width:992px) {width: $rightMenuWidth_M;}
+  @media (min-width: 993px) and (max-width:1199px) {width: $rightMenuWidth_L;}
+  @media (min-width: 1200px) {width: $rightMenuWidth_XL;}
+}
 
 
 /* Switch input */
@@ -455,6 +462,9 @@ body {
     width: 45%;
     float: left;
     display: block;
+    @media (max-width: 480px) {
+      width: 100%;
+    }
     h3 {
       margin: 9px 0;
       color: $primaryColor;
@@ -464,6 +474,9 @@ body {
     width: 55%;
     float: left;
     display: block;
+    @media (max-width: 480px) {
+      width: 100%;
+    }
     .pull-right {
       margin: 10px 0;
     }
@@ -4385,16 +4398,17 @@ ul.notifications {
 
 /* three col */
 #right-sidebar {
-  width: $rightMenuWidth;
   float: right;
   display: none;
+  @include rightSidebarWidth();
   &:after {
     content: "";
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
-    width: $rightMenuWidth;
+    // width: $rightMenuWidth;
+    @include rightSidebarWidth();
     background: #ffffff;
     border-left: 1px solid #e3e3e3;
     z-index: -1;
@@ -4526,7 +4540,8 @@ ul.notifications {
     bottom: 0;
     right: 0;
     background: #ffffff;
-    width: $rightMenuWidth;
+    // width: $rightMenuWidth;
+    @include rightSidebarWidth();
     border-left: 1px solid #e3e3e3;
     z-index: 11;
     form {
@@ -4557,7 +4572,8 @@ ul.notifications {
     right: 0;
     bottom: 130px;
     background: #ffffff;
-    width: $rightMenuWidth;
+    // width: $rightMenuWidth;
+    @include rightSidebarWidth();
     z-index: 10;
     border-left: 1px solid #e3e3e3;
   }
@@ -4755,6 +4771,12 @@ ul.notifications {
   }
 }
 /* three col*/
+
+
+
+
+
+
 
 
 
