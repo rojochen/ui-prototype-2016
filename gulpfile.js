@@ -82,21 +82,7 @@ plugins.push(new webpack.ProvidePlugin({
 
 var getStyleConfig = function () {
     plugins = [];
-    plugins.push(new BowerWebpackPlugin({
-        modulesDirectories: ["vendors"],
-        manifestFiles: "bower.json",
-        excludes: /.*\.less/
-    }));
-
-    plugins.push(new webpack.ProvidePlugin({
-        'window.jQuery': 'jquery',
-        'window.$': 'jquery',
-        jQuery: 'jquery',
-        $: 'jquery'
-    }));
-
     return {
-        devtool: 'source-map',
         module: {
             loaders: [
                 { test: /\.png$/, loader: 'url-loader?limit=100000' },
@@ -111,8 +97,9 @@ var getStyleConfig = function () {
         plugins: plugins
     };
 };
+//bulid css 
 gulp.task('build-common-style', function () {
-    let config = getStyleConfig();
+    var config = getStyleConfig();
     config.plugins.push(new ExtractTextPlugin("common.style.css"));
     return gulp.src('src/config/common-style.js')
         .pipe(named())
@@ -127,6 +114,12 @@ gulp.task('build-custom-style', function () {
         .pipe(webpackStream(config))
         .pipe(gulp.dest('production/assets/css/'));
 });
+gulp.task('watch-css', function () {
+    // Watch .html files
+    // Watch .scss files
+    gulp.watch('src/scss/**.scss', ['build-custom-style']);
+});
+//end css build
 var jsDist = 'production/assets/js/';
 gulp.task('build-vendors', function () {
     plugins.push(new webpack.optimize.UglifyJsPlugin({
