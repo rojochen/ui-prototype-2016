@@ -4,7 +4,7 @@ require('../../vendors/jquery/dist/jquery.min.js');
 require('../../vendors/bootstrap/dist/js/bootstrap.min.js');
 require('../../vendors/fastclick/lib/fastclick.js');
 require('../../vendors/nprogress/nprogress.js');
-require('bootstrap-daterangepicker');
+// require('bootstrap-daterangepicker');
 require('../../vendors/bootstrap-progressbar/bootstrap-progressbar.js');
 // require('../../vendors/Chart.js/dist/Chart.min.js');
 //require('../../vendors/gauge.js/dist/gauge.min.js');
