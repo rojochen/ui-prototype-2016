@@ -24,3 +24,9 @@ gulp bulid jQuery  plugin
 =============
 
     gulp build-vendors
+
+HTML add link
+=============
+
+    <script src="assets/css/style.js"></script>
+    <script src="assets/js/vendors.js" ></script>
