@@ -149,7 +149,23 @@ gulp.task('joe', function() {
     }))
     .pipe(gulp.dest('production/assets/js/'));
 });
-
+gulp.task('louis', function() {
+  return gulp.src('src/config/louis.js')
+    .pipe(named())
+    .pipe(webpackStream({
+        devtool: 'source-map',
+        module: {
+            loaders: [
+                { test: /\.css$/, loader: "style!css" }, {
+                    test: /\.scss$/,
+                    loaders: ["style", "css", "sass"]
+                }
+            ]
+        },
+        plugins: plugins
+    }))
+    .pipe(gulp.dest('production/assets/js/'));
+});
 
 
 // Default Task
