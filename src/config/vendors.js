@@ -1,8 +1,7 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
+require(['../../vendors/jquery/dist/jquery.min.js'],function(jquery){
 
-require('../../vendors/jquery/dist/jquery.min.js');
-require('../../vendors/bootstrap/dist/js/bootstrap.min.js');
-
+require('../../vendors/bootstrap/dist/js/bootstrap.min.js')
 // require('../../vendors/fastclick/lib/fastclick.js');
 require('../../vendors/nprogress/nprogress.js');
 // require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
@@ -31,16 +30,20 @@ require('../../vendors/skycons/skycons.js');
 
 
 require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
-
+require('../js/helpers/smartresize.js');
+require('../js/custom.js');
+});
+ 
+require(['../../vendors/angular/angular.min.js','../../vendors/bootstrap/dist/js/bootstrap.min.js'],function(angular){
+ require('../../vendors/angular-route/angular-route.min.js');
+});
 // require('../../vendors/blockUI/jquery.blockUI.js');
 // require('../../vendors/echarts/dist/echarts.min.js');
 //remove [name].js
 // require('../../build/js/custom.min.js');
-require('../../vendors/angular/angular.min.js');
-require('../../vendors/angular-route/angular-route.min.js');
+ 
 // require('angular-resource');
-require('../js/helpers/smartresize.js');
-require('../js/custom.js');
+
 
 // require('../js/page/blockUI.js'); 
 // require('../js/page/echarts.js');

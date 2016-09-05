@@ -131,14 +131,13 @@ gulp.task('build-vendors', function () {
     return gulp.src('src/config/vendors.js')
         .pipe(named())
         .pipe(webpackStream({
-            devtool: 'eval-source-map',
+            devtool: 'eval',
+            output:{
+                chunkFilename:"assets/js/[id].chunk.js"
+            },
             module: {
                 loaders: [
-                    { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
-                    {
-                        test: /\.scss$/,
-                        loaders: ["style", "css", "sass"]
-                    }
+
                 ]
             },
             plugins: plugins
