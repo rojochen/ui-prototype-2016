@@ -27,5 +27,3 @@ require('../../vendors/sweetalert2/dist/sweetalert2.min.css');
 
 
 
-
-require('../../src/scss/custom.scss');
