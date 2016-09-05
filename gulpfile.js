@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     sass = require('gulp-ruby-sass'),
+    del = require('del'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create();
 
@@ -56,14 +57,15 @@ gulp.task('watch', function() {
   gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
 });
 
-// Default Task
-gulp.task('default', ['browser-sync', 'watch'  ]);
+
+
+
 var webpackStream = require('webpack-stream');
 var BowerWebpackPlugin = require('bower-webpack-plugin');
 var minimize = process.argv.indexOf('--minimize') !== -1;
 var plugins = [];
 var webpack = require("webpack");
- var named = require('vinyl-named');
+var named = require('vinyl-named');
 
 
 plugins.push(new BowerWebpackPlugin({
@@ -106,6 +108,11 @@ plugins.push(new webpack.optimize.DedupePlugin());
     .pipe(gulp.dest('production/assets/css/'));
 });
 
+gulp.task('move', function(){
+    return gulp.src('production/assets/css/assets/css/img/*')
+      .pipe(gulp.dest('production/assets/css/img'));
+});
+
 gulp.task('build-vendors', function() {
   return gulp.src('src/config/vendors.js')
       .pipe(named())
@@ -141,4 +148,11 @@ gulp.task('joe', function() {
         plugins: plugins
     }))
     .pipe(gulp.dest('production/assets/js/'));
+});
+
+
+
+// Default Task
+gulp.task('default', ['move', 'browser-sync', 'watch'], function(){
+    del('production/assets/css/assets');
 });
