@@ -3,12 +3,10 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     sass = require('gulp-ruby-sass'),
-    del = require('del'),
     autoprefixer = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync').create(),
-    path = require('path'),
-    ExtractTextPlugin = require("extract-text-webpack-plugin"),
-    DEST = 'build/';
+    browserSync = require('browser-sync').create();
+
+var DEST = 'build/';
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 gulp.task('scripts', function () {
     return gulp.src([
@@ -24,9 +22,7 @@ gulp.task('scripts', function () {
 });
 
 // TODO: Maybe we can simplify how sass compile the minify and unminify version
- 
-var compileSASS = function(filename, options) {
- 
+var compileSASS = function (filename, options) {
     return sass('src/scss/*.scss', options)
         .pipe(autoprefixer('last 2 versions', '> 5%'))
         .pipe(concat(filename))
@@ -38,12 +34,8 @@ gulp.task('sass', function () {
     return compileSASS('custom.css', {});
 });
 
- 
-gulp.task('sass-minify', function() {
-    return compileSASS('custom.min.css', {
-        style: 'compressed'
-    });
- 
+gulp.task('sass-minify', function () {
+    return compileSASS('custom.min.css', { style: 'compressed' });
 });
 
 gulp.task('browser-sync', function () {
@@ -55,8 +47,7 @@ gulp.task('browser-sync', function () {
     });
 });
 
- 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     // Watch .html files
     gulp.watch('production/*.html', browserSync.reload);
     // Watch .js files
@@ -65,17 +56,15 @@ gulp.task('watch', function() {
     gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
 });
 
- 
 // Default Task
 gulp.task('default', ['browser-sync', 'watch']);
- 
 var webpackStream = require('webpack-stream');
 var BowerWebpackPlugin = require('bower-webpack-plugin');
 var webpack = require("webpack");
 var named = require('vinyl-named');
- 
 var plugins = [];
- 
+
+
 
 plugins.push(new BowerWebpackPlugin({
     modulesDirectories: ["vendors"],
@@ -90,11 +79,14 @@ plugins.push(new webpack.ProvidePlugin({
     $: 'jquery'
 }));
 
- 
+
 var getStyleConfig = function () {
     plugins = [];
+ 
+ 
+
     return {
-        devtool: 'eval',
+        devtool: 'source-map',
         module: {
             loaders: [
                 { test: /\.png$/, loader: 'url-loader?limit=100000' },
@@ -109,7 +101,6 @@ var getStyleConfig = function () {
         plugins: plugins
     };
 };
-//bulid css 
 gulp.task('build-common-style', function () {
     var config = getStyleConfig();
     config.plugins.push(new ExtractTextPlugin("common.style.css"));
@@ -126,20 +117,6 @@ gulp.task('build-custom-style', function () {
         .pipe(webpackStream(config))
         .pipe(gulp.dest('production/assets/css/'));
 });
-gulp.task('build-style', function () {
-    var config = getStyleConfig();
-    config.plugins.push(new ExtractTextPlugin("style.css"));
-    return gulp.src('src/config/style.js')
-        .pipe(named())
-        .pipe(webpackStream(config))
-        .pipe(gulp.dest('production/assets/css/'));
-});
-gulp.task('watch-css', function () {
-    // Watch .html files
-    // Watch .scss files
-    gulp.watch('src/scss/**.scss', ['build-custom-style']);
-});
-//end css build
 var jsDist = 'production/assets/js/';
 gulp.task('build-vendors', function () {
     plugins.push(new webpack.optimize.UglifyJsPlugin({
@@ -151,15 +128,14 @@ gulp.task('build-vendors', function () {
     return gulp.src('src/config/vendors.js')
         .pipe(named())
         .pipe(webpackStream({
-            devtool: 'eval',
-            output:{
-                path: path.join(__dirname, "production/assets/js"),
-                filename: "app.js",
-                chunkFilename:"assets/js/[id].chunk.js"
-            },
+            devtool: 'eval-source-map',
             module: {
                 loaders: [
-
+                    { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
+                    {
+                        test: /\.scss$/,
+                        loaders: ["style", "css", "sass"]
+                    }
                 ]
             },
             plugins: plugins
@@ -167,31 +143,6 @@ gulp.task('build-vendors', function () {
         .pipe(gulp.dest(jsDist));
 });
 
-gulp.task('build-app', function () {
-    plugins.push(new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }, exclude: /css|png|jpg|gif｜\.min\.js$/, minimize: true
-    }));
-    plugins.push(new webpack.optimize.DedupePlugin());
-    return gulp.src('src/config/app.js')
-        .pipe(named())
-        .pipe(webpackStream({
-            cache:true,
-            devtool: 'eval',
-            output:{         
-                filename: "app.js",
-                chunkFilename:"assets/js/[id].chunk.js"
-            },
-            module: {
-                loaders: [
-
-                ]
-            },
-            plugins: plugins
-        })).pipe(gulp.dest(jsDist));
-        
-});
 
 gulp.task('joe', function () {
     return gulp.src('src/config/joe.js')
@@ -211,5 +162,4 @@ gulp.task('joe', function () {
             plugins: plugins
         }))
         .pipe(gulp.dest(jsDist));
- 
 });

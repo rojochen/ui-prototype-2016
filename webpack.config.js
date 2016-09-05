@@ -24,7 +24,7 @@ plugins.push(new webpack.ProvidePlugin({
 
 // plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /\.min\.js$/, minimize: true }));
 plugins.push(new webpack.optimize.UglifyJsPlugin({ exclude: /png|jpg|gif｜\.min\.js$/, minimize: true }));
-
+plugins.push(new webpack.optimize.DedupePlugin());
 var entry = {};
 if (!css) {
     //"js/vendors":__dirname+ "/src/config/vendors.js",'css/style':__dirname+ "/src/config/style.js"
@@ -33,6 +33,8 @@ if (!css) {
 }
 if (!vendors) {
     entry["js/vendors"] = __dirname + "/src/config/vendors.js";
+        entry["js/joe"] = __dirname + "/src/config/joe.js";
+        entry["js/louis"] = __dirname + "/src/config/louis.js";
 }
 
 if (!joe) {
