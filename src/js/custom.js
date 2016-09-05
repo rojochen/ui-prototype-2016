@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-var CURRENT_URL = window.location.href.split('?')[0],
+define( function() {
+    'use strict';
+    var CURRENT_URL = window.location.href.split('?')[0],
     $BODY = $('body'),
     $MENU_TOGGLE = $('#menu_toggle'),
     $right_Menu_TOGGLE = $('#rightMenu_toggle'),
@@ -265,3 +266,4 @@ if (typeof NProgress != 'undefined') {
         NProgress.done();
     });
 }
+});

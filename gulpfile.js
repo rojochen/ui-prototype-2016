@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create();
-
+ 
 var DEST = 'build/';
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 gulp.task('scripts', function () {
@@ -83,6 +83,7 @@ plugins.push(new webpack.ProvidePlugin({
 var getStyleConfig = function () {
     plugins = [];
     return {
+        devtool: 'eval',
         module: {
             loaders: [
                 { test: /\.png$/, loader: 'url-loader?limit=100000' },
@@ -114,6 +115,14 @@ gulp.task('build-custom-style', function () {
         .pipe(webpackStream(config))
         .pipe(gulp.dest('production/assets/css/'));
 });
+gulp.task('build-style', function () {
+    var config = getStyleConfig();
+    config.plugins.push(new ExtractTextPlugin("style.css"));
+    return gulp.src('src/config/style.js')
+        .pipe(named())
+        .pipe(webpackStream(config))
+        .pipe(gulp.dest('production/assets/css/'));
+});
 gulp.task('watch-css', function () {
     // Watch .html files
     // Watch .scss files
@@ -133,6 +142,8 @@ gulp.task('build-vendors', function () {
         .pipe(webpackStream({
             devtool: 'eval',
             output:{
+                path: path.join(__dirname, "production/assets/js"),
+                filename: "app.js",
                 chunkFilename:"assets/js/[id].chunk.js"
             },
             module: {

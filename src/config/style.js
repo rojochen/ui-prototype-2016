@@ -25,5 +25,4 @@ require('../../vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css
 require('../../vendors/sweetalert2/dist/sweetalert2.min.css');
 
 
-
-
+require('../../src/scss/custom.scss');
