@@ -29,4 +29,9 @@ HTML add link
 =============
 
     <script src="assets/css/style.js"></script>
-    <script src="assets/js/vendors.js" ></script>
+    <script src="assets/js/vendors.js"></script>
+
+gulp watch start
+=============
+
+    gulp
