@@ -5,9 +5,10 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     del = require('del'),
     autoprefixer = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync').create();
- 
-var DEST = 'build/';
+    browserSync = require('browser-sync').create(),
+    path = require('path'),
+    ExtractTextPlugin = require("extract-text-webpack-plugin"),
+    DEST = 'build/';
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 gulp.task('scripts', function () {
     return gulp.src([
@@ -89,8 +90,7 @@ plugins.push(new webpack.ProvidePlugin({
     $: 'jquery'
 }));
 
-
-<<<<<<< HEAD
+ 
 var getStyleConfig = function () {
     plugins = [];
     return {
@@ -167,6 +167,31 @@ gulp.task('build-vendors', function () {
         .pipe(gulp.dest(jsDist));
 });
 
+gulp.task('build-app', function () {
+    plugins.push(new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            warnings: false
+        }, exclude: /css|png|jpg|gif｜\.min\.js$/, minimize: true
+    }));
+    plugins.push(new webpack.optimize.DedupePlugin());
+    return gulp.src('src/config/app.js')
+        .pipe(named())
+        .pipe(webpackStream({
+            cache:true,
+            devtool: 'eval',
+            output:{         
+                filename: "app.js",
+                chunkFilename:"assets/js/[id].chunk.js"
+            },
+            module: {
+                loaders: [
+
+                ]
+            },
+            plugins: plugins
+        })).pipe(gulp.dest(jsDist));
+        
+});
 
 gulp.task('joe', function () {
     return gulp.src('src/config/joe.js')
