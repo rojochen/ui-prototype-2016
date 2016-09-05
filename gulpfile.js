@@ -11,23 +11,25 @@ var DEST = 'build/';
 
 gulp.task('scripts', function() {
     return gulp.src([
-        'src/js/helpers/*.js',
-        'src/js/*.js',
-      ])
-      .pipe(concat('custom.js'))
-      .pipe(gulp.dest(DEST+'/js'))
-      .pipe(rename({suffix: '.min'}))
-      .pipe(uglify())
-      .pipe(gulp.dest(DEST+'/js'))
-      .pipe(browserSync.stream());
+            'src/js/helpers/*.js',
+            'src/js/*.js',
+        ])
+        .pipe(concat('custom.js'))
+        .pipe(gulp.dest(DEST + '/js'))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest(DEST + '/js'))
+        .pipe(browserSync.stream());
 });
 
 // TODO: Maybe we can simplify how sass compile the minify and unminify version
-var compileSASS = function (filename, options) {
-  return sass('src/scss/*.scss', options)
+var compileSASS = function(filename, options) {
+    return sass('src/scss/*.scss', options)
         .pipe(autoprefixer('last 2 versions', '> 5%'))
         .pipe(concat(filename))
-        .pipe(gulp.dest(DEST+'/css'))
+        .pipe(gulp.dest(DEST + '/css'))
         .pipe(browserSync.stream());
 };
 
@@ -36,7 +38,9 @@ gulp.task('sass', function() {
 });
 
 gulp.task('sass-minify', function() {
-    return compileSASS('custom.min.css', {style: 'compressed'});
+    return compileSASS('custom.min.css', {
+        style: 'compressed'
+    });
 });
 
 gulp.task('browser-sync', function() {
@@ -49,12 +53,12 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function() {
-  // Watch .html files
-  gulp.watch('production/*.html', browserSync.reload);
-  // Watch .js files
-  //gulp.watch('src/js/*.js', ['scripts']);
-  // Watch .scss files
-  gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
+    // Watch .html files
+    gulp.watch('production/*.html', browserSync.reload);
+    // Watch .js files
+    //gulp.watch('src/js/*.js', ['scripts']);
+    // Watch .scss files
+    gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
 });
 
 
@@ -81,94 +85,109 @@ plugins.push(new webpack.ProvidePlugin({
 }));
 
 
- 
+
 
 
 gulp.task('build-style', function() {
-    plugins.push(new webpack.optimize.UglifyJsPlugin({    compress: {
-        warnings: true
-    }, exclude: /css|png|jpg|gif｜\.min\.js$/, minimize: true }));
-plugins.push(new webpack.optimize.DedupePlugin());
-  return gulp.src('src/config/style.js')
-    .pipe(named())
-    .pipe(webpackStream({
-        devtool: 'source-map',
-        module: {
-            loaders: [
-                // { test: /\.(png|jpg)$/, loader: 'url-loader?limit=100000' },
-                { test: /\.css$/, loader: "style!css" }, {
-                    test: /\.scss$/,
-                    loaders: ["style", "css", "sass"]
-                },
-                { test: /\.(png|jpg|woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=assets/css/img/[name].[ext]" }
-            ]
+    plugins.push(new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            warnings: true
         },
-        plugins: plugins
-    }))
-    .pipe(gulp.dest('production/assets/css/'));
+        exclude: /css|png|jpg|gif｜\.min\.js$/,
+        minimize: true
+    }));
+    plugins.push(new webpack.optimize.DedupePlugin());
+    return gulp.src('src/config/style.js')
+        .pipe(named())
+        .pipe(webpackStream({
+            devtool: 'source-map',
+            module: {
+                loaders: [
+                    // { test: /\.(png|jpg)$/, loader: 'url-loader?limit=100000' },
+                    {
+                        test: /\.css$/,
+                        loader: "style!css"
+                    }, {
+                        test: /\.scss$/,
+                        loaders: ["style", "css", "sass"]
+                    }, {
+                        test: /\.(png|jpg|woff|svg|ttf|eot)([\?]?.*)$/,
+                        loader: "file-loader?name=assets/css/img/[name].[ext]"
+                    }
+                ]
+            },
+            plugins: plugins
+        }))
+        .pipe(gulp.dest('production/assets/css/'));
 });
 
-gulp.task('move', function(){
+gulp.task('move', function() {
     return gulp.src('production/assets/css/assets/css/img/*')
-      .pipe(gulp.dest('production/assets/css/img'));
+        .pipe(gulp.dest('production/assets/css/img'));
 });
 
 gulp.task('build-vendors', function() {
-  return gulp.src('src/config/vendors.js')
-      .pipe(named())
-    .pipe(webpackStream({
-        devtool: 'source-map',
-        module: {
-            loaders: [
-                { test: /\.css$/, loader: "style!css" }, {
+    return gulp.src('src/config/vendors.js')
+        .pipe(named())
+        .pipe(webpackStream({
+            devtool: 'source-map',
+            module: {
+                loaders: [{
+                    test: /\.css$/,
+                    loader: "style!css"
+                }, {
                     test: /\.scss$/,
                     loaders: ["style", "css", "sass"]
-                }
-            ]
-        },
-        plugins: plugins
-    }))
-    .pipe(gulp.dest('production/assets/js/'));
+                }]
+            },
+            plugins: plugins
+        }))
+        .pipe(gulp.dest('production/assets/js/'));
 });
 
 
 gulp.task('joe', function() {
-  return gulp.src('src/config/joe.js')
-    .pipe(named())
-    .pipe(webpackStream({
-        devtool: 'source-map',
-        module: {
-            loaders: [
-                { test: /\.css$/, loader: "style!css" }, {
+    return gulp.src('src/config/joe.js')
+        .pipe(named())
+        .pipe(webpackStream({
+            devtool: 'source-map',
+            module: {
+                loaders: [{
+                    test: /\.css$/,
+                    loader: "style!css"
+                }, {
                     test: /\.scss$/,
                     loaders: ["style", "css", "sass"]
-                }
-            ]
-        },
-        plugins: plugins
-    }))
-    .pipe(gulp.dest('production/assets/js/'));
+                }, {
+                    test: /\.(png|jpg|woff|svg|ttf|eot)([\?]?.*)$/,
+                    loader: "file-loader?name=img/[name].[ext]"
+                }]
+            },
+            plugins: plugins
+        }))
+        .pipe(gulp.dest('production/assets/js/'));
 });
 gulp.task('louis', function() {
-  return gulp.src('src/config/louis.js')
-    .pipe(named())
-    .pipe(webpackStream({
-        devtool: 'source-map',
-        module: {
-            loaders: [
-                { test: /\.css$/, loader: "style!css" }, {
+    return gulp.src('src/config/louis.js')
+        .pipe(named())
+        .pipe(webpackStream({
+            devtool: 'source-map',
+            module: {
+                loaders: [{
+                    test: /\.css$/,
+                    loader: "style!css"
+                }, {
                     test: /\.scss$/,
                     loaders: ["style", "css", "sass"]
-                }
-            ]
-        },
-        plugins: plugins
-    }))
-    .pipe(gulp.dest('production/assets/js/'));
+                }]
+            },
+            plugins: plugins
+        }))
+        .pipe(gulp.dest('production/assets/js/'));
 });
 
 
 // Default Task
-gulp.task('default', ['move', 'browser-sync', 'watch'], function(){
+gulp.task('default', ['move', 'browser-sync', 'watch'], function() {
     del('production/assets/css/assets');
 });
