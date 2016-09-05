@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     sass = require('gulp-ruby-sass'),
+    del = require('del'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create();
  
@@ -22,7 +23,9 @@ gulp.task('scripts', function () {
 });
 
 // TODO: Maybe we can simplify how sass compile the minify and unminify version
-var compileSASS = function (filename, options) {
+ 
+var compileSASS = function(filename, options) {
+ 
     return sass('src/scss/*.scss', options)
         .pipe(autoprefixer('last 2 versions', '> 5%'))
         .pipe(concat(filename))
@@ -34,8 +37,12 @@ gulp.task('sass', function () {
     return compileSASS('custom.css', {});
 });
 
-gulp.task('sass-minify', function () {
-    return compileSASS('custom.min.css', { style: 'compressed' });
+ 
+gulp.task('sass-minify', function() {
+    return compileSASS('custom.min.css', {
+        style: 'compressed'
+    });
+ 
 });
 
 gulp.task('browser-sync', function () {
@@ -47,7 +54,8 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('watch', function () {
+ 
+gulp.task('watch', function() {
     // Watch .html files
     gulp.watch('production/*.html', browserSync.reload);
     // Watch .js files
@@ -56,15 +64,17 @@ gulp.task('watch', function () {
     gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
 });
 
+ 
 // Default Task
 gulp.task('default', ['browser-sync', 'watch']);
+ 
 var webpackStream = require('webpack-stream');
 var BowerWebpackPlugin = require('bower-webpack-plugin');
 var webpack = require("webpack");
 var named = require('vinyl-named');
+ 
 var plugins = [];
-
-
+ 
 
 plugins.push(new BowerWebpackPlugin({
     modulesDirectories: ["vendors"],
@@ -80,6 +90,7 @@ plugins.push(new webpack.ProvidePlugin({
 }));
 
 
+<<<<<<< HEAD
 var getStyleConfig = function () {
     plugins = [];
     return {
@@ -175,4 +186,5 @@ gulp.task('joe', function () {
             plugins: plugins
         }))
         .pipe(gulp.dest(jsDist));
+ 
 });
