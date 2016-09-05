@@ -167,6 +167,7 @@ gulp.task('joe', function() {
         }))
         .pipe(gulp.dest('production/assets/js/'));
 });
+
 gulp.task('louis', function() {
     return gulp.src('src/config/louis.js')
         .pipe(named())
@@ -179,13 +180,18 @@ gulp.task('louis', function() {
                 }, {
                     test: /\.scss$/,
                     loaders: ["style", "css", "sass"]
+                }, {
+                    test: /pnotify.*\.js$/,
+                    loader: "imports?define=>false,global=>window"
+                }, {
+                    test: /\.(png|jpg|woff|svg|ttf|eot)([\?]?.*)$/,
+                    loader: "file-loader?name=assets/css/img/[name].[ext]"
                 }]
             },
             plugins: plugins
         }))
         .pipe(gulp.dest('production/assets/js/'));
 });
-
 
 // Default Task
 gulp.task('default', ['move', 'browser-sync', 'watch'], function() {
