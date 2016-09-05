@@ -35,9 +35,9 @@ $(document).ready(function() {
 
     $SIDEBAR_MENU.find('a').on('click', function(ev) {
         var $li = $(this).parent();
-        var $slideUpTime = 300;
+        var $slideUpTime = 150;
         if ($BODY.hasClass('nav-md')) {
-            $slideUpTime = 300;
+            $slideUpTime = 150;
         } else {
             $slideUpTime = 0;
         }
