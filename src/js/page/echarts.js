@@ -17,6 +17,12 @@ $(document).ready(function() {
                 text: 'pokemon',
                 subtext: '補獲狀況圖'
             },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {        
+                    type : 'shadow'
+                }
+            },
             legend: {
                 data: ['捕獲數']
             },
@@ -80,8 +86,8 @@ $(document).ready(function() {
     }
 
     if ($('body').find('#pieChart')) {
-        var horizontalBarChart = echarts.init(document.getElementById('pieChart'), theme);
-        horizontalBarChart.setOption({
+        var pieChart = echarts.init(document.getElementById('pieChart'), theme);
+        pieChart.setOption({
             title: {
                 text: 'pokemon',
                 subtext: '出現機率圖'
@@ -126,8 +132,8 @@ $(document).ready(function() {
     }
 
     if ($('body').find('#donutPieChart')) {
-        var horizontalBarChart = echarts.init(document.getElementById('donutPieChart'), theme);
-        horizontalBarChart.setOption({
+        var donutPieChart = echarts.init(document.getElementById('donutPieChart'), theme);
+        donutPieChart.setOption({
             title: {
                 text: 'pokemon',
                 subtext: '出現機率圖'
@@ -176,8 +182,8 @@ $(document).ready(function() {
     }
 
     if ($('body').find('#scatterChart')) {
-        var echartScatter = echarts.init(document.getElementById('scatterChart'), theme);
-        echartScatter.setOption({
+        var scatterChart = echarts.init(document.getElementById('scatterChart'), theme);
+        scatterChart.setOption({
             title: {
                 text: 'pokemon',
                 subtext: '精靈身高體重圖'
@@ -314,8 +320,8 @@ $(document).ready(function() {
     }
 
     if ($('body').find('#lineChart')) {
-        var echartLine = echarts.init(document.getElementById('lineChart'), theme);
-        echartLine.setOption({
+        var lineChart = echarts.init(document.getElementById('lineChart'), theme);
+        lineChart.setOption({
             title: {
                 text: 'pokemon',
                 subtext: '出現機率圖'
@@ -399,4 +405,13 @@ $(document).ready(function() {
             }]
         });
     }
+
+    window.onresize = function() {
+        barChart.resize();
+        horizontalBarChart.resize();
+        pieChart.resize();
+        donutPieChart.resize();
+        scatterChart.resize();
+        lineChart.resize();
+    };
 });

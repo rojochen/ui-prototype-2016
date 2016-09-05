@@ -1,0 +1,32 @@
+.bootstrap-switch{
+  border-radius: 20px;
+  border-color: #ddd;
+  .bootstrap-switch-handle-on.bootstrap-switch-primary,.bootstrap-switch-handle-off.bootstrap-switch-primary {
+    color: $btnDarkColor;
+    background: $btnPrimaryBg;
+  }
+  .bootstrap-switch-handle-on.bootstrap-switch-info,.bootstrap-switch-handle-off.bootstrap-switch-info {
+    color: $btnDarkColor;
+    background: $btnInfoBg;
+  }
+  .bootstrap-switch-handle-on.bootstrap-switch-success,.bootstrap-switch-handle-off.bootstrap-switch-success {
+    color: $btnDarkColor;
+    background: $btnSuccessBg;
+  }
+  .bootstrap-switch-handle-on.bootstrap-switch-warning,.bootstrap-switch-handle-off.bootstrap-switch-warning {
+    color: $btnDarkColor;
+    background: $btnWarningBg;
+  }
+  .bootstrap-switch-handle-on.bootstrap-switch-danger,.bootstrap-switch-handle-off.bootstrap-switch-danger {
+    color: $btnDarkColor;
+    background: $btnDangerBg;
+  }
+  .bootstrap-switch-handle-on.bootstrap-switch-dark,.bootstrap-switch-handle-off.bootstrap-switch-dark {
+    color: $btnDarkColor;
+    background: $btnDarkBg;
+  }
+  .bootstrap-switch-handle-on.bootstrap-switch-default,.bootstrap-switch-handle-off.bootstrap-switch-default {
+    color: #333;
+    background: $btnDefaultFocusBg;
+  }
+}

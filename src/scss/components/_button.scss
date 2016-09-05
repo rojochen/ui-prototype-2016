@@ -8,14 +8,39 @@
 a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
   color: #fff;
 }
+
+.btn-default {
+  background: $btnDefaultBg;
+  border: $btnDefaultBorder;
+  &:hover, &:focus, &:active{
+    background: $btnDefaultFocusBg;
+  }
+  &:active:focus{
+    background: darken($btnDefaultBg, 5%);
+  }
+  &.active{
+    background: $btnDefaultFocusBg;
+  }
+  &.disabled:hover{
+    background: $btnDefaultDisabledBg;
+    border: $btnDefaultDisabledBorder;
+  }
+  &.disabled:focus {
+    background: $btnDefaultDisabledBg;
+    border: $btnDefaultDisabledBorder;
+  }
+}
+
 .btn-success {
   background: $btnSuccessBg;
   border: $btnSuccessBorder;
   &:hover, &:focus, &:active{
-    background: $btnSuccessFocusBg;
-  }
-  &:active:focus{
     background: darken($btnSuccessBg, 5%);
+    border-color: darken($btnSuccessBg, 10%);
+  }
+  &:active:hover, &:active:focus{
+    background: darken($btnSuccessBg, 5%);
+    border-color: darken($btnSuccessBg, 10%);
   }
   &.active{
     background: $btnSuccessFocusBg;
@@ -36,10 +61,12 @@ a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
   background: $btnPrimaryBg;
   border: $btnPrimaryBorder;
   &:hover, &:focus, &:active{
-    background: $btnPrimaryFocusBg;
-  }
-  &:active:focus{
     background: darken($btnPrimaryBg, 5%);
+    border-color: darken($btnPrimaryBg, 10%);
+  }
+  &:active:hover, &:active:focus{
+    background: darken($btnPrimaryBg, 5%);
+    border-color: darken($btnPrimaryBg, 10%);
   }
   &.active{
     background: $btnPrimaryFocusBg;
@@ -60,10 +87,12 @@ a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
   background: $btnInfoBg;
   border: $btnInfoBorder;
   &:hover, &:focus, &:active{
-    background: $btnInfoFocusBg;
-  }
-  &:active:focus{
     background: darken($btnInfoBg, 5%);
+    border-color: darken($btnInfoBg, 10%);
+  }
+  &:active:hover, &:active:focus{
+    background: darken($btnInfoBg, 5%);
+    border-color: darken($btnInfoBg, 10%);
   }
   &.active{
     background: $btnInfoFocusBg;
@@ -84,10 +113,12 @@ a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
   background: $btnWarningBg;
   border: $btnWarningBorder;
   &:hover, &:focus, &:active{
-    background: $btnWarningFocusBg;
-  }
-  &:active:focus{
     background: darken($btnWarningBg, 5%);
+    border-color: darken($btnWarningBg, 10%);
+  }
+  &:active:hover, &:active:focus{
+    background: darken($btnWarningBg, 5%);
+    border-color: darken($btnWarningBg, 10%);
   }
   &.active{
     background: $btnWarningFocusBg;
@@ -108,10 +139,12 @@ a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
   background: $btnDangerBg;
   border: $btnDangerBorder;
   &:hover, &:focus, &:active{
-    background: $btnDangerFocusBg;
-  }
-  &:active:focus{
     background: darken($btnDangerBg, 5%);
+    border-color: darken($btnDangerBg, 10%);
+  }
+  &:active:hover, &:active:focus{
+    background: darken($btnDangerBg, 5%);
+    border-color: darken($btnDangerBg, 10%);
   }
   &.active{
     background: $btnDangerFocusBg;
@@ -134,10 +167,12 @@ a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
   border: $btnDarkBorder;
   &:hover, &:focus, &:active{
     color: $btnDarkColor;
-    background: $btnDarkFocusBg;
-  }
-  &:active:focus{
     background: darken($btnDarkBg, 5%);
+    border-color: darken($btnDarkBg, 10%);
+  }
+  &:active:hover, &:active:focus{
+    background: darken($btnDarkBg, 5%);
+    border-color: darken($btnDarkBg, 10%);
   }
   &.active{
     background: $btnDarkFocusBg;

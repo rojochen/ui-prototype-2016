@@ -1,6 +1,7 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
 require(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
 
+ 
     require('../../vendors/bootstrap/dist/js/bootstrap.min.js')
     // require('../../vendors/fastclick/lib/fastclick.js');
     require('../../vendors/nprogress/nprogress.js');
@@ -8,6 +9,7 @@ require(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
     require('../../vendors/bootstrap-progressbar/bootstrap-progressbar.js');
     // require('../../vendors/Chart.js/dist/Chart.min.js');
     //require('../../vendors/gauge.js/dist/gauge.min.js');
+ 
 
     require('../../vendors/iCheck/icheck.min.js');
     require('../../vendors/skycons/skycons.js');
