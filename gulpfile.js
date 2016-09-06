@@ -191,7 +191,7 @@ gulp.task('build-app', function () {
         })).pipe(gulp.dest(jsDist));;
         
 });
-
+gulp.task('build-all',['build-app','build-style']); 
 gulp.task('joe', function () {
     return gulp.src('src/config/joe.js')
         .pipe(named())
