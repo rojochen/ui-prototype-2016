@@ -18,17 +18,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var fs = require('fs');
 var package = JSON.parse(fs.readFileSync('package.json'));
 
-// war
-gulp.task('build-war', function() {
-    gulp.src(["./production/**"])
-        .pipe(war({
-            welcome: 'index.html',
-            displayName: package.version, //form package.json.version
-            version: package.version //form package.json.version
-        }))
-        .pipe(zip(package.name+'.war'))
-        .pipe(gulp.dest("./dist"));
-});
+
 
 gulp.task('scripts', function() {
     return gulp.src([
@@ -216,6 +206,17 @@ gulp.task('build-app', function() {
             plugins: plugins
         })).pipe(gulp.dest(jsDist));;
 
+});
+// war
+gulp.task('build-war', function() {
+    gulp.src(["./production/**"])
+        .pipe(war({
+            welcome: 'index.html',
+            displayName: package.version, //form package.json.version
+            version: package.version //form package.json.version
+        }))
+        .pipe(zip(package.name + '.war'))
+        .pipe(gulp.dest("./dist"));
 });
 
 gulp.task('build-all', ['build-app', 'build-style']);
