@@ -9,6 +9,8 @@ var gulp = require('gulp'),
     path = require('path'),
     ExtractTextPlugin = require("extract-text-webpack-plugin"),
     DEST = 'build/';
+var productionJSPath = path.resolve('./production/assets/js');
+ 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 gulp.task('scripts', function () {
     return gulp.src([
@@ -168,20 +170,17 @@ gulp.task('build-vendors', function () {
 });
 
 gulp.task('build-app', function () {
-    plugins.push(new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }, exclude: /css|png|jpg|gif｜\.min\.js$/, minimize: true
-    }));
+
     plugins.push(new webpack.optimize.DedupePlugin());
     return gulp.src('src/config/app.js')
         .pipe(named())
         .pipe(webpackStream({
             cache:true,
             devtool: 'eval',
-            output:{         
+            output:{   
+                publicPath: "/production/assets/js/" ,                
                 filename: "app.js",
-                chunkFilename:"assets/js/[id].chunk.js"
+                chunkFilename:"chunk.[id].js"
             },
             module: {
                 loaders: [
@@ -189,7 +188,7 @@ gulp.task('build-app', function () {
                 ]
             },
             plugins: plugins
-        })).pipe(gulp.dest(jsDist));
+        })).pipe(gulp.dest(jsDist));;
         
 });
 
