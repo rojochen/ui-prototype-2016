@@ -1,5 +1,5 @@
 define([], function () {
-        // require('../../vendors/pnotify/dist/pnotify.js'),
+        require('../../vendors/pnotify/dist/pnotify.js'),
         require('../../vendors/sweetalert2/dist/sweetalert2.js'),
         require('../js/page/notifications.js'),
         require('../../vendors/bootstrap-switch/dist/js/bootstrap-switch.min.js'),

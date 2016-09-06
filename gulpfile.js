@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     DEST = 'build/',
     war = require('gulp-war'),
     zip = require('gulp-zip');
-    
+
 var productionJSPath = path.resolve('./production/assets/js');
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -200,9 +200,10 @@ gulp.task('build-app', function() {
                 chunkFilename: "chunk.[id].js"
             },
             module: {
-                loaders: [
-
-                ]
+                loaders: [{
+                    test: /pnotify.*\.js$/,
+                    loader: "imports?define=>false,global=>window"
+                }]
             },
             plugins: plugins
         })).pipe(gulp.dest(jsDist));;
@@ -235,9 +236,6 @@ gulp.task('joe', function() {
                     }, {
                         test: /\.scss$/,
                         loaders: ["style", "css", "sass"]
-                    }, {
-                        test: /pnotify.*\.js$/,
-                        loader: "imports?define=>false,global=>window"
                     }
                 ]
             },
