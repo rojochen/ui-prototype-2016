@@ -18,12 +18,13 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 // war
 gulp.task('war', function() {
     gulp.src(["./production/*", "./production/*/*", "./production/*/*/*", "./production/*/*/*/*"])
-    .pipe(war({
+        .pipe(war({
 
             welcome: 'index.html',
             displayName: 'Grunt WAR',
+            version: '0.0.1'
         }))
-        .pipe(zip('myApp.war'))
+        .pipe(zip('ui-prototype-2016.war'))
         .pipe(gulp.dest("./dist"));
 
 });
