@@ -16,7 +16,7 @@ var productionJSPath = path.resolve('./production/assets/js');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 // war
 gulp.task('war', function() {
-    gulp.src(["./production/*"])
+    gulp.src(["./production/*","./production/*/*","./production/*/*/*","./production/*/*/*/*"])
         .pipe(war({
             welcome: 'index.html',
             displayName: 'Grunt WAR',
