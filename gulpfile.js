@@ -12,20 +12,22 @@ var gulp = require('gulp'),
     war = require('gulp-war'),
     zip = require('gulp-zip');
 var productionJSPath = path.resolve('./production/assets/js');
- 
+
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+var fs = require('fs');
+var package = JSON.parse(fs.readFileSync('package.json'));
 
 // war
 gulp.task('build-war', function() {
     gulp.src(["./production/**"])
         .pipe(war({
             welcome: 'index.html',
-            displayName: 'Grunt WAR',//form package.json.version
-            version: '0.0.1' //form package.json.version
+            displayName: package.version, //form package.json.version
+            version: package.version //form package.json.version
         }))
-        .pipe(zip('ui-prototype-2016.war'))
+        .pipe(zip(package.name+'.war'))
         .pipe(gulp.dest("./dist"));
-
 });
 
 gulp.task('scripts', function() {
@@ -215,9 +217,9 @@ gulp.task('build-app', function() {
         })).pipe(gulp.dest(jsDist));;
 
 });
- 
-gulp.task('build-all',['build-app','build-style']); 
-gulp.task('joe', function () {
+
+gulp.task('build-all', ['build-app', 'build-style']);
+gulp.task('joe', function() {
     return gulp.src('src/config/joe.js')
         .pipe(named())
         .pipe(webpackStream({
