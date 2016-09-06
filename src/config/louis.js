@@ -1,14 +1,14 @@
 require('../../vendors/jquery/dist/jquery.min.js');
 require('../../vendors/bootstrap/dist/js/bootstrap.min.js');
-require('../../vendors/fastclick/lib/fastclick.js');
-require('../../vendors/nprogress/nprogress.js');
-require('bootstrap-daterangepicker');
-require('../../vendors/bootstrap-progressbar/bootstrap-progressbar.js');
-require('../../vendors/iCheck/icheck.min.js');
-require('../../vendors/skycons/skycons.js');
-require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
-require('../js/helpers/smartresize.js');
-require('../js/custom.js');
+// require('../../vendors/fastclick/lib/fastclick.js');
+// require('../../vendors/nprogress/nprogress.js');
+// require('bootstrap-daterangepicker');
+// require('../../vendors/bootstrap-progressbar/bootstrap-progressbar.js');
+// require('../../vendors/iCheck/icheck.min.js');
+// require('../../vendors/skycons/skycons.js');
+// require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
+// require('../js/helpers/smartresize.js');
+// require('../js/custom.js');
 
 
 
