@@ -14,10 +14,12 @@ var gulp = require('gulp'),
 var productionJSPath = path.resolve('./production/assets/js');
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 // war
 gulp.task('war', function() {
-    gulp.src(["./production/*","./production/*/*","./production/*/*/*","./production/*/*/*/*"])
-        .pipe(war({
+    gulp.src(["./production/*", "./production/*/*", "./production/*/*/*", "./production/*/*/*/*"])
+    .pipe(war({
+
             welcome: 'index.html',
             displayName: 'Grunt WAR',
         }))
@@ -85,7 +87,7 @@ gulp.task('watch', function() {
 
 
 // Default Task
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch', 'war']);
 
 var webpackStream = require('webpack-stream');
 var BowerWebpackPlugin = require('bower-webpack-plugin');
@@ -195,12 +197,12 @@ gulp.task('build-app', function() {
 
     plugins.push(new webpack.optimize.DedupePlugin());
     return gulp.src('src/config/app.js')
-        .pipe(named())
+        // .pipe(named())
         .pipe(webpackStream({
             cache: true,
             devtool: 'eval',
             output: {
-                publicPath: "/production/assets/js/",
+                publicPath: "assets/js/",
                 filename: "app.js",
                 chunkFilename: "chunk.[id].js"
             },
