@@ -88,7 +88,7 @@ gulp.task('watch', function() {
 
 
 // Default Task
-gulp.task('default', ['browser-sync', 'watch', 'war']);
+gulp.task('default', ['browser-sync', 'watch']);
 
 var webpackStream = require('webpack-stream');
 var BowerWebpackPlugin = require('bower-webpack-plugin');
