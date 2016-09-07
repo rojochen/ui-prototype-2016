@@ -1,15 +1,15 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
 define(['../../vendors/jquery/dist/jquery.min.js', '../../vendors/angular/angular.min.js'],
     function (jquery, angular) {
-            // var app = angular.module('pikachu', []);
-            // app.directive('helloWorld', function () {
-            //     alert('hello world');
-            //     return {
-            //         restrict: 'AE',
-            //         replace: 'true',
-            //         template: '<h3>Hello World!!</h3>'
-            //     };
-            // });
+            var app = angular.module('pikachu', []);
+            app.directive('helloWorld', function () {
+                alert('hello world');
+                return {
+                    restrict: 'AE',
+                    replace: 'true',
+                    template: '<h3>Hello World!!</h3>'
+                };
+            });
             require('../../vendors/bootstrap/dist/js/bootstrap.min.js')
             // require('../../vendors/fastclick/lib/fastclick.js');
             require('../../vendors/nprogress/nprogress.js');
