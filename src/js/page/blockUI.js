@@ -15,7 +15,7 @@ define(function() {
                         _this.parents('.right_col').unblock();
                     };
                 _this.parents('.right_col').block({ 
-                    message: '<img src="../src/images/default.svg" width="60%"/>',
+                    message: '<img src="images/default.svg" width="60%"/>',
                     centerY: false,
                     overlayCSS: { 
                         backgroundColor: '#ccc',
@@ -36,7 +36,7 @@ define(function() {
                         _this.unblock();
                     };
                 _this.block({
-                  message: '<img src="../src/images/battery.svg" width="70%"/>',
+                  message: '<img src="images/battery.svg" width="70%"/>',
                   centerY: false,
                   overlayCSS: { 
                         backgroundColor: '#ccc',
@@ -57,7 +57,7 @@ define(function() {
                         _this.parents('.x_panel').unblock();
                     };
                 _this.parents('.x_panel').block({
-                  message: '<img src="../src/images/ball.svg" width="70%"/>',
+                  message: '<img src="images/ball.svg" width="70%"/>',
                   centerY: false,
                   overlayCSS: { 
                         backgroundColor: '#ccc',
