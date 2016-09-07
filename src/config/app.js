@@ -43,7 +43,14 @@ require(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
     require('../../vendors/echarts/dist/echarts.min.js');
 });
 
+
+
+require(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
+    require('../../src/config/joe.js');
+});
  
+
+
 // require('../../vendors/blockUI/jquery.blockUI.js');
 // require('../../vendors/echarts/dist/echarts.min.js');
 //remove [name].js
