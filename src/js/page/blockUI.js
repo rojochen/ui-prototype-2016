@@ -1,4 +1,5 @@
-$(document).ready(function(){
+define(function() {
+    $(document).ready(function(){
             $('body').on('click','.blockUI-link:first',function(){
                 var _this = $(this).parents('.x_panel').find('.x_content'),
                     unblock = function(){
@@ -133,3 +134,6 @@ $(document).ready(function(){
                 setTimeout(unblock, 2000); 
             });
         });
+        
+    return {}; 
+});

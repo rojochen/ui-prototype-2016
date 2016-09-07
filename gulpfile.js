@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     DEST = 'build/',
     war = require('gulp-war'),
     zip = require('gulp-zip');
+
 var productionJSPath = path.resolve('./production/assets/js');
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -201,12 +202,19 @@ gulp.task('build-app', function() {
                 chunkFilename: "chunk.[id].js"
             },
             module: {
+<<<<<<< HEAD
                 loaders: [
                     {
                     test: /angular.*\.js$/,
                     loader: "imports?define=>false,global=>window"
                     }
                 ]
+=======
+                loaders: [{
+                    test: /pnotify.*\.js$/,
+                    loader: "imports?define=>false,global=>window"
+                }]
+>>>>>>> 6c6d29115c9658f40a0e34e153be55ca0711c0b8
             },
             plugins: plugins
         })).pipe(gulp.dest(jsDist));;

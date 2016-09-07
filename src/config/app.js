@@ -1,8 +1,8 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
-require(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
+require(['../../vendors/jquery/dist/jquery.min.js'], function(jquery) {
 
     require('../../vendors/bootstrap/dist/js/bootstrap.min.js')
-    // require('../../vendors/fastclick/lib/fastclick.js');
+        // require('../../vendors/fastclick/lib/fastclick.js');
     require('../../vendors/nprogress/nprogress.js');
     // require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
     require('../../vendors/bootstrap-progressbar/bootstrap-progressbar.js');
@@ -35,14 +35,18 @@ require(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
     require('../js/custom.js');
 });
 
-require(['../../vendors/angular/angular.min.js', '../../vendors/bootstrap/dist/js/bootstrap.min.js'], function (angular) {
+require(['../../vendors/angular/angular.min.js', '../../vendors/bootstrap/dist/js/bootstrap.min.js'], function(angular) {
     require('../../vendors/angular-route/angular-route.min.js');
 });
 
-require(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
+require(['../../vendors/jquery/dist/jquery.min.js'], function(jquery) {
     require('../../vendors/echarts/dist/echarts.min.js');
 });
 
+require(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
+    require('../../src/config/joe.js');
+});
+ 
  
 // require('../../vendors/blockUI/jquery.blockUI.js');
 // require('../../vendors/echarts/dist/echarts.min.js');
@@ -54,3 +58,7 @@ require(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
 
 // require('../js/page/blockUI.js'); 
 // require('../js/page/echarts.js');
+
+require(['../../vendors/jquery/dist/jquery.min.js'], function(jquery) {
+    require('../config/louis.js');
+});
