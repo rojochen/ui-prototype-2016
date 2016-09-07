@@ -192,15 +192,20 @@ gulp.task('build-app', function() {
         // .pipe(named())
         .pipe(webpackStream({
             cache: true,
+            
             devtool: 'eval',
             output: {
+                //libraryTarget:'amd',
                 publicPath: "assets/js/",
                 filename: "app.js",
                 chunkFilename: "chunk.[id].js"
             },
             module: {
                 loaders: [
-
+                    {
+                    test: /angular.*\.js$/,
+                    loader: "imports?define=>false,global=>window"
+                    }
                 ]
             },
             plugins: plugins
