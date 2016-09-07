@@ -19,7 +19,7 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts){
             rectangleTreesChart.showLoading();
 
             var household_america_2012 = 113616229;
-            $.get('../src/data/rectangleTreesChart.json', function(obama_budget_2012) {
+            $.get('data/rectangleTreesChart.json', function(obama_budget_2012) {
                 console.log('rectangleTreesChart success');
                 rectangleTreesChart.hideLoading();
 
@@ -198,7 +198,7 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts){
             var app = {};
             option = null;
             sankeyChart.showLoading();
-            $.get('../src/data/sankeyChart.json', function(data) {
+            $.get('data/sankeyChart.json', function(data) {
                 console.log('sankeyChart success');
                 sankeyChart.hideLoading();
                 sankeyChart.setOption(option = {
