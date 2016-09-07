@@ -3,56 +3,56 @@
   border-color: #e6e6e6;
   .panel-heading {
     color: #333;
-    background-color: #f5f5f5;
+    background-color: $btnDefaultFocusBg;
     border-color: #ddd;
   }
 }
 .panel-primary {
-  border-color: #2e6da4;
+  border-color: $btnPrimaryBg;
   .panel-heading {
-    color: #fff;
-    background-color: #337ab7;
-    border-color: #2e6da4;
+    color: $btnDarkColor;
+    background-color: $btnPrimaryBg;
+    border-color: $btnPrimaryBg;
   }
 }
 .panel-success {
-  border-color: #169F85;
+  border-color: $btnSuccessBg;
   .panel-heading {
-    color: #fff;
-    background-color: #26B99A;
-    border-color: #169F85;
+    color: $btnDarkColor;
+    background-color: $btnSuccessBg;
+    border-color: $btnSuccessBg;
   }
 }
 .panel-info {
-  border-color: #269abc;
+  border-color: $btnInfoBg;
   .panel-heading {
-    color: #fff;
-    background-color: #31b0d5;
-    border-color: #269abc;
+    color: $btnDarkColor;
+    background-color: $btnInfoBg;
+    border-color: $btnInfoBg;
   }
 }
 .panel-warning {
-  border-color: #d58512;
+  border-color: $btnWarningBg;
   .panel-heading {
-    color: #fff;
-    background-color: #ec971f;
-    border-color: #d58512;
+    color: $btnDarkColor;
+    background-color: $btnWarningBg;
+    border-color: $btnWarningBg;
   }
 }
 .panel-danger {
-  border-color: #ac2925;
+  border-color: $btnDangerBg;
   .panel-heading {
-    color: #fff;
-    background-color: #c9302c;
-    border-color: #ac2925;
+    color: $btnDarkColor;
+    background-color: $btnDangerBg;
+    border-color: $btnDangerBg;
   }
 }
 .panel-dark {
-  border-color: #394D5F;
+  border-color: $btnDarkBg;
   .panel-heading {
-    color: #fff;
-    background-color: #394D5F;
-    border-color: #394D5F;
+    color: $btnDarkColor;
+    background-color: $btnDarkBg;
+    border-color: $btnDarkBg;
   }
 }
 /* ***** /panel *******/

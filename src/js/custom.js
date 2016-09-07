@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-var CURRENT_URL = window.location.href.split('?')[0],
+define( function() {
+    'use strict';
+    var CURRENT_URL = window.location.href.split('?')[0],
     $BODY = $('body'),
     $MENU_TOGGLE = $('#menu_toggle'),
     $SIDEBAR_MENU = $('#sidebar-menu'),
@@ -34,9 +35,9 @@ $(document).ready(function() {
 
     $SIDEBAR_MENU.find('a').on('click', function(ev) {
         var $li = $(this).parent();
-        var $slideUpTime = 300;
+        var $slideUpTime = 150;
         if ($BODY.hasClass('nav-md')) {
-            $slideUpTime = 300;
+            $slideUpTime = 150;
         } else {
             $slideUpTime = 0;
         }
@@ -250,3 +251,4 @@ if (typeof NProgress != 'undefined') {
         NProgress.done();
     });
 }
+});
