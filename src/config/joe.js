@@ -41,8 +41,35 @@ define(function() {
     require('../js/page/threeCol.js');
 
 
+    //notifications.html - louis
+    require('../../vendors/pnotify/dist/pnotify.js');
+    require('../../vendors/sweetalert2/dist/sweetalert2.js');
+    require('../js/page/notifications.js');
+
+
+    //switch.html - louis
+    require('../../vendors/bootstrap-switch/dist/js/bootstrap-switch.min.js');
+
+
+    //projects.html - louis
+    require('../../vendors/iCheck/icheck.min.js');
+    require('../js/page/projects.js');
+        
+
+    //form_advanced.html - louis
+    require('../../production/js/moment/moment.min.js');
+    require('../../production/js/datepicker/daterangepicker.js');
+    require('../../vendors/ion.rangeSlider/js/ion.rangeSlider.min.js');
+    require('../../vendors/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js');
+    require('../../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js');
+    require('../../vendors/jquery-knob/dist/jquery.knob.min.js');
+    require('../../vendors/cropper/dist/cropper.min.js');
+    require('../js/page/form_advanced.js');
+
+
     // //echarts.html
     require('../js/page/echarts.js');
+    require('../js/page/echarts2.js');
 
     return {};
     

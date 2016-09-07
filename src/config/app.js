@@ -59,6 +59,6 @@ require(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
 // require('../js/page/blockUI.js'); 
 // require('../js/page/echarts.js');
 
-require(['../../vendors/jquery/dist/jquery.min.js'], function(jquery) {
-    require('../config/louis.js');
-});
+// require(['../../vendors/jquery/dist/jquery.min.js'], function(jquery) {
+//     require('../config/louis.js');
+// });

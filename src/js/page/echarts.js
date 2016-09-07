@@ -10,7 +10,7 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts) {
             }
         };
 
-        if ($('body').find('#barChart')) {
+        if ($('#barChart').length > 0) {
             var barChart = echarts.init(document.getElementById('barChart'), theme);
             barChart.setOption({
                 title: {
@@ -47,7 +47,7 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts) {
             });
         }
 
-        if ($('body').find('#horizontalBarChart')) {
+        if ($('#horizontalBarChart').length > 0) {
             var horizontalBarChart = echarts.init(document.getElementById('horizontalBarChart'), theme);
             horizontalBarChart.setOption({
                 title: {
@@ -85,7 +85,7 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts) {
             });
         }
 
-        if ($('body').find('#pieChart')) {
+        if ($('#pieChart').length > 0) {
             var pieChart = echarts.init(document.getElementById('pieChart'), theme);
             pieChart.setOption({
                 title: {
@@ -131,7 +131,7 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts) {
             });
         }
 
-        if ($('body').find('#donutPieChart')) {
+        if ($('#donutPieChart').length > 0) {
             var donutPieChart = echarts.init(document.getElementById('donutPieChart'), theme);
             donutPieChart.setOption({
                 title: {
@@ -181,7 +181,7 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts) {
             });
         }
 
-        if ($('body').find('#scatterChart')) {
+        if ($('#scatterChart').length > 0) {
             var scatterChart = echarts.init(document.getElementById('scatterChart'), theme);
             scatterChart.setOption({
                 title: {
@@ -319,7 +319,7 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts) {
             });
         }
 
-        if ($('body').find('#lineChart')) {
+        if ($('#lineChart').length > 0) {
             var lineChart = echarts.init(document.getElementById('lineChart'), theme);
             lineChart.setOption({
                 title: {
