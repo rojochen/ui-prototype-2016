@@ -19,8 +19,8 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts){
             rectangleTreesChart.showLoading();
 
             var household_america_2012 = 113616229;
-            $.get('data/rectangleTreesChart.json', function(obama_budget_2012) {
-                console.log('rectangleTreesChart success');
+            $.get('../data/rectangleTreesChart.json', function(obama_budget_2012) {
+                //console.log('rectangleTreesChart success');
                 rectangleTreesChart.hideLoading();
 
                 var formatUtil;
@@ -198,8 +198,8 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts){
             var app = {};
             option = null;
             sankeyChart.showLoading();
-            $.get('data/sankeyChart.json', function(data) {
-                console.log('sankeyChart success');
+            $.get('../data/sankeyChart.json', function(data) {
+                //console.log('sankeyChart success');
                 sankeyChart.hideLoading();
                 sankeyChart.setOption(option = {
                     title: {
@@ -328,9 +328,15 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts){
         }
 
         window.onresize = function() {
-            rectangleTreesChart.resize();
-            sankeyChart.resize();
-            myChart.resize();
+            if ($('#rectangleTreesChart').length > 0) {
+                rectangleTreesChart.resize();
+            }
+            if ($('#sankeyChart').length > 0) {
+                sankeyChart.resize();
+            }
+            if ($('#funnelChart').length > 0) {
+                myChart.resize();
+            }
         };
     });
 

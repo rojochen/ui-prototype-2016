@@ -64,14 +64,14 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: './'
         },
-        startPath: './production/index.html'
+        startPath: './production/demo/index.html'
     });
 });
 
 
 gulp.task('watch', function() {
     // Watch .html files
-    gulp.watch('production/*.html', browserSync.reload);
+    gulp.watch('production/demo/*.html', browserSync.reload);
     // Watch .js files
     //gulp.watch('src/js/*.js', ['scripts']);
     // Watch .scss files
@@ -197,7 +197,7 @@ gulp.task('build-app', function() {
             devtool: 'eval',
             output: {
                 //libraryTarget:'amd',
-                publicPath: "assets/js/",
+                publicPath: "../assets/js/",
                 filename: "app.js",
                 chunkFilename: "chunk.[id].js"
             },
