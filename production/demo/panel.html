@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>New Prototype</title>
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -29,7 +29,7 @@
           <!-- menu profile quick info -->
           <div class="profile">
             <div class="profile_pic">
-              <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>Welcome,</span>
@@ -193,7 +193,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="">
                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <img src="images/img.jpg" alt="">John Doe
+                  <img src="../images/img.jpg" alt="">John Doe
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -217,7 +217,7 @@
                 <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                   <li>
                     <a>
-                      <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                      <span class="image"><img src="../images/img.jpg" alt="Profile Image" /></span>
                       <span>
                           <span>John Smith</span>
                       <span class="time">3 mins ago</span>
@@ -229,7 +229,7 @@
                   </li>
                   <li>
                     <a>
-                      <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                      <span class="image"><img src="../images/img.jpg" alt="Profile Image" /></span>
                       <span>
                           <span>John Smith</span>
                       <span class="time">3 mins ago</span>
@@ -241,7 +241,7 @@
                   </li>
                   <li>
                     <a>
-                      <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                      <span class="image"><img src="../images/img.jpg" alt="Profile Image" /></span>
                       <span>
                           <span>John Smith</span>
                       <span class="time">3 mins ago</span>
@@ -253,7 +253,7 @@
                   </li>
                   <li>
                     <a>
-                      <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                      <span class="image"><img src="../images/img.jpg" alt="Profile Image" /></span>
                       <span>
                           <span>John Smith</span>
                       <span class="time">3 mins ago</span>
@@ -284,7 +284,7 @@
         <div class="">
           <div class="page-title">
             <div class="title_left">
-              <h3>提醒通知</h3>
+              <h3>面板</h3>
             </div>
 
             <div class="title_right">
@@ -303,7 +303,7 @@
           <div class="col-md-12">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>提醒通知</h2>
+                  <h2>面板</h2>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -323,40 +323,61 @@
                 </div>
                 <div class="x_content bs-example-popovers">
 
-                  <div class="alert alert-default alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                    </button>
-                    <strong>通知！</strong> 自102/04月份起，開放實體表單頁面用戶使用線上「表單頁面瀏覽」功能，不論是查詢或下載明細表單頁面，皆不需額外申請。
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Default 面板標題</h3>
+                      </div>
+                      <div class="panel-body">面板內容</div>
+                    </div>
                   </div>
-                  <div class="alert alert-primary alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                    </button>
-                    <strong>通知！</strong> 自102/04月份起，開放實體表單頁面用戶使用線上「表單頁面瀏覽」功能，不論是查詢或下載明細表單頁面，皆不需額外申請。
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Primary 面板標題</h3>
+                      </div>
+                      <div class="panel-body">面板內容</div>
+                    </div>
                   </div>
-                  <div class="alert alert-success alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                    </button>
-                    <strong>成功！</strong> 自102/04月份起，開放實體表單頁面用戶使用線上「表單頁面瀏覽」功能，不論是查詢或下載明細表單頁面，皆不需額外申請。
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-success">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Success 面板標題</h3>
+                      </div>
+                      <div class="panel-body">面板內容</div>
+                    </div>
                   </div>
-                  <div class="alert alert-info alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                    </button>
-                    <strong>通知！</strong> 自102/04月份起，開放實體表單頁面用戶使用線上「表單頁面瀏覽」功能，不論是查詢或下載明細表單頁面，皆不需額外申請。
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-info">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Info 面板標題</h3>
+                      </div>
+                      <div class="panel-body">面板內容</div>
+                    </div>
                   </div>
-                  <div class="alert alert-warning alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                    </button>
-                    <strong>注意！</strong> 自102/04月份起，開放實體表單頁面用戶使用線上「表單頁面瀏覽」功能，不論是查詢或下載明細表單頁面，皆不需額外申請。
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-warning">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Warning 面板標題</h3>
+                      </div>
+                      <div class="panel-body">面板內容</div>
+                    </div>
                   </div>
-                  <div class="alert alert-danger alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                    </button>
-                    <strong>錯誤！</strong> 自102/04月份起，開放實體表單頁面用戶使用線上「表單頁面瀏覽」功能，不論是查詢或下載明細表單頁面，皆不需額外申請。
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-danger">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Danger 面板標題</h3>
+                      </div>
+                      <div class="panel-body">面板內容</div>
+                    </div>
                   </div>
-                  <div class="alert alert-dark alert-dismissible fade in" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                    </button>
-                    <strong>通知！</strong> 自102/04月份起，開放實體表單頁面用戶使用線上「表單頁面瀏覽」功能，不論是查詢或下載明細表單頁面，皆不需額外申請。
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-dark">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Dark 面板標題</h3>
+                      </div>
+                      <div class="panel-body">面板內容</div>
+                    </div>
                   </div>
 
                 </div>
@@ -384,8 +405,8 @@
     <div class="clearfix"></div>
     <div id="notif-group" class="tabbed_notifications"></div>
   </div>
-  
-  <script src="assets/js/app.js" ></script>
+ 
+  <script src="../assets/js/app.js" ></script>
 </body>
 
 </html>

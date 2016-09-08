@@ -406,14 +406,26 @@ define(['../../../vendors/echarts/dist/echarts.min.js'], function(echarts) {
             });
         }
 
-        window.onresize = function() {
-            barChart.resize();
-            horizontalBarChart.resize();
-            pieChart.resize();
-            donutPieChart.resize();
-            scatterChart.resize();
-            lineChart.resize();
-        };
+        $(window).resize(function(){
+            if ($('#barChart').length > 0) {
+                barChart.resize();
+            }
+            if ($('#horizontalBarChart').length > 0) {
+                horizontalBarChart.resize();
+            }
+            if ($('#pieChart').length > 0) {
+                pieChart.resize();
+            }
+            if ($('#donutPieChart').length > 0) {
+                donutPieChart.resize();
+            }
+            if ($('#scatterChart').length > 0) {
+                scatterChart.resize();
+            }
+            if ($('#lineChart').length > 0) {
+                lineChart.resize();
+            }
+        });
     });
     return {}; 
 });
