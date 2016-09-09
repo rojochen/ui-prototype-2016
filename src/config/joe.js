@@ -67,9 +67,14 @@ define(function() {
     require('../js/page/form_advanced.js');
 
 
-    // //echarts.html
+    //echarts.html
     require('../js/page/echarts.js');
     require('../js/page/echarts2.js');
+
+
+    //dragDrop.html
+    require('../js/page/dragDrop.js');
+    
 
     return {};
     
