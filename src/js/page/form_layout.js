@@ -15,6 +15,7 @@ define(function() {
               allowClear: true
             });
             $(".select2_group").select2({});
+            $('.select2_multiple').css('width', '100%');
             $(".select2_multiple").select2({
               maximumSelectionLength: 2,
               placeholder: "最多選擇兩項",
