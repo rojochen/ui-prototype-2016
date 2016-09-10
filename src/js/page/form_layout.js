@@ -11,7 +11,7 @@ define(function() {
 
         //Select2
         $(".select2_single").select2({
-              placeholder: "Select a state",
+              placeholder: "選擇縣市",
               allowClear: true
             });
             $(".select2_group").select2({});
