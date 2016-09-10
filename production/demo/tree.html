@@ -82,7 +82,6 @@
                       <li><a href="inbox.html">Inbox</a></li>
                       <li><a href="calendar.html">Calendar</a></li> -->
                       <li><a href="panel.html">面板</a></li>
-                      <li><a href="dragDrop.html">拖拉</a></li>
                       <li><a href="blockUI.html">blockUI</a></li>
                       <li><a href="echarts.html">基本圖表</a></li>
                       <li><a href="echarts2.html">進階圖表</a></li>
@@ -293,12 +292,12 @@
         <div id='right-sidebar'>
             <div class="tabs">
                             <ul id="rstab" class="nav nav-tabs nav-justified">
-                                <li class="active">
+                                <li class="">
                                     <a class='addIcon' href="#activity" data-toggle="tab" aria-expanded="true">
                                       <i class="glyphicon glyphicon-bullhorn"></i> 
                                     </a>
                                 </li>
-                                <li class="">
+                                <li class="active">
                                     <a class='addIcon' href="#users" data-toggle="tab" aria-expanded="false">
                                       <i class="fa fa-comments"></i>
                                     </a>
@@ -319,7 +318,7 @@
                                 </li>-->
                             </ul>
                             <div id="rstab-content" class="tab-content">
-                                <div class="tab-pane fade active in" id="activity">
+                                <div class="tab-pane fade" id="activity">
                                     <ul class="timeline timeline-icons timeline-sm">
                                         <li>
                                             <p>
@@ -365,7 +364,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="tab-pane fade" id="users">
+                                <div class="tab-pane fade active in" id="users">
                                     <div class="chat-user-list">
                                         <form>
                                           <div class='top_search'>
@@ -378,13 +377,19 @@
                                           </div>
                                         </form>
                                         <ul class="user-list list-group">
-                                            <li class="list-group-item clearfix">
+                                            <li class="list-group-item clearfix dragdrop" draggable='true'>
                                                 <a href="#">
                                                     <img src="http://www.fetnet.net/estore/upload_img/promotionCM/cms/201608011554569.jpg" alt="avatar" class="activity">
                                                     <span class="activityName">遠傳哈拉精省</span>
                                                 </a>
                                             </li>
-                                            <li class="list-group-item clearfix">
+                                            <li class="list-group-item clearfix dragdrop" draggable='true'>
+                                                <a href="#">
+                                                    <img src="http://www.fetnet.net/Home/fnHomeEvent/162/147/%E9%AB%94%E9%A9%974.5G.jpg" alt="avatar" class="activity">
+                                                    <span class="activityName">4.5G網速體驗</span>
+                                                </a>
+                                            </li>
+                                            <!--<li class="list-group-item clearfix">
                                                 <a href="#">
                                                     <img src="http://themes.suggelab.com/dynamic/img/avatars/4.jpg" alt="avatar" class="avatar">
                                                     <span class="name">Selena Jones</span>
@@ -548,7 +553,7 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                            </li>
+                                            </li>-->
                                         </ul>
                                         <div id="chat-write">
                                             <form id="chat-write-form" class="form-vertical" role="form">
@@ -669,7 +674,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>三欄式版面 <small>右方選單寬度請以px單位做設定。</small></h3>
+                <h3>樹狀選單</h3>
               </div>
 
               <div class="title_right">
@@ -685,416 +690,14 @@
             </div>
             <!--<div class="clearfix"></div>-->
 
-
-
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>單行編排</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">設定 1</a>
-                          </li>
-                          <li><a href="#">設定 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                      
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">姓名 <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">密碼 <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="password" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Email</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="middle-name" class="form-control col-md-7 col-xs-12" type="email" name="middle-name">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">性別</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <div id="gender" class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="male"> 男
-                            </label>
-                            <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="female"> 女
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">生日 <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                        </div>
-                      </div>
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button id='submitInfo' type="button" class="btn btn-primary">送出</button>
-                          <button type="button" class="btn btn-success">取消</button>
-                        </div>
-                      </div>
-
-                    </form>
-                  </div>
+            <div class='row'>
+                <div class='col-md-12 col-sm-12 col-xs-12'>
+                    <div id="dragdropArea">
+                        <div class='area'></div>
+                        <div class='area'></div>
+                    </div>
                 </div>
-              </div>
-              
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>兩行編排</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">設定 1</a>
-                          </li>
-                          <li><a href="#">設定 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <h3>個人資訊</h3>
-                      </div>
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="ln_solid"></div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label" for="first-name">姓名</label>
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label">稱謂</label>
-                          <div class="radio-list">
-                            <div class="radio-inline">
-                              <label class="radio-inline">
-                                <input type="radio" class="flat" checked name="iCheck"> 先生
-                              </label>
-                            </div>
-                            <div class="radio-inline">
-                              <label class="radio-inline">
-                                <input type="radio" class="flat" name="iCheck"> 女士
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label">生日</label>
-                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label">會員等級</label>
-                          <select class="form-control">
-                            <option>等級 1</option>
-                            <option>等級 2</option>
-                            <option>等級 3</option>
-                            <option>等級 4</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label">專長</label>
-                          <select class="select2_multiple form-control" multiple="multiple">
-                            <!-- <option>請選擇</option> -->
-                            <option>專長 1</option>
-                            <option>專長 2</option>
-                            <option>專長 3</option>
-                            <option>專長 4</option>
-                            <option>專長 5</option>
-                            <option>專長 6</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="control-group">
-                          <label class="control-label">興趣</label>
-                          <div class="col-md-12 col-sm-12 col-xs-12 row">
-                            <input id="tags_1" type="text" class="tags form-control" value="閱讀, 電影, 繪畫" />
-                            <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                    <br>
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <h3>地址</h3>
-                      </div>
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="ln_solid"></div>
-                      </div>
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label" for="first-name">地址</label>
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label">鄉/鎮/市</label>
-                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label">省/州/市</label>
-                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label">郵遞區號</label>
-                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label">國家</label>
-                          <select class="form-control">
-                            <option>國家 1</option>
-                            <option>國家 2</option>
-                            <option>國家 3</option>
-                            <option>國家 4</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="ln_solid"></div>
-                      </div>
-                      <div class="form-group">
-                        <div class="pull-right">
-                          <button type="button" class="btn btn-primary">送出</button>
-                          <button type="button" class="btn btn-success">取消</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>兩行並排編排</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">設定 1</a>
-                          </li>
-                          <li><a href="#">設定 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <h3>個人資訊</h3>
-                      </div>
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="ln_solid"></div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">姓名</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">稱謂</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <div class="radio-list">
-                              <div class="radio-inline">
-                                <label class="radio-inline">
-                                  <input type="radio" class="flat" checked name="iCheck"> 先生
-                                </label>
-                              </div>
-                              <div class="radio-inline">
-                                <label class="radio-inline">
-                                  <input type="radio" class="flat" name="iCheck"> 女士
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">生日</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">會員等級</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <select class="form-control">
-                              <option>等級 1</option>
-                              <option>等級 2</option>
-                              <option>等級 3</option>
-                              <option>等級 4</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">專長</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <select class="select2_multiple form-control" multiple="multiple">
-                              <!-- <option>請選擇</option> -->
-                              <option>專長 1</option>
-                              <option>專長 2</option>
-                              <option>專長 3</option>
-                              <option>專長 4</option>
-                              <option>專長 5</option>
-                              <option>專長 6</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="control-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">興趣</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input id="tags_2" type="text" class="tags form-control" value="閱讀, 電影, 繪畫" />
-                            <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                    <br>
-                    
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <h3>地址</h3>
-                      </div>
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="ln_solid"></div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">地址</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">鄉/鎮/市</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">省/州/市</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">郵遞區號</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">國家</label>
-                          <div class="col-md-9 col-sm-9 col-xs-12">
-                            <select class="form-control">
-                              <option>國家 1</option>
-                              <option>國家 2</option>
-                              <option>國家 3</option>
-                              <option>國家 4</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="ln_solid"></div>
-                      </div>
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="form-group">
-                          <div class="pull-right">
-                            <button type="button" class="btn btn-primary">送出</button>
-                            <button type="button" class="btn btn-success">取消</button>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
             </div>
-            
-
             
           </div>
         </div>
