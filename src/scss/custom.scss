@@ -4776,12 +4776,13 @@ ul.notifications {
 
 
 /* dragdrop */
-#area{
+#dragdropArea .area{
   padding:20px 10px;
   border: 2px solid #ccc;
-}
-#area.over{
-  border: 2px dashed #ccc;
+  margin:10px 0px;
+  &.over {
+    border: 2px dashed #ccc;
+  }
 }
 /* dragdrop */
 

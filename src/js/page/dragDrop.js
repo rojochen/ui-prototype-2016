@@ -3,31 +3,37 @@ define(function(){
         $.event.props.push('dataTransfer');
 
         var dragDropFun = {
-            item : null,
             dragStart : function(e){
-                this.style.opacity = '0.5';
-                item = this;
+                // this.style.opacity = '0.5';
+                this.style.transform = 'scale(0.9,0.9)';
                 e.dataTransfer.effectAllowed = 'move';
                 e.dataTransfer.setData('text', this.innerHTML);
-                console.log('start');
+                //console.log('start');
             },
             dragEnter : function(e){
                 this.classList.add('over');
-                console.log('enter');
+                //console.log('enter');
             },
             dragOver : function(e){
                 e.preventDefault();
                 e.dataTransfer.effectAllow = 'move';
-                console.log('over');
+                //console.log('over');
             },
             dragLeave : function(e){
                 this.classList.remove('over');
-                console.log('leave');
+                //console.log('leave');
             },
             drop : function(e){
                 this.innerHTML = e.dataTransfer.getData('text');
-                item.style.opacity = '1';
-                console.log('drop');
+                //console.log('drop');
+            },
+            dragEnd : function(e){
+                [].forEach.call(areas, function(area){
+                    area.classList.remove('over');
+                });
+                // this.style.opacity = '1';
+                this.style.transform = 'scale(1,1)';
+                //console.log('end');
             }
         };
 
@@ -36,18 +42,16 @@ define(function(){
         var dragItem = $('.user-list .dragdrop');
         [].forEach.call(dragItem, function(item){
             $(item).on('dragstart', dragDropFun.dragStart);
+            $(item).on('dragend', dragDropFun.dragEnd);
         });
 
-        var areas = $('#area');
+        var areas = $('#dragdropArea .area');
         [].forEach.call(areas, function(area){
             $(area).on('dragenter', dragDropFun.dragEnter);
             $(area).on('dragover', dragDropFun.dragOver);
             $(area).on('dragleave', dragDropFun.dragLeave);
             $(area).on('drop', dragDropFun.drop);
         });
-
-                
-
 
     });
 });
