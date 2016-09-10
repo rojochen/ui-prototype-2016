@@ -7,9 +7,13 @@
 		} 
 	});
 	
-	require(['pokemon','angular','jquery' ], function(pokemon,angular) { 
+	require(['pokemon'], function(pokemon) { 
 		//var app =  angular.module("myApp",[pokemon]);
-		alert(pokemon);
+		console.log(pokemon);
+		var app = angular.module('app',['pokemon']);
+		app.controller('ctrl', function($scope){
+			$scope.con = '給我angular';
+		})
 
         	//angular.bootstrap(document, app);
 	});

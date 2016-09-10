@@ -36,8 +36,8 @@ define(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
     require('../../src/config/joe.js');
     require('../../vendors/angular/angular.min.js');
     require('../../vendors/angular-route/angular-route.min.js');
-    var angular = require('angular');
-    angular.module([],'pokemon');
+    // var angular = require('angular');
+    angular.module('pokemon', []);
 
     return angular;
 });
