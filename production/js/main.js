@@ -3,12 +3,14 @@
 	require.config({
 		baseUrl : '',
 		paths : {
-			app : 'assets/js/app'
+			pokemon : 'assets/js/app'
 		} 
 	});
 	
-	require(['app'], function(app) {
-           
-        angular.bootstrap(document, app);
+	require(['pokemon' ], function(pokemon) { 
+		var app =  angular.module("myApp",[pokemon]);
+		alert(pokemon);
+		
+        	//angular.bootstrap(document, app);
 	});
 })();
