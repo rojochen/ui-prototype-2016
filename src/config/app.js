@@ -32,7 +32,7 @@ define(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
 
     require('../js/helpers/smartresize.js');
     require('../js/custom.js');
-    require('../../vendors/echarts/dist/echarts.min.js');
+    global.echarts =  require('../../vendors/echarts/dist/echarts.min.js');
     require('../../src/config/joe.js');
     require('../../vendors/angular/angular.min.js');
     require('../../vendors/angular-route/angular-route.min.js');
