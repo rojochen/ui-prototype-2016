@@ -35,10 +35,11 @@ define(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
     global.echarts =  require('../../vendors/echarts/dist/echarts.min.js');
     require('../../src/config/joe.js');
     require('../../vendors/angular/angular.min.js');
+    //require("expose?angular!../../vendors/angular/angular.min.js");
     require('../../vendors/angular-route/angular-route.min.js');
     // var angular = require('angular');
     angular.module('pokemon', []);
-
+ 
     return angular;
 });
 // require(['../../vendors/jquery/dist/jquery.min.js'], function(jquery) {
