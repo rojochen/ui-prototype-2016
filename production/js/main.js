@@ -1,7 +1,7 @@
 (function() {'use strict';
 	//setting baseUrl, flip path, urlArgs to requirejs
 	require.config({
-		baseUrl : '',
+		baseUrl : '../',
 		paths : {
 			pokemon : 'assets/js/app'
 		} 
@@ -13,7 +13,7 @@
 		var app = angular.module('app',['pokemon']);
 		app.controller('ctrl', function($scope){
 			$scope.con = '給我angular';
-		})
+		});
 
         	//angular.bootstrap(document, app);
 	});

@@ -196,14 +196,10 @@ gulp.task('build-app', function() {
             
             devtool: 'eval',
             output: {
-<<<<<<< HEAD
-                //libraryTarget:'amd',
-                publicPath: "../assets/js/",
-=======
+ 
                 libraryTarget:'umd',
                 umdNamedDefine: true,
                 publicPath: "assets/js/",
->>>>>>> feature/amd-style
                 filename: "app.js",
                 chunkFilename: "chunk.[id].js",
                 library: 'pokemon',
