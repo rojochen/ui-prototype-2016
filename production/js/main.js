@@ -3,12 +3,18 @@
 	require.config({
 		baseUrl : '',
 		paths : {
-			app : 'assets/js/app'
+			pokemon : 'assets/js/app'
 		} 
 	});
 	
-	require(['app'], function(app) {
-           
-        angular.bootstrap(document, app);
+	require(['pokemon'], function(pokemon) { 
+		//var app =  angular.module("myApp",[pokemon]);
+		console.log(pokemon);
+		var app = angular.module('app',['pokemon']);
+		app.controller('ctrl', function($scope){
+			$scope.con = '給我angular';
+		})
+
+        	//angular.bootstrap(document, app);
 	});
 })();
