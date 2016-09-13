@@ -191,19 +191,12 @@ gulp.task('build-app', function() {
             resolve: {
                 modulesDirectories: ['vendors'],
                 alias: {
-                    jquery: 'jquery/dist/jquery.min'
+                    jquery: 'jquery/dist/jquery.min',
+                    angular:'/angular/angular'
                 },
                 extensions: ['', '.js']
             },
             module: {
-
-                // loaders: [
-                //     {
-                //     test: /angular.*\.js$/,
-                //     loader: "imports?define=>false,global=>window"
-                //     }
-                // ]
-
                 loaders: [{
                     test: /[\/]angular\.js$/,
                     loader: "exports?window.angular"

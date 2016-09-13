@@ -1,8 +1,8 @@
 define([
-    '../module/myApp',
+    '../module/myModule.js',
 ], function(myApp) {
     'use strict';
-    myApp.controller('ngTable', ['$scope', function($scope) {
+    myApp.controller('tableCtrl', ['$scope', function($scope) {
         $scope.data = [{
             name: 'Moroni',
             age: 50
@@ -10,7 +10,6 @@ define([
             name: 'Moroni',
             age: 50
         }];
-
         $scope.tableParams = new NgTableParams({}, {
             dataset: data
         });

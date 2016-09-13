@@ -1,5 +1,6 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
-define(['jquery'], function (jquery) {
+define(['jquery','angular'], function (jquery,angular) {
+    console.log(angular);
     var $ = jquery;
     global.jQuery = $;
     global.$ = $;   
@@ -37,7 +38,7 @@ define(['jquery'], function (jquery) {
     require('../js/custom.js');
     global.echarts =  require('../../vendors/echarts/dist/echarts.min.js');
     require('../../src/config/joe.js');
-    require('../../vendors/angular/angular.min.js');
+    // require('../../vendors/angular/angular.min.js');
     //require("expose?angular!../../vendors/angular/angular.min.js");
     require('../../vendors/ng-table/dist/ng-table.js');
     require('../../vendors/angular-route/angular-route.min.js');
