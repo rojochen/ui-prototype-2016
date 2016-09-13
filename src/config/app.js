@@ -1,5 +1,8 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
-define(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
+define(['jquery'], function (jquery) {
+    var $ = jquery;
+    global.jQuery = $;
+    global.$ = $;   
     require('../../vendors/bootstrap/dist/js/bootstrap.min.js')
     // require('../../vendors/fastclick/lib/fastclick.js');
     require('../../vendors/nprogress/nprogress.js');
@@ -37,8 +40,8 @@ define(['../../vendors/jquery/dist/jquery.min.js'], function (jquery) {
     require('../../vendors/angular/angular.min.js');
     //require("expose?angular!../../vendors/angular/angular.min.js");
     require('../../vendors/angular-route/angular-route.min.js');
-    // var angular = require('angular');
-    angular.module('pokemon', []);
+
+    angular.module('pokemon', ['ngRoute']);
  
     return angular;
 });
