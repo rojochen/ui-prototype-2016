@@ -16,10 +16,13 @@
 			// 導頁路徑
 		$routeProvider
 				.when('/', {
-					template: "Walsin CURD Template"
+					templateUrl: "../template/index.html"
 				})
-				.when('/one', {
-					templateUrl: '../views/k_one.html'
+				.when('/grids', {
+					templateUrl: '../template/grids.html'
+				})
+				.when('/form', {
+					templateUrl: '../template/form.html'
 				})
 				.otherwise({
 					redirectTo: '/'
