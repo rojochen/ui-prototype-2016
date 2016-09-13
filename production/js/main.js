@@ -11,11 +11,8 @@
 	require(['pokemon'], function (pokemon) {
 		//var app =  angular.module("myApp",[pokemon]);
 		
-		console.log(pokemon);
 		var app = angular.module('app', ['pokemon']);
-		app.controller('ctrl', function ($scope) {
-			$scope.con = '給我angular';
-		});
+
 		app.controller('sliderMenu', ['$scope', '$timeout', function ($scope, $timeout) {
 			var CURRENT_URL = window.location.href.split('?')[0],
 				$BODY = $('body'),
@@ -120,6 +117,10 @@
 			});
 			// /Sidebar				
 		}]);
+
+		app.controller('ctrl', function ($scope) {
+			$scope.con = '給我angular';
+		});
 
 		//angular.bootstrap(document, app);
 	});

@@ -34,7 +34,7 @@ define(['jquery'], function (jquery) {
     require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
 
     require('../js/helpers/smartresize.js');
-    require('../js/custom.js');
+    // require('../js/custom.js');
     global.echarts =  require('../../vendors/echarts/dist/echarts.min.js');
     require('../../src/config/joe.js');
     require('../../vendors/angular/angular.min.js');
