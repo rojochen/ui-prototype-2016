@@ -4,11 +4,12 @@
 	require.config({
 		baseUrl: '../',
 		paths: {
-			pokemon: 'assets/js/app'
+			pokemon: 'assets/js/app',
+			myModule:'module/myModule.js'
 		}
 	});
 
-	require(['pokemon'], function (pokemon) {
+	require(['pokemon','myModule'], function (pokemon,myModule) {
 		//var app =  angular.module("myApp",[pokemon]);
 		
 		console.log(pokemon);
