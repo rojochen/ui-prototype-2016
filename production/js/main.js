@@ -9,7 +9,7 @@
 			btController:'js/controller/btController'
 		}
 	});
-	require(['pokemon','btController'], function (pokemon,btController) {
+	require(['pokemon','btModule','btController'], function (pokemon,btModule,btController) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
