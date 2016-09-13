@@ -5,16 +5,17 @@
 		baseUrl: '../',
 		paths: {
 			pokemon: 'assets/js/app',
-			myModule:'js/module/myModule'
+			btModule:'js/module/myModule',
+			myController:'js/controller/myController'
 		}
 	});
-
-	require(['pokemon','myModule'], function (pokemon,myModule) {
+	require(['pokemon','myController'], function (pokemon,myController) {
 		//var app =  angular.module("myApp",[pokemon]);
-			
-		var app = angular.module('app', ['pokemon']);
-
-		app.controller('sliderMenu', ['$scope', '$timeout', function ($scope, $timeout) {
+		//var app = angular.module('app', ['pokemon','myModule']);
+		
+		console.log(myController);
+        var app = myController;
+		myController.controller('sliderMenu', ['$scope', '$timeout', function ($scope, $timeout) {
 			var CURRENT_URL = window.location.href.split('?')[0],
 				$BODY = $('body'),
 				$MENU_TOGGLE = $('#menu_toggle'),
@@ -123,6 +124,6 @@
 			$scope.con = '給我angular';
 		});
 
-		//angular.bootstrap(document, app);
+		angular.bootstrap(document, btModule);
 	});
 })();
