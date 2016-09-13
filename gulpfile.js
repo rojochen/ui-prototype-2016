@@ -205,7 +205,7 @@ gulp.task('build-app', function() {
                 // ]
 
                 loaders: [{
-                    test: /[\/]angular\.js$/,
+                    test: /[\/\\]angular\.js$/,
                     loader: "exports?window.angular"
                 }, {
                     test: /pnotify.*\.js$/,
