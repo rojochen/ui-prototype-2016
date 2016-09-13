@@ -39,9 +39,10 @@ define(['jquery'], function (jquery) {
     require('../../src/config/joe.js');
     require('../../vendors/angular/angular.min.js');
     //require("expose?angular!../../vendors/angular/angular.min.js");
+    require('../../vendors/ng-table/dist/ng-table.js');
     require('../../vendors/angular-route/angular-route.min.js');
 
-    angular.module('pokemon', ['ngRoute']);
+    angular.module('pokemon', ['ngRoute','ngTable']);
  
     return angular;
 });
