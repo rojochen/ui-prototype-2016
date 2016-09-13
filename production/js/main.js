@@ -4,13 +4,14 @@
 	require.config({
 		baseUrl: '../',
 		paths: {
-			pokemon: 'assets/js/app'
+			pokemon: 'assets/js/app',
+			myModule:'js/module/myModule'
 		}
 	});
 
-	require(['pokemon'], function (pokemon) {
+	require(['pokemon','myModule'], function (pokemon,myModule) {
 		//var app =  angular.module("myApp",[pokemon]);
-		
+			
 		var app = angular.module('app', ['pokemon']);
 
 		app.controller('sliderMenu', ['$scope', '$timeout', function ($scope, $timeout) {

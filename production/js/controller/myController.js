@@ -1,5 +1,5 @@
 define([
-    '../module/myModule.js',
+    '../module/myModule',
 ], function(myApp) {
     'use strict';
     myApp.controller('tableCtrl', ['$scope', function($scope) {

@@ -12,7 +12,7 @@
     <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 
-<body class="nav-md" ng-app="myModule">
+<body class="nav-md">
     <div class="container body">
         <div class="main_container">
             <div class="col-md-3 left_col">
@@ -324,13 +324,8 @@
                                     </ul>
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="x_content" ng-controller="ngTable">
-                                    <table ng-table="tableParams" class="table" show-filter="true">
-                                        <tr ng-repeat="user in $data">
-                                            <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">{{user.name}}</td>
-                                            <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">{{user.age}}</td>
-                                        </tr>
-                                    </table>
+                                <div class="x_content">
+                                    
                                 </div>
                             </div>
                         </div>
