@@ -5,8 +5,8 @@
 		baseUrl: '../',
 		paths: {
 			pokemon: 'assets/js/app',
-			btModule:'js/module/btModule',
-			btController:'js/controller/btController'
+			btModule:'js/module/BTModule',
+			btController:'js/controller/BTController'
 		}
 	});
 	require(['pokemon','btModule','btController'], function (pokemon,btModule,btController) {
