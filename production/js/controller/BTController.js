@@ -58,6 +58,8 @@ define(['btModule'], function(btModule) {
                             $SIDEBAR_MENU.find('li ul').slideUp($slideUpTime);
                         }
                         
+                        $('.nav .child_menu li').removeClass('active');
+                        
                         $li.addClass('active');
 
                         $('ul:first', $li).slideDown($slideUpTime, function() {
