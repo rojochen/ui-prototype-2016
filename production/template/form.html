@@ -1,0 +1,882 @@
+<div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>表單構成</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="搜尋">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>表單設計</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">設定 1</a>
+                          </li>
+                          <li><a href="#">設定 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">姓名 <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">密碼 <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="password" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Email</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="middle-name" class="form-control col-md-7 col-xs-12" type="email" name="middle-name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">性別</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div id="gender" class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="gender" value="male"> 男 
+                            </label>
+                            <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="gender" value="female"> 女
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">生日 <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button id='submitInfo' type="button" class="btn btn-primary">送出</button>
+                          <button type="button" class="btn btn-success">取消</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>換行表單示範</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">設定 1</a>
+                          </li>
+                          <li><a href="#">設定 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left">
+
+                      <div class="form-group">
+                        <label class="control-label">文字欄位 <span class="required">*</span> <small>此欄位為必填欄位</small></label>
+                        <input type="text" class="form-control" placeholder="請輸入文字">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">失效文字欄位 </label>
+                        <input type="text" class="form-control" disabled="disabled" placeholder="失效文字欄位">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">唯讀文字欄位</label>
+                        <input type="text" class="form-control" readonly="readonly" placeholder="唯讀文字欄位">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">多行文字框欄位 </label>
+                        <textarea class="form-control" rows="3"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">密碼欄位</label>
+                        <input type="password" class="form-control">
+                      </div>
+                       <!--<div class="form-group">
+                        <label class="control-label">AutoComplete</label>
+                        <input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10"/>
+                      </div> -->
+                      <div class="form-group">
+                        <label class="control-label">下拉選單欄位</label>
+                        <select class="form-control">
+                          <option>請選擇</option>
+                          <option>選項 1</option>
+                          <option>選項 2</option>
+                          <option>選項 3</option>
+                          <option>選項 4</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">下拉選單欄位-自訂</label>
+                        <select class="select2_single form-control" tabindex="-1">
+                          <option></option>
+                            <option value="01">台北市</option>
+                            <option value="02">新北市</option>
+                            <option value="03">基隆市</option>
+                            <option value="04">宜蘭縣</option>
+                            <option value="05">桃園市</option>
+                            <option value="06">新竹市</option>
+                            <option value="07">新竹縣</option>
+                            <option value="08">苗栗縣</option>
+                            <option value="09">台中市</option>
+                            <option value="10">彰化縣</option>
+                            <option value="11">南投縣</option>
+                            <option value="12">雲林縣</option>
+                            <option value="13">嘉義市</option>
+                            <option value="14">嘉義縣</option>
+                            <option value="15">台南市</option>
+                            <option value="16">高雄市</option>
+                            <option value="17">屏東縣</option>
+                            <option value="18">台東縣</option>
+                            <option value="19">花蓮縣</option>
+                            <option value="20">澎湖縣</option>
+                            <option value="21">金門縣</option>
+                            <option value="22">連江縣</option>
+                            <option value="23">離島地區</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">下拉選單欄位-群組</label>
+                        <select class="select2_group form-control">
+                          <optgroup label="北部地區">
+                            <option value="01">台北市</option>
+                            <option value="02">新北市</option>
+                            <option value="03">基隆市</option>
+                            <option value="04">宜蘭縣</option>
+                            <option value="05">桃園市</option>
+                            <option value="06">新竹市</option>
+                            <option value="07">新竹縣</option>
+                            <option value="08">苗栗縣</option>
+                          </optgroup>
+                          <optgroup label="中部地區">
+                            <option value="09">台中市</option>
+                            <option value="10">彰化縣</option>
+                            <option value="11">南投縣</option>
+                          </optgroup>
+                          <optgroup label="南部地區">
+                            <option value="12">雲林縣</option>
+                            <option value="13">嘉義市</option>
+                            <option value="14">嘉義縣</option>
+                            <option value="15">台南市</option>
+                            <option value="16">高雄市</option>
+                          </optgroup>
+                          <optgroup label="東部地區">
+                            <option value="17">屏東縣</option>
+                            <option value="18">台東縣</option>
+                            <option value="19">花蓮縣</option>
+                          </optgroup>
+                          <optgroup label="離島地區">
+                            <option value="20">澎湖縣</option>
+                            <option value="21">金門縣</option>
+                            <option value="22">連江縣</option>
+                            <option value="23">離島地區</option>
+                          </optgroup>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label">多重選單欄位</label>
+                        <select multiple class="form-control">
+                          <option>選項 1</option>
+                          <option>選項 2</option>
+                          <option>選項 3</option>
+                          <option>選項 4</option>
+                          <option>選項 5</option>
+                          <option>選項 6</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">多重選單欄位-自訂</label>
+                        <select class="select2_multiple form-control" multiple="multiple">
+                          <option>請選擇</option>
+                          <option>選項 1</option>
+                          <option>選項 2</option>
+                          <option>選項 3</option>
+                          <option>選項 4</option>
+                          <option>選項 5</option>
+                          <option>選項 6</option>
+                        </select>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label">標籤欄位</label>
+                        <div class="col-md-12 col-sm-12 col-xs-12 row">
+                          <input id="tags_1" type="text" class="tags form-control" value="草系, 火系, 水系" />
+                          <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Checkbox 欄位</label>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value=""> 選項 1
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value=""> 選項 2
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" disabled> 失效選項
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Radio 欄位</label>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> 選項 1
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> 選項 1
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" value="option3" id="optionsRadios3" name="optionsRadios" disabled> 失效選項
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label">Checkbox 欄位</label>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" class="flat" checked="checked"> 選項 1
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" class="flat"> 選項 2
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" class="flat" disabled="disabled"> 失效選項
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" class="flat" disabled="disabled" checked="checked"> 失效選項(Checked)
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Radio 欄位</label>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" class="flat" checked name="iCheck"> 選項 1
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" class="flat" name="iCheck"> 選項 2
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" class="flat" name="iCheck" disabled="disabled"> 失效選項
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" class="flat" name="iCheck3" disabled="disabled" checked> 失效選項(Checked)
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="pull-right">
+                          <button type="button" class="btn btn-primary">送出</button>
+                          <button type="button" class="btn btn-success">取消</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>併行表單示範</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">設定 1</a>
+                          </li>
+                          <li><a href="#">設定 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">文字欄位 <span class="required">*</span> <br><small>此欄位為必填欄位</small></label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" placeholder="請輸入文字">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">失效文字欄位 </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" disabled="disabled" placeholder="失效文字欄位">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">唯讀文字欄位</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" readonly="readonly" placeholder="唯讀文字欄位">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">多行文字框欄位 
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">密碼欄位</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="password" class="form-control">
+                        </div>
+                      </div>
+                      <!-- <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">AutoComplete</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10"/>
+                        </div>
+                      </div> -->
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">下拉選單欄位</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="form-control">
+                            <option>請選擇</option>
+                            <option>選項 1</option>
+                            <option>選項 2</option>
+                            <option>選項 3</option>
+                            <option>選項 4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">下拉選單欄位-自訂</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="select2_single form-control" tabindex="-1">
+                            <option></option>
+                            <option value="01">台北市</option>
+                            <option value="02">新北市</option>
+                            <option value="03">基隆市</option>
+                            <option value="04">宜蘭縣</option>
+                            <option value="05">桃園市</option>
+                            <option value="06">新竹市</option>
+                            <option value="07">新竹縣</option>
+                            <option value="08">苗栗縣</option>
+                            <option value="09">台中市</option>
+                            <option value="10">彰化縣</option>
+                            <option value="11">南投縣</option>
+                            <option value="12">雲林縣</option>
+                            <option value="13">嘉義市</option>
+                            <option value="14">嘉義縣</option>
+                            <option value="15">台南市</option>
+                            <option value="16">高雄市</option>
+                            <option value="17">屏東縣</option>
+                            <option value="18">台東縣</option>
+                            <option value="19">花蓮縣</option>
+                            <option value="20">澎湖縣</option>
+                            <option value="21">金門縣</option>
+                            <option value="22">連江縣</option>
+                            <option value="23">離島地區</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">下拉選單欄位-群組</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="select2_group form-control">
+                            <optgroup label="北部地區">
+                            <option value="01">台北市</option>
+                            <option value="02">新北市</option>
+                            <option value="03">基隆市</option>
+                            <option value="04">宜蘭縣</option>
+                            <option value="05">桃園市</option>
+                            <option value="06">新竹市</option>
+                            <option value="07">新竹縣</option>
+                            <option value="08">苗栗縣</option>
+                            </optgroup>
+                            <optgroup label="中部地區">
+                            <option value="09">台中市</option>
+                            <option value="10">彰化縣</option>
+                            <option value="11">南投縣</option>
+                            </optgroup>
+                            <optgroup label="南部地區">
+                            <option value="12">雲林縣</option>
+                            <option value="13">嘉義市</option>
+                            <option value="14">嘉義縣</option>
+                            <option value="15">台南市</option>
+                            <option value="16">高雄市</option>
+                            </optgroup>
+                            <optgroup label="東部地區">
+                            <option value="17">屏東縣</option>
+                            <option value="18">台東縣</option>
+                            <option value="19">花蓮縣</option>
+                            </optgroup>
+                            <optgroup label="離島地區">
+                            <option value="20">澎湖縣</option>
+                            <option value="21">金門縣</option>
+                            <option value="22">連江縣</option>
+                            <option value="23">離島地區</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">多重選單欄位</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select multiple class="form-control">
+                            <option>選項 1</option>
+                            <option>選項 2</option>
+                            <option>選項 3</option>
+                            <option>選項 4</option>
+                            <option>選項 5</option>
+                            <option>選項 6</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">多重選單欄位-自訂</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="select2_multiple form-control" multiple="multiple">
+                            <option>請選擇</option>
+                            <option>選項 1</option>
+                            <option>選項 2</option>
+                            <option>選項 3</option>
+                            <option>選項 4</option>
+                            <option>選項 5</option>
+                            <option>選項 6</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">標籤欄位</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input id="tags_2" type="text" class="tags form-control" value="草系, 火系, 水系" />
+                          <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Checkbox 欄位</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> 選項 1
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value=""> 選項 2
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="" disabled> 失效選項
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Radio 欄位</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> 選項 1
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> 選項 2
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" value="option3" id="optionsRadios3" name="optionsRadios" disabled> 失效選項
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Checkbox 欄位</label>
+
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" class="flat" checked="checked"> 選項 1
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" class="flat"> 選項 2
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" class="flat" disabled="disabled"> 失效選項
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" class="flat" disabled="disabled" checked="checked"> 失效選項(Checked)
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Radio 欄位</label>
+
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" class="flat" checked name="iCheck"> 選項 1
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" class="flat" name="iCheck"> 選項 2
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" class="flat" name="iCheck" disabled="disabled"> 失效選項
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" class="flat" name="iCheck3" disabled="disabled" checked> 失效選項(Checked)
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="pull-right">
+                          <button type="button" class="btn btn-primary">送出</button>
+                          <button type="button" class="btn btn-success">取消</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>輸入群組</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">設定 1</a>
+                          </li>
+                          <li><a href="#">設定 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <form class="form-horizontal form-label-left">
+
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label">附加按鈕</label>
+
+                        <div class="col-sm-9">
+                          <div class="input-group">
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-primary">Go!</button>
+                            </span>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-primary">Go!</button>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="divider-dashed"></div>
+
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label">附加下拉選單</label>
+
+                        <div class="col-sm-9">
+                          <div class="input-group">
+                            <div class="input-group-btn">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">請選擇 <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a href="#">藍隊</a>
+                                </li>
+                                <li><a href="#">紅隊</a>
+                                </li>
+                                <li><a href="#">黃隊</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">外掛</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                          </div>
+                          <div class="input-group">
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                            <div class="input-group-btn">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">請選擇 <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a href="#">藍隊</a>
+                                </li>
+                                <li><a href="#">紅隊</a>
+                                </li>
+                                <li><a href="#">黃隊</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">外掛</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- /btn-group -->
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="x_panel">
+              <div class="x_title">
+                <h2>網格 <small>網格使用說明 </small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">設定 1</a>
+                      </li>
+                      <li><a href="#">設定 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+
+                <div class="row">
+
+                  <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-12" class="form-control">
+                  </div>
+
+                  <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-6" class="form-control">
+                  </div>
+
+                  <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-6" class="form-control">
+                  </div>
+
+
+                  <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-4" class="form-control">
+                  </div>
+
+                  <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-4" class="form-control">
+                  </div>
+
+                  <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-4" class="form-control">
+                  </div>
+
+
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-3" class="form-control">
+                  </div>
+
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-3" class="form-control">
+                  </div>
+
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-3" class="form-control">
+                  </div>
+
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-3" class="form-control">
+                  </div>
+
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+                </div>
+
+              </div>
+            </div> -->
+
+          </div>
