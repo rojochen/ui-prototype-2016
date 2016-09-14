@@ -101,7 +101,8 @@ plugins.push(new webpack.ProvidePlugin({
     'window.jQuery': 'jquery',
     'window.$': 'jquery',
     jQuery: 'jquery',
-    $: 'jquery'
+    $: 'jquery',
+    PNotify: 'pnotify'
 }));
 
 
@@ -191,8 +192,10 @@ gulp.task('build-app', function() {
             resolve: {
                 modulesDirectories: ['vendors'],
                 alias: {
-                    jquery: 'jquery/dist/jquery.min',
-                    angular:'/angular/angular'
+                    jquery: '/jquery/dist/jquery.min',
+                    angular:'/angular/angular',
+                    moment:'/moment/moment',
+                    echarts:'/echarts/dist/echarts.min'
                 },
                 extensions: ['', '.js']
             },

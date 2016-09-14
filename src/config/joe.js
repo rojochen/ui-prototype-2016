@@ -53,7 +53,7 @@ define(function() {
 
     //projects.html - louis
     require('../../vendors/iCheck/icheck.min.js');
-    require('../js/page/projects.js');
+    require('../js/page/swtich.js');
         
 
     //form_advanced.html - louis
