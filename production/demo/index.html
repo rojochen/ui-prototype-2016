@@ -18,12 +18,12 @@
 </head>
 
 <body class="nav-md">
-  <div class="container body" ng-app="app">
+  <div class="container body">
     <div class="main_container">
       <div class="col-md-3 left_col">
-        <div class="left_col scroll-view" ng-controller="sliderMenu">
+        <div class="left_col scroll-view">
           <!-- sidebar menu -->
-          <div ng-include="'../template/slider-menu.html'"></div>
+          <div  ng-controller="sliderMenu" ng-include="'../template/slider-menu.html'"></div>
           <!-- /sidebar menu -->
         </div>
       </div>

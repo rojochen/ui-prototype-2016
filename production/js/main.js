@@ -4,9 +4,12 @@
 	require.config({
 		baseUrl: '../',
 		paths: {
-			pokemon: 'assets/js/app'
+			pokemon: 'assets/js/app',
+			btModule:'js/module/btModule',
+			btController:'js/controller/btController'
 		}
 	});
+<<<<<<< HEAD
 
 	require(['pokemon'], function (pokemon) {
 		//var app =  angular.module("myApp",[pokemon]);
@@ -135,5 +138,9 @@
 		});
 
 		//angular.bootstrap(document, app);
+=======
+	require(['pokemon','btModule','btController'], function (pokemon,btModule,btController) {
+		angular.bootstrap(document, ['btModule']);
+>>>>>>> feature/added-angular
 	});
 })();
