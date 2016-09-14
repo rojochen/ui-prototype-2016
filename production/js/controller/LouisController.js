@@ -506,5 +506,6 @@ define(['btController'], function(btController) {
             });
         });
     }]);
+    // 訊息通知
     return app;
 });
