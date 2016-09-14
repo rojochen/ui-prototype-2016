@@ -13,6 +13,7 @@ define(['btController'], function(btController) {
     // formAdvanced
     app.controller('formAdvanced', ['$scope', '$timeout', function($scope, $timeout) {
         $timeout(function() {
+
             $(document).ready(function() {
                 // knob
                 $(".knobColor1").knob({
@@ -123,12 +124,21 @@ define(['btController'], function(btController) {
                         }
                     }
                 });
-                // knob
+
+
                 // inputmask
                 $(":input").inputmask();
-                // inputmask
+
+
+
                 //  bootstrap-daterangepicker
+                var cb = function(start, end, label) {
+                    console.log(start.toISOString(), end.toISOString(), label);
+                    $('#reportrange span').html(start.format('MM DD, YYYY') + ' - ' + end.format('MM DD, YYYY'));
+                };
                 
+
+                // ---------------------------------
                 $('#single_cal1').daterangepicker({
                     singleDatePicker: true,
                     calender_style: "picker_1"
