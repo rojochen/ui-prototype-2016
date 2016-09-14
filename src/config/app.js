@@ -1,5 +1,5 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
-define(['jquery','angular'], function (jquery,angular) {
+define(['jquery','angular','moment'], function (jquery,angular,moment) {
     console.log(angular);
     var $ = jquery;
     global.jQuery = $;
