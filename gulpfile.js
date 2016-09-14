@@ -192,7 +192,8 @@ gulp.task('build-app', function() {
                 modulesDirectories: ['vendors'],
                 alias: {
                     jquery: 'jquery/dist/jquery.min',
-                    angular:'/angular/angular'
+                    angular:'/angular/angular',
+                    moment:'moment/moment.js'
                 },
                 extensions: ['', '.js']
             },
