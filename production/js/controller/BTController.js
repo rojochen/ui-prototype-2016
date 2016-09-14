@@ -28,10 +28,11 @@ define(['btModule'], function(btModule) {
                     var bodyHeight = $BODY.outerHeight(),
                         footerHeight = $BODY.hasClass('footer_fixed') ? -10 : $FOOTER.height(),
                         leftColHeight = $LEFT_COL.eq(1).height() + $SIDEBAR_FOOTER.height(),
-                        contentHeight = bodyHeight < leftColHeight ? leftColHeight : bodyHeight;
+                        // contentHeight = bodyHeight < leftColHeight ? leftColHeight : bodyHeight;
+                        contentHeight = leftColHeight;
 
                     // normalize content
-                    contentHeight -= $NAV_MENU.height() + footerHeight;
+                    // contentHeight -= $NAV_MENU.height() + footerHeight;
 
                     $RIGHT_COL.css('min-height', contentHeight);
                 };
@@ -56,11 +57,11 @@ define(['btModule'], function(btModule) {
                             $SIDEBAR_MENU.find('li').removeClass('active active-sm');
                             $SIDEBAR_MENU.find('li ul').slideUp($slideUpTime);
                         }
-
+                        
                         $li.addClass('active');
 
                         $('ul:first', $li).slideDown($slideUpTime, function() {
-                            setContentHeight();
+                            // setContentHeight();
                         });
                     }
                 });
