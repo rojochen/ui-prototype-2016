@@ -1,388 +1,388 @@
-<div class="">
-                    <div class="page-title">
-                        <div class="title_left">
-                            <h3>示範頁面</h3>
-                        </div>
+<div class="" ng-controller="project">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>示範頁面</h3>
+        </div>
 
-                        <div class="title_right">
-                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="搜尋">
-                                    <span class="input-group-btn">
+        <div class="title_right">
+            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="搜尋">
+                    <span class="input-group-btn">
                       <button class="btn btn-default" type="button">Go!</button>
                     </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="clearfix"></div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>示範頁面</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">設定 1</a>
+                                </li>
+                                <li><a href="#">設定 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
                     <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>示範頁面</h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    <p>表單列表(具進度條與編輯選項的項目列表)
+                    </p>
+
+                    <!-- start project list -->
+                    <table class="table table-striped projects">
+                        <thead>
+                            <tr>
+                                <th style="width: 1%">#</th>
+                                <th style="width: 20%">專案名稱</th>
+                                <th>團隊成員</th>
+                                <th>專案進度</th>
+                                <th>狀態</th>
+                                <th style="width: 20%">#附加功能</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#</td>
+                                <td>
+                                    <a>寶可夢大師之旅！</a>
+                                    <br />
+                                    <small>創建日期 2016.08.01</small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <input type="checkbox" class="flat" checked="checked"> 女士
                                         </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">設定 1</a>
-                                                </li>
-                                                <li><a href="#">設定 2</a>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <input type="checkbox" class="flat" name="iCheck"> 男士
                                         </li>
-                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+
+                                    </ul>
+                                </td>
+                                <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="57"></div>
+                                    </div>
+                                    <small>完成度 57%</small>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
+                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#</td>
+                                <td>
+                                    <a>皮卡丘訓練計劃</a>
+                                    <br />
+                                    <small>創建日期 2016.08.01</small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <input type="radio" class="flat" checked name="iCheck"> 女士
+                                        </li>
+                                        <li>
+                                            <input type="radio" class="flat" checked name="iCheck"> 先生
                                         </li>
                                     </ul>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
+                                </td>
+                                <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="47"></div>
+                                    </div>
+                                    <small>完成度 47%</small>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
+                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#</td>
+                                <td>
+                                    <a>小火龍訓練計劃</a>
+                                    <br />
+                                    <small>創建日期 2016.08.08</small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
+                                    </div>
+                                    <small>完成度 77%</small>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
+                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#</td>
+                                <td>
+                                    <a>傑尼龜訓練計劃</a>
+                                    <br />
+                                    <small>創建日期 2016.08.15</small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
+                                    </div>
+                                    <small>完成度 60%</small>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
+                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#</td>
+                                <td>
+                                    <a>卡比獸的逆襲</a>
+                                    <br />
+                                    <small>創建日期 2016.08.22</small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                        <div class="progress-bar bg-blue" role="progressbar" data-transitiongoal="12"></div>
+                                    </div>
+                                    <small>完成度 12%</small>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-xs">暫停中</button>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
+                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#</td>
+                                <td>
+                                    <a>北投朝聖之抓補暴鋰龍</a>
+                                    <br />
+                                    <small>創建日期 2016.08.29</small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="35"></div>
+                                    </div>
+                                    <small>完成度 35%</small>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
+                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#</td>
+                                <td>
+                                    <a>伊布隨機進化之研究</a>
+                                    <br />
+                                    <small>創建日期 2016.09.01</small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="87"></div>
+                                    </div>
+                                    <small>完成度 87%</small>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
+                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#</td>
+                                <td>
+                                    <a>快龍捕獲率(淡水v.s北投)</a>
+                                    <br />
+                                    <small>創建日期 2016.09.08</small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
+                                    </div>
+                                    <small>完成度 77%</small>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
+                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#</td>
+                                <td>
+                                    <a>Pokemon YA 開發計劃</a>
+                                    <br />
+                                    <small>創建日期 2016.09.12</small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                        <li>
+                                            <img src="../images/user.png" class="avatar" alt="Avatar">
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="project_progress">
+                                    <div class="progress progress_sm">
+                                        <div class="progress-bar bg-red" role="progressbar" data-transitiongoal="77"></div>
+                                    </div>
+                                    <small>完成度 77%</small>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-xs">專案取消</button>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
+                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
+                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- end project list -->
 
-                                    <p>表單列表(具進度條與編輯選項的項目列表)
-</p>
-
-                                    <!-- start project list -->
-                                    <table class="table table-striped projects">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 1%">#</th>
-                                                <th style="width: 20%">專案名稱</th>
-                                                <th>團隊成員</th>
-                                                <th>專案進度</th>
-                                                <th>狀態</th>
-                                                <th style="width: 20%">#附加功能</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>寶可夢大師之旅！</a>
-                                                    <br />
-                                                    <small>創建日期 2016.08.01</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <input type="checkbox" class="flat" checked="checked"> 女士
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" class="flat" name="iCheck"> 男士
-                                                        </li>
-
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="57"></div>
-                                                    </div>
-                                                    <small>完成度 57%</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>皮卡丘訓練計劃</a>
-                                                    <br />
-                                                    <small>創建日期 2016.08.01</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <input type="radio" class="flat" checked name="iCheck"> 女士
-                                                        </li>
-                                                        <li>
-                                                            <input type="radio" class="flat" checked name="iCheck"> 先生
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="47"></div>
-                                                    </div>
-                                                    <small>完成度 47%</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>小火龍訓練計劃</a>
-                                                    <br />
-                                                    <small>創建日期 2016.08.08</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
-                                                    </div>
-                                                    <small>完成度 77%</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>傑尼龜訓練計劃</a>
-                                                    <br />
-                                                    <small>創建日期 2016.08.15</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
-                                                    </div>
-                                                    <small>完成度 60%</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>卡比獸的逆襲</a>
-                                                    <br />
-                                                    <small>創建日期 2016.08.22</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-blue" role="progressbar" data-transitiongoal="12"></div>
-                                                    </div>
-                                                    <small>完成度 12%</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">暫停中</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>北投朝聖之抓補暴鋰龍</a>
-                                                    <br />
-                                                    <small>創建日期 2016.08.29</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="35"></div>
-                                                    </div>
-                                                    <small>完成度 35%</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>伊布隨機進化之研究</a>
-                                                    <br />
-                                                    <small>創建日期 2016.09.01</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="87"></div>
-                                                    </div>
-                                                    <small>完成度 87%</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>快龍捕獲率(淡水v.s北投)</a>
-                                                    <br />
-                                                    <small>創建日期 2016.09.08</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
-                                                    </div>
-                                                    <small>完成度 77%</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">進行中</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Pokemon YA 開發計劃</a>
-                                                    <br />
-                                                    <small>創建日期 2016.09.12</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="../images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-red" role="progressbar" data-transitiongoal="77"></div>
-                                                    </div>
-                                                    <small>完成度 77%</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">專案取消</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> 附件 </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> 編輯 </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> 刪除 </a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- end project list -->
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>

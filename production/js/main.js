@@ -12,7 +12,7 @@
 		}
 	});
 
-	require(['pokemon','btModule','btController'], function (pokemon,btModule,btController) {
+	require(['pokemon','btModule','btController','louisController'], function (pokemon,btModule,btController,louisController) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
