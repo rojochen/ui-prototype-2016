@@ -129,10 +129,10 @@ define(['btController'], function(btController) {
                 $(":input").inputmask();
 
                 //  bootstrap-daterangepicker
-                var cb = function(start, end, label) {
-                    console.log(start.toISOString(), end.toISOString(), label);
-                    $('#reportrange span').html(start.format('MM DD, YYYY') + ' - ' + end.format('MM DD, YYYY'));
-                };
+                // var cb = function(start, end, label) {
+                //     console.log(start.toISOString(), end.toISOString(), label);
+                //     $('#reportrange span').html(start.format('MM DD, YYYY') + ' - ' + end.format('MM DD, YYYY'));
+                // };
                 // ---------------------------------
                 $('#single_cal1').daterangepicker({
                     singleDatePicker: true,
