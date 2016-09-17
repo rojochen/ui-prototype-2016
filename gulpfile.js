@@ -91,17 +91,18 @@ var named = require('vinyl-named');
 var plugins = [];
 
 
-plugins.push(new BowerWebpackPlugin({
-    modulesDirectories: ["vendors"],
-    manifestFiles: "bower.json",
-    excludes: [/.*\.less/]
-}));
+// plugins.push(new BowerWebpackPlugin({
+//     modulesDirectories: ["vendors"],
+//     manifestFiles: "bower.json",
+//     excludes: [/.*\.less/]
+// }));
 
 plugins.push(new webpack.ProvidePlugin({
     'window.jQuery': 'jquery',
     'window.$': 'jquery',
     jQuery: 'jquery',
     $: 'jquery',
+    PNotify:'pnotify'
     
 }));
 
@@ -192,10 +193,13 @@ gulp.task('build-app', function() {
             resolve: {
                 modulesDirectories: ['vendors'],
                 alias: {
-                    jquery: '/jquery/dist/jquery.min',
-                    angular:'/angular/angular',
-                    moment:'/moment/moment',
-                    echarts:'/echarts/dist/echarts.min'
+                    jquery: 'jquery/dist/jquery.min',
+                    angular:'angular/angular',
+                    moment:'moment/moment',
+                    echarts:'echarts/dist/echarts.min',
+                    PNotify:'pnotify/dist/pnotify',
+                    "datatables.net":'datatables.net-bs/js/dataTables.bootstrap',
+                    daterangepicker:"bootstrap-daterangepicker/daterangepicker"
                 },
                 extensions: ['', '.js']
             },
