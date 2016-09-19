@@ -6,8 +6,8 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
     global.jQuery = $;
     global.$ = $;   
 
-    window.moment= moment;
-    window.PNotify=PNotify; 
+    global.moment= moment;
+    global.PNotify=PNotify; 
 
 
 

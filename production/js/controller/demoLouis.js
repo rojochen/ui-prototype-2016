@@ -1,7 +1,8 @@
-define(['btController'], function(btController) {
+define(['demoModule'], function(demoModule) {
     'use strict';
-    var app = btController;
-    // 示範頁面
+    // var app = btController;
+    var app = angular.module("demoModule");
+    // switch
     app.controller('switch', ['$scope', '$timeout', function($scope, $timeout) {
         $timeout(function() {
             $(document).ready(function() {
@@ -1226,6 +1227,28 @@ define(['btController'], function(btController) {
 
             $('[data-toggle="tooltip"]').tooltip();
 
+        });
+    }]);
+    // 示範頁面
+    app.controller('project', ['$scope', '$timeout', function($scope, $timeout) {
+        $timeout(function() {
+            $(document).ready(function() {
+                if ($("input.flat")[0]) {
+                    $('input.flat').iCheck({
+                        checkboxClass: 'icheckbox_flat-green',
+                        radioClass: 'iradio_flat-green'
+                    });
+                }
+                if (typeof NProgress != 'undefined') {
+                    $(document).ready(function() {
+                        NProgress.start();
+                    });
+
+                    $(window).load(function() {
+                        NProgress.done();
+                    });
+                }
+            });
         });
     }]);
     return app;

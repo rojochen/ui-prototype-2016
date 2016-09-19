@@ -1,6 +1,8 @@
-define(['btModule'], function(btModule) {
+define([], function() {
     'use strict';
-    var app = btModule;
+    // var app = btModule;
+    // require('../module/BTModule.js');
+    var app = angular.module("btModule");
     app.controller('ctrl', function($scope) {
         $scope.con = '給我angular';
     });
@@ -57,9 +59,9 @@ define(['btModule'], function(btModule) {
                             $SIDEBAR_MENU.find('li').removeClass('active active-sm');
                             $SIDEBAR_MENU.find('li ul').slideUp($slideUpTime);
                         }
-                        
+
                         $('.nav .child_menu li').removeClass('active');
-                        
+
                         $li.addClass('active');
 
                         $('ul:first', $li).slideDown($slideUpTime, function() {
