@@ -1,11 +1,25 @@
-define([], function() {
+define(['btModule'], function(btModule) {
     'use strict';
-    // var app = btModule;
-    // require('../module/BTModule.js');
     var app = angular.module("btModule");
-    app.controller('ctrl', function($scope) {
-        $scope.con = '給我angular';
-    });
+    
+    var indexComponent = {
+        template: require('../../template/index.html'),
+        controller: indexCrel,
+        controllerAs: 'vm',
+        bindings: {
+            con: '='
+        }
+    };
+    app.component('indexComponent', indexComponent);
+    indexCrel.$inject = ['$http'];
+    function indexCrel($http){
+        this.con = '給我angular $http';
+    }
+
+    // app.controller('indexCrel', function($scope) {
+    //     this.con = '給我angular';
+    // });
+    
     app.controller("tableCtrl", function($scope) {
         $scope.con = "angular";
     });

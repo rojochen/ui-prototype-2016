@@ -5,9 +5,9 @@
 		baseUrl: '../',
 		paths: {
 			pokemon: 'assets/js/app',
-			btModule: 'js/module/demo/demoModule',
-			btController: 'js/controller/demo/demobt',
-			joeController: 'js/controller/demo/demojoe',
+			btModule: 'js/module/demoModule',
+			btController: 'js/controller/demoBt',
+			joeController: 'js/controller/demoJoe',
 			louisController: 'js/controller/demoLouis'
 		}
 	});

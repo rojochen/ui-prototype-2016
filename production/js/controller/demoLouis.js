@@ -1,7 +1,7 @@
-define(['demoModule'], function(demoModule) {
+define(['btModule'], function(btModule) {
     'use strict';
     // var app = btController;
-    var app = angular.module("demoModule");
+    var app = angular.module("btModule");
     // switch
     app.controller('switch', ['$scope', '$timeout', function($scope, $timeout) {
         $timeout(function() {
