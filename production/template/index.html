@@ -1,1 +1,5 @@
-<h1 ng-controller="indexCrel">{{vm.con}}</h1>
+<div ng-controller='indexCtrl as ctrl'>
+    <h1>取得 : {{ctrl.con}}</h1>
+    <index-component hero="ctrl"></index-component>
+    <button ng-click='ctrl.sayHello'>button<button>
+</div>

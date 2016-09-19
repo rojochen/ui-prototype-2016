@@ -3,18 +3,32 @@ define(['btModule'], function(btModule) {
     var app = angular.module("btModule");
     
     var indexComponent = {
-        template: require('../../template/index.html'),
-        controller: indexCrel,
+        template: '<p>function: 取得 {{vm.hero.name}}</p>',
+        controller: indexComponentCtrl,
         controllerAs: 'vm',
         bindings: {
-            con: '='
+            hero: '<',
+            btButton: '&'
         }
     };
     app.component('indexComponent', indexComponent);
-    indexCrel.$inject = ['$http'];
-    function indexCrel($http){
-        this.con = '給我angular $http';
-    }
+
+    indexCtrl.$inject = ['$http'];
+    function indexComponentCtrl($http){
+        var vm = this;
+        // vm.con = 'angular';
+        vm.hero = {
+            name: 'index-component'
+        };
+    };
+    function indexCtrl($http){
+        var vm = this;
+        vm.con = 'angular';
+        vm.sayHello = function(){
+            alert('sayHello');
+        };
+    };
+    app.controller('indexCtrl', indexCtrl);
 
     // app.controller('indexCrel', function($scope) {
     //     this.con = '給我angular';
