@@ -45,7 +45,7 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
     // require('../js/custom.js');
     global.echarts =  require('../../vendors/echarts/dist/echarts.min.js');
     require('../../src/config/joe.js');
-    // require('../../vendors/angular/angular.min.js');
+    require('../../vendors/angular/angular.min.js');
     //require("expose?angular!../../vendors/angular/angular.min.js");
     require('../../vendors/ng-table/dist/ng-table.js');
     require('../../vendors/angular-route/angular-route.min.js');
