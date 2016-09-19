@@ -3,29 +3,39 @@ define(['btModule'], function(btModule) {
     var app = angular.module("btModule");
     
     var indexComponent = {
-        template: '<p>function: 取得 {{vm.hero.name}}</p>',
+        // template: '<p>function: 取得 {{vm.hero.name}}</p> <button ng-click="vm.onSayHello()">button</button>',
+        template: '<p>function: 取得 {{vm.hero.name}}</p> <button ng-click="vm.onclick()">button</button>',
         controller: indexComponentCtrl,
         controllerAs: 'vm',
         bindings: {
             hero: '<',
-            btButton: '&'
+            onSayHello: '&'
         }
     };
     app.component('indexComponent', indexComponent);
 
-    indexCtrl.$inject = ['$http'];
+    indexComponentCtrl.$inject = ['$http'];
     function indexComponentCtrl($http){
         var vm = this;
-        // vm.con = 'angular';
         vm.hero = {
-            name: 'index-component'
+            name: 'index-component try'
         };
+        /*
+        vm.onSayHello = function(){
+            alert('sayHello-aa');
+        };*/
+        vm.onclick = function(){
+            alert('sayHello-aa');
+            vm.onSayHello();
+             
+        }
     };
+
     function indexCtrl($http){
         var vm = this;
         vm.con = 'angular';
         vm.sayHello = function(){
-            alert('sayHello');
+            alert('sayHello-bb');
         };
     };
     app.controller('indexCtrl', indexCtrl);
