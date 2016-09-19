@@ -1,9 +1,16 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
-define(['jquery','angular','moment'], function (jquery,angular,moment) {
+define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,PNotify) {
     console.log(angular);
+    
     var $ = jquery;
     global.jQuery = $;
     global.$ = $;   
+
+    window.moment= moment;
+    window.PNotify=PNotify; 
+
+
+
     require('../../vendors/bootstrap/dist/js/bootstrap.min.js')
     // require('../../vendors/fastclick/lib/fastclick.js');
     require('../../vendors/nprogress/nprogress.js');

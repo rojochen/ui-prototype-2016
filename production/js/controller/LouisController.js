@@ -6,7 +6,6 @@ define(['btController'], function(btController) {
         $timeout(function() {
             $(document).ready(function() {
                 $("[name='my-checkbox']").bootstrapSwitch();
-                console.log($("[name='my-checkbox']"));
             });
         });
     }]);
@@ -15,6 +14,7 @@ define(['btController'], function(btController) {
         $timeout(function() {
 
             $(document).ready(function() {
+                console.log(moment);
                 // knob
                 $(".knobColor1").knob({
                     'width': 100,
@@ -131,8 +131,142 @@ define(['btController'], function(btController) {
                 //  bootstrap-daterangepicker
                 var cb = function(start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
+                    $('#reportrange_right span').html(start.format('MM DD, YYYY') + ' - ' + end.format('MM DD, YYYY'));
+                };
+
+                var optionSet1 = {
+                    startDate: moment().subtract(29, 'days'),
+                    endDate: moment(),
+                    minDate: '01/01/2012',
+                    maxDate: '12/31/2015',
+                    dateLimit: {
+                        days: 60
+                    },
+                    showDropdowns: true,
+                    showWeekNumbers: true,
+                    timePicker: false,
+                    timePickerIncrement: 1,
+                    timePicker12Hour: true,
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    },
+                    opens: 'right',
+                    buttonClasses: ['btn btn-default'],
+                    applyClass: 'btn-small btn-primary',
+                    cancelClass: 'btn-small',
+                    format: 'MM/DD/YYYY',
+                    separator: ' to ',
+                    locale: {
+                        applyLabel: '送出',
+                        cancelLabel: '清除',
+                        fromLabel: '從',
+                        toLabel: '至',
+                        customRangeLabel: '自訂',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: 1
+                    }
+                };
+                $('#reportrange_right span').html(moment().subtract(29, 'days').format('MM DD, YYYY') + ' - ' + moment().format('MM DD, YYYY'));
+
+                $('#reportrange_right').daterangepicker(optionSet1, cb);
+
+                $('#reportrange_right').on('show.daterangepicker', function() {
+                    console.log("show event fired");
+                });
+                $('#reportrange_right').on('hide.daterangepicker', function() {
+                    console.log("hide event fired");
+                });
+                $('#reportrange_right').on('apply.daterangepicker', function(ev, picker) {
+                    console.log("apply event fired, start/end dates are " + picker.startDate.format('MM DD, YYYY') + " to " + picker.endDate.format('MM DD, YYYY'));
+                });
+                $('#reportrange_right').on('cancel.daterangepicker', function(ev, picker) {
+                    console.log("cancel event fired");
+                });
+
+                $('#options1').click(function() {
+                    $('#reportrange_right').data('daterangepicker').setOptions(optionSet1, cb);
+                });
+
+                $('#options2').click(function() {
+                    $('#reportrange_right').data('daterangepicker').setOptions(optionSet2, cb);
+                });
+
+                $('#destroy').click(function() {
+                    $('#reportrange_right').data('daterangepicker').remove();
+                });
+                // ---------------------------------
+                var cb = function(start, end, label) {
+                    console.log(start.toISOString(), end.toISOString(), label);
                     $('#reportrange span').html(start.format('MM DD, YYYY') + ' - ' + end.format('MM DD, YYYY'));
                 };
+
+                var optionSet1 = {
+                    startDate: moment().subtract(29, 'days'),
+                    endDate: moment(),
+                    minDate: '01/01/2012',
+                    maxDate: '12/31/2015',
+                    dateLimit: {
+                        days: 60
+                    },
+                    showDropdowns: true,
+                    showWeekNumbers: true,
+                    timePicker: false,
+                    timePickerIncrement: 1,
+                    timePicker12Hour: true,
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    },
+                    opens: 'left',
+                    buttonClasses: ['btn btn-default'],
+                    applyClass: 'btn-small btn-primary',
+                    cancelClass: 'btn-small',
+                    format: 'MM/DD/YYYY',
+                    separator: ' to ',
+                    locale: {
+                        applyLabel: '送出',
+                        cancelLabel: '清除',
+                        fromLabel: '從',
+                        toLabel: '至',
+                        customRangeLabel: '自訂',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: 1
+                    }
+                };
+                $('#reportrange span').html(moment().subtract(29, 'days').format('MM DD, YYYY') + ' - ' + moment().format('MM DD, YYYY'));
+                $('#reportrange').daterangepicker(optionSet1, cb);
+                $('#reportrange').on('show.daterangepicker', function() {
+                    console.log("show event fired");
+                });
+                $('#reportrange').on('hide.daterangepicker', function() {
+                    console.log("hide event fired");
+                });
+                $('#reportrange').on('apply.daterangepicker', function(ev, picker) {
+                    console.log("apply event fired, start/end dates are " + picker.startDate.format('MM DD, YYYY') + " to " + picker.endDate.format('MM DD, YYYY'));
+                });
+                $('#reportrange').on('cancel.daterangepicker', function(ev, picker) {
+                    console.log("cancel event fired");
+                });
+                $('#options1').click(function() {
+                    $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
+                });
+                $('#options2').click(function() {
+                    $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
+                });
+                $('#destroy').click(function() {
+                    $('#reportrange').data('daterangepicker').remove();
+                });
                 // ---------------------------------
                 $('#single_cal1').daterangepicker({
                     singleDatePicker: true,

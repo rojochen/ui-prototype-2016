@@ -102,8 +102,6 @@ plugins.push(new webpack.ProvidePlugin({
     'window.$': 'jquery',
     jQuery: 'jquery',
     $: 'jquery',
-    PNotify:'pnotify'
-    
 }));
 
 
