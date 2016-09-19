@@ -5,14 +5,14 @@
 		baseUrl: '../',
 		paths: {
 			pokemon: 'assets/js/app',
-			btModule:'js/module/BTModule',
-			btController:'js/controller/BTController',
-			joeController: 'js/controller/JoeController',
+			btModule: 'js/module/demo/btModule',
+			btController: 'js/controller/demo/btController',
+			joeController: 'js/controller/demo/joe',
 			louisController: 'js/controller/LouisController'
 		}
 	});
 
-	require(['pokemon','btModule','btController','louisController'], function (pokemon,btModule,btController,louisController) {
+	require(['pokemon','btModule','btController','louisController', 'joeController'], function (pokemon,btModule,btController,louisController, joeController) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
