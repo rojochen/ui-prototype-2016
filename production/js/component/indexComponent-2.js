@@ -19,7 +19,6 @@ define(['btModule'], function(btModule) {
         vm.button = '第二層component button';
         vm.onDemo = function(){
             alert('demo component-2');
-            vm.Demo();
         }
     };
 

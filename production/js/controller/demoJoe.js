@@ -2,6 +2,16 @@ define(['btModule'], function(btModule) {
     'use strict';
     var app = angular.module('btModule');
     
+    //btPortlet 
+    joeCtrl.$inject = ['$http'];
+    function joeCtrl($http){
+        var vm = this;
+        vm.title = '待辦事項';  
+    };
+    app.controller('joeCtrl', joeCtrl);
+
+
+
     //表單構成頁面
     app.controller('form', ['$scope', function($scope) {
         //bootstrap-daterangepicker
