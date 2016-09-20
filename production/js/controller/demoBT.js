@@ -2,6 +2,7 @@ define(['btModule'], function(btModule) {
     'use strict';
     var app = angular.module("btModule");
     
+    indexCtrl.$inject = ['$http'];
     function indexCtrl($http){
         var vm = this;
         vm.con = 'angular';
