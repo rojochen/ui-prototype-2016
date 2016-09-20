@@ -10,7 +10,7 @@
 			joeController: 'js/controller/demoJoe',
 			louisController: 'js/controller/demoLouis',
 			indexComponent: 'js/component/indexComponent',
-			demoComponent: 'js/controller/demoComponent',
+			demoComponent: 'js/component/demoComponent',
 			indexComponent_2: 'js/component/indexComponent-2',
 		}
 	});
