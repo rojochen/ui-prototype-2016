@@ -4,7 +4,7 @@ define([
     'use strict';
     var app = angular.module('btModule');
     var body =
-        '<div class="">' +
+        '<div class="" >' +
         '<ul class="to_do" ng-repeat="item in vm.items">' +
         '<li><p><input type="checkbox" class="flat" ng-click="listName()" value="{{item.value}}">{{item.value}}</p></li>' +
         '</ul>' +
@@ -14,12 +14,14 @@ define([
         bindings: {
             item: '<'
         },
+        transclude:true,
         template: body,
         controller: checkList,
         controllerAs: 'vm',
         require: {
             // 'parent': '^component1',
-            // controller: headCtrl
+            //controller: headCtrl
+            parentCtrl :'^component1'
         }
     }
     app.component('btCheckList', btCheckList);
@@ -48,6 +50,7 @@ define([
 
 
         }
+        // vm.parentCtrl
 
     }
 
