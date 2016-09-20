@@ -21,7 +21,7 @@ define([
         require: {
             // 'parent': '^component1',
             //controller: headCtrl
-            parentCtrl :'^component1'
+            parentCtrl :'^?btPortlet'
         }
     }
     app.component('btCheckList', btCheckList);
