@@ -79,6 +79,9 @@ define(['pokemon'], function(pokemon) {
 				.when('/level2', {
 					templateUrl: '../template/level2.html'
 				})
+				.when('/component', {
+					templateUrl: '../template/component.html'
+				})
 				.otherwise({
 					redirectTo: '/'
 				});
