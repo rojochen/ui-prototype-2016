@@ -12,7 +12,7 @@
 			indexComponent: 'js/component/indexComponent',
 			demoComponent: 'js/component/demoComponent',
 			indexComponent_2: 'js/component/indexComponent-2',
-			checkList:'js/component/checkLsit'
+			checkList:'js/component/checkList'
 		}
 	});
 	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'indexComponent','demoComponent', 'indexComponent_2','checkList'], function(pokemon, btModule, btController, louisController, joeController, indexComponent,demoComponent, indexComponent_2,checkList) {

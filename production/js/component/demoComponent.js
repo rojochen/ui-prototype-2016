@@ -5,7 +5,7 @@ define([
     var app = angular.module('btModule');
 
     // template
-    var head = '<div><h1>This is head</h1><component2 on-say-hello="vm.sayHello()"></component2></div>';
+    var head = '<div><h1>{{vm.name}}</h1><component2 on-say-hello="vm.sayHello()"></component2><bt-check-list></bt-check-list></div>';
     var body = '<div>'+
                        '<button ng-click="vm.onclick()">{{vm.hero.name}}</button>'+
                        '<input type="text" ng-model="vm.name"></br>'+
@@ -44,6 +44,7 @@ define([
         vm.sayHello=function(){
             alert('hello');
         }
+        vm.name="";
     }
 
     function bodyCtrl($http) {
