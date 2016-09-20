@@ -6,13 +6,13 @@ define([
     var body = 
         '<div class="">' +
         '<ul class="to_do" ng-repeat="item in vm.items">' +
-        '<li><p><input type="checkbox" class="flat">{{item.name}}</p></li>'
+        '<li><p><input type="checkbox" class="flat">{{item.name}}</p></li>'+
         '</ul>' +
         '</div>';
 
     var btCheckList = {
         bindings: {
-            items: '<'
+            item: '<'
         },
         template: body,
         controller: checkList,
