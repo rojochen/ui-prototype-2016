@@ -5,8 +5,8 @@ define([
     var app = angular.module('btModule');
 
     // template
-    var head = '<div>This is head</div><component2 on-say-hello="vm.sayHello()"></component2>';
-    var body = '<div><h2 ng-click="vm.onclikc()">{{vm.hero.name}}</h2></div>';
+    var head = '<div><h1>This is head</h1><component2 on-say-hello="vm.sayHello()"></component2></div>';
+    var body = '<div><button ng-click="vm.onclick()">{{vm.hero.name}}</button></div>';
 
     var component1 = {
         template: head,
@@ -25,6 +25,8 @@ define([
 
     headCtrl.$inject = ['$http'];
     bodyCtrl.$inject = ['$http'];
+
+
     // controller
     function headCtrl($http) {
         var vm = this;
@@ -39,9 +41,9 @@ define([
     function bodyCtrl($http) {
         var vm = this;
         vm.hero = {
-            name: 'component2'
+            name: 'This is body button'
         };
-        vm.onclikc=function(){
+        vm.onclick=function(){
             alert('component2');
             vm.onSayHello();
         }
