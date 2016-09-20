@@ -5,8 +5,8 @@ define([
     var app = angular.module('btModule');
 
     // template
-    var head = '<div>This is head</div><component2></component2>';
-    var body = '<div><h2 ng-click="vm.onclikc()" on-say-hello="ctrl.sayHello()">{{vm.hero.name}}</h2></div>';
+    var head = '<div>This is head</div><component2 on-say-hello="vm.sayHello()"></component2>';
+    var body = '<div><h2 ng-click="vm.onclikc()">{{vm.hero.name}}</h2></div>';
 
     var component1 = {
         template: head,
