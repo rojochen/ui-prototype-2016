@@ -25,8 +25,8 @@ define([
         }
     }
     app.component('btCheckList', btCheckList);
-
-    function checkList() {
+    btCheckList.$inject = ['$element', '$scope'];
+    function checkList($element, $scope) {
         var vm = this;
         vm.items = [{
             value: '與新客戶的進度會議'
@@ -50,7 +50,16 @@ define([
 
 
         }
-        // vm.parentCtrl
+
+        $element.on('$destroy', function () {
+            //  alert('hello element');
+            $scope.$destroy();
+        });
+
+        vm.$onDestroy = function(){
+           //off event 
+           $element.off('click');
+        };
 
     }
 

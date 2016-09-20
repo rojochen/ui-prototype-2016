@@ -8,19 +8,16 @@ define(['btModule'], function (btModule) {
         controllerAs: 'vm',
         transclude: true,
         bindings: {
-            title: '<'
+            title: '='
         }
     };
     app.component('btPortlet', btPortlet);
 
-    btPortletCtrl.$inject = ['$http','$element'];
-    function btPortletCtrl($http,$element) {
+    btPortletCtrl.$inject = ['$http','$element','$scope'];
+    function btPortletCtrl($http,$element,$scope) {
         var vm = this;
-        //alert(vm.title);
-        vm.$onInit = function(){
-            //vm.title = '待辦事項';
-             
 
+        vm.$onInit = function(){
             // Panel toolbox
             $element.on('click','.collapse-link', function () {
                 var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -37,23 +34,31 @@ define(['btModule'], function (btModule) {
                 }
                 $ICON.toggleClass('fa-chevron-up fa-chevron-down');
             });
-
+            
             $element.on('click', '.close-link', function () {
-                var $BOX_PANEL = $(this).closest('.x_panel');
-                $BOX_PANEL.remove();
+                var $BOX_PANEL = $element.find(this).closest('.x_panel');
+                $element.remove();
             });
             // /Panel toolbox
         };
 
+        $element.on('$destroy', function () {
+            $scope.$destroy();
+        });
 
-        vm.$onChanges = function(){
+        
+        vm.$onChanges = function(obj){
+            console.log(obj);
             console.log(vm.title);
             if(vm.title !== '待辦事項aa'){
                 console.log('sss');
             }
-        }
+        };
 
-        //差
+        vm.$onDestroy = function(){
+           //off event 
+           $element.off('click');
+        };
     };
 
     return app;
