@@ -6,7 +6,10 @@ define([
 
     // template
     var head = '<div><h1>This is head</h1><component2 on-say-hello="vm.sayHello()"></component2></div>';
-    var body = '<div><button ng-click="vm.onclick()">{{vm.hero.name}}</button></div>';
+    var body = '<div>'+
+                       '<button ng-click="vm.onclick()">{{vm.hero.name}}</button>'+
+                       '<input type="text" ng-model="vm.name"></br>'+
+                       '<p>{{vm.name}}</p>'+'</div>';
 
     var component1 = {
         template: head,
@@ -47,5 +50,6 @@ define([
             alert('component2');
             vm.onSayHello();
         }
+        vm.name="";
     }
 });
