@@ -12,9 +12,10 @@
 			indexComponent: 'js/component/indexComponent',
 			demoComponent: 'js/component/demoComponent',
 			indexComponent_2: 'js/component/indexComponent-2',
+			checkList:'js/component/checkLsit'
 		}
 	});
-	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'indexComponent','demoComponent', 'indexComponent_2'], function(pokemon, btModule, btController, louisController, joeController, indexComponent,demoComponent, indexComponent_2) {
+	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'indexComponent','demoComponent', 'indexComponent_2','checkList'], function(pokemon, btModule, btController, louisController, joeController, indexComponent,demoComponent, indexComponent_2,checkList) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
