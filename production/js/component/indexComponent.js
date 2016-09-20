@@ -4,7 +4,8 @@ define(['btModule'], function(btModule) {
     
     var indexComponent = {
         // template: '<p>function: 取得 {{vm.hero.name}}</p> <button ng-click="vm.onSayHello()">button</button>',
-        template: '<p>function: 取得 {{vm.hero.name}}</p> <button ng-click="vm.onclick()">button</button>',
+        // template: '<p>function: 取得 {{vm.hero.name}}</p> <button ng-click="vm.onclick()">button</button>',
+        template: '<p>function: 取得 {{vm.hero.name}}</p> <button ng-click="vm.onclick()">button</button> <aaa ng-click="vm.demo()">aaa</aaa>',
         controller: indexComponentCtrl,
         controllerAs: 'vm',
         bindings: {
@@ -28,6 +29,9 @@ define(['btModule'], function(btModule) {
             alert('sayHello-ee');
             vm.onSayHello();
              
+        }
+        vm.demo = function(){
+            alert('demo component-1');
         }
     };
 
