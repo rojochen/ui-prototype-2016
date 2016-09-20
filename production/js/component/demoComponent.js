@@ -5,7 +5,7 @@ define([
     var app = angular.module('btModule');
 
     // template
-    var head = '<div><h1>This is head</h1><component2 on-say-hello="vm.sayHello()"></component2></div>';
+    var head = '<div><p>Hello</p><div ng-transclude></div><div>';
     var body = '<div>'+
                        '<button ng-click="vm.onclick()">{{vm.hero.name}}</button>'+
                        '<input type="text" ng-model="vm.name"></br>'+
@@ -15,6 +15,7 @@ define([
     var component1 = {
         bindings:{},
         template: head,
+        transclude:true,
         controller: headCtrl,
         controllerAs: 'vm'
     }
@@ -23,6 +24,7 @@ define([
             onSayHello: '&',
             name:'<'
         },
+         transclude:true,
         template: body,
         controller: bodyCtrl,
         controllerAs: 'vm'
@@ -44,6 +46,7 @@ define([
         vm.sayHello=function(){
             alert('hello');
         }
+        vm.name="";
     }
 
     function bodyCtrl($http) {
