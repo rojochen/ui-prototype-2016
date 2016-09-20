@@ -8,10 +8,11 @@
 			btModule: 'js/module/demoModule',
 			btController: 'js/controller/demoBt',
 			joeController: 'js/controller/demoJoe',
-			louisController: 'js/controller/demoLouis'
+			louisController: 'js/controller/demoLouis',
+			indexComponent: 'js/component/indexComponent'
 		}
 	});
-	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController'], function(pokemon, btModule, btController, louisController, joeController) {
+	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'indexComponent'], function(pokemon, btModule, btController, louisController, joeController, indexComponent) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
