@@ -11,19 +11,24 @@ define([
                        '<input type="text" ng-model="vm.name"></br>'+
                        '<p>{{vm.name}}</p>'+'</div>';
 
+
     var component1 = {
+        bindings:{},
         template: head,
         controller: headCtrl,
         controllerAs: 'vm'
     }
     var component2 = {
         bindings:{
-            onSayHello: '&'
+            onSayHello: '&',
+            name:'<'
         },
         template: body,
         controller: bodyCtrl,
         controllerAs: 'vm'
     }
+    
+
     app.component('component1', component1).component('component2', component2);
 
     headCtrl.$inject = ['$http'];
