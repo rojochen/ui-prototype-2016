@@ -3,31 +3,27 @@ define([
 ], function(btModule) {
     'use strict';
     var app = angular.module('btModule');
-    var body =
-        '<div class="" >' +
-        '<ul class="to_do" ng-repeat="item in vm.items">' +
-        '<li><p><input type="checkbox" class="flat" ng-click="listName()" value="{{item.value}}">{{item.value}}</p></li>' +
-        '</ul>' +
-        '</div>';
-
+        
     var btCheckList = {
         bindings: {
             item: '<'
         },
-        transclude:true,
-        template: body,
+        transclude: true,
+        templateUrl: '../template/btCheckList.html',
         controller: checkList,
         controllerAs: 'vm',
         require: {
             // 'parent': '^component1',
             //controller: headCtrl
-            parentCtrl :'^?btPortlet'
+            parentCtrl: '^?btPortlet'
         }
     }
     app.component('btCheckList', btCheckList);
     btCheckList.$inject = ['$element', '$scope'];
+
     function checkList($element, $scope) {
         var vm = this;
+        vm.status = false;
         vm.items = [{
             value: '與新客戶的進度會議'
         }, {
@@ -46,19 +42,24 @@ define([
 
             value: '新專案進度諮詢'
         }];
-        vm.listName = function() {
-
-
+        vm.$onInit = function() {
+            if (vm.parentCtrl == 'undefined') {
+                
+            } else {
+                vm.listName = function(item) {
+                    vm.parentCtrl.title = item;
+                }
+            }
         }
 
-        $element.on('$destroy', function () {
+        $element.on('$destroy', function() {
             //  alert('hello element');
             $scope.$destroy();
         });
 
-        vm.$onDestroy = function(){
-           //off event 
-           $element.off('click');
+        vm.$onDestroy = function() {
+            //off event 
+            $element.off('click');
         };
 
     }
