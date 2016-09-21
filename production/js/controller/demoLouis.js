@@ -1,7 +1,18 @@
 define(['btModule'], function(btModule) {
     'use strict';
-    // var app = btController;
+
     var app = angular.module("btModule");
+    louisCtrl.$inject = ['$http'];
+
+    function louisCtrl($http) {
+        var vm = this;
+        $http.get("../data/ngDataTable.json").success(function(data) {
+            vm.items = data;
+            // console.log(vm.items);
+        });
+    }
+    app.controller('louisCtrl', louisCtrl);
+
     // switch
     app.controller('switch', ['$scope', '$timeout', function($scope, $timeout) {
         $timeout(function() {
