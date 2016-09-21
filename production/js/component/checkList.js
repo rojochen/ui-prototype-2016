@@ -3,10 +3,10 @@ define([
 ], function(btModule) {
     'use strict';
     var app = angular.module('btModule');
-        
+
     var btCheckList = {
         bindings: {
-            item: '<'
+            items: '<'
         },
         transclude: true,
         templateUrl: '../template/btCheckList.html',
@@ -21,31 +21,12 @@ define([
     app.component('btCheckList', btCheckList);
     btCheckList.$inject = ['$element', '$scope'];
 
-    function checkList($element, $scope) {
+    function checkList($element, $scope, $attrs) {
         var vm = this;
-        vm.status = false;
-        vm.items = [{
-            value: '與新客戶的進度會議'
-        }, {
 
-            value: '創建新人的email信箱'
-        }, {
-
-            value: '購買新影印機X台'
-        }, {
-
-            value: '備份專案資料'
-        }, {
-
-            value: '準備新人教育訓練'
-        }, {
-
-            value: '新專案進度諮詢'
-        }];
         vm.$onInit = function() {
-            if (vm.parentCtrl == 'undefined') {
-                
-            } else {
+
+            if (vm.parentCtrl !== 'undefined') {
                 vm.listName = function(item) {
                     vm.parentCtrl.title = item;
                 }
