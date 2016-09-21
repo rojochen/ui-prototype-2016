@@ -8,7 +8,7 @@ define(['btModule'], function (btModule) {
         controllerAs: 'vm',
         transclude: true,
         bindings: {
-            title: '='
+            title: '<'
         }
     };
     app.component('btPortlet', btPortlet);
