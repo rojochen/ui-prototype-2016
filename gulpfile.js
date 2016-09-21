@@ -217,8 +217,6 @@ gulp.task('build-app', function() {
                     'jquery.inputmask':'jquery.inputmask/dist/min/jquery.inputmask.bundle.min',
                     'jquery-knob':'jquery-knob/dist/jquery.knob.min',
                     cropper:'cropper/dist/cropper.min'
-
-
                 },
                 extensions: ['', '.js']
             },

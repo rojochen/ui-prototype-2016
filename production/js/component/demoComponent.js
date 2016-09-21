@@ -6,30 +6,30 @@ define([
 
     // template
     var head = '<div><p>Hello</p><div ng-transclude></div><div>';
-    var body = '<div>'+
-                       '<button ng-click="vm.onclick()">{{vm.hero.name}}</button>'+
-                       '<input type="text" ng-model="vm.name"></br>'+
-                       '<p>{{vm.name}}</p>'+'</div>';
+    var body = '<div>' +
+        '<button ng-click="vm.onclick()">{{vm.hero.name}}</button>' +
+        '<input type="text" ng-model="vm.name"></br>' +
+        '<p>{{vm.name}}</p>' + '</div>';
 
 
     var component1 = {
-        bindings:{},
+        bindings: {},
         template: head,
-        transclude:true,
+        transclude: true,
         controller: headCtrl,
         controllerAs: 'vm'
     }
     var component2 = {
-        bindings:{
+        bindings: {
             onSayHello: '&',
-            name:'<'
+            name: '<'
         },
-         transclude:true,
+        transclude: true,
         template: body,
         controller: bodyCtrl,
         controllerAs: 'vm'
     }
-    
+
 
     app.component('component1', component1).component('component2', component2);
 
@@ -43,10 +43,10 @@ define([
         vm.hero = {
             name: 'component1'
         };
-        vm.sayHello=function(){
+        vm.sayHello = function() {
             alert('hello');
         }
-        vm.name="";
+        vm.name = "";
     }
 
     function bodyCtrl($http) {
@@ -54,10 +54,11 @@ define([
         vm.hero = {
             name: 'This is body button'
         };
-        vm.onclick=function(){
+        vm.onclick = function() {
             alert('component2');
             vm.onSayHello();
         }
-        vm.name="";
+        vm.name = "";
     }
+    return app;
 });
