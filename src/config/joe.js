@@ -60,7 +60,7 @@ define(function() {
     //form_advanced.html - louis
     require('moment');
     require('daterangepicker');
-    require('../../vendors/ion.rangeSlider/js/ion.rangeSlider.min.js');
+    // require('../../vendors/ion.rangeSlider/js/ion.rangeSlider.min.js');
     require('../../vendors/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js');
     require('../../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js');
     require('../../vendors/jquery-knob/dist/jquery.knob.min.js');

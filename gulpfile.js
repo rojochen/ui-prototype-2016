@@ -192,12 +192,33 @@ gulp.task('build-app', function() {
                 modulesDirectories: ['vendors'],
                 alias: {
                     jquery: 'jquery/dist/jquery.min',
+                    bootstrap:'bootstrap/dist/js/bootstrap.min',
+                    'bootstrap-progressbar':'bootstrap-progressbar/bootstrap-progressbar',
                     angular:'angular/angular',
+                    'angular-route':'angular-route/angular-route.min',
                     moment:'moment/moment',
                     echarts:'echarts/dist/echarts.min',
                     PNotify:'pnotify/dist/pnotify',
                     "datatables.net":'datatables.net-bs/js/dataTables.bootstrap',
-                    daterangepicker:"bootstrap-daterangepicker/daterangepicker"
+                    daterangepicker:"bootstrap-daterangepicker/daterangepicker",
+                    nprogress:'nprogress/nprogress',
+                    'iCheck':'iCheck/icheck.min',
+                    skycons:'skycons/skycons',
+                    'jquery.blockUI':'blockUI/jquery.blockUI',
+                    select2:'select2/dist/js/select2.full.min',
+                    'jquery.tagsinput':'jquery.tagsinput/src/jquery.tagsinput',
+                    parsleyjs:'parsleyjs/dist/parsley.min',
+                    'ion.rangeSlider':'ion.rangeSlider/js/ion.rangeSlider.min',
+                    'jquery-slimscroll':'jquery-slimscroll/jquery.slimscroll.min',
+                    pnotify:'pnotify/dist/pnotify',
+                    sweetalert2:'sweetalert2/dist/sweetalert2',
+                    'bootstrap-switch':'bootstrap-switch/dist/js/bootstrap-switch.min',
+                    'mjolnic-bootstrap-colorpicker':'mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min',
+                    'jquery.inputmask':'jquery.inputmask/dist/min/jquery.inputmask.bundle.min',
+                    'jquery-knob':'jquery-knob/dist/jquery.knob.min',
+                    cropper:'cropper/dist/cropper.min'
+
+
                 },
                 extensions: ['', '.js']
             },

@@ -11,16 +11,16 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
 
 
 
-    require('../../vendors/bootstrap/dist/js/bootstrap.min.js')
+    require('bootstrap')
     // require('../../vendors/fastclick/lib/fastclick.js');
-    require('../../vendors/nprogress/nprogress.js');
+    require('nprogress');
     // require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
-    require('../../vendors/bootstrap-progressbar/bootstrap-progressbar.js');
+    require('bootstrap-progressbar');
     // require('../../vendors/Chart.js/dist/Chart.min.js');
     //require('../../vendors/gauge.js/dist/gauge.min.js');
 
-    require('../../vendors/iCheck/icheck.min.js');
-    require('../../vendors/skycons/skycons.js');
+    require('iCheck');
+    require('skycons');
 
     // require('../../vendors/Flot/jquery.flot.js');
     // require('../../vendors/Flot/jquery.flot.pie.js');
@@ -39,16 +39,16 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
     // require('../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js');
 
 
-    require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
+    require('bootstrap-daterangepicker');
 
     require('../js/helpers/smartresize.js');
     // require('../js/custom.js');
-    global.echarts =  require('../../vendors/echarts/dist/echarts.min.js');
+    global.echarts =  require('echarts');
     require('../../src/config/joe.js');
-    require('../../vendors/angular/angular.min.js');
+    // require('../../vendors/angular/angular.min.js');
     //require("expose?angular!../../vendors/angular/angular.min.js");
-    require('../../vendors/ng-table/dist/ng-table.js');
-    require('../../vendors/angular-route/angular-route.min.js');
+    require('ng-table');
+    require('angular-route');
 
     angular.module('pokemon', ['ngRoute','ngTable']);
  
