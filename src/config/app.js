@@ -47,12 +47,12 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
     require('../../src/config/joe.js');
     // require('../../vendors/angular/angular.min.js');
     //require("expose?angular!../../vendors/angular/angular.min.js");
-    require('ng-table');
+    
     require('angular-route');
     require('../../vendors/angular-datatables/dist/angular-datatables.js');
     require('../../vendors/angular-resource/angular-resource.min.js');
 
-    angular.module('pokemon', ['ngRoute','ngTable','datatables','ngResource']);
+    angular.module('pokemon', ['ngRoute','datatables','ngResource']);
  
     return angular;
 });
