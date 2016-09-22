@@ -25,7 +25,7 @@ define([
         var vm = this;
 
         vm.$onInit = function() {
-            
+
             if (vm.parentCtrl !== 'undefined') {
                 vm.listName = function(item) {
                     vm.parentCtrl.titlename = item;
@@ -38,12 +38,15 @@ define([
             $scope.$destroy();
         });
 
-        $timeout(function(){
-            console.log($element.find('.flat').length);
-            $element.find('div').css('border','solid');
-            
-            
-            
+        $timeout(function() {
+            // console.log($element.find('.flat').length);
+            $element.find('.flat').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            });
+
+
+
         })
 
         vm.$onDestroy = function() {
