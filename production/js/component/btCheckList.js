@@ -1,6 +1,6 @@
 define([
     'btModule',
-], function (btModule) {
+], function(btModule) {
     'use strict';
     var app = angular.module('btModule');
 
@@ -19,26 +19,34 @@ define([
         }
     }
     app.component('btCheckList', btCheckList);
-    btCheckList.$inject = ['$element', '$scope'];
+    btCheckList.$inject = ['$element', '$scope', '$window', '$timeout'];
 
-    function checkList($element, $scope) {
+    function checkList($element, $scope, $window, $timeout) {
         var vm = this;
 
-        vm.$onInit = function () {
-
+        vm.$onInit = function() {
+            
             if (vm.parentCtrl !== 'undefined') {
-                vm.listName = function (item) {
+                vm.listName = function(item) {
                     vm.parentCtrl.titlename = item;
                 }
             }
         }
 
-        $element.on('$destroy', function () {
+        $element.on('$destroy', function() {
             //  alert('hello element');
             $scope.$destroy();
         });
 
-        vm.$onDestroy = function () {
+        $timeout(function(){
+            console.log($element.find('.flat').length);
+            $element.find('div').css('border','solid');
+            
+            
+            
+        })
+
+        vm.$onDestroy = function() {
             //off event 
             $element.off('click');
         };
