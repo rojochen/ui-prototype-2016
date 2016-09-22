@@ -16,17 +16,12 @@ define([
     app.component('btNgTable', btNgTable);
 
     // controller
-    btNgTableCtrl.$inject = ['DTOptionsBuilder', 'DTColumnDefBuilder', '$resource'];
+    btNgTableCtrl.$inject = ['$resource','DTOptionsBuilder', 'DTColumnDefBuilder'];
 
     function btNgTableCtrl($resource, DTOptionsBuilder, DTColumnDefBuilder) {
         var vm = this;
         vm.persons = [];
-        vm.dtOptions = DTOptionsBuilder.newOptions().withPaginationType('full_numbers');
-        vm.dtColumnDefs = [
-            DTColumnDefBuilder.newColumnDef(0),
-            DTColumnDefBuilder.newColumnDef(1).notVisible(),
-            DTColumnDefBuilder.newColumnDef(2).notSortable()
-        ];
+        
         $resource(vm.link).query().$promise.then(function(persons) {
             vm.items = persons;
         });

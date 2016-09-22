@@ -50,8 +50,9 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
     require('ng-table');
     require('angular-route');
     require('../../vendors/angular-datatables/dist/angular-datatables.js');
+    require('../../vendors/angular-resource/angular-resource.min.js');
 
-    angular.module('pokemon', ['ngRoute','ngTable','datatables']);
+    angular.module('pokemon', ['ngRoute','ngTable','datatables','ngResource']);
  
     return angular;
 });
