@@ -8,7 +8,10 @@ define(['btModule'], function (btModule) {
         controllerAs: 'vm',
         transclude: true,
         bindings: {
-            title: '<'
+            title: '<',
+            switchbut: '<',
+            selectbut: '<',
+            closebut: '<'
         }
     };
     app.component('btPortlet', btPortlet);
@@ -18,6 +21,16 @@ define(['btModule'], function (btModule) {
         var vm = this;
 
         vm.$onInit = function(){
+            if(angular.isUndefined(vm.switchbut)){
+                vm.switchbut = true;
+            }
+            if(angular.isUndefined(vm.selectbut)){
+                vm.selectbut = true;
+            }
+            if(angular.isUndefined(vm.closebut)){
+                vm.closebut = true;
+            }
+            
             // Panel toolbox
             $element.on('click','.collapse-link', function () {
                 var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -48,11 +61,7 @@ define(['btModule'], function (btModule) {
 
         
         vm.$onChanges = function(obj){
-            console.log(obj);
-            console.log(vm.title);
-            if(vm.title !== '待辦事項aa'){
-                console.log('sss');
-            }
+            // console.log(obj);
         };
 
         vm.$onDestroy = function(){
