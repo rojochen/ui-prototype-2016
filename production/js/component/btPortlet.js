@@ -8,7 +8,7 @@ define(['btModule'], function (btModule) {
         controllerAs: 'vm',
         transclude: true,
         bindings: {
-            title: '<',
+            titlename: '<',
             switchbtn: '<',
             selectbtn: '<',
             closebtn: '<'
