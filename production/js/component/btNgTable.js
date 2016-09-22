@@ -6,7 +6,7 @@ define([
     // component setting
     var btNgTable = {
             bindings: {
-                items: '<'
+                link: '<'
             },
             templateUrl: '../template/btNgTable.html',
             controller: btNgTableCtrl,
@@ -16,17 +16,20 @@ define([
     app.component('btNgTable', btNgTable);
 
     // controller
-    btNgTableCtrl.$inject = ['DTOptionsBuilder', 'DTColumnBuilder'];
+    btNgTableCtrl.$inject = ['DTOptionsBuilder', 'DTColumnDefBuilder', '$resource'];
 
-    function btNgTableCtrl(DTOptionsBuilder, DTColumnBuilder) {
+    function btNgTableCtrl($resource, DTOptionsBuilder, DTColumnDefBuilder) {
         var vm = this;
-        vm.dtOptions = DTOptionsBuilder.fromSource('../data/ngDataTable.json')
-            .withPaginationType('full_numbers');
-        vm.dtColumns = [
-            DTColumnBuilder.newColumn('id').withTitle('ID'),
-            DTColumnBuilder.newColumn('firstName').withTitle('First name'),
-            DTColumnBuilder.newColumn('lastName').withTitle('Last name').notVisible()
+        vm.persons = [];
+        vm.dtOptions = DTOptionsBuilder.newOptions().withPaginationType('full_numbers');
+        vm.dtColumnDefs = [
+            DTColumnDefBuilder.newColumnDef(0),
+            DTColumnDefBuilder.newColumnDef(1).notVisible(),
+            DTColumnDefBuilder.newColumnDef(2).notSortable()
         ];
+        $resource(vm.link).query().$promise.then(function(persons) {
+            vm.items = persons;
+        });
     }
 
     return app;

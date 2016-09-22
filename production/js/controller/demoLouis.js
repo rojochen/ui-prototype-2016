@@ -6,6 +6,8 @@ define(['btModule'], function(btModule) {
 
     function louisCtrl($http) {
         var vm = this;
+        vm.link = "../data/ngDataTable.json";
+        console.log(vm.link);
         $http.get("../data/ngDataTable.json").success(function(data) {
             vm.items = data;
             // console.log(vm.items);
