@@ -8,10 +8,10 @@ define(['btModule'], function (btModule) {
         controllerAs: 'vm',
         transclude: true,
         bindings: {
-            title: '<',
-            switchbut: '<',
-            selectbut: '<',
-            closebut: '<'
+            titlename: '<',
+            switchbtn: '<',
+            selectbtn: '<',
+            closebtn: '<'
         }
     };
     app.component('btPortlet', btPortlet);
@@ -21,14 +21,14 @@ define(['btModule'], function (btModule) {
         var vm = this;
 
         vm.$onInit = function(){
-            if(angular.isUndefined(vm.switchbut)){
-                vm.switchbut = true;
+            if(angular.isUndefined(vm.switchbtn)){
+                vm.switchbtn = true;
             }
-            if(angular.isUndefined(vm.selectbut)){
-                vm.selectbut = true;
+            if(angular.isUndefined(vm.selectbtn)){
+                vm.selectbtn = true;
             }
-            if(angular.isUndefined(vm.closebut)){
-                vm.closebut = true;
+            if(angular.isUndefined(vm.closebtn)){
+                vm.closebtn = true;
             }
             
             // Panel toolbox

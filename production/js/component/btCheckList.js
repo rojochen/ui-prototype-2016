@@ -28,7 +28,7 @@ define([
 
             if (vm.parentCtrl !== 'undefined') {
                 vm.listName = function (item) {
-                    vm.parentCtrl.title = item;
+                    vm.parentCtrl.titlename = item;
                 }
             }
         }
