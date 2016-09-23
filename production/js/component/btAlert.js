@@ -20,9 +20,25 @@ define(['btModule'], function(btModule) {
         console.log(vm.alertthem);
         switch (vm.alertthem) {
             case 'default':
-                    vm.cssClass="alert-info";
+                vm.cssClass = "alert-default";
                 break;
-            default:
+            case 'primary':
+                vm.cssClass = "alert-primary";
+                break;
+            case 'success':
+                vm.cssClass = "alert-success";
+                break;
+            case 'info':
+                vm.cssClass = "alert-info";
+                break;
+            case 'warning':
+                vm.cssClass = "alert-warning";
+                break;
+            case 'danger':
+                vm.cssClass = "alert-danger";
+                break;
+            case 'dark':
+                vm.cssClass = "alert-dark";
                 break;
         }
     }
