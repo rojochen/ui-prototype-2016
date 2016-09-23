@@ -17,6 +17,14 @@ define(['btModule'], function(btModule) {
 
     function btAlertCtrl() {
         var vm = this;
+        console.log(vm.alertthem);
+        switch (vm.alertthem) {
+            case 'default':
+                    vm.cssClass="alert-info";
+                break;
+            default:
+                break;
+        }
     }
     return app;
 });
