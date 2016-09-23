@@ -21,31 +21,31 @@ define(['btModule'], function(btModule) {
         console.log(vm.panelthem);
         vm.class = vm.panelthem;
         switch (vm.panelthem) {
-            case vm.panelthem:
-                vm.name = "Default";
-                vm.class = 'panel-Default';
+            case 'default':
+                vm.name = "default";
+                vm.class = 'panel-default';
                 break;
-            case vm.panelthem:
+            case 'primary':
                 vm.name = "primary";
                 vm.class = 'panel-primary';
                 break;
-            case vm.panelthem:
+            case 'success':
                 vm.name = "success";
                 vm.class = 'panel-success';
                 break;
-            case vm.panelthem:
+            case 'info':
                 vm.name = "info";
                 vm.class = 'panel-info';
                 break;
-            case vm.panelthem:
+            case 'warning':
                 vm.name = "warning";
                 vm.class = 'panel-warning';
                 break;
-            case vm.panelthem:
+            case 'dark':
                 vm.name = "dark";
                 vm.class = 'panel-dark';
                 break;
-            case vm.panelthem:
+            case 'danger':
                 vm.name = "danger";
                 vm.class = 'panel-danger';
                 break;
