@@ -1,9 +1,17 @@
 define(['btModule'], function(btModule) {
     'use strict';
-    var app = btModule;
-    app.controller('ctrl', function($scope) {
-        $scope.con = '給我angular';
-    });
+    var app = angular.module("btModule");
+    
+    indexCtrl.$inject = ['$http'];
+    function indexCtrl($http){
+        var vm = this;
+        vm.con = 'angular';
+        vm.sayHello = function(){
+            alert('sayHello-ff');
+        };
+    };
+    app.controller('indexCtrl', indexCtrl);
+
     app.controller("tableCtrl", function($scope) {
         $scope.con = "angular";
     });
@@ -28,10 +36,11 @@ define(['btModule'], function(btModule) {
                     var bodyHeight = $BODY.outerHeight(),
                         footerHeight = $BODY.hasClass('footer_fixed') ? -10 : $FOOTER.height(),
                         leftColHeight = $LEFT_COL.eq(1).height() + $SIDEBAR_FOOTER.height(),
-                        contentHeight = bodyHeight < leftColHeight ? leftColHeight : bodyHeight;
+                        // contentHeight = bodyHeight < leftColHeight ? leftColHeight : bodyHeight;
+                        contentHeight = leftColHeight;
 
                     // normalize content
-                    contentHeight -= $NAV_MENU.height() + footerHeight;
+                    // contentHeight -= $NAV_MENU.height() + footerHeight;
 
                     $RIGHT_COL.css('min-height', contentHeight);
                 };
@@ -57,10 +66,12 @@ define(['btModule'], function(btModule) {
                             $SIDEBAR_MENU.find('li ul').slideUp($slideUpTime);
                         }
 
+                        $('.nav .child_menu li').removeClass('active');
+
                         $li.addClass('active');
 
                         $('ul:first', $li).slideDown($slideUpTime, function() {
-                            setContentHeight();
+                            // setContentHeight();
                         });
                     }
                 });

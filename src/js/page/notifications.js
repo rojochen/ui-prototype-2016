@@ -464,114 +464,114 @@ $(document).ready(function() {
 });
 
 // pnotify
-$(document).ready(function() {
-    $('body').on('click', '.pnotify', function() {
-        var PNotify = require("../../../vendors/pnotify/dist/pnotify.js");
-        var pnotifyNum = $('.x_content .pnotify').index(this);
-        var name = $(this).text();
-        var functionName = name + pnotifyNum;
-        console.log(functionName);
-        switch (pnotifyNum) {
-            case 0:
-                new PNotify({
-                    title: 'New Thing',
-                    text: 'Just to let you know, something happened.',
-                    type: 'success',
-                    styling: 'bootstrap3'
-                });
-                break;
-            case 1:
-                new PNotify({
-                    title: 'New Thing',
-                    text: 'Just to let you know, something happened.',
-                    type: 'info',
-                    styling: 'bootstrap3'
-                });
-                break;
-            case 2:
-                new PNotify({
-                    title: 'Regular Notice',
-                    text: 'Check me out! I\'m a notice.',
-                    styling: 'bootstrap3'
-                });
-                break;
-            case 3:
-                new PNotify({
-                    title: 'Oh No!',
-                    text: 'Something terrible happened.',
-                    type: 'error',
-                    styling: 'bootstrap3'
-                });
-                break;
-            case 4:
-                new PNotify({
-                    title: 'Oh No!',
-                    text: 'Something terrible happened.',
-                    type: 'info',
-                    styling: 'bootstrap3',
-                    addclass: 'dark'
-                });
-                break;
-            case 5:
-                new PNotify({
-                    title: 'Sticky Success',
-                    text: 'Sticky success... I\'m not even gonna make a joke.',
-                    type: 'success',
-                    hide: false,
-                    styling: 'bootstrap3'
-                });
-                break;
-            case 6:
-                new PNotify({
-                    title: 'Sticky Info',
-                    text: 'Sticky Info... I\'m not even gonna make a joke.',
-                    type: 'info',
-                    hide: false,
-                    styling: 'bootstrap3'
-                });
-                break;
-            case 7:
-                new PNotify({
-                    title: 'Sticky Warning',
-                    text: 'Sticky Warning... I\'m not even gonna make a joke.',
-                    hide: false,
-                    styling: 'bootstrap3'
-                });
-                break;
-            case 8:
-                new PNotify({
-                    title: 'Sticky Danger',
-                    text: 'Sticky Danger... I\'m not even gonna make a joke.',
-                    type: 'error',
-                    hide: false,
-                    styling: 'bootstrap3'
-                });
-                break;
-            case 9:
-                new PNotify({
-                    title: 'Sticky Success',
-                    text: 'Sticky success... I\'m not even gonna make a joke.',
-                    type: 'info',
-                    hide: false,
-                    styling: 'bootstrap3',
-                    addclass: 'dark'
-                });
-                break;
-            case 10:
-                new PNotify({
-                    title: 'Non-Blocking Notice',
-                    type: 'info',
-                    text: 'When you hover over me I\'ll fade to show the elements underneath. Feel free to click any of them just like I wasn\'t even here.',
-                    nonblock: {
-                        nonblock: true
-                    },
-                    styling: 'bootstrap3',
-                    addclass: 'dark'
-                });
-                break;
-        }
-    });
-});
+// $(document).ready(function() {
+//     $('body').on('click', '.pnotify', function() {
+//         var PNotify = require("../../../vendors/pnotify/dist/pnotify.js");
+//         var pnotifyNum = $('.x_content .pnotify').index(this);
+//         var name = $(this).text();
+//         var functionName = name + pnotifyNum;
+//         console.log(functionName);
+//         switch (pnotifyNum) {
+//             case 0:
+//                 new PNotify({
+//                     title: 'New Thing',
+//                     text: 'Just to let you know, something happened.',
+//                     type: 'success',
+//                     styling: 'bootstrap3'
+//                 });
+//                 break;
+//             case 1:
+//                 new PNotify({
+//                     title: 'New Thing',
+//                     text: 'Just to let you know, something happened.',
+//                     type: 'info',
+//                     styling: 'bootstrap3'
+//                 });
+//                 break;
+//             case 2:
+//                 new PNotify({
+//                     title: 'Regular Notice',
+//                     text: 'Check me out! I\'m a notice.',
+//                     styling: 'bootstrap3'
+//                 });
+//                 break;
+//             case 3:
+//                 new PNotify({
+//                     title: 'Oh No!',
+//                     text: 'Something terrible happened.',
+//                     type: 'error',
+//                     styling: 'bootstrap3'
+//                 });
+//                 break;
+//             case 4:
+//                 new PNotify({
+//                     title: 'Oh No!',
+//                     text: 'Something terrible happened.',
+//                     type: 'info',
+//                     styling: 'bootstrap3',
+//                     addclass: 'dark'
+//                 });
+//                 break;
+//             case 5:
+//                 new PNotify({
+//                     title: 'Sticky Success',
+//                     text: 'Sticky success... I\'m not even gonna make a joke.',
+//                     type: 'success',
+//                     hide: false,
+//                     styling: 'bootstrap3'
+//                 });
+//                 break;
+//             case 6:
+//                 new PNotify({
+//                     title: 'Sticky Info',
+//                     text: 'Sticky Info... I\'m not even gonna make a joke.',
+//                     type: 'info',
+//                     hide: false,
+//                     styling: 'bootstrap3'
+//                 });
+//                 break;
+//             case 7:
+//                 new PNotify({
+//                     title: 'Sticky Warning',
+//                     text: 'Sticky Warning... I\'m not even gonna make a joke.',
+//                     hide: false,
+//                     styling: 'bootstrap3'
+//                 });
+//                 break;
+//             case 8:
+//                 new PNotify({
+//                     title: 'Sticky Danger',
+//                     text: 'Sticky Danger... I\'m not even gonna make a joke.',
+//                     type: 'error',
+//                     hide: false,
+//                     styling: 'bootstrap3'
+//                 });
+//                 break;
+//             case 9:
+//                 new PNotify({
+//                     title: 'Sticky Success',
+//                     text: 'Sticky success... I\'m not even gonna make a joke.',
+//                     type: 'info',
+//                     hide: false,
+//                     styling: 'bootstrap3',
+//                     addclass: 'dark'
+//                 });
+//                 break;
+//             case 10:
+//                 new PNotify({
+//                     title: 'Non-Blocking Notice',
+//                     type: 'info',
+//                     text: 'When you hover over me I\'ll fade to show the elements underneath. Feel free to click any of them just like I wasn\'t even here.',
+//                     nonblock: {
+//                         nonblock: true
+//                     },
+//                     styling: 'bootstrap3',
+//                     addclass: 'dark'
+//                 });
+//                 break;
+//         }
+//     });
+// });
 
 // popover
 $(document).ready(function() {

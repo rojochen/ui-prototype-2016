@@ -31,14 +31,15 @@
       <!-- top navigation -->
       <div class="top_nav">
           <!-- top menu -->
-          <div ng-include="'../template/top-menu.html'"></div>
+          <!--<div ng-include="'../template/top-menu.html'"></div>-->
+          <bt-header></bt-header>
           <!-- /top menu -->
       </div>
       <!-- /top navigation -->
 
       <!-- page content -->
 
-      <div class="right_col" role="main" ng-controller="ctrl">
+      <div class="right_col" role="main">
         <div ng-view></div>
         <!--<hello-world>123</hello-world>-->
         <div class="clearfix"></div>
@@ -743,7 +744,8 @@
     <!-- footer content -->
     <footer>
         <!--  footer -->
-        <div ng-include="'../template/footer.html'"></div>
+        <!--<div ng-include="'../template/footer.html'"></div>-->
+        <bt-footer name="New Prototype - 2017"></bt-footer>
         <!-- /footer -->
     </footer>
     <!-- /footer content -->
@@ -752,7 +754,7 @@
 
 
 
-  <script data-main="../js/main.js" src="../js/require.min.js"></script>
+  <script data-main="../js/main.js" defer async="true" src="../js/require.min.js"></script>
 
 
 

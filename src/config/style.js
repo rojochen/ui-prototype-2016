@@ -23,7 +23,7 @@ require("../../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min
 require("../../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css");
 require('../../vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css');
 require('../../vendors/sweetalert2/dist/sweetalert2.min.css');
-require('../../vendors/ng-table/dist/ng-table.css');
+// require('../../vendors/ng-table/dist/ng-table.css');
 
 
 require('../../src/scss/custom.scss');
