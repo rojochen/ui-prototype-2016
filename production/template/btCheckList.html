@@ -1,7 +1,5 @@
-<div class="">
-    <ul class="to_do" ng-repeat="item in vm.items">
-        <li>
-            <p><input type="checkbox" class="flat" ng-click="vm.listName(item.value)" value="{{item.value}}">{{item.value}}</p>
-        </li>
-    </ul>
-</div>
+<li>
+    <p><input type="checkbox" class="flat" value="{{vm.item.value}}">{{vm.item.value}}</p>
+</li>
+
+<!--ng-click="vm.listName(vm.item.value)"-->

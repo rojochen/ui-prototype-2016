@@ -1,54 +1,58 @@
-define([
-    'btModule',
-], function(btModule) {
+define(['btModule'], function(btModule) {
     'use strict';
     var app = angular.module('btModule');
 
     var btCheckList = {
         bindings: {
-            items: '<'
+            item: '<'
         },
         transclude: true,
         templateUrl: '../template/btCheckList.html',
         controller: checkList,
         controllerAs: 'vm',
         require: {
-            // 'parent': '^component1',
-            //controller: headCtrl
             parentCtrl: '^?btPortlet'
         }
     }
     app.component('btCheckList', btCheckList);
-    btCheckList.$inject = ['$element', '$scope', '$window', '$timeout'];
 
-    function checkList($element, $scope, $window, $timeout) {
+    btCheckList.$inject = ['$element', '$scope'];
+    function checkList($element, $scope) {
         var vm = this;
 
         vm.$onInit = function() {
-
-            if (vm.parentCtrl !== 'undefined') {
-                vm.listName = function(item) {
-                    vm.parentCtrl.titlename = item;
-                }
-            }
-        }
-
-        $element.on('$destroy', function() {
-            //  alert('hello element');
-            $scope.$destroy();
-        });
-
-        $timeout(function() {
-            // console.log($element.find('.flat').length);
             $element.find('.flat').iCheck({
                 checkboxClass: 'icheckbox_flat-green',
                 radioClass: 'iradio_flat-green'
             });
 
 
+            if (vm.parentCtrl !== 'undefined') {
 
-        })
+                $element.on('ifChecked', 'input', function(){
+                    console.log('qq');
+                    console.log(vm.item.value);
+                    // vm.parentCtrl.titlename = item;
+                    // vm.listName(vm.item.value);
+                });
 
+                
+                // vm.listName = function(item) {
+                //     console.log('ww');
+                //     console.log(item);
+                //     vm.parentCtrl.titlename = item;
+                // }
+
+            }
+        }
+
+
+        $element.on('$destroy', function() {
+            //  alert('hello element');
+            $scope.$destroy();
+        });
+
+        
         vm.$onDestroy = function() {
             //off event 
             $element.off('click');
