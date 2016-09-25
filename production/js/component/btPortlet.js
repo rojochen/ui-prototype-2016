@@ -9,6 +9,7 @@ define(['btModule'], function (btModule) {
         transclude: true,
         bindings: {
             titlename: '<',
+            refreshbtn: '<',
             switchbtn: '<',
             selectbtn: '<',
             closebtn: '<'
@@ -21,6 +22,9 @@ define(['btModule'], function (btModule) {
         var vm = this;
 
         vm.$onInit = function(){
+            if(angular.isUndefined(vm.refreshbtn)){
+                vm.refreshbtn = true;
+            }
             if(angular.isUndefined(vm.switchbtn)){
                 vm.switchbtn = true;
             }
