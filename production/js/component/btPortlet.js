@@ -8,6 +8,7 @@ define(['btModule'], function (btModule) {
         controllerAs: 'vm',
         transclude: true,
         bindings: {
+            fontclass: '@',
             fabarsbtn: '<',
             titlename: '<',
             refreshbtn: '<',
