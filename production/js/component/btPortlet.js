@@ -8,6 +8,7 @@ define(['btModule'], function (btModule) {
         controllerAs: 'vm',
         transclude: true,
         bindings: {
+            fabarsbtn: '<',
             titlename: '<',
             refreshbtn: '<',
             switchbtn: '<',
@@ -22,6 +23,9 @@ define(['btModule'], function (btModule) {
         var vm = this;
 
         vm.$onInit = function(){
+            if(angular.isUndefined(vm.fabarsbtn)){
+                vm.fabarsbtn = false;
+            }
             if(angular.isUndefined(vm.refreshbtn)){
                 vm.refreshbtn = true;
             }
