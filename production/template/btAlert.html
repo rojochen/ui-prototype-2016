@@ -1,5 +1,7 @@
-<div class="alert  alert-dismissible fade in" role="alert" ng-class="vm.cssClass">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                    </button>
+<div class="alert  alert-dismissible fade in" role="alert" ng-class="vm.cssClass" ng-show="vm.alertshow">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
     <strong>通知！</strong> 自102/04月份起，開放實體表單頁面用戶使用線上「表單頁面瀏覽」功能，不論是查詢或下載明細表單頁面，皆不需額外申請。
+</div>
+<div>
+    alertthem:{{vm.alertthem}},  alertshow:{{vm.alertshow}}  ,alerthidetime:{{vm.alerthidetime}}
 </div>

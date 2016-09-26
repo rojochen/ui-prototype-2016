@@ -1,9 +1,11 @@
-define(['btModule'], function(btModule) {
+define(['btModule'], function (btModule) {
     'use strict';
     var app = angular.module('btModule');
     var btAlert = {
         bindings: {
-            alertthem: '<'
+            alertthem: '<',
+            alertshow: '<',
+            alerthidetime: '<'
         },
         templateUrl: '../template/btAlert.html',
         controller: btAlertCtrl,
@@ -14,10 +16,29 @@ define(['btModule'], function(btModule) {
     }
 
     app.component('btAlert', btAlert);
+    btAlertCtrl.$inject = ['$timeout'];
 
-    function btAlertCtrl() {
+    function btAlertCtrl($timeout) {
         var vm = this;
-        console.log(vm.alertthem);
+
+
+        vm.$onInit = function () {
+            if (angular.isUndefined(vm.alertthem)) {
+                vm.cssClass = 'alert-default';
+            }
+            if (angular.isUndefined(vm.alertshow)) {
+                vm.alertshow = true;
+            }
+
+            if (!angular.isUndefined(vm.alerthidetime) && vm.alertshow == false) {
+                vm.alertshow = true;
+                $timeout(function () {
+                    vm.alertshow = false;
+                }, vm.alerthidetime);
+            }
+
+        }
+
         switch (vm.alertthem) {
             case 'default':
                 vm.cssClass = "alert-default";
