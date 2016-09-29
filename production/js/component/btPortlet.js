@@ -122,6 +122,10 @@ define(['btModule'], function (btModule) {
             }
 
             if(angular.isUndefined(vm.refreshstyle) || vm.refreshstyle === ''){
+                // vm.blockUIStyleUrl = vm.blockUIStyle.mask;
+                vm.blockUIStyleUrl = vm.blockUIStyle.circles;
+            }
+            if(vm.refreshstyle === 'mask'){
                 vm.blockUIStyleUrl = vm.blockUIStyle.mask;
             }
             if(vm.refreshstyle === 'circles'){

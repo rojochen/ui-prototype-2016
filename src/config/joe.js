@@ -2,7 +2,7 @@ define(function() {
 
     //blockUI.html
     require('../../vendors/blockUI/jquery.blockUI.js');
-    require('../js/page/blockUI.js'); 
+    // require('../js/page/blockUI.js'); 
 
 
     //form.html
