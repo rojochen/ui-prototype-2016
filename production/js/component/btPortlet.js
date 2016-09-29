@@ -11,6 +11,7 @@ define(['btModule'], function (btModule) {
             fontclass: '@',
             fabarsbtn: '<',
             titlename: '<',
+            refreshstyle: '<',
             refreshbtn: '<',
             switchbtn: '<',
             selectbtn: '<',
@@ -24,9 +25,12 @@ define(['btModule'], function (btModule) {
         var vm = this;
 
         vm.$onInit = function(){
+<<<<<<< HEAD
             if(angular.isUndefined(vm.fabarsbtn)){
                 vm.fabarsbtn = false;
             }
+=======
+>>>>>>> 1fc340440efe7ae811f5b9b3864fb3398db578bc
             if(angular.isUndefined(vm.refreshbtn)){
                 vm.refreshbtn = true;
             }
@@ -61,7 +65,103 @@ define(['btModule'], function (btModule) {
                 var $BOX_PANEL = $element.find(this).closest('.x_panel');
                 $element.remove();
             });
-            // /Panel toolbox
+            // Panel toolbox
+
+            // blockUI
+            var isBlock;
+            vm.blockUIStyle = {
+                mask: { message: null },
+                circles: { 
+                    message: '<img src="../images/default.svg" width="60%"/>',
+                    centerY: false,
+                    overlayCSS: { 
+                        backgroundColor: '#ccc',
+                        opacity:0.2
+                    },
+                    css:{
+                        border: 'none',
+                        top: '15%',
+                        background: 'transparent' 
+                    } 
+                },
+                battery: {
+                  message: '<img src="../images/battery.svg" width="100px"/>',
+                  centerY: false,
+                  overlayCSS: { 
+                        backgroundColor: '#ccc',
+                        opacity:0.2
+                  },
+                  css:{
+                        border: 'none',
+                        top: '30%',
+                        background: 'transparent' 
+                    }
+                },
+                ball: {
+                  message: '<img src="../images/ball.svg" width="100px"/>',
+                  centerY: false,
+                  overlayCSS: { 
+                        backgroundColor: '#ccc',
+                        opacity:0.2
+                  },
+                  css:{
+                        border: 'none',
+                        top: '30%',
+                        background: 'transparent' 
+                    }
+                },
+                textPrompt: { 
+                    message: '<h3><li class="fa fa-clock-o"></li> Please Ｗait...</h3>',
+                    css:{
+                        border: 'none', 
+                        padding: '15px', 
+                        backgroundColor: '#000', 
+                        '-webkit-border-radius': '10px', 
+                        '-moz-border-radius': '10px', 
+                        opacity: .5, 
+                        color: '#fff' 
+                    }
+                }
+            }
+
+            if(angular.isUndefined(vm.refreshstyle) || vm.refreshstyle === ''){
+                vm.blockUIStyleUrl = vm.blockUIStyle.battery;
+            }
+            if(vm.refreshstyle === 'circles'){
+                vm.blockUIStyleUrl = vm.blockUIStyle.circles;
+            }
+            if(vm.refreshstyle === 'battery'){
+                vm.blockUIStyleUrl = vm.blockUIStyle.battery;
+            }
+            if(vm.refreshstyle === 'ball'){
+                vm.blockUIStyleUrl = vm.blockUIStyle.ball;
+            }
+            if(vm.refreshstyle === 'textPrompt'){
+                vm.blockUIStyleUrl = vm.blockUIStyle.textPrompt;
+            }
+
+            $element.on('click','.refresh-link', function(){
+                // console.log(vm.refreshstyle);
+                var _this = $(this).parents('.x_panel').find('.x_content'),
+                    unblock = function(){
+                        _this.unblock();
+                    };
+
+                if(angular.isUndefined(isBlock)){
+                    isBlock = true;
+                }else{
+                    isBlock = !isBlock;
+                }
+                // console.log(isBlock);
+
+                if(isBlock === true){
+                    _this.block(vm.blockUIStyleUrl);
+                }else{
+                    unblock();
+                }
+                // setTimeout(unblock, 2000);   // 開關改為isBlock布林子控制
+            })
+            // blockUI
         };
 
         $element.on('$destroy', function () {
