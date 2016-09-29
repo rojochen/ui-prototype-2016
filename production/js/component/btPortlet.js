@@ -70,40 +70,40 @@ define(['btModule'], function (btModule) {
                 mask: { message: null },
                 circles: { 
                     message: '<img src="../images/default.svg" width="60%"/>',
-                    centerY: false,
+                    // centerY: false,
                     overlayCSS: { 
                         backgroundColor: '#ccc',
                         opacity:0.2
                     },
                     css:{
                         border: 'none',
-                        top: '15%',
+                        // top: '15%',
                         background: 'transparent' 
                     } 
                 },
                 battery: {
                   message: '<img src="../images/battery.svg" width="100px"/>',
-                  centerY: false,
+                //   centerY: false,
                   overlayCSS: { 
                         backgroundColor: '#ccc',
                         opacity:0.2
                   },
                   css:{
                         border: 'none',
-                        top: '30%',
+                        // top: '30%',
                         background: 'transparent' 
                     }
                 },
                 ball: {
                   message: '<img src="../images/ball.svg" width="100px"/>',
-                  centerY: false,
+                //   centerY: false,
                   overlayCSS: { 
                         backgroundColor: '#ccc',
                         opacity:0.2
                   },
                   css:{
                         border: 'none',
-                        top: '30%',
+                        // top: '30%',
                         background: 'transparent' 
                     }
                 },
@@ -122,7 +122,10 @@ define(['btModule'], function (btModule) {
             }
 
             if(angular.isUndefined(vm.refreshstyle) || vm.refreshstyle === ''){
-                vm.blockUIStyleUrl = vm.blockUIStyle.battery;
+                vm.blockUIStyleUrl = vm.blockUIStyle.mask;
+            }
+            if(vm.refreshstyle === 'mask'){
+                vm.blockUIStyleUrl = vm.blockUIStyle.mask;
             }
             if(vm.refreshstyle === 'circles'){
                 vm.blockUIStyleUrl = vm.blockUIStyle.circles;

@@ -2,7 +2,7 @@ define(function() {
 
     //blockUI.html
     require('../../vendors/blockUI/jquery.blockUI.js');
-    require('../js/page/blockUI.js'); 
+    // require('../js/page/blockUI.js'); 
 
 
     //form.html
@@ -69,7 +69,7 @@ define(function() {
 
 
     //echarts.html
-    require('../js/page/echarts.js');
+    // require('../js/page/echarts.js');
     // require('../js/page/echarts2.js');
 
 
