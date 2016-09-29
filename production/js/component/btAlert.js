@@ -23,6 +23,7 @@ define(['btModule'], function (btModule) {
 
 
         vm.$onInit = function () {
+            
             if (angular.isUndefined(vm.alertthem)) {
                 vm.cssClass = 'alert-default';
             }
