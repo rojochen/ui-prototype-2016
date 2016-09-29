@@ -10,6 +10,7 @@ define(['btModule'], function (btModule) {
         templateUrl: '../template/btAlert.html',
         controller: btAlertCtrl,
         controllerAs: 'vm',
+        transclude: true,
         require: {
 
         }
