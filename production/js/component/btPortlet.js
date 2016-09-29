@@ -8,6 +8,8 @@ define(['btModule'], function (btModule) {
         controllerAs: 'vm',
         transclude: true,
         bindings: {
+            fontclass: '@',
+            fabarsbtn: '<',
             titlename: '<',
             refreshstyle: '<',
             refreshbtn: '<',
@@ -23,6 +25,12 @@ define(['btModule'], function (btModule) {
         var vm = this;
 
         vm.$onInit = function(){
+<<<<<<< HEAD
+            if(angular.isUndefined(vm.fabarsbtn)){
+                vm.fabarsbtn = false;
+            }
+=======
+>>>>>>> 1fc340440efe7ae811f5b9b3864fb3398db578bc
             if(angular.isUndefined(vm.refreshbtn)){
                 vm.refreshbtn = true;
             }
