@@ -69,7 +69,7 @@ define(function() {
 
 
     //echarts.html
-    require('../js/page/echarts.js');
+    // require('../js/page/echarts.js');
     // require('../js/page/echarts2.js');
 
 
