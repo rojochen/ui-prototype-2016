@@ -89,7 +89,8 @@
     "Promise.prototype.finally": "https://github.com/matthew-andrews/Promise.prototype.finally.git",
     "jquery-slimscroll": "^1.3.8",
     "ng-table": "^1.0.0",
-    "angular-datatables": "^0.5.5"
+    "angular-datatables": "^0.5.5",
+    "promise-finally": "*"
   },
   "resolutions": {
     "jquery": "^2.2.3",
