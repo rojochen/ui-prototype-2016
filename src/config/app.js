@@ -1,61 +1,69 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
-define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,PNotify) {
-    console.log(angular);
-    
-    var $ = jquery;
-    global.jQuery = $;
-    global.$ = $;   
+define(['jquery', 'angular', 'PNotify'], function (jquery, angular, PNotify) {
+	console.log(angular);
 
-    global.moment= moment;
-    global.PNotify=PNotify; 
-
-
-
-    require('bootstrap')
-    // require('../../vendors/fastclick/lib/fastclick.js');
-    require('nprogress');
-    // require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
-    require('bootstrap-progressbar');
-    // require('../../vendors/Chart.js/dist/Chart.min.js');
-    //require('../../vendors/gauge.js/dist/gauge.min.js');
-
-    require('iCheck');
-    require('skycons');
-
-    // require('../../vendors/Flot/jquery.flot.js');
-    // require('../../vendors/Flot/jquery.flot.pie.js');
-    // require('../../vendors/Flot/jquery.flot.time.js');
-    // require('../../vendors/Flot/jquery.flot.stack.js');
-    // require('../../vendors/Flot/jquery.flot.resize.js');
-
-    // require('../../vendors/flot.orderbars/js/jquery.flot.orderBars.js');
-    // require('../../vendors/flot-spline/js/jquery.flot.spline.min.js');
-    // require('../../vendors/flot.curvedlines/curvedLines.js');
-
-    // require('../../vendors/DateJS/build/date.js');
-
-    // require('../../vendors/jqvmap/dist/jquery.vmap.js');
-    // require('../../vendors/jqvmap/dist/maps/jquery.vmap.world.js');
-    // require('../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js');
+	var $ = jquery;
+	global.jQuery = $;
+	global.$ = $;
+	require('../../production/js/datepicker/daterangepicker.js');
+	moment = require('../../production/js/moment/moment.min.js');
+	global.moment = moment;
+	global.PNotify = PNotify;
 
 
-    require('bootstrap-daterangepicker');
 
-    require('../js/helpers/smartresize.js');
-    // require('../js/custom.js');
-    global.echarts =  require('echarts');
-    require('../../src/config/joe.js');
-    // require('../../vendors/angular/angular.min.js');
-    //require("expose?angular!../../vendors/angular/angular.min.js");
-    
-    require('angular-route');
-    require('../../vendors/angular-datatables/dist/angular-datatables.js');
-    require('../../vendors/angular-resource/angular-resource.min.js');
+	require('bootstrap')
 
-    angular.module('pokemon', ['ngRoute','datatables','ngResource']);
- 
-    return angular;
+	require('nprogress');
+
+	require('bootstrap-progressbar');
+
+
+	require('iCheck');
+	require('skycons');
+	// require('../../vendors/fastclick/lib/fastclick.js');
+	// require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
+	// require('bootstrap-daterangepicker');
+	// require('../../vendors/Chart.js/dist/Chart.min.js');
+	//require('../../vendors/gauge.js/dist/gauge.min.js');
+	// require('../../vendors/Flot/jquery.flot.js');
+	// require('../../vendors/Flot/jquery.flot.pie.js');
+	// require('../../vendors/Flot/jquery.flot.time.js');
+	// require('../../vendors/Flot/jquery.flot.stack.js');
+	// require('../../vendors/Flot/jquery.flot.resize.js');
+
+	// require('../../vendors/flot.orderbars/js/jquery.flot.orderBars.js');
+	// require('../../vendors/flot-spline/js/jquery.flot.spline.min.js');
+	// require('../../vendors/flot.curvedlines/curvedLines.js');
+
+	// require('../../vendors/DateJS/build/date.js');
+
+	// require('../../vendors/jqvmap/dist/jquery.vmap.js');
+	// require('../../vendors/jqvmap/dist/maps/jquery.vmap.world.js');
+	// require('../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js');
+
+	// require('../../vendors/angular/angular.min.js');
+	//require("expose?angular!../../vendors/angular/angular.min.js");
+	// require('../js/custom.js');
+
+
+
+	require('../js/helpers/smartresize.js');
+
+	global.echarts = require('echarts');
+	require('../../src/config/joe.js');
+
+
+	require('angular-route');
+	require('../../vendors/angular-datatables/dist/angular-datatables.js');
+	require('../../vendors/angular-resource/angular-resource.min.js');
+
+	angular.module('pokemon', ['ngRoute', 'datatables', 'ngResource']);
+
+	return angular;
 });
+
+
 // require(['../../vendors/jquery/dist/jquery.min.js'], function(jquery) {
 //    require('../../vendors/bootstrap/dist/js/bootstrap.min.js')
 //         // require('../../vendors/fastclick/lib/fastclick.js');

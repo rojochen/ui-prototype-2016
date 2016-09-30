@@ -7,7 +7,7 @@ define(function() {
 
     //form.html
     // require('../../production/js/moment/moment.min.js');  //沒看出差異 先用原生的moment.js
-    require('../../vendors/moment/moment.js');
+    // require('../../vendors/moment/moment.js');
     // require('../../production/js/datepicker/daterangepicker.js');
     require('../../vendors/select2/dist/js/select2.full.min.js');
     require('../../vendors/jquery.tagsinput/src/jquery.tagsinput.js');
@@ -17,7 +17,7 @@ define(function() {
 
     //form_layout.html
     // require('../../production/js/moment/moment.min.js');  //沒看出差異 先用原生的moment.js
-    require('../../vendors/moment/moment.js');
+    // require('../../vendors/moment/moment.js');
     // require('../../production/js/datepicker/daterangepicker.js');
     require('../../vendors/select2/dist/js/select2.full.min.js'); 
     require('../../vendors/jquery.tagsinput/src/jquery.tagsinput.js'); 
@@ -58,8 +58,8 @@ define(function() {
         
 
     //form_advanced.html - louis
-    require('moment');
-    require('daterangepicker');
+    // require('moment');
+    // require('daterangepicker');
     // require('../../vendors/ion.rangeSlider/js/ion.rangeSlider.min.js');
     require('../../vendors/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js');
     require('../../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js');
