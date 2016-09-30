@@ -22,7 +22,7 @@ var package = JSON.parse(fs.readFileSync('package.json'));
 
 
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
     return gulp.src([
             'src/js/helpers/*.js',
             'src/js/*.js',
@@ -39,7 +39,7 @@ gulp.task('scripts', function() {
 
 // TODO: Maybe we can simplify how sass compile the minify and unminify version
 
-var compileSASS = function(filename, options) {
+var compileSASS = function (filename, options) {
 
     return sass('src/scss/*.scss', options)
         .pipe(autoprefixer('last 2 versions', '> 5%'))
@@ -48,19 +48,19 @@ var compileSASS = function(filename, options) {
         .pipe(browserSync.stream());
 };
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     return compileSASS('custom.css', {});
 });
 
 
-gulp.task('sass-minify', function() {
+gulp.task('sass-minify', function () {
     return compileSASS('custom.min.css', {
         style: 'compressed'
     });
 
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
             baseDir: './'
@@ -70,7 +70,7 @@ gulp.task('browser-sync', function() {
 });
 
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     // Watch .html files
     gulp.watch('production/demo/*.html', browserSync.reload);
     // Watch .js files
@@ -105,7 +105,7 @@ plugins.push(new webpack.ProvidePlugin({
 }));
 
 
-var getStyleConfig = function() {
+var getStyleConfig = function () {
     plugins = [];
     return {
         devtool: 'eval',
@@ -129,7 +129,7 @@ var getStyleConfig = function() {
 };
 //bulid css 
 
-gulp.task('build-style', function() {
+gulp.task('build-style', function () {
     var config = getStyleConfig();
     config.plugins.push(new ExtractTextPlugin("style.css"));
     return gulp.src('src/config/style.js')
@@ -137,14 +137,14 @@ gulp.task('build-style', function() {
         .pipe(webpackStream(config))
         .pipe(gulp.dest('production/assets/css/'));
 });
-gulp.task('watch-css', function() {
+gulp.task('watch-css', function () {
     // Watch .html files
     // Watch .scss files
     gulp.watch('src/scss/**.scss', ['build-custom-style']);
 });
 //end css build
 var jsDist = 'production/assets/js/';
-gulp.task('build-vendors', function() {
+gulp.task('build-vendors', function () {
     plugins.push(new webpack.optimize.UglifyJsPlugin({
         compress: {
             warnings: false
@@ -172,7 +172,7 @@ gulp.task('build-vendors', function() {
         .pipe(gulp.dest(jsDist));
 });
 
-gulp.task('build-app', function() {
+gulp.task('build-app', function () {
 
     plugins.push(new webpack.optimize.DedupePlugin());
     return gulp.src('src/config/app.js')
@@ -192,29 +192,31 @@ gulp.task('build-app', function() {
                 modulesDirectories: ['vendors'],
                 alias: {
                     jquery: 'jquery/dist/jquery.min',
-                    bootstrap:'bootstrap/dist/js/bootstrap.min',
-                    'bootstrap-progressbar':'bootstrap-progressbar/bootstrap-progressbar',
-                    angular:'angular/angular',
-                    'angular-route':'angular-route/angular-route.min',
-                    echarts:'echarts/dist/echarts.min',
-                    PNotify:'pnotify/dist/pnotify',
-                    "datatables.net":'datatables.net-bs/js/dataTables.bootstrap',
-                    nprogress:'nprogress/nprogress',
-                    'iCheck':'iCheck/icheck.min',
-                    skycons:'skycons/skycons',
-                    'jquery.blockUI':'blockUI/jquery.blockUI',
-                    select2:'select2/dist/js/select2.full.min',
-                    'jquery.tagsinput':'jquery.tagsinput/src/jquery.tagsinput',
-                    parsleyjs:'parsleyjs/dist/parsley.min',
-                    'ion.rangeSlider':'ion.rangeSlider/js/ion.rangeSlider.min',
-                    'jquery-slimscroll':'jquery-slimscroll/jquery.slimscroll.min',
-                    pnotify:'pnotify/dist/pnotify',
-                    sweetalert2:'sweetalert2/dist/sweetalert2',
-                    'bootstrap-switch':'bootstrap-switch/dist/js/bootstrap-switch.min',
-                    'mjolnic-bootstrap-colorpicker':'mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min',
-                    'jquery.inputmask':'jquery.inputmask/dist/min/jquery.inputmask.bundle.min',
-                    'jquery-knob':'jquery-knob/dist/jquery.knob.min',
-                    cropper:'cropper/dist/cropper.min'
+                    bootstrap: 'bootstrap/dist/js/bootstrap.min',
+                    'bootstrap-progressbar': 'bootstrap-progressbar/bootstrap-progressbar',
+                    angular: 'angular/angular',
+                    'angular-route': 'angular-route/angular-route.min',
+                    moment: 'moment/moment',
+                    echarts: 'echarts/dist/echarts.min',
+                    PNotify: 'pnotify/dist/pnotify',
+                    "datatables.net": 'datatables.net-bs/js/dataTables.bootstrap',
+                    daterangepicker: "bootstrap-daterangepicker/daterangepicker",
+                    nprogress: 'nprogress/nprogress',
+                    'iCheck': 'iCheck/icheck.min',
+                    skycons: 'skycons/skycons',
+                    'jquery.blockUI': 'blockUI/jquery.blockUI',
+                    select2: 'select2/dist/js/select2.full.min',
+                    'jquery.tagsinput': 'jquery.tagsinput/src/jquery.tagsinput',
+                    parsleyjs: 'parsleyjs/dist/parsley.min',
+                    'ion.rangeSlider': 'ion.rangeSlider/js/ion.rangeSlider.min',
+                    'jquery-slimscroll': 'jquery-slimscroll/jquery.slimscroll.min',
+                    pnotify: 'pnotify/dist/pnotify',
+                    sweetalert2: 'sweetalert2/dist/sweetalert2',
+                    'bootstrap-switch': 'bootstrap-switch/dist/js/bootstrap-switch.min',
+                    'mjolnic-bootstrap-colorpicker': 'mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min',
+                    'jquery.inputmask': 'jquery.inputmask/dist/min/jquery.inputmask.bundle.min',
+                    'jquery-knob': 'jquery-knob/dist/jquery.knob.min',
+                    cropper: 'cropper/dist/cropper.min'
                 },
                 extensions: ['', '.js']
             },
@@ -233,7 +235,7 @@ gulp.task('build-app', function() {
 
 });
 // war
-gulp.task('build-war', function() {
+gulp.task('build-war', function () {
     gulp.src(["./production/**"])
         .pipe(war({
             welcome: 'index.html',
@@ -245,7 +247,7 @@ gulp.task('build-war', function() {
 });
 
 gulp.task('build-all', ['build-app', 'build-style']);
-gulp.task('joe', function() {
+gulp.task('joe', function () {
     return gulp.src('src/config/joe.js')
         .pipe(named())
         .pipe(webpackStream({

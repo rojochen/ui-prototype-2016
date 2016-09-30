@@ -1,7 +1,6 @@
 require("../../vendors/bootstrap/dist/css/bootstrap.min.css");
 require("../../vendors/font-awesome/scss/font-awesome.scss");
 require("../../vendors/nprogress/nprogress.css");
-
 require("../../vendors/iCheck/skins/flat/green.css");
 require("../../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css");
 require("../../vendors/google-code-prettify/bin/prettify.min.css");

@@ -1,26 +1,29 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
-define(['jquery', 'angular', 'PNotify'], function (jquery, angular, PNotify) {
+define(['jquery', 'bootstrap', 'angular', 'PNotify','moment','daterangepicker'], function (jquery, bootstrap, angular, PNotify,moment,daterangepicker) {
 	console.log(angular);
 
 	var $ = jquery;
 	global.jQuery = $;
 	global.$ = $;
-	require('../../production/js/datepicker/daterangepicker.js');
-	moment = require('../../production/js/moment/moment.min.js');
 	global.moment = moment;
 	global.PNotify = PNotify;
 
 
 
-	require('bootstrap')
-
+	// require('bootstrap')
 	require('nprogress');
-
 	require('bootstrap-progressbar');
-
-
 	require('iCheck');
 	require('skycons');
+	require('../js/helpers/smartresize.js');
+	global.echarts = require('echarts');
+	require('../../src/config/joe.js');
+	require('angular-route');
+	require('../../vendors/angular-datatables/dist/angular-datatables.js');
+	require('../../vendors/angular-resource/angular-resource.min.js');
+	angular.module('pokemon', ['ngRoute', 'datatables', 'ngResource']);
+
+	return angular;
 	// require('../../vendors/fastclick/lib/fastclick.js');
 	// require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
 	// require('bootstrap-daterangepicker');
@@ -46,21 +49,6 @@ define(['jquery', 'angular', 'PNotify'], function (jquery, angular, PNotify) {
 	//require("expose?angular!../../vendors/angular/angular.min.js");
 	// require('../js/custom.js');
 
-
-
-	require('../js/helpers/smartresize.js');
-
-	global.echarts = require('echarts');
-	require('../../src/config/joe.js');
-
-
-	require('angular-route');
-	require('../../vendors/angular-datatables/dist/angular-datatables.js');
-	require('../../vendors/angular-resource/angular-resource.min.js');
-
-	angular.module('pokemon', ['ngRoute', 'datatables', 'ngResource']);
-
-	return angular;
 });
 
 
