@@ -1,4 +1,4 @@
-define(['btModule'], function(btModule) {
+define(['btModule'], function (btModule) {
     'use strict';
 
     var app = angular.module("btModule");
@@ -16,38 +16,38 @@ define(['btModule'], function(btModule) {
     app.controller('louisCtrl', louisCtrl);
 
     // switch
-    app.controller('switch', ['$scope', '$timeout', function($scope, $timeout) {
-        $timeout(function() {
-            $(document).ready(function() {
+    app.controller('switch', ['$scope', '$timeout', function ($scope, $timeout) {
+        $timeout(function () {
+            $(document).ready(function () {
                 $("[name='my-checkbox']").bootstrapSwitch();
             });
-        });
+        },100);
     }]);
     // 表單元件
-    app.controller('formAdvanced', ['$scope', '$timeout', function($scope, $timeout) {
-        $timeout(function() {
+    app.controller('formAdvanced', ['$scope', '$timeout', function ($scope, $timeout) {
+        $timeout(function () {
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 console.log(moment);
                 // knob
                 $(".knobColor1").knob({
                     'width': 100,
                     'height': 120,
                     'fgColor': '#26B99A',
-                    change: function(value) {
+                    change: function (value) {
                         //console.log("change : " + value);
                     },
-                    release: function(value) {
+                    release: function (value) {
                         //console.log(this.$.attr('value'));
                         console.log("release : " + value);
                     },
-                    cancel: function() {
+                    cancel: function () {
                         console.log("cancel : ", this);
                     },
                     /*format : function (value) {
                      return value + '%';
                      },*/
-                    draw: function() {
+                    draw: function () {
 
                         // "tron" case
                         if (this.$.data('skin') == 'tron') {
@@ -88,20 +88,20 @@ define(['btModule'], function(btModule) {
                     'width': 100,
                     'height': 120,
                     'fgColor': '#34495E',
-                    change: function(value) {
+                    change: function (value) {
                         //console.log("change : " + value);
                     },
-                    release: function(value) {
+                    release: function (value) {
                         //console.log(this.$.attr('value'));
                         console.log("release : " + value);
                     },
-                    cancel: function() {
+                    cancel: function () {
                         console.log("cancel : ", this);
                     },
                     /*format : function (value) {
                      return value + '%';
                      },*/
-                    draw: function() {
+                    draw: function () {
 
                         // "tron" case
                         if (this.$.data('skin') == 'tron') {
@@ -143,7 +143,7 @@ define(['btModule'], function(btModule) {
                 $(":input").inputmask();
 
                 //  bootstrap-daterangepicker
-                var cb = function(start, end, label) {
+                var cb = function (start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
                     $('#reportrange_right span').html(start.format('MM DD, YYYY') + ' - ' + end.format('MM DD, YYYY'));
                 };
@@ -190,32 +190,32 @@ define(['btModule'], function(btModule) {
 
                 $('#reportrange_right').daterangepicker(optionSet1, cb);
 
-                $('#reportrange_right').on('show.daterangepicker', function() {
+                $('#reportrange_right').on('show.daterangepicker', function () {
                     console.log("show event fired");
                 });
-                $('#reportrange_right').on('hide.daterangepicker', function() {
+                $('#reportrange_right').on('hide.daterangepicker', function () {
                     console.log("hide event fired");
                 });
-                $('#reportrange_right').on('apply.daterangepicker', function(ev, picker) {
+                $('#reportrange_right').on('apply.daterangepicker', function (ev, picker) {
                     console.log("apply event fired, start/end dates are " + picker.startDate.format('MM DD, YYYY') + " to " + picker.endDate.format('MM DD, YYYY'));
                 });
-                $('#reportrange_right').on('cancel.daterangepicker', function(ev, picker) {
+                $('#reportrange_right').on('cancel.daterangepicker', function (ev, picker) {
                     console.log("cancel event fired");
                 });
 
-                $('#options1').click(function() {
+                $('#options1').click(function () {
                     $('#reportrange_right').data('daterangepicker').setOptions(optionSet1, cb);
                 });
 
-                $('#options2').click(function() {
+                $('#options2').click(function () {
                     $('#reportrange_right').data('daterangepicker').setOptions(optionSet2, cb);
                 });
 
-                $('#destroy').click(function() {
+                $('#destroy').click(function () {
                     $('#reportrange_right').data('daterangepicker').remove();
                 });
                 // ---------------------------------
-                var cb = function(start, end, label) {
+                var cb = function (start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
                     $('#reportrange span').html(start.format('MM DD, YYYY') + ' - ' + end.format('MM DD, YYYY'));
                 };
@@ -260,62 +260,62 @@ define(['btModule'], function(btModule) {
                 };
                 $('#reportrange span').html(moment().subtract(29, 'days').format('MM DD, YYYY') + ' - ' + moment().format('MM DD, YYYY'));
                 $('#reportrange').daterangepicker(optionSet1, cb);
-                $('#reportrange').on('show.daterangepicker', function() {
+                $('#reportrange').on('show.daterangepicker', function () {
                     console.log("show event fired");
                 });
-                $('#reportrange').on('hide.daterangepicker', function() {
+                $('#reportrange').on('hide.daterangepicker', function () {
                     console.log("hide event fired");
                 });
-                $('#reportrange').on('apply.daterangepicker', function(ev, picker) {
+                $('#reportrange').on('apply.daterangepicker', function (ev, picker) {
                     console.log("apply event fired, start/end dates are " + picker.startDate.format('MM DD, YYYY') + " to " + picker.endDate.format('MM DD, YYYY'));
                 });
-                $('#reportrange').on('cancel.daterangepicker', function(ev, picker) {
+                $('#reportrange').on('cancel.daterangepicker', function (ev, picker) {
                     console.log("cancel event fired");
                 });
-                $('#options1').click(function() {
+                $('#options1').click(function () {
                     $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
                 });
-                $('#options2').click(function() {
+                $('#options2').click(function () {
                     $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
                 });
-                $('#destroy').click(function() {
+                $('#destroy').click(function () {
                     $('#reportrange').data('daterangepicker').remove();
                 });
                 // ---------------------------------
                 $('#single_cal1').daterangepicker({
                     singleDatePicker: true,
                     calender_style: "picker_1"
-                }, function(start, end, label) {
+                }, function (start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
                 });
                 $('#single_cal2').daterangepicker({
                     singleDatePicker: true,
                     calender_style: "picker_2"
-                }, function(start, end, label) {
+                }, function (start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
                 });
                 $('#single_cal3').daterangepicker({
                     singleDatePicker: true,
                     calender_style: "picker_3"
-                }, function(start, end, label) {
+                }, function (start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
                 });
                 $('#single_cal4').daterangepicker({
                     singleDatePicker: true,
                     calender_style: "picker_4"
-                }, function(start, end, label) {
+                }, function (start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
                 });
-                $('#reservation').daterangepicker(null, function(start, end, label) {
+                $('#reservation').daterangepicker(null, function (start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
                 });
             });
-        });
+        }),100;
     }]);
     // 進階圖表
-    app.controller('echarts2', ['$scope', '$timeout', function($scope, $timeout) {
-        $timeout(function() {
-            $(document).ready(function() {
+    app.controller('echarts2', ['$scope', '$timeout', function ($scope, $timeout) {
+        $timeout(function () {
+            $(document).ready(function () {
                 var theme = {
                     color: ['rgba(38,185,154,0.88)', 'rgba(52,152,219,0.88)', 'rgba(243,156,18,0.88)', 'rgba(231,76,60,0.88)', '#5bc0de', '#4b5f71'],
                     title: {
@@ -332,7 +332,7 @@ define(['btModule'], function(btModule) {
                     $scope.option = null;
                     rectangleTreesChart.showLoading();
                     var household_america_2012 = 113616229;
-                    $.get('../data/rectangleTreesChart.json', function(obama_budget_2012) {
+                    $.get('../data/rectangleTreesChart.json', function (obama_budget_2012) {
                         console.log('rectangleTreesChart success');
                         rectangleTreesChart.hideLoading();
 
@@ -414,7 +414,7 @@ define(['btModule'], function(btModule) {
                             var amountIndex = mode === 1 ? 1 : 0;
                             var amountIndex2011 = mode === 1 ? 0 : 1;
 
-                            return function(info) {
+                            return function (info) {
                                 var value = info.value;
 
                                 var amount = value[amountIndex];
@@ -489,7 +489,7 @@ define(['btModule'], function(btModule) {
                                 formatter: getTooltipFormatter(0)
                             },
 
-                            series: modes.map(function(mode, idx) {
+                            series: modes.map(function (mode, idx) {
                                 var seriesOpt = createSeriesCommon();
                                 seriesOpt.name = mode;
                                 seriesOpt.top = 80;
@@ -510,7 +510,7 @@ define(['btModule'], function(btModule) {
                     var app = {};
                     $scope.option = null;
                     sankeyChart.showLoading();
-                    $.get('../data/sankeyChart.json', function(data) {
+                    $.get('../data/sankeyChart.json', function (data) {
                         console.log('sankeyChart success');
                         sankeyChart.hideLoading();
                         sankeyChart.setOption($scope.option = {
@@ -637,7 +637,7 @@ define(['btModule'], function(btModule) {
                     }
 
                 }
-                window.onresize = function() {
+                window.onresize = function () {
                     if ($('#rectangleTreesChart').length > 0) {
                         rectangleTreesChart.resize();
                     }
@@ -652,14 +652,14 @@ define(['btModule'], function(btModule) {
 
 
             });
-        });
+        },100);
     }]);
     // 訊息通知
-    app.controller('notifications', ['$scope', '$timeout', function($scope, $timeout) {
-        $timeout(function() {
+    app.controller('notifications', ['$scope', '$timeout', function ($scope, $timeout) {
+        $timeout(function () {
             // TabbedNotification
 
-            $('body').on('click', '.TabbedNotification', function() {
+            $('body').on('click', '.TabbedNotification', function () {
                 var title = $(this).attr('data-title');
                 var text = $(this).attr('data-text');
                 var type = $(this).attr('data-type');
@@ -674,7 +674,7 @@ define(['btModule'], function(btModule) {
                 $scope.TabbedNotification(options);
             });
             var cnt = 10; //$("#custom_notifications ul.notifications li").length + 1;
-            $scope.TabbedNotification = function(options) {
+            $scope.TabbedNotification = function (options) {
                 var message = "<div id='ntf" + cnt + "' class='text alert-" + options.type + "' style='display:none'><h2><i class='fa fa-bell'></i> " + options.title + "</h2><div class='close'><a href='javascript:;' class='notification_close'><i class='fa fa-close'></i></a></div><p>" + options.text + "</p></div>";
 
                 if (document.getElementById('custom_notifications') == null) {
@@ -687,11 +687,11 @@ define(['btModule'], function(btModule) {
                 }
             }
 
-            $scope.CustomTabs = function(options) {
+            $scope.CustomTabs = function (options) {
                 $('.tabbed_notifications > div').hide();
                 $('.tabbed_notifications > div:first-of-type').show();
                 $('#custom_notifications').removeClass('dsp_none');
-                $('.notifications a').click(function(e) {
+                $('.notifications a').click(function (e) {
                     e.preventDefault();
                     var $this = $(this),
                         tabbed_notifications = '#' + $this.parents('.notifications').data('tabbed_notifications'),
@@ -705,7 +705,7 @@ define(['btModule'], function(btModule) {
             }
             $scope.CustomTabs();
             var tabid = $scope.idname = '';
-            $(document).on('click', '.notification_close', function(e) {
+            $(document).on('click', '.notification_close', function (e) {
                 $scope.idname = $(this).parent().parent().attr("id");
                 tabid = $scope.idname.substr(-2);
                 $('#ntf' + tabid).remove();
@@ -717,7 +717,7 @@ define(['btModule'], function(btModule) {
 
             // sweetAlert
 
-            $('.x_content .sweet').on('click', function() {
+            $('.x_content .sweet').on('click', function () {
                 var num = $(".x_content .sweet").index(this);
                 console.log(num);
                 switch (num) {
@@ -803,7 +803,7 @@ define(['btModule'], function(btModule) {
                             confirmButtonColor: '#3085d6',
                             cancelButtonColor: '#d33',
                             confirmButtonText: 'Yes, delete it!'
-                        }).then(function() {
+                        }).then(function () {
                             swal(
                                 'Deleted!',
                                 'Your file has been deleted.',
@@ -824,13 +824,13 @@ define(['btModule'], function(btModule) {
                             confirmButtonClass: 'btn btn-success',
                             cancelButtonClass: 'btn btn-danger',
                             buttonsStyling: false
-                        }).then(function() {
+                        }).then(function () {
                             swal(
                                 'Deleted!',
                                 'Your file has been deleted.',
                                 'success'
                             );
-                        }, function(dismiss) {
+                        }, function (dismiss) {
                             // dismiss can be 'cancel', 'overlay', 'close', 'timer'
                             if (dismiss === 'cancel') {
                                 swal(
@@ -866,9 +866,9 @@ define(['btModule'], function(btModule) {
                             showCancelButton: true,
                             confirmButtonText: 'Submit',
                             showLoaderOnConfirm: true,
-                            preConfirm: function(email) {
-                                return new Promise(function(resolve, reject) {
-                                    setTimeout(function() {
+                            preConfirm: function (email) {
+                                return new Promise(function (resolve, reject) {
+                                    setTimeout(function () {
                                         if (email === 'taken@example.com') {
                                             reject('This email is already taken.');
                                         } else {
@@ -878,7 +878,7 @@ define(['btModule'], function(btModule) {
                                 });
                             },
                             allowOutsideClick: false
-                        }).then(function(email) {
+                        }).then(function (email) {
                             swal({
                                 type: 'success',
                                 title: 'Ajax request finished!',
@@ -901,13 +901,13 @@ define(['btModule'], function(btModule) {
                             'Step 3'
                         ];
 
-                        swal.queue(steps).then(function() {
+                        swal.queue(steps).then(function () {
                             swal({
                                 title: 'All done!',
                                 confirmButtonText: 'Lovely!',
                                 showCancelButton: false
                             });
-                        }).finally(function() {
+                        }).finally(function () {
                             swal.resetDefaults();
                         }).done();
                         break;
@@ -916,8 +916,8 @@ define(['btModule'], function(btModule) {
                             title: 'Input something',
                             input: 'text',
                             showCancelButton: true,
-                            inputValidator: function(value) {
-                                return new Promise(function(resolve, reject) {
+                            inputValidator: function (value) {
+                                return new Promise(function (resolve, reject) {
                                     if (value) {
                                         resolve();
                                     } else {
@@ -925,7 +925,7 @@ define(['btModule'], function(btModule) {
                                     }
                                 });
                             }
-                        }).then(function(result) {
+                        }).then(function (result) {
                             swal({
                                 type: 'success',
                                 html: 'You entered: ' + result
@@ -936,7 +936,7 @@ define(['btModule'], function(btModule) {
                         swal({
                             title: 'Input email address',
                             input: 'email'
-                        }).then(function(email) {
+                        }).then(function (email) {
                             swal({
                                 type: 'success',
                                 html: 'Entered email: ' + email
@@ -952,7 +952,7 @@ define(['btModule'], function(btModule) {
                                 'autocapitalize': 'off',
                                 'autocorrect': 'off'
                             }
-                        }).then(function(password) {
+                        }).then(function (password) {
                             if (password) {
                                 swal({
                                     type: 'success',
@@ -965,7 +965,7 @@ define(['btModule'], function(btModule) {
                         swal({
                             input: 'textarea',
                             showCancelButton: true
-                        }).then(function(text) {
+                        }).then(function (text) {
                             if (text) {
                                 swal(text);
                             }
@@ -982,8 +982,8 @@ define(['btModule'], function(btModule) {
                             },
                             inputPlaceholder: 'Select country',
                             showCancelButton: true,
-                            inputValidator: function(value) {
-                                return new Promise(function(resolve, reject) {
+                            inputValidator: function (value) {
+                                return new Promise(function (resolve, reject) {
                                     if (value === 'UKR') {
                                         resolve();
                                     } else {
@@ -991,7 +991,7 @@ define(['btModule'], function(btModule) {
                                     }
                                 });
                             }
-                        }).then(function(result) {
+                        }).then(function (result) {
                             swal({
                                 type: 'success',
                                 html: 'You selected: ' + result
@@ -999,8 +999,8 @@ define(['btModule'], function(btModule) {
                         })
                         break;
                     case 19:
-                        var inputOptions = new Promise(function(resolve) {
-                            setTimeout(function() {
+                        var inputOptions = new Promise(function (resolve) {
+                            setTimeout(function () {
                                 resolve({
                                     '#ff0000': 'Red',
                                     '#00ff00': 'Green',
@@ -1013,8 +1013,8 @@ define(['btModule'], function(btModule) {
                             title: 'Select color',
                             input: 'radio',
                             inputOptions: inputOptions,
-                            inputValidator: function(result) {
-                                return new Promise(function(resolve, reject) {
+                            inputValidator: function (result) {
+                                return new Promise(function (resolve, reject) {
                                     if (result) {
                                         resolve();
                                     } else {
@@ -1022,7 +1022,7 @@ define(['btModule'], function(btModule) {
                                     }
                                 });
                             }
-                        }).then(function(result) {
+                        }).then(function (result) {
                             swal({
                                 type: 'success',
                                 html: 'You selected: ' + result
@@ -1036,8 +1036,8 @@ define(['btModule'], function(btModule) {
                             inputValue: 1,
                             inputPlaceholder: 'I agree with the terms and conditions',
                             confirmButtonText: 'Continue <i class="fa fa-arrow-right></i>',
-                            inputValidator: function(result) {
-                                return new Promise(function(resolve, reject) {
+                            inputValidator: function (result) {
+                                return new Promise(function (resolve, reject) {
                                     if (result) {
                                         resolve();
                                     } else {
@@ -1045,7 +1045,7 @@ define(['btModule'], function(btModule) {
                                     }
                                 });
                             }
-                        }).then(function(result) {
+                        }).then(function (result) {
                             swal({
                                 type: 'success',
                                 text: 'You agreed with T&C :)'
@@ -1059,9 +1059,9 @@ define(['btModule'], function(btModule) {
                             inputAttributes: {
                                 accept: 'image/*'
                             }
-                        }).then(function(file) {
+                        }).then(function (file) {
                             var reader = new FileReader;
-                            reader.onload = function(e) {
+                            reader.onload = function (e) {
                                 swal({
                                     imageUrl: e.target.result
                                 });
@@ -1074,8 +1074,8 @@ define(['btModule'], function(btModule) {
                             title: 'Multiple inputs',
                             html: '<input id="swal-input1" class="swal2-input" autofocus>' +
                                 '<input id="swal-input2" class="swal2-input" type="password">',
-                            preConfirm: function() {
-                                return new Promise(function(resolve) {
+                            preConfirm: function () {
+                                return new Promise(function (resolve) {
                                     if (result) {
                                         resolve([
                                             $('#swal-input1').val(),
@@ -1084,7 +1084,7 @@ define(['btModule'], function(btModule) {
                                     }
                                 });
                             }
-                        }).then(function(result) {
+                        }).then(function (result) {
                             swal(JSON.stringify(result));
                         })
                         break;
@@ -1099,12 +1099,12 @@ define(['btModule'], function(btModule) {
 
             function autoPlayYouTubeModal() {
                 var trigger = $("body").find('[data-toggle="modal"]');
-                trigger.click(function() {
+                trigger.click(function () {
                     var theModal = $(this).data("target"),
                         videoSRC = $(this).attr("data-theVideo"),
                         videoSRCauto = videoSRC + "?autoplay=1";
                     $(theModal + ' iframe').attr('src', videoSRCauto);
-                    $(theModal + ' button.close').click(function() {
+                    $(theModal + ' button.close').click(function () {
                         $(theModal + ' iframe').attr('src', videoSRC);
                     });
                 });
@@ -1114,17 +1114,17 @@ define(['btModule'], function(btModule) {
 
             // Carousel
 
-            $("#carousel-id").mouseover(function() {
+            $("#carousel-id").mouseover(function () {
                 $(".carousel-control").css('display', 'block');
             });
-            $("#carousel-id").mouseout(function() {
+            $("#carousel-id").mouseout(function () {
                 $(".carousel-control").css('display', 'none');
             });
 
 
             // pnotify
 
-            $('body').on('click', '.pnotify', function() {
+            $('body').on('click', '.pnotify', function () {
                 var pnotifyNum = $('.x_content .pnotify').index(this);
                 var name = $(this).text();
                 var functionName = name + pnotifyNum;
@@ -1240,29 +1240,15 @@ define(['btModule'], function(btModule) {
 
             $('[data-toggle="tooltip"]').tooltip();
 
-        });
+        },100);
     }]);
     // 示範頁面
-    app.controller('project', ['$scope', '$timeout', function($scope, $timeout) {
-        $timeout(function() {
-            $(document).ready(function() {
-                if ($("input.flat")[0]) {
-                    $('input.flat').iCheck({
-                        checkboxClass: 'icheckbox_flat-green',
-                        radioClass: 'iradio_flat-green'
-                    });
-                }
-                if (typeof NProgress != 'undefined') {
-                    $(document).ready(function() {
-                        NProgress.start();
-                    });
-
-                    $(window).load(function() {
-                        NProgress.done();
-                    });
-                }
-            });
-        });
+    app.controller('project', ['$scope', '$timeout', function ($scope, $timeout) {
+        $timeout(function () {
+            if ($(".progress .progress-bar")[0]) {
+                $('.progress .progress-bar').progressbar();
+            }
+        }, 100);
     }]);
     return app;
 });
