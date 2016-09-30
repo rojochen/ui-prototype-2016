@@ -28,7 +28,7 @@ define(function() {
     // //tables_dynamic.html
     require('../../vendors/datatables.net/js/jquery.dataTables.min.js'); 
     require('../../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js');
-    require('../js/page/tables_dynamic.js');
+    // require('../js/page/tables_dynamic.js');
 
 
     // //gridslider.html

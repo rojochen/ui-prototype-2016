@@ -2,9 +2,9 @@ define(['btModule'], function (btModule) {
   'use strict';
   var app = angular.module('btModule');
 
-  yvonneCtrl.$inject = ['$scope', '$timeout'];
+  yvonneCtrl.$inject = ['$scope', '$timeout','$element'];
 
-  function yvonneCtrl($scope, $timeout) {
+  function yvonneCtrl($scope, $timeout,$element) {
     var vm = this;
     $timeout(function () {
       // Sidebar
@@ -190,6 +190,8 @@ define(['btModule'], function (btModule) {
         grid: true,
         disable: true
       });
+      // tables_dynamic
+      $('#datatable').dataTable();
 
     }, 100);
 
