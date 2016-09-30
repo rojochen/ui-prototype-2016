@@ -1243,8 +1243,12 @@ define(['btModule'], function (btModule) {
         },100);
     }]);
     // 示範頁面
-    app.controller('project', ['$scope', '$timeout', function ($scope, $timeout) {
+    app.controller('project', ['$scope', '$timeout','$element', function ($scope, $timeout,$element) {
         $timeout(function () {
+            $element.find('.flat').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            });
             if ($(".progress .progress-bar")[0]) {
                 $('.progress .progress-bar').progressbar();
             }
