@@ -16,15 +16,12 @@ define([
     app.component('btNgTable', btNgTable);
 
     // controller
-    btNgTableCtrl.$inject = ['$resource','DTOptionsBuilder', 'DTColumnDefBuilder'];
+    btNgTableCtrl.$inject = [];
 
-    function btNgTableCtrl($resource, DTOptionsBuilder, DTColumnDefBuilder) {
+    function btNgTableCtrl() {
         var vm = this;
-        vm.persons = [];
-        
-        $resource(vm.link).query().$promise.then(function(persons) {
-            vm.items = persons;
-        });
+        console.log(vm.link);
+       vm.item = vm.link;
     }
 
     return app;

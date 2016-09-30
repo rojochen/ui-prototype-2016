@@ -6,12 +6,11 @@ define(['btModule'], function (btModule) {
 
     function louisCtrl($http) {
         var vm = this;
-        vm.link = "../data/ngDataTable.json";
-        console.log(vm.link);
-        // $http.get("../data/ngDataTable.json").success(function(data) {
-        //     vm.items = data;
-        //      console.log(vm.items);
-        // });
+       
+        $http.get("../data/ngDataTable.json").success(function(data) {
+            vm.link = data;
+             console.log(vm.link);
+        });
     }
     app.controller('louisCtrl', louisCtrl);
 
