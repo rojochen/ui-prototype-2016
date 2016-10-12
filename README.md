@@ -15,21 +15,15 @@ Bower plugin install
     bower i
 
 
-gulp bulid css 
+gulp build-js & sass
 -----------
 
-    gulp build-style
-
-gulp bulid jQuery  plugin
------------
-
-    gulp build-vendors
+    gulp build-all
 
 HTML add link
 -----------
 
-    <script src="assets/css/style.js"></script>
-    <script src="assets/js/vendors.js"></script>
+
 
 gulp watch start
 -----------
