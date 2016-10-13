@@ -85,6 +85,9 @@ define(['pokemon'], function(pokemon) {
 				.when('/tables_dynamic2', {
 					templateUrl: '../template/tables_dynamic2.html'
 				})
+				.when('/uiGrid', {
+					templateUrl: '../template/uiGrid.html'
+				})
 				.otherwise({
 					redirectTo: '/'
 				});

@@ -2,15 +2,35 @@ define(['btModule'], function (btModule) {
     'use strict';
 
     var app = angular.module("btModule");
-    louisCtrl.$inject = ['$http'];
+    louisCtrl.$inject = ['$scope', '$http'];
 
-    function louisCtrl($http) {
+    function louisCtrl($scope, $http) {
         var vm = this;
-       
-        $http.get("../data/ngDataTable.json").success(function(data) {
+
+        // angular-dataTable
+        $http.get("../data/ngDataTable.json").success(function (data) {
             vm.link = data;
-             console.log(vm.link);
+            vm.gridOptions.data = data;
         });
+
+        // ui-grid
+        vm.gridOptions = {}
+        vm.gridOptions = {
+            enableGridMenu: true,
+            paginationPageSizes: [],
+            paginationPageSize: 25,
+            columnDefs: [{
+                displayName: 'ID',
+                field: 'id'
+            }, {
+                displayName: 'First Name',
+                field: 'firstName'
+            }, {
+                displayName: 'Last Name',
+                field: 'lastName'
+            }],
+            enableCellEditOnFocus: true
+        };
     }
     app.controller('louisCtrl', louisCtrl);
 
@@ -20,7 +40,7 @@ define(['btModule'], function (btModule) {
             $(document).ready(function () {
                 $("[name='my-checkbox']").bootstrapSwitch();
             });
-        },100);
+        }, 100);
     }]);
     // 表單元件
     app.controller('formAdvanced', ['$scope', '$timeout', function ($scope, $timeout) {
@@ -309,7 +329,7 @@ define(['btModule'], function (btModule) {
                     console.log(start.toISOString(), end.toISOString(), label);
                 });
             });
-        }),100;
+        }), 100;
     }]);
     // 進階圖表
     app.controller('echarts2', ['$scope', '$timeout', function ($scope, $timeout) {
@@ -651,7 +671,7 @@ define(['btModule'], function (btModule) {
 
 
             });
-        },100);
+        }, 100);
     }]);
     // 訊息通知
     app.controller('notifications', ['$scope', '$timeout', function ($scope, $timeout) {
@@ -1239,10 +1259,10 @@ define(['btModule'], function (btModule) {
 
             $('[data-toggle="tooltip"]').tooltip();
 
-        },100);
+        }, 100);
     }]);
     // 示範頁面
-    app.controller('project', ['$scope', '$timeout','$element', function ($scope, $timeout,$element) {
+    app.controller('project', ['$scope', '$timeout', '$element', function ($scope, $timeout, $element) {
         $timeout(function () {
             $element.find('.flat').iCheck({
                 checkboxClass: 'icheckbox_flat-green',
