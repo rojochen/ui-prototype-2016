@@ -21,7 +21,7 @@ define(['btModule'], function (btModule) {
                 displayName: 'ID',
                 field: 'id',
                 cellFilter: 'number',
-                cellTemplate: '<aa></aa>'
+                editableCellTemplate: '<aa></aa>'
             }, {
                 displayName: 'First Name',
                 field: 'firstName'
@@ -29,7 +29,7 @@ define(['btModule'], function (btModule) {
                 displayName: 'Last Name',
                 field: 'lastName'
             }],
-            enableCellEditOnFocus: false, //Focus 後可編輯
+            enableCellEditOnFocus: true, //Focus 後可編輯
             enableGridMenu: true, //是否顯示菜單
             paginationPageSizes: [10, 50, 100, 200, 300], //每頁顯示數幾筆資料
             paginationPageSize: 10, //每頁顯示數
