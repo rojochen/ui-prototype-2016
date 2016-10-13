@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	'use strict';
 	//setting baseUrl, flip path, urlArgs to requirejs
 	require.config({
@@ -16,14 +16,48 @@
 			footer: 'js/component/footer',
 			header: 'js/component/header',
 			btPortlet: 'js/component/btPortlet',
-			btCheckList:'js/component/btCheckList',
-			btNgTable:'js/component/btNgTable',
-			btPanel:'js/component/btPanel',
-			btAlert:'js/component/btAlert'
+			btCheckList: 'js/component/btCheckList',
+			btNgTable: 'js/component/btNgTable',
+			btPanel: 'js/component/btPanel',
+			btAlert: 'js/component/btAlert',
+			button: 'js/directives/button'
 		}
-	});	
-	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'yvonneController', 'indexComponent','demoComponent', 'indexComponent_2','footer','header','btPortlet','btCheckList','btNgTable','btPanel','btAlert'], function(pokemon, btModule, btController, louisController, joeController, yvonneController, indexComponent,demoComponent, indexComponent_2, footer, header, btPortlet, btCheckList,btNgTable,btPanel,btAlert) {
-
-		angular.bootstrap(document, ['btModule']);
 	});
+	require(['pokemon',
+			'btModule',
+			'btController',
+			'louisController',
+			'joeController',
+			'yvonneController',
+			'indexComponent',
+			'demoComponent',
+			'indexComponent_2',
+			'footer',
+			'header',
+			'btPortlet',
+			'btCheckList',
+			'btNgTable',
+			'btPanel',
+			'btAlert',
+			'button'
+		],
+		function (pokemon,
+			btModule,
+			btController,
+			louisController,
+			joeController,
+			yvonneController,
+			indexComponent,
+			demoComponent,
+			indexComponent_2,
+			footer,
+			header,
+			btPortlet,
+			btCheckList,
+			btNgTable,
+			btPanel,
+			btAlert,
+			button) {
+			angular.bootstrap(document, ['btModule']);
+		});
 })();
