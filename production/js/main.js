@@ -20,7 +20,7 @@
 			btNgTable: 'js/component/btNgTable',
 			btPanel: 'js/component/btPanel',
 			btAlert: 'js/component/btAlert',
-			button: 'js/directives/button'
+			btButton:'js/directives/btButton'
 		}
 	});
 	require(['pokemon',
@@ -39,25 +39,9 @@
 			'btNgTable',
 			'btPanel',
 			'btAlert',
-			'button'
+			'btButton'
 		],
-		function (pokemon,
-			btModule,
-			btController,
-			louisController,
-			joeController,
-			yvonneController,
-			indexComponent,
-			demoComponent,
-			indexComponent_2,
-			footer,
-			header,
-			btPortlet,
-			btCheckList,
-			btNgTable,
-			btPanel,
-			btAlert,
-			button) {
+		function (pokemon,btModule,btController,louisController,joeController,yvonneController,indexComponent,demoComponent,indexComponent_2,footer,header,btPortlet,btCheckList,btNgTable,btPanel,btAlert,btButton) {
 			angular.bootstrap(document, ['btModule']);
 		});
 })();
