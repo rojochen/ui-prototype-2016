@@ -47,7 +47,8 @@ define(['jquery', 'angular', 'moment', 'PNotify'], function (jquery, angular, mo
 
     angular.module('pokemon', ['ngRoute', 'datatables', 'ui.grid', 'ui.grid.pagination', 'ui.grid.edit',
         'ui.grid.cellNav',
-        'ui.grid.moveColumns'
+        'ui.grid.moveColumns',
+        'ui.grid.autoResize'
     ]);
 
     return angular;

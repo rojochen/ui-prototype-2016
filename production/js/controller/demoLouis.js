@@ -16,12 +16,10 @@ define(['btModule'], function (btModule) {
         // ui-grid
         vm.gridOptions = {}
         vm.gridOptions = {
-            enableGridMenu: true,
-            paginationPageSizes: [],
-            paginationPageSize: 25,
             columnDefs: [{
                 displayName: 'ID',
-                field: 'id'
+                field: 'id',
+                cellTemplate:'<button class="ui-grid-cell-contents"> {{COL_FIELD CUSTOM_FILTERS}}</button>'
             }, {
                 displayName: 'First Name',
                 field: 'firstName'
@@ -29,7 +27,10 @@ define(['btModule'], function (btModule) {
                 displayName: 'Last Name',
                 field: 'lastName'
             }],
-            enableCellEditOnFocus: true
+            enableGridMenu: true, //是否顯示菜單
+            enableCellEditOnFocus: true,
+            paginationPageSizes: [10,50,100,200,300], //每頁顯示數幾筆資料
+            paginationPageSize: 10, //每頁顯示數
         };
     }
     app.controller('louisCtrl', louisCtrl);
