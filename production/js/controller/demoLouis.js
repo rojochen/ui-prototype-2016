@@ -10,24 +10,30 @@ define(['btModule'], function (btModule) {
         // angular-dataTable
         $http.get("../data/ngDataTable.json").success(function (data) {
             vm.link = data;
-            vm.gridOptions.data = data;
+            $scope.gridOptions.data = data;
         });
 
         // ui-grid
 
-        vm.gridOptions = {}
-        vm.gridOptions = {
+        // editableCellTemplate: '<aa></aa>'
+        $scope.msg = {};
+        $scope.gridOptions = {}
+        $scope.gridOptions = {
             columnDefs: [{
                 displayName: 'ID',
                 field: 'id',
-                cellFilter: 'number',
-                editableCellTemplate: '<aa></aa>'
+                width: 50,
+                cellTemplate: '<div class="ui-grid-cell-contents" ng-bind="COL_FIELD"></div>'
             }, {
                 displayName: 'First Name',
-                field: 'firstName'
+                field: 'firstName',
+                width: 420,
+                cellTemplate: '<div class="ui-grid-cell-contents" ng-bind="COL_FIELD"></div>'
             }, {
                 displayName: 'Last Name',
-                field: 'lastName'
+                field: 'lastName',
+                width: 460,
+                cellTemplate: '<div class="ui-grid-cell-contents" ng-bind="COL_FIELD"></div>'
             }],
             enableCellEditOnFocus: true, //Focus 後可編輯
             enableGridMenu: true, //是否顯示菜單
@@ -35,6 +41,14 @@ define(['btModule'], function (btModule) {
             paginationPageSize: 10, //每頁顯示數
 
         };
+        $scope.gridOptions.onRegisterApi = function (gridApi) {
+            $scope.gridApi = gridApi;
+            gridApi.edit.on.afterCellEdit($scope, function (rowEntity, colDef, newValue, oldValue) {
+                $scope.msg.lastCellEdited = 'edited row id:' + rowEntity.id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue;
+                $scope.$apply();
+            });
+        }
+
     }
     app.controller('louisCtrl', louisCtrl);
 
