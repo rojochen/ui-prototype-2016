@@ -41,7 +41,7 @@ define(['btModule'], function (btModule) {
             paginationPageSize: 10, //每頁顯示數
 
         };
-        // edit
+        // edit 
         $scope.msg = {};
         $scope.gridOptions.onRegisterApi = function (gridApi) {
             $scope.gridApi = gridApi;
