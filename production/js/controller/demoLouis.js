@@ -16,7 +16,7 @@ define(['btModule'], function (btModule) {
         // ui-grid
 
         // editableCellTemplate: '<aa></aa>'
-        $scope.msg = {};
+        
         $scope.gridOptions = {}
         $scope.gridOptions = {
             columnDefs: [{
@@ -41,6 +41,8 @@ define(['btModule'], function (btModule) {
             paginationPageSize: 10, //每頁顯示數
 
         };
+        // edit
+        $scope.msg = {};
         $scope.gridOptions.onRegisterApi = function (gridApi) {
             $scope.gridApi = gridApi;
             gridApi.edit.on.afterCellEdit($scope, function (rowEntity, colDef, newValue, oldValue) {
