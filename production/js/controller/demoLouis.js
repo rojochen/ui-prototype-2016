@@ -16,7 +16,7 @@ define(['btModule'], function (btModule) {
         // ui-grid
 
         // editableCellTemplate: '<aa></aa>'
-        
+
         $scope.gridOptions = {}
         $scope.gridOptions = {
             columnDefs: [{
@@ -35,7 +35,7 @@ define(['btModule'], function (btModule) {
                 width: 460,
                 cellTemplate: '<div class="ui-grid-cell-contents" ng-bind="COL_FIELD"></div>'
             }],
-            enableCellEditOnFocus: true, //Focus 後可編輯
+            enableCellEditOnFocus: false, //Focus 後可編輯
             enableGridMenu: true, //是否顯示菜單
             paginationPageSizes: [10, 50, 100, 200, 300], //每頁顯示數幾筆資料
             paginationPageSize: 10, //每頁顯示數
@@ -43,13 +43,21 @@ define(['btModule'], function (btModule) {
         };
         // edit 
         $scope.msg = {};
+
         $scope.gridOptions.onRegisterApi = function (gridApi) {
             $scope.gridApi = gridApi;
             gridApi.edit.on.afterCellEdit($scope, function (rowEntity, colDef, newValue, oldValue) {
                 $scope.msg.lastCellEdited = 'edited row id:' + rowEntity.id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue;
+                $scope.msg.id = rowEntity.id;
+                $scope.msg.firstName = rowEntity.firstName;
+                $scope.msg.lastName = rowEntity.lastName;
+                console.log($scope.msg.id);
                 $scope.$apply();
+
             });
+
         }
+
 
     }
     app.controller('louisCtrl', louisCtrl);
@@ -821,8 +829,8 @@ define(['btModule'], function (btModule) {
                             title: '<i>HTML</i> <u>example</u>',
                             type: 'info',
                             html: 'You can use <b>bold text</b>, ' +
-                                '<a href="//github.com">links</a> ' +
-                                'and other HTML tags',
+                            '<a href="//github.com">links</a> ' +
+                            'and other HTML tags',
                             showCloseButton: true,
                             showCancelButton: true,
                             confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
@@ -937,9 +945,9 @@ define(['btModule'], function (btModule) {
                         });
 
                         var steps = [{
-                                title: 'Step 1',
-                                text: 'Chaining swal2 modals is easy'
-                            },
+                            title: 'Step 1',
+                            text: 'Chaining swal2 modals is easy'
+                        },
                             'Step 2',
                             'Step 3'
                         ];
@@ -1116,7 +1124,7 @@ define(['btModule'], function (btModule) {
                         swal({
                             title: 'Multiple inputs',
                             html: '<input id="swal-input1" class="swal2-input" autofocus>' +
-                                '<input id="swal-input2" class="swal2-input" type="password">',
+                            '<input id="swal-input2" class="swal2-input" type="password">',
                             preConfirm: function () {
                                 return new Promise(function (resolve) {
                                     if (result) {

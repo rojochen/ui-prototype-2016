@@ -1,28 +1,32 @@
 <div class="" ng-controller="louisCtrl">
-  <div class="page-title">
-    <div class="title_left">
-      <h3>動態表格</h3>
-    </div>
+	<div class="page-title">
+		<div class="title_left">
+			<h3>動態表格</h3>
+		</div>
 
-    <div class="title_right">
-      <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="搜尋">
-          <span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button></span>
-        </div>
-      </div>
-    </div>
-  </div>
+		<div class="title_right">
+			<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="搜尋">
+					<span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button></span>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  <div class="clearfix"></div>
+	<div class="clearfix"></div>
 
-  <div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-      <bt-portlet titlename="'UiGrid'">
-          <h1 ng-bind="msg.lastCellEdited"></h1>
-         <div id="grid1" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection ui-grid-exporter ui-grid-edit ui-grid-cellnav ui-grid-move-columns ui-grid-autoResize class="grid"></div>
-      </bt-portlet>
-    </div>
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<bt-portlet titlename="'UiGrid'">
+				<!--<h1 ng-bind="msg.lastCellEdited"></h1>-->
+				<p ng-bind="'ID:' + msg.id"></p>
+				<p ng-bind="'firstName:'+msg.firstName"></p>
+				<p ng-bind="'lastName:'+msg.lastName"></p>
+				<div id="grid1" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection ui-grid-exporter ui-grid-edit ui-grid-cellnav
+					ui-grid-move-columns ui-grid-autoResize class="grid"></div>
+			</bt-portlet>
+		</div>
 
-  </div>
+	</div>
 </div>
