@@ -25,6 +25,12 @@
 				<p ng-bind="'lastName:'+msg.lastName"></p>
 				<div id="grid1" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection ui-grid-exporter ui-grid-edit ui-grid-cellnav
 					ui-grid-move-columns ui-grid-autoResize class="grid"></div>
+				<div class="clearfix">
+					<div class="pull-right">
+						<button id="save" type="button" class="btn btn-success" ng-click="saveState()">Save</button>
+						<button id="restore" type="button" class="btn btn-success" ng-click="restoreState()">Restore</button>
+					</div>
+				</div>
 			</bt-portlet>
 		</div>
 
