@@ -19,7 +19,7 @@ var gulp = require('gulp'),
 
 // 以後可能會用到
 var exports = require('exports-loader'),
-    expose = require('expose-loader'),
+    expose = require('expose-loader');
 
 
 

@@ -38,14 +38,14 @@ define(['jquery'], function (jquery) {
     require('skycons');
     require('bootstrap-daterangepicker');
     require('../js/helpers/smartresize.js');
-
     // global
     global.echarts = require('echarts');
     global.moment = require('moment');
     global.PNotify = require('pnotify');
     require('promise-finally');
-
     require('../../src/config/joe.js');
+
+    // angular 套件
     require('ng');
     require('angular-route');
     require('angular-datatables');

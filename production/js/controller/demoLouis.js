@@ -54,14 +54,19 @@ define(['btModule'], function (btModule) {
 
         $scope.gridOptions.onRegisterApi = function (gridApi) {
             $scope.gridApi = gridApi;
+            // select
+            gridApi.selection.on.rowSelectionChanged($scope, function (row, rowEntity) {
+                angular.forEach($scope.gridApi.selection.getSelectedRows(), function (data, index) {
+                    console.log(data);
+                    $scope.gridOptions.data.splice($scope.gridOptions.data.lastIndexOf(data), 1);
+                })
+            });
             // edit 
             gridApi.edit.on.afterCellEdit($scope, function (rowEntity, colDef, newValue, oldValue) {
                 $scope.msg.lastCellEdited = 'edited row id:' + rowEntity.id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue;
                 $scope.msg.id = rowEntity.id;
                 $scope.msg.firstName = rowEntity.firstName;
                 $scope.msg.lastName = rowEntity.lastName;
-
-
                 $scope.$apply();
             });
             gridApi.rowEdit.on.saveRow($scope, $scope.saveRow);
@@ -75,6 +80,9 @@ define(['btModule'], function (btModule) {
         $scope.someRepositoryFunction = function (row) {
             return $http.put('../../data/ngDataTable.json', row);
         }
+
+
+
         // saveState
         // $scope.saveState = function () {
         //     $scope.state = $scope.gridApi.saveState.save();
@@ -94,7 +102,7 @@ define(['btModule'], function (btModule) {
 
 
 
-    // ---------------------------------------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------------------------------
 
     // switch
     app.controller('switch', ['$scope', '$timeout', function ($scope, $timeout) {
