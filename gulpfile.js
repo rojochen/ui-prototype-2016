@@ -11,24 +11,23 @@ var gulp = require('gulp'),
     DEST = 'build/',
     war = require('gulp-war'),
     zip = require('gulp-zip'),
-    exports = require('exports-loader'),
-    expose = require('expose-loader'),
+
     webpackStream = require('webpack-stream'),
     BowerWebpackPlugin = require('bower-webpack-plugin'),
     webpack = require("webpack"),
     named = require('vinyl-named');
 
+// 以後可能會用到
+var exports = require('exports-loader'),
+    expose = require('expose-loader'),
+
+
+
 var productionJSPath = path.resolve('./production/assets/js');
-
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-
 var fs = require('fs');
-
 var package = JSON.parse(fs.readFileSync('package.json'));
-
-
 var jsDist = 'production/assets/js/';
-
 var plugins = [];
 
 var getStyleConfig = function () {
