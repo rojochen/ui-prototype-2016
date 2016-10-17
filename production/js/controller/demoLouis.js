@@ -22,18 +22,23 @@ define(['btModule'], function (btModule) {
             columnDefs: [{
                 displayName: 'ID',
                 field: 'id',
-                width: 50,
+                type: 'string',
                 cellTemplate: '<div class="ui-grid-cell-contents" ng-bind="COL_FIELD"></div>'
             }, {
                 displayName: 'First Name',
                 field: 'firstName',
-                width: 420,
+                type: 'string',
                 cellTemplate: '<div class="ui-grid-cell-contents" ng-bind="COL_FIELD"></div>'
             }, {
                 displayName: 'Last Name',
                 field: 'lastName',
-                width: 460,
+                type: 'string',
                 cellTemplate: '<div class="ui-grid-cell-contents" ng-bind="COL_FIELD"></div>'
+            }, {
+                displayName: "Date",
+                field: 'date',
+                type: 'date',
+                cellFilter: 'date:"yyyy-MM-dd"'
             }],
             enableCellEditOnFocus: false, //Focus 後可編輯
             enableGridMenu: true, //是否顯示菜單
