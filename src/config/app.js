@@ -6,9 +6,9 @@ define(['jquery'], function (jquery) {
     var $ = jquery;
     global.jQuery = $;
     global.$ = $;
+
     // global.moment = moment;
     // global.PNotify = PNotify;
-
     // require('../../vendors/fastclick/lib/fastclick.js');
     // require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
     // require('../../vendors/Chart.js/dist/Chart.min.js');

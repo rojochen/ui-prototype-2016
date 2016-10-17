@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     war = require('gulp-war'),
     zip = require('gulp-zip'),
     exports = require('exports-loader'),
+    expose = require('expose-loader'),
     webpackStream = require('webpack-stream'),
     BowerWebpackPlugin = require('bower-webpack-plugin'),
     webpack = require("webpack"),
@@ -112,9 +113,6 @@ gulp.task('build-app', function () {
                 },
                 extensions: ['', '.js']
             }, plugins: [
-                new webpack.ResolverPlugin([
-                    new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["vendors"])
-                ])
             ],
             module: {
                 loaders: [
@@ -150,11 +148,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('watch', function () {
-    // Watch .html files
     gulp.watch('production/demo/*.html', browserSync.reload);
-    // Watch .js files
-    //gulp.watch('src/js/*.js', ['scripts']);
-    // Watch .scss files
     gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
 });
 
