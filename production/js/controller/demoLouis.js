@@ -54,13 +54,12 @@ define(['btModule'], function (btModule) {
 
         $scope.gridOptions.onRegisterApi = function (gridApi) {
             $scope.gridApi = gridApi;
-            // select
-            gridApi.selection.on.rowSelectionChanged($scope, function (row, rowEntity) {
+            // selected&del
+            $scope.deleteSelected = function () {
                 angular.forEach($scope.gridApi.selection.getSelectedRows(), function (data, index) {
-                    console.log(data);
                     $scope.gridOptions.data.splice($scope.gridOptions.data.lastIndexOf(data), 1);
-                })
-            });
+                });
+            }
             // edit 
             gridApi.edit.on.afterCellEdit($scope, function (rowEntity, colDef, newValue, oldValue) {
                 $scope.msg.lastCellEdited = 'edited row id:' + rowEntity.id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue;
@@ -80,22 +79,6 @@ define(['btModule'], function (btModule) {
         $scope.someRepositoryFunction = function (row) {
             return $http.put('../../data/ngDataTable.json', row);
         }
-
-
-
-        // saveState
-        // $scope.saveState = function () {
-        //     $scope.state = $scope.gridApi.saveState.save();
-        //     console.log($scope.state);
-        // };
-        // restore
-        // $scope.restoreState = function () {
-        //     $scope.gridApi.saveState.restore($scope, $scope.state);
-        //     console.log($scope.gridApi.saveState.restore($scope, $scope.state));
-        // };
-
-
-
 
     }
     app.controller('louisCtrl', louisCtrl);
