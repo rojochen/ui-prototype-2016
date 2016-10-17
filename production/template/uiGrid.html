@@ -23,8 +23,8 @@
 				<p ng-bind="'ID:' + msg.id"></p>
 				<p ng-bind="'firstName:'+msg.firstName"></p>
 				<p ng-bind="'lastName:'+msg.lastName"></p>
-				<div id="grid1" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection ui-grid-exporter ui-grid-edit ui-grid-cellnav
-					ui-grid-move-columns ui-grid-autoResize class="grid"></div>
+				<div id="grid1" ui-grid="gridOptions" external-scopes="editRows" ui-grid-pagination ui-grid-selection ui-grid-exporter ui-grid-edit
+					ui-grid-row-edit ui-grid-cellnav ui-grid-move-columns ui-grid-autoResize ui-grid-save-state class="grid"></div>
 				<div class="clearfix">
 					<div class="pull-right">
 						<button id="save" type="button" class="btn btn-success" ng-click="saveState()">Save</button>

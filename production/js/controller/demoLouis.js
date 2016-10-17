@@ -44,24 +44,49 @@ define(['btModule'], function (btModule) {
             enableGridMenu: true, //是否顯示菜單
             paginationPageSizes: [10, 50, 100, 200, 300], //每頁顯示數幾筆資料
             paginationPageSize: 10, //每頁顯示數
-
+            saveFocus: true,
+            saveScroll: true,
+            saveGroupingExpandedStates: true,
         };
-        // edit 
+
         $scope.msg = {};
+        $scope.state = {};
 
         $scope.gridOptions.onRegisterApi = function (gridApi) {
             $scope.gridApi = gridApi;
+            // edit 
             gridApi.edit.on.afterCellEdit($scope, function (rowEntity, colDef, newValue, oldValue) {
                 $scope.msg.lastCellEdited = 'edited row id:' + rowEntity.id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue;
                 $scope.msg.id = rowEntity.id;
                 $scope.msg.firstName = rowEntity.firstName;
                 $scope.msg.lastName = rowEntity.lastName;
-                console.log($scope.msg.id);
+
+
                 $scope.$apply();
-
             });
-
+            gridApi.rowEdit.on.saveRow($scope, $scope.saveRow);
         }
+        // saveRow
+        $scope.saveRow = function (rowEntity) {
+            var promise = $scope.someRepositoryFunction(rowEntity);
+            console.log(promise);
+            $scope.gridApi.rowEdit.setSavePromise($scope.gridApi.grid, rowEntity, promise);
+        }
+        $scope.someRepositoryFunction = function (row) {
+            return $http.put('../../data/ngDataTable.json', row);
+        }
+        // saveState
+        // $scope.saveState = function () {
+        //     $scope.state = $scope.gridApi.saveState.save();
+        //     console.log($scope.state);
+        // };
+        // restore
+        // $scope.restoreState = function () {
+        //     $scope.gridApi.saveState.restore($scope, $scope.state);
+        //     console.log($scope.gridApi.saveState.restore($scope, $scope.state));
+        // };
+
+
 
 
     }
