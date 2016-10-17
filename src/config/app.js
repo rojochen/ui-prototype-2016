@@ -1,13 +1,13 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
-define(['jquery', 'angular', 'moment', 'PNotify'], function (jquery, angular, moment, PNotify) {
+define(['jquery'], function (jquery) {
     // console.log(angular);
 
 
     var $ = jquery;
     global.jQuery = $;
     global.$ = $;
-    global.moment = moment;
-    global.PNotify = PNotify;
+    // global.moment = moment;
+    // global.PNotify = PNotify;
 
     // require('../../vendors/fastclick/lib/fastclick.js');
     // require('../../vendors/bootstrap-daterangepicker/daterangepicker.js');
@@ -38,8 +38,15 @@ define(['jquery', 'angular', 'moment', 'PNotify'], function (jquery, angular, mo
     require('skycons');
     require('bootstrap-daterangepicker');
     require('../js/helpers/smartresize.js');
+
+    // global
     global.echarts = require('echarts');
+    global.moment = require('moment');
+    global.PNotify = require('pnotify');
+
+
     require('../../src/config/joe.js');
+    require('ng');
     require('angular-route');
     require('angular-datatables');
     require('promise-finally');

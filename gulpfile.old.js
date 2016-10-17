@@ -11,24 +11,99 @@ var gulp = require('gulp'),
     DEST = 'build/',
     war = require('gulp-war'),
     zip = require('gulp-zip'),
-    exports = require('exports-loader'),
-    webpackStream = require('webpack-stream'),
-    BowerWebpackPlugin = require('bower-webpack-plugin'),
-    webpack = require("webpack"),
-    named = require('vinyl-named');
+    exports = require('exports-loader');
 
 var productionJSPath = path.resolve('./production/assets/js');
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var fs = require('fs');
-
 var package = JSON.parse(fs.readFileSync('package.json'));
 
 
-var jsDist = 'production/assets/js/';
+
+gulp.task('scripts', function () {
+    return gulp.src([
+        'src/js/helpers/*.js',
+        'src/js/*.js',
+    ])
+        .pipe(concat('custom.js'))
+        .pipe(gulp.dest(DEST + '/js'))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest(DEST + '/js'))
+        .pipe(browserSync.stream());
+});
+
+// TODO: Maybe we can simplify how sass compile the minify and unminify version
+
+var compileSASS = function (filename, options) {
+
+    return sass('src/scss/*.scss', options)
+        .pipe(autoprefixer('last 2 versions', '> 5%'))
+        .pipe(concat(filename))
+        .pipe(gulp.dest(DEST + '/css'))
+        .pipe(browserSync.stream());
+};
+
+gulp.task('sass', function () {
+    return compileSASS('custom.css', {});
+});
+
+
+gulp.task('sass-minify', function () {
+    return compileSASS('custom.min.css', {
+        style: 'compressed'
+    });
+
+});
+
+gulp.task('browser-sync', function () {
+    browserSync.init({
+        server: {
+            baseDir: './'
+        },
+        startPath: './production/demo/index.html'
+    });
+});
+
+
+gulp.task('watch', function () {
+    // Watch .html files
+    gulp.watch('production/demo/*.html', browserSync.reload);
+    // Watch .js files
+    //gulp.watch('src/js/*.js', ['scripts']);
+    // Watch .scss files
+    gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
+});
+
+
+// Default Task
+gulp.task('default', ['browser-sync', 'watch']);
+
+var webpackStream = require('webpack-stream');
+var BowerWebpackPlugin = require('bower-webpack-plugin');
+var webpack = require("webpack");
+var named = require('vinyl-named');
 
 var plugins = [];
+
+
+// plugins.push(new BowerWebpackPlugin({
+//     modulesDirectories: ["vendors"],
+//     manifestFiles: "bower.json",
+//     excludes: [/.*\.less/]
+// }));
+
+plugins.push(new webpack.ProvidePlugin({
+    'window.jQuery': 'jquery',
+    'window.$': 'jquery',
+    jQuery: 'jquery',
+    $: 'jquery',
+}));
+
 
 var getStyleConfig = function () {
     plugins = [];
@@ -52,6 +127,7 @@ var getStyleConfig = function () {
         plugins: plugins
     };
 };
+//bulid css 
 
 gulp.task('build-style', function () {
     var config = getStyleConfig();
@@ -60,6 +136,40 @@ gulp.task('build-style', function () {
         .pipe(named())
         .pipe(webpackStream(config))
         .pipe(gulp.dest('production/assets/css/'));
+});
+gulp.task('watch-css', function () {
+    // Watch .html files
+    // Watch .scss files
+    gulp.watch('src/scss/**.scss', ['build-custom-style']);
+});
+//end css build
+var jsDist = 'production/assets/js/';
+gulp.task('build-vendors', function () {
+    plugins.push(new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            warnings: false
+        },
+        exclude: /css|png|jpg|gif｜\.min\.js$/,
+        minimize: true
+    }));
+    plugins.push(new webpack.optimize.DedupePlugin());
+    return gulp.src('src/config/vendors.js')
+        .pipe(named())
+        .pipe(webpackStream({
+            devtool: 'eval',
+            output: {
+                path: path.join(__dirname, "production/assets/js"),
+                filename: "app.js",
+                chunkFilename: "assets/js/[id].chunk.js"
+            },
+            module: {
+                loaders: [
+
+                ]
+            },
+            plugins: plugins
+        }))
+        .pipe(gulp.dest(jsDist));
 });
 
 gulp.task('build-app', function () {
@@ -81,7 +191,7 @@ gulp.task('build-app', function () {
             resolve: {
                 modulesDirectories: ['vendors'],
                 alias: {
-                    ng: "angular/angular",
+                    angular: "angular/angular",
                     "angular-route": "angular-route/angular-route.min",
                     "angular-datatables": "angular-datatables/dist/angular-datatables",
                     bootstrap: "bootstrap/dist/js/bootstrap.min",
@@ -102,7 +212,7 @@ gulp.task('build-app', function () {
                     nprogress: "nprogress/nprogress",
                     moment: "moment/moment",
                     "mjolnic-bootstrap-colorpicker": "mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min",
-                    pnotify: "pnotify/dist/pnotify",
+                    PNotify: "pnotify/dist/pnotify",
                     "promise-finally": "promise-finally/Main",
                     skycons: "skycons/skycons",
                     select2: "select2/dist/js/select2.full.min",
@@ -111,24 +221,22 @@ gulp.task('build-app', function () {
                     "angular-ui-grid": "angular-ui-grid/ui-grid.min"
                 },
                 extensions: ['', '.js']
-            }, plugins: [
-                new webpack.ResolverPlugin([
-                    new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["vendors"])
-                ])
-            ],
+            },
             module: {
-                loaders: [
-                    {
-                        test: /pnotify.*\.js$/,
-                        loader: "imports?define=>false,global=>window"
-                    }
-                ]
-            }
+                loaders: [{
+                    test: /[\/\\]angular\.js$/,
+                    loader: "exports?window.angular"
+                }, {
+                    test: /pnotify.*\.js$/,
+                    loader: "imports?define=>false,global=>window"
+                }]
+
+            },
+            plugins: plugins
         })).pipe(gulp.dest(jsDist));
 
 });
-gulp.task('build-all', ['build-app', 'build-style']);
-
+// war
 gulp.task('build-war', function () {
     gulp.src(["./production/**"])
         .pipe(war({
@@ -140,22 +248,26 @@ gulp.task('build-war', function () {
         .pipe(gulp.dest("./dist"));
 });
 
-gulp.task('browser-sync', function () {
-    browserSync.init({
-        server: {
-            baseDir: './'
-        },
-        startPath: './production/demo/index.html'
-    });
-});
+gulp.task('build-all', ['build-app', 'build-style']);
+gulp.task('joe', function () {
+    return gulp.src('src/config/joe.js')
+        .pipe(named())
+        .pipe(webpackStream({
+            devtool: 'eval-source-map',
+            module: {
+                loaders: [
 
-gulp.task('watch', function () {
-    // Watch .html files
-    gulp.watch('production/demo/*.html', browserSync.reload);
-    // Watch .js files
-    //gulp.watch('src/js/*.js', ['scripts']);
-    // Watch .scss files
-    gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
-});
+                    {
+                        test: /\.css$/,
+                        loader: "style!css"
+                    }, {
+                        test: /\.scss$/,
+                        loaders: ["style", "css", "sass"]
+                    }
+                ]
+            },
+            plugins: plugins
+        }))
+        .pipe(gulp.dest(jsDist));
 
-gulp.task('default', ['browser-sync', 'watch']);
+});
