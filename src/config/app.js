@@ -43,13 +43,13 @@ define(['jquery'], function (jquery) {
     global.echarts = require('echarts');
     global.moment = require('moment');
     global.PNotify = require('pnotify');
-
+    require('promise-finally');
 
     require('../../src/config/joe.js');
     require('ng');
     require('angular-route');
     require('angular-datatables');
-    require('promise-finally');
+
     require('angular-ui-grid');
 
     angular.module('pokemon', ['ngRoute', 'datatables', 'ui.grid', 'ui.grid.pagination', 'ui.grid.edit',

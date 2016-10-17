@@ -4375,6 +4375,16 @@ ul.notifications {
   border: 1px solid #e5e5e5;
 }
 /** /Dropzone.js **/
+.carousel-indicators{
+  bottom: -24px;
+  li{
+    border:1px solid #1ABB9C;
+  }
+  .active{
+      background-color: #1ABB9C;
+    }
+}
+
 
 
 .carousel-control {
@@ -4787,7 +4797,7 @@ ul.notifications {
 /* dragdrop */
 
 
-// btNgTable
+
 
 
 

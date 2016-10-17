@@ -60,7 +60,8 @@ gulp.task('build-style', function () {
     return gulp.src('src/config/style.js')
         .pipe(named())
         .pipe(webpackStream(config))
-        .pipe(gulp.dest('production/assets/css/'));
+        .pipe(gulp.dest('production/assets/css/'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('build-app', function () {
@@ -112,8 +113,7 @@ gulp.task('build-app', function () {
                     "angular-ui-grid": "angular-ui-grid/ui-grid.min"
                 },
                 extensions: ['', '.js']
-            }, plugins: [
-            ],
+            },
             module: {
                 loaders: [
                     {
@@ -149,7 +149,7 @@ gulp.task('browser-sync', function () {
 
 gulp.task('watch', function () {
     gulp.watch('production/demo/*.html', browserSync.reload);
-    gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
+    gulp.watch('src/scss/*.scss', ['build-style']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
