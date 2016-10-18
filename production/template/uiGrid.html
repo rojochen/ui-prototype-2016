@@ -23,12 +23,53 @@
 				<p ng-bind="'ID:' + msg.id"></p>
 				<p ng-bind="'firstName:'+msg.firstName"></p>
 				<p ng-bind="'lastName:'+msg.lastName"></p>
+				<p ng-bind="'Date:'+msg.date"></p>
+				<!-- Small modal -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">新增</button>
+				<button id="save" type="button" class="btn btn-success" ng-click="deleteSelected()">刪除</button>
+				<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+								<h4 class="modal-title" id="myModalLabel2">Ui-Gird</h4>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputEmail1">ID</label>
+										<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ID">
+
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail1">First Name</label>
+										<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter First Name">
+
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail1">Last Name</label>
+										<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Last Name">
+
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail1">Date</label>
+										<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Date">
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+								<button type="button" class="btn btn-primary">儲存</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Small modal -->
 				<div id="grid1" ui-grid="gridOptions" external-scopes="editRows" ui-grid-pagination ui-grid-selection ui-grid-exporter ui-grid-edit
 					ui-grid-row-edit ui-grid-cellnav ui-grid-move-columns ui-grid-autoResize ui-grid-save-state class="grid"></div>
 				<div class="clearfix">
 					<div class="pull-right">
-						<button id="save" type="button" class="btn btn-success" ng-click="saveState()">Save</button>
-						<button id="save" type="button" class="btn btn-success" ng-click="deleteSelected()">Del</button>
+
 					</div>
 				</div>
 			</bt-portlet>

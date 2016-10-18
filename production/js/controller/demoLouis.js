@@ -2,22 +2,25 @@ define(['btModule'], function (btModule) {
     'use strict';
 
     var app = angular.module("btModule");
-    louisCtrl.$inject = ['$scope', '$http'];
+    louisCtrl.$inject = ['$scope', '$http', '$q', '$interval'];
 
-    function louisCtrl($scope, $http) {
+    function louisCtrl($scope, $http, $q, $interval) {
         var vm = this;
 
         // angular-dataTable
         $http.get("../data/ngDataTable.json").success(function (data) {
             vm.link = data;
+            for (var i = 0; i < data.length; i++) {
+                data[i].date = new Date(data[i].date);
+            }
             $scope.gridOptions.data = data;
         });
 
         // ui-grid
 
-        // editableCellTemplate: '<aa></aa>'
-
         $scope.gridOptions = {}
+
+        // 控制項 & 資料樣式
         $scope.gridOptions = {
             columnDefs: [{
                 displayName: 'ID',
@@ -38,7 +41,7 @@ define(['btModule'], function (btModule) {
                 displayName: "Date",
                 field: 'date',
                 type: 'date',
-                cellFilter: 'date:"yyyy-MM-dd"'
+                cellFilter: 'date:"yyyy/MM/dd"'
             }],
             enableCellEditOnFocus: false, //Focus 後可編輯
             enableGridMenu: true, //是否顯示菜單
@@ -54,30 +57,42 @@ define(['btModule'], function (btModule) {
 
         $scope.gridOptions.onRegisterApi = function (gridApi) {
             $scope.gridApi = gridApi;
-            // selected&del
-            $scope.deleteSelected = function () {
-                angular.forEach($scope.gridApi.selection.getSelectedRows(), function (data, index) {
-                    $scope.gridOptions.data.splice($scope.gridOptions.data.lastIndexOf(data), 1);
-                });
-            }
+
             // edit 
             gridApi.edit.on.afterCellEdit($scope, function (rowEntity, colDef, newValue, oldValue) {
                 $scope.msg.lastCellEdited = 'edited row id:' + rowEntity.id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue;
                 $scope.msg.id = rowEntity.id;
                 $scope.msg.firstName = rowEntity.firstName;
                 $scope.msg.lastName = rowEntity.lastName;
+                $scope.msg.date = rowEntity.date;
                 $scope.$apply();
             });
+            // selected&del
+            $scope.deleteSelected = function () {
+                angular.forEach($scope.gridApi.selection.getSelectedRows(), function (data, index) {
+                    $scope.gridOptions.data.splice($scope.gridOptions.data.lastIndexOf(data), 1);
+                });
+            };
+            // saveRow
             gridApi.rowEdit.on.saveRow($scope, $scope.saveRow);
-        }
-        // saveRow
-        $scope.saveRow = function (rowEntity) {
-            var promise = $scope.someRepositoryFunction(rowEntity);
-            console.log(promise);
-            $scope.gridApi.rowEdit.setSavePromise($scope.gridApi.grid, rowEntity, promise);
-        }
-        $scope.someRepositoryFunction = function (row) {
-            return $http.put('../../data/ngDataTable.json', row);
+            $scope.saveRow = function (rowEntity) {
+
+                var promise = $scope.someRepositoryFunction(rowEntity);
+                $scope.gridApi.rowEdit.setSavePromise($scope.gridApi.grid, rowEntity, promise);
+
+                // fake a delay of 3 seconds whilst the save occurs, return error if gender is "male"
+                //$interval( function() {
+                //    if (rowEntity.firstName === 'male' ){
+                //        promise.reject();
+                //    } else {
+                //        promise.resolve();
+                //    }
+                //}, 3000, 1);
+            };
+
+            $scope.someRepositoryFunction = function (row) {
+                return $http.put('../../data/ngDataTable.json', row);
+            }
         }
 
     }

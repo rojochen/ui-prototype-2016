@@ -148,6 +148,7 @@ gulp.task('browser-sync', function () {
 
 gulp.task('watch', function () {
     gulp.watch('production/demo/*.html', browserSync.reload);
+    gulp.watch('production/template/*.html', browserSync.reload);
     gulp.watch('src/scss/*.scss', ['build-style']);
 });
 

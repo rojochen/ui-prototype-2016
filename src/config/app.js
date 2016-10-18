@@ -52,13 +52,16 @@ define(['jquery'], function (jquery) {
 
     require('angular-ui-grid');
 
-    angular.module('pokemon', ['ngRoute', 'datatables', 'ui.grid', 'ui.grid.pagination', 'ui.grid.edit',
+    angular.module('pokemon', ['ngRoute', 'datatables',
+        'ui.grid',
+        'ui.grid.pagination',
+        'ui.grid.edit',
         'ui.grid.cellNav',
         'ui.grid.moveColumns',
         'ui.grid.autoResize',
         'ui.grid.selection',
         'ui.grid.exporter',
-        'ui.grid.rowEdit',
+        'ui.grid.rowEdit'
     ]);
 
     return angular;
