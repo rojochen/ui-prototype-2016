@@ -90,9 +90,25 @@ define(['btModule'], function (btModule) {
                 //    }
                 //}, 3000, 1);
             };
-
             $scope.someRepositoryFunction = function (row) {
-                return $http.put('../../data/ngDataTable.json', row);
+                console.log(row);
+                return $http.put('', row);
+            }
+            // add
+            $scope.key = {};
+            $scope.add = function () {
+                if (!angular.isUndefined($scope.key.id) || !angular.isUndefined($scope.key.fName) || !angular.isUndefined($scope.key.lName) || !angular.isUndefined($scope.key.aDate)) {
+                    console.log($scope.key.id, $scope.key.fName, $scope.key.lName, $scope.key.aDate);
+                    $scope.gridOptions.data.push({
+                        "id": $scope.key.id,
+                        "firstName": $scope.key.fName,
+                        "lastName": $scope.key.lName,
+                        "date": $scope.key.aDate
+                    });
+                    alert('成功');
+                }
+
+
             }
         }
 
