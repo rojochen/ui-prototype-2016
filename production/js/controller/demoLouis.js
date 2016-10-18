@@ -74,7 +74,7 @@ define(['btModule'], function (btModule) {
                     $scope.gridOptions.data.splice($scope.gridOptions.data.lastIndexOf(data), 1);
                 });
             };
-            // saveRow
+            // 編輯後儲存 error
             gridApi.rowEdit.on.saveRow($scope, $scope.saveRow);
             $scope.saveRow = function (rowEntity) {
 
@@ -94,11 +94,10 @@ define(['btModule'], function (btModule) {
                 console.log(row);
                 return $http.put('', row);
             }
-            // add
+            // 新增
             $scope.key = {};
             $scope.add = function () {
                 if (!angular.isUndefined($scope.key.id) || !angular.isUndefined($scope.key.fName) || !angular.isUndefined($scope.key.lName) || !angular.isUndefined($scope.key.aDate)) {
-                    console.log($scope.key.id, $scope.key.fName, $scope.key.lName, $scope.key.aDate);
                     $scope.gridOptions.data.push({
                         "id": $scope.key.id,
                         "firstName": $scope.key.fName,
