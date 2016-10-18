@@ -104,6 +104,7 @@ define(['btModule'], function (btModule) {
                         "lastName": $scope.key.lName,
                         "date": $scope.key.aDate
                     });
+                    $('#modal').modal('hide');
                     alert('成功');
                 }
 
