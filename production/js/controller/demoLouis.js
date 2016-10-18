@@ -45,6 +45,7 @@ define(['btModule'], function (btModule) {
             }],
             enableCellEditOnFocus: false, //Focus 後可編輯
             enableGridMenu: true, //是否顯示菜單
+            enableFiltering: true, //查詢開關
             paginationPageSizes: [10, 50, 100, 200, 300], //每頁顯示數幾筆資料
             paginationPageSize: 10, //每頁顯示數
             saveFocus: true,
