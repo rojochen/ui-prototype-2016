@@ -5,7 +5,7 @@ define(['pokemon'], function(pokemon) {
     app.config(['$routeProvider', function ($routeProvider) {
 		$routeProvider
 				.when('/', {
-					templateUrl: "../NPV/views/index.html"
+					templateUrl: "../NPV/views/demo_1.html"
 				})
 				.otherwise({
 					redirectTo: '/'

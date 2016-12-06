@@ -30,22 +30,49 @@
 			</div>
 			<!-- /top navigation -->
 
-			<!-- page content -->
+			<!-- right menu -->
+			<div id="right-sidebar">
+				<div class="tabs">
+					<ul id="rstab" class="nav nav-tabs nav-justified">
+						<li class="active">
+							<a class='addIcon' href="#users" data-toggle="tab" aria-expanded="false">
+								<i class="fa fa-comments"></i>
+							</a>
+						</li>
+					</ul>
+					<div id="rstab-content" class="tab-content">
+						<div class="tab-pane fade active in" id="users">
+							<div class="chat-user-list">
+								<ul class="user-list list-group">
+									<li class="list-group-item clearfix">
+										<a href="#">
+											<img src="http://www.fetnet.net/estore/upload_img/promotionCM/cms/201608011554569.jpg" alt="avatar" class="activity">
+											<span class="activityName">遠傳哈拉精省</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 
+			</div>
+			<!-- /right menu -->
+
+			<!-- page content -->
 			<div class="right_col" role="main">
 				<div ng-view></div>
-				<hello-world>123</hello-world>
+				<!--<hello-world>123</hello-world>-->
 				<div class="clearfix"></div>
 			</div>
+			<!-- /page content -->
 
+			<!-- footer content -->
+			<footer>
+				<bt-footer name="New Prototype - 2017"></bt-footer>
+			</footer>
+			<!-- /footer content -->
 		</div>
-		<!-- /page content -->
-
-		<!-- footer content -->
-		<footer>
-			<bt-footer name="New Prototype - 2017"></bt-footer>
-		</footer>
-		<!-- /footer content -->
 	</div>
 	<script data-main="js/main.js" defer async="true" src="js/require.min.js"></script>
 </body>
