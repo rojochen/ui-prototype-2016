@@ -1,0 +1,15 @@
+i.fa.fa-3{
+    font-size: 4em;
+}
+i.fa.fa-2{
+    font-size: 2em;
+}
+.portrait{
+    margin-left: 25%;
+    margin-top: 20px;
+}
+
+.info-number .badge.style-right{
+    position: initial;
+    margin-bottom: 5px;
+}

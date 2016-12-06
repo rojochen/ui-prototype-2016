@@ -135,7 +135,8 @@ gulp.task('build-style', function() {
     return gulp.src('src/config/style.js')
         .pipe(named())
         .pipe(webpackStream(config))
-        .pipe(gulp.dest('production/assets/css/'));
+        .pipe(gulp.dest('production/assets/css/'))
+        .pipe(gulp.dest('NPV/assets/css/'));
 });
 gulp.task('watch-css', function() {
     // Watch .html files
@@ -232,7 +233,7 @@ gulp.task('build-app', function() {
 
             },
             plugins: plugins
-        })).pipe(gulp.dest(jsDist));
+        })).pipe(gulp.dest(jsDist)).pipe(gulp.dest('NPV/assets/js/'));
 
 });
 // war
