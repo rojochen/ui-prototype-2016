@@ -407,11 +407,22 @@ define(['btModule'], function (btModule) {
         //             "sNext": "下頁",
         //             "sLast": "尾頁"
         //         },
-        //         bFilter: false
         //     }
         // };
         // $("#datatable").DataTable(opt);
         // $("#datatable_activities").DataTable(opt);
+
+        // $('#datatable').DataTable({
+        //     // "bPaginate": false,
+        //     "bFilter": false,
+        //     // "bInfo": false
+        // });
+
+        // $('#datatable_activities').DataTable({
+        //     // "bPaginate": false,
+        //     "bFilter": false,
+        //     // "bInfo": false
+        // });
 
 
     }]);
