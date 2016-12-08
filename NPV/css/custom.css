@@ -13,3 +13,28 @@ i.fa.fa-2{
     position: initial;
     margin-bottom: 5px;
 }
+
+
+.listArea > .listBottom {
+    width:100%;
+    float: left;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 10px;
+    /*background: #fed364;*/
+    /*color:#fff;*/
+}
+.listArea > .listBottom > .iconArea {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 2% 3%;
+    border-right-color:#e6e9ed;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+.listArea > .listBottom > .iconArea:last-child {
+    border-right-width: 0px;
+}
+.listArea > .listBottom > .iconArea > i{
+    padding-right: 10px;
+}
