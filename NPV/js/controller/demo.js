@@ -29,7 +29,7 @@ define(['btModule'], function (btModule) {
 
         /*begin 問卷-查詢*/
         $timeout(function () {
-            $(".select2_single").select2({
+            $("#selectType").select2({
                 placeholder: "選擇類型",
                 allowClear: true
             });
@@ -37,6 +37,9 @@ define(['btModule'], function (btModule) {
 
 
         $scope.selectTypeItem = ['活動', '促代'];
+        $scope.activityGroupItem = ['G0141-4G續約-iPhone預繳方案'];
+        $scope.numberTypeItem = ['FET', 'AAA'];
+        $scope.typeItem = ['3轉4', '2轉3'];
         $scope.commonTable = [{
             "type": "活動",
             "name": "學生方案",
@@ -79,8 +82,37 @@ define(['btModule'], function (btModule) {
             "dateRange": "2016/12/01-2017/03/31"
         }];
 
+        $scope.activitiesTableData = [{
+            "SPV": "001",
+            "gateType": "FET",
+            "sort": "3轉4",
+            "activityCode": "A2696",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳(測試)",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G001",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "002",
+            "gateType": "FET",
+            "sort": "2轉3",
+            "activityCode": "B2222",
+            "activityName": "2轉3_iPhone SE 絕配續約專案_預繳(測試)",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G002",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "003",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }];
+
         var unbindWatcher = $scope.$watch('selectType', function (newValue, oldValue) {  //unbindWatcher(); ..未做
-            $log.debug(newValue, oldValue)
+            // $log.debug(newValue, oldValue);
             if (newValue) {
                 $scope.showSearch = true;
                 $scope.showAdd = true;
@@ -90,29 +122,27 @@ define(['btModule'], function (btModule) {
                 $scope.showCommonTable = false;
                 $scope.saerchKeyInput = '';
             }
-            if (newValue !== oldValue) {
-                $('#datatable').DataTable().destroy();  //重新順一下流程...
+            if (newValue !== oldValue) {  //要再順一下流程...
+                $('#datatable').DataTable().destroy();
                 $scope.commonTableData = [];
-                // $scope.showCommonTable = false;
+                $scope.saerchKeyInput = '';
+                $scope.showCommonTable = false;
             }
         }, true)
 
         $scope.saerch = function () {
             $scope.commonTableData = [];
-            // $log.debug($scope.saerchKeyInput);
-            $scope.saerchKey = $scope.saerchKeyInput;
-            $scope.showCommonTable = true;
             angular.forEach($scope.commonTable, function (item) {
                 if (item.type === $scope.selectType) {
                     $scope.commonTableData.push(item);
                 }
             })
             $timeout(function () {
-                $log.debug($.fn.dataTable.isDataTable('#datatable'));
-                if (!$.fn.dataTable.isDataTable('#datatable')) {
-                    $('#datatable').DataTable();
-                }
+                $('#datatable').DataTable();
+                // $log.debug($scope.saerchKeyInput);
+                $scope.saerchKey = $scope.saerchKeyInput;
             }, 100)
+            $scope.showCommonTable = true;
             // $log.debug($scope.commonTableData);
         }
 
@@ -131,44 +161,67 @@ define(['btModule'], function (btModule) {
                     $scope.defineItem.push(x);
                 }
             }
-            $log.debug($scope.defineItem);
+            $log.debug($scope.defineItem);  //後續要傳右方的值...
         }
 
         $scope.view = function (x) {
             $log.debug(x);
+            // $('#myModal').modal('show');  //未做....
         }
 
         $scope.edit = function (x) {
             $log.debug(x);
+            // $('#myModal').modal('show');  //未做....
         }
 
+        $scope.showActivities = false;
         $scope.saerchAdvanced = function () {
-            $log.debug('saerchAdvanced');
-            if ($scope.selectType) {
-                $log.debug('add-1');
-                // $scope.selectType = '';  //??
+            $('#datatable').DataTable().destroy();
+            $scope.commonTableData = [];
+            $scope.showCommonTable = false;
+            $scope.showSearch = false;
+            $log.debug($scope.selectType);
+            if ($scope.selectType === $scope.selectTypeItem[0]) {
+                $timeout(function () {
+                    $("#activityGroup").select2({
+                        placeholder: "選擇活動群組",
+                        allowClear: true
+                    });
+                    $("#numberType").select2({
+                        placeholder: "選擇門號類型",
+                        allowClear: true
+                    });
+                    $("#type").select2({
+                        placeholder: "選擇種類",
+                        allowClear: true
+                    });
+                }, 100)
+                $scope.showActivities = true;
             } else {
-                swal({
-                    title: '錯誤',
-                    html: $('<div>')
-                        .addClass('some-class')
-                        .text('請選擇進階查詢類型!!')
-                }).done();
+                $log.debug('next');  //未做...完
             }
+            // $log.debug($scope.commonTableData);
         }
 
-        $scope.addItem = function () {
-            if ($scope.selectType) {
-                $log.debug('add-1');  //新增活動、促代未做...
-                // $scope.selectType = '';  //??
-            } else {
-                swal({
-                    title: '錯誤',
-                    html: $('<div>')
-                        .addClass('some-class')
-                        .text('請選擇新增類型!!')
-                }).done();
-            }
+        $scope.showActivitiesTable = false;
+        $scope.activities_Advanced = function () {  //未做...完
+            $log.debug('進階查詢_活動');
+            $log.debug($scope.SPV + " " + $scope.activityCode + " " + $scope.activityName + " " + $scope.groupCode + " " + $scope.activityGroup + " " + $scope.numberType + " " + $scope.type);
+            $timeout(function () {
+                $('#datatable_activities').DataTable();
+                // $scope.saerchKey = $scope.saerchKeyInput;  //search未做...
+            }, 100)
+            $log.debug($scope.activitiesTableData);
+            $scope.showActivitiesTable = true;
+        }
+
+        $scope.changeSearch = function () {
+            $scope.showSearch = true;
+            $scope.showActivities = false;
+        }
+
+        $scope.addItem = function () {  //未做...
+            $log.debug('新增');
         }
         /*end 問卷-查詢*/
     }]);
