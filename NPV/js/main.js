@@ -7,13 +7,12 @@
 			pokemon: 'assets/js/app',
 			btModule: 'js/module/demoModule',
 			btController: 'js/controller/demoBt',
+			demoCtrl: 'js/controller/demo',
 			footer: 'js/component/footer',
-			header: 'js/component/header',
-			btPortlet: 'js/component/btPortlet',
+			header: 'js/component/header'
 		}
 	});	
-	require(['pokemon', 'btModule', 'btController', 'footer','header', 'btPortlet'], function(pokemon, btModule, btController, footer, header, btPortlet) {
-
+	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer','header'], function(pokemon, btModule, btController, demoCtrl, footer, header) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
