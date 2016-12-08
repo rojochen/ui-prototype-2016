@@ -41,46 +41,60 @@ define(['btModule'], function (btModule) {
         $scope.numberTypeItem = ['FET', 'AAA'];
         $scope.typeItem = ['3轉4', '2轉3'];
         $scope.commonTable = [{
-            "type": "活動",
-            "name": "學生方案",
-            "dateRange": "2016/07/01-2017/03/31"
-        }, {
-            "type": "活動",
-            "name": "小資方案",
-            "dateRange": "2016/09/01-2017/12/31"
-        }, {
-            "type": "促代",
-            "name": "匯入-遠傳e書城149限12設備補貼",
-            "dateRange": "2016/09/15-2017/04/30"
-        }, {
-            "type": "促代",
-            "name": "3G單辦終極管家plus月租699A限24",
-            "dateRange": "2016/12/01-2017/03/31"
-        }, {
-            "type": "活動",
-            "name": "長青方案",
-            "dateRange": "2016/10/01-2016/12/31"
-        }, {
-            "type": "促代",
-            "name": "行動理財3G續約專案-590",
-            "dateRange": "2016/11/01-2017/04/30"
-        }, {
-            "type": "促代",
-            "name": "行動理財4G續約專案-790",
-            "dateRange": "2016/11/01-2017/04/30"
-        }, {
-            "type": "促代",
-            "name": "行動理財4G續約專案-1190",
-            "dateRange": "2016/11/01-2017/04/30"
-        }, {
-            "type": "促代",
-            "name": "3G單辦終極管家plus月租899A限24",
-            "dateRange": "2016/12/01-2017/03/31"
-        }, {
-            "type": "促代",
-            "name": "3G單辦終極管家plus月租399A限24",
-            "dateRange": "2016/12/01-2017/03/31"
-        }];
+                "type": "活動",
+                "name": "學生方案",
+                "dateRange": "2016/07/01-2017/03/31"
+            }, {
+                "type": "活動",
+                "name": "小資方案",
+                "dateRange": "2016/09/01-2017/12/31"
+            }, {
+                "type": "促代",
+                "name": "匯入-遠傳e書城149限12設備補貼",
+                "dateRange": "2016/09/15-2017/04/30"
+            }, {
+                "type": "促代",
+                "name": "3G單辦終極管家plus月租699A限24",
+                "dateRange": "2016/12/01-2017/03/31"
+            }, {
+                "type": "活動",
+                "name": "長青方案",
+                "dateRange": "2016/10/01-2016/12/31"
+            }, {
+                "type": "促代",
+                "name": "行動理財3G續約專案-590",
+                "dateRange": "2016/11/01-2017/04/30"
+            }, {
+                "type": "促代",
+                "name": "行動理財4G續約專案-790",
+                "dateRange": "2016/11/01-2017/04/30"
+            }, {
+                "type": "促代",
+                "name": "行動理財4G續約專案-1190",
+                "dateRange": "2016/11/01-2017/04/30"
+            }, {
+                "type": "促代",
+                "name": "3G單辦終極管家plus月租899A限24",
+                "dateRange": "2016/12/01-2017/03/31"
+            }, {
+                "type": "促代",
+                "name": "3G單辦終極管家plus月租399A限24",
+                "dateRange": "2016/12/01-2017/03/31"
+            }, {
+                "type": "活動",
+                "name": "小資方案",
+                "dateRange": "2016/12/01-2017/04/23"
+            }, {
+                "type": "活動",
+                "name": "學生方案",
+                "dateRange": "2016/12/08-2017/04/26"
+            }, {
+                "type": "活動",
+                "name": "學生方案",
+                "dateRange": "2016/12/03-2017/02/26"
+            }
+
+        ];
 
         $scope.activitiesTableData = [{
             "SPV": "001",
@@ -109,9 +123,162 @@ define(['btModule'], function (btModule) {
             "activityRange": "2016/09/08-2016/12/31",
             "groupCode": "G003",
             "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "004",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "D3633",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "005",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "E3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "006",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "F3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "007",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "G3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "008",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "009",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "010",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "011",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "012",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "013",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "014",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "015",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "016",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "017",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "018",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "019",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
+        }, {
+            "SPV": "020",
+            "gateType": "AAA",
+            "sort": "3轉4",
+            "activityCode": "C3333",
+            "activityName": "3轉4_iPhone SE 絕配續約專案_預繳",
+            "activityRange": "2016/09/08-2016/12/31",
+            "groupCode": "G003",
+            "groupName": "G0141-4G續約-iPhone預繳方案"
         }];
 
-        var unbindWatcher = $scope.$watch('selectType', function (newValue, oldValue) {  //unbindWatcher(); ..未做
+        var unbindWatcher = $scope.$watch('selectType', function (newValue, oldValue) { //unbindWatcher(); ..未做
             // $log.debug(newValue, oldValue);
             if (newValue) {
                 $scope.showSearch = true;
@@ -122,7 +289,7 @@ define(['btModule'], function (btModule) {
                 $scope.showCommonTable = false;
                 $scope.saerchKeyInput = '';
             }
-            if (newValue !== oldValue) {  //要再順一下流程...
+            if (newValue !== oldValue) { //要再順一下流程...
                 $('#datatable').DataTable().destroy();
                 $scope.commonTableData = [];
                 $scope.saerchKeyInput = '';
@@ -161,7 +328,7 @@ define(['btModule'], function (btModule) {
                     $scope.defineItem.push(x);
                 }
             }
-            $log.debug($scope.defineItem);  //後續要傳右方的值...
+            $log.debug($scope.defineItem); //後續要傳右方的值...
         }
 
         $scope.view = function (x) {
@@ -198,13 +365,13 @@ define(['btModule'], function (btModule) {
                 }, 100)
                 $scope.showActivities = true;
             } else {
-                $log.debug('next');  //未做...完
+                $log.debug('next'); //未做...完
             }
             // $log.debug($scope.commonTableData);
         }
 
         $scope.showActivitiesTable = false;
-        $scope.activities_Advanced = function () {  //未做...完
+        $scope.activities_Advanced = function () { //未做...完
             $log.debug('進階查詢_活動');
             $log.debug($scope.SPV + " " + $scope.activityCode + " " + $scope.activityName + " " + $scope.groupCode + " " + $scope.activityGroup + " " + $scope.numberType + " " + $scope.type);
             $timeout(function () {
@@ -220,10 +387,10 @@ define(['btModule'], function (btModule) {
             $scope.showActivities = false;
         }
 
-        $scope.addItem = function () {  //未做...
-            $log.debug('新增');
-        }
-        /*end 問卷-查詢*/
+        $scope.addItem = function () { //未做...
+                $log.debug('新增');
+            }
+            /*end 問卷-查詢*/
     }]);
     return app;
 });
