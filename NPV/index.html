@@ -11,6 +11,24 @@
 	<link href="assets/css/style.css" rel="stylesheet">
 	<!-- Custom Theme Style -->
 	<link href="css/custom.css" rel="stylesheet">
+	<style>
+		.radius-icon {
+			border-radius: 30px;
+			width: 50px !important;
+			height: 50px !important;
+		}
+		
+		.float-left {
+			float: left;
+		}
+		
+		.activityName {
+			display: block;
+			font-weight: 700;
+			width: 100%;
+			float: left;
+		}
+	</style>
 </head>
 
 <body class="nav-md">
@@ -35,7 +53,7 @@
 				<div class="tabs">
 					<ul id="rstab" class="nav nav-tabs nav-justified">
 						<li class="active">
-							<a class='addIcon' href="#users" data-toggle="tab" aria-expanded="false">
+							<a class="addIcon" href="#users" data-toggle="tab" aria-expanded="false">
 								<i class="fa fa-comments"></i>
 							</a>
 						</li>
@@ -44,11 +62,21 @@
 						<div class="tab-pane fade active in" id="users">
 							<div class="chat-user-list">
 								<ul class="user-list list-group">
+
 									<li class="list-group-item clearfix">
-										<a href="#">
-											<img src="http://www.fetnet.net/estore/upload_img/promotionCM/cms/201608011554569.jpg" alt="avatar" class="activity">
-											<span class="activityName">遠傳哈拉精省</span>
-										</a>
+									 
+											<div style="width:20%" class="float-left">
+												<img src="http://www.fetnet.net/estore/upload_img/promotionCM/cms/201608011554569.jpg" class="activity radius-icon">
+											</div>
+											<div style="width:80%;padding-left:10px" class="float-left">												
+												<span class="activityName">活動類別</span>
+												<span class="activityName">遠傳哈拉精省遠傳哈拉精省遠傳哈拉精省遠傳哈拉精省遠傳哈拉精省遠傳哈拉精省遠傳哈拉精省遠傳哈拉精省</span>
+												<span class="activityName"></span>
+											</div>
+											<div style="width:100%">
+												編輯 | 檢視 | 移除
+											</div>
+										 
 									</li>
 								</ul>
 							</div>
