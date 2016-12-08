@@ -21,7 +21,7 @@ i.fa.fa-2{
     display: -webkit-flex;
     display: flex;
     margin-top: 10px;
-    background: #fed364;
+    /*background: #fed364;*/
     /*color:#fff;*/
 }
 .listArea > .listBottom > .iconArea {
