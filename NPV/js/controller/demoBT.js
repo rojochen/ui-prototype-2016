@@ -11,10 +11,13 @@ define(['btModule'], function (btModule) {
             $LEFT_COL = $('.left_col'),
             $RIGHT_COL = $('.right_col'),
             $NAV_MENU = $('.nav_menu'),
+            $RIGHT_SIDEBAR = $('#right-sidebar'),
             $FOOTER = $('footer');
         $timeout(function () {
             // Sidebar
             $(document).ready(function () {
+                $RIGHT_COL.css('padding-top', $NAV_MENU.height());
+                $RIGHT_SIDEBAR.css('padding-top', $NAV_MENU.height());
                 // TODO: This is some kind of easy fix, maybe we can improve this
                 var setContentHeight = function () {
                     // reset height
@@ -74,6 +77,8 @@ define(['btModule'], function (btModule) {
                     }
 
                     $BODY.toggleClass('nav-md nav-sm');
+                    $RIGHT_COL.css('padding-top', $NAV_MENU.height());
+                    $RIGHT_SIDEBAR.css('padding-top', $NAV_MENU.height());
 
                     setContentHeight();
                 });
@@ -89,6 +94,8 @@ define(['btModule'], function (btModule) {
 
                 // recompute content when resizing
                 $(window).smartresize(function () {
+                    $RIGHT_COL.css('padding-top', $NAV_MENU.height());
+                    $RIGHT_SIDEBAR.css('padding-top', $NAV_MENU.height());
                     setContentHeight();
                 });
 

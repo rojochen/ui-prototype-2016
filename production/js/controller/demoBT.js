@@ -1,21 +1,21 @@
-define(['btModule'], function(btModule) {
+define(['btModule'], function (btModule) {
     'use strict';
     var app = angular.module("btModule");
-    
+
     indexCtrl.$inject = ['$http'];
-    function indexCtrl($http){
+    function indexCtrl($http) {
         var vm = this;
         vm.con = 'angular';
-        vm.sayHello = function(){
+        vm.sayHello = function () {
             alert('sayHello-ff');
         };
     };
     app.controller('indexCtrl', indexCtrl);
 
-    app.controller("tableCtrl", function($scope) {
+    app.controller("tableCtrl", function ($scope) {
         $scope.con = "angular";
     });
-    app.controller('sliderMenu', ['$scope', '$timeout', function($scope, $timeout) {
+    app.controller('sliderMenu', ['$scope', '$timeout', function ($scope, $timeout) {
         var CURRENT_URL = window.location.href.split('?')[0],
             $BODY = $('body'),
             $MENU_TOGGLE = $('#menu_toggle'),
@@ -25,11 +25,12 @@ define(['btModule'], function(btModule) {
             $RIGHT_COL = $('.right_col'),
             $NAV_MENU = $('.nav_menu'),
             $FOOTER = $('footer');
-        $timeout(function() {
+        $timeout(function () {
             // Sidebar
-            $(document).ready(function() {
+            $(document).ready(function () {
+                $RIGHT_COL.css('padding-top', $NAV_MENU.height());
                 // TODO: This is some kind of easy fix, maybe we can improve this
-                var setContentHeight = function() {
+                var setContentHeight = function () {
                     // reset height
                     $RIGHT_COL.css('min-height', $(window).height());
 
@@ -45,7 +46,7 @@ define(['btModule'], function(btModule) {
                     $RIGHT_COL.css('min-height', contentHeight);
                 };
 
-                $SIDEBAR_MENU.find('a').on('click', function(ev) {
+                $SIDEBAR_MENU.find('a').on('click', function (ev) {
                     var $li = $(this).parent();
                     var $slideUpTime = 150;
                     if ($BODY.hasClass('nav-md')) {
@@ -56,7 +57,7 @@ define(['btModule'], function(btModule) {
 
                     if ($li.is('.active')) {
                         $li.removeClass('active active-sm');
-                        $('ul:first', $li).slideUp($slideUpTime, function() {
+                        $('ul:first', $li).slideUp($slideUpTime, function () {
                             setContentHeight();
                         });
                     } else {
@@ -70,14 +71,14 @@ define(['btModule'], function(btModule) {
 
                         $li.addClass('active');
 
-                        $('ul:first', $li).slideDown($slideUpTime, function() {
+                        $('ul:first', $li).slideDown($slideUpTime, function () {
                             // setContentHeight();
                         });
                     }
                 });
 
                 // toggle small or large menu
-                $MENU_TOGGLE.on('click', function() {
+                $MENU_TOGGLE.on('click', function () {
                     if ($BODY.hasClass('nav-md')) {
                         $SIDEBAR_MENU.find('li.active ul').hide();
                         $SIDEBAR_MENU.find('li.active').addClass('active-sm').removeClass('active');
@@ -87,6 +88,7 @@ define(['btModule'], function(btModule) {
                     }
 
                     $BODY.toggleClass('nav-md nav-sm');
+                    $RIGHT_COL.css('padding-top', $NAV_MENU.height());
 
                     setContentHeight();
                 });
@@ -94,14 +96,15 @@ define(['btModule'], function(btModule) {
                 // check active menu
                 $SIDEBAR_MENU.find('a[href="' + CURRENT_URL + '"]').parent('li').addClass('current-page');
 
-                $SIDEBAR_MENU.find('a').filter(function() {
+                $SIDEBAR_MENU.find('a').filter(function () {
                     return this.href == CURRENT_URL;
-                }).parent('li').addClass('current-page').parents('ul').slideDown(function() {
+                }).parent('li').addClass('current-page').parents('ul').slideDown(function () {
                     setContentHeight();
                 }).parent().addClass('active');
 
                 // recompute content when resizing
-                $(window).smartresize(function() {
+                $(window).smartresize(function () {
+                    $RIGHT_COL.css('padding-top', $NAV_MENU.height());
                     setContentHeight();
                 });
 
