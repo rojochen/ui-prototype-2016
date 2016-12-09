@@ -39,8 +39,8 @@ define(['btModule'], function (btModule) {
                 "sSearch": "搜索:",
                 "oPaginate": {
                     "sFirst": "首頁",
-                    "sPrevious": "上頁",
-                    "sNext": "下頁",
+                    "sPrevious": "上一頁",
+                    "sNext": "下一頁",
                     "sLast": "尾頁"
                 },
             },
