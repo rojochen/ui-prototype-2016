@@ -174,27 +174,214 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- begin Large modal -->
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="myModal">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-				<h4 class="modal-title" id="myModalLabel">Model 標題</h4>
-			</div>
-			<div class="modal-body">
-				<h4>Text in a model</h4>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-					dolor auctor.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec
-					sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-				<button type="button" class="btn btn-primary">儲存</button>
+	<!-- begin Large modal -->
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">mpn</button>
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="myModal">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+						<h4 class="modal-title" id="myModalLabel">Model 標題</h4>
+					</div>
+					<div class="modal-body">
+						<!--SPV-NO-->
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-12">
+									<table class="table table-condensed table-bordered">
+										<thead>
+											<tr>
+												<th>SR-NO</th>
+												<th>SPV-NO</th>
+												<th>OFFER ID</th>
+												<th>上架次數</th>
+												<th>上一版本編號</th>
+												<th>促代群組</th>
+												<th colspan="5">重新上架備註</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>N/A</td>
+												<td>N/A</td>
+												<td>N/A</td>
+												<td>N/A</td>
+												<td>N/A</td>
+												<td>N/A</td>
+												<td class="active" colspan="5"><input class="form-control input-sm" type="text" placeholder="N/A" disabled></td>
+											</tr>
+											<tr>
+												<td colspan="3" class="info">項目</td>
+												<td colspan="4" class="info">內容</td>
+											</tr>
+											<tr>
+												<td colspan="3">主約促代 代碼/名稱 180Byte</td>
+												<td colspan="4">
+													<div class="col-lg-3">
+														<input class="form-control input-sm" type="text" placeholder="" disabled>
+													</div>
+													<div class="col-lg-6">
+														<input class="form-control input-sm" type="text" placeholder="">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3">附約促代 代碼/名稱</td>
+												<td colspan="4">
+													<div class="col-lg-3">
+														<input class="form-control input-sm btn-sm" type="text" placeholder="" disabled>
+													</div>
+													<div class="col-lg-6">
+														<input class="form-control input-sm btn-sm" type="text" placeholder="">
+													</div>
+													<div class="col-lg-3">
+														<div class="row">
+															<button type="button" class="btn btn-default btn-sm" style="color: #73879c">...</button>
+															<button type="button" class="btn btn-default btn-sm" style="color: #73879c">移除赴約</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- end SPV-NO-->
+						<!--合約資訊設定-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>合約資訊設定</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12">
+											<table class="table table-bordered">
+												<thead>
+													<tr>
+														<th>項目</th>
+														<th>選項</th>
+														<th>內容</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="active">GSM Voice 合約</td>
+														<td>
+															<div class="form-group-sm">
+																<label class="control-label col-md-3 col-sm-3 col-xs-12" style="height:30px;     margin-top: 5px;">最低月租費:</label>
+																<div class="col-md-6 col-sm-6 col-xs-12">
+																	<select class="form-control input-sm">
+																		<option>請選擇</option>
+																		<option>選項 1</option>
+																		<option>選項 2</option>
+																		<option>選項 3</option>
+																		<option>選項 4</option>
+                													</select>
+																</div>
+																<div class="col-md-2">
+																	<button type="button" class="btn btn-default btn-sm" style="color: #73879c">篩選</button>
+																</div>
+															</div>
+														</td>
+														<td class="warning"></td>
+													</tr>
+													<tr>
+														<td class="active">合約期限</td>
+														<td>
+															<div class="form-group-sm">
+																<div class="col-md-6 col-sm-6 col-xs-12">
+																	<select class="form-control input-sm">
+																		<option>請選擇</option>
+																		<option>選項 1</option>
+																		<option>選項 2</option>
+																		<option>選項 3</option>
+																		<option>選項 4</option>
+                													</select>
+																</div>
+															</div>
+														</td>
+														<td class="warning"></td>
+													</tr>
+													<tr>
+														<td class="active">GSM Voice 合約違約金額</td>
+														<td>
+															<div class="form-group">
+																<div class="col-md-12 col-sm-9 col-xs-12">
+																	<div class="radio">
+																		<label>
+                              <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">Y (有違約金額)</label>
+																		<button type="button" class="btn btn-default btn-sm" style="color: #73879c;margin-left:5px;">違約金額設定</button>
+																	</div>
+																	<div class="radio">
+																		<label>
+                              <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">N (無違約金條款)
+                            </label>
+																	</div>
+																	<div class="radio">
+																	</div>
+																</div>
+															</div>
+														</td>
+														<td>
+															<div class="col-md-12 col-sm-12 col-xs-12">
+																<div class="control-group" style="border:1px solid ">
+																	<div class="col-md-12 col-sm-12 col-xs-12 row">
+																		<div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;">
+																			<div class="container-fluid">
+																				<div class="row">
+																					<div class="col-md-12">
+																						<div class="btn-group btn-group-sm">
+																							<button class="btn btn-default" type="button">
+				Left
+				</button>
+																							<button class="btn btn-default" type="button">
+				 Center
+				</button>
+																							<button class="btn btn-default" type="button">
+					 Right
+				</button>
+																							<button class="btn btn-default" type="button">
+					Justify
+				</button>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="active">高改低限制</td>
+														<td>03/04/2012</td>
+														<td>Pending</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end 合約資訊設定-->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">儲存</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+	<!-- end Large modal -->
 </div>
-<!-- end Large modal -->
