@@ -28,6 +28,25 @@ define(['btModule'], function (btModule) {
 
 
         /*begin 問卷-查詢*/
+        var opt = {
+            "oLanguage": {
+                "sProcessing": "處理中...",
+                "sLengthMenu": "顯示 _MENU_ 項結果",
+                "sZeroRecords": "沒有匹配結果",
+                "sInfo": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                "sInfoEmpty": "顯示第 0 至 0 項結果，共 0 項",
+                "sInfoFiltered": "(從 _MAX_ 項結果過濾)",
+                "sSearch": "搜索:",
+                "oPaginate": {
+                    "sFirst": "首頁",
+                    "sPrevious": "上頁",
+                    "sNext": "下頁",
+                    "sLast": "尾頁"
+                },
+            },
+            "searching": false
+        };
+
         $timeout(function () {
             $("#selectType").select2({
                 placeholder: "選擇類型",
@@ -41,58 +60,58 @@ define(['btModule'], function (btModule) {
         $scope.numberTypeItem = ['FET', 'AAA'];
         $scope.typeItem = ['3轉4', '2轉3'];
         $scope.commonTable = [{
-                "type": "活動",
-                "name": "學生方案",
-                "dateRange": "2016/07/01-2017/03/31"
-            }, {
-                "type": "活動",
-                "name": "小資方案",
-                "dateRange": "2016/09/01-2017/12/31"
-            }, {
-                "type": "促代",
-                "name": "匯入-遠傳e書城149限12設備補貼",
-                "dateRange": "2016/09/15-2017/04/30"
-            }, {
-                "type": "促代",
-                "name": "3G單辦終極管家plus月租699A限24",
-                "dateRange": "2016/12/01-2017/03/31"
-            }, {
-                "type": "活動",
-                "name": "長青方案",
-                "dateRange": "2016/10/01-2016/12/31"
-            }, {
-                "type": "促代",
-                "name": "行動理財3G續約專案-590",
-                "dateRange": "2016/11/01-2017/04/30"
-            }, {
-                "type": "促代",
-                "name": "行動理財4G續約專案-790",
-                "dateRange": "2016/11/01-2017/04/30"
-            }, {
-                "type": "促代",
-                "name": "行動理財4G續約專案-1190",
-                "dateRange": "2016/11/01-2017/04/30"
-            }, {
-                "type": "促代",
-                "name": "3G單辦終極管家plus月租899A限24",
-                "dateRange": "2016/12/01-2017/03/31"
-            }, {
-                "type": "促代",
-                "name": "3G單辦終極管家plus月租399A限24",
-                "dateRange": "2016/12/01-2017/03/31"
-            }, {
-                "type": "活動",
-                "name": "小資方案",
-                "dateRange": "2016/12/01-2017/04/23"
-            }, {
-                "type": "活動",
-                "name": "學生方案",
-                "dateRange": "2016/12/08-2017/04/26"
-            }, {
-                "type": "活動",
-                "name": "學生方案",
-                "dateRange": "2016/12/03-2017/02/26"
-            }
+            "type": "活動",
+            "name": "學生方案",
+            "dateRange": "2016/07/01-2017/03/31"
+        }, {
+            "type": "活動",
+            "name": "小資方案",
+            "dateRange": "2016/09/01-2017/12/31"
+        }, {
+            "type": "促代",
+            "name": "匯入-遠傳e書城149限12設備補貼",
+            "dateRange": "2016/09/15-2017/04/30"
+        }, {
+            "type": "促代",
+            "name": "3G單辦終極管家plus月租699A限24",
+            "dateRange": "2016/12/01-2017/03/31"
+        }, {
+            "type": "活動",
+            "name": "長青方案",
+            "dateRange": "2016/10/01-2016/12/31"
+        }, {
+            "type": "促代",
+            "name": "行動理財3G續約專案-590",
+            "dateRange": "2016/11/01-2017/04/30"
+        }, {
+            "type": "促代",
+            "name": "行動理財4G續約專案-790",
+            "dateRange": "2016/11/01-2017/04/30"
+        }, {
+            "type": "促代",
+            "name": "行動理財4G續約專案-1190",
+            "dateRange": "2016/11/01-2017/04/30"
+        }, {
+            "type": "促代",
+            "name": "3G單辦終極管家plus月租899A限24",
+            "dateRange": "2016/12/01-2017/03/31"
+        }, {
+            "type": "促代",
+            "name": "3G單辦終極管家plus月租399A限24",
+            "dateRange": "2016/12/01-2017/03/31"
+        }, {
+            "type": "活動",
+            "name": "小資方案",
+            "dateRange": "2016/12/01-2017/04/23"
+        }, {
+            "type": "活動",
+            "name": "學生方案",
+            "dateRange": "2016/12/08-2017/04/26"
+        }, {
+            "type": "活動",
+            "name": "學生方案",
+            "dateRange": "2016/12/03-2017/02/26"
+        }
 
         ];
 
@@ -305,7 +324,7 @@ define(['btModule'], function (btModule) {
                 }
             })
             $timeout(function () {
-                $('#datatable').DataTable();
+                $('#datatable').DataTable(opt);
                 // $log.debug($scope.saerchKeyInput);
                 $scope.saerchKey = $scope.saerchKeyInput;
             }, 100)
@@ -375,7 +394,7 @@ define(['btModule'], function (btModule) {
             $log.debug('進階查詢_活動');
             $log.debug($scope.SPV + " " + $scope.activityCode + " " + $scope.activityName + " " + $scope.groupCode + " " + $scope.activityGroup + " " + $scope.numberType + " " + $scope.type);
             $timeout(function () {
-                $('#datatable_activities').DataTable();
+                $('#datatable_activities').DataTable(opt);
                 // $scope.saerchKey = $scope.saerchKeyInput;  //search未做...
             }, 100)
             $log.debug($scope.activitiesTableData);
@@ -388,43 +407,9 @@ define(['btModule'], function (btModule) {
         }
 
         $scope.addItem = function () { //未做...
-                $log.debug('新增');
-            }
-            /*end 問卷-查詢*/
-
-        // var opt = {
-        //     "oLanguage": {
-        //         "sProcessing": "處理中...",
-        //         "sLengthMenu": "顯示 _MENU_ 項結果",
-        //         "sZeroRecords": "沒有匹配結果",
-        //         "sInfo": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
-        //         "sInfoEmpty": "顯示第 0 至 0 項結果，共 0 項",
-        //         "sInfoFiltered": "(從 _MAX_ 項結果過濾)",
-        //         "sSearch": "搜索:",
-        //         "oPaginate": {
-        //             "sFirst": "首頁",
-        //             "sPrevious": "上頁",
-        //             "sNext": "下頁",
-        //             "sLast": "尾頁"
-        //         },
-        //     }
-        // };
-        // $("#datatable").DataTable(opt);
-        // $("#datatable_activities").DataTable(opt);
-
-        // $('#datatable').DataTable({
-        //     // "bPaginate": false,
-        //     "bFilter": false,
-        //     // "bInfo": false
-        // });
-
-        // $('#datatable_activities').DataTable({
-        //     // "bPaginate": false,
-        //     "bFilter": false,
-        //     // "bInfo": false
-        // });
-
-
+            $log.debug('新增');
+        }
+        /*end 問卷-查詢*/
     }]);
     return app;
 });
