@@ -27,7 +27,7 @@
 						<label class="control-label col-md-2 col-sm-2 col-xs-12">選擇類型</label>
 						<div class="col-md-10 col-sm-10 col-xs-12">
 							<select class="select2_single form-control" style="width:100%" id="selectType" tabindex="-1" ng-options="x for x in selectTypeItem"
-											ng-model="selectType">
+								ng-model="selectType">
                           <option></option>
                           <option value="{{x}}" ng-bind="x"></option>
                         </select>
@@ -69,7 +69,7 @@
 							<label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">活動群組</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
 								<select class="select2_single form-control" style="width:100%" id="activityGroup" tabindex="-1" ng-options="x for x in activityGroupItem"
-												ng-model="activityGroup">
+									ng-model="activityGroup">
                           <option></option>
                           <option value="{{x}}" ng-bind="x"></option>
                         </select>
@@ -77,7 +77,7 @@
 							<label class="control-label col-md-2 col-sm-2 col-xs-12" for="numberType">門號類型</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
 								<select class="select2_single form-control" style="width:100%" id="numberType" tabindex="-1" ng-options="x for x in numberTypeItem"
-												ng-model="numberType">
+									ng-model="numberType">
                           <option></option>
                           <option value="{{x}}" ng-bind="x"></option>
                         </select>
@@ -106,15 +106,15 @@
 						<thead>
 							<tr role="row">
 								<th class="sorting_asc text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-												colspan="1" aria-sort="ascending">加入</th>
+									colspan="1" aria-sort="ascending">加入</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-												colspan="1">類型</th>
+									colspan="1">類型</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-												colspan="1">名稱</th>
+									colspan="1">名稱</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-												colspan="1">期間</th>
+									colspan="1">期間</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-												colspan="1">修改</th>
+									colspan="1">修改</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -260,112 +260,103 @@
 								<div class="clearfix"></div>
 							</div>
 							<div class="x_content">
-								<div class="container-fluid ">
-									<div class="row">
-										<div class="col-md-12">
-											<table class="table table-bordered">
-												<thead>
-													<tr>
-														<th>項目</th>
-														<th>選項</th>
-														<th>內容</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td class="active">GSM Voice 合約</td>
-														<td>
-															<div class="form-group-sm">
-																<label class="control-label col-md-3 col-sm-3 col-xs-12" style="height:30px;     margin-top: 5px;">最低月租費:</label>
-																<div class="col-md-6 col-sm-6 col-xs-12">
-																	<select class="form-control input-sm">
+								<div class="container-fluid">
+									<div class="col-md-12 text-center ">
+										<div class="col-md-3">項目</div>
+										<div class="col-md-6">選項</div>
+										<div class="col-md-3">內容</div>
+									</div>
+									<div class="col-md-12" style="margin-top:10px;">
+										<div class="col-md-3">GSM Voice 合約</div>
+										<div class="col-md-6 ">
+											<div class="form-group-sm">
+												<label class="control-label col-md-4 col-sm-4 col-xs-12 text-left">最低月租費:</label>
+												<div class="col-md-6 col-sm-6 col-xs-12">
+													<select class="form-control input-sm">
 																		<option>請選擇</option>
 																		<option>選項 1</option>
 																		<option>選項 2</option>
 																		<option>選項 3</option>
 																		<option>選項 4</option>
                 													</select>
-																</div>
-																<div class="col-md-2">
-																	<button type="button" class="btn btn-default btn-sm" style="color: #73879c">篩選</button>
-																</div>
-															</div>
-														</td>
-														<td class="warning"></td>
-													</tr>
-													<tr>
-														<td class="active">合約期限</td>
-														<td>
-															<div class="form-group-sm">
-																<div class="col-md-6 col-sm-6 col-xs-12">
-																	<select class="form-control input-sm">
-																		<option>請選擇</option>
-																		<option>選項 1</option>
-																		<option>選項 2</option>
-																		<option>選項 3</option>
-																		<option>選項 4</option>
-                													</select>
-																</div>
-															</div>
-														</td>
-														<td class="warning"></td>
-													</tr>
-													<tr>
-														<td class="active">GSM Voice 合約違約金額</td>
-														<td>
-															<div class="form-group">
-																<div class="col-md-12 col-sm-9 col-xs-12">
-																	<div class="radio">
-																		<label>
-                              												<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">Y (有違約金額)</label>
-																		<button type="button" class="btn btn-default btn-sm" style="color: #73879c;margin-left:5px;">違約金額設定</button>
-																	</div>
-																	<div class="radio">
-																		<label>
-                             												<input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">N (無違約金條款)</label>
-																	</div>
-																	<div class="radio">
-																	</div>
-																</div>
-															</div>
-														</td>
-														<td>
-															<div class="col-md-12 col-sm-12 col-xs-12">
-																<div class="form-group">
-																	<div class="col-md-12 col-sm-12 col-xs-12">
-																		<select class="select2_multiple form-control" multiple="multiple">
-																			<!-- <option>請選擇</option> -->
-																			<option>專長 1</option>
-																			<option>專長 2</option>
-																			<option>專長 3</option>
-																			<option>專長 4</option>
-																			<option>專長 5</option>
-																			<option>專長 6</option>
-																			</select>
-																	</div>
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td class="active">高改低限制</td>
-														<td>
-															<div class="form-group-sm">
-																<div class="col-md-6 col-sm-6 col-xs-12">
-																	<select class="form-control input-sm">
-																		<option>請選擇</option>
-																		<option>選項 1</option>
-																		<option>選項 2</option>
-																		<option>選項 3</option>
-																		<option>選項 4</option>
-                													</select>
-																</div>
-															</div>
-														</td>
-														<td class="warning"></td>
-													</tr>
-												</tbody>
-											</table>
+												</div>
+												<div class="col-md-2">
+													<button type="button" class="btn btn-default btn-sm" style="color: #73879c">篩選</button>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3"></div>
+									</div>
+									<div class="col-md-12" style="margin-top:10px;">
+										<div class="col-md-3">合約期限</div>
+										<div class="col-md-6 ">
+											<div class="form-group-sm">
+												<div class="col-md-6 col-sm-6 col-xs-12">
+													<select class="form-control input-sm">
+														<option>請選擇</option>
+														<option>選項 1</option>
+														<option>選項 2</option>
+														<option>選項 3</option>
+														<option>選項 4</option>
+                									</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3"></div>
+									</div>
+									<div class="col-md-12" style="margin-top:10px;">
+										<div class="col-md-3">GSM Voice 合約違約金額</div>
+										<div class="col-md-6 ">
+											<div class="form-group">
+												<div class="col-md-12 col-sm-9 col-xs-12">
+													<div class="radio">
+														<label>
+															<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">Y (有違約金額)
+														</label>
+														<button type="button" class="btn btn-default btn-sm" style="color: #73879c;margin-left:5px;">違約金額設定</button>
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">N (無違約金條款)
+														</label>
+													</div>
+													<div class="radio">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<div class="col-md-12 col-sm-12 col-xs-12">
+													<select class="select2_multiple form-control" multiple="multiple">
+														<!-- <option>請選擇</option> -->
+														<option>專長 1</option>
+														<option>專長 2</option>
+														<option>專長 3</option>
+														<option>專長 4</option>
+														<option>專長 5</option>
+														<option>專長 6</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12" style="margin-top:10px;">
+										<div class="col-md-3">高改低限制</div>
+										<div class="col-md-6">
+											<div class="col-md-6 col-sm-6 col-xs-12">
+												<select class="form-control input-sm">
+													<option>請選擇</option>
+													<option>選項 1</option>
+													<option>選項 2</option>
+													<option>選項 3</option>
+													<option>選項 4</option>
+                								</select>
+											</div>
+
+										</div>
+										<div class="col-md-3">
+
 										</div>
 									</div>
 								</div>
@@ -383,36 +374,49 @@
 								<div class="clearfix"></div>
 							</div>
 							<div class="x_content">
+
 								<div class="container-fluid ">
 									<div class="row">
+										<div class="col-md-12 text-center">
+											<div class="col-md-3  ">項目</div>
+											<div class="col-md-9  ">內容</div>
+										</div>
 										<div class="col-md-12">
-											<table class="table table-bordered">
-												<thead>
-													<tr>
-														<th>項目</th>
-														<th>內容</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td class="active">指定折扣項目</td>
-														<td>
-															<div class="container-fluid">
-																<div class="col-lg-4 itembox"></div>
-																<div class="col-lg-2 itembox">
-																	<button type="button" class="btn btn-default btn-sm">篩選</button>
-																</div>
-																<div class="col-lg-4 itembox"></div>
+											<div class="col-md-12" style="margin-top:10px;">
+												<div class="col-md-3">指定折扣項目</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+															<div class="col-md-2" style="margin-top:30px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
 															</div>
-														</td>
-													</tr>
-													<tr>
-														<td class="active">Happy go點數</td>
-														<td>
-														</td>
-													</tr>
-												</tbody>
-											</table>
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+														</div>
+
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+											<div class="col-md-12" style="margin-top:10px;">
+												<div class="col-md-3">Happy GO 贈點</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+
+
+
+															<input class="form-control input-sm" type="text" placeholder="10" style="width:100px;">
+
+
+
+														</div>
+
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>

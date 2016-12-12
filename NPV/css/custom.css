@@ -79,3 +79,7 @@ i.fa.fa-2 {
     overflow: hidden;
     margin: 10px;
 }
+
+.borderStyle {
+    border: 1px solid #ccc;
+}
