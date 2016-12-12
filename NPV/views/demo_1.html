@@ -27,7 +27,7 @@
 						<label class="control-label col-md-2 col-sm-2 col-xs-12">選擇類型</label>
 						<div class="col-md-10 col-sm-10 col-xs-12">
 							<select class="select2_single form-control" style="width:100%" id="selectType" tabindex="-1" ng-options="x for x in selectTypeItem"
-											ng-model="selectType">
+								ng-model="selectType">
                           <option></option>
                           <option value="{{x}}" ng-bind="x"></option>
                         </select>
@@ -69,7 +69,7 @@
 							<label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">活動群組</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
 								<select class="select2_single form-control" style="width:100%" id="activityGroup" tabindex="-1" ng-options="x for x in activityGroupItem"
-												ng-model="activityGroup">
+									ng-model="activityGroup">
                           <option></option>
                           <option value="{{x}}" ng-bind="x"></option>
                         </select>
@@ -77,7 +77,7 @@
 							<label class="control-label col-md-2 col-sm-2 col-xs-12" for="numberType">門號類型</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
 								<select class="select2_single form-control" style="width:100%" id="numberType" tabindex="-1" ng-options="x for x in numberTypeItem"
-												ng-model="numberType">
+									ng-model="numberType">
                           <option></option>
                           <option value="{{x}}" ng-bind="x"></option>
                         </select>
@@ -106,15 +106,15 @@
 						<thead>
 							<tr role="row">
 								<th class="sorting_asc text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-												colspan="1" aria-sort="ascending">加入</th>
+									colspan="1" aria-sort="ascending">加入</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-												colspan="1">類型</th>
+									colspan="1">類型</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-												colspan="1">名稱</th>
+									colspan="1">名稱</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-												colspan="1">期間</th>
+									colspan="1">期間</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-												colspan="1">修改</th>
+									colspan="1">修改</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -176,7 +176,7 @@
 	</div>
 	<!-- begin Large modal -->
 	<div class="col-md-12 col-sm-12 col-xs-12">
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">mpn</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">(5-1)-促代主約編輯</button>
 		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="myModal">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
@@ -268,17 +268,17 @@
 									</div>
 									<div class="col-md-12" style="margin-top:10px;">
 										<div class="col-md-3">GSM Voice 合約</div>
-										<div class="col-md-6 ">
+										<div class="col-md-6">
 											<div class="form-group-sm">
 												<label class="control-label col-md-4 col-sm-4 col-xs-12 text-left">最低月租費:</label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
 													<select class="form-control input-sm">
-																		<option>請選擇</option>
-																		<option>選項 1</option>
-																		<option>選項 2</option>
-																		<option>選項 3</option>
-																		<option>選項 4</option>
-                													</select>
+														<option>請選擇</option>
+														<option>選項 1</option>
+														<option>選項 2</option>
+														<option>選項 3</option>
+														<option>選項 4</option>
+                									</select>
 												</div>
 												<div class="col-md-2">
 													<button type="button" class="btn btn-default btn-sm" style="color: #73879c">篩選</button>
@@ -311,13 +311,13 @@
 												<div class="col-md-12 col-sm-9 col-xs-12">
 													<div class="radio">
 														<label>
-															<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">Y (有違約金額)
+															<input type="radio" checked="" value="option1" id="optionsRadios1" >Y (有違約金額)
 														</label>
 														<button type="button" class="btn btn-default btn-sm" style="color: #73879c;margin-left:5px;">違約金額設定</button>
 													</div>
 													<div class="radio">
 														<label>
-															<input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">N (無違約金條款)
+															<input type="radio" value="option2" id="optionsRadios2" >N (無違約金條款)
 														</label>
 													</div>
 													<div class="radio">
@@ -497,7 +497,17 @@
 																<div class="col-md-12 col-sm-9 col-xs-12">
 																	<div class="radio">
 																		<label>
-																			<input type="radio"  value="option1" id="optionsRadios1" name="optionsRadios">IA/FS 有效起始日:</label>
+																				<input type="radio"  value="option1" id="optionsRadios1" name="optionsRadios">IA/FS 有效起始日:<fieldset class="pull-left">
+														<div class="control-group">
+															<div class="controls">
+																<div class="input-prepend input-group">
+																	<span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+																	<input type="text" style="width: 200px" name="reservation" id="reservation" class="form-control" value="03/18/2013 - 03/23/2013" />
+																</div>
+															</div>
+														</div>
+												</fieldset>
+                                      			</label>
 																	</div>
 																	<div class="radio">
 																		<label>
@@ -512,17 +522,206 @@
 													</div>
 												</div>
 											</div>
+											<div class="col-md-12" style="margin-top:10px;">
+												<div class="col-md-3">IA啟用可選費率</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:210px"></div>
+															<div class="col-md-2" style="margin-top:5px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取範本</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">範本建立</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">範本管理</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:210px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+											<div class="col-md-12" style="margin-top:10px;">
+												<div class="col-md-3">IA啟用可選DATA服務</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+															<div class="col-md-2" style="margin-top:30px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+											<div class="col-md-12" style="margin-top:10px;">
+												<div class="col-md-3">附約可PM授權提前續約</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="row">
+																<div class="form-group">
+																	<div class="col-md-9 col-sm-9 col-xs-12">
+																		<div class="radio-list">
+																			<div class="radio-inline">
+																				<label class="radio-inline">
+                                  													<input type="radio" class="flat" checked name="iCheck">是
+                               													</label>
+																			</div>
+																			<div class="radio-inline">
+																				<label class="radio-inline">
+                                  													<input type="radio" class="flat" name="iCheck"> 否
+                                												</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12" style="margin-top:10px;">
+												<div class="col-md-3">是否為指定產品</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="row">
+																<div class="form-group">
+																	<div class="col-md-9 col-sm-9 col-xs-12">
+																		<div class="radio-list">
+																			<div class="radio-inline">
+																				<label class="radio-inline">
+                                  													<input type="radio" class="flat" >是
+                               													</label>
+																			</div>
+																			<div class="radio-inline">
+																				<label class="radio-inline">
+                                  													<input type="radio" class="flat"  checked> 否
+                                												</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<!-- end 上線設定-->
+						<!--加值活動好禮設定-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>加值活動好禮設定</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12 text-center">
+											<div class="col-md-3  ">項目</div>
+											<div class="col-md-9  ">內容</div>
+										</div>
+										<div class="col-md-12">
+											<div class="col-md-12" style="margin-top:10px;">
+												<div class="col-md-3">加值活動好禮</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+															<div class="col-md-2" style="margin-top:30px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end 加值活動好禮設定-->
+						<!--IA/備援單-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>IA/備援單</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-6">
+												<div class="row">
+													<div class="form-group-sm">
+														<div class="col-md-6 col-sm-6 col-xs-12">
+															<select class="form-control input-sm">
+														<option>請選擇</option>
+														<option>選項 1</option>
+														<option>選項 2</option>
+														<option>選項 3</option>
+														<option>選項 4</option>
+                									</select>
+														</div>
+														<div class="col-md-2">
+															<button type="button" class="btn btn-default btn-sm" style="color: #73879c">套用個人A範本</button>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<div class="col-md-12">
+											<div class="row">
+												<textarea class="form-control" rows="3"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end IA/備援單-->
+						<div class="container-fluid ">
+							<div class="row">
+								<div class="col-md-12">
+
+									<div class="col-md-4"></div>
+									<div class="col-md-4">
+										<button type="button" class="btn btn-default" style="margin:0 auto;">確定</button>
+									</div>
+									<div class="col-md-4"></div>
+								</div>
+
+							</div>
+						</div>
 					</div>
-					<div class="modal-footer">
+					<!--<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 						<button type="button" class="btn btn-primary">儲存</button>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
