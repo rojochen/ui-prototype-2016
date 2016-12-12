@@ -1,7 +1,7 @@
-define(['btModule'], function(btModule) {
+define(['btModule'], function (btModule) {
     'use strict';
     var app = angular.module("btModule");
-    
+
     var indexComponent = {
         // template: '<p>function: 取得 {{vm.hero.name}}</p> <button ng-click="vm.onSayHello()">button</button>',
         // template: '<p>function: 取得 {{vm.hero.name}}</p> <button ng-click="vm.onclick()">button</button>',
@@ -18,10 +18,10 @@ define(['btModule'], function(btModule) {
     app.component('indexComponent', indexComponent);
 
     indexComponentCtrl.$inject = ['$http'];
-    function indexComponentCtrl($http){
+    function indexComponentCtrl($http) {
         var vm = this;
-        
-        vm.$onInit = function(){
+
+        vm.$onInit = function () {
             vm.hero = {
                 name: 'index-component try'
             };
@@ -30,22 +30,22 @@ define(['btModule'], function(btModule) {
             vm.button_2 = '第二層 button';
         }
 
-        vm.onclick = function(){
+        vm.onclick = function () {
             alert('sayHello-ee');
-            vm.onSayHello(); 
+            vm.onSayHello();
         }
-        vm.onSayHello = function(){
+        vm.onSayHello = function () {
             alert('sayHello-aa');
         };
-        vm.change = function(){
+        vm.change = function () {
             vm.button_2 = 'change 第二層component button';
         }
-        
-        vm.demo = function(){
+
+        vm.demo = function () {
             // alert('demo component-1');
         }
 
-        vm.$onChanges = function(obj){
+        vm.$onChanges = function (obj) {
             console.log('1');
             console.log(obj);
             // console.log(obj.buttonName.previousValue);
@@ -53,10 +53,17 @@ define(['btModule'], function(btModule) {
             // console.log(obj.buttonName.isFirstChange());
         }
 
-        vm.$docheck = function(){
+        vm.$docheck = function () {
             console.log('aaa');
         }
 
+
+
+        console.log(layer);
+        layer.config({
+            path: '/production/js/lib/layer/src/' //layer.js所在的目录，可以是绝对目录，也可以是相对目录
+        });
+        layer.alert('见到你真的很高兴sss', { icon: 6 });
 
     };
 
