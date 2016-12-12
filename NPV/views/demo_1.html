@@ -27,7 +27,7 @@
 						<label class="control-label col-md-2 col-sm-2 col-xs-12">選擇類型</label>
 						<div class="col-md-10 col-sm-10 col-xs-12">
 							<select class="select2_single form-control" style="width:100%" id="selectType" tabindex="-1" ng-options="x for x in selectTypeItem"
-								ng-model="selectType">
+											ng-model="selectType">
                           <option></option>
                           <option value="{{x}}" ng-bind="x"></option>
                         </select>
@@ -69,7 +69,7 @@
 							<label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">活動群組</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
 								<select class="select2_single form-control" style="width:100%" id="activityGroup" tabindex="-1" ng-options="x for x in activityGroupItem"
-									ng-model="activityGroup">
+												ng-model="activityGroup">
                           <option></option>
                           <option value="{{x}}" ng-bind="x"></option>
                         </select>
@@ -77,7 +77,7 @@
 							<label class="control-label col-md-2 col-sm-2 col-xs-12" for="numberType">門號類型</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
 								<select class="select2_single form-control" style="width:100%" id="numberType" tabindex="-1" ng-options="x for x in numberTypeItem"
-									ng-model="numberType">
+												ng-model="numberType">
                           <option></option>
                           <option value="{{x}}" ng-bind="x"></option>
                         </select>
@@ -106,15 +106,15 @@
 						<thead>
 							<tr role="row">
 								<th class="sorting_asc text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-									colspan="1" aria-sort="ascending">加入</th>
+												colspan="1" aria-sort="ascending">加入</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-									colspan="1">類型</th>
+												colspan="1">類型</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-									colspan="1">名稱</th>
+												colspan="1">名稱</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-									colspan="1">期間</th>
+												colspan="1">期間</th>
 								<th class="sorting text-center table-header-color table-header-color" tabindex="0" aria-controls="datatable" rowspan="1"
-									colspan="1">修改</th>
+												colspan="1">修改</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -353,10 +353,8 @@
 													<option>選項 4</option>
                 								</select>
 											</div>
-
 										</div>
 										<div class="col-md-3">
-
 										</div>
 									</div>
 								</div>
@@ -374,7 +372,6 @@
 								<div class="clearfix"></div>
 							</div>
 							<div class="x_content">
-
 								<div class="container-fluid ">
 									<div class="row">
 										<div class="col-md-12 text-center">
@@ -395,7 +392,6 @@
 															</div>
 															<div class="col-md-5 borderStyle" style="height:150px"></div>
 														</div>
-
 													</div>
 												</div>
 												<div class="col-md-3"></div>
@@ -405,15 +401,8 @@
 												<div class="col-md-9">
 													<div class="form-group">
 														<div class="container-fluid">
-
-
-
 															<input class="form-control input-sm" type="text" placeholder="10" style="width:100px;">
-
-
-
 														</div>
-
 													</div>
 												</div>
 											</div>
@@ -423,6 +412,112 @@
 							</div>
 						</div>
 						<!-- end 折扣優惠設定-->
+						<!--加值服務設定-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>加值服務設定</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12 text-center">
+											<div class="col-md-3  ">項目</div>
+											<div class="col-md-9  ">內容</div>
+										</div>
+										<div class="col-md-12">
+											<div class="col-md-12" style="margin-top:10px;">
+												<div class="col-md-3">VAS服務</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+															<div class="col-md-2" style="margin-top:30px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end 加值服務設定-->
+						<!--上線設定-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>上線設定</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12 text-center">
+											<div class="col-md-3  ">項目</div>
+											<div class="col-md-9  ">內容</div>
+										</div>
+										<div class="col-md-12">
+											<div class="col-md-12" style="margin-top:10px;">
+												<div class="col-md-3">活動類別</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+															<div class="col-md-2" style="margin-top:30px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+											<div class="col-md-12" style="margin-top:10px;">
+												<div class="col-md-3">IA通用活動時間</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="form-group">
+																<div class="col-md-12 col-sm-9 col-xs-12">
+																	<div class="radio">
+																		<label>
+																			<input type="radio"  value="option1" id="optionsRadios1" name="optionsRadios">IA/FS 有效起始日:</label>
+																	</div>
+																	<div class="radio">
+																		<label>
+															<input type="radio" value="option2" id="optionsRadios2" name="optionsRadios" checked>[暫不上架]預設日期為2030/12/31
+														</label>
+																	</div>
+																	<div class="radio">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end 上線設定-->
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
