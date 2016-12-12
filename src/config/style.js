@@ -26,4 +26,8 @@ require('../../vendors/sweetalert2/dist/sweetalert2.min.css');
 // require('../../vendors/ng-table/dist/ng-table.css');
 
 
+//left mune scrollbar
+require('../../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css');
+
+
 require('../../src/scss/custom.scss');

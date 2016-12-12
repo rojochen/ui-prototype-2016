@@ -111,12 +111,7 @@ define(['btModule'], function (btModule) {
                 setContentHeight();
 
                 // fixed sidebar
-                console.log('fff');
-                console.log($('.menu_fixed'));
-                console.log($($.fn.mCustomScrollbar));
-
                 if ($.fn.mCustomScrollbar) {
-                    console.log('sss');
                     $('.menu_fixed').mCustomScrollbar({
                         autoHideScrollbar: true,
                         theme: 'minimal',

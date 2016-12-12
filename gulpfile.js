@@ -219,8 +219,7 @@ gulp.task('build-app', function() {
                     select2:'select2/dist/js/select2.full.min',
                     sweetalert2:'sweetalert2/dist/sweetalert2',
                     parsleyjs:'parsleyjs/dist/parsley.min',
-                    'jquery-mousewheel': 'jquery-mousewheel/jquery.mousewheel.min',
-                    // 'malihu-custom-scrollbar-plugin': 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min'         
+                    'jquery-mousewheel': 'jquery-mousewheel/jquery.mousewheel.min'        
                 },
                 extensions: ['', '.js']
             },
