@@ -89,7 +89,9 @@
     "Promise.prototype.finally": "https://github.com/matthew-andrews/Promise.prototype.finally.git",
     "jquery-slimscroll": "^1.3.8",
     "angular-datatables": "^0.5.5",
-    "promise-finally": "*"
+    "promise-finally": "*",
+    "layui": "https://github.com/sentsin/layui.git#~1.0.7"
+
   },
   "resolutions": {
     "jquery": "^2.2.3",
