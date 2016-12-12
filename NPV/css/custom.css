@@ -1,24 +1,27 @@
-i.fa.fa-3{
+i.fa.fa-3 {
     font-size: 4em;
 }
-i.fa.fa-2{
+
+i.fa.fa-2 {
     font-size: 2em;
 }
-.portrait{
+
+.portrait {
     margin-left: 25%;
     margin-top: 20px;
 }
 
-.info-number .badge.style-right{
+.info-number .badge.style-right {
     position: initial;
     margin-bottom: 5px;
 }
 
-.listArea{
-    margin-bottom:5%;
+.listArea {
+    margin-bottom: 5%;
 }
-.listArea > .listBottom {
-    width:100%;
+
+.listArea>.listBottom {
+    width: 100%;
     float: left;
     display: -webkit-flex;
     display: flex;
@@ -26,39 +29,53 @@ i.fa.fa-2{
     /*background: #fed364;*/
     /*color:#fff;*/
 }
-.listArea > .listBottom > .iconArea {
+
+.listArea>.listBottom>.iconArea {
     -webkit-flex: 1;
     flex: 1;
     margin: 2% 3%;
-    border-right-color:#e6e9ed;
+    border-right-color: #e6e9ed;
     border-right-style: solid;
     border-right-width: 1px;
 }
-.listArea > .listBottom > .iconArea:hover >i{
+
+.listArea>.listBottom>.iconArea:hover>i {
     transform: scale(1.5);
     /*transform:translateX(10px);*/
 }
-.listArea > .listBottom > .iconArea:last-child {
+
+.listArea>.listBottom>.iconArea:last-child {
     border-right-width: 0px;
 }
-.listArea > .listBottom > .iconArea > i{
+
+.listArea>.listBottom>.iconArea>i {
     padding-right: 10px;
-    -webkit-transition: transform 1s; 
+    -webkit-transition: transform 1s;
     transition: transform .5s;
 }
 
-.listArea > .listText{
-    width:80%;
-    padding-left:10px;
+.listArea>.listText {
+    width: 80%;
+    padding-left: 10px;
     float: left;
     line-height: 1.5em;
     margin-bottom: 1%;
 }
-.listArea > .listText > .activityName{
+
+.listArea>.listText>.activityName {
     display: block;
-	font-weight: 700;
-	width: 100%;
+    font-weight: 700;
+    width: 100%;
 }
-.table-header-color{
-    background:#405467;color:#fff
+
+.table-header-color {
+    background: #405467;
+    color: #fff
+}
+
+.itembox {
+    border: 1px solid #405467;
+    height: 150px;
+    overflow: hidden;
+    margin: 10px;
 }

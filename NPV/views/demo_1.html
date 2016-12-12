@@ -317,13 +317,12 @@
 																<div class="col-md-12 col-sm-9 col-xs-12">
 																	<div class="radio">
 																		<label>
-                              <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">Y (有違約金額)</label>
+                              												<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">Y (有違約金額)</label>
 																		<button type="button" class="btn btn-default btn-sm" style="color: #73879c;margin-left:5px;">違約金額設定</button>
 																	</div>
 																	<div class="radio">
 																		<label>
-                              <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">N (無違約金條款)
-                            </label>
+                             												<input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">N (無違約金條款)</label>
 																	</div>
 																	<div class="radio">
 																	</div>
@@ -332,30 +331,17 @@
 														</td>
 														<td>
 															<div class="col-md-12 col-sm-12 col-xs-12">
-																<div class="control-group" style="border:1px solid ">
-																	<div class="col-md-12 col-sm-12 col-xs-12 row">
-																		<div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;">
-																			<div class="container-fluid">
-																				<div class="row">
-																					<div class="col-md-12">
-																						<div class="btn-group btn-group-sm">
-																							<button class="btn btn-default" type="button">
-				Left
-				</button>
-																							<button class="btn btn-default" type="button">
-				 Center
-				</button>
-																							<button class="btn btn-default" type="button">
-					 Right
-				</button>
-																							<button class="btn btn-default" type="button">
-					Justify
-				</button>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
+																<div class="form-group">
+																	<div class="col-md-12 col-sm-12 col-xs-12">
+																		<select class="select2_multiple form-control" multiple="multiple">
+																			<!-- <option>請選擇</option> -->
+																			<option>專長 1</option>
+																			<option>專長 2</option>
+																			<option>專長 3</option>
+																			<option>專長 4</option>
+																			<option>專長 5</option>
+																			<option>專長 6</option>
+																			</select>
 																	</div>
 																</div>
 															</div>
@@ -363,8 +349,20 @@
 													</tr>
 													<tr>
 														<td class="active">高改低限制</td>
-														<td>03/04/2012</td>
-														<td>Pending</td>
+														<td>
+															<div class="form-group-sm">
+																<div class="col-md-6 col-sm-6 col-xs-12">
+																	<select class="form-control input-sm">
+																		<option>請選擇</option>
+																		<option>選項 1</option>
+																		<option>選項 2</option>
+																		<option>選項 3</option>
+																		<option>選項 4</option>
+                													</select>
+																</div>
+															</div>
+														</td>
+														<td class="warning"></td>
 													</tr>
 												</tbody>
 											</table>
@@ -374,6 +372,53 @@
 							</div>
 						</div>
 						<!-- end 合約資訊設定-->
+						<!--折扣優惠設定-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>折扣優惠設定</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12">
+											<table class="table table-bordered">
+												<thead>
+													<tr>
+														<th>項目</th>
+														<th>內容</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="active">指定折扣項目</td>
+														<td>
+															<div class="container-fluid">
+																<div class="col-lg-4 itembox"></div>
+																<div class="col-lg-2 itembox">
+																	<button type="button" class="btn btn-default btn-sm">篩選</button>
+																</div>
+																<div class="col-lg-4 itembox"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="active">Happy go點數</td>
+														<td>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end 折扣優惠設定-->
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
