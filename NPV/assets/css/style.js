@@ -50,7 +50,7 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("__webpack_require__(2);\n__webpack_require__(11);\n__webpack_require__(19);\n\n__webpack_require__(21);\n__webpack_require__(25);\n__webpack_require__(27);\n__webpack_require__(29);\n__webpack_require__(31);\n__webpack_require__(33);\n__webpack_require__(35);\n__webpack_require__(37);\n__webpack_require__(39);\n__webpack_require__(42);\n__webpack_require__(49);\n__webpack_require__(51);\n__webpack_require__(53);\n//require(\"../../vendors/pnotify/dist/pnotify.nonblock.css\");\n__webpack_require__(55);\n__webpack_require__(57);\n__webpack_require__(59);\n__webpack_require__(61);\n__webpack_require__(63);\n__webpack_require__(65);\n__webpack_require__(67);\n// require('../../vendors/ng-table/dist/ng-table.css');\n\n\n__webpack_require__(69);\n\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/config/style.js\n ** module id = 1\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/config/style.js?");
+	eval("__webpack_require__(2);\n__webpack_require__(11);\n__webpack_require__(19);\n\n__webpack_require__(21);\n__webpack_require__(25);\n__webpack_require__(27);\n__webpack_require__(29);\n__webpack_require__(31);\n__webpack_require__(33);\n__webpack_require__(35);\n__webpack_require__(37);\n__webpack_require__(39);\n__webpack_require__(42);\n__webpack_require__(49);\n__webpack_require__(51);\n__webpack_require__(53);\n//require(\"../../vendors/pnotify/dist/pnotify.nonblock.css\");\n__webpack_require__(55);\n__webpack_require__(57);\n__webpack_require__(59);\n__webpack_require__(61);\n__webpack_require__(63);\n__webpack_require__(65);\n__webpack_require__(67);\n// require('../../vendors/ng-table/dist/ng-table.css');\n\n\n//left mune scrollbar\n__webpack_require__(69);\n\n\n__webpack_require__(72);\n\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/config/style.js\n ** module id = 1\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/config/style.js?");
 
 /***/ },
 /* 2 */
@@ -238,7 +238,15 @@
 /* 69 */
 /***/ function(module, exports) {
 
-	eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/scss/custom.scss\n ** module id = 69\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/scss/custom.scss?");
+	eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css\n ** module id = 69\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css?");
+
+/***/ },
+/* 70 */,
+/* 71 */,
+/* 72 */
+/***/ function(module, exports) {
+
+	eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/scss/custom.scss\n ** module id = 72\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/scss/custom.scss?");
 
 /***/ }
 /******/ ]);

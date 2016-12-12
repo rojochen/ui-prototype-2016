@@ -218,7 +218,8 @@ gulp.task('build-app', function() {
                     skycons:'skycons/skycons',
                     select2:'select2/dist/js/select2.full.min',
                     sweetalert2:'sweetalert2/dist/sweetalert2',
-                    parsleyjs:'parsleyjs/dist/parsley.min',                
+                    parsleyjs:'parsleyjs/dist/parsley.min',
+                    'jquery-mousewheel': 'jquery-mousewheel/jquery.mousewheel.min'        
                 },
                 extensions: ['', '.js']
             },
