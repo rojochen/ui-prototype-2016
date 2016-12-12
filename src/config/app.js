@@ -19,6 +19,11 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
     // require('../../vendors/Chart.js/dist/Chart.min.js');
     //require('../../vendors/gauge.js/dist/gauge.min.js');
 
+
+    //left mune scrollbar
+    require('../../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js');
+
+
     require('iCheck');
     require('skycons');
 
