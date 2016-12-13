@@ -18,11 +18,11 @@ define([
     function headerComponentCtrl($log) {
         var vm = this;
         
-        var layerList = null;
+        vm.layerList = null;
         vm.openList = function () {
             $log.debug($('.layerList').length);
             if ($('.layerList').length === 0) {
-                layerList = layer.open({
+                vm.layerList = layer.open({
                     type: 1,
                     title: '已選清單',
                     skin: 'layerList',
@@ -34,9 +34,9 @@ define([
                     content: '我是html内容'
                 });
             } else {
-                layer.restore(layerList);
+                layer.restore(vm.layerList);
             }
-            $log.debug(layerList);
+            $log.debug(vm.layerList);
         }
     };
 

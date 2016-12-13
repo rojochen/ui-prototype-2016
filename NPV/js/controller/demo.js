@@ -8,6 +8,8 @@ define(['btModule'], function (btModule) {
     });
 
     app.controller('demoCtrl', ['$scope', '$timeout', '$log', '$element', function ($scope, $timeout, $log, $element) {
+        var vm = this;
+
         /*begin 版面縮合*/
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -348,14 +350,27 @@ define(['btModule'], function (btModule) {
                 }
             }
             $log.debug($scope.defineItem); //後續要傳右方的值...
+
             $log.debug($('.layerList').length);
-            $log.debug(layerList);
-            
-            // if ($('.layerList').length === 0) {
-            //     // layer.restore(layerList);
-            // } else {
-            //     layer.open(layerList);
-            // }
+            $log.debug(vm.layerList);
+
+            if ($('.layerList').length === 0) {
+                // layer.restore(layerList);
+                $log.debug('new ');
+                vm.layerList = layer.open({
+                    type: 1,
+                    title: '已選清單',
+                    skin: 'layerList',
+                    maxmin: true,
+                    resize: false,
+                    offset: 'rb',
+                    shade: 0,
+                    zIndex: 2,
+                    content: '我是html内容'
+                });
+            } else {
+                layer.restore(vm.layerList);
+            }
         }
 
         $scope.view = function (x) {
