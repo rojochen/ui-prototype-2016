@@ -17,18 +17,10 @@ define([
     headerComponentCtrl.$inject = ['$log'];
     function headerComponentCtrl($log) {
         var vm = this;
-<<<<<<< HEAD
+
 
         var layerList = null;
         layer.config({
-=======
-        
-        vm.layerList = null;
-        vm.openList = function () {
-            $log.debug($('.layerList').length);
-            if ($('.layerList').length === 0) {
-                vm.layerList = layer.open({
->>>>>>> c68d78bb9484aed0e2af35a313b04e7b1f0de075
                     type: 1,
                     title: '已選清單',
                     skin: 'layerList',
