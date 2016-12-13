@@ -353,11 +353,14 @@ define(['btModule'], function (btModule) {
             $log.debug($scope.defineItem); //後續要傳右方的值...
 
             var index = shoppingCartEntity.getCartID();
+            $log.debug(index);
             if (index === null) {
                 index = shoppingCartEntity.openShoppingCart();
 				shoppingCartEntity.setCartID(index);
             } else {
-                layer.restore(index);
+                $log.debug('已開浮動視窗');
+                // $('.layerList:eq(0)').css('left', ($(window).width() - $('.layerList:eq(0)').width()) + 'px');
+                // $('.layerList:eq(0)').css('top', '45px');
             }
         }
 
