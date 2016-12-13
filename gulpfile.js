@@ -111,7 +111,7 @@ var getStyleConfig = function() {
         devtool: 'eval',
         module: {
             loaders: [{
-                test: /\.png$/,
+                test: /\.(png|gif)$/,
                 loader: 'url-loader?limit=100000'
             }, {
                 test: /\.css$/,
