@@ -14,8 +14,8 @@ define([
     };
     app.component('btHeader', headerComponent);
     
-    headerComponentCtrl.$inject = ['$log'];
-    function headerComponentCtrl($log) {
+    headerComponentCtrl.$inject = ['$log','ShoppingCartEntity'];
+    function headerComponentCtrl($log,shoppingCartEntity) {
         var vm = this;
 
 
@@ -26,14 +26,17 @@ define([
                     skin: 'layerList',
                     maxmin: false,
                     resize: false,
+                    anim : 1,
                     offset: 'rb',
                     shade: 0,
                     zIndex: 2,
                     content: '我是html内容'
                 });
+        var index = shoppingCartEntity.getCartID() ;
+
         vm.openList = function () {
             $log.debug($('.layerList').length);
-            if ($('.layerList').length === 0) {
+            if (index==null) {
                 layerList = layer.open();
             } else {
                 layer.restore(vm.layerList);

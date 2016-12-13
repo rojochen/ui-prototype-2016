@@ -7,7 +7,8 @@ define(['btModule'], function (btModule) {
 
     });
 
-    app.controller('demoCtrl', ['$scope', '$timeout', '$log', '$element', function ($scope, $timeout, $log, $element) {
+    app.controller('demoCtrl', ['$scope', '$timeout', '$log', '$element',
+    'ShoppingCartEntity', function ($scope, $timeout, $log, $element,shoppingCartEntity) {
         var vm = this;
 
         /*begin 版面縮合*/
@@ -354,23 +355,7 @@ define(['btModule'], function (btModule) {
             $log.debug($('.layerList').length);
             $log.debug(vm.layerList);
 
-            if ($('.layerList').length === 0) {
-                // layer.restore(layerList);
-                $log.debug('new ');
-                vm.layerList = layer.open({
-                    type: 1,
-                    title: '已選清單',
-                    skin: 'layerList',
-                    maxmin: true,
-                    resize: false,
-                    offset: 'rb',
-                    shade: 0,
-                    zIndex: 2,
-                    content: '我是html内容'
-                });
-            } else {
-                layer.restore(vm.layerList);
-            }
+            var index = shoppingCartEntity.getCartID();
         }
 
         $scope.view = function (x) {
