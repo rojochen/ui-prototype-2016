@@ -19,10 +19,11 @@
 			btCheckList:'js/component/btCheckList',
 			btNgTable:'js/component/btNgTable',
 			btPanel:'js/component/btPanel',
-			btAlert:'js/component/btAlert'
+			btAlert:'js/component/btAlert',
+			layerjs: 'js/lib/layer/src/layer'
 		}
 	});	
-	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'yvonneController', 'indexComponent','demoComponent', 'indexComponent_2','footer','header','btPortlet','btCheckList','btNgTable','btPanel','btAlert'], function(pokemon, btModule, btController, louisController, joeController, yvonneController, indexComponent,demoComponent, indexComponent_2, footer, header, btPortlet, btCheckList,btNgTable,btPanel,btAlert) {
+	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'yvonneController', 'indexComponent','demoComponent', 'indexComponent_2','footer','header','btPortlet','btCheckList','btNgTable','btPanel','btAlert', 'layerjs'], function(pokemon, btModule, btController, louisController, joeController, yvonneController, indexComponent,demoComponent, indexComponent_2, footer, header, btPortlet, btCheckList,btNgTable,btPanel,btAlert, layerjs) {
 
 		angular.bootstrap(document, ['btModule']);
 	});
