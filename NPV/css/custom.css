@@ -73,8 +73,15 @@ i.fa.fa-2 {
     color: #fff
 }
 
+
+/*5-1*/
+
 .borderStyle {
     border: 1px solid #ccc;
+}
+
+.listdistance {
+    margin-top: 10px;
 }
 
 
