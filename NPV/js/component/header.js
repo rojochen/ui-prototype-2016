@@ -17,22 +17,23 @@ define([
     headerComponentCtrl.$inject = ['$log'];
     function headerComponentCtrl($log) {
         var vm = this;
-        
+
         var layerList = null;
-        vm.openList = function () {
-            $log.debug($('.layerList').length);
-            if ($('.layerList').length === 0) {
-                layerList = layer.open({
+        layer.config({
                     type: 1,
                     title: '已選清單',
                     skin: 'layerList',
-                    maxmin: true,
+                    maxmin: false,
                     resize: false,
                     offset: 'rb',
                     shade: 0,
                     zIndex: 2,
                     content: '我是html内容'
                 });
+        vm.openList = function () {
+            $log.debug($('.layerList').length);
+            if ($('.layerList').length === 0) {
+                layerList = layer.open();
             } else {
                 layer.restore(layerList);
             }
