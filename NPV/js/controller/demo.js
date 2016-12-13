@@ -352,10 +352,13 @@ define(['btModule'], function (btModule) {
             }
             $log.debug($scope.defineItem); //後續要傳右方的值...
 
-            $log.debug($('.layerList').length);
-            $log.debug(vm.layerList);
-
             var index = shoppingCartEntity.getCartID();
+            if (index === null) {
+                index = shoppingCartEntity.openShoppingCart();
+				shoppingCartEntity.setCartID(index);
+            } else {
+                layer.restore(index);
+            }
         }
 
         $scope.view = function (x) {
