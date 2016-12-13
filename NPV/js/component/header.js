@@ -17,16 +17,14 @@ define([
     headerComponentCtrl.$inject = ['$log'];
     function headerComponentCtrl($log) {
         var vm = this;
-        
-        vm.layerList = null;
-        vm.openList = function () {
-            $log.debug($('.layerList').length);
-            if ($('.layerList').length === 0) {
-                vm.layerList = layer.open({
+
+
+        var layerList = null;
+        layer.config({
                     type: 1,
                     title: '已選清單',
                     skin: 'layerList',
-                    maxmin: true,
+                    maxmin: false,
                     resize: false,
                     offset: 'rb',
                     shade: 0,
@@ -97,6 +95,10 @@ define([
 									</li>
 								</ul>`
                 });
+        vm.openList = function () {
+            $log.debug($('.layerList').length);
+            if ($('.layerList').length === 0) {
+                layerList = layer.open();
             } else {
                 layer.restore(vm.layerList);
             }
