@@ -2,7 +2,7 @@ define(['pokemon'], function(pokemon) {
     'use strict';
     var app = angular.module('btModule',['pokemon']);
     // 導頁路徑
-    app.service("ShoppingCart",ShoppingCart);
+    app.service("ShoppingCartEntity",ShoppingCart);
      
     function ShoppingCart($log){
         var list = [];
