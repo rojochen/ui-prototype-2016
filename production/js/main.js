@@ -22,7 +22,7 @@
 			btAlert:'js/component/btAlert'
 		}
 	});	
-	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'yvonneController', 'indexComponent','demoComponent', 'indexComponent_2','footer','header','btPortlet','btCheckList','btNgTable','btPanel','btAlert'], function(pokemon, btModule, btController, louisController, joeController, yvonneController, indexComponent,demoComponent, indexComponent_2, footer, header, btPortlet, btCheckList,btNgTable,btPanel,btAlert) {
+	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'yvonneController', 'indexComponent','demoComponent', 'indexComponent_2','footer','header','btPortlet','btCheckList','btNgTable','btPanel','btAlert' ], function(pokemon, btModule, btController, louisController, joeController, yvonneController, indexComponent,demoComponent, indexComponent_2, footer, header, btPortlet, btCheckList,btNgTable,btPanel,btAlert) {
 
 		angular.bootstrap(document, ['btModule']);
 	});

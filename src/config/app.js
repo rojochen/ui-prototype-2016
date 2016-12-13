@@ -55,7 +55,17 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
     
     require('angular-route');
     require('angular-datatables');
-    require('promise-finally')
+    require('promise-finally');
+
+
+    //layer
+    var layer= require('../../vendors/layer/build/layer.js');
+    layer.config({
+        path:false
+    })
+    // require('../../production/js/lib/layer/build/layer.js');
+    //require('../../production/js/lib/layer/src/layer.js');
+
 
     angular.module('pokemon', ['ngRoute','datatables']);
  
