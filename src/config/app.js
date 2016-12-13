@@ -54,9 +54,12 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
 
 
     //layer
-    // require('../../vendors/layer/build/layer.js');
+    var layer= require('../../vendors/layer/build/layer.js');
+    layer.config({
+        path:false
+    })
     // require('../../production/js/lib/layer/build/layer.js');
-    // require('../../production/js/lib/layer/src/layer.js');
+    //require('../../production/js/lib/layer/src/layer.js');
 
 
     angular.module('pokemon', ['ngRoute','datatables']);
