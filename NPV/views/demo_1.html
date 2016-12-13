@@ -174,27 +174,385 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- begin Large modal -->
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="myModal">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-				<h4 class="modal-title" id="myModalLabel">Model 標題</h4>
-			</div>
-			<div class="modal-body">
-				<h4>Text in a model</h4>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-					dolor auctor.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec
-					sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-				<button type="button" class="btn btn-primary">儲存</button>
+	<!-- begin full modal -->
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Boundle Promotion-編輯</button>
+		<div class="modal fullscreen-modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="myModal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+						<h4 class="modal-title" id="myModalLabel">Boundle Promotion-編輯</h4>
+					</div>
+					<div class="modal-body">
+						<form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left ng-pristine ng-valid" novalidate="">
+							<div class="form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">促代名稱 <span class="required">*</span>
+                        </label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12">合約類型</label>
+								<div class="col-md-4 col-sm-4 col-xs-12">
+									<select class="form-control">
+                              <option value="等級 1">等級 1</option>
+                              <option value="等級 2">等級 2</option>
+                              <option value="等級 3">等級 3</option>
+                              <option value="等級 4">等級 4</option>
+                            </select>
+								</div>
+							</div>
+						</form>
+						<!--折扣優惠設定-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>折扣優惠設定</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12 text-center">
+											<div class="col-md-3  ">項目</div>
+											<div class="col-md-9  ">內容</div>
+										</div>
+										<div class="col-md-12">
+											<div class="col-md-12 listdistance ">
+												<div class="col-md-3">指定折扣項目</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+															<div class="col-md-2" style="margin-top:30px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+											<div class="col-md-12 listdistance ">
+												<div class="col-md-3">Happy GO 贈點</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<input class="form-control input-sm" type="text" placeholder="10" style="width:100px;">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end 折扣優惠設定-->
+						<!--加值服務設定-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>加值服務設定</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12 text-center">
+											<div class="col-md-3  ">項目</div>
+											<div class="col-md-9  ">內容</div>
+										</div>
+										<div class="col-md-12">
+											<div class="col-md-12 listdistance">
+												<div class="col-md-3">VAS服務</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+															<div class="col-md-2" style="margin-top:30px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end 加值服務設定-->
+						<!--上線設定-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>上線設定</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12 text-center">
+											<div class="col-md-3  ">項目</div>
+											<div class="col-md-9  ">內容</div>
+										</div>
+										<div class="col-md-12">
+											<div class="col-md-12 listdistance">
+												<div class="col-md-3">活動類別</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+															<div class="col-md-2" style="margin-top:30px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+											<div class="col-md-12 listdistance">
+												<div class="col-md-3">IA通用活動時間</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="form-group">
+																<div class="col-md-12 col-sm-9 col-xs-12">
+																	<div class="radio">
+																		<label>
+																				<input type="radio"  value="option1" id="optionsRadios1" name="optionsRadios">IA/FS 有效起始日:<fieldset class="pull-left">
+														<div class="control-group">
+															<div class="controls">
+																<div class="input-prepend input-group">
+																	<span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+																	<input type="text" style="width: 200px" name="reservation" id="reservation" class="form-control" value="03/18/2013 - 03/23/2013" />
+																</div>
+															</div>
+														</div>
+												</fieldset>
+                                      			</label>
+																	</div>
+																	<div class="radio">
+																		<label>
+															<input type="radio" value="option2" id="optionsRadios2" name="optionsRadios" checked>[暫不上架]預設日期為2030/12/31
+														</label>
+																	</div>
+																	<div class="radio">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12 listdistance ">
+												<div class="col-md-3">IA啟用可選費率</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:210px"></div>
+															<div class="col-md-2" style="margin-top:5px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取範本</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">範本建立</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">範本管理</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:210px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+											<div class="col-md-12 listdistance ">
+												<div class="col-md-3">IA啟用可選DATA服務</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+															<div class="col-md-2" style="margin-top:30px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+											<div class="col-md-12 listdistance ">
+												<div class="col-md-3">附約可PM授權提前續約</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="row">
+																<div class="form-group">
+																	<div class="col-md-9 col-sm-9 col-xs-12">
+																		<div class="radio-list">
+																			<div class="radio-inline">
+																				<label class="radio-inline">
+                                  													<input type="radio" class="flat" checked name="iCheck">是
+                               													</label>
+																			</div>
+																			<div class="radio-inline">
+																				<label class="radio-inline">
+                                  													<input type="radio" class="flat" name="iCheck"> 否
+                                												</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12 listdistance ">
+												<div class="col-md-3">是否為指定產品</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="row">
+																<div class="form-group">
+																	<div class="col-md-9 col-sm-9 col-xs-12">
+																		<div class="radio-list">
+																			<div class="radio-inline">
+																				<label class="radio-inline">
+                                  													<input type="radio" class="flat" >是
+                               													</label>
+																			</div>
+																			<div class="radio-inline">
+																				<label class="radio-inline">
+                                  													<input type="radio" class="flat"  checked> 否
+                                												</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end 上線設定-->
+						<!--加值活動好禮設定-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>加值活動好禮設定</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12 text-center">
+											<div class="col-md-3  ">項目</div>
+											<div class="col-md-9  ">內容</div>
+										</div>
+										<div class="col-md-12">
+											<div class="col-md-12 listdistance ">
+												<div class="col-md-3">加值活動好禮</div>
+												<div class="col-md-9">
+													<div class="form-group">
+														<div class="container-fluid">
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+															<div class="col-md-2" style="margin-top:30px">
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+																<button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+															</div>
+															<div class="col-md-5 borderStyle" style="height:150px"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-3"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end 加值活動好禮設定-->
+						<!--IA/備援單-->
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>IA/備援單</h2>
+								<ul class="nav navbar-right panel_toolbox">
+									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+								<div class="container-fluid ">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="col-md-6">
+												<div class="row">
+													<div class="form-group-sm">
+														<div class="col-md-6 col-sm-6 col-xs-12">
+															<select class="form-control input-sm">
+														<option>請選擇</option>
+														<option>選項 1</option>
+														<option>選項 2</option>
+														<option>選項 3</option>
+														<option>選項 4</option>
+                									</select>
+														</div>
+														<div class="col-md-2">
+															<button type="button" class="btn btn-default btn-sm" style="color: #73879c">套用個人A範本</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<textarea class="form-control" rows="3"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end IA/備援單-->
+					</div>
+					<div class="modal-footer">
+						<!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+						<button type="button" class="btn btn-default">確定</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+	<!-- end full modal -->
 </div>
-<!-- end Large modal -->
