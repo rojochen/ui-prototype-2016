@@ -23,6 +23,7 @@ i.fa.fa-2{
     display: -webkit-flex;
     display: flex;
     margin-top: 10px;
+    border-bottom: 2px solid #ccc;
     /*background: #fed364;*/
     /*color:#fff;*/
 }
@@ -71,4 +72,5 @@ i.fa.fa-2{
 }
 .layerList > .layui-layer-content{
     padding: 10px;
+    max-height: calc(100% - 45px);
 }
