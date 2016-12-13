@@ -9,16 +9,18 @@ define([
         controller: headerComponentCtrl,
         controllerAs: 'vm',
         bindings: {
-
+            layerList: '<'
         }
     };
     app.component('btHeader', headerComponent);
-
-    function headerComponentCtrl() {
+    
+    headerComponentCtrl.$inject = ['$log'];
+    function headerComponentCtrl($log) {
         var vm = this;
         
         var layerList = null;
         vm.openList = function () {
+            $log.debug($('.layerList').length);
             if ($('.layerList').length === 0) {
                 layerList = layer.open({
                     type: 1,
@@ -34,6 +36,7 @@ define([
             } else {
                 layer.restore(layerList);
             }
+            $log.debug(layerList);
         }
     };
 

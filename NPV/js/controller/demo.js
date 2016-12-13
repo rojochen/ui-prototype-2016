@@ -348,6 +348,14 @@ define(['btModule'], function (btModule) {
                 }
             }
             $log.debug($scope.defineItem); //後續要傳右方的值...
+            $log.debug($('.layerList').length);
+            $log.debug(layerList);
+            
+            // if ($('.layerList').length === 0) {
+            //     // layer.restore(layerList);
+            // } else {
+            //     layer.open(layerList);
+            // }
         }
 
         $scope.view = function (x) {
