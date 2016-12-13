@@ -62,3 +62,13 @@ i.fa.fa-2{
 .table-header-color{
     background:#405467;color:#fff
 }
+
+
+
+.layerList{
+    width:300px;
+    height:calc(100% - 45px);
+}
+.layerList > .layui-layer-content{
+    padding: 10px;
+}

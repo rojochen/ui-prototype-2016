@@ -60,11 +60,6 @@ define(['btModule'], function (btModule) {
 
 
         console.log(layer);
-        layer.config({
-            path: '/production/js/lib/layer/src/' //layer.js所在的目录，可以是绝对目录，也可以是相对目录
-        });
-        // layer.alert('见到你真的很高兴sss', { icon: 6 });
-        //页面层
         layer.open({
             type: 1,
             title: '我是標題',
