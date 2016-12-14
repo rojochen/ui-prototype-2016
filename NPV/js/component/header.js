@@ -9,31 +9,67 @@ define([
         controller: headerComponentCtrl,
         controllerAs: 'vm',
         bindings: {
-
         }
     };
     app.component('btHeader', headerComponent);
-
-    function headerComponentCtrl() {
+    
+    headerComponentCtrl.$inject = ['$log','ShoppingCartEntity', '$scope'];
+    function headerComponentCtrl($log,shoppingCartEntity, $scope) {
         var vm = this;
+
+
+        layer.config({
+                type: 1,
+                title: '已選清單',
+                skin: 'layerList',
+                maxmin: false,
+                resize: false,
+                anim: 2,
+                offset: 'rb',
+                shade: 0,
+                zIndex: 1111,
+                cancel: function () {
+                    shoppingCartEntity.closeShoppingCart();
+                },
+                content:$('#layerContent')
+            });
         
-        var layerList = null;
+
+        $scope.selectList = shoppingCartEntity.getList();
+        var index = shoppingCartEntity.getCartID();
+        
+
         vm.openList = function () {
-            if ($('.layerList').length === 0) {
-                layerList = layer.open({
-                    type: 1,
-                    title: '已選清單',
-                    skin: 'layerList',
-                    maxmin: true,
-                    resize: false,
-                    offset: 'rb',
-                    shade: 0,
-                    zIndex: 2,
-                    content: '我是html内容'
-                });
-            } else {
-                layer.restore(layerList);
-            }
+            shoppingCartEntity.toggleShoppingCart();
+            // $log.debug(shoppingCartEntity.getList());
+			// var index = shoppingCartEntity.getCartID();
+            // // $log.debug(index);
+            // if (index === null) {
+			// 	index = shoppingCartEntity.openShoppingCart();
+			// 	shoppingCartEntity.setCartID(index);
+            // } else {
+            //     $('.layerList:eq(0)').css('left', ($(window).width() - $('.layerList:eq(0)').width()) + 'px');
+            //     $('.layerList:eq(0)').css('top', '45px');
+            // }
+        }
+
+
+        $scope.removeList = function(x, index){
+            // $log.debug(index);
+            var selectItem = shoppingCartEntity.getList();
+            shoppingCartEntity.removeItem();
+            angular.forEach(selectItem, function(item){
+                if(item.activityCode !== x.activityCode){
+                    shoppingCartEntity.addItem(item);
+                }
+            })
+            // $log.debug(shoppingCartEntity.getList());
+            $scope.selectList = shoppingCartEntity.getList();
+        }
+
+
+        $scope.definiteList = function(){  //未做...
+            $log.debug('執行後續動作');
         }
     };
 

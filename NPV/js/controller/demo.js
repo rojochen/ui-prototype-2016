@@ -7,7 +7,10 @@ define(['btModule'], function (btModule) {
 
     });
 
-    app.controller('demoCtrl', ['$scope', '$timeout', '$log', '$element', function ($scope, $timeout, $log, $element) {
+    app.controller('demoCtrl', ['$scope', '$timeout', '$log', '$element',
+    'ShoppingCartEntity', function ($scope, $timeout, $log, $element,shoppingCartEntity) {
+        var vm = this;
+
         /*begin 版面縮合*/
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -62,58 +65,69 @@ define(['btModule'], function (btModule) {
         $scope.commonTable = [{
             "type": "活動",
             "name": "學生方案",
+            "activityCode": "D3600",
             "dateRange": "2016/07/01-2017/03/31"
         }, {
             "type": "活動",
             "name": "小資方案",
+            "activityCode": "D3611",
             "dateRange": "2016/09/01-2017/12/31"
         }, {
             "type": "促代",
             "name": "匯入-遠傳e書城149限12設備補貼",
+            "activityCode": "D3622",
             "dateRange": "2016/09/15-2017/04/30"
         }, {
             "type": "促代",
             "name": "3G單辦終極管家plus月租699A限24",
+            "activityCode": "D3633",
             "dateRange": "2016/12/01-2017/03/31"
         }, {
             "type": "活動",
             "name": "長青方案",
+            "activityCode": "D3644",
             "dateRange": "2016/10/01-2016/12/31"
         }, {
             "type": "促代",
             "name": "行動理財3G續約專案-590",
+            "activityCode": "D3655",
             "dateRange": "2016/11/01-2017/04/30"
         }, {
             "type": "促代",
             "name": "行動理財4G續約專案-790",
+            "activityCode": "D3666",
             "dateRange": "2016/11/01-2017/04/30"
         }, {
             "type": "促代",
             "name": "行動理財4G續約專案-1190",
+            "activityCode": "D3677",
             "dateRange": "2016/11/01-2017/04/30"
         }, {
             "type": "促代",
             "name": "3G單辦終極管家plus月租899A限24",
+            "activityCode": "D3688",
             "dateRange": "2016/12/01-2017/03/31"
         }, {
             "type": "促代",
             "name": "3G單辦終極管家plus月租399A限24",
+            "activityCode": "D3699",
             "dateRange": "2016/12/01-2017/03/31"
         }, {
             "type": "活動",
             "name": "小資方案",
+            "activityCode": "A1111",
             "dateRange": "2016/12/01-2017/04/23"
         }, {
             "type": "活動",
             "name": "學生方案",
+            "activityCode": "B2222",
             "dateRange": "2016/12/08-2017/04/26"
         }, {
             "type": "活動",
             "name": "學生方案",
+            "activityCode": "C3333",
             "dateRange": "2016/12/03-2017/02/26"
-        }
-
-        ];
+        }];
 
         $scope.activitiesTableData = [{
             "SPV": "001",
@@ -332,23 +346,32 @@ define(['btModule'], function (btModule) {
             // $log.debug($scope.commonTableData);
         }
 
+
         $scope.defineItem = [];
         $scope.selectItem = function (x) {
-            if ($scope.defineItem.length === 0) {
-                $scope.defineItem.push(x);
+            if (shoppingCartEntity.getList().length === 0) {
+                shoppingCartEntity.addItem(x);
             } else {
                 var sameData = [];
-                angular.forEach($scope.defineItem, function (item) {
-                    if (item.name === x.name) {
+                angular.forEach(shoppingCartEntity.getList(), function (item) {
+                    if (item.activityCode === x.activityCode) {
                         sameData.push(item);
                     }
                 })
                 if (sameData.length === 0) {
-                    $scope.defineItem.push(x);
+                    shoppingCartEntity.addItem(x);
                 }
             }
-            $log.debug($scope.defineItem); //後續要傳右方的值...
+            // $log.debug(shoppingCartEntity.getList());
+
+            var index = shoppingCartEntity.getCartID();
+            // $log.debug(index);
+            if (index === null) {
+                index = shoppingCartEntity.openShoppingCart();
+				shoppingCartEntity.setCartID(index);
+            }
         }
+
 
         $scope.view = function (x) {
             $log.debug(x);
