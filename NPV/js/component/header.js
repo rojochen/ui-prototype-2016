@@ -100,15 +100,16 @@ define([
         var index = shoppingCartEntity.getCartID();
 
         vm.openList = function () {
-			var index = shoppingCartEntity.getCartID();
-            $log.debug(index);
-            if (index === null) {
-				index = shoppingCartEntity.openShoppingCart();
-				shoppingCartEntity.setCartID(index);
-            } else {
-                $('.layerList:eq(0)').css('left', ($(window).width() - $('.layerList:eq(0)').width()) + 'px');
-                $('.layerList:eq(0)').css('top', '45px');
-            }
+			shoppingCartEntity.toggleShoppingCart();
+			// var index = shoppingCartEntity.getCartID();
+            // $log.debug(index);
+            // if (index === null) {
+			// 	index = shoppingCartEntity.toggleShoppingCart();
+			// 	shoppingCartEntity.setCartID(index);
+            // } else {
+            //     $('.layerList:eq(0)').css('left', ($(window).width() - $('.layerList:eq(0)').width()) + 'px');
+            //     $('.layerList:eq(0)').css('top', '45px');
+            // }
         }
     };
 
