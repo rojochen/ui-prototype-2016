@@ -28,6 +28,12 @@ define([
                 offset: 'rb',
                 shade: 0,
                 zIndex: 1111,
+                success: function(layero, index){
+                   
+                    //$('.layerContent').parents('layui-layer').css('zIndex',1111);
+                
+                    
+                },
                 cancel: function () {
                     shoppingCartEntity.closeShoppingCart();
                 },
@@ -41,6 +47,7 @@ define([
 
         vm.openList = function () {
             shoppingCartEntity.toggleShoppingCart();
+            $('#layerContent').parent().parent().css('zIndex',1000);
             // $log.debug(shoppingCartEntity.getList());
 			// var index = shoppingCartEntity.getCartID();
             // // $log.debug(index);
