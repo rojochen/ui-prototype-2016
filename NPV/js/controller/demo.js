@@ -429,8 +429,14 @@ define(['btModule'], function (btModule) {
             $scope.showActivities = false;
         }
 
-        $scope.addItem = function () { //未做...
-            $log.debug('新增');
+        $scope.addItem = function () {
+            // $log.debug($scope.selectType);
+            if($scope.selectType === '活動'){
+                $('#Modal2-1').modal('show');
+            }
+            if($scope.selectType === '促代'){
+                $('#Modal4').modal('show');
+            }
         }
         /*end 問卷-查詢*/
     }]);
