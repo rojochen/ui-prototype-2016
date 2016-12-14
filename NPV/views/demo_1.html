@@ -2029,12 +2029,10 @@
                     <div class="modal-body">
                         <form class="form-horizontal form-label-left">
                             <div class="form-group">
-
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">促代Offer項目</label>
                                 <div class="col-md-9 col-sm-9 col-xs-12">
-                                    <select class="form-control" style="width: 300px">
-                                        <option>POS3RP 大雙網哈拉550月租費 -- RP</option>
-                                        <option>POS3RV 來電答鈴69超值包 -- RV</option>
+                                    <select class="form-control" style="width: 300px" ng-model="offerItem" ng-options="x for x in offerList">
+                                        <option value="">選擇促代Offer項目</option>
                                     </select>
                                 </div>
                             </div>
@@ -2042,7 +2040,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">確定</button>
+                        <button type="button" class="btn btn-primary" ng-click="definiteOffer()">確定</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     </div>
                 </div>

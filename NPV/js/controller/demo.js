@@ -439,6 +439,22 @@ define(['btModule'], function (btModule) {
             }
         }
         /*end 問卷-查詢*/
+
+
+        /* begin */
+        $scope.offerList = ['POS3RP 大雙網哈拉550月租費 -- RP', 'POS3RV 來電答鈴69超值包 -- RV'];
+        $scope.definiteOffer = function(){
+            // $log.debug($scope.offerItem);
+            if($scope.offerItem === $scope.offerList[0]){
+                $('#Modal4').modal('hide');
+                $('#Modal5-1').modal('show');
+            }
+            if($scope.offerItem === $scope.offerList[1]){
+                $('#Modal4').modal('hide');
+                $('#Modal5-2').modal('show');
+            }
+        }
+        /* end */
     }]);
     return app;
 });
