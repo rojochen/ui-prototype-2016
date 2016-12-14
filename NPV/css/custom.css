@@ -1,83 +1,126 @@
-i.fa.fa-3{
-    font-size: 4em;
-}
-i.fa.fa-2{
-    font-size: 2em;
-}
-.portrait{
-    margin-left: 25%;
-    margin-top: 20px;
-}
-
-.info-number .badge.style-right{
-    position: initial;
-    margin-bottom: 5px;
-}
-
-.listArea{
-    margin-bottom:5%;
-}
-.listArea .cart-list-title{
-    width:100%;
-}
-.listArea > .listBottom {
-    width:100%;
-    float: left;
-    display: -webkit-flex;
-    display: flex;
-    margin-top: 10px;
-    border-bottom: 2px solid #ccc;
-    /*background: #fed364;*/
-    /*color:#fff;*/
-}
-.listArea > .listBottom > .iconArea {
-    -webkit-flex: 1;
-    flex: 1;
-    margin: 2% 3%;
-    border-right-color:#e6e9ed;
-    border-right-style: solid;
-    border-right-width: 1px;
-}
-.listArea > .listBottom > .iconArea:hover >i{
-    transform: scale(1.5);
-    /*transform:translateX(10px);*/
-}
-.listArea > .listBottom > .iconArea:last-child {
-    border-right-width: 0px;
-}
-.listArea > .listBottom > .iconArea > i{
-    padding-right: 10px;
-    -webkit-transition: transform 1s; 
-    transition: transform .5s;
-}
-
-.listArea > .listText{
-    width:80%;
-    padding-left:10px;
-    float: left;
-    line-height: 1.5em;
-    margin-bottom: 1%;
-}
-.listArea > .listText > .activityName{
-    display: block;
-	font-weight: 700;
-	width: 100%;
-}
-.table-header-color{
-    background:#405467;color:#fff
-}
-
-
-
-.layerList{
-    width:300px;
-    height:calc(100% - 45px);
-}
-.layerList > .layui-layer-content{
-    padding: 10px;
-    max-height: calc(100% - 45px);
-}
-
-#layerContent > .btnArea{
-    text-align: center;
-}
+        i.fa.fa-3 {
+            font-size: 4em;
+        }
+        
+        i.fa.fa-2 {
+            font-size: 2em;
+        }
+        
+        .portrait {
+            margin-left: 25%;
+            margin-top: 20px;
+        }
+        
+        .info-number .badge.style-right {
+            position: initial;
+            margin-bottom: 5px;
+        }
+        
+        .listArea {
+            margin-bottom: 5%;
+        }
+        
+        .listArea .cart-list-title {
+            width: 100%;
+        }
+        
+        .listArea>.listBottom {
+            width: 100%;
+            float: left;
+            display: -webkit-flex;
+            display: flex;
+            margin-top: 10px;
+            border-bottom: 2px solid #ccc;
+            /*background: #fed364;*/
+            /*color:#fff;*/
+        }
+        
+        .listArea>.listBottom>.iconArea {
+            -webkit-flex: 1;
+            flex: 1;
+            margin: 2% 3%;
+            border-right-color: #e6e9ed;
+            border-right-style: solid;
+            border-right-width: 1px;
+        }
+        
+        .listArea>.listBottom>.iconArea:hover>i {
+            transform: scale(1.5);
+            /*transform:translateX(10px);*/
+        }
+        
+        .listArea>.listBottom>.iconArea:last-child {
+            border-right-width: 0px;
+        }
+        
+        .listArea>.listBottom>.iconArea>i {
+            padding-right: 10px;
+            -webkit-transition: transform 1s;
+            transition: transform .5s;
+        }
+        
+        .listArea>.listText {
+            width: 80%;
+            padding-left: 10px;
+            float: left;
+            line-height: 1.5em;
+            margin-bottom: 1%;
+        }
+        
+        .listArea>.listText>.activityName {
+            display: block;
+            font-weight: 700;
+            width: 100%;
+        }
+        
+        .table-header-color {
+            background: #405467;
+            color: #fff
+        }
+        
+        .layerList {
+            width: 300px;
+            height: calc(100% - 45px);
+        }
+        
+        .layerList>.layui-layer-content {
+            padding: 10px;
+            max-height: calc(100% - 45px);
+        }
+        
+        #layerContent>.btnArea {
+            text-align: center;
+        }
+        
+        .borderStyle {
+            border: 1px solid #ccc;
+        }
+        
+        .listdistance {
+            margin-top: 10px;
+        }
+        
+        .fullscreen-modal .modal-dialog {
+            margin: 0;
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+        }
+        
+        @media (min-width: 768px) {
+            .fullscreen-modal .modal-dialog {
+                width: 750px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .fullscreen-modal .modal-dialog {
+                width: 970px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .fullscreen-modal .modal-dialog {
+                width: 1170px;
+            }
+        }

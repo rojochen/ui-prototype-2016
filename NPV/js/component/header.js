@@ -78,6 +78,13 @@ define([
         $scope.definiteList = function(){  //未做...
             $log.debug('執行後續動作');
         }
+
+        $scope.openDraft = function(){
+            $('#Modal9').modal('show');
+        }
+        $scope.openPending = function(){
+            $('#Modal10').modal('show');
+        }
     };
 
     return app;
