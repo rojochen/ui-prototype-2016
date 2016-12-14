@@ -1109,6 +1109,9 @@ legend {
     -webkit-border-radius: 4px;
   }
 }
+.pagination>li>a, .pagination>li>span{
+  position:static
+}
 /** Contacts **/
 
 

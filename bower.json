@@ -25,9 +25,9 @@
   ],
   "devDependencies": {
     "jquery": "^2.2.3",
-    "angular": "1.5.8",
-    "angular-route": "1.5.8",
-    "angular-resource": "1.5.8",
+    "angular": "1.6.0",
+    "angular-route": "1.6.0",
+    "angular-resource": "1.6.0",
     "bootstrap": "^3.3.6",
     "font-awesome": "fontawesome#^4.6.1",
     "fastclick": "^1.0.6",

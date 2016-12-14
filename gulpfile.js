@@ -248,7 +248,16 @@ gulp.task('build-war', function() {
         .pipe(zip(package.name + '.war'))
         .pipe(gulp.dest("./dist"));
 });
-
+gulp.task('build-npv-war', function() {
+    gulp.src(["./NPV/**"])
+        .pipe(war({
+            welcome: 'index.html',
+            displayName: package.version, //form package.json.version
+            version: package.version //form package.json.version
+        }))
+        .pipe(zip('NPV-prototype.war'))
+        .pipe(gulp.dest("./dist"));
+});
 gulp.task('build-all', ['build-app', 'build-style']);
 gulp.task('joe', function() {
     return gulp.src('src/config/joe.js')
