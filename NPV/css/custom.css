@@ -17,6 +17,9 @@ i.fa.fa-2{
 .listArea{
     margin-bottom:5%;
 }
+.listArea .cart-list-title{
+    width:100%;
+}
 .listArea > .listBottom {
     width:100%;
     float: left;
@@ -73,4 +76,8 @@ i.fa.fa-2{
 .layerList > .layui-layer-content{
     padding: 10px;
     max-height: calc(100% - 45px);
+}
+
+#layerContent > .btnArea{
+    text-align: center;
 }

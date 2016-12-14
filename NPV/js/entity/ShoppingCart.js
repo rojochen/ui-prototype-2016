@@ -12,6 +12,9 @@ define(['btModule'], function (btModule) {
         this.addItem = function (item) {
             list.push(item);
         };
+        this.removeItem = function(item){
+            list = [];
+        };
 
         var cartId = null;
         this.setCartID = function (id) {
