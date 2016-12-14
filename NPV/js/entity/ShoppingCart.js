@@ -6,6 +6,7 @@ define(['btModule'], function (btModule) {
 
     function ShoppingCart($log) {
         var list = [];
+        var isOpen = false;
         this.getList = function () {
             return list;
         };
@@ -23,15 +24,27 @@ define(['btModule'], function (btModule) {
         this.getCartID = function () {
             return cartId;
         };
-
+        
         this.openShoppingCart = function () {
 			cartId = layer.open();
+            isOpen = true;
             return cartId;
         };
         this.closeShoppingCart = function (index) {
             cartId = null;
+            isOpen = false;
             layer.close(index);
         };
+        this.toggleShoppingCart = function(){
+            if(isOpen===true){
+                this.closeShoppingCart(cartId);
+            }else{
+                this.openShoppingCart();
+            }
+        };
+        this.isOpen = function(){
+            return isOpen ; 
+        }
     }
 
     ShoppingCart.$inject = ["$log"];

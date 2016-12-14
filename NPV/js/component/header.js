@@ -40,16 +40,17 @@ define([
         
 
         vm.openList = function () {
+            shoppingCartEntity.toggleShoppingCart();
             // $log.debug(shoppingCartEntity.getList());
-			var index = shoppingCartEntity.getCartID();
-            // $log.debug(index);
-            if (index === null) {
-				index = shoppingCartEntity.openShoppingCart();
-				shoppingCartEntity.setCartID(index);
-            } else {
-                $('.layerList:eq(0)').css('left', ($(window).width() - $('.layerList:eq(0)').width()) + 'px');
-                $('.layerList:eq(0)').css('top', '45px');
-            }
+			// var index = shoppingCartEntity.getCartID();
+            // // $log.debug(index);
+            // if (index === null) {
+			// 	index = shoppingCartEntity.openShoppingCart();
+			// 	shoppingCartEntity.setCartID(index);
+            // } else {
+            //     $('.layerList:eq(0)').css('left', ($(window).width() - $('.layerList:eq(0)').width()) + 'px');
+            //     $('.layerList:eq(0)').css('top', '45px');
+            // }
         }
 
 
