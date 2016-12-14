@@ -2,7 +2,10 @@ define(['pokemon'], function(pokemon) {
     'use strict';
     var app = angular.module('btModule',['pokemon']);
     // 導頁路徑
-    app.config(['$routeProvider', function ($routeProvider) {
+    app.config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
+		$routeProvider.eagerInstantiationEnabled(false);
+
+		$locationProvider.hashPrefix('');
 		$routeProvider
 				.when('/', {
 					templateUrl: "../template/index.html"
@@ -88,6 +91,7 @@ define(['pokemon'], function(pokemon) {
 				.otherwise({
 					redirectTo: '/'
 				});
+				
 		}]);
 
     return app;
