@@ -8,9 +8,9 @@ define(['btModule'], function (btModule) {
   function joeCtrl($http, $scope, $timeout, $log) {
     var vm = this;
     // btPortlet
-    $http.get("../data/btCheckList.json").then(function (response){
+    $http.get("../data/btCheckList.json").then(function (response) {
       vm.items = response.data;
-    }, function (response){
+    }, function (response) {
       $log.error('http error!');
     })
     // /btPortlet 
@@ -94,10 +94,10 @@ define(['btModule'], function (btModule) {
             type: 'bar',
             data: [1, 3, 3, 2]
           }, {
-              name: 'Yvonne捕獲數',
-              type: 'bar',
-              data: [2, 2, 4, 1]
-            }]
+            name: 'Yvonne捕獲數',
+            type: 'bar',
+            data: [2, 2, 4, 1]
+          }]
         });
       }
 
@@ -134,15 +134,15 @@ define(['btModule'], function (btModule) {
               value: 5,
               name: '妙蛙種子'
             }, {
-                value: 7,
-                name: '小拉達'
-              }, {
-                value: 3,
-                name: '伊布'
-              }, {
-                value: 3,
-                name: '超音蝠'
-              }]
+              value: 7,
+              name: '小拉達'
+            }, {
+              value: 3,
+              name: '伊布'
+            }, {
+              value: 3,
+              name: '超音蝠'
+            }]
           }]
         });
       }
@@ -184,15 +184,15 @@ define(['btModule'], function (btModule) {
               value: 5,
               name: '妙蛙種子'
             }, {
-                value: 7,
-                name: '小拉達'
-              }, {
-                value: 3,
-                name: '伊布'
-              }, {
-                value: 3,
-                name: '超音蝠'
-              }]
+              value: 7,
+              name: '小拉達'
+            }, {
+              value: 3,
+              name: '伊布'
+            }, {
+              value: 3,
+              name: '超音蝠'
+            }]
           }]
         });
       }
@@ -276,9 +276,9 @@ define(['btModule'], function (btModule) {
                 type: 'max',
                 name: 'Max'
               }, {
-                  type: 'min',
-                  name: 'Min'
-                }]
+                type: 'min',
+                name: 'Min'
+              }]
             },
             markLine: {
               data: [{
@@ -287,51 +287,51 @@ define(['btModule'], function (btModule) {
               }]
             }
           }, {
-              name: '傑尼龜',
-              type: 'scatter',
-              tooltip: {
-                trigger: 'item',
-                formatter: function (params) {
-                  if (params.value.length > 1) {
-                    return params.seriesName + ' :<br/>' + params.value[0] + 'cm ' + params.value[1] + 'kg ';
-                  } else {
-                    return params.seriesName + ' :<br/>' + params.name + ' : ' + params.value + 'kg ';
-                  }
+            name: '傑尼龜',
+            type: 'scatter',
+            tooltip: {
+              trigger: 'item',
+              formatter: function (params) {
+                if (params.value.length > 1) {
+                  return params.seriesName + ' :<br/>' + params.value[0] + 'cm ' + params.value[1] + 'kg ';
+                } else {
+                  return params.seriesName + ' :<br/>' + params.name + ' : ' + params.value + 'kg ';
                 }
-              },
-              data: [
-                [174.0, 65.6],
-                [175.3, 71.8],
-                [193.5, 80.7],
-                [186.5, 72.6],
-                [187.2, 78.8],
-                [181.5, 74.8],
-                [184.0, 86.4],
-                [184.5, 78.4],
-                [175.0, 62.0],
-                [184.0, 81.6],
-                [180.0, 76.6],
-                [177.8, 83.6],
-                [192.0, 90.0],
-                [176.0, 74.6],
-                [174.0, 71.0]
-              ],
-              markPoint: {
-                data: [{
-                  type: 'max',
-                  name: 'Max'
-                }, {
-                    type: 'min',
-                    name: 'Min'
-                  }]
-              },
-              markLine: {
-                data: [{
-                  type: 'average',
-                  name: 'Mean'
-                }]
               }
-            }]
+            },
+            data: [
+              [174.0, 65.6],
+              [175.3, 71.8],
+              [193.5, 80.7],
+              [186.5, 72.6],
+              [187.2, 78.8],
+              [181.5, 74.8],
+              [184.0, 86.4],
+              [184.5, 78.4],
+              [175.0, 62.0],
+              [184.0, 81.6],
+              [180.0, 76.6],
+              [177.8, 83.6],
+              [192.0, 90.0],
+              [176.0, 74.6],
+              [174.0, 71.0]
+            ],
+            markPoint: {
+              data: [{
+                type: 'max',
+                name: 'Max'
+              }, {
+                type: 'min',
+                name: 'Min'
+              }]
+            },
+            markLine: {
+              data: [{
+                type: 'average',
+                name: 'Mean'
+              }]
+            }
+          }]
         });
       }
 
@@ -395,30 +395,30 @@ define(['btModule'], function (btModule) {
             },
             data: [10, 12, 21, 54, 260, 830, 710]
           }, {
-              name: '傑尼龜',
-              type: 'line',
-              smooth: true,
-              itemStyle: {
-                normal: {
-                  areaStyle: {
-                    type: 'default'
-                  }
+            name: '傑尼龜',
+            type: 'line',
+            smooth: true,
+            itemStyle: {
+              normal: {
+                areaStyle: {
+                  type: 'default'
                 }
-              },
-              data: [30, 182, 434, 791, 390, 30, 10]
-            }, {
-              name: '皮卡丘',
-              type: 'line',
-              smooth: true,
-              itemStyle: {
-                normal: {
-                  areaStyle: {
-                    type: 'default'
-                  }
+              }
+            },
+            data: [30, 182, 434, 791, 390, 30, 10]
+          }, {
+            name: '皮卡丘',
+            type: 'line',
+            smooth: true,
+            itemStyle: {
+              normal: {
+                areaStyle: {
+                  type: 'default'
                 }
-              },
-              data: [1320, 1132, 601, 234, 120, 90, 20]
-            }]
+              }
+            },
+            data: [1320, 1132, 601, 234, 120, 90, 20]
+          }]
         });
       }
 
@@ -456,27 +456,31 @@ define(['btModule'], function (btModule) {
 
 
   //表單構成頁面
-  app.controller('form', ['$scope', function ($scope) {
+  app.controller('form', ['$scope', '$timeout', '$element', function ($scope, $timeout, $element) {
     //bootstrap-daterangepicker
-    $('#birthday').daterangepicker({
-      singleDatePicker: true,
-      calender_style: "picker_4"
-    }, function (start, end, label) {
-      console.log(start.toISOString(), end.toISOString(), label);
-    });
+    $timeout(function () {
+      $('#birthday').daterangepicker({
+        singleDatePicker: true,
+        calender_style: "picker_4"
+      }, function (start, end, label) {
+        console.log(start.toISOString(), end.toISOString(), label);
+      });
+    }, 100);
 
 
     //Select2
-    $(".select2_single").select2({
-      placeholder: "選擇地點",
-      allowClear: true
-    });
-    $(".select2_group").select2({});
-    $(".select2_multiple").select2({
-      maximumSelectionLength: 4,
-      placeholder: "最多選擇四項",
-      allowClear: true
-    });
+    $timeout(function () {
+      $(".select2_single").select2({
+        placeholder: "選擇地點",
+        allowClear: true
+      });
+      $(".select2_group").select2({});
+      $(".select2_multiple").select2({
+        maximumSelectionLength: 4,
+        placeholder: "最多選擇四項",
+        allowClear: true
+      });
+    }, 100);
 
 
     //jQuery Tags Input
@@ -492,34 +496,47 @@ define(['btModule'], function (btModule) {
       alert("Changed a tag: " + tag);
     }
 
-    $('#tags_1').tagsInput({
-      width: 'auto',
-      defaultText: '新增項目',
-    });
+    $timeout(function () {
+      $('#tags_1').tagsInput({
+        width: 'auto',
+        defaultText: '新增項目',
+      });
 
-    $('#tags_2').tagsInput({
-      width: 'auto',
-      defaultText: '新增項目',
-    });
+      $('#tags_2').tagsInput({
+        width: 'auto',
+        defaultText: '新增項目',
+      });
+    }, 100)
 
 
     //Parsley
-    $.listen('parsley:field:validate', function () {
-      validateFront();
-    });
-    $('#demo-form2 #submitInfo').on('click', function () {
-      $('#demo-form2').parsley().validate();
-      validateFront();
-    });
-    var validateFront = function () {
-      if (true === $('#demo-form2').parsley().isValid()) {
-        $('.bs-callout-info').removeClass('hidden');
-        $('.bs-callout-warning').addClass('hidden');
-      } else {
-        $('.bs-callout-info').addClass('hidden');
-        $('.bs-callout-warning').removeClass('hidden');
-      }
-    };
+    $timeout(function () {
+      $.listen('parsley:field:validate', function () {
+        validateFront();
+      });
+      $('#demo-form2 #submitInfo').on('click', function () {
+        $('#demo-form2').parsley().validate();
+        validateFront();
+      });
+      var validateFront = function () {
+        if (true === $('#demo-form2').parsley().isValid()) {
+          $('.bs-callout-info').removeClass('hidden');
+          $('.bs-callout-warning').addClass('hidden');
+        } else {
+          $('.bs-callout-info').addClass('hidden');
+          $('.bs-callout-warning').removeClass('hidden');
+        }
+      };
+    }, 100);
+
+
+    //
+    $timeout(function () {
+      $element.find('.flat').iCheck({
+        checkboxClass: 'icheckbox_flat-green',
+        radioClass: 'iradio_flat-green'
+      });
+    }, 100);
 
   }]);
 

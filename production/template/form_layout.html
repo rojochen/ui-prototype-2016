@@ -1,351 +1,365 @@
-<div class="">
-          <div class="page-title">
-            <div class="title_left">
-              <h3>表單編排</h3>
-            </div>
+<div class="" ng-controller="form">
+	<div class="page-title">
+		<div class="title_left">
+			<h3>表單編排</h3>
+		</div>
 
-            <div class="title_right">
-              <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="搜尋">
-                  <span class="input-group-btn">
+		<div class="title_right">
+			<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="搜尋">
+					<span class="input-group-btn">
                       <button class="btn btn-default" type="button">Go!</button>
                     </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <bt-portlet titlename="'單行編排'" switchbtn="true" selectbtn="true" closebtn="true">
-                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">姓名 <span class="required">*</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<bt-portlet titlename="'單行編排'" switchbtn="true" selectbtn="true" closebtn="true">
+				<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+					<div class="form-group">
+						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">姓名 <span class="required">*</span>
                         </label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">密碼 <span class="required">*</span>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">密碼 <span class="required">*</span>
                         </label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="password" id="password" required="required" class="form-control col-md-7 col-xs-12">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email 
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<input type="password" id="password" required="required" class="form-control col-md-7 col-xs-12">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email 
                         </label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="email" id="email" class="form-control col-md-7 col-xs-12">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12">性別</label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div id="gender" class="btn-group" data-toggle="buttons">
-                          <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<input type="email" id="email" class="form-control col-md-7 col-xs-12">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-3 col-sm-3 col-xs-12">性別</label>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div id="gender" class="btn-group" data-toggle="buttons">
+								<label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
                               <input type="radio" name="gender" value="male"> 男
                             </label>
-                          <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+								<label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
                               <input type="radio" name="gender" value="female"> 女
                             </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="birthday">生日 <span class="required">*</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="birthday">生日 <span class="required">*</span>
                         </label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                      </div>
-                    </div>
-                    <div class="ln_solid"></div>
-                    <div class="form-group">
-                      <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                        <button id="submitInfo" type="button" class="btn btn-primary">送出</button>
-                        <button type="button" class="btn btn-success">取消</button>
-                      </div>
-                    </div>
-                  </form>
-              </bt-portlet>
-            </div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+						</div>
+					</div>
+					<div class="ln_solid"></div>
+					<div class="form-group">
+						<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+							<button id="submitInfo" type="button" class="btn btn-primary">送出</button>
+							<button type="button" class="btn btn-success">取消</button>
+						</div>
+					</div>
+				</form>
+			</bt-portlet>
+		</div>
 
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <bt-portlet titlename="'兩行編排'" switchbtn="true" selectbtn="true" closebtn="true">
-                  <form data-parsley-validate class="form-horizontal form-label-left">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <h3>個人資訊</h3>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="ln_solid"></div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label" for="first-name_2">姓名</label>
-                        <input type="text" id="first-name_2" required="required" class="form-control col-md-7 col-xs-12">
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label">稱謂</label>
-                        <div class="radio-list">
-                          <div class="radio-inline">
-                            <label class="radio-inline">
-                                <input type="radio" class="flat" checked name="iCheck"> 先生
-                              </label>
-                          </div>
-                          <div class="radio-inline">
-                            <label class="radio-inline">
-                                <input type="radio" class="flat" name="iCheck"> 女士
-                              </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label" for="birthday_2">生日</label>
-                        <input id="birthday_2" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label">會員等級</label>
-                        <select class="form-control">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<bt-portlet titlename="'兩行編排'" switchbtn="true" selectbtn="true" closebtn="true">
+				<form data-parsley-validate class="form-horizontal form-label-left">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<h3>個人資訊</h3>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="ln_solid"></div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label" for="first-name_2">姓名</label>
+									<input type="text" id="first-name_2" required="required" class="form-control col-md-7 col-xs-12">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label">稱謂</label>
+									<div class="radio-list">
+										<div class="radio-inline">
+											<input type="radio" class="flat" checked name="iCheck"> 先生
+										</div>
+										<div class="radio-inline">
+											<input type="radio" class="flat" name="iCheck"> 女士
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label" for="birthday_2">生日</label>
+									<input id="birthday_2" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label">會員等級</label>
+									<select class="form-control">
                             <option>等級 1</option>
                             <option>等級 2</option>
                             <option>等級 3</option>
                             <option>等級 4</option>
                           </select>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label">專長</label>
-                        <select class="select2_multiple form-control" multiple="multiple">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label">專長</label>
+									<select class="select2_multiple form-control" multiple="multiple">
                              <option>請選擇</option> 
                             <option>專長 1</option>
                             <option>專長 2</option>
                             <option>專長 3</option>
                           </select>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="control-group">
-                        <label class="control-label">興趣</label>
-                        <div class="col-md-12 col-sm-12 col-xs-12 row">
-                          <input id="tags_1" type="text" class="tags form-control" value="閱讀, 電影, 繪畫" />
-                          <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                  <br>
-                  <form data-parsley-validate class="form-horizontal form-label-left">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <h3>地址</h3>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="ln_solid"></div>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label" for="address">地址</label>
-                        <input type="text" id="address" required="required" class="form-control col-md-7 col-xs-12">
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label" for="city">鄉/鎮/市</label>
-                        <input id="city" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label" for="area">省/州/市</label>
-                        <input id="area" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label" for="postalCode">郵遞區號</label>
-                        <input id="postalCode" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label">國家</label>
-                        <select class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="control-group">
+									<label class="control-label">興趣</label>
+									<div class="col-md-12 col-sm-12 col-xs-12 row">
+										<input id="tags_1" type="text" class="tags form-control" value="閱讀, 電影, 繪畫" />
+										<div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<br>
+				<form data-parsley-validate class="form-horizontal form-label-left">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<h3>地址</h3>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="ln_solid"></div>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label class="control-label" for="address">地址</label>
+								<input type="text" id="address" required="required" class="form-control col-md-7 col-xs-12">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="form-group">
+								<label class="control-label" for="city">鄉/鎮/市</label>
+								<input id="city" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="form-group">
+								<label class="control-label" for="area">省/州/市</label>
+								<input id="area" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="form-group">
+								<label class="control-label" for="postalCode">郵遞區號</label>
+								<input id="postalCode" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="form-group">
+								<label class="control-label">國家</label>
+								<select class="form-control">
                             <option>國家 1</option>
                             <option>國家 2</option>
                             <option>國家 3</option>
                           </select>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="ln_solid"></div>
-                    </div>
-                    <div class="form-group">
-                      <div class="pull-right">
-                        <button type="button" class="btn btn-primary">送出</button>
-                        <button type="button" class="btn btn-success">取消</button>
-                      </div>
-                    </div>
-                  </form>
-              </bt-portlet>
-            </div>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="ln_solid"></div>
+						</div>
+						<div class="form-group">
+							<div class="pull-right">
+								<button type="button" class="btn btn-primary">送出</button>
+								<button type="button" class="btn btn-success">取消</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</bt-portlet>
+		</div>
 
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <bt-portlet titlename="'兩行並排編排'" switchbtn="true" selectbtn="true" closebtn="true">
-                  <form data-parsley-validate class="form-horizontal form-label-left">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <h3>個人資訊</h3>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="ln_solid"></div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name_3">姓名</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" id="first-name_3" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">稱謂</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <div class="radio-list">
-                            <div class="radio-inline">
-                              <label class="radio-inline">
-                                  <input type="radio" class="flat" checked name="iCheck"> 先生
-                                </label>
-                            </div>
-                            <div class="radio-inline">
-                              <label class="radio-inline">
-                                  <input type="radio" class="flat" name="iCheck"> 女士
-                                </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="birthday_3">生日</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input id="birthday_3" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">會員等級</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select class="form-control">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<bt-portlet titlename="'兩行並排編排'" switchbtn="true" selectbtn="true" closebtn="true">
+				<form data-parsley-validate class="form-horizontal form-label-left">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<h3>個人資訊</h3>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="ln_solid"></div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name_3">姓名</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<input type="text" id="first-name_3" required="required" class="form-control col-md-7 col-xs-12">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12">稱謂</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<div class="radio-inline">
+											<input type="radio" class="flat" checked name="iCheck"> 先生
+											<input type="radio" class="flat" name="iCheck"> 女士
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="birthday_3">生日</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<input id="birthday_3" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12">會員等級</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<select class="form-control">
                               <option>等級 1</option>
                               <option>等級 2</option>
                               <option>等級 3</option>
                               <option>等級 4</option>
                             </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">專長</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select class="select2_multiple form-control" multiple="multiple">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12">專長</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<select class="select2_multiple form-control" multiple="multiple">
                               <!-- <option>請選擇</option> -->
                               <option>專長 1</option>
                               <option>專長 2</option>
                               <option>專長 3</option>
+                              <option>專長 4</option>
+                              <option>專長 5</option>
                             </select>
-                        </div>
-                      </div>
-                    </div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="control-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12">興趣</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<input id="tags_2" type="text" class="tags form-control" value="閱讀, 電影, 繪畫" />
+										<div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<br>
 
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="control-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">興趣</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input id="tags_2" type="text" class="tags form-control" value="閱讀, 電影, 繪畫" />
-                          <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                  <br>
-
-                  <form data-parsley-validate class="form-horizontal form-label-left">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <h3>地址</h3>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="ln_solid"></div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="address_2">地址</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" id="address_2" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="city_2">鄉/鎮/市</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input id="city_2" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="area_2">省/州/市</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input id="area_2" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="postalCode_2">郵遞區號</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input id="postalCode_2" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">國家</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select class="form-control">
+				<form data-parsley-validate class="form-horizontal form-label-left">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<h3>地址</h3>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="ln_solid"></div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="address_2">地址</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<input type="text" id="address_2" required="required" class="form-control col-md-7 col-xs-12">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="city_2">鄉/鎮/市</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<input id="city_2" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="area_2">省/州/市</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<input id="area_2" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="postalCode_2">郵遞區號</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<input id="postalCode_2" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12">國家</label>
+									<div class="col-md-9 col-sm-9 col-xs-12">
+										<select class="form-control">
                               <option>國家 1</option>
                               <option>國家 2</option>
                               <option>國家 3</option>
                             </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="ln_solid"></div>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="form-group">
-                        <div class="pull-right">
-                          <button type="button" class="btn btn-primary">送出</button>
-                          <button type="button" class="btn btn-success">取消</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-              </bt-portlet>
-            </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="ln_solid"></div>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<div class="pull-right">
+									<button type="button" class="btn btn-primary">送出</button>
+									<button type="button" class="btn btn-success">取消</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</bt-portlet>
+		</div>
 
-          </div>
-        </div>
+	</div>
+</div>
