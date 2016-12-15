@@ -159,7 +159,7 @@
                     </div>
                 </form>
                 <!-- begin 關鍵字搜尋表格 -->
-                <div class="col-md-12 col-sm-12 col-xs-12" ng-show="showCommonTable">
+                <!--<div class="col-md-12 col-sm-12 col-xs-12" ng-show="showCommonTable">
                     <table id="datatable" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
                         <thead>
                             <tr role="row">
@@ -189,10 +189,10 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </div>-->
                 <!-- end 關鍵字搜尋表格 -->
                 <!-- begin 活動進階搜尋表格 -->
-                <div class="col-md-12 col-sm-12 col-xs-12" ng-show="showActivitiesTable">
+                <!--<div class="col-md-12 col-sm-12 col-xs-12" ng-show="showActivitiesTable">
                     <table id="datatable_activities" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
                         <thead>
                             <tr role="row">
@@ -227,7 +227,7 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </div>-->
                 <!-- end 活動進階搜尋表格 -->
             </div>
         </div>
@@ -1059,6 +1059,65 @@
 								<button type="button" class="btn btn-primary ng-scope" ng-click="activities_Advanced()">查詢</button>
 							</div>
 						</div>
+                         <!-- begin 活動進階搜尋表格 -->
+                <div class="col-md-12 col-sm-12 col-xs-12" ng-show="showActivitiesTable">
+                    <table id="datatable_activities" class="table table-striped table-bordered dataTable no-footer"
+                           role="grid" aria-describedby="datatable_info">
+                        <thead>
+                        <tr role="row">
+                            <th class="sorting_asc text-center table-header-color" tabindex="0"
+                                aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending">加入
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">SPV NO
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">門號類型
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">種類
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">活動類別代碼
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">活動類別名稱
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">活動期間
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">活動群組代碼
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">活動群組
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">修改
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr role="row" ng-repeat="x in activitiesTableData track by $index">
+                            <td class="sorting_1 text-center" ng-click="selectItem(x)">
+                                <i class="fa fa-plus"></i>
+                            </td>
+                            <td ng-bind="x.SPV"></td>
+                            <td ng-bind="x.gateType"></td>
+                            <td ng-bind="x.sort"></td>
+                            <td ng-bind="x.activityCode"></td>
+                            <td ng-bind="x.activityName"></td>
+                            <td ng-bind="x.activityRange"></td>
+                            <td ng-bind="x.groupCode"></td>
+                            <td ng-bind="x.groupName"></td>
+                            <td class="text-center" ng-click="edit(x)">
+                                <i class="fa fa-pencil"></i>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- end 活動進階搜尋表格 -->
                         </form>
 					
                     </div>
@@ -1117,7 +1176,7 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-md-12">
-										<table class="table table-condensed table-bordered">
+										<table class="table table-striped jambo_table">
 											<thead>
 												<tr>
 													<th>SR-NO</th>
@@ -1662,7 +1721,7 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <table class="table table-condensed table-bordered">
+                                            <table class="table table-striped jambo_table">
                                                 <thead>
                                                     <tr>
                                                         <th>SR-NO</th>
@@ -2168,17 +2227,18 @@
                                     </div>
                                 </div>
                             </div>
+                            
 
-
-                            <div class="clearfix"></div>
-                            <hr>
-
-                            <div class="text-center">
-                                <a href="" class="btn btn-success">查詢</a>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary pull-right">查詢</button>
+                        
                             </div>
 
 
-                            <div class="table-responsive">
+                           
+                            <div class="form-group">
+
+                                  <div class="table-responsive">
                                 <table class="table table-striped table-bordered dataTable no-footer"
                                 >
                                 <thead>
@@ -2274,6 +2334,11 @@
                                 </table>
                             </div>
 
+
+                            </div>
+
+
+                          
                         </form>
                     </div>
 
@@ -3119,18 +3184,7 @@
          <!-- end 12 指派-Men  -->
 
 
-         <!-- 審核-訊息 13 -->
-        <div class="page-title">
-            <div class="title_left">
-                <h3>審核-訊息</h3>
-                <button class="btn btn-success source" onclick="new PNotify({
-                                  title: 'SPV',
-                                  text: '「20161129001」執行成功',
-                                  styling: 'bootstrap3'
-                              });">確定
-                </button>
-            </div>
-        </div>
+        
 
        
 
