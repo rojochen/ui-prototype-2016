@@ -8,7 +8,8 @@ define(['btModule'], function (btModule) {
     });
 
     app.controller('demoCtrl', ['$scope', '$timeout', '$log', '$element',
-        'ShoppingCartEntity', function ($scope, $timeout, $log, $element, shoppingCartEntity) {
+        'ShoppingCartEntity',
+        function ($scope, $timeout, $log, $element, shoppingCartEntity) {
             var vm = this;
 
             /*begin 版面縮合*/
@@ -430,34 +431,48 @@ define(['btModule'], function (btModule) {
             }
 
             $scope.addItem = function () {
-                // $log.debug($scope.selectType);
-                if ($scope.selectType === '活動') {
-                    $('#Modal2-1').modal('show');
+                    // $log.debug($scope.selectType);
+                    if ($scope.selectType === '活動') {
+                        $('#Modal2-1').modal('show');
+                    }
+                    if ($scope.selectType === '促代') {
+                        $('#Modal4').modal('show');
+                    }
                 }
-                if ($scope.selectType === '促代') {
-                    $('#Modal4').modal('show');
-                }
-            }
-            /*end 問卷-查詢*/
+                /*end 問卷-查詢*/
 
 
             /* begin */
             $scope.offerList = ['POS3RP 大雙網哈拉550月租費 -- RP', 'POS3RV 來電答鈴69超值包 -- RV'];
             $scope.definiteOffer = function () {
-                // $log.debug($scope.offerItem);
-                if ($scope.offerItem) {
-                    $('#Modal4').modal('hide');
-                    $('#Modal4').on('hidden.bs.modal', function () {
-                        if ($scope.offerItem === $scope.offerList[0]) {
-                            $('#Modal5-1').modal('show');
-                        }
-                        if ($scope.offerItem === $scope.offerList[1]) {
-                            $('#Modal5-2').modal('show');
-                        }
-                    });
+                    // $log.debug($scope.offerItem);
+                    if ($scope.offerItem) {
+                        $('#Modal4').modal('hide');
+                        $('#Modal4').on('hidden.bs.modal', function () {
+                            if ($scope.offerItem === $scope.offerList[0]) {
+                                $('#Modal5-1').modal('show');
+                            }
+                            if ($scope.offerItem === $scope.offerList[1]) {
+                                $('#Modal5-2').modal('show');
+                            }
+                        });
+                    }
                 }
+                /* end */
+
+            $scope.openbuy = function () {
+                var index = shoppingCartEntity.getCartID();
+                // $log.debug(index);
+                if (index === null) {
+                    index = shoppingCartEntity.openShoppingCart();
+                    shoppingCartEntity.setCartID(index);
+                }
+
             }
-            /* end */
-        }]);
+
+
+
+        }
+    ]);
     return app;
 });
