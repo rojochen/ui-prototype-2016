@@ -3,14 +3,16 @@ define(['btModule'], function (btModule) {
   var app = angular.module('btModule');
 
 
-  joeCtrl.$inject = ['$http', '$scope', '$timeout'];
+  joeCtrl.$inject = ['$http', '$scope', '$timeout', '$log'];
 
-  function joeCtrl($http, $scope, $timeout) {
+  function joeCtrl($http, $scope, $timeout, $log) {
     var vm = this;
-    // btPortlet 
-    $http.get("../data/btCheckList.json").success(function (data) {
-      vm.items = data;
-    });
+    // btPortlet
+    $http.get("../data/btCheckList.json").then(function (response){
+      vm.items = response.data;
+    }, function (response){
+      $log.error('http error!');
+    })
     // /btPortlet 
 
     // 基本圖表
