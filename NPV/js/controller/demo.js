@@ -461,12 +461,37 @@ define(['btModule'], function (btModule) {
                 /* end */
 
             $scope.openbuy = function () {
+
+                $scope.aaa = [{
+                    "type": "活動",
+                    "name": "學生方案",
+                    "activityCode": "D3600",
+                    "dateRange": "2016/07/01-2017/03/31"
+                }, {
+                    "type": "促案",
+                    "name": "小資方案",
+                    "activityCode": "D3611",
+                    "dateRange": "2016/09/01-2017/12/31"
+                }];
+
+
+                angular.forEach($scope.aaa, function (item) {
+                    shoppingCartEntity.addItem(item);
+
+                })
+
+
+
                 var index = shoppingCartEntity.getCartID();
                 // $log.debug(index);
                 if (index === null) {
                     index = shoppingCartEntity.openShoppingCart();
                     shoppingCartEntity.setCartID(index);
                 }
+
+
+
+
 
             }
 
