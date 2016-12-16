@@ -42,6 +42,7 @@
             border-right-color: #e6e9ed;
             border-right-style: solid;
             border-right-width: 1px;
+            text-align: center;
         }
         
         .listArea>.listBottom>.iconArea:hover>i {

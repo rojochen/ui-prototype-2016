@@ -23,7 +23,7 @@ define([
                 title: '已選清單',
                 skin: 'layerList',
                 maxmin: false,
-                resize: false,
+                resize: true,
                 anim: 2,
                 offset: 'rb',
                 shade: 0,
