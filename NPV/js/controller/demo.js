@@ -460,9 +460,13 @@ define(['btModule'], function (btModule) {
                 }
                 /* end */
 
+           
+
+
+
             $scope.openbuy = function () {
 
-                $scope.aaa = [{
+                $scope.actionData = [{
                     "type": "活動",
                     "name": "學生方案",
                     "activityCode": "D3600",
@@ -475,7 +479,7 @@ define(['btModule'], function (btModule) {
                 }];
 
 
-                angular.forEach($scope.aaa, function (item) {
+                angular.forEach($scope.actionData, function (item) {
                     shoppingCartEntity.addItem(item);
 
                 })

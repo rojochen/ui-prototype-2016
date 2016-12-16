@@ -1095,9 +1095,9 @@
                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
                                 rowspan="1" colspan="1">活動群組
                             </th>
-                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                            <!--<th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
                                 rowspan="1" colspan="1">修改
-                            </th>
+                            </th>-->
                         </tr>
                         </thead>
                         <tbody>
@@ -1116,9 +1116,9 @@
                             <td ng-bind="x.activityRange"></td>
                             <td ng-bind="x.groupCode"></td>
                             <td ng-bind="x.groupName"></td>
-                            <td class="text-center" ng-click="edit(x)">
+                            <!--<td class="text-center" ng-click="edit(x)">
                                 <i class="fa fa-pencil"></i>
-                            </td>
+                            </td>-->
                         </tr>
                         </tbody>
                     </table>
@@ -1160,7 +1160,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" ng-click="definiteOffer()">確定</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-default" ng-click="aaa()">取消</button>
                 </div>
             </div>
         </div>
