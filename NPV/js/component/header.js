@@ -12,48 +12,49 @@ define([
         }
     };
     app.component('btHeader', headerComponent);
-    
-    headerComponentCtrl.$inject = ['$log','ShoppingCartEntity', '$scope'];
-    function headerComponentCtrl($log,shoppingCartEntity, $scope) {
+
+    headerComponentCtrl.$inject = ['$log', 'ShoppingCartEntity', '$scope'];
+    function headerComponentCtrl($log, shoppingCartEntity, $scope) {
         var vm = this;
 
 
         layer.config({
-                type: 1,
-                title: '已選清單',
-                skin: 'layerList',
-                maxmin: false,
-                resize: false,
-                anim: 2,
-                offset: 'rb',
-                shade: 0,
-                zIndex: 1111,
-                success: function(layero, index){
-                   
-                    //$('.layerContent').parents('layui-layer').css('zIndex',1111);
-                
-                    
-                },
-                cancel: function () {
-                    shoppingCartEntity.closeShoppingCart();
-                },
-                content:$('#layerContent')
-            });
-        
+            type: 1,
+            title: '已選清單',
+            skin: 'layerList',
+            maxmin: false,
+            resize: false,
+            anim: 2,
+            offset: 'rb',
+            shade: 0,
+            zIndex: 1111,
+            success: function (layero, index) {
+
+                //$('.layerContent').parents('layui-layer').css('zIndex',1111);
+
+
+            },
+            cancel: function () {
+                shoppingCartEntity.closeShoppingCart();
+            },
+            content: $('#layerContent')
+        });
+
 
         $scope.selectList = shoppingCartEntity.getList();
         var index = shoppingCartEntity.getCartID();
-        
+
 
         vm.openList = function () {
             shoppingCartEntity.toggleShoppingCart();
-            $('#layerContent').parent().parent().css('zIndex',1000);
+            $('#layerContent').parent().parent().css('zIndex', 1000);
+            $scope.isShowTree = true;
             // $log.debug(shoppingCartEntity.getList());
-			// var index = shoppingCartEntity.getCartID();
+            // var index = shoppingCartEntity.getCartID();
             // // $log.debug(index);
             // if (index === null) {
-			// 	index = shoppingCartEntity.openShoppingCart();
-			// 	shoppingCartEntity.setCartID(index);
+            // 	index = shoppingCartEntity.openShoppingCart();
+            // 	shoppingCartEntity.setCartID(index);
             // } else {
             //     $('.layerList:eq(0)').css('left', ($(window).width() - $('.layerList:eq(0)').width()) + 'px');
             //     $('.layerList:eq(0)').css('top', '45px');
@@ -61,12 +62,12 @@ define([
         }
 
 
-        $scope.removeList = function(x, index){
+        $scope.removeList = function (x, index) {
             // $log.debug(index);
             var selectItem = shoppingCartEntity.getList();
             shoppingCartEntity.removeItem();
-            angular.forEach(selectItem, function(item){
-                if(item.activityCode !== x.activityCode){
+            angular.forEach(selectItem, function (item) {
+                if (item.activityCode !== x.activityCode) {
                     shoppingCartEntity.addItem(item);
                 }
             })
@@ -75,16 +76,35 @@ define([
         }
 
 
-        $scope.definiteList = function(){  //未做...
+        $scope.definiteList = function () {  //未做...
             $log.debug('執行後續動作');
         }
 
-        $scope.openDraft = function(){
+        $scope.openDraft = function () {
             $('#Modal9').modal('show');
         }
-        $scope.openPending = function(){
+        $scope.openPending = function () {
             $('#Modal10').modal('show');
         }
+
+
+        /* begin menu tree */
+        $('.tree-folder-content').css('display', 'none');
+        $('body').on('click', '.tree-folder', function () {
+            if ($(this).children('.tree-folder-content').css('display') == 'none') {
+                $(this).children('.tree-folder-content').css('display', 'block');
+                $(this).children('.tree-folder-header').children('i').removeClass('fa-plus-square-o');
+                $(this).children('.tree-folder-header').children('i').addClass('fa-minus-square-o');
+                return false;
+            }
+            else {
+                $(this).children('.tree-folder-header').children('i').removeClass('fa-minus-square-o');
+                $(this).children('.tree-folder-header').children('i').addClass('fa-plus-square-o');
+                $(this).children('.tree-folder-content').css('display', 'none');
+                return false;
+            }
+        });
+        /* end menu tree */
     };
 
     return app;
