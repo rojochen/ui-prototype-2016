@@ -6,7 +6,7 @@
 		paths: {
 			pokemon: 'assets/js/app',
 			btModule: 'js/module/demoModule',
-			btController: 'js/controller/demoBt',
+			btController: 'js/controller/demoBT',
 			demoCtrl: 'js/controller/demo',
 			footer: 'js/component/footer',
 			header: 'js/component/header',
