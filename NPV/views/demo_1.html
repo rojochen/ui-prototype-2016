@@ -1062,18 +1062,18 @@
 							</div>
 						</div>
                          <!-- begin 活動進階搜尋表格 -->
-                <div class="col-md-12 col-sm-12 col-xs-12" ng-show="showActivitiesTable">
-                    <table id="datatable_activities" class="table table-striped table-bordered dataTable no-footer"
+                <div class="col-md-12 col-sm-12 col-xs-12" ng-show="showActivitiesTable" style="overflow: auto;">
+                    <table id="datatable_activities" class="table table-responsive table-striped table-bordered dataTable no-footer"
                            role="grid" aria-describedby="datatable_info">
                         <thead>
                         <tr role="row">
                             <th class="sorting_asc text-center table-header-color" tabindex="0"
-                                aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending">
+                                aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending" >
                                 <input type="checkbox" class="flat" name="table_records">
                                 加入
                             </th>
                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
-                                rowspan="1" colspan="1">SPV NO
+                                rowspan="1" colspan="1" style="width:40px;">SPV NO
                             </th>
                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
                                 rowspan="1" colspan="1">門號類型
@@ -1096,6 +1096,39 @@
                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
                                 rowspan="1" colspan="1">活動群組
                             </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">使用名單
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">PM Owner
+                            </th>
+                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">檔案生效日
+                            </th>
+                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">狀態效期
+                            </th>
+                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">停機可能率
+                            </th>
+                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">ARPB
+                            </th>
+                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">有效終止日
+                            </th>
+                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">關係
+                            </th>
+                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">種類
+                            </th>
+                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">項目
+                            </th>
+                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
+                                rowspan="1" colspan="1">負責PM
+                            </th>
                             <!--<th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
                                 rowspan="1" colspan="1">修改
                             </th>-->
@@ -1117,6 +1150,25 @@
                             <td ng-bind="x.activityRange"></td>
                             <td ng-bind="x.groupCode"></td>
                             <td ng-bind="x.groupName"></td>
+                            <td ng-bind="x.useOfPersonnel"></td>
+                            <td ng-bind="x.pmOwner"></td>
+                            <td ng-bind="x.fileEffectiveDate"></td>
+                            <td ng-bind="x.stateEffective"></td>
+                            <td ng-bind="x.downtimeCanRate"></td>
+                            <td ng-bind="x.arpb"></td>
+                            <td ng-bind="x.expirationData"></td>
+                            <td ng-bind="x.relationship"></td>
+                            <td ng-bind="x.species"></td>
+                            <td ng-bind="x.item"></td>
+                            <td ng-bind="x.pm"></td>
+                            
+
+                           
+                        
+                            
+                            
+                       
+                           
                             <!--<td class="text-center" ng-click="edit(x)">
                                 <i class="fa fa-pencil"></i>
                             </td>-->
