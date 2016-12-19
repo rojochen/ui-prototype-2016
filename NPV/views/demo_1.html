@@ -1067,7 +1067,7 @@
                            role="grid" aria-describedby="datatable_info">
                         <thead>
                          <tr>
-                            <th colspan="13" class=" text-center table-header-color">活動類別項目</th>
+                            <th colspan="12" class=" text-center table-header-color">活動類別項目</th>
                             <th colspan="3" class=" text-center table-header-color">活動條件設定</th>
                             <th colspan="3" class=" text-center table-header-color">申辦條件設定</th>
                              <th colspan="1" class=" text-center table-header-color">申辦條件設定</th>
@@ -1077,9 +1077,7 @@
                                 aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending" style="width:50px;">
                                 <input type="checkbox" class="flat" name="table_records">NO.
                             </th>
-                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
-                                rowspan="1" colspan="1" style="width:60px;">SPV NO
-                            </th>
+                          
                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
                                 rowspan="1" colspan="1" style="width:60px;">門號類型
                             </th>
@@ -1145,9 +1143,8 @@
                                 <!--<td class="sorting_1 text-center" >-->
                                <td>
                                 <!--<i class="fa fa-plus"></i>-->
-                                <input type="checkbox" class="flat" name="table_records">
+                                <input type="checkbox" class="flat" name="table_records"> {{x.NO}}
                             </td>
-                            <td ng-bind="x.SPV"></td>
                             <td ng-bind="x.gateType"></td>
                             <td ng-bind="x.sort"></td>
                             <td ng-bind="x.activityCode"></td>

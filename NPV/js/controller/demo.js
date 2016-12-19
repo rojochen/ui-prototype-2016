@@ -133,7 +133,7 @@ define(['btModule'], function (btModule) {
             }];
 
             $scope.activitiesTableData = [{
-                "SPV": "001",
+                "NO": "01",
                 "gateType": "FET",
                 "sort": "3轉4",
                 "activityCode": "A2696",
@@ -154,7 +154,7 @@ define(['btModule'], function (btModule) {
                 "pm": "",
 
             }, {
-                "SPV": "002",
+                "NO": "02",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -175,7 +175,7 @@ define(['btModule'], function (btModule) {
                 "pm": "",
 
             }, {
-                "SPV": "003",
+                "NO": "03",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -195,7 +195,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "004",
+                "NO": "04",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "D3633",
@@ -215,7 +215,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "005",
+                "NO": "05",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "E3333",
@@ -235,7 +235,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "006",
+                "NO": "06",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "F3333",
@@ -255,7 +255,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "007",
+                "NO": "07",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "G3333",
@@ -275,7 +275,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "008",
+                "NO": "08",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -295,7 +295,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "009",
+                "NO": "09",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -315,7 +315,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "010",
+                "NO": "10",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -335,7 +335,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "011",
+                "NO": "11",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -355,7 +355,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "012",
+                "NO": "12",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -375,7 +375,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "013",
+                "NO": "13",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -395,7 +395,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "014",
+                "NO": "14",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -415,7 +415,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "015",
+                "NO": "15",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -435,7 +435,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "016",
+                "NO": "16",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -455,7 +455,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "017",
+                "NO": "17",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -475,7 +475,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "018",
+                "NO": "18",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -495,7 +495,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "019",
+                "NO": "19",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
@@ -515,7 +515,7 @@ define(['btModule'], function (btModule) {
                 "item": "",
                 "pm": "",
             }, {
-                "SPV": "020",
+                "NO": "20",
                 "gateType": "AAA",
                 "sort": "3轉4",
                 "activityCode": "C3333",
