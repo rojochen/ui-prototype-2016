@@ -135,3 +135,11 @@
             font-size: 14px;
             margin-top: -5px;
         }
+        
+        .panelPadding {
+            padding: 4px 8px 1px 8px;
+        }
+        
+        .panelTitle {
+            padding: 0px;
+        }
