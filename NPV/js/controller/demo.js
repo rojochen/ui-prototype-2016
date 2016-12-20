@@ -53,6 +53,27 @@ define(['btModule'], function (btModule) {
 
             };
 
+            // 多選框
+            $(function () {
+                $("#add").click(function () {
+                    var $option = $("#select1 option:selected"); //获取选中的选项
+                    $option.appendTo("#select2"); //追加给对方
+                });
+                $("#add_all").click(function () {
+                    var $option = $("#select1 option");
+                    $option.appendTo("#select2");
+                });
+                $("#remove").click(function () {
+                    var $option = $("#select2 option:selected");
+                    $option.appendTo("#select1");
+                });
+                $("#remove_all").click(function () {
+                    var $option = $("#select2 option");
+                    $option.appendTo("#select1");
+                });
+            });
+
+
             $timeout(function () {
                 $("#selectType").select2({
                     placeholder: "選擇類型",

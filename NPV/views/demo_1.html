@@ -5,6 +5,32 @@
 </div>-->
 <div class="page-no-title"></div>
 <div class="row" ng-controller="demoCtrl">
+ 
+<!--<h3>下拉框应用</h3>
+  <table>
+    <tr>
+      <td>
+        <select id="select1" multiple="multiple" style="width:100px;">
+          <option value="News">News</option>
+          <option value="Sport">Sport</option>
+          <option value="Education">Education</option>
+          <option value="Technology">Technology</option>
+          <option value="Art">Art</option>
+        </select>
+      </td>
+      <td>
+        <button id="add"> > </button><br/>
+        <button id="add_all">>></button><br />
+        <button id="remove_all"><<</button><br />
+        <button id="remove">|<</button>
+      </td>
+      <td>
+        <select id="select2" multiple="multiple" style="width:100px;">
+        </select>
+      </td>
+    </tr>
+  </table>-->
+
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
@@ -585,7 +611,15 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">適用對象</label>
                                         <div class="container-fluid col-md-9 col-sm-9 col-xs-12">
-                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
+                                            <!--<div class="col-md-5 borderStyle" style="height:150px">
+                                                <select id="select1" multiple="multiple" style="width:100px;">
+                                                    <option value="News">News</option>
+                                                    <option value="Sport">Sport</option>
+                                                    <option value="Education">Education</option>
+                                                    <option value="Technology">Technology</option>
+                                                    <option value="Art">Art</option>
+                                                </select>
+                                            </div>
                                             <div class="col-md-2" style="margin-top:30px">
                                                 <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選
                                                 </button>
@@ -594,7 +628,29 @@
                                                 <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除
                                                 </button>
                                             </div>
-                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
+                                            <div class="col-md-5 borderStyle" style="height:150px"></div>-->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" filter:aaa>
+                                                    <select id="select1" class="form-control" size="8" multiple="multiple" name="aaa" >
+                                                        <option value="1">Item 1</option>
+                                                        <option value="2">Item 2</option>
+                                                        <option value="3">Item 3</option>
+                                                        <option value="4">Item 4</option>
+                                                        <option value="5">Item 5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button type="button" id="add_all" class="btn btn-block"><i class="glyphicon glyphicon-forward"></i></button>
+                                                    <button type="button" id="add" class="btn btn-block"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                                                    <button type="button" id="remove" class="btn btn-block"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                                                    <button type="button" id="remove_all" class="btn btn-block"><i class="glyphicon glyphicon-backward"></i></button>
+                                                </div>
+    
+                                                <div class="col-md-5">
+                                                    <select  id="select2" class="form-control" size="8" multiple="multiple"></select>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
