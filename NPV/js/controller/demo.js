@@ -53,7 +53,7 @@ define(['btModule'], function (btModule) {
 
             };
 
-            // 多選框
+            // 左右多選框
             $(function () {
                 $("#add").click(function () {
                     var $option = $("#select1 option:selected"); //获取选中的选项
@@ -73,8 +73,8 @@ define(['btModule'], function (btModule) {
                 });
             });
 
-
-            $scope.names = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+            // 左右多選框選項
+            $scope.names = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
 
 
             $timeout(function () {
