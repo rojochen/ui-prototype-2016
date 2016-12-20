@@ -26,7 +26,7 @@ define(['btModule'], function (btModule) {
                     $BOX_CONTENT.slideToggle(200);
                     $BOX_PANEL.css('height', 'auto');
                 }
-                $ICON.toggleClass('fa-chevron-up fa-chevron-down');
+                $ICON.toggleClass('fa-minus  fa-plus');
             });
             /*end 版面縮合*/
 
