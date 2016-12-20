@@ -632,13 +632,6 @@
                                             <div class="row">
                                                 <div class="col-md-5">
                                                     <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
-                                                    <!--<select id="select1" class="form-control" size="8" multiple="multiple" name="aaa" >
-                                                        <option value="1">Item 1</option>
-                                                        <option value="2">Item 2</option>
-                                                        <option value="3">Item 3</option>
-                                                        <option value="4">Item 4</option>
-                                                        <option value="5">Item 5</option>
-                                                    </select>-->
                                                     <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="selectedName" ng-options="item for item in names | filter:searchText">
                                                     </select>
                                                 </div>
