@@ -125,7 +125,13 @@
                 width: 1170px;
             }
         }
-
-        .page-no-title{
-            height:10px;
+        
+        .page-no-title {
+            height: 10px;
+        }
+        
+        .panelIcon {
+            color: #1abb9c;
+            font-size: 14px;
+            margin-top: -5px;
         }
