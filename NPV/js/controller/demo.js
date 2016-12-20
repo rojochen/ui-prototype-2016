@@ -74,6 +74,9 @@ define(['btModule'], function (btModule) {
             });
 
 
+            $scope.names = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+
+
             $timeout(function () {
                 $("#selectType").select2({
                     placeholder: "選擇類型",
