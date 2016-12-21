@@ -5,6 +5,32 @@
 </div>-->
 <div class="page-no-title"></div>
 <div class="row" ng-controller="demoCtrl">
+ 
+<!--<h3>下拉框应用</h3>
+  <table>
+    <tr>
+      <td>
+        <select id="select1" multiple="multiple" style="width:100px;">
+          <option value="News">News</option>
+          <option value="Sport">Sport</option>
+          <option value="Education">Education</option>
+          <option value="Technology">Technology</option>
+          <option value="Art">Art</option>
+        </select>
+      </td>
+      <td>
+        <button id="add"> > </button><br/>
+        <button id="add_all">>></button><br />
+        <button id="remove_all"><<</button><br />
+        <button id="remove">|<</button>
+      </td>
+      <td>
+        <select id="select2" multiple="multiple" style="width:100px;">
+        </select>
+      </td>
+    </tr>
+  </table>-->
+
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
@@ -550,17 +576,32 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">標題</label>
-                                        <div class="container-fluid col-md-9 col-sm-9 col-xs-12">
-                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
-                                            <div class="col-md-2" style="margin-top:30px">
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除
-                                                </button>
-                                            </div>
-                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
+                                        <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                             <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
+                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText">
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2" style="margin-top:30px">
+                                                    <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-forward"></i>
+                                                    </button>
+                                                    <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"
+                                                        ><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    </button>
+                                                    <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    </button>
+                                                    <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-backward"></i>
+                                                    </button>
+                                                </div>
+    
+                                                <div class="col-md-5">
+                                                     <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
+                                                    <select id="select2" class="form-control" size="8" multiple="multiple"  ng-model="select2" ng-options="item for item in names1 | filter:searchText1">
+                                                    </select>
+                                                </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -584,17 +625,34 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">適用對象</label>
-                                        <div class="container-fluid col-md-9 col-sm-9 col-xs-12">
-                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
-                                            <div class="col-md-2" style="margin-top:30px">
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除
-                                                </button>
-                                            </div>
-                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
+                                        <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                          
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText3">
+                                                    <select id="select3" class="form-control" size="8" multiple="multiple"  ng-options="item for item in names2 | filter:searchText3" ng-model="select3">
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2" style="margin-top:30px">
+                                                    <button type="button" id="add_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-forward"></i>
+                                                    </button>
+                                                    <button type="button" id="add1" class="btn btn-default btn-sm col-md-12" style="color: #73879c"
+                                                        ><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    </button>
+                                                    <button type="button" id="remove1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    </button>
+                                                    <button type="button" id="remove_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-backward"></i>
+                                                    </button>
+                                                </div>
+    
+                                                <div class="col-md-5">
+                                                     <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText4">
+                                                    <select id="select4" class="form-control" size="8" multiple="multiple"  ng-options="item for item in names3 | filter:searchText4" ng-model="select4">
+                                                    </select>
+                                                </div>
+                                         
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -622,23 +680,31 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">適用通路</label>
-                                        <div class="container-fluid col-md-9 col-sm-9 col-xs-12">
-                                            <div class="col-md-5 borderStyle" style="height:250px"></div>
-                                            <div class="col-md-2" style="margin-top:30px">
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取範本
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">範本建立
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">範本管理
-                                                </button>
+                                        <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                             <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText5">
+                                                    <select id="select5" class="form-control" size="8" multiple="multiple"  ng-options="item for item in names4 | filter:searchText5" ng-model="select5">
+                                                    </select>
                                             </div>
-                                            <div class="col-md-5 borderStyle" style="height:250px"></div>
+                                            <div class="col-md-2" style="margin-top:30px">
+                                                    <button type="button" id="add_all2" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-forward"></i>
+                                                    </button>
+                                                    <button type="button" id="add2" class="btn btn-default btn-sm col-md-12" style="color: #73879c"
+                                                        ><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    </button>
+                                                    <button type="button" id="remove2" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    </button>
+                                                    <button type="button" id="remove_all2" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-backward"></i>
+                                                    </button>
+                                            </div>
+                                            <div class="col-md-5">
+                                                     <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText6">
+                                                    <select id="select6" class="form-control" size="8" multiple="multiple"  ng-options="item for item in names5 | filter:searchText6" ng-model="select6">
+                                                    </select>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -970,17 +1036,31 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">活動群組</label>
-                                        <div class="container-fluid col-md-9 col-sm-9 col-xs-12">
-                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
-                                            <div class="col-md-2" style="margin-top:30px">
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取
-                                                </button>
-                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除
-                                                </button>
+                                        <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;      padding-right: 0px;">
+                                            <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText7">
+                                                    <select id="select7" class="form-control" size="8" multiple="multiple"  ng-options="item for item in names6 | filter:searchText7" ng-model="select7">
+                                                    </select>
                                             </div>
-                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
+                                            <div class="col-md-2" style="margin-top:30px">
+                                                    <button type="button" id="add_all3" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-forward"></i>
+                                                    </button>
+                                                    <button type="button" id="add3" class="btn btn-default btn-sm col-md-12" style="color: #73879c"
+                                                        ><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    </button>
+                                                    <button type="button" id="remove3" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    </button>
+                                                    <button type="button" id="remove_all3" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-backward"></i>
+                                                    </button>
+                                            </div>
+                                            <div class="col-md-5">
+                                                     <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText8">
+                                                    <select id="select8" class="form-control" size="8" multiple="multiple"  ng-options="item for item in names7 | filter:searchText8" ng-model="select8">
+                                                    </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>

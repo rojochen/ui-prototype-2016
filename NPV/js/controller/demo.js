@@ -53,6 +53,91 @@ define(['btModule'], function (btModule) {
 
             };
 
+            // 左右多選框 
+            $(function () {
+                $("#add").click(function () {
+                    var option = $("#select1 option:selected");
+                    option.appendTo("#select2");
+                });
+                $("#add_all").click(function () {
+                    var $option = $("#select1 option");
+                    $option.appendTo("#select2");
+                });
+                $("#remove").click(function () {
+                    var $option = $("#select2 option:selected");
+                    $option.appendTo("#select1");
+                });
+                $("#remove_all").click(function () {
+                    var $option = $("#select2 option");
+                    $option.appendTo("#select1");
+                });
+            });
+            $(function () {
+                $("#add1").click(function () {
+                    var $option = $("#select3 option:selected");
+                    $option.appendTo("#select4");
+                });
+                $("#add_all1").click(function () {
+                    var $option = $("#select3 option");
+                    $option.appendTo("#select4");
+                });
+                $("#remove1").click(function () {
+                    var $option = $("#select4 option:selected");
+                    $option.appendTo("#select3");
+                });
+                $("#remove_all1").click(function () {
+                    var $option = $("#select4 option");
+                    $option.appendTo("#select3");
+                });
+            });
+            $(function () {
+                $("#add2").click(function () {
+                    var $option = $("#select5 option:selected");
+                    $option.appendTo("#select6");
+                });
+                $("#add_all2").click(function () {
+                    var $option = $("#select5 option");
+                    $option.appendTo("#select6");
+                });
+                $("#remove2").click(function () {
+                    var $option = $("#select6 option:selected");
+                    $option.appendTo("#select5");
+                });
+                $("#remove_all2").click(function () {
+                    var $option = $("#select6 option");
+                    $option.appendTo("#select5");
+                });
+            });
+            $(function () {
+                $("#add3").click(function () {
+                    var $option = $("#select7 option:selected");
+                    $option.appendTo("#select8");
+                });
+                $("#add_all3").click(function () {
+                    var $option = $("#select7 option");
+                    $option.appendTo("#select8");
+                });
+                $("#remove3").click(function () {
+                    var $option = $("#select8 option:selected");
+                    $option.appendTo("#select7");
+                });
+                $("#remove_all3").click(function () {
+                    var $option = $("#select8 option");
+                    $option.appendTo("#select7");
+                });
+            });
+
+            // 左右多選框選項
+            $scope.names = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
+            $scope.names1 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
+            $scope.names2 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
+            $scope.names3 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
+            $scope.names4 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
+            $scope.names5 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
+            $scope.names6 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
+            $scope.names7 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
+
+
             $timeout(function () {
                 $("#selectType").select2({
                     placeholder: "選擇類型",
