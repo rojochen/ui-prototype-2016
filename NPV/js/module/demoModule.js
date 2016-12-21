@@ -11,10 +11,10 @@ define(['pokemon'], function (pokemon) {
 			.when('/try', {
 				templateUrl: "../NPV/views/try.html"
 			})
-			.when('/:id', {
+			.when('/demo_2:id', {
 				templateUrl: "../NPV/views/demo_2.html"
 			})
-			.when('/:id', {
+			.when('/roleSettings:id', {
 				templateUrl: "../NPV/views/roleSettings.html"
 			})
 
