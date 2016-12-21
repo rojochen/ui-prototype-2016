@@ -13,7 +13,9 @@ define(['pokemon'], function (pokemon) {
 			})
 			.when('/:id', {
 				templateUrl: "../NPV/views/demo_2.html"
-
+			})
+			.when('/:id', {
+				templateUrl: "../NPV/views/roleSettings.html"
 			})
 
 		.otherwise({

@@ -1,0 +1,74 @@
+<form data-parsley-validate class="form-horizontal form-label-left">
+    <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:40px;">
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name_3">姓名</label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <input type="text" id="first-name_3" required="required" class="form-control col-md-7 col-xs-12">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">稱謂</label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <div class="radio-list">
+                    <div class="radio-inline">
+                        <label class="radio-inline">
+                                  <input type="radio" class="flat" checked name="iCheck"> 先生
+                                </label>
+                    </div>
+                    <div class="radio-inline">
+                        <label class="radio-inline">
+                                  <input type="radio" class="flat" name="iCheck"> 女士
+                                </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for='birthday_3'>生日</label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <input id='birthday_3' class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">會員等級</label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <select class="form-control">
+                              <option>等級 1</option>
+                              <option>等級 2</option>
+                              <option>等級 3</option>
+                              <option>等級 4</option>
+                            </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">專長</label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <select class="select2_multiple form-control" multiple="multiple">
+                              <!-- <option>請選擇</option> -->
+                              <option>專長 1</option>
+                              <option>專長 2</option>
+                              <option>專長 3</option>
+                            </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="control-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">興趣</label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <input id="tags_2" type="text" class="tags form-control" value="閱讀, 電影, 繪畫" />
+                <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+            </div>
+        </div>
+    </div>
+</form>
