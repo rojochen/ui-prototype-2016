@@ -14,8 +14,8 @@ define(['pokemon'], function (pokemon) {
 			.when('/roleSet:id', {
 				templateUrl: "../NPV/views/roleSet.html"
 			})
-			.when('/ITParameterSetting:id', {
-				templateUrl: "../NPV/views/ITParameterSetting.html"
+			.when('/ITParameterSet:id', {
+				templateUrl: "../NPV/views/ITParameterSet.html"
 			})
 
 		.otherwise({
