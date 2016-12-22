@@ -578,11 +578,11 @@
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">標題</label>
                                         <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
                                              <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
+                                                <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
                                                     <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText">
                                                     </select>
-                                                </div>
-                                                <div class="col-md-2" style="margin-top:30px">
+                                            </div>
+                                            <div class="col-md-2" style="margin-top:30px">
                                                     <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-forward"></i>
                                                     </button>
@@ -595,13 +595,12 @@
                                                     <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-backward"></i>
                                                     </button>
-                                                </div>
-    
-                                                <div class="col-md-5">
+                                            </div>
+                                            <div class="col-md-5">
                                                      <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
                                                     <select id="select2" class="form-control" size="8" multiple="multiple"  ng-model="select2" ng-options="item for item in names1 | filter:searchText1">
                                                     </select>
-                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
