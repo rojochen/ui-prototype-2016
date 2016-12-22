@@ -7,7 +7,7 @@ define(['btModule'], function (btModule) {
 
     });
 
-    app.controller('useSetCtrl', ['$scope', '$timeout', '$log', '$element',
+    app.controller('userSetCtrl', ['$scope', '$timeout', '$log', '$element',
         'ShoppingCartEntity',
         function ($scope, $timeout, $log, $element, shoppingCartEntity) {
             var vm = this;
