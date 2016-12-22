@@ -117,21 +117,47 @@ define(['btModule'], function (btModule) {
             $scope.names6 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
             $scope.names7 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
 
-            $scope.roleTableData = [{
-                "roleId": "1",
-                "roleName": "System Admin",
+            $scope.useTableData = [{
+                "userId": "0057",
+                "accountName": "RightLiu",
+                "userName": "劉大尉",
+                "userEamil": "rightliu@com.tw",
+                "userGroup": "MPM",
+                "userRole": "PM Leader",
+                "userStatus": "啟用"
             }, {
-                "roleId": "2",
-                "roleName": "PM",
+                "userId": "1045",
+                "accountName": "LeftHan",
+                "userName": "韓政績",
+                "userEamil": "LeftHan@com.tw",
+                "userGroup": "MPM",
+                "userRole": "PM Member",
+                "userStatus": "啟用"
             }, {
-                "roleId": "3",
-                "roleName": "Team Leader",
+                "userId": "4552",
+                "accountName": "AndyHung",
+                "userName": "黃石鎮",
+                "userEamil": "AndyHung@com.tw",
+                "userGroup": "OET",
+                "userRole": "PM",
+                "userStatus": "啟用"
+
             }, {
-                "roleId": "4",
-                "roleName": "Team Member",
+                "userId": "6055",
+                "accountName": "AndyHung",
+                "userName": "王小咪",
+                "userEamil": "AmyHung@com.tw",
+                "userGroup": "OET",
+                "userRole": "Leader",
+                "userStatus": "啟用"
             }, {
-                "roleId": "5",
-                "roleName": "System Admin",
+                "userId": "6078",
+                "accountName": "PongLai",
+                "userName": "賴帥哥",
+                "userEamil": "PangLai@com.tw",
+                "userGroup": "IT",
+                "userRole": "Admin",
+                "userStatus": "啟用"
             }, ];
 
             // $scope.showCommonTable = true;
