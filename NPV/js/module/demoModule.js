@@ -11,11 +11,14 @@ define(['pokemon'], function (pokemon) {
 			.when('/try', {
 				templateUrl: "../NPV/views/try.html"
 			})
-			.when('/roleSettings:id', {
-				templateUrl: "../NPV/views/roleSettings.html"
+			.when('/roleSet:id', {
+				templateUrl: "../NPV/views/roleSet.html"
 			})
-			.when('/ITParameterSetting:id', {
-				templateUrl: "../NPV/views/ITParameterSetting.html"
+			.when('/userSet:id', {
+				templateUrl: "../NPV/views/userSet.html"
+			})
+			.when('/ITParameterSet:id', {
+				templateUrl: "../NPV/views/ITParameterSet.html"
 			})
 
 		.otherwise({
