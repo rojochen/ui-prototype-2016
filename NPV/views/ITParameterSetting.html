@@ -177,29 +177,40 @@
         </div>
     </form>
     <!-- it  參數設定 end -->
-    <form class="form-horizontal form-label-left">
-        <div class="form-group">
-            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">目錄</label>
-            <div class="col-md-8 col-sm-8 col-xs-12">
-                <select class="form-control">
+    <!-- 13-2 指派-Menu  -->
+    <div class="modal fade bs-example-modal-lg" id="Modal13-2" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="13-2">Approval</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">目錄</label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <select class="form-control">
                                     <option>FET</option>
                                 </select>
-            </div>
-            <div class="col-md-offset-2 col-sm-offset-2"></div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">分類</label>
-            <div class="col-md-8 col-sm-8 col-xs-12">
-                <select class="form-control">
+                            </div>
+                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">分類</label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <select class="form-control">
                                     <option>F</option>
                                 </select>
-            </div>
-            <div class="col-md-offset-2 col-sm-offset-2"></div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">類型</label>
-            <div class="col-md-8 col-sm-8 col-xs-12">
-                <select class="form-control">
+                            </div>
+                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">類型</label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <select class="form-control">
                                     <option>折扣生效方式</option>
                                     <option>合約到期移除方式</option>
                                     <option>服務合約有效期限</option>
@@ -215,29 +226,38 @@
                                     <option>TAPOUT</option>
                                     <option>簡訊費用</option>
                                 </select>
+                            </div>
+                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">代碼</label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <input type="text" id="" required="required" class="form-control col-md-7 col-xs-12" ng-model="">
+                            </div>
+                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">名稱</label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <input type="text" id="" required="required" class="form-control col-md-7 col-xs-12" ng-model="">
+                            </div>
+                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">排序</label>
+                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                <input type="text" id="" required="required" class="form-control col-md-7 col-xs-12" ng-model="">
+                            </div>
+                            <div class="col-md-offset-8 col-sm-offset-8"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
             </div>
-            <div class="col-md-offset-2 col-sm-offset-2"></div>
         </div>
-        <div class="form-group">
-            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">代碼</label>
-            <div class="col-md-8 col-sm-8 col-xs-12">
-                <input type="text" id="" required="required" class="form-control col-md-7 col-xs-12" ng-model="">
-            </div>
-            <div class="col-md-offset-2 col-sm-offset-2"></div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">名稱</label>
-            <div class="col-md-8 col-sm-8 col-xs-12">
-                <input type="text" id="" required="required" class="form-control col-md-7 col-xs-12" ng-model="">
-            </div>
-            <div class="col-md-offset-2 col-sm-offset-2"></div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">排序</label>
-            <div class="col-md-2 col-sm-2 col-xs-12">
-                <input type="text" id="" required="required" class="form-control col-md-7 col-xs-12" ng-model="">
-            </div>
-            <div class="col-md-offset-8 col-sm-offset-8"></div>
-        </div>
-    </form>
+    </div>
+    <!-- end 13-2 指派-Menu  -->
 </div>
