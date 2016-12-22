@@ -11,10 +11,11 @@
 			footer: 'js/component/footer',
 			header: 'js/component/header',
 			shoppingCartEntity: 'js/entity/ShoppingCart',
-			ITParameterSettingCtrl: 'js/controller/ITParameterSetting'
+			ITParameterSettingCtrl: 'js/controller/ITParameterSetting',
+			roleSettingsCtrl: 'js/controller/roleSettings'
 		}
 	});
-	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'shoppingCartEntity', 'ITParameterSettingCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, shoppingCartEntity, ITParameterSettingCtrl) {
+	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'shoppingCartEntity', 'ITParameterSettingCtrl', 'roleSettingsCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, shoppingCartEntity, ITParameterSettingCtrl, roleSettingsCtrl) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
