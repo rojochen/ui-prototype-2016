@@ -225,6 +225,24 @@ define(['btModule'], function (btModule) {
                 /* end */
 
 
+            /* begin menu tree */
+            $('.tree-folder-content').css('display', 'none');
+            $('body').on('click', '.tree-folder', function () {
+                if ($(this).children('.tree-folder-content').css('display') == 'none') {
+                    $(this).children('.tree-folder-content').css('display', 'block');
+                    $(this).children('.tree-folder-header').children('i').removeClass('fa-plus-square-o');
+                    $(this).children('.tree-folder-header').children('i').addClass('fa-minus-square-o');
+                    return false;
+                } else {
+                    $(this).children('.tree-folder-header').children('i').removeClass('fa-minus-square-o');
+                    $(this).children('.tree-folder-header').children('i').addClass('fa-plus-square-o');
+                    $(this).children('.tree-folder-content').css('display', 'none');
+                    return false;
+                }
+            });
+            /* end menu tree */
+
+
         }
     ]);
     return app;
