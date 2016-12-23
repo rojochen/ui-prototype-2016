@@ -16,11 +16,12 @@
 			userSetCtrl: 'js/controller/userSet',
 			groupsSetCtrl: 'js/controller/groupsSet',
 			marginSetCtrl: 'js/controller/marginSet',
-			downtimeProbabilitySetCtrl: 'js/controller/downtimeProbabilitySet'
+			downtimeProbabilitySetCtrl: 'js/controller/downtimeProbabilitySet',
+			ARPBSetCtrl:'js/controller/ARPBSet'
 
 		}
 	});
-	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'downtimeProbabilitySetCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, downtimeProbabilitySetCtrl) {
+	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'downtimeProbabilitySetCtrl','ARPBSetCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, downtimeProbabilitySetCtrl,ARPBSetCtrl) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();

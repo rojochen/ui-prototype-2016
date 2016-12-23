@@ -29,6 +29,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/downtimeProbabilitySet:id', {
 				templateUrl: "../NPV/views/downtimeProbabilitySet.html"
 			})
+			.when('/ARPBSet:id', {
+				templateUrl: "../NPV/views/ARPBSet.html"
+			})
 
 
 		.otherwise({
