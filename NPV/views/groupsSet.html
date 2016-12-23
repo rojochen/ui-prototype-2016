@@ -1,0 +1,239 @@
+<div class="page-no-title"></div>
+<div class="container" ng-controller="groupsSetCtrl">
+    <form class="form-horizontal form-label-left" style="margin-top:20px;">
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <div class="form-group ">
+                <label class="control-label col-md-4 col-sm-4 col-xs-12 ">群組名稱:
+            </label>
+                <div class="col-md-8 col-sm-8 col-xs-12 ">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="請輸入群組名稱">
+                        <span class="input-group-btn">
+                     <button type="button" class="btn btn-primary" ng-click="showMultiselect()">查詢</button>
+                  </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <div class="form-group ">
+                <label class="control-label col-md-4 col-sm-4 col-xs-12 ">
+            </label>
+                <div class="col-md-8 col-sm-8 col-xs-12 ">
+                    <button type="button " class="btn btn-info btn-default" data-toggle="modal" data-target="#ModaladdUse">新增</button>
+                    <button type="button " class="btn btn-info btn-default" data-toggle="modal" data-target="#ModaleditUse">修改</button>
+                    <button type="button " class="btn btn-info btn-default" data-toggle="modal" data-target="#ModaldelUse">刪除</button>
+                </div>
+            </div>
+        </div>
+        <!--群組樹 MPM-->
+        <div class="tree">
+            <div class='tree-folder'>
+                <div class='tree-folder-header'>
+                    <i class='fa fa-plus-square-o'></i>
+                    <div class='tree-folder-name' title='aaa'>MPM</div>
+                </div>
+                <div class='tree-folder-content'>
+                    <!--begin 第二層內容-->
+                    <div class='tree-item'>
+                        <div class='tree-item-name' title='aaa child-2'>
+                            MPM 1</div>
+                    </div>
+                    <div class='tree-item'>
+                        <div class='tree-item-name' title='aaa child-2'>
+                            MPM 2</div>
+                    </div>
+                    <div class='tree-folder'>
+                        <div class='tree-folder-header'>
+                            <i class='fa fa-plus-square-o'></i>
+                            <div class='tree-folder-name' title='aaa child-1'>MPM 3</div>
+                        </div>
+                        <div class='tree-folder-content'>
+                            <!--begin 第三層內容-->
+                            <div class='tree-folder'>
+                                <div class='tree-folder-header'>
+                                    <div class='tree-folder-name' title='aaa grandson-1'>MPM 3-1</div>
+                                </div>
+                                <div class='tree-folder-content'>
+                                    <!--begin 第四層內容-->
+                                    <!--<div class='tree-item'>
+                                        <div class='tree-item-name' title='aaa end'>MPM 3-2</div>
+                                    </div>-->
+                                    <!--end 第四層內容-->
+                                </div>
+                            </div>
+                            <div class='tree-item'>
+                                <div class='tree-item-name' title='aaa grandson-2'>
+                                    MPM 3-2</div>
+                            </div>
+                            <!--end 第三層內容-->
+                        </div>
+                    </div>
+                    <!--<div class='tree-item'>
+                        <div class='tree-item-name' title='aaa child-2'>
+                            <font class="node">*</font>MPM 2</div>
+                    </div>
+                    <div class='tree-item'>
+                        <div class='tree-item-name' title='aaa child-2'>
+                            <font class="node">*</font>MPM 3</div>
+                    </div>-->
+                    <!--end 第二層內容-->
+                </div>
+            </div>
+        </div>
+        <!--群組樹 OET-->
+        <div class="tree">
+            <div class='tree-folder'>
+                <div class='tree-folder-header'>
+                    <i class='fa fa-plus-square-o'></i>
+                    <div class='tree-folder-name' title='aaa'>OET</div>
+                </div>
+                <div class='tree-folder-content'>
+                    <!--begin 第二層內容-->
+                    <div class='tree-item'>
+                        <div class='tree-item-name' title='aaa child-2'>
+                            OET 1</div>
+                    </div>
+                    <div class='tree-item'>
+                        <div class='tree-item-name' title='aaa child-2'>
+                            OET 2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--群組樹 IT-->
+        <div class="tree">
+            <div class='tree-folder'>
+                <div class='tree-folder-header'>
+                    <i class='fa fa-plus-square-o'></i>
+                    <div class='tree-folder-name' title='aaa'>IT</div>
+                </div>
+                <div class='tree-folder-header'>
+                    <div class='tree-folder-name' title='aaa'>FBI</div>
+                </div>
+                <div class='tree-folder-header'>
+                    <div class='tree-folder-name' title='aaa'>CIA</div>
+                </div>
+            </div>
+        </div>
+        <!--新增角色左右選擇框-->
+        <div class="container-fluid " style="margin-top:40px; margin-bottom:80px;" ng-show="multiselectControl">
+            <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
+                <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText">
+                                                    </select>
+            </div>
+            <div class="col-md-2" style="margin-top:10px;">
+                <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-forward"></i></button>
+                <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"> <i class="glyphicon glyphicon-backward"></i></button>
+                <button type="button" id="" class="btn btn-default btn-sm col-md-12" style="color: #73879c"> 重置</button>
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
+                <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1">
+                                                    </select>
+            </div>
+            <div class="container-fluid ">
+                <div class="row ">
+                    <div class="col-md-2 pull-right " style="margin-top:15px; margin-right:-20px; ">
+                        <button type="button " class="btn btn-info btn-default" data-toggle="modal" data-target="#Modal1">確認</button>
+                        <button type="button " class="btn btn-info btn-default">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end 新增角色左右選擇框-->
+        <!-- 確認畫面 新增 modal -->
+        <div class="modal fade bs-example-modal-lg" id="ModaladdUse" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                        <h4 class="modal-title" id="13-2">確認畫面</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <br>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6" style="font-size:30px;">
+                                <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> 確定新增使用者？
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end 確認畫面 新增  -->
+        <!-- 確認畫面 新增 modal -->
+        <div class="modal fade bs-example-modal-lg" id="ModaleditUse" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                        <h4 class="modal-title" id="13-2">確認畫面</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <br>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6" style="font-size:30px;">
+                                <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> 確定修改使用者？
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end 確認畫面 新增  -->
+        <!-- 確認畫面 新增 modal -->
+        <div class="modal fade bs-example-modal-lg" id="ModaldelUse" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                        <h4 class="modal-title" id="13-2">確認畫面</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <br>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6" style="font-size:30px;">
+                                <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> 確定刪除使用者？
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end 確認畫面 新增  -->
+    </form>
+</div>
