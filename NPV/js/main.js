@@ -18,11 +18,12 @@
 			marginSetCtrl: 'js/controller/marginSet',
 			downtimeProbabilitySetCtrl: 'js/controller/downtimeProbabilitySet',
 			ARPBSetCtrl: 'js/controller/ARPBSet',
-			renewalDateCtrl: 'js/controller/renewalDate'
+			renewalDateCtrl: 'js/controller/renewalDate',
+			changeLimitCtrl: 'js/controller/changeLimit'
 
 		}
 	});
-	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'downtimeProbabilitySetCtrl', 'ARPBSetCtrl', 'renewalDateCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, downtimeProbabilitySetCtrl, ARPBSetCtrl, renewalDateCtrl) {
+	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'downtimeProbabilitySetCtrl', 'ARPBSetCtrl', 'renewalDateCtrl', 'changeLimitCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, downtimeProbabilitySetCtrl, ARPBSetCtrl, renewalDateCtrl, changeLimitCtrl) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
