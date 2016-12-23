@@ -1,0 +1,63 @@
+<div class="page-no-title"></div>
+<div class="container" ng-controller="groupsSetCtrl">
+    <form class="form-horizontal form-label-left" style="margin-top:20px;">
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <div class="form-group ">
+                <label class="control-label col-md-4 col-sm-4 col-xs-12 ">群組名稱:
+            </label>
+                <div class="col-md-8 col-sm-8 col-xs-12 ">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="請輸入群組名稱">
+                        <span class="input-group-btn">
+                     <button type="button" class="btn btn-primary">查詢</button>
+                  </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <div class="form-group ">
+                <label class="control-label col-md-4 col-sm-4 col-xs-12 ">
+            </label>
+                <div class="col-md-8 col-sm-8 col-xs-12 ">
+                    <button type="button " class="btn btn-info btn-default" data-toggle="modal" data-target="#ModaladdUse">新增</button>
+                    <button type="button " class="btn btn-info btn-default">修改</button>
+                    <button type="button " class="btn btn-info btn-default">刪除</button>
+                </div>
+            </div>
+        </div>
+        <!--群組樹-->
+        
+
+        <!-- 確認畫面 新增 modal -->
+        <div class="modal fade bs-example-modal-lg" id="ModaladdUse" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                        <h4 class="modal-title" id="13-2">確認畫面</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <br>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6" style="font-size:30px;">
+                                <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> 確定新增使用者？
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end 確認畫面 新增  -->
+    </form>
+</div>
