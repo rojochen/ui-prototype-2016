@@ -32,6 +32,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/ARPBSet:id', {
 				templateUrl: "../NPV/views/ARPBSet.html"
 			})
+			.when('/renewalDate:id', {
+				templateUrl: "../NPV/views/renewalDate.html"
+			})
 
 
 		.otherwise({
