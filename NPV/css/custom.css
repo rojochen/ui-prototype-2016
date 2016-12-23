@@ -1,154 +1,387 @@
         i.fa.fa-3 {
-            font-size: 4em;
+          font-size: 4em;
         }
         
         i.fa.fa-2 {
-            font-size: 2em;
+          font-size: 2em;
         }
         
         .portrait {
-            margin-left: 25%;
-            margin-top: 20px;
+          margin-left: 25%;
+          margin-top: 20px;
         }
         
         .info-number .badge.style-right {
-            position: initial;
-            margin-bottom: 5px;
+          position: initial;
+          margin-bottom: 5px;
         }
         
         .listArea {
-            margin-bottom: 5%;
+          margin-bottom: 5%;
         }
         
         .listArea .cart-list-title {
-            width: 100%;
+          width: 100%;
         }
         
         .listArea>.listBottom {
-            width: 100%;
-            float: left;
-            display: -webkit-flex;
-            display: flex;
-            margin-top: 10px;
-            border-bottom: 2px solid #ccc;
-            /*background: #fed364;*/
-            /*color:#fff;*/
+          width: 100%;
+          float: left;
+          display: -webkit-flex;
+          display: flex;
+          margin-top: 10px;
+          border-bottom: 2px solid #ccc;
+          /*background: #fed364;*/
+          /*color:#fff;*/
         }
         
         .listArea>.listBottom>.iconArea {
-            -webkit-flex: 1;
-            flex: 1;
-            margin: 2% 3%;
-            border-right-color: #e6e9ed;
-            border-right-style: solid;
-            border-right-width: 1px;
-            text-align: center;
+          -webkit-flex: 1;
+          flex: 1;
+          margin: 2% 3%;
+          border-right-color: #e6e9ed;
+          border-right-style: solid;
+          border-right-width: 1px;
+          text-align: center;
         }
         
         .listArea>.listBottom>.iconArea:hover>i {
-            transform: scale(1.5);
-            /*transform:translateX(10px);*/
+          transform: scale(1.5);
+          /*transform:translateX(10px);*/
         }
         
         .listArea>.listBottom>.iconArea:last-child {
-            border-right-width: 0px;
+          border-right-width: 0px;
         }
         
         .listArea>.listBottom>.iconArea>i {
-            padding-right: 10px;
-            -webkit-transition: transform 1s;
-            transition: transform .5s;
+          padding-right: 10px;
+          -webkit-transition: transform 1s;
+          transition: transform .5s;
         }
         
         .listArea>.listText {
-            width: 80%;
-            padding-left: 10px;
-            float: left;
-            line-height: 1.5em;
-            margin-bottom: 1%;
+          width: 80%;
+          padding-left: 10px;
+          float: left;
+          line-height: 1.5em;
+          margin-bottom: 1%;
         }
         
         .listArea>.listText>.activityName {
-            display: block;
-            font-weight: 700;
-            width: 100%;
+          display: block;
+          font-weight: 700;
+          width: 100%;
         }
         
         .table-header-color {
-            background: #405467;
-            color: #fff
+          background: #405467;
+          color: #fff
         }
         
         .layerList {
-            width: 300px;
-            height: calc(100% - 45px);
+          width: 300px;
+          height: calc(100% - 45px);
         }
         
         .layerList>.layui-layer-content {
-            padding: 10px;
-            max-height: calc(100% - 45px);
+          padding: 10px;
+          max-height: calc(100% - 45px);
         }
         
         #layerContent>.btnArea {
-            text-align: center;
+          text-align: center;
         }
         
         .borderStyle {
-            border: 1px solid #ccc;
+          border: 1px solid #ccc;
         }
         
         .listdistance {
-            margin-top: 10px;
+          margin-top: 10px;
         }
         
         .fullscreen-modal .modal-dialog {
-            margin: 0;
-            margin-right: auto;
-            margin-left: auto;
-            width: 100%;
+          margin: 0;
+          margin-right: auto;
+          margin-left: auto;
+          width: 100%;
         }
         
         @media (min-width: 768px) {
-            .fullscreen-modal .modal-dialog {
-                width: 750px;
-            }
+          .fullscreen-modal .modal-dialog {
+            width: 750px;
+          }
         }
         
         @media (min-width: 992px) {
-            .fullscreen-modal .modal-dialog {
-                width: 970px;
-            }
+          .fullscreen-modal .modal-dialog {
+            width: 970px;
+          }
         }
         
         @media (min-width: 1200px) {
-            .fullscreen-modal .modal-dialog {
-                width: 1170px;
-            }
+          .fullscreen-modal .modal-dialog {
+            width: 1170px;
+          }
         }
         
         .page-no-title {
-            height: 10px;
+          height: 10px;
         }
         
         .panelIcon {
-            color: #1abb9c;
-            font-size: 14px;
-            margin-top: -5px;
+          color: #1abb9c;
+          font-size: 14px;
+          margin-top: -5px;
         }
         
         .panelPadding {
-            padding: 4px 8px 1px 8px;
+          padding: 4px 8px 1px 8px;
         }
         
         .panelTitle {
-            padding: 0px;
+          padding: 0px;
         }
         
         .center {
-            margin-top: 60px;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-20%);
+          margin-top: 60px;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-20%);
         }
-
+        /* begin menu tree */
         
+        .tree {
+          padding-left: 14px;
+          overflow: auto;
+          position: relative;
+        }
+        
+        .tree-solid-line {
+          padding-left: 12px;
+        }
+        
+        .tree.tree-no-line {
+          padding-left: 0;
+        }
+        
+        .tree:before {
+          width: 1px;
+          z-index: 1;
+          display: block;
+          content: "";
+          position: absolute;
+          top: -21px;
+          bottom: 16px;
+          left: 0;
+          border-left: 1px dotted #666;
+        }
+        
+        .tree.tree-solid-line:before {
+          border-left: 1px solid #999;
+        }
+        
+        .tree.tree-no-line:before {
+          display: none;
+        }
+        
+        .tree .tree-folder {
+          width: auto;
+          min-height: 20px;
+          cursor: pointer;
+        }
+        
+        .tree .tree-folder .tree-folder-header {
+          position: relative;
+          min-height: 20px;
+          line-height: 20px;
+          min-width: 100px;
+        }
+        
+        .tree .tree-folder .tree-folder-header:hover {
+          background-color: #eee
+        }
+        
+        .tree .tree-folder .tree-folder-header .tree-folder-name,
+        .tree .tree-item .tree-item-name {
+          display: inline;
+          z-index: 2;
+        }
+        
+        .tree .tree-folder img {
+          margin-left: 4px;
+        }
+        
+        .tree .tree-folder .tree-folder-header .tree-folder-name {
+          margin-left: 2px;
+        }
+        
+        .tree .tree-folder .tree-folder-content {
+          margin-left: 23px;
+          position: relative
+        }
+        
+        .tree .tree-folder .tree-folder-content:before {
+          display: inline-block;
+          content: "";
+          position: absolute;
+          width: 1px;
+          z-index: 1;
+          top: -9px;
+          bottom: 16px;
+          left: -12px;
+          border-left: 1px dotted #666;
+        }
+        
+        .tree.tree-solid-line .tree-folder .tree-folder-content:before {
+          border-left: 1px solid #999;
+        }
+        
+        .tree.tree-no-line .tree-folder .tree-folder-content:before {
+          display: none;
+        }
+        
+        .tree .tree-item {
+          position: relative;
+          min-height: 20px;
+          line-height: 20px;
+          min-width: 100px;
+          cursor: pointer
+        }
+        
+        .tree .tree-item:hover {
+          background-color: #eee
+        }
+        
+        .tree .tree-item .tree-item-name {
+          margin-left: 2px;
+        }
+        
+        .tree .tree-folder,
+        .tree .tree-item {
+          position: relative;
+        }
+        
+        .tree .tree-folder:before,
+        .tree .tree-item:before {
+          display: inline-block;
+          content: "";
+          position: absolute;
+          top: 14px;
+          left: -13px;
+          width: 18px;
+          height: 0;
+          border-top: 1px dotted #666;
+          z-index: 1;
+        }
+        
+        .tree.tree-solid-line .tree-folder:before,
+        .tree.tree-solid-line .tree-item:before {
+          border-top: 1px solid #999;
+        }
+        
+        .tree.tree-no-line .tree-folder:before,
+        .tree.tree-no-line .tree-item:before {
+          display: none;
+        }
+        
+        .tree .tree-selected {
+          background-color: #eee;
+          color: #6398b0;
+        }
+        
+        .tree .tree-selected:hover {
+          background-color: #e1e1e1;
+        }
+        
+        .tree .tree-item,
+        .tree .tree-folder {
+          border: 1px solid #FFF
+        }
+        
+        .tree .tree-item,
+        .tree .tree-folder .tree-folder-header {
+          margin: 0;
+          padding: 4px 5px 6px 5px;
+          color: #333;
+          -webkit-box-sizing: content-box;
+          -moz-box-sizing: content-box;
+          box-sizing: content-box;
+        }
+        
+        .tree .tree-item .tree-item-name>i,
+        .tree .tree-folder .tree-folder-header>i {
+          color: #666;
+        }
+        
+        .tree .tree-item.tree-selected>i,
+        .tree .tree-item .tree-item-name>i {
+          margin-left: -2px;
+          width: 14px;
+          display: inline-block;
+          text-align: center;
+          margin-right: 1px;
+          color: #666;
+        }
+        
+        .tree.tree-plus-minus .tree-folder-header .fa-folder-open:before {
+          height: 16px;
+          width: 16px;
+          line-height: 16px;
+          vertical-align: middle;
+          display: inline-block;
+          background: url("../img/tree-icons.png") no-repeat;
+          background-position: 0 -21px;
+          content: "";
+        }
+        
+        .tree.tree-plus-minus .tree-folder-header .fa-folder:before {
+          height: 16px;
+          width: 16px;
+          line-height: 16px;
+          vertical-align: middle;
+          display: inline-block;
+          background: url("../img/tree-icons.png") no-repeat;
+          background-position: 0 2px;
+          content: "";
+        }
+        
+        .ie .tree.tree-plus-minus .tree-folder-header .fa-folder:before,
+        .ie .tree.tree-plus-minus .tree-folder-header .fa-folder-open:before {
+          margin-top: -5px;
+        }
+        
+        .tree.tree-plus-minus .tree-folder-name {
+          margin-left: 0px !important;
+        }
+        
+        .tree .tree-actions {
+          display: none;
+          position: absolute;
+          margin-top: 1px;
+          right: 4px;
+        }
+        
+        .tree .tree-item:hover .tree-actions,
+        .tree .tree-folder-header:hover .tree-actions {
+          display: inline-block;
+        }
+        
+        .tree .tree-actions>i {
+          font-weight: 300;
+          border: 1px solid #999;
+          padding: 1px 3px;
+          text-align: center;
+          font-size: 14px;
+          color: #999;
+          margin-right: 6px;
+          margin-top: 0px;
+          display: inline-block;
+        }
+        
+        .tree .tree-actions>i:hover {
+          color: #666;
+          border: 1px solid #666;
+        }
+        /* end menu tree */
