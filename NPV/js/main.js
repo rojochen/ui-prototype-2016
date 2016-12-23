@@ -14,7 +14,8 @@
 			ITParameterSetCtrl: 'js/controller/ITParameterSet',
 			roleSetCtrl: 'js/controller/roleSet',
 			userSetCtrl: 'js/controller/userSet',
-			groupsSetCtrl: 'js/controller/groupsSet'
+			groupsSetCtrl: 'js/controller/groupsSet',
+			marginSetCtrl:'js/controller/marginSet'
 
 		}
 	});

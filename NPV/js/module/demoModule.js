@@ -23,6 +23,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/ITParameterSet:id', {
 				templateUrl: "../NPV/views/ITParameterSet.html"
 			})
+			.when('/marginSet:id', {
+				templateUrl: "../NPV/views/marginSet.html"
+			})
 
 		.otherwise({
 			redirectTo: '/'
