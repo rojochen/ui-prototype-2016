@@ -17,11 +17,12 @@
 			groupsSetCtrl: 'js/controller/groupsSet',
 			marginSetCtrl: 'js/controller/marginSet',
 			downtimeProbabilitySetCtrl: 'js/controller/downtimeProbabilitySet',
-			ARPBSetCtrl:'js/controller/ARPBSet'
+			ARPBSetCtrl: 'js/controller/ARPBSet',
+			renewalDateCtrl: 'js/controller/renewalDate'
 
 		}
 	});
-	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'downtimeProbabilitySetCtrl','ARPBSetCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, downtimeProbabilitySetCtrl,ARPBSetCtrl) {
+	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'downtimeProbabilitySetCtrl', 'ARPBSetCtrl', 'renewalDateCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, downtimeProbabilitySetCtrl, ARPBSetCtrl, renewalDateCtrl) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
