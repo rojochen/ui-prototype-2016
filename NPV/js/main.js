@@ -15,11 +15,12 @@
 			roleSetCtrl: 'js/controller/roleSet',
 			userSetCtrl: 'js/controller/userSet',
 			groupsSetCtrl: 'js/controller/groupsSet',
-			marginSetCtrl:'js/controller/marginSet'
+			marginSetCtrl: 'js/controller/marginSet',
+			downtimeProbabilitySetCtrl: 'js/controller/downtimeProbabilitySet'
 
 		}
 	});
-	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl) {
+	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'downtimeProbabilitySetCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, downtimeProbabilitySetCtrl) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
