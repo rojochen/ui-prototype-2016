@@ -7,11 +7,16 @@ define(['btModule'], function (btModule) {
 
     });
 
-    app.controller('ITParameterSetCtrl', ['$scope', '$timeout', '$log', '$element',
+    app.controller('marginSetCtrl', ['$scope', '$timeout', '$log', '$element',
         'ShoppingCartEntity',
         function ($scope, $timeout, $log, $element, shoppingCartEntity) {
             var vm = this;
 
+            /* begin */
+            $scope.resetTable = function () {
+                    $scope.tableControl = false;
+                }
+                /* end */
 
             // it參數設定
             /* begin */
@@ -37,11 +42,7 @@ define(['btModule'], function (btModule) {
                 }
                 /* end */
 
-            /* begin */
-            $scope.resetTable = function () {
-                    $scope.tableControl = false;
-                }
-                /* end */
+
         }
     ]);
     return app;
