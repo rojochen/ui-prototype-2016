@@ -38,9 +38,12 @@ define(['pokemon'], function (pokemon) {
 			.when('/changeLimit:id', {
 				templateUrl: "../NPV/views/changeLimit.html"
 			})
-		.otherwise({
-			redirectTo: '/'
-		});
+			.when('/salesSet:id', {
+				templateUrl: "../NPV/views/salesSet.html"
+			})
+			.otherwise({
+				redirectTo: '/'
+			});
 	}]);
 
 	return app;
