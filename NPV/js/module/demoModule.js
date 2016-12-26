@@ -47,6 +47,11 @@ define(['pokemon'], function (pokemon) {
 			.when('/classificationSet:id', {
 				templateUrl: "../NPV/views/classificationSet.html"
 			})
+			.when('/activityClassification:id', {
+				templateUrl: "../NPV/views/activityClassification.html"
+			})
+
+
 
 
 		.otherwise({
