@@ -1,140 +1,167 @@
 <div class="page-no-title"></div>
 <div class="row" ng-controller="activityTypeCtrl">
-    <form class="form-horizontal form-label-left">
-        <div class="form-group">
-            <label class="control-label col-md-4 col-sm-4 col-xs-12" for="">代號</label>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <input type="text" class="form-control col-md-7 col-xs-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>促銷活動類型</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">設定 1</a>
+                            </li>
+                            <li><a href="#">設定 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
             </div>
-            <div class="col-md-offset-4 col-sm-offset-4"></div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-md-4 col-sm-4 col-xs-12" for="">活動名稱</label>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <input type="text" class="form-control col-md-7 col-xs-12">
-            </div>
-            <div class="col-md-offset-4 col-sm-offset-4"></div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
-                <button type="button" class="btn btn-primary" style="margin-right: 15px" ng-click="showTable()">查詢</button>
-                <button type="button" class="btn btn-primary" style="margin-right: 15px" data-toggle="modal" data-target="#Modal23-2">新增</button>
-                <button type="button" class="btn btn-primary">重置</button>
-            </div>
-        </div>
-        <br>
-        <div class="form-group" ng-show="tableControl">
-            <div class="table-responsive">
-                <table class="table table-striped table-bordered dataTable no-footer">
-                    <thead>
-                        <tr class="headings">
-                            <th class="text-center sorting column-title table-header-color">排序</th>
-                            <th class="text-center sorting_asc column-title table-header-color">代號</th>
-                            <th class="text-center sorting column-title table-header-color">活動名稱</th>
-                            <th class="text-center sorting column-title table-header-color">修改人員</th>
-                            <th class="text-center sorting column-title table-header-color">修改日期</th>
-                            <th class="text-center sorting column-title table-header-color">編輯</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="text-center ">1</td>
-                            <td class="text-center ">1</td>
-                            <td class="text-center ">通話優惠</td>
-                            <td class="text-center ">ejchen</td>
-                            <td class="text-center ">08-3月 -10</td>
-                            <td class="text-center ">
-                                <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
-                                                    class="fa fa-pencil"></i> 修改 </a>
-                                <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
-                                                    class="glyphicon glyphicon-remove"></i> 刪除 </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center ">2</td>
-                            <td class="text-center ">2</td>
-                            <td class="text-center ">手機專案</td>
-                            <td class="text-center ">SPV</td>
-                            <td class="text-center ">08-3月 -10</td>
-                            <td class="text-center ">
-                                <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
-                                                    class="fa fa-pencil"></i> 修改 </a>
-                                <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
-                                                    class="glyphicon glyphicon-remove"></i> 刪除 </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center ">3</td>
-                            <td class="text-center ">3</td>
-                            <td class="text-center ">i-mode手機專案/雙倍加值專案</td>
-                            <td class="text-center ">SPV</td>
-                            <td class="text-center ">08-3月 -10</td>
-                            <td class="text-center ">
-                                <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
-                                                    class="fa fa-pencil"></i> 修改 </a>
-                                <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
-                                                    class="glyphicon glyphicon-remove"></i> 刪除 </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center ">4</td>
-                            <td class="text-center ">4</td>
-                            <td class="text-center ">禮品方案</td>
-                            <td class="text-center ">ejchen</td>
-                            <td class="text-center ">08-3月 -10</td>
-                            <td class="text-center ">
-                                <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
-                                                    class="fa fa-pencil"></i> 修改 </a>
-                                <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
-                                                    class="glyphicon glyphicon-remove"></i> 刪除 </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </form>
-    <!-- 23-2 -->
-    <div class="modal fade bs-example-modal-lg" id="Modal23-2" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                    </button>
-                    <h4 class="modal-title" id="23-2"></h4>
-                </div>
-                <div class="modal-body">
+            <div class="x_content">
+                <div class="row">
                     <form class="form-horizontal form-label-left">
                         <div class="form-group">
-                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">代號</label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">代號</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
                                 <input type="text" class="form-control col-md-7 col-xs-12">
                             </div>
-                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">活動名稱</label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">活動名稱</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
                                 <input type="text" class="form-control col-md-7 col-xs-12">
                             </div>
-                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">排序</label>
-                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
+                                <button type="button" class="btn btn-primary" style="margin-right: 15px" ng-click="showTable()">查詢</button>
+                                <button type="button" class="btn btn-primary" style="margin-right: 15px" data-toggle="modal" data-target="#Modal23-2">新增</button>
+                                <button type="button" class="btn btn-primary">重置</button>
                             </div>
-                            <div class="col-md-offset-8 col-sm-offset-8"></div>
+                        </div>
+                        <br>
+                        <div class="form-group" ng-show="tableControl">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <table class="table table-striped table-bordered dataTable no-footer">
+                                    <thead>
+                                        <tr class="headings">
+                                            <th class="text-center sorting column-title table-header-color">排序</th>
+                                            <th class="text-center sorting_asc column-title table-header-color">代號</th>
+                                            <th class="text-center sorting column-title table-header-color">活動名稱</th>
+                                            <th class="text-center sorting column-title table-header-color">修改人員</th>
+                                            <th class="text-center sorting column-title table-header-color">修改日期</th>
+                                            <th class="text-center sorting column-title table-header-color">編輯</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">通話優惠</td>
+                                            <td class="text-center">ejchen</td>
+                                            <td class="text-center">08-3月 -10</td>
+                                            <td class="text-center">
+                                                <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
+                                                    class="fa fa-pencil"></i> 修改 </a>
+                                                <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
+                                                    class="glyphicon glyphicon-remove"></i> 刪除 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">手機專案</td>
+                                            <td class="text-center">SPV</td>
+                                            <td class="text-center">08-3月 -10</td>
+                                            <td class="text-center">
+                                                <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
+                                                    class="fa fa-pencil"></i> 修改 </a>
+                                                <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
+                                                    class="glyphicon glyphicon-remove"></i> 刪除 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">i-mode手機專案/雙倍加值專案</td>
+                                            <td class="text-center">SPV</td>
+                                            <td class="text-center">08-3月 -10</td>
+                                            <td class="text-center">
+                                                <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
+                                                    class="fa fa-pencil"></i> 修改 </a>
+                                                <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
+                                                    class="glyphicon glyphicon-remove"></i> 刪除 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">4</td>
+                                            <td class="text-center">4</td>
+                                            <td class="text-center">禮品方案</td>
+                                            <td class="text-center">ejchen</td>
+                                            <td class="text-center">08-3月 -10</td>
+                                            <td class="text-center">
+                                                <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
+                                                    class="fa fa-pencil"></i> 修改 </a>
+                                                <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
+                                                    class="glyphicon glyphicon-remove"></i>刪除</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <!-- 23-2 -->
+                    <div class="modal fade bs-example-modal-lg" id="Modal23-2" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                                    <h4 class="modal-title" id="23-2"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">代號</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">活動名稱</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-8 col-sm-offset-8"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- end -->
 </div>
