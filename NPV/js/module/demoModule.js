@@ -41,6 +41,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/salesSet:id', {
 				templateUrl: "../NPV/views/salesSet.html"
 			})
+			.when('/systemSet:id', {
+				templateUrl: "../NPV/views/systemSet.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
