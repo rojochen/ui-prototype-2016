@@ -11,46 +11,46 @@ define(['pokemon'], function (pokemon) {
 			.when('/try', {
 				templateUrl: "../NPV/views/try.html"
 			})
-			.when('/roleSet:id', {
+			.when('/roleSet', {
 				templateUrl: "../NPV/views/roleSet.html"
 			})
-			.when('/userSet:id', {
+			.when('/userSet', {
 				templateUrl: "../NPV/views/userSet.html"
 			})
-			.when('/groupsSet:id', {
+			.when('/groupsSet', {
 				templateUrl: "../NPV/views/groupsSet.html"
 			})
-			.when('/ITParameterSet:id', {
+			.when('/ITParameterSet', {
 				templateUrl: "../NPV/views/ITParameterSet.html"
 			})
-			.when('/marginSet:id', {
+			.when('/marginSet', {
 				templateUrl: "../NPV/views/marginSet.html"
 			})
-			.when('/downtimeProbabilitySet:id', {
+			.when('/downtimeProbabilitySet', {
 				templateUrl: "../NPV/views/downtimeProbabilitySet.html"
 			})
-			.when('/ARPBSet:id', {
+			.when('/ARPBSet', {
 				templateUrl: "../NPV/views/ARPBSet.html"
 			})
-			.when('/renewalDate:id', {
+			.when('/renewalDate', {
 				templateUrl: "../NPV/views/renewalDate.html"
 			})
-			.when('/changeLimit:id', {
+			.when('/changeLimit', {
 				templateUrl: "../NPV/views/changeLimit.html"
 			})
-			.when('/salesSet:id', {
+			.when('/salesSet', {
 				templateUrl: "../NPV/views/salesSet.html"
 			})
-			.when('/systemSet:id', {
+			.when('/systemSet', {
 				templateUrl: "../NPV/views/systemSet.html"
 			})
-			.when('/classificationSet:id', {
+			.when('/classificationSet', {
 				templateUrl: "../NPV/views/classificationSet.html"
 			})
-			.when('/activityClassification:id', {
+			.when('/activityClassification', {
 				templateUrl: "../NPV/views/activityClassification.html"
 			})
-			.when('/activityType:id', {
+			.when('/activityType', {
 				templateUrl: "../NPV/views/activityType.html"
 			})
 
