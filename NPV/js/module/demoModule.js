@@ -50,6 +50,10 @@ define(['pokemon'], function (pokemon) {
 			.when('/activityClassification:id', {
 				templateUrl: "../NPV/views/activityClassification.html"
 			})
+			.when('/activityType:id', {
+				templateUrl: "../NPV/views/activityType.html"
+			})
+
 
 
 
