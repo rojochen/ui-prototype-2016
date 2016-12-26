@@ -105,6 +105,31 @@ define([
             }
         });
         /* end menu tree */
+
+
+        $scope.menutTreeData = [{
+            "name": "aaa",
+            "id": 1,
+            "list": [{
+                "name": "aaa-child-1",
+                "id": 3,
+                "list": [{
+                    "name": "aaa-grandson-1.1",
+                    "id": 1
+                }, {
+                    "name": "aaa-grandson-1.2",
+                    "id": 2
+                }]
+            }, {
+                "name": "aaa-child-2",
+                "id": 2,
+                "list": []
+            }]
+        }, {
+            "name": "bbb",
+            "id": 3,
+            "list": []
+        }]
     };
 
     return app;
