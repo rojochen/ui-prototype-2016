@@ -143,13 +143,6 @@
         .panelTitle {
           padding: 0px;
         }
-        
-        .center {
-          margin-top: 60px;
-          top: 50%;
-          left: 50%;
-          transform: translateX(-50%) translateY(-20%);
-        }
         /* begin menu tree */
         
         .tree {
