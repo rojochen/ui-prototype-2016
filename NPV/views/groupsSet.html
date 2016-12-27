@@ -35,94 +35,37 @@
                                 </div>
                             </div>
                         </div>
-                        <!--群組樹 MPM-->
-                        
+                        <!--群組樹-->
                         <div class="tree">
-                            <div class='tree-folder'>
-                                <div class='tree-folder-header'>
-                                    <i class='fa fa-plus-square-o'></i>
-                                    <div class='tree-folder-name' title='aaa'>MPM</div>
-                                </div>
-                                <div class='tree-folder-content'>
-                                    <!--begin 第二層內容-->
-                                    <div class='tree-item'>
-                                        <div class='tree-item-name' title='aaa child-2'>
-                                            MPM 1</div>
+                            <div ng-repeat="x in menutTreeData track by $index">
+                                <div ng-show="x.list.length !== 0" class='tree-folder'>
+                                    <div class='tree-folder-header'>
+                                        <i class='fa fa-plus-square-o'></i>
+                                        <div class='tree-folder-name' title="{{x.name}}">{{x.name}}</div>
                                     </div>
-                                    <div class='tree-item'>
-                                        <div class='tree-item-name' title='aaa child-2'>
-                                            MPM 2</div>
-                                    </div>
-                                    <div class='tree-folder'>
-                                        <div class='tree-folder-header'>
-                                            <i class='fa fa-plus-square-o'></i>
-                                            <div class='tree-folder-name' title='aaa child-1'>MPM 3</div>
-                                        </div>
-                                        <div class='tree-folder-content'>
-                                            <!--begin 第三層內容-->
-                                            <div class='tree-folder'>
+                                    <div class='tree-folder-content' style="display: none;">
+                                        <div ng-repeat="y in x.list track by $index">
+                                            <div ng-show="y.list.length !== 0" class='tree-folder'>
                                                 <div class='tree-folder-header'>
-                                                    <div class='tree-folder-name' title='aaa grandson-1'>MPM 3-1</div>
+                                                    <i class='fa fa-plus-square-o'></i>
+                                                    <div class='tree-folder-name' title="{{y.name}}">{{y.name}}</div>
                                                 </div>
-                                                <div class='tree-folder-content'>
-                                                    <!--begin 第四層內容-->
-                                                    <!--<div class='tree-item'>
-                                        <div class='tree-item-name' title='aaa end'>MPM 3-2</div>
-                                    </div>-->
-                                                    <!--end 第四層內容-->
+                                                <div class='tree-folder-content' style="display: none;">
+                                                    <div ng-repeat="z in y.list track by $index">
+                                                        <div class='tree-item'>
+                                                            <div class='tree-item-name' title="{{z.name}}">{{z.name}}</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class='tree-item'>
-                                                <div class='tree-item-name' title='aaa grandson-2'>
-                                                    MPM 3-2</div>
+                                            <div ng-show="y.list.length === 0" class='tree-item'>
+                                                <div class='tree-item-name' title="{{y.name}}">{{y.name}}</div>
                                             </div>
-                                            <!--end 第三層內容-->
                                         </div>
                                     </div>
-                                    <!--<div class='tree-item'>
-                        <div class='tree-item-name' title='aaa child-2'>
-                            <font class="node">*</font>MPM 2</div>
-                    </div>
-                    <div class='tree-item'>
-                        <div class='tree-item-name' title='aaa child-2'>
-                            <font class="node">*</font>MPM 3</div>
-                    </div>-->
-                                    <!--end 第二層內容-->
                                 </div>
-                            </div>
-                        </div>
-                        <!--群組樹 OET-->
-                        <div class="tree">
-                            <div class='tree-folder'>
-                                <div class='tree-folder-header'>
-                                    <i class='fa fa-plus-square-o'></i>
-                                    <div class='tree-folder-name' title='aaa'>OET</div>
-                                </div>
-                                <div class='tree-folder-content'>
-                                    <!--begin 第二層內容-->
-                                    <div class='tree-item'>
-                                        <div class='tree-item-name' title='aaa child-2'>
-                                            OET 1</div>
-                                    </div>
-                                    <div class='tree-item'>
-                                        <div class='tree-item-name' title='aaa child-2'>
-                                            OET 2</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--群組樹 IT-->
-                        <div class="tree">
-                            <div class='tree-folder'>
-                                <div class='tree-folder-header'>
-                                    <i class='fa fa-plus-square-o'></i>
-                                    <div class='tree-folder-name' title='aaa'>IT</div>
-                                </div>
-                                <div class='tree-folder-header'>
-                                    <div class='tree-folder-name' title='aaa'>FBI</div>
-                                </div>
-                                <div class='tree-folder-header'>
-                                    <div class='tree-folder-name' title='aaa'>CIA</div>
+                                <div ng-show="x.list.length === 0" class='tree-item'>
+                                    <div class='tree-item-name' title="{{x.name}}">{{x.name}}</div>
                                 </div>
                             </div>
                         </div>

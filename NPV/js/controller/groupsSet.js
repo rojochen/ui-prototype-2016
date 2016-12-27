@@ -239,6 +239,54 @@ define(['btModule'], function (btModule) {
             });
             /* end menu tree */
 
+            $scope.menutTreeData = [{
+                "name": "MPM",
+                "id": 1,
+                "list": [{
+                    "name": "MPM1",
+                    "id": 3,
+                    "list": []
+                }, {
+                    "name": "MPM2",
+                    "id": 2,
+                    "list": []
+                }, {
+                    "name": "MPM3",
+                    "id": 2,
+                    "list": [{
+                        "name": "MPM3-1",
+                        "id": 1
+                    }, {
+                        "name": "MPM3-2",
+                        "id": 2
+                    }]
+                }]
+            }, {
+                "name": "OET",
+                "id": 1,
+                "list": [{
+                    "name": "OET1",
+                    "id": 1,
+                    "list": []
+                }, {
+                    "name": "OET2",
+                    "id": 2,
+                    "list": []
+                }]
+            }, {
+                "name": "IT",
+                "id": 2,
+                "list": []
+            }, {
+                "name": "FBI",
+                "id": 2,
+                "list": []
+            }, {
+                "name": "CIA",
+                "id": 2,
+                "list": []
+            }]
+
 
         }
     ]);
