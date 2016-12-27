@@ -11,27 +11,24 @@ define(['btModule'], function (btModule) {
         'ShoppingCartEntity',
         function ($scope, $timeout, $log, $element, shoppingCartEntity) {
             var vm = this;
-            /*begin 問卷-查詢*/
-            var opt = {
-                "oLanguage": {
-                    "sProcessing": "處理中...",
-                    "sLengthMenu": "顯示 _MENU_ 項結果",
-                    "sZeroRecords": "沒有匹配結果",
-                    "sInfo": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
-                    "sInfoEmpty": "顯示第 0 至 0 項結果，共 0 項",
-                    "sInfoFiltered": "(從 _MAX_ 項結果過濾)",
-                    "sSearch": "搜索:",
-                    "oPaginate": {
-                        "sFirst": "首頁",
-                        "sPrevious": "上一頁",
-                        "sNext": "下一頁",
-                        "sLast": "尾頁"
-                    },
-                },
-                "searching": false,
-                "scrollX": true,
 
-            };
+            /*begin 版面縮合*/
+            $element.on('click', '.collapse-link', function () {
+                var $BOX_PANEL = $(this).closest('.x_panel'),
+                    $ICON = $(this).find('i'),
+                    $BOX_CONTENT = $BOX_PANEL.find('.x_content');
+
+                if ($BOX_PANEL.attr('style')) {
+                    $BOX_CONTENT.slideToggle(200, function () {
+                        $BOX_PANEL.removeAttr('style');
+                    });
+                } else {
+                    $BOX_CONTENT.slideToggle(200);
+                    $BOX_PANEL.css('height', 'auto');
+                }
+                $ICON.toggleClass('fa-minus  fa-plus');
+            });
+            /*end 版面縮合*/
 
             // 左右多選框 
             $(function () {
