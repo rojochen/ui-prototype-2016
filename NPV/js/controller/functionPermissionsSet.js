@@ -157,61 +157,137 @@ define(['btModule'], function (btModule) {
                 "userStatus": "啟用"
             }, ];
 
-            // $scope.showCommonTable = true;
-            // $('#datatable').DataTable().destroy();
+            var opt = {
+                "oLanguage": {
+                    "sProcessing": "處理中...",
+                    "sLengthMenu": "顯示 _MENU_ 項結果",
+                    "sZeroRecords": "沒有匹配結果",
+                    "sInfo": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                    "sInfoEmpty": "顯示第 0 至 0 項結果，共 0 項",
+                    "sInfoFiltered": "(從 _MAX_ 項結果過濾)",
+                    "sSearch": "搜索:",
+                    "oPaginate": {
+                        "sFirst": "首頁",
+                        "sPrevious": "上一頁",
+                        "sNext": "下一頁",
+                        "sLast": "尾頁"
+                    },
+                },
+                "searching": false,
+                "bInfo": false,
+                "bPaginate": false
+                    // "scrollX": true,
+                    // "scrollY": true
 
-            // $timeout(function () {
-            //     $('#datatable').DataTable(opt);
-            //     // $log.debug($scope.saerchKeyInput);
-            //     $scope.saerchKey = $scope.saerchKeyInput;
-            // }, 100)
 
 
-            // $scope.showActivities = false;
-            // $scope.saerchAdvanced = function () {
-            //     $('#datatable').DataTable().destroy();
-            //     $scope.commonTableData = [];
-            //     $scope.showCommonTable = false;
-            //     $scope.showSearch = false;
-            //     $log.debug($scope.selectType);
-            //     if ($scope.selectType === $scope.selectTypeItem[0]) {
-            //         $timeout(function () {
-            //             $("#activityGroup").select2({
-            //                 placeholder: "選擇活動群組",
-            //                 allowClear: true
-            //             });
-            //             $("#numberType").select2({
-            //                 placeholder: "選擇門號類型",
-            //                 allowClear: true
-            //             });
-            //             $("#type").select2({
-            //                 placeholder: "選擇種類",
-            //                 allowClear: true
-            //             });
-            //         }, 100)
-            //         $scope.showActivities = true;
-            //     } else {
-            //         $log.debug('next'); //未做...完
+            };
+
+
+
+            $timeout(function () {
+                $('#datatable_functionPermissionSet').DataTable(opt);
+            }, 100)
+
+            $scope.roleTableData = [{
+                "roleId": "1",
+                "roleName": "System Admin",
+            }, {
+                "roleId": "2",
+                "roleName": "PM",
+            }, {
+                "roleId": "3",
+                "roleName": "Team Leader",
+            }, {
+                "roleId": "4",
+                "roleName": "Team Member",
+            }, {
+                "roleId": "5",
+                "roleName": "System Admin",
+            }, ];
+
+            $scope.functionPermissionSetData = [{
+                "functionList": "系統設定管理",
+                "function": "使用者設定",
+                "add": "新增 ",
+                "edit": "修改",
+                "delete": "刪除",
+                "discontinue": "停用",
+                "startUsing": "啟用",
+                "applyMechanically": ""
+            }, {
+                "functionList": "系統設定管理",
+                "function": "角色設定",
+                "add": "新增 ",
+                "edit": "修改",
+                "delete": "刪除",
+                "discontinue": "停用",
+                "startUsing": "啟用",
+                "applyMechanically": ""
+            }, {
+                "functionList": "系統設定管理",
+                "function": "部門設定",
+                "add": "新增 ",
+                "edit": "修改",
+                "delete": "刪除",
+                "discontinue": "停用",
+                "startUsing": "啟用",
+                "applyMechanically": ""
+            }, {
+                "functionList": "系統設定管理",
+                "function": "權限設定",
+                "add": "新增 ",
+                "edit": "修改",
+                "delete": "刪除",
+                "discontinue": "停用",
+                "startUsing": "啟用",
+                "applyMechanically": "套用"
+            }, {
+                "functionList": "促代維護",
+                "function": "折扣查詢",
+                "add": "查詢 ",
+                "edit": "重新上架",
+                "delete": "複製SPA單",
+            }, {
+                "functionList": "促代維護",
+                "function": "折扣查詢",
+                "add": "查詢 ",
+                "edit": "重新上架",
+                "delete": "複製SPA單",
+            }];
+
+            // console.log($scope.functionPermissionSetData);
+            // console.log($scope.functionPermissionSetData[0].applyMechanically);
+
+            // for (i = 0; i <= $scope.functionPermissionSetData.length; i++) {
+
+            //     if ($scope.functionPermissionSetData[i].applyMechanically == "") {
+            //         console.log($scope.functionPermissionSetData[0].applyMechanically);
+
+
+
+            //         document.getElementById('applyMechanically').style.display = "none";
+
+            //         //     } else {
+
             //     }
-            //     // $log.debug($scope.commonTableData);
-            // }
 
-            // $scope.showActivitiesTable = false;
-            // $scope.activities_Advanced = function () { //未做...完
-            //     $log.debug('進階查詢_活動');
-            //     $log.debug($scope.SPV + " " + $scope.activityCode + " " + $scope.activityName + " " + $scope.groupCode + " " + $scope.activityGroup + " " + $scope.numberType + " " + $scope.type);
-            //     $timeout(function () {
-            //         $('#datatable_activities').DataTable(opt);
-            //         // $scope.saerchKey = $scope.saerchKeyInput;  //search未做...
-            //     }, 100)
-            //     $log.debug($scope.activitiesTableData);
-            //     $scope.showActivitiesTable = true;
-            // }
 
-            // $scope.changeSearch = function () {
-            //     $scope.showSearch = true;
-            //     $scope.showActivities = false;
-            // }
+
+            // angular.forEach($scope.functionPermissionSetData, function (item) {
+
+            //     if (item.applyMechanically == "") {
+            //         // document.getElementById('applyMechanically').parentElement.parentElement.
+            //         document.getElementById('applyMechanically').style.display = "none";
+
+            //     } else {
+
+            //     }
+
+            // })
+
+
+
 
 
             /* begin */
@@ -222,70 +298,9 @@ define(['btModule'], function (btModule) {
                 /* end */
 
 
-            /* begin menu tree */
-            $('.tree-folder-content').css('display', 'none');
-            $('body').on('click', '.tree-folder', function () {
-                if ($(this).children('.tree-folder-content').css('display') == 'none') {
-                    $(this).children('.tree-folder-content').css('display', 'block');
-                    $(this).children('.tree-folder-header').children('i').removeClass('fa-plus-square-o');
-                    $(this).children('.tree-folder-header').children('i').addClass('fa-minus-square-o');
-                    return false;
-                } else {
-                    $(this).children('.tree-folder-header').children('i').removeClass('fa-minus-square-o');
-                    $(this).children('.tree-folder-header').children('i').addClass('fa-plus-square-o');
-                    $(this).children('.tree-folder-content').css('display', 'none');
-                    return false;
-                }
-            });
-            /* end menu tree */
 
-            $scope.menutTreeData = [{
-                "name": "MPM",
-                "id": 1,
-                "list": [{
-                    "name": "MPM1",
-                    "id": 3,
-                    "list": []
-                }, {
-                    "name": "MPM2",
-                    "id": 2,
-                    "list": []
-                }, {
-                    "name": "MPM3",
-                    "id": 2,
-                    "list": [{
-                        "name": "MPM3-1",
-                        "id": 1
-                    }, {
-                        "name": "MPM3-2",
-                        "id": 2
-                    }]
-                }]
-            }, {
-                "name": "OET",
-                "id": 1,
-                "list": [{
-                    "name": "OET1",
-                    "id": 1,
-                    "list": []
-                }, {
-                    "name": "OET2",
-                    "id": 2,
-                    "list": []
-                }]
-            }, {
-                "name": "IT",
-                "id": 2,
-                "list": []
-            }, {
-                "name": "FBI",
-                "id": 2,
-                "list": []
-            }, {
-                "name": "CIA",
-                "id": 2,
-                "list": []
-            }]
+
+
 
 
         }

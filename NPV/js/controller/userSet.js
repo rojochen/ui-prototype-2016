@@ -11,6 +11,10 @@ define(['btModule'], function (btModule) {
         'ShoppingCartEntity',
         function ($scope, $timeout, $log, $element, shoppingCartEntity) {
             var vm = this;
+
+            // $('#datatable_userSet').DataTable(opt);
+
+
             /*begin 版面縮合*/
             $element.on('click', '.collapse-link', function () {
                 var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -46,10 +50,16 @@ define(['btModule'], function (btModule) {
                         "sLast": "尾頁"
                     },
                 },
-                "searching": false,
-                "scrollX": true,
+                "searching": false
+                    // "scrollX": true,
+                    // "scrollY": true
 
             };
+
+
+            $timeout(function () {
+                $('#datatable_userSet').DataTable(opt);
+            }, 100)
 
             // 左右多選框 
             $(function () {
@@ -178,14 +188,7 @@ define(['btModule'], function (btModule) {
                 "userStatus": "啟用"
             }, ];
 
-            // $scope.showCommonTable = true;
-            // $('#datatable').DataTable().destroy();
 
-            // $timeout(function () {
-            //     $('#datatable').DataTable(opt);
-            //     // $log.debug($scope.saerchKeyInput);
-            //     $scope.saerchKey = $scope.saerchKeyInput;
-            // }, 100)
 
 
             // $scope.showActivities = false;
