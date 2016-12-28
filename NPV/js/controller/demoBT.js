@@ -12,7 +12,8 @@ define(['btModule'], function (btModule) {
             $RIGHT_COL = $('.right_col'),
             $NAV_MENU = $('.nav_menu'),
             $RIGHT_SIDEBAR = $('#right-sidebar'),
-            $FOOTER = $('footer');
+            $FOOTER = $('footer'),
+            topNav = $('.main_container .top_nav');
         $timeout(function () {
             // Sidebar
             $(document).ready(function () {
@@ -75,7 +76,25 @@ define(['btModule'], function (btModule) {
                         $SIDEBAR_MENU.find('li.active-sm').addClass('active').removeClass('active-sm');
                     }
 
-                    $BODY.toggleClass('nav-md nav-sm');
+                    // $BODY.toggleClass('nav-md nav-sm');
+                    if($LEFT_COL.css('left') === '-230px'){
+                        $LEFT_COL.css('left', '0px');
+                        $RIGHT_COL.css('margin-left', '230px');
+                        topNav.css('margin-left', '230px');
+                        $FOOTER.css('margin-left', '230px');
+                        setTimeout(function(){
+                            topNav.css('width', topNav.width()-230+'px');
+                            $FOOTER.css('width', $FOOTER.width()-190+'px'); 
+                        },450);
+                        
+                    }else{
+                        $LEFT_COL.css('left', '-230px');
+                        $RIGHT_COL.css('margin-left', '0px');
+                        topNav.css({'margin-left':'0px', 'width':'100%'});
+                        // topNav.css({'margin-left':'0px'});
+                        $FOOTER.css({'margin-left':'0px', 'width':'100%'});
+                    }
+
                     $RIGHT_COL.css('padding-top', $NAV_MENU.height());
                     $RIGHT_SIDEBAR.css('padding-top', $NAV_MENU.height());
 
@@ -93,6 +112,10 @@ define(['btModule'], function (btModule) {
 
                 // recompute content when resizing
                 $(window).smartresize(function () {
+                    if($LEFT_COL.css('left') !== '-230px'){
+                        topNav.css('width', $('body').width()-230+'px');
+                        $FOOTER.css('width', $('body').width()-230+'px'); 
+                    }
                     $RIGHT_COL.css('padding-top', $NAV_MENU.height());
                     $RIGHT_SIDEBAR.css('padding-top', $NAV_MENU.height());
                     setContentHeight();

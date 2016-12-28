@@ -289,7 +289,7 @@ $tenPx: 10px;
   padding: 0;
   position: absolute;
   display: flex;
-  z-index: 1;
+  z-index: 3;
 }
 .nav-md .container.body .col-md-3.left_col.menu_fixed {
   height: 100%;
@@ -313,13 +313,13 @@ body .container.body .right_col {
 @media (max-width: 991px) {
   .nav-md .container.body .right_col, .nav-md .container.body .top_nav {
     // width: 100%;
-    margin: 0;
+    // margin: 0;
   }
   .nav-md .container.body .top_nav {
-    width: 100%;
+    // width: 100%;
   }
   .nav-md .container.body .col-md-3.left_col {
-    display: none;
+    // display: none;
   }
   .right_col {
     padding: 10px;
@@ -834,6 +834,7 @@ footer {
   background: #fff;
   padding: 0 $tenPx*2 $tenPx*2-3;
   display: block;
+  margin-left: 230px;
   @media (min-width: 992px) {
     margin-left: $tenPx*23;
   }
@@ -4798,6 +4799,29 @@ ul.notifications {
 
 
 // btNgTable
+
+
+/* begin left menu */
+.nav-md .container.body .col-md-3.left_col.menu_fixed {
+    transition:left .5s ease-in-out;
+    -webkit-transition:left .5s ease-in-out;
+    -moz-transition:left .5s ease-in-out;
+    -o-transition:left .5s ease-in-out;
+  }
+  .nav-md .container.body .right_col, .main_container .top_nav, footer{
+    transition:margin-left .5s ease-in-out;
+    -webkit-transition:margin-left .5s ease-in-out;
+    -moz-transition:margin-left .5s ease-in-out;
+    -o-transition:margin-left .5s ease-in-out;
+  }
+/*  begin left menu */
+
+/* begin dynamic table */
+.dataTables_wrapper .col-sm-12{
+  overflow:auto;
+  float: inherit;
+}
+/* end dynamic table */
 
 
 
