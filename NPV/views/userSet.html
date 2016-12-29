@@ -84,32 +84,30 @@
                         <button type="button" class="btn btn-info btn-default pull-right">查詢</button>
                     </div>
                     <!--  使用者角色表格 -->
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <table id="datatable_userSet" class="table table-striped table-bordered">
-                            <thead>
-                                <tr class="table-header-color">
-                                    <th>工號</th>
-                                    <th>使用者帳號</th>
-                                    <th>姓名</th>
-                                    <th>E-Mamil</th>
-                                    <th>使用者群組</th>
-                                    <th>使用者角色</th>
-                                    <th>狀態</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="x in useTableData track by $index">
-                                    <td ng-bind="x.userId "></td>
-                                    <td ng-bind="x.accountName "></td>
-                                    <td ng-bind="x.userName"></td>
-                                    <td ng-bind="x.userEamil"></td>
-                                    <td ng-bind="x.userGroup"></td>
-                                    <td ng-bind="x.userRole"></td>
-                                    <td ng-bind="x.userStatus"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table id="datatable_userSet" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="table-header-color">
+                                <th>工號</th>
+                                <th>使用者帳號</th>
+                                <th>姓名</th>
+                                <th>E-Mamil</th>
+                                <th>使用者群組</th>
+                                <th>使用者角色</th>
+                                <th>狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in useTableData track by $index">
+                                <td ng-bind="x.userId "></td>
+                                <td ng-bind="x.accountName "></td>
+                                <td ng-bind="x.userName"></td>
+                                <td ng-bind="x.userEamil"></td>
+                                <td ng-bind="x.userGroup"></td>
+                                <td ng-bind="x.userRole"></td>
+                                <td ng-bind="x.userStatus"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <!-- end 使用者角色表格 -->
                     <!-- 確認畫面 新增 modal -->
                     <div class="modal fade bs-example-modal-lg" id="ModaladdUse" tabindex="-1" role="dialog">
