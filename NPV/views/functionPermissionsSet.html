@@ -38,24 +38,22 @@
                     </div>
                     <!-- begin 表格 -->
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="table-responsive">
-                            <table id="datatable_functionPermissionSet" class="table table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1">使用者角色ID
-                                        </th>
-                                        <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1">使用者角色名稱
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="x in roleTableData track by $index">
-                                        <td ng-bind="x.roleId"></td>
-                                        <td ng-bind="x.roleName"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <table id="datatable_functionPermissionSet" class="table table-striped table-bordered">
+                            <thead>
+                                <tr class="table-header-color">
+                                    <th>使用者角色ID
+                                    </th>
+                                    <th>使用者角色名稱
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in roleTableData track by $index">
+                                    <td ng-bind="x.roleId"></td>
+                                    <td ng-bind="x.roleName"></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <!-- end 表格 -->
                     <!-- 確認畫面 新增 modal -->
