@@ -65,6 +65,7 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: './'
         },
+        ghostMode: false,
         startPath: './production/demo/index.html'
     });
 });
