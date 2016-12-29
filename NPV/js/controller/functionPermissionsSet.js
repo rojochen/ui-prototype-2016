@@ -7,7 +7,7 @@ define(['btModule'], function (btModule) {
 
     });
 
-    app.controller('roleSetCtrl', ['$scope', '$timeout', '$log', '$element',
+    app.controller('functionPermissionsSetCtrl', ['$scope', '$timeout', '$log', '$element',
         'ShoppingCartEntity',
         function ($scope, $timeout, $log, $element, shoppingCartEntity) {
             var vm = this;
@@ -29,30 +29,6 @@ define(['btModule'], function (btModule) {
                 $ICON.toggleClass('fa-minus  fa-plus');
             });
             /*end 版面縮合*/
-
-            /*begin 問卷-查詢*/
-            var opt = {
-                "oLanguage": {
-                    "sProcessing": "處理中...",
-                    "sLengthMenu": "顯示 _MENU_ 項結果",
-                    "sZeroRecords": "沒有匹配結果",
-                    "sInfo": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
-                    "sInfoEmpty": "顯示第 0 至 0 項結果，共 0 項",
-                    "sInfoFiltered": "(從 _MAX_ 項結果過濾)",
-                    "sSearch": "搜索:",
-                    "oPaginate": {
-                        "sFirst": "首頁",
-                        "sPrevious": "上一頁",
-                        "sNext": "下一頁",
-                        "sLast": "尾頁"
-                    },
-                },
-                "searching": false,
-                "bInfo": false,
-                "bPaginate": false
-                    // "scrollX": true,
-
-            };
 
             // 左右多選框 
             $(function () {
@@ -138,6 +114,81 @@ define(['btModule'], function (btModule) {
             $scope.names6 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
             $scope.names7 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9"];
 
+            $scope.useTableData = [{
+                "userId": "0057",
+                "accountName": "RightLiu",
+                "userName": "劉大尉",
+                "userEamil": "rightliu@com.tw",
+                "userGroup": "MPM",
+                "userRole": "PM Leader",
+                "userStatus": "啟用"
+            }, {
+                "userId": "1045",
+                "accountName": "LeftHan",
+                "userName": "韓政績",
+                "userEamil": "LeftHan@com.tw",
+                "userGroup": "MPM",
+                "userRole": "PM Member",
+                "userStatus": "啟用"
+            }, {
+                "userId": "4552",
+                "accountName": "AndyHung",
+                "userName": "黃石鎮",
+                "userEamil": "AndyHung@com.tw",
+                "userGroup": "OET",
+                "userRole": "PM",
+                "userStatus": "啟用"
+
+            }, {
+                "userId": "6055",
+                "accountName": "AndyHung",
+                "userName": "王小咪",
+                "userEamil": "AmyHung@com.tw",
+                "userGroup": "OET",
+                "userRole": "Leader",
+                "userStatus": "啟用"
+            }, {
+                "userId": "6078",
+                "accountName": "PongLai",
+                "userName": "賴帥哥",
+                "userEamil": "PangLai@com.tw",
+                "userGroup": "IT",
+                "userRole": "Admin",
+                "userStatus": "啟用"
+            }, ];
+
+            var opt = {
+                "oLanguage": {
+                    "sProcessing": "處理中...",
+                    "sLengthMenu": "顯示 _MENU_ 項結果",
+                    "sZeroRecords": "沒有匹配結果",
+                    "sInfo": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                    "sInfoEmpty": "顯示第 0 至 0 項結果，共 0 項",
+                    "sInfoFiltered": "(從 _MAX_ 項結果過濾)",
+                    "sSearch": "搜索:",
+                    "oPaginate": {
+                        "sFirst": "首頁",
+                        "sPrevious": "上一頁",
+                        "sNext": "下一頁",
+                        "sLast": "尾頁"
+                    },
+                },
+                "searching": false,
+                "bInfo": false,
+                "bPaginate": false
+                    // "scrollX": true,
+                    // "scrollY": true
+
+
+
+            };
+
+
+
+            $timeout(function () {
+                $('#datatable_functionPermissionSet').DataTable(opt);
+            }, 100)
+
             $scope.roleTableData = [{
                 "roleId": "1",
                 "roleName": "System Admin",
@@ -155,12 +206,86 @@ define(['btModule'], function (btModule) {
                 "roleName": "System Admin",
             }, ];
 
-            // $scope.showCommonTable = true;
-            $('#datatable_roleSet').DataTable().destroy();
+            $scope.functionPermissionSetData = [{
+                "functionList": "系統設定管理",
+                "function": "使用者設定",
+                "add": "新增 ",
+                "edit": "修改",
+                "delete": "刪除",
+                "discontinue": "停用",
+                "startUsing": "啟用",
+                "applyMechanically": ""
+            }, {
+                "functionList": "系統設定管理",
+                "function": "角色設定",
+                "add": "新增 ",
+                "edit": "修改",
+                "delete": "刪除",
+                "discontinue": "停用",
+                "startUsing": "啟用",
+                "applyMechanically": ""
+            }, {
+                "functionList": "系統設定管理",
+                "function": "部門設定",
+                "add": "新增 ",
+                "edit": "修改",
+                "delete": "刪除",
+                "discontinue": "停用",
+                "startUsing": "啟用",
+                "applyMechanically": ""
+            }, {
+                "functionList": "系統設定管理",
+                "function": "權限設定",
+                "add": "新增 ",
+                "edit": "修改",
+                "delete": "刪除",
+                "discontinue": "停用",
+                "startUsing": "啟用",
+                "applyMechanically": "套用"
+            }, {
+                "functionList": "促代維護",
+                "function": "折扣查詢",
+                "add": "查詢 ",
+                "edit": "重新上架",
+                "delete": "複製SPA單",
+            }, {
+                "functionList": "促代維護",
+                "function": "折扣查詢",
+                "add": "查詢 ",
+                "edit": "重新上架",
+                "delete": "複製SPA單",
+            }];
 
-            $timeout(function () {
-                $('#datatable_roleSet').DataTable(opt);
-            }, 100)
+            // console.log($scope.functionPermissionSetData);
+            // console.log($scope.functionPermissionSetData[0].applyMechanically);
+
+            // for (i = 0; i <= $scope.functionPermissionSetData.length; i++) {
+
+            //     if ($scope.functionPermissionSetData[i].applyMechanically == "") {
+            //         console.log($scope.functionPermissionSetData[0].applyMechanically);
+
+
+
+            //         document.getElementById('applyMechanically').style.display = "none";
+
+            //         //     } else {
+
+            //     }
+
+
+
+            // angular.forEach($scope.functionPermissionSetData, function (item) {
+
+            //     if (item.applyMechanically == "") {
+            //         // document.getElementById('applyMechanically').parentElement.parentElement.
+            //         document.getElementById('applyMechanically').style.display = "none";
+
+            //     } else {
+
+            //     }
+
+            // })
+
 
 
 
@@ -171,6 +296,11 @@ define(['btModule'], function (btModule) {
                     $scope.multiselectControl = true;
                 }
                 /* end */
+
+
+
+
+
 
 
         }
