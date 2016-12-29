@@ -83,64 +83,64 @@
                         <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#ModaladdUse">新增</button>
                         <button type="button" class="btn btn-info btn-default pull-right">查詢</button>
                     </div>
-                </form>
-                <!--  使用者角色表格 -->
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <table id="datatable_userSet" class="table table-striped table-bordered">
-                        <thead>
-                            <tr class="table-header-color">
-                                <th>工號</th>
-                                <th>使用者帳號</th>
-                                <th>姓名</th>
-                                <th>E-Mamil</th>
-                                <th>使用者群組</th>
-                                <th>使用者角色</th>
-                                <th>狀態</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="x in useTableData track by $index">
-                                <td ng-bind="x.userId "></td>
-                                <td ng-bind="x.accountName "></td>
-                                <td ng-bind="x.userName"></td>
-                                <td ng-bind="x.userEamil"></td>
-                                <td ng-bind="x.userGroup"></td>
-                                <td ng-bind="x.userRole"></td>
-                                <td ng-bind="x.userStatus"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- end 使用者角色表格 -->
-                <!-- 確認畫面 新增 modal -->
-                <div class="modal fade bs-example-modal-lg" id="ModaladdUse" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    <!--  使用者角色表格 -->
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <table id="datatable_userSet" class="table table-striped table-bordered">
+                            <thead>
+                                <tr class="table-header-color">
+                                    <th>工號</th>
+                                    <th>使用者帳號</th>
+                                    <th>姓名</th>
+                                    <th>E-Mamil</th>
+                                    <th>使用者群組</th>
+                                    <th>使用者角色</th>
+                                    <th>狀態</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in useTableData track by $index">
+                                    <td ng-bind="x.userId "></td>
+                                    <td ng-bind="x.accountName "></td>
+                                    <td ng-bind="x.userName"></td>
+                                    <td ng-bind="x.userEamil"></td>
+                                    <td ng-bind="x.userGroup"></td>
+                                    <td ng-bind="x.userRole"></td>
+                                    <td ng-bind="x.userStatus"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- end 使用者角色表格 -->
+                    <!-- 確認畫面 新增 modal -->
+                    <div class="modal fade bs-example-modal-lg" id="ModaladdUse" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                         </button>
-                                <h4 class="modal-title" id="13-2">確認畫面</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <br>
-                                    <div class="col-md-3"></div>
-                                    <div class="col-md-6" style="font-size:30px;">
-                                        <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> 確定新增使用者？
-                                    </div>
-                                    <br>
-                                    <br>
-                                    <br>
+                                    <h4 class="modal-title" id="13-2">確認畫面</h4>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-6" style="font-size:30px;">
+                                            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> 確定新增使用者？
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- end 確認畫面 新增 modal -->
+                    <!-- end 確認畫面 新增 modal -->
+                </form>
             </div>
         </div>
     </div>

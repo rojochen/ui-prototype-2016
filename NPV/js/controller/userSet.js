@@ -52,9 +52,10 @@ define(['btModule'], function (btModule) {
                 },
                 "searching": false,
                 "bInfo": false,
-                "bPaginate": false
-                    // "scrollX": true,
-                    // "scrollY": true
+                "bPaginate": false,
+
+                // "scrollX": true,
+                // "scrollY": true
 
             };
 
