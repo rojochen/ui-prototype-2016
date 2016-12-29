@@ -48,7 +48,9 @@ define(['btModule'], function (btModule) {
                     },
                 },
                 "searching": false,
-                "scrollX": true,
+                "bInfo": false,
+                "bPaginate": false
+                    // "scrollX": true,
 
             };
 
@@ -154,60 +156,13 @@ define(['btModule'], function (btModule) {
             }, ];
 
             // $scope.showCommonTable = true;
-            // $('#datatable').DataTable().destroy();
+            $('#datatable_roleSet').DataTable().destroy();
 
-            // $timeout(function () {
-            //     $('#datatable').DataTable(opt);
-            //     // $log.debug($scope.saerchKeyInput);
-            //     $scope.saerchKey = $scope.saerchKeyInput;
-            // }, 100)
+            $timeout(function () {
+                $('#datatable_roleSet').DataTable(opt);
+            }, 100)
 
 
-            // $scope.showActivities = false;
-            // $scope.saerchAdvanced = function () {
-            //     $('#datatable').DataTable().destroy();
-            //     $scope.commonTableData = [];
-            //     $scope.showCommonTable = false;
-            //     $scope.showSearch = false;
-            //     $log.debug($scope.selectType);
-            //     if ($scope.selectType === $scope.selectTypeItem[0]) {
-            //         $timeout(function () {
-            //             $("#activityGroup").select2({
-            //                 placeholder: "選擇活動群組",
-            //                 allowClear: true
-            //             });
-            //             $("#numberType").select2({
-            //                 placeholder: "選擇門號類型",
-            //                 allowClear: true
-            //             });
-            //             $("#type").select2({
-            //                 placeholder: "選擇種類",
-            //                 allowClear: true
-            //             });
-            //         }, 100)
-            //         $scope.showActivities = true;
-            //     } else {
-            //         $log.debug('next'); //未做...完
-            //     }
-            //     // $log.debug($scope.commonTableData);
-            // }
-
-            // $scope.showActivitiesTable = false;
-            // $scope.activities_Advanced = function () { //未做...完
-            //     $log.debug('進階查詢_活動');
-            //     $log.debug($scope.SPV + " " + $scope.activityCode + " " + $scope.activityName + " " + $scope.groupCode + " " + $scope.activityGroup + " " + $scope.numberType + " " + $scope.type);
-            //     $timeout(function () {
-            //         $('#datatable_activities').DataTable(opt);
-            //         // $scope.saerchKey = $scope.saerchKeyInput;  //search未做...
-            //     }, 100)
-            //     $log.debug($scope.activitiesTableData);
-            //     $scope.showActivitiesTable = true;
-            // }
-
-            // $scope.changeSearch = function () {
-            //     $scope.showSearch = true;
-            //     $scope.showActivities = false;
-            // }
 
 
             /* begin */
