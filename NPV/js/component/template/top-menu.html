@@ -105,37 +105,5 @@
 		</ul>
 	</nav>
 </div>
-<div id="layerContent" ng-show="selectList.length > 0">
-	<!--<div class="row">
-		<div class="col-md-12 col-sm-12 col-xs-12">
-		</div>
-		<div class="col-md-12 col-sm-12 col-xs-12">
-		</div>
-	</div>-->
-	<ul class="list-group">
-		<li class="clearfix listArea" ng-repeat="x in selectList track by $index">
-			<div class="cart-list-title" ng-class="{bg_green: x.type === '活動',bg_blue: x.type === '促代', bg_pink: x.type !== '活動' && x.type !== '促代'}">{{x.type}}類別</div>
-			<div class="listText">
-				<span class="activityName">活動代碼：{{x.activityCode}}</span>
-				<span class="activityName">活動類別：{{x.name}}</span>
-			</div>
-			<div class="listBottom">
-				<div class="iconArea">
-					<i class="fa fa-pencil"></i>編輯
-				</div>
-				<div class="iconArea">
-					<i class="fa fa fa-eye"></i>檢視
-				</div>
-				<div class="iconArea" ng-click="removeList(x, $index)">
-					<i class="fa fa-trash-o"></i>移除
-				</div>
-			</div>
-		</li>
-	</ul>
-	<div class="btnArea">
-		<button type="button" class="btn btn-primary" ng-click="">儲存</button>
-		<!--<button type="button" class="btn btn-primary" ng-click="definiteList()">送審</button>-->
-		<button type="button" class="btn btn-primary">送審</button>
-		<button type="button" class="btn btn-primary" ng-click="">銷單</button>
-	</div>
-</div>
+
+<bt-float-windows titlename="'已選清單'"></bt-float-windows>
