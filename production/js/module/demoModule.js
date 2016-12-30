@@ -64,6 +64,9 @@ define(['pokemon'], function(pokemon) {
 				.when('/tables_dynamic', {
 					templateUrl: '../template/tables_dynamic.html'
 				})
+				.when('/pagination', {
+					templateUrl: '../template/pagination.html'
+				})
 				.when('/fixed_sidebar', {
 					templateUrl: '../template/fixed_sidebar.html'
 				})
