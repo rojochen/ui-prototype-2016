@@ -12,7 +12,7 @@ define([
             titlename: '<'
         }
     };
-    app.component('btFloatWindows', floatWindowsComponent);
+    app.component('npvFloatWindows', floatWindowsComponent);
 
     floatWindowsComponentCtrl.$inject = ['$log', 'ShoppingCartEntity', '$scope'];
     function floatWindowsComponentCtrl($log, shoppingCartEntity, $scope) {
