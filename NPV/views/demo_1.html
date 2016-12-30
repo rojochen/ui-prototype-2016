@@ -515,31 +515,33 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">適用對象</label>
-                                        <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
-                                            <div class="col-md-5">
-                                                <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText3">
-                                                <select id="select3" class="form-control" size="8" multiple="multiple" ng-options="item for item in names2 | filter:searchText3"
-                                                    ng-model="select3">
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <div class="row">
+                                                <div class="col-md-5  col-sm-4  col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText3">
+                                                    <select id="select3" class="form-control" size="8" multiple="multiple" ng-options="item for item in names2 | filter:searchText3"
+                                                        ng-model="select3">
                                                     </select>
-                                            </div>
-                                            <div class="col-md-2" style="margin-top:30px">
-                                                <button type="button" id="add_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                </div>
+                                                <div class="col-md-2  col-sm-1 col-xs-12">
+                                                    <button type="button" id="add_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-forward"></i>
                                                     </button>
-                                                <button type="button" id="add1" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    <button type="button" id="add1" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i>
                                                     </button>
-                                                <button type="button" id="remove1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                    <button type="button" id="remove1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-chevron-left"></i>
                                                     </button>
-                                                <button type="button" id="remove_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                    <button type="button" id="remove_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-backward"></i>
                                                     </button>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText4">
-                                                <select id="select4" class="form-control" size="8" multiple="multiple" ng-options="item for item in names3 | filter:searchText4"
-                                                    ng-model="select4">
+                                                </div>
+                                                <div class="col-md-5 col-sm-4 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText4">
+                                                    <select id="select4" class="form-control" size="8" multiple="multiple" ng-options="item for item in names3 | filter:searchText4"
+                                                        ng-model="select4">
                                                     </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1025,8 +1027,8 @@
                                 </div>
                             </div>
                             <div class="form-group pull-right">
-                                <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                                    <button type="button" class="btn btn-primary ng-scope" ng-click="activities_Advanced()">查詢</button>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <button type="button" class="btn btn-primary" ng-click="activities_Advanced()">查詢</button>
                                 </div>
                             </div>
                             <!-- begin 活動進階搜尋表格 -->
