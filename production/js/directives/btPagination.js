@@ -16,7 +16,7 @@ define(['btModule'], function (btModule) {
                 scope.pageArray.push(num);
             }
             // console.log(scope.pageArray);
-
+            
             // console.log(attrs['pageCount']);  //未...
 
             scope.changePage = function(index){
@@ -34,11 +34,15 @@ define(['btModule'], function (btModule) {
             }
 
             scope.changePre = function(){
-                scope.changePage(scope.page-1);
+                if(scope.page-1 >= 0){
+                    scope.changePage(scope.page-1);
+                }
             }
 
             scope.changeNext = function(){
-                scope.changePage(scope.page+1);
+                if(scope.page+1 <= scope.pageArray.length-1){
+                    scope.changePage(scope.page+1);
+                }
             }
 
             scope.changeLast = function(){
