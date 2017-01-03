@@ -493,7 +493,7 @@
                                                         ng-model="select3">
                                                     </select>
                                                 </div>
-                                                <div class="col-md-2  col-sm-1 col-xs-12">
+                                                <div class="col-md-2  col-sm-1 col-xs-12" style="margin-top:30px">
                                                     <button type="button" id="add_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-forward"></i>
                                                     </button>
@@ -1192,7 +1192,7 @@
                                     <h2>活動設定</h2>
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="x_content"><br>
+                                <div class="x_content">
                                     <form class="form-horizontal">
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <div class="form-group">
@@ -1291,7 +1291,7 @@
                                     <h2>促銷產品類型</h2>
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="x_content"><br>
+                                <div class="x_content"><
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="col-md-3 col-sm-3 col-xs-12 text-center">項目</label>
@@ -1373,35 +1373,123 @@
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <div class="radio">
                                                     <label>
-                                                    <input type="radio" checked="" value="option1" id=""
+                                                    <input type="radio" checked value="option1" 
                                                            name="optionsRadios2"> 是
                                                 </label>
                                                     <label>
-                                                    <input type="radio" value="option2" id=""
+                                                    <input type="radio" value="option2" 
                                                            name="optionsRadios2"> 否
                                                 </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">促銷類別</label>
+                                            <label class="col-md-3 col-sm-3 col-xs-12 text-center">項目</label>
+                                            <label class="col-md-9 col-sm-9 col-xs-12 text-center">內容
+                                            </label>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">適用對象</label>
+                                             <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-md-5  col-sm-4  col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText3">
+                                                    <select id="select3" class="form-control" size="8" multiple="multiple" ng-options="item for item in names2 | filter:searchText3"
+                                                        ng-model="select3">
+                                                    </select>
+                                                    </div>
+                                                    <div class="col-md-2  col-sm-1 col-xs-12" style="margin-top:30px">
+                                                    <button type="button" id="add_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-forward"></i>
+                                                    </button>
+                                                    <button type="button" id="add1" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    </button>
+                                                    <button type="button" id="remove1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    </button>
+                                                    <button type="button" id="remove_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-backward"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-5 col-sm-4 col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText4">
+                                                    <select id="select4" class="form-control" size="8" multiple="multiple" ng-options="item for item in names3 | filter:searchText4"
+                                                        ng-model="select4">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">啟用系統</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <div class="radio">
                                                     <label>
                                                     <input type="radio" value="option1" id=""
-                                                           name="optionsRadios5"> Voice類促代
+                                                           name="optionsRadios5"> IA
                                                 </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
                                                     <input type="radio" value="option2" id=""
-                                                           name="optionsRadios5"> Data類促代
+                                                           name="optionsRadios5" checked> Fax Server
                                                 </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
                                                     <input type="radio" value="option3" id=""
-                                                           name="optionsRadios5"> Non SIM類促代
+                                                           name="optionsRadios5"> ALL
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">適用通路</label>
+                                            <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
+                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText">
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2" style="margin-top:30px">
+                                                    <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-forward"></i>
+                                                    </button>
+                                                    <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    </button>
+                                                    <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    </button>
+                                                    <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-backward"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
+                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">促發活動類型</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios5"> Voice類促代
+                                                </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option2" 
+                                                           name="optionsRadios5" checked> Data類促代
+                                                </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option3"
+                                                           name="optionsRadios5">Non SIM類促代
                                                 </label>
                                                 </div>
                                             </div>
@@ -1411,12 +1499,12 @@
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <div class="radio">
                                                     <label>
-                                                    <input type="radio" value="option1" id=""
-                                                           name="optionsRadios6"> 是
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios6">是
                                                 </label>
                                                     <label>
-                                                    <input type="radio" value="option1" id=""
-                                                           name="optionsRadios6"> 否
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios6" checked>否
                                                 </label>
                                                 </div>
                                             </div>
@@ -1428,7 +1516,7 @@
                                                 <option>一般</option>
                                                 <option>選項2</option>
                                             </select> 可提前
-                                                <input type="text" required="required" class=""> 日續約
+                                                <input type="text" required="required">日續約
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -1436,12 +1524,12 @@
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <div class="radio">
                                                     <label>
-                                                    <input type="radio" value="option1" id=""
+                                                    <input type="radio" value="option1" 
                                                            name="optionsRadios7"> 是
                                                 </label>
                                                     <label>
-                                                    <input type="radio" value="option1" id=""
-                                                           name="optionsRadios7"> 否
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios7" checked> 否
                                                 </label>
                                                 </div>
                                             </div>
@@ -1451,11 +1539,11 @@
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <div class="radio">
                                                     <label>
-                                                    <input type="radio" value="option1" id=""
-                                                           name="optionsRadios8"> 需回收
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios8" checked> 需回收
                                                 </label>
                                                     <label>
-                                                    <input type="radio" value="option1" id=""
+                                                    <input type="radio" value="option1" 
                                                            name="optionsRadios8"> 不需回收
                                                 </label>
                                                 </div>
@@ -1472,37 +1560,23 @@
                                                 <div class="radio">
                                                     <label>需Coupon回收
                                                     <label>
-                                                        <input type="radio" value="option1" id=""
+                                                        <input type="radio" value="option1" 
                                                                name="optionsRadios9"> 有P
                                                     </label>
                                                     <label>
-                                                        <input type="radio" value="option1" id=""
+                                                        <input type="radio" value="option1" 
                                                                name="optionsRadios9"> 無P
                                                     </label>
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                    <input type="checkbox" value=""> 無
+                                                    <input type="checkbox" checked> 無
                                                 </label>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">IA/備援單</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                                <div class="radio">
-                                                    <label>
-                                                    <input type="radio" value="option1" id=""
-                                                           name="optionsRadios10"> 手機約
-                                                </label>
-                                                    <label>
-                                                    <input type="radio" value="option1" id=""
-                                                           name="optionsRadios10"> 月租通話約
-                                                </label>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       </div>
                                     </form>
                                 </div>
                             </div>
