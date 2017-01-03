@@ -261,7 +261,7 @@
                         <button type="button" class="close" data-dismiss="modal"><span
                                 aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                         </button>
-                        <h4 class="modal-title" id="myModalLabel">活動類別編輯-MPM</h4>
+                        <h4 class="modal-title" id="">活動類別編輯-MPM</h4>
                     </div>
                     <div class="modal-body">
                         <table class="table table-striped jambo_table">
@@ -608,19 +608,19 @@
                                         <div class="col-md-9 col-sm-9 col-xs-12">
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" value="option1" id=""
+                                                    <input type="radio" value="option1" 
                                                            name="optionsRadios5"> Voice類促代
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" value="option2" id=""
+                                                    <input type="radio" value="option2"
                                                            name="optionsRadios5"> Data類促代
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" value="option3" id=""
+                                                    <input type="radio" value="option3" 
                                                            name="optionsRadios5"> Non SIM類促代
                                                 </label>
                                             </div>
@@ -631,11 +631,11 @@
                                         <div class="col-md-9 col-sm-9 col-xs-12">
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" value="option1" id=""
+                                                    <input type="radio" value="option1" 
                                                            name="optionsRadios6"> 是
                                                 </label>
                                                 <label>
-                                                    <input type="radio" value="option1" id=""
+                                                    <input type="radio" value="option1" 
                                                            name="optionsRadios6"> 否
                                                 </label>
                                             </div>
@@ -648,7 +648,7 @@
                                                 <option>一般</option>
                                                 <option>選項2</option>
                                             </select> 可提前
-                                            <input type="text" required="required" class=""> 日續約
+                                            <input type="text" required="required" > 日續約
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -1183,8 +1183,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="x_panel">
-                                <div class="x_title">
+                            <div class="x_panel panelPadding">
+                                <div class="x_title panelTitle">
                                     <ul class="nav pull-left">
                                         <li><a class="collapse-link panelIcon"><i class="fa fa-minus"></i></a>
                                         </li>
@@ -1282,8 +1282,8 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="x_panel">
-                                <div class="x_title">
+                            <div class="x_panel panelPadding">
+                                <div class="x_title panelTitle">
                                     <ul class="nav pull-left">
                                         <li><a class="collapse-link panelIcon"><i class="fa fa-minus"></i></a>
                                         </li>
@@ -1291,7 +1291,7 @@
                                     <h2>促銷產品類型</h2>
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="x_content"><
+                                <div class="x_content">
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="col-md-3 col-sm-3 col-xs-12 text-center">項目</label>
@@ -1575,11 +1575,263 @@
                                                 </label>
                                                 </div>
                                             </div>
+                                            </div>
                                         </div>
-                                       </div>
                                     </form>
                                 </div>
                             </div>
+                            <div class="x_panel panelPadding">
+                                <div class="x_title panelTitle">
+                                    <ul class="nav pull-left">
+                                    <li><a class="collapse-link panelIcon"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                </ul>
+                                <h2>活動條件設定</h2>
+                                <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">活動條件預設</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <select class="form-control col-md-3 col-sm-3 col-xs-12" style="width: 250px;">
+                                                <option>請選擇</option>
+                                                <option>選項 1</option>
+                                                <option>選項 2</option>
+                                                <option>選項 3</option>
+                                                <option>選項 4</option>
+                                            </select>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <button type="button" class="btn btn-default" style="color: #73879c">
+                                                    篩選
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox col-md-offset-3 col-sm-offset-3 col-md-9 col-sm-9 col-xs-12" style="padding-top: 0px;">
+                                            <label>
+                                                <input type="checkbox" value=""> 資費價差與指定資費
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">適用範本</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <select class="form-control col-md-3 col-sm-3 col-xs-12" style="width: 250px;">
+                                                <option>請選擇</option>
+                                                <option>選項 1</option>
+                                                <option>選項 2</option>
+                                                <option>選項 3</option>
+                                                <option>選項 4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <div class="col-md-11 col-sm-11">
+                                            <table class="table table-striped table-bordered dataTable no-footer">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="60px" class=" text-center table-header-color table-header-color" style="width: 100px;">ARPB
+                                                        </th>
+                                                        <th width="60px" class=" text-center table-header-color table-header-color" style="width: 100px;">停機可能率
+                                                        </th>
+                                                        <th width="60px" class=" text-center table-header-color table-header-color" style="width: 100px;">可提前續約日
+                                                        </th>
+                                                        <th class=" text-center table-header-color table-header-color" style="width: 320px;">條件
+                                                        </th>
+                                                        <th class=" text-center table-header-color table-header-color" style="width: 50px;"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <select class="form-control input-sm">
+                                                            <option>1-249</option>
+                                                            <option>選項 1</option>
+                                                            <option>選項 2</option>
+                                                        </select>
+                                                        </td>
+                                                        <td>
+                                                            <select class="form-control input-sm">
+                                                            <option>無限制</option>
+                                                            <option>選項 1</option>
+                                                            <option>選項 2</option>
+                                                        </select>
+                                                        </td>
+                                                        <td>
+                                                            <select class="form-control input-sm">
+                                                            <option>365</option>
+                                                            <option>選項 1</option>
+                                                            <option>選項 2</option>
+                                                        </select>
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-default" style="color: #73879c;">
+                                                            ...
+                                                        </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-1 col-sm-1">
+                                            <button type="button" class="btn btn-default" style="color: #73879c; margin-top: 54px;">
+                                                新增
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-11 col-sm-11">
+                                            <table class="table table-striped table-bordered dataTable no-footer">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="107px" class="sorting_asc text-center table-header-color table-header-color">
+                                                            ARPB
+                                                        </th>
+                                                        <th width="107px" class="sorting text-center table-header-color table-header-color">
+                                                            停機可能率
+                                                        </th>
+                                                        <th width="107px" class="sorting text-center table-header-color table-header-color">
+                                                            可提前續約日
+                                                        </th>
+                                                        <th class="sorting text-center table-header-color table-header-color">
+                                                            條件
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                            <div class="x_panel panelPadding">
+                                <div class="x_title panelTitle">
+                                    <ul class="nav pull-left">
+                                        <li><a class="collapse-link panelIcon"><i class="fa fa-minus"></i></a>
+                                        </li>
+                                    </ul>
+                                    <h2>申辦條件設定(非必填)</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <form lass="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">新增或排除條件</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" checked value="option1" 
+                                                            name="optionsRadios2"> 僅限申辦(新增)
+                                                            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" value="option2" 
+                                                            name="optionsRadios2"> 不可申辦(排除)
+                                                            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">活動群組/類別</label>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <select class="form-control">
+                                                    <option>活動群組</option>
+                                                    <option>選項2</option>
+                                                    <option>選項3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">活動群組</label>
+                                            <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
+                                                <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText">
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2" style="margin-top:30px">
+                                                <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-forward"></i>
+                                                </button>
+                                                <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i>
+                                                </button>
+                                                <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i>
+                                                </button>
+                                                <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i>
+                                                </button>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
+                                                <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">IA/備援單</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" checked value="option1" 
+                                                            name="optionsRadios2"> 手機約
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" value="option2" 
+                                                            name="optionsRadios2"> 月租通話約        
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                                    <div class="row">    
+                                                        <select class="form-control">
+                                                            <option>請選擇</option>
+                                                            <option>選項</option>
+                                                            <option>選項2</option>
+                                                            <option>選項3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>   
+                                                <div class="col-md-2">
+                                                    <button type="button" class="btn btn-default btn-sm" style="color: #73879c">套用個人A範本</button>
+                                                </div>    
+                                            </div>    
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                                    <div class="row">    
+                                                        <select class="form-control">
+                                                            <option>請選擇</option>
+                                                            <option>選項</option>
+                                                            <option>選項2</option>
+                                                            <option>選項3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>   
+                                                <div class="col-md-2">
+                                                    <button type="button" class="btn btn-default btn-sm" style="color: #73879c">套用個人A範本</button>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="form-group">   
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>    
+                                </div>
                         </form>
                     </div>
                     <div class="modal-footer">
