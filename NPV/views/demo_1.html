@@ -949,7 +949,7 @@
                     </div>
                     <div class="modal-body">
                         <div>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#Modal3-1">新增</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="aaa()">新增</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">查詢</button>
                         </div>
                         <table class="table table-striped table-bordered">
@@ -1183,8 +1183,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="x_panel panelPadding">
-                                <div class="x_title panelTitle">
+                            <div class="x_panel">
+                                <div class="x_title">
                                     <ul class="nav pull-left">
                                         <li><a class="collapse-link panelIcon"><i class="fa fa-minus"></i></a>
                                         </li>
@@ -1276,6 +1276,230 @@
                                                                   checked="checked">是
                                                     </label>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <ul class="nav pull-left">
+                                        <li><a class="collapse-link panelIcon"><i class="fa fa-minus"></i></a>
+                                        </li>
+                                    </ul>
+                                    <h2>促銷產品類型</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content"><br>
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="col-md-3 col-sm-3 col-xs-12 text-center">項目</label>
+                                            <label class="col-md-6 col-sm-6 col-xs-12 text-center">選項</label>
+                                            <label class="col-md-3 col-sm-3 col-xs-12 text-center">內容</label>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">促代類型</label>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <select class="form-control">
+                                                <option>選項1</option>
+                                                <option>選項2</option>
+                                                <option>選項3</option>
+                                            </select>
+                                            </div>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">保證金</label>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <select class="form-control">
+                                                <option>選項1</option>
+                                                <option>選項2</option>
+                                                <option>選項3</option>
+                                            </select>
+                                            </div>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">設定費 預繳</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="radio">
+                                                    <label><input type="radio"  value="option1" name="optionsRadios"> 預繳
+                                                </label>
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option2" 
+                                                           name="optionsRadios" checked> 無預繳
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">VAS服務合約(無違約金之VAS)</label>
+                                            <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
+                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText">
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2" style="margin-top:30px">
+                                                    <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-forward"></i>
+                                                    </button>
+                                                    <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    </button>
+                                                    <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    </button>
+                                                    <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-backward"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
+                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">是否可換約</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" checked="" value="option1" id=""
+                                                           name="optionsRadios2"> 是
+                                                </label>
+                                                    <label>
+                                                    <input type="radio" value="option2" id=""
+                                                           name="optionsRadios2"> 否
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">促銷類別</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option1" id=""
+                                                           name="optionsRadios5"> Voice類促代
+                                                </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option2" id=""
+                                                           name="optionsRadios5"> Data類促代
+                                                </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option3" id=""
+                                                           name="optionsRadios5"> Non SIM類促代
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">禮品類促代</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option1" id=""
+                                                           name="optionsRadios6"> 是
+                                                </label>
+                                                    <label>
+                                                    <input type="radio" value="option1" id=""
+                                                           name="optionsRadios6"> 否
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">促代補貼</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <select class="">
+                                                <option>一般</option>
+                                                <option>選項2</option>
+                                            </select> 可提前
+                                                <input type="text" required="required" class=""> 日續約
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">PM授權續約</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option1" id=""
+                                                           name="optionsRadios7"> 是
+                                                </label>
+                                                    <label>
+                                                    <input type="radio" value="option1" id=""
+                                                           name="optionsRadios7"> 否
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">SA回收</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option1" id=""
+                                                           name="optionsRadios8"> 需回收
+                                                </label>
+                                                    <label>
+                                                    <input type="radio" value="option1" id=""
+                                                           name="optionsRadios8"> 不需回收
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">兌換卷換成手機貼紙方案</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="checkbox">
+                                                    <label>
+                                                    <input type="checkbox" value=""> 需特定Sticker回收
+                                                </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>需Coupon回收
+                                                    <label>
+                                                        <input type="radio" value="option1" id=""
+                                                               name="optionsRadios9"> 有P
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" value="option1" id=""
+                                                               name="optionsRadios9"> 無P
+                                                    </label>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                    <input type="checkbox" value=""> 無
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">IA/備援單</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option1" id=""
+                                                           name="optionsRadios10"> 手機約
+                                                </label>
+                                                    <label>
+                                                    <input type="radio" value="option1" id=""
+                                                           name="optionsRadios10"> 月租通話約
+                                                </label>
                                                 </div>
                                             </div>
                                         </div>
