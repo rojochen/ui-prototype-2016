@@ -225,14 +225,18 @@ table.countries_list {
   & > .active {
     & > a {
       background-color: $primaryColor;
+      border-color: $primaryColor;
       &:focus, &:hover{
         background-color: $primaryColor;
+        border-color: $primaryColor;
       }
     }
     & > span {
       background-color: $primaryColor;
+      border-color: $primaryColor;
       &:focus, &:hover{
         background-color: $primaryColor;
+        border-color: $primaryColor;
       }
     }
   }

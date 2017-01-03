@@ -35,7 +35,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="x in tableInfo">
+							<tr ng-repeat="x in tableInfo.result">
 								<td ng-bind="x.id"></td>
 								<td ng-bind="x.date"></td>
 								<td ng-bind="x.number"></td>
@@ -48,17 +48,7 @@
 					</table>
 				</div>
 				<div class="pull-right">
-					<ul class="pagination">
-						<li><a href="#">« 第一頁</a></li>
-						<li><a href="#">‹上一頁 </a></li>
-						<li> <a href="#">1</a> </li>
-						<li> <a href="#">2</a> </li>
-						<li> <a href="#">3</a> </li>
-						<li> <a href="#">4</a> </li>
-						<li> <a href="#">5</a> </li>
-						<li><a href="#">下一頁 ›</a></li>
-						<li><a href="#">最後一頁 »</a></li>
-					</ul>
+					<div bt-pagination info="tableInfo" page-size="4" page-count="5"></div>
 				</div>
 			</bt-portlet>
 		</div>
