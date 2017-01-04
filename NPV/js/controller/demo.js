@@ -862,6 +862,11 @@ define(['btModule'], function (btModule) {
                 "dateRange": "2016/09/01-2017/12/31"
             }];
 
+            $element.find('.flat').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            });
+
 
 
 
