@@ -134,6 +134,11 @@
                     <div class="modal-body">
                         <form class="form-horizontal" role="form">
                             <div class="form-group">
+                                <label class="control-label col-md-1 col-sm-1 col-xs-12">活動類別</label>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="addList()">新增</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="inquiry()">查詢</button>
+                            </div>
+                            <div class="form-group">
                                 <label class="col-md-1 control-label text-right">促代名稱:</label>
                                 <div class="col-md-6">
                                     <input class="form-control" type="text">
@@ -142,11 +147,11 @@
                             <div class="form-group">
                                 <label class="col-md-1 control-label text-right">合約類型:</label>
                                 <div class="col-md-6">
-                                    <select class="form-control">
-								<option value="等級 1">等級 1</option>
-								<option value="等級 2">等級 2</option>
-								<option value="等級 3">等級 3</option>
-								<option value="等級 4">等級 4</option>
+                                    <select class="form-control" ng-model="contractType">
+								<option value="1">同生共死</option>
+								<option value="2">各自分飛</option>
+								<option value="3">團結力量大(多個VD)</option>
+								<option value="4">....</option>
 								</select>
                                 </div>
                             </div>
@@ -242,10 +247,200 @@
                             </div>
                         </div>
                         <!-- end IA/備援單-->
+                        <!--設定上下限值-->
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>設定上下限值</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div ng-switch="contractType">
+                                    <div ng-switch-when="1">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">各自分飛/同生共死/分享包</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>S010-續約升級-1~249手機搭765方案</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>S015-續約升級-1~249i-mode手機搭765方案</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">Bundle層</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>B001-行動3G續約專案</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-switch-when="2">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">各自分飛/同生共死/分享包</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>S010-續約升級-1~249手機搭765方案</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>S015-續約升級-1~249i-mode手機搭765方案</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">Bundle層</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>B001-行動3G續約專案</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-switch-when="3">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">團結力量大</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>B001-行動3G續約專案</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>S001-遠傳e書城149跟12</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">Bundle層</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>B001-行動3G續約專案</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>GA</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>LOY</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>NP</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end IA/備援單-->
                     </div>
                     <div class="modal-footer">
-                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
                         <button type="button" class="btn btn-default" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     </div>
                 </div>
             </div>
@@ -364,9 +559,7 @@
                                             <label class="control-label col-md-4 col-sm-4 col-xs-12">是否使用名單</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox"
-                                                                  class="flat"
-                                                                  checked="checked">是
+                                                    <label><input type="checkbox" checked="checked">是
                                                     </label>
                                                 </div>
                                             </div>
@@ -948,7 +1141,13 @@
                         <h4 class="modal-title">活動類別編輯-MPM</h4>
                     </div>
                     <div class="modal-body">
-                        <div>
+                        <!--<div>
+                            <label class="">活動類別</label>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="addList()">新增</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="inquiry()">查詢</button>
+                        </div>-->
+                        <div class="form-group">
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12">活動類別</label>
                             <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="addList()">新增</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="inquiry()">查詢</button>
                         </div>
@@ -975,7 +1174,7 @@
                         </table>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-primary" ng-click="openItem()">確定</button>
                         <button type="button" class="btn btn-default">取消</button>
                     </div>
                 </div>
@@ -1061,7 +1260,7 @@
                                         <tr>
                                             <th class=" text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending"
                                                 style="width:50px;">
-                                                <input type="checkbox" class="flat" name="table_records"> NO.
+                                                <input type="checkbox" name="table_records"> NO.
                                             </th>
                                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:60px;">門號類型
                                             </th>
@@ -1102,7 +1301,7 @@
                                     <tbody>
                                         <tr role="row" ng-repeat="x in activitiesTableData track by $index">
                                             <td>
-                                                <input type="checkbox" class="flat" name="table_records"> {{x.NO}}
+                                                <input type="checkbox" name="table_records"> {{x.NO}}
                                             </td>
                                             <td ng-bind="x.gateType"></td>
                                             <td ng-bind="x.sort"></td>
@@ -1357,9 +1556,7 @@
                                                 <label class="control-label col-md-4 col-sm-4 col-xs-12">是否使用名單</label>
                                                 <div class="col-md-8 col-sm-8 col-xs-12">
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox"
-                                                                  class="flat"
-                                                                  checked="checked">是
+                                                        <label><input type="checkbox" checked="checked">是
                                                     </label>
                                                     </div>
                                                 </div>
@@ -1927,12 +2124,12 @@
                             <div class="radio-list">
                                 <div class="radio-inline">
                                     <label class="radio-inline">
-                                  <input type="radio" class="flat" checked name="iCheck">促代
+                                  <input type="radio"  checked ng-model="offerItem" value="1">促代
                                 </label>
                                 </div>
                                 <div class="radio-inline">
                                     <label class="radio-inline">
-                                  <input type="radio" class="flat" name="iCheck"> 加值服務
+                                  <input type="radio"  ng-model="offerItem" value="2" > 加值服務
                                 </label>
                                 </div>
                             </div>
@@ -1949,6 +2146,189 @@
         </div>
     </div>
     <!-- end 促代新增 -->
+    <!--4-2 促代查詢-MPM -->
+    <div class="modal fade fullscreen-modal" id="Modal4-2" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                                aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                    <h4 class="modal-title" id="myModalLabel3">促代新增</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">SPV NO:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityCode">SR NO.:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">Promotion Code:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityCode">Promotion名稱:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">促代群組:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">促代檔案生效日:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="input-prepend input-group">
+                                    <span class="add-on input-group-addon"><i
+                                                class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                    <input type="text" name="reservation" id="reservation" class="form-control" value="12/24/2016 - 12/26/2016" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">門號類型:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select class=" form-control" style="width:100%" tabindex="-1">
+                                        <option >選項1</option>
+                                        <option >選項2</option>
+                                        <option >選項3</option>
+                                      
+                                    </select>
+                            </div>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityCode">種類:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select class=" form-control" style="width:100%" tabindex="-1">
+                                        <option >選項1</option>
+                                        <option >選項2</option>
+                                        <option >選項3</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-primary pull-right">查詢</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered dataTable no-footer">
+                                    <thead>
+                                        <tr class="headings">
+                                            <th class="text-center table-header-color">
+                                                <input type="checkbox" id="check-all"> NO.
+                                            </th>
+                                            <th class="text-center sorting_asc column-title table-header-color">SPV NO.</th>
+                                            <th class="text-center sorting column-title table-header-color">SR NO.</th>
+                                            <th class="text-center sorting column-title table-header-color">OFFER ID</th>
+                                            <th class="text-center sorting column-title table-header-color">Promotion Code</th>
+                                            <th class="text-center sorting column-title table-header-color">Promotion名稱</th>
+                                            <th class="text-center sorting column-title table-header-color">促代檔案<br>生效日</th>
+                                            <th class="text-center sorting column-title table-header-color">促代效期</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="even pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110208003</td>
+                                            <td class=" "></td>
+                                            <td class=" ">124877</td>
+                                            <td class=" ">DRRLWENQY3N2</td>
+                                            <td class=" ">續約升級-1~249手機搭765方案</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - PM草稿區</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110325001</td>
+                                            <td class=" "></td>
+                                            <td class=" ">124878</td>
+                                            <td class=" ">DRQLXENQY3Y3</td>
+                                            <td class=" ">續約升級-1~249i-mode手機搭765方案</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - PM草稿區</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110321003</td>
+                                            <td class=" "></td>
+                                            <td class=" ">124880</td>
+                                            <td class=" ">DEJLDENQYDN3</td>
+                                            <td class=" ">3G-AE續約-765月租費抵扣$500*18個月優惠</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - PM草稿區</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110301007</td>
+                                            <td class=" "></td>
+                                            <td class=" ">136682</td>
+                                            <td class=" ">PIZOOGNVYGY3</td>
+                                            <td class=" ">高用量990+菁英950型優惠方案-限36個月</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - PM草稿區</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110520004</td>
+                                            <td class=" "></td>
+                                            <td class=" ">130221</td>
+                                            <td class=" ">SAMOOONLNON3</td>
+                                            <td class=" ">安心講180單門號專案</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - OET SR 彙整</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110330009</td>
+                                            <td class=" ">20110421001</td>
+                                            <td class=" ">130237</td>
+                                            <td class=" ">NCG00ENLY6N3</td>
+                                            <td class=" ">New Cash 3G搶先促銷手機搭安心講180優惠</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - IT LEADER審核</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">重新上架</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">複製</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end 4-2 促代查詢-MPM-->
     <!-- (5-1)-促代主約編輯 -->
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="Modal5-1">
@@ -2001,7 +2381,7 @@
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <!--<tr>
                                                     <td colspan="3">附約促代 代碼/名稱</td>
                                                     <td colspan="4">
                                                         <div class="col-lg-3">
@@ -2017,7 +2397,7 @@
                                                             </div>
                                                         </div>
                                                     </td>
-                                                </tr>
+                                                </tr>-->
                                             </tbody>
                                         </table>
                                     </div>
@@ -2350,12 +2730,12 @@
                                                                             <div class="radio-list">
                                                                                 <div class="radio-inline">
                                                                                     <label class="radio-inline">
-                                  													<input type="radio" class="flat" checked name="extendcontract">是
+                                  													<input type="radio"  checked name="extendcontract">是
                                													</label>
                                                                                 </div>
                                                                                 <div class="radio-inline">
                                                                                     <label class="radio-inline">
-                                  													<input type="radio" class="flat" name="extendcontract"> 否
+                                  													<input type="radio"  name="extendcontract"> 否
                                 												</label>
                                                                                 </div>
                                                                             </div>
@@ -2377,12 +2757,12 @@
                                                                             <div class="radio-list">
                                                                                 <div class="radio-inline">
                                                                                     <label class="radio-inline">
-                                  													<input type="radio" class="flat" name="appointedproduct">是
+                                  													<input type="radio"  name="appointedproduct">是
                                													</label>
                                                                                 </div>
                                                                                 <div class="radio-inline">
                                                                                     <label class="radio-inline">
-                                  													<input type="radio" class="flat"  name="appointedproduct" checked> 否
+                                  													<input type="radio"   name="appointedproduct" checked> 否
                                 												</label>
                                                                                 </div>
                                                                             </div>
@@ -2561,7 +2941,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3">附約促代 需綁主約</td>
+                                                    <td colspan="3">是否能獨立銷售</td>
                                                     <td colspan="4">
                                                         <div class="row">
                                                             <div class="form-group">
@@ -2569,12 +2949,12 @@
                                                                     <div class="radio-list text-left">
                                                                         <div class="radio-inline">
                                                                             <label class="radio-inline">
-                                                                                        <input type="radio" class="flat" name="contract" checked >是
+                                                                                        <input type="radio"  name="contract" checked >是
                                                                                     </label>
                                                                         </div>
                                                                         <div class="radio-inline">
                                                                             <label class="radio-inline">
-                                                                                        <input type="radio" class="flat" name="contract" > 否
+                                                                                        <input type="radio"  name="contract" > 否
                                                                                     </label>
                                                                         </div>
                                                                     </div>
@@ -2996,7 +3376,7 @@
                                     <thead>
                                         <tr class="headings">
                                             <th class="text-center table-header-color">
-                                                <input type="checkbox" id="check-all" class="flat"> NO.
+                                                <input type="checkbox" id="check-all"> NO.
                                             </th>
                                             <th class="text-center sorting_asc column-title table-header-color">SPV NO.</th>
                                             <th class="text-center sorting column-title table-header-color">SR NO.</th>
@@ -3010,7 +3390,7 @@
                                     <tbody>
                                         <tr class="even pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110208003</td>
                                             <td class=" "></td>
@@ -3022,7 +3402,7 @@
                                         </tr>
                                         <tr class="odd pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110325001</td>
                                             <td class=" "></td>
@@ -3034,7 +3414,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110321003</td>
                                             <td class=" "></td>
@@ -3046,7 +3426,7 @@
                                         </tr>
                                         <tr class="odd pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110301007</td>
                                             <td class=" "></td>
@@ -3058,7 +3438,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110520004</td>
                                             <td class=" "></td>
@@ -3070,7 +3450,7 @@
                                         </tr>
                                         <tr class="odd pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110330009</td>
                                             <td class=" ">20110421001</td>
@@ -3114,7 +3494,7 @@
                                     <thead>
                                         <tr class="headings">
                                             <th class="text-center table-header-color" rowspan="2">
-                                                <input type="checkbox" id="check-all" class="flat"> NO.
+                                                <input type="checkbox" id="check-all"> NO.
                                             </th>
                                             <th class="text-center sorting_asc column-title table-header-color" rowspan="2">SPV單號
                                             </th>
@@ -3139,7 +3519,7 @@
                                     <tbody>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129001</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3152,7 +3532,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129002</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3165,7 +3545,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129003</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3178,7 +3558,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129004</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3191,7 +3571,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129005</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3204,7 +3584,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129006</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3217,7 +3597,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129007</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3230,7 +3610,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129008</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3243,7 +3623,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129009</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3256,7 +3636,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129010</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3269,7 +3649,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129011</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3282,7 +3662,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129012</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3295,7 +3675,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129013</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3308,7 +3688,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129014</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3321,7 +3701,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129015</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3334,7 +3714,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129016</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3347,7 +3727,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129017</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3360,7 +3740,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129019</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3373,7 +3753,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129019</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3386,7 +3766,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129020</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -3438,7 +3818,7 @@
                                     <thead>
                                         <tr class="headings">
                                             <th class="text-center table-header-color">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </th>
                                             <th class="text-center sorting_asc column-title table-header-color">SPV單號
                                             </th>
@@ -3453,7 +3833,7 @@
                                     <tbody>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td><a class="" role="tab" id="headingOne2" data-toggle="collapse" data-parent="#accordion2"
                                                     href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne">
@@ -3602,7 +3982,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129002</td>
                                             <td>活動</td>
@@ -3622,7 +4002,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129003</td>
                                             <td>促代</td>
@@ -3642,7 +4022,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129004</td>
                                             <td>促代</td>
@@ -3662,7 +4042,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all2" class="flat">
+                                                <input type="checkbox" id="check-all2">
                                             </td>
                                             <td><a class="" role="tab" id="headingOne3" data-toggle="collapse" data-parent="#accordion3"
                                                     href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne">
@@ -3763,7 +4143,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129007</td>
                                             <td>促代</td>
@@ -3783,7 +4163,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129008</td>
                                             <td>促代</td>
@@ -3803,7 +4183,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129009</td>
                                             <td>促代</td>
@@ -3823,7 +4203,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129010</td>
                                             <td>促代</td>

@@ -756,13 +756,26 @@ define(['btModule'], function (btModule) {
             $scope.offerList = ['POS3RP 大雙網哈拉550月租費 -- RP', 'POS3RV 來電答鈴69超值包 -- RV'];
             $scope.definiteOffer = function () {
                     // $log.debug($scope.offerItem);
+                    // if ($scope.offerItem) {
+                    //     $('#Modal4').modal('hide');
+                    //     $timeout(function () {
+                    //         if ($scope.offerItem === $scope.offerList[0]) {
+                    //             $('#Modal5-1').modal('show');
+                    //         }
+                    //         if ($scope.offerItem === $scope.offerList[1]) {
+                    //             $('#Modal5-2').modal('show');
+                    //         }
+                    //         $scope.offerItem = '';
+                    //     }, 400);
+                    // }
+
                     if ($scope.offerItem) {
                         $('#Modal4').modal('hide');
                         $timeout(function () {
-                            if ($scope.offerItem === $scope.offerList[0]) {
+                            if ($scope.offerItem === "1") {
                                 $('#Modal5-1').modal('show');
                             }
-                            if ($scope.offerItem === $scope.offerList[1]) {
+                            if ($scope.offerItem === "2") {
                                 $('#Modal5-2').modal('show');
                             }
                             $scope.offerItem = '';
@@ -841,6 +854,7 @@ define(['btModule'], function (btModule) {
                 }
                 /* end */
 
+
             $scope.inquiry = function () {
                     $timeout(function () {
                         $('#Modal2-2').modal('hide');
@@ -869,6 +883,47 @@ define(['btModule'], function (btModule) {
 
 
 
+
+            $scope.openItem = function () {
+                    $timeout(function () {
+                        $('#Modal2-2').modal('hide');
+                        $('#Modal4').modal('show');
+                    }, 400);
+                }
+                /* end */
+
+
+
+            $scope.offerList = ['POS3RP 大雙網哈拉550月租費 -- RP', 'POS3RV 來電答鈴69超值包 -- RV'];
+            $scope.definiteOffer = function () {
+                    // $log.debug($scope.offerItem);
+                    // if ($scope.offerItem) {
+                    //     $('#Modal4').modal('hide');
+                    //     $timeout(function () {
+                    //         if ($scope.offerItem === $scope.offerList[0]) {
+                    //             $('#Modal5-1').modal('show');
+                    //         }
+                    //         if ($scope.offerItem === $scope.offerList[1]) {
+                    //             $('#Modal5-2').modal('show');
+                    //         }
+                    //         $scope.offerItem = '';
+                    //     }, 400);
+                    // }
+
+                    if ($scope.offerItem) {
+                        $('#Modal4').modal('hide');
+                        $timeout(function () {
+                            if ($scope.offerItem === "1") {
+                                $('#Modal5-1').modal('show');
+                            }
+                            if ($scope.offerItem === "2") {
+                                $('#Modal5-2').modal('show');
+                            }
+                            $scope.offerItem = '';
+                        }, 400);
+                    }
+                }
+                /* end */
 
         }
     ]);
