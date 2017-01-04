@@ -949,8 +949,8 @@
                     </div>
                     <div class="modal-body">
                         <div>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="aaa()">新增</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">查詢</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="addList()">新增</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="inquiry()">查詢</button>
                         </div>
                         <table class="table table-striped table-bordered">
                             <thead>
@@ -982,10 +982,10 @@
             </div>
         </div>
     </div>
-    <!-- end 活動類別編輯  -->
-    <!-- 3 活動類別查詢  -->
+    <!-- end 2 新活動類別編輯  -->
+    <!-- 3-2 活動類別查詢  -->
     <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="modal fullscreen-modal fade" id="Modal3" tabindex="-1" role="dialog">
+        <div class="modal fullscreen-modal fade" id="Modal3-2" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1085,7 +1085,7 @@
                                             </th>
                                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">停機可能率
                                             </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:60px;">ARPB
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">ARPB
                                             </th>
                                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">有效終止日
                                             </th>
@@ -1097,17 +1097,11 @@
                                             </th>
                                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">負責PM
                                             </th>
-                                            <!--<th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
-                                rowspan="1" colspan="1">修改
-                            </th>-->
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr role="row" ng-repeat="x in activitiesTableData track by $index">
-                                            <!--<td class="sorting_1 text-center" ng-click="selectItem(x)">-->
-                                            <!--<td class="sorting_1 text-center" >-->
                                             <td>
-                                                <!--<i class="fa fa-plus"></i>-->
                                                 <input type="checkbox" class="flat" name="table_records"> {{x.NO}}
                                             </td>
                                             <td ng-bind="x.gateType"></td>
@@ -1120,16 +1114,106 @@
                                             <td ng-bind="x.pmOwner"></td>
                                             <td ng-bind="x.fileEffectiveDate"></td>
                                             <td ng-bind="x.stateEffective"></td>
-                                            <td ng-bind="x.downtimeCanRate"></td>
-                                            <td ng-bind="x.arpb"></td>
-                                            <td ng-bind="x.expirationData"></td>
+                                            <td>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>高</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>低</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>低</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>無限制 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>高</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>A</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>0-999</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>0-999</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1000-1999</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>1000-1999 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>20000-1999999</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>099999</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>93</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>93</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>無合約</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>93 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>365</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>185</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td ng-bind="x.relationship"></td>
                                             <td ng-bind="x.species"></td>
                                             <td ng-bind="x.item"></td>
                                             <td ng-bind="x.pm"></td>
-                                            <!--<td class="text-center" ng-click="edit(x)">
-                                <i class="fa fa-pencil"></i>
-                            </td>-->
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1138,8 +1222,9 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">重新上架</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     </div>
                 </div>
             </div>

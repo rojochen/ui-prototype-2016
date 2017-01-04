@@ -50,6 +50,7 @@ define(['btModule'], function (btModule) {
                 },
                 "searching": false,
                 "scrollX": true,
+                "scrollY": true
 
             };
 
@@ -740,35 +741,35 @@ define(['btModule'], function (btModule) {
             }
 
             $scope.addItem = function () {
-                // $log.debug($scope.selectType);
-                if ($scope.selectType === '活動') {
-                    $('#Modal2-1').modal('show');
+                    // $log.debug($scope.selectType);
+                    if ($scope.selectType === '活動') {
+                        $('#Modal2-1').modal('show');
+                    }
+                    if ($scope.selectType === '促代') {
+                        $('#Modal4').modal('show');
+                    }
                 }
-                if ($scope.selectType === '促代') {
-                    $('#Modal4').modal('show');
-                }
-            }
-            /*end 問卷-查詢*/
+                /*end 問卷-查詢*/
 
 
             /* begin */
             $scope.offerList = ['POS3RP 大雙網哈拉550月租費 -- RP', 'POS3RV 來電答鈴69超值包 -- RV'];
             $scope.definiteOffer = function () {
-                // $log.debug($scope.offerItem);
-                if ($scope.offerItem) {
-                    $('#Modal4').modal('hide');
-                    $timeout(function () {
-                        if ($scope.offerItem === $scope.offerList[0]) {
-                            $('#Modal5-1').modal('show');
-                        }
-                        if ($scope.offerItem === $scope.offerList[1]) {
-                            $('#Modal5-2').modal('show');
-                        }
-                        $scope.offerItem = '';
-                    }, 400);
+                    // $log.debug($scope.offerItem);
+                    if ($scope.offerItem) {
+                        $('#Modal4').modal('hide');
+                        $timeout(function () {
+                            if ($scope.offerItem === $scope.offerList[0]) {
+                                $('#Modal5-1').modal('show');
+                            }
+                            if ($scope.offerItem === $scope.offerList[1]) {
+                                $('#Modal5-2').modal('show');
+                            }
+                            $scope.offerItem = '';
+                        }, 400);
+                    }
                 }
-            }
-            /* end */
+                /* end */
 
 
             $scope.openbuy = function () {
@@ -811,38 +812,58 @@ define(['btModule'], function (btModule) {
             $scope.btnShow1 = true;
             $scope.btnShow2 = false;
             $scope.advancedSearch = function () {
-                if ($scope.advancedControl) {
-                    $scope.advancedControl = false;
-                    $scope.btnShow1 = true;
-                    $scope.btnShow2 = false;
-                } else {
-                    $scope.advancedControl = true;
-                    $scope.btnShow1 = false;
-                    $scope.btnShow2 = true;
+                    if ($scope.advancedControl) {
+                        $scope.advancedControl = false;
+                        $scope.btnShow1 = true;
+                        $scope.btnShow2 = false;
+                    } else {
+                        $scope.advancedControl = true;
+                        $scope.btnShow1 = false;
+                        $scope.btnShow2 = true;
+                    }
                 }
-            }
-            /* end */
+                /* end */
 
             /* begin */
             $scope.tableControl = false;
             $scope.showTable = function () {
-                $scope.tableControl = true;
-            }
-            /* end */
+                    $scope.tableControl = true;
+                }
+                /* end */
 
 
 
-            $scope.aaa = function () {
+            $scope.addList = function () {
+                    $timeout(function () {
+                        $('#Modal2-2').modal('hide');
+                        $('#Modal3-1').modal('show');
+                    }, 400);
+                }
+                /* end */
 
-                // $('#Modal3-1').modal('show');
-                $timeout(function () {
-                    $('#Modal2-2').modal('hide');
-                    $('#Modal3-1').modal('show');
+            $scope.inquiry = function () {
+                    $timeout(function () {
+                        $('#Modal2-2').modal('hide');
+                        $('#Modal3-2').modal('show');
+                    }, 400);
+                }
+                /* end */
 
 
-                }, 400);
-            }
-            /* end */
+            $scope.downtimeCanRateData = [{
+                "01": "高",
+                "02": "學生方案",
+                "activityCod": "D3600",
+                "dateRange": "2016/07/01-2017/03/31"
+            }, {
+                "type": "促案",
+                "name": "小資方案",
+                "activityCode": "D3611",
+                "dateRange": "2016/09/01-2017/12/31"
+            }];
+
+
+
 
         }
     ]);
