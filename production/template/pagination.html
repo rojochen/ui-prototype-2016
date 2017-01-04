@@ -21,7 +21,7 @@
 	<div class="row">
 		<div class="col-md-12 col-sm-12 col-xs-12">
 			<bt-portlet titlename="'分頁設計'" refreshbtn="true" switchbtn="true" selectbtn="true" closebtn="true">
-				<div class="table-responsive">
+				<!--<div class="table-responsive">
 					<table class="table table-striped jambo_table bulk_action">
 						<thead>
 							<tr class="headings">
@@ -46,10 +46,17 @@
 							</tr>
 						</tbody>
 					</table>
+				</div>-->
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="pull-right">
+						<div bt-pagination info="tableInfo" page-size="2" page-count="4"></div>
+					</div>
 				</div>
-				<div class="pull-right">
-					<div bt-pagination info="tableInfo" page-size="4" page-count="3"></div>
-				</div>
+				<!--<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="pull-right">
+						<div bt-pagination info="tableInfo" page-size="5" page-count="3"></div>
+					</div>
+				</div>-->
 			</bt-portlet>
 		</div>
 	</div>

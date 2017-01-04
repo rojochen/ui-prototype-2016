@@ -241,6 +241,9 @@ table.countries_list {
     }
   }
 }
+.pagination>li>a:focus{
+  background-color: #fff;
+}
 
 .paging_full_numbers a.paginate_active {
   background-color: rgba(38, 185, 154, 0.59) !important;
