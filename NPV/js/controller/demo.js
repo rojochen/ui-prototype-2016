@@ -50,6 +50,7 @@ define(['btModule'], function (btModule) {
                 },
                 "searching": false,
                 "scrollX": true,
+                "scrollY": true
 
             };
 
@@ -755,13 +756,26 @@ define(['btModule'], function (btModule) {
             $scope.offerList = ['POS3RP 大雙網哈拉550月租費 -- RP', 'POS3RV 來電答鈴69超值包 -- RV'];
             $scope.definiteOffer = function () {
                     // $log.debug($scope.offerItem);
+                    // if ($scope.offerItem) {
+                    //     $('#Modal4').modal('hide');
+                    //     $timeout(function () {
+                    //         if ($scope.offerItem === $scope.offerList[0]) {
+                    //             $('#Modal5-1').modal('show');
+                    //         }
+                    //         if ($scope.offerItem === $scope.offerList[1]) {
+                    //             $('#Modal5-2').modal('show');
+                    //         }
+                    //         $scope.offerItem = '';
+                    //     }, 400);
+                    // }
+
                     if ($scope.offerItem) {
                         $('#Modal4').modal('hide');
                         $timeout(function () {
-                            if ($scope.offerItem === $scope.offerList[0]) {
+                            if ($scope.offerItem === "1") {
                                 $('#Modal5-1').modal('show');
                             }
-                            if ($scope.offerItem === $scope.offerList[1]) {
+                            if ($scope.offerItem === "2") {
                                 $('#Modal5-2').modal('show');
                             }
                             $scope.offerItem = '';
@@ -830,6 +844,86 @@ define(['btModule'], function (btModule) {
                 }
                 /* end */
 
+
+
+            $scope.addList = function () {
+                    $timeout(function () {
+                        $('#Modal2-2').modal('hide');
+                        $('#Modal3-1').modal('show');
+                    }, 400);
+                }
+                /* end */
+
+
+            $scope.inquiry = function () {
+                    $timeout(function () {
+                        $('#Modal2-2').modal('hide');
+                        $('#Modal3-2').modal('show');
+                    }, 400);
+                }
+                /* end */
+
+
+            $scope.downtimeCanRateData = [{
+                "01": "高",
+                "02": "學生方案",
+                "activityCod": "D3600",
+                "dateRange": "2016/07/01-2017/03/31"
+            }, {
+                "type": "促案",
+                "name": "小資方案",
+                "activityCode": "D3611",
+                "dateRange": "2016/09/01-2017/12/31"
+            }];
+
+            $element.find('.flat').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            });
+
+
+
+
+            $scope.openItem = function () {
+                    $timeout(function () {
+                        $('#Modal2-2').modal('hide');
+                        $('#Modal4').modal('show');
+                    }, 400);
+                }
+                /* end */
+
+
+
+            $scope.offerList = ['POS3RP 大雙網哈拉550月租費 -- RP', 'POS3RV 來電答鈴69超值包 -- RV'];
+            $scope.definiteOffer = function () {
+                    // $log.debug($scope.offerItem);
+                    // if ($scope.offerItem) {
+                    //     $('#Modal4').modal('hide');
+                    //     $timeout(function () {
+                    //         if ($scope.offerItem === $scope.offerList[0]) {
+                    //             $('#Modal5-1').modal('show');
+                    //         }
+                    //         if ($scope.offerItem === $scope.offerList[1]) {
+                    //             $('#Modal5-2').modal('show');
+                    //         }
+                    //         $scope.offerItem = '';
+                    //     }, 400);
+                    // }
+
+                    if ($scope.offerItem) {
+                        $('#Modal4').modal('hide');
+                        $timeout(function () {
+                            if ($scope.offerItem === "1") {
+                                $('#Modal5-1').modal('show');
+                            }
+                            if ($scope.offerItem === "2") {
+                                $('#Modal5-2').modal('show');
+                            }
+                            $scope.offerItem = '';
+                        }, 400);
+                    }
+                }
+                /* end */
 
         }
     ]);

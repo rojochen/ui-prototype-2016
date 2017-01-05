@@ -3,7 +3,7 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>問卷-查詢</h2>
+                <h2>促代維護-問卷</h2>
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -11,69 +11,38 @@
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
-                <br>
-                <!--<form class="form-horizontal form-label-left ">
-					<div class="form-group" ng-show="showAdd">
-						<div class="col-md-12 col-sm-12 col-xs-12 text-right">
-							<button type="button" class="btn btn-primary ng-scope" ng-click="addItem()">我要新增</button>
-							<button type="button" class="btn btn-primary ng-scope" ng-show="showActivities" ng-click="changeSearch()">改為關鍵字查詢</button>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="control-label col-md-2 col-sm-2 col-xs-12">選擇類型</label>
-						<div class="col-md-10 col-sm-10 col-xs-12">
-							<select class="select2_single form-control" style="width:100%" id="selectType" tabindex="-1" ng-options="x for x in selectTypeItem"
-											ng-model="selectType">
-                          <option></option>
-                          <option value="{{x}}" ng-bind="x"></option>
-                        </select>
-						</div>
-					</div>
-					<div class="form-group" ng-show="showSearch">
-						<label class="control-label col-md-2 col-sm-2 col-xs-12" for="saerchKeyInput">查詢關鍵字</label>
-						<div class="col-md-7 col-sm-7 col-xs-12">
-							<input type="text" id="saerchKeyInput" required="required" class="form-control col-md-7 col-xs-12" ng-model="saerchKeyInput">
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-12">
-							<button type="button" class="btn btn-primary ng-scope" ng-click="saerch()">搜尋</button>
-							<button type="button" class="btn btn-primary ng-scope" ng-click="saerchAdvanced()">進階查詢</button>
-						</div>
-					</div>-->
-                <!--</form>-->
                 <form class="form-horizontal form-label-left">
                     <div class="form-group">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
-                                <div class="x_title">一、活動類別維護
+                                <!--<div class="x_title">一、活動類別維護
                                     <span style="padding-left: 15px;">
                                              <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal2">新增</button>
                                             <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#Modal3">查詢</button>
                                         </span>
                                 </div>
                                 <div class="x_content">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped jambo_table">
-                                            <thead>
-                                                <tr class="headings">
-                                                    <th class="text-center column-title">NO</th>
-                                                    <th class="text-center column-title">活動代碼</th>
-                                                    <th class="text-center column-title">活動名稱</th>
-                                                    <th class="text-center column-title">編輯</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="even pointer">
-                                                    <td class="text-center">1</td>
-                                                    <td class="text-center">L0003</td>
-                                                    <td class="">3轉4_iphone SE 絕配續約專案</td>
-                                                    <td class="text-center">
-                                                        <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i class="fa fa-pencil"></i>修改</a>
-                                                        <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i class="glyphicon glyphicon-remove"></i> 刪除 </a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                    <table class="table table-striped jambo_table">
+                                        <thead>
+                                            <tr class="headings">
+                                                <th>NO</th>
+                                                <th class="text-center column-title">活動代碼</th>
+                                                <th class="text-center column-title">活動名稱</th>
+                                                <th class="text-center column-title">編輯</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="even pointer">
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">L0003</td>
+                                                <td class="">3轉4_iphone SE 絕配續約專案</td>
+                                                <td class="text-center">
+                                                    <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i class="fa fa-pencil"></i>修改</a>
+                                                    <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i class="glyphicon glyphicon-remove"></i> 刪除 </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                                 <hr>
                                 <div class="x_title">二、促代專案維護
@@ -139,11 +108,115 @@
                                             </tbody>
                                         </table>
                                     </div>
+                                </div>-->
+                                <div class="x_title">一、促代設計
+                                    <span style="padding-left: 15px;">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#Modal2-2">新增單一促案</button>
+                                         <button type="button" class="btn btn-info " data-toggle="modal" data-target="#Modal4-2">查詢</button>
+                                    </span>
+                                </div>
+                                <div class="x_content">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped jambo_table table-bordered">
+                                            <thead>
+                                                <tr class="headings">
+                                                    <th>NO</th>
+                                                    <th>活動類別</th>
+                                                    <th>促代代碼</th>
+                                                    <th>促代名稱</th>
+                                                    <th>編輯</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr >
+                                                    <td>1</td>
+                                                    <td data-toggle="modal" data-target="#Modal3-1">L001 學生專案</td>
+                                                    <td>S001</td>
+                                                    <td>遠傳e書城149限12</td>
+                                                    <td >
+                                                        <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i class="fa fa-pencil"></i> 活動類別修改</a>
+                                                        <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i class="glyphicon glyphicon-remove"></i> 促代修改/移除</a>
+                                                    </td>
+                                                </tr>
+                                                <tr >
+                                                    <td >2</td>
+                                                    <td >L002 長壽專案</td>
+                                                    <td>
+                                                        <a id="headingOne1" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1" aria-controls="collapseOne">BOO1
+                                                        </a>
+                                                    </td>
+                                                    <td>行動3G續約專案</td>
+                                                    <td >
+                                                        <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
+                                                                    class="fa fa-pencil"></i> 活動類別修改 </a>
+                                                        <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
+                                                                    class="glyphicon glyphicon-remove"></i> 促代修改/移除 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr >
+                                                    <!--<td colspan="5" style="padding-left: 60px; padding-top: 0px; padding-bottom: 0px;">
+                                                        <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                            ① 主要VAS服務合約：155899-遠傳e書城149<br> ② 合約期限：12個月
+                                                        </div>
+                                                    </td>-->
+
+                                                    <td colspan="5" style="padding-left: 42px; padding-top: 0px; padding-bottom: 0px;">
+                                                       <div class="container-fluid"  id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+	                                                    <div class="row">
+		                                                    <div class="col-md-10"> 
+			                                                    <table class="table table-bordered">
+				                                                    <thead>
+					                                                    <tr>
+                                                                            <th>活動類別</th>
+                                                                            <th>促代代碼</th>
+                                                                            <th>促代名稱</th>
+					                                                    </tr>
+				                                                    </thead>
+				                                                    <tbody>
+					                                                    <tr>
+                                                                            <td>L002 長壽專案</td>
+                                                                            <td>S010</td>
+                                                                            <td>續約升級1~249手機搭765方案</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>L002 長壽專案</td>
+                                                                            <td>S015</td>
+                                                                            <td>續約升級1~249i-mode手機搭765方案</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>L002 長壽專案</td>
+                                                                            <td>S020</td>
+                                                                            <td>續約升級250~749手機開獎168方案</td>
+                                                                        </tr>
+				                                                 </tbody>
+			                                                    </table>
+		                                                    </div>
+	                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr >
+                                                    <td>2</td>
+                                                     <td >L003 學生專案</td>
+                                                    <td>B001</td>
+                                                    <td >行動3G續約專案</td>
+                                                    <td >
+                                                        <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
+                                                                    class="fa fa-pencil"></i> 活動類別修改  </a>
+                                                        <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
+                                                                    class="glyphicon glyphicon-remove"></i> 促代修改/移除 </a>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                                 <div class="clearfix"></div>
                                 <div class="text-center pull-right">
                                     <button type="button" class="btn btn-primary" ng-click="openbuy()">確定</button>
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalBoundle">Boundle Promotion-編輯</button>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -152,136 +225,7 @@
             </div>
         </div>
     </div>
-    <!-- Boundle Promotion -->
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="modal fullscreen-modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="ModalBoundle">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Boundle Promotion-編輯</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form class="form-horizontal" role="form">
-                            <div class="form-group">
-                                <label class="col-md-1 control-label text-right">促代名稱:</label>
-                                <div class="col-md-6">
-                                    <input class="form-control" type="text">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-1 control-label text-right">合約類型:</label>
-                                <div class="col-md-6">
-                                    <select class="form-control">
-								<option value="等級 1">等級 1</option>
-								<option value="等級 2">等級 2</option>
-								<option value="等級 3">等級 3</option>
-								<option value="等級 4">等級 4</option>
-								</select>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h2>折扣優惠設定</h2>
-                                <ul class="nav navbar-right panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                    </li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="x_content">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <div class="col-md-3">項目</div>
-                                            <div class="col-md-9">內容</div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="col-md-12 listdistance">
-                                                <div class="col-md-3">指定折扣項目</div>
-                                                <div class="col-md-9">
-                                                    <div class="form-group">
-                                                        <div class="container-fluid">
-                                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
-                                                            <div class="col-md-2" style="margin-top:30px">
-                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
-                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
-                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
-                                                            </div>
-                                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3"></div>
-                                            </div>
-                                            <div class="col-md-12 listdistance">
-                                                <div class="col-md-3">Happy GO 贈點</div>
-                                                <div class="col-md-9">
-                                                    <div class="form-group">
-                                                        <div class="container-fluid">
-                                                            <input class="form-control input-sm" type="text" placeholder="10" style="width:100px;">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end 折扣優惠設定-->
-                        <!--IA/備援單-->
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h2>IA/備援單</h2>
-                                <ul class="nav navbar-right panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                    </li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="x_content">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="form-group-sm">
-                                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                                            <select class="form-control input-sm">
-															<option>請選擇</option>
-															<option>選項 1</option>
-															<option>選項 2</option>
-															<option>選項 3</option>
-															<option>選項 4</option>
-														</select>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <button type="button" class="btn btn-default btn-sm" style="color: #73879c">套用個人A範本</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end IA/備援單-->
-                    </div>
-                    <div class="modal-footer">
-                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
-                        <button type="button" class="btn btn-default" data-dismiss="modal">確定</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end Boundle Promotion -->
+    
     <!-- 2 活動類別編輯  -->
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal fade" id="Modal2" tabindex="-1" role="dialog">
@@ -291,7 +235,7 @@
                         <button type="button" class="close" data-dismiss="modal"><span
                                 aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                         </button>
-                        <h4 class="modal-title" id="myModalLabel">活動類別編輯-MPM</h4>
+                        <h4 class="modal-title">活動類別編輯-MPM</h4>
                     </div>
                     <div class="modal-body">
                         <table class="table table-striped jambo_table">
@@ -394,9 +338,7 @@
                                             <label class="control-label col-md-4 col-sm-4 col-xs-12">是否使用名單</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <div class="checkbox">
-                                                    <label><input type="checkbox"
-                                                                  class="flat"
-                                                                  checked="checked">是
+                                                    <label><input type="checkbox" checked="checked">是
                                                     </label>
                                                 </div>
                                             </div>
@@ -415,7 +357,7 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content"><br>
-                                <form data-parsley-validate class="form-horizontal form-label-left">
+                                <form class="form-horizontal form-label-left">
                                     <div class="form-group">
                                         <label class="col-md-3 col-sm-3 col-xs-12 text-center">項目</label>
                                         <label class="col-md-6 col-sm-6 col-xs-12 text-center">選項</label>
@@ -452,7 +394,7 @@
                                                     <input type="radio" checked="" value="option1" id=""
                                                            name="optionsRadios"> 預繳
                                                 </label>
-                                                <select class="">
+                                                <select >
                                                     <option>1</option>
                                                     <option>2</option>
                                                 </select>
@@ -523,7 +465,7 @@
                                                         ng-model="select3">
                                                     </select>
                                                 </div>
-                                                <div class="col-md-2  col-sm-1 col-xs-12">
+                                                <div class="col-md-2  col-sm-1 col-xs-12" style="margin-top:30px">
                                                     <button type="button" id="add_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-forward"></i>
                                                     </button>
@@ -551,19 +493,19 @@
                                             <div class="radio">
                                                 <label>
                                                     <input type="radio" checked="" value="option1" id=""
-                                                           name="optionsRadios3"> IA
+                                                           name="optionsRadios4"> IA
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
                                                     <input type="radio" value="option2" id=""
-                                                           name="optionsRadios3"> Fax Server
+                                                           name="optionsRadios4" checked> Fax Server
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
                                                     <input type="radio" value="option3" id=""
-                                                           name="optionsRadios3"> ALL
+                                                           name="optionsRadios4"> ALL
                                                 </label>
                                             </div>
                                         </div>
@@ -638,19 +580,19 @@
                                         <div class="col-md-9 col-sm-9 col-xs-12">
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" value="option1" id=""
+                                                    <input type="radio" value="option1" 
                                                            name="optionsRadios5"> Voice類促代
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" value="option2" id=""
+                                                    <input type="radio" value="option2"
                                                            name="optionsRadios5"> Data類促代
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" value="option3" id=""
+                                                    <input type="radio" value="option3" 
                                                            name="optionsRadios5"> Non SIM類促代
                                                 </label>
                                             </div>
@@ -661,11 +603,11 @@
                                         <div class="col-md-9 col-sm-9 col-xs-12">
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" value="option1" id=""
+                                                    <input type="radio" value="option1" 
                                                            name="optionsRadios6"> 是
                                                 </label>
                                                 <label>
-                                                    <input type="radio" value="option1" id=""
+                                                    <input type="radio" value="option1" 
                                                            name="optionsRadios6"> 否
                                                 </label>
                                             </div>
@@ -674,11 +616,11 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">促代補貼</label>
                                         <div class="col-md-9 col-sm-9 col-xs-12">
-                                            <select class="">
+                                            <select >
                                                 <option>一般</option>
                                                 <option>選項2</option>
                                             </select> 可提前
-                                            <input type="text" required="required" class=""> 日續約
+                                            <input type="text" required="required"> 日續約
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -966,16 +908,65 @@
         </div>
     </div>
     <!-- end 活動類別編輯  -->
-    <!-- 3 活動類別查詢  -->
+
+    <!-- 2  新活動類別編輯  MPM -->
     <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="modal fullscreen-modal fade" id="Modal3" tabindex="-1" role="dialog">
+        <div class="modal fullscreen-modal fade" id="Modal2-2" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span
                                 aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                         </button>
-                        <h4 class="modal-title" id="myModalLabel">活動類別查詢-MPM</h4>
+                        <h4 class="modal-title">活動類別編輯-MPM</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12">活動類別</label>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="addList()">新增</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="inquiry()">查詢</button>
+                        </div>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="table-header-color">NO</th>
+                                    <th class="table-header-color">活動代碼</th>
+                                    <th class="table-header-color">活動名稱</th>
+                                    <th class="table-header-color">編輯</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>L0003</td>
+                                    <td>3轉4_iphone SE 絕配續約專案</td>
+                                    <td>
+                                        <button type="button" class="btn  btn-info btn-xs"><i class="fa fa-pencil"></i> 修改</button>
+                                        <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal" ata-toggle="modal" data-target="#Modal3-1"><i class="glyphicon glyphicon-remove"></i> 新增</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" ng-click="openItem()">確定</button>
+                        <button type="button" class="btn btn-default">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end 2 新活動類別編輯  -->
+    <!-- 3-2 活動類別查詢  -->
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="modal fullscreen-modal fade" id="Modal3-2" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span
+                                aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title">活動類別查詢-MPM</h4>
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal">
@@ -1044,7 +1035,7 @@
                                         <tr>
                                             <th class=" text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending"
                                                 style="width:50px;">
-                                                <input type="checkbox" class="flat" name="table_records"> NO.
+                                                <input type="checkbox" name="table_records"> NO.
                                             </th>
                                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:60px;">門號類型
                                             </th>
@@ -1068,7 +1059,7 @@
                                             </th>
                                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">停機可能率
                                             </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:60px;">ARPB
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">ARPB
                                             </th>
                                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">有效終止日
                                             </th>
@@ -1080,18 +1071,12 @@
                                             </th>
                                             <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">負責PM
                                             </th>
-                                            <!--<th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable"
-                                rowspan="1" colspan="1">修改
-                            </th>-->
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr role="row" ng-repeat="x in activitiesTableData track by $index">
-                                            <!--<td class="sorting_1 text-center" ng-click="selectItem(x)">-->
-                                            <!--<td class="sorting_1 text-center" >-->
                                             <td>
-                                                <!--<i class="fa fa-plus"></i>-->
-                                                <input type="checkbox" class="flat" name="table_records"> {{x.NO}}
+                                                <input type="checkbox" name="table_records"> {{x.NO}}
                                             </td>
                                             <td ng-bind="x.gateType"></td>
                                             <td ng-bind="x.sort"></td>
@@ -1103,16 +1088,106 @@
                                             <td ng-bind="x.pmOwner"></td>
                                             <td ng-bind="x.fileEffectiveDate"></td>
                                             <td ng-bind="x.stateEffective"></td>
-                                            <td ng-bind="x.downtimeCanRate"></td>
-                                            <td ng-bind="x.arpb"></td>
-                                            <td ng-bind="x.expirationData"></td>
+                                            <td>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>高</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>低</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>低</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>無限制 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>高</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>A</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>0-999</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>0-999</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1000-1999</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>1000-1999 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>20000-1999999</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>099999</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>93</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>93</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>無合約</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>93 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>365</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>185</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td ng-bind="x.relationship"></td>
                                             <td ng-bind="x.species"></td>
                                             <td ng-bind="x.item"></td>
                                             <td ng-bind="x.pm"></td>
-                                            <!--<td class="text-center" ng-click="edit(x)">
-                                <i class="fa fa-pencil"></i>
-                            </td>-->
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1121,14 +1196,682 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">重新上架</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- end 活動類別查詢  -->
+    <!-- 3-1 活動類別明細-MPM  新 -->
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="modal fullscreen-modal fade" id="Modal3-1" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span
+                                aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title">活動類別明細-MPM </h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal form-label-left">
+                            <table class="table table-striped jambo_table">
+                                <thead>
+                                    <tr>
+                                        <th>SR NO</th>
+                                        <th>SPV NO</th>
+                                        <th>OFFER ID</th>
+                                        <th>上架次數</th>
+                                        <th>上一版本編號</th>
+                                        <th>促代群組</th>
+                                        <th>重新上架備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td><input class="form-control input-sm" type="text" placeholder="N/A" disabled=""></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--活動設定-->
+                            <div class="x_panel panelPadding">
+                                <div class="x_title panelTitle">
+                                    <ul class="nav pull-left">
+                                        <li><a class="collapse-link panelIcon"><i class="fa fa-minus"></i></a>
+                                        </li>
+                                    </ul>
+                                    <h2>活動設定</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <form class="form-horizontal">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">項目</label>
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">內容</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">項目</label>
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">內容</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">門號類型</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <select class="form-control">
+                                                    <option>FET1</option>
+                                                    <option>FET2</option>
+                                                    <option>FET3</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">種類</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <select class="form-control">
+                                                    <option>續約1</option>
+                                                    <option>續約2</option>
+                                                    <option>續約3</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">代碼</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <input type="text" required="required" readonly="readonly" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">活動類別名稱</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <input type="text" required="required" class="form-control col-md-7 col-xs-12" placeholder="續約">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">活動類別期間</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <div class="input-prepend input-group">
+                                                        <span class="add-on input-group-addon"><i
+                                                class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                                        <input type="text" name="reservation" class="form-control" value="12/24/2016 - 12/26/2016" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">活動群組</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <input type="text" required="required" readonly="readonly" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">是否使用名單</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox" checked="checked">是
+                                                    </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--end 活動設定-->
+                            <!--促銷產品類型-->
+                            <div class="x_panel panelPadding">
+                                <div class="x_title panelTitle">
+                                    <ul class="nav pull-left">
+                                        <li><a class="collapse-link panelIcon"><i class="fa fa-minus"></i></a>
+                                        </li>
+                                    </ul>
+                                    <h2>促銷產品類型</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="col-md-3 col-sm-3 col-xs-12 text-center">項目</label>
+                                            <label class="col-md-6 col-sm-6 col-xs-12 text-center">選項</label>
+                                            <label class="col-md-3 col-sm-3 col-xs-12 text-center">內容</label>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">促代類型</label>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <select class="form-control">
+                                                <option>選項1</option>
+                                                <option>選項2</option>
+                                                <option>選項3</option>
+                                            </select>
+                                            </div>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">保證金</label>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <select class="form-control">
+                                                <option>選項1</option>
+                                                <option>選項2</option>
+                                                <option>選項3</option>
+                                            </select>
+                                            </div>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">設定費 預繳</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="radio">
+                                                    <label><input type="radio"  value="option1" name="optionsRadios"> 預繳
+                                                </label>
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" value="option2" 
+                                                           name="optionsRadios" checked> 無預繳
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">VAS服務合約(無違約金之VAS)</label>
+                                            <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
+                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText">
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2" style="margin-top:30px">
+                                                    <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-forward"></i>
+                                                    </button>
+                                                    <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    </button>
+                                                    <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    </button>
+                                                    <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-backward"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
+                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">是否可換約</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label>
+                                                    <input type="radio" checked value="option1" 
+                                                           name="optionsRadios2"> 是
+                                                </label>
+                                                    <label>
+                                                    <input type="radio" value="option2" 
+                                                           name="optionsRadios2"> 否
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 col-sm-3 col-xs-12 text-center">項目</label>
+                                            <label class="col-md-9 col-sm-9 col-xs-12 text-center">內容
+                                            </label>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">適用對象</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-md-5  col-sm-4  col-xs-12">
+                                                        <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText3">
+                                                        <select id="select3" class="form-control" size="8" multiple="multiple" ng-options="item for item in names2 | filter:searchText3"
+                                                            ng-model="select3">
+                                                    </select>
+                                                    </div>
+                                                    <div class="col-md-2  col-sm-1 col-xs-12" style="margin-top:30px">
+                                                        <button type="button" id="add_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-forward"></i>
+                                                    </button>
+                                                        <button type="button" id="add1" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    </button>
+                                                        <button type="button" id="remove1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    </button>
+                                                        <button type="button" id="remove_all1" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-backward"></i>
+                                                    </button>
+                                                    </div>
+                                                    <div class="col-md-5 col-sm-4 col-xs-12">
+                                                        <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText4">
+                                                        <select id="select4" class="form-control" size="8" multiple="multiple" ng-options="item for item in names3 | filter:searchText4"
+                                                            ng-model="select4">
+                                                    </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">啟用系統</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <div class="radio">
+                                                        <label>
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios9"> IA
+                                                </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                    <input type="radio" value="option2" 
+                                                           name="optionsRadios8" checked> Fax Server
+                                                </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                    <input type="radio" value="option3" 
+                                                           name="optionsRadios8"> ALL
+                                                </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">適用通路</label>
+                                                <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                                    <div class="col-md-5">
+                                                        <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
+                                                        <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText">
+                                                    </select>
+                                                    </div>
+                                                    <div class="col-md-2" style="margin-top:30px">
+                                                        <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-forward"></i>
+                                                    </button>
+                                                        <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i>
+                                                    </button>
+                                                        <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    </button>
+                                                        <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                        <i class="glyphicon glyphicon-backward"></i>
+                                                    </button>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
+                                                        <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1">
+                                                    </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">促發活動類型</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <div class="radio">
+                                                        <label>
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios5"> Voice類促代
+                                                </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                    <input type="radio" value="option2" 
+                                                           name="optionsRadios5" checked> Data類促代
+                                                </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                    <input type="radio" value="option3"
+                                                           name="optionsRadios5">Non SIM類促代
+                                                </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">禮品類促代</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <div class="radio">
+                                                        <label>
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios6">是
+                                                </label>
+                                                        <label>
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios6" checked>否
+                                                </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">促代補貼</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <select class="">
+                                                <option>一般</option>
+                                                <option>選項2</option>
+                                            </select> 可提前
+                                                    <input type="text" required="required">日續約
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">PM授權續約</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <div class="radio">
+                                                        <label>
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios7"> 是
+                                                </label>
+                                                        <label>
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios7" checked> 否
+                                                </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">SA回收</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <div class="radio">
+                                                        <label>
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios8" checked> 需回收
+                                                </label>
+                                                        <label>
+                                                    <input type="radio" value="option1" 
+                                                           name="optionsRadios8"> 不需回收
+                                                </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">兌換卷換成手機貼紙方案</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                    <input type="checkbox" value=""> 需特定Sticker回收
+                                                </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>需Coupon回收
+                                                    <label>
+                                                        <input type="radio" value="option1" 
+                                                               name="optionsRadios9"> 有P
+                                                    </label>
+                                                        <label>
+                                                        <input type="radio" value="option1" 
+                                                               name="optionsRadios9"> 無P
+                                                    </label>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                    <input type="checkbox" checked> 無
+                                                </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--end 促銷產品類型-->
+                            <!--活動條件設定-->
+                            <div class="x_panel panelPadding">
+                                <div class="x_title panelTitle">
+                                    <ul class="nav pull-left">
+                                        <li><a class="collapse-link panelIcon"><i class="fa fa-minus"></i></a>
+                                        </li>
+                                    </ul>
+                                    <h2>活動條件設定</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">活動條件預設</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <select class="form-control col-md-3 col-sm-3 col-xs-12" style="width: 250px;">
+                                                <option>請選擇</option>
+                                                <option>選項 1</option>
+                                                <option>選項 2</option>
+                                                <option>選項 3</option>
+                                                <option>選項 4</option>
+                                            </select>
+                                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                                    <button type="button" class="btn btn-default" style="color: #73879c">
+                                                    篩選
+                                                </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="checkbox col-md-offset-3 col-sm-offset-3 col-md-9 col-sm-9 col-xs-12" style="padding-top: 0px;">
+                                                <label>
+                                                <input type="checkbox" value=""> 資費價差與指定資費
+                                            </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">適用範本</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <select class="form-control col-md-3 col-sm-3 col-xs-12" style="width: 250px;">
+                                                <option>請選擇</option>
+                                                <option>選項 1</option>
+                                                <option>選項 2</option>
+                                                <option>選項 3</option>
+                                                <option>選項 4</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <div class="col-md-11 col-sm-11">
+                                                <table class="table table-striped table-bordered dataTable no-footer">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="60px" class=" text-center table-header-color table-header-color" style="width: 100px;">ARPB
+                                                            </th>
+                                                            <th width="60px" class=" text-center table-header-color table-header-color" style="width: 100px;">停機可能率
+                                                            </th>
+                                                            <th width="60px" class=" text-center table-header-color table-header-color" style="width: 100px;">可提前續約日
+                                                            </th>
+                                                            <th class=" text-center table-header-color table-header-color" style="width: 320px;">條件
+                                                            </th>
+                                                            <th class=" text-center table-header-color table-header-color" style="width: 50px;"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <select class="form-control input-sm">
+                                                            <option>1-249</option>
+                                                            <option>選項 1</option>
+                                                            <option>選項 2</option>
+                                                        </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control input-sm">
+                                                            <option>無限制</option>
+                                                            <option>選項 1</option>
+                                                            <option>選項 2</option>
+                                                        </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control input-sm">
+                                                            <option>365</option>
+                                                            <option>選項 1</option>
+                                                            <option>選項 2</option>
+                                                        </select>
+                                                            </td>
+                                                            <td>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-default" style="color: #73879c;">
+                                                            ...
+                                                        </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-1 col-sm-1">
+                                                <button type="button" class="btn btn-default" style="color: #73879c; margin-top: 54px;">
+                                                新增
+                                            </button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-11 col-sm-11">
+                                                <table class="table table-striped table-bordered dataTable no-footer">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="107px" class="sorting_asc text-center table-header-color table-header-color">
+                                                                ARPB
+                                                            </th>
+                                                            <th width="107px" class="sorting text-center table-header-color table-header-color">
+                                                                停機可能率
+                                                            </th>
+                                                            <th width="107px" class="sorting text-center table-header-color table-header-color">
+                                                                可提前續約日
+                                                            </th>
+                                                            <th class="sorting text-center table-header-color table-header-color">
+                                                                條件
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--end 活動條件設定-->
+                            <!--申請條件設定-->
+                            <div class="x_panel panelPadding">
+                                <div class="x_title panelTitle">
+                                    <ul class="nav pull-left">
+                                        <li><a class="collapse-link panelIcon"><i class="fa fa-minus"></i></a>
+                                        </li>
+                                    </ul>
+                                    <h2>申辦條件設定(非必填)</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">新增或排除條件</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label><input type="radio" checked value="option1" name="optionsRadios2"> 僅限申辦(新增) <span class="glyphicon glyphicon-question-sign"></span></label>
+                                                    <label><input type="radio" value="option2" name="optionsRadios2"> 不可申辦(排除)<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">活動群組/類別</label>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <select class="form-control">
+                                                    <option>活動群組</option>
+                                                    <option>選項2</option>
+                                                    <option>選項3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">活動群組</label>
+                                            <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
+                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText"></select>
+                                                </div>
+                                                <div class="col-md-2" style="margin-top:30px">
+                                                    <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-forward"></i></button>
+                                                    <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                                                    <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                                                    <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
+                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">IA/備援單</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="radio">
+                                                    <label><input type="radio" checked value="option1" name="optionsRadios2"> 手機約</label>
+                                                    <label><input type="radio" value="option2" name="optionsRadios2"> 月租通話約</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                                    <div class="row">
+                                                        <select class="form-control">
+                                                            <option>請選擇</option>
+                                                            <option>選項</option>
+                                                            <option>選項2</option>
+                                                            <option>選項3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button type="button" class="btn btn-default" style="color: #73879c">套用個人A範本</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--end 申請條件設定-->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end 3-1  活動類別查詢 新 -->
     <!-- 4 促代新增  -->
     <div class="modal fade bs-example-modal-lg" id="Modal4" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -1140,16 +1883,35 @@
                     <h4 class="modal-title" id="myModalLabel2">促代新增</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal form-label-left">
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">促代Offer項目</label>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
+                    <!--<form class="form-horizontal form-label-left">-->
+                    <!--<div class="form-group">-->
+                    <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">請選取作業項目:</label>-->
+                    <!--<div class="col-md-9 col-sm-9 col-xs-12">
                                 <select class="form-control" style="width: 300px" ng-model="offerItem" ng-options="x for x in offerList">
                                         <option value="">選擇促代Offer項目</option>
                                     </select>
+                            </div>-->
+                    <!--</div>-->
+                    <br>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12 text-right">請選取作業項目:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="radio-list">
+                                <div class="radio-inline">
+                                    <label class="radio-inline">
+                                  <input type="radio"  checked ng-model="offerItem" value="1">促代
+                                </label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label class="radio-inline">
+                                  <input type="radio"  ng-model="offerItem" value="2" > 加值服務
+                                </label>
+                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                    <br>
+                    <!--</form>-->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" ng-click="definiteOffer()">確定</button>
@@ -1159,6 +1921,189 @@
         </div>
     </div>
     <!-- end 促代新增 -->
+    <!--4-2 促代查詢-MPM -->
+    <div class="modal fade fullscreen-modal" id="Modal4-2" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                                aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                    <h4 class="modal-title" id="myModalLabel3">促代新增</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">SPV NO:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityCode">SR NO.:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">Promotion Code:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityCode">Promotion名稱:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">促代群組:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">促代檔案生效日:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="input-prepend input-group">
+                                    <span class="add-on input-group-addon"><i
+                                                class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                    <input type="text" name="reservation" id="reservation" class="form-control" value="12/24/2016 - 12/26/2016" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">門號類型:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select class=" form-control" style="width:100%" tabindex="-1">
+                                        <option >選項1</option>
+                                        <option >選項2</option>
+                                        <option >選項3</option>
+                                      
+                                    </select>
+                            </div>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityCode">種類:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select class=" form-control" style="width:100%" tabindex="-1">
+                                        <option >選項1</option>
+                                        <option >選項2</option>
+                                        <option >選項3</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-primary pull-right">查詢</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered dataTable no-footer">
+                                    <thead>
+                                        <tr class="headings">
+                                            <th class="text-center table-header-color">
+                                                <input type="checkbox" id="check-all"> NO.
+                                            </th>
+                                            <th class="text-center sorting_asc column-title table-header-color">SPV NO.</th>
+                                            <th class="text-center sorting column-title table-header-color">SR NO.</th>
+                                            <th class="text-center sorting column-title table-header-color">OFFER ID</th>
+                                            <th class="text-center sorting column-title table-header-color">Promotion Code</th>
+                                            <th class="text-center sorting column-title table-header-color">Promotion名稱</th>
+                                            <th class="text-center sorting column-title table-header-color">促代檔案<br>生效日</th>
+                                            <th class="text-center sorting column-title table-header-color">促代效期</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="even pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110208003</td>
+                                            <td class=" "></td>
+                                            <td class=" ">124877</td>
+                                            <td class=" ">DRRLWENQY3N2</td>
+                                            <td class=" ">續約升級-1~249手機搭765方案</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - PM草稿區</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110325001</td>
+                                            <td class=" "></td>
+                                            <td class=" ">124878</td>
+                                            <td class=" ">DRQLXENQY3Y3</td>
+                                            <td class=" ">續約升級-1~249i-mode手機搭765方案</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - PM草稿區</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110321003</td>
+                                            <td class=" "></td>
+                                            <td class=" ">124880</td>
+                                            <td class=" ">DEJLDENQYDN3</td>
+                                            <td class=" ">3G-AE續約-765月租費抵扣$500*18個月優惠</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - PM草稿區</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110301007</td>
+                                            <td class=" "></td>
+                                            <td class=" ">136682</td>
+                                            <td class=" ">PIZOOGNVYGY3</td>
+                                            <td class=" ">高用量990+菁英950型優惠方案-限36個月</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - PM草稿區</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110520004</td>
+                                            <td class=" "></td>
+                                            <td class=" ">130221</td>
+                                            <td class=" ">SAMOOONLNON3</td>
+                                            <td class=" ">安心講180單門號專案</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - OET SR 彙整</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20110330009</td>
+                                            <td class=" ">20110421001</td>
+                                            <td class=" ">130237</td>
+                                            <td class=" ">NCG00ENLY6N3</td>
+                                            <td class=" ">New Cash 3G搶先促銷手機搭安心講180優惠</td>
+                                            <td class=" "></td>
+                                            <td class=" ">重新上架修改中 - IT LEADER審核</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">重新上架</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">複製</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end 4-2 促代查詢-MPM-->
     <!-- (5-1)-促代主約編輯 -->
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="Modal5-1">
@@ -1211,7 +2156,7 @@
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <!--<tr>
                                                     <td colspan="3">附約促代 代碼/名稱</td>
                                                     <td colspan="4">
                                                         <div class="col-lg-3">
@@ -1227,7 +2172,7 @@
                                                             </div>
                                                         </div>
                                                     </td>
-                                                </tr>
+                                                </tr>-->
                                             </tbody>
                                         </table>
                                     </div>
@@ -1560,12 +2505,12 @@
                                                                             <div class="radio-list">
                                                                                 <div class="radio-inline">
                                                                                     <label class="radio-inline">
-                                  													<input type="radio" class="flat" checked name="extendcontract">是
+                                  													<input type="radio"  checked name="extendcontract">是
                                													</label>
                                                                                 </div>
                                                                                 <div class="radio-inline">
                                                                                     <label class="radio-inline">
-                                  													<input type="radio" class="flat" name="extendcontract"> 否
+                                  													<input type="radio"  name="extendcontract"> 否
                                 												</label>
                                                                                 </div>
                                                                             </div>
@@ -1587,12 +2532,12 @@
                                                                             <div class="radio-list">
                                                                                 <div class="radio-inline">
                                                                                     <label class="radio-inline">
-                                  													<input type="radio" class="flat" name="appointedproduct">是
+                                  													<input type="radio"  name="appointedproduct">是
                                													</label>
                                                                                 </div>
                                                                                 <div class="radio-inline">
                                                                                     <label class="radio-inline">
-                                  													<input type="radio" class="flat"  name="appointedproduct" checked> 否
+                                  													<input type="radio"   name="appointedproduct" checked> 否
                                 												</label>
                                                                                 </div>
                                                                             </div>
@@ -1771,7 +2716,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3">附約促代 需綁主約</td>
+                                                    <td colspan="3">是否能獨立銷售</td>
                                                     <td colspan="4">
                                                         <div class="row">
                                                             <div class="form-group">
@@ -1779,12 +2724,12 @@
                                                                     <div class="radio-list text-left">
                                                                         <div class="radio-inline">
                                                                             <label class="radio-inline">
-                                                                                        <input type="radio" class="flat" name="contract" checked >是
+                                                                                        <input type="radio"  name="contract" checked >是
                                                                                     </label>
                                                                         </div>
                                                                         <div class="radio-inline">
                                                                             <label class="radio-inline">
-                                                                                        <input type="radio" class="flat" name="contract" > 否
+                                                                                        <input type="radio"  name="contract" > 否
                                                                                     </label>
                                                                         </div>
                                                                     </div>
@@ -2122,6 +3067,333 @@
         </div>
     </div>
     <!--end 5-2 促代附約編輯 -->
+
+    <!-- Boundle Promotion -->
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="modal fullscreen-modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="ModalBoundle">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Boundle Promotion-編輯</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="control-label col-md-1 col-sm-1 col-xs-12">活動類別</label>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="addList()">新增</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="inquiry()">查詢</button>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-1 control-label text-right">促代名稱:</label>
+                                <div class="col-md-6">
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-1 control-label text-right">合約類型:</label>
+                                <div class="col-md-6">
+                                    <select class="form-control" ng-model="contractType">
+								<option value="1">同生共死</option>
+								<option value="2">各自分飛</option>
+								<option value="3">團結力量大(多個VD)</option>
+								<option value="4">....</option>
+								</select>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>折扣優惠設定</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <div class="col-md-3">項目</div>
+                                            <div class="col-md-9">內容</div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="col-md-12 listdistance">
+                                                <div class="col-md-3">指定折扣項目</div>
+                                                <div class="col-md-9">
+                                                    <div class="form-group">
+                                                        <div class="container-fluid">
+                                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
+                                                            <div class="col-md-2" style="margin-top:30px">
+                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+                                                            </div>
+                                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3"></div>
+                                            </div>
+                                            <div class="col-md-12 listdistance">
+                                                <div class="col-md-3">Happy GO 贈點</div>
+                                                <div class="col-md-9">
+                                                    <div class="form-group">
+                                                        <div class="container-fluid">
+                                                            <input class="form-control input-sm" type="text" placeholder="10" style="width:100px;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end 折扣優惠設定-->
+                        <!--IA/備援單-->
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>IA/備援單</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="form-group-sm">
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <select class="form-control input-sm">
+															<option>請選擇</option>
+															<option>選項 1</option>
+															<option>選項 2</option>
+															<option>選項 3</option>
+															<option>選項 4</option>
+														</select>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <button type="button" class="btn btn-default btn-sm" style="color: #73879c">套用個人A範本</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end IA/備援單-->
+                        <!--設定上下限值-->
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>設定上下限值</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div ng-switch="contractType">
+                                    <div ng-switch-when="1">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">各自分飛/同生共死/分享包</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>S010-續約升級-1~249手機搭765方案</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>S015-續約升級-1~249i-mode手機搭765方案</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">Bundle層</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>B001-行動3G續約專案</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-switch-when="2">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">各自分飛/同生共死/分享包</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>S010-續約升級-1~249手機搭765方案</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>S015-續約升級-1~249i-mode手機搭765方案</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">Bundle層</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>B001-行動3G續約專案</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-switch-when="3">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">團結力量大</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>B001-行動3G續約專案</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>S001-遠傳e書城149跟12</td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="table  table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="info">Bundle層</th>
+                                                                <th class="info">Min</th>
+                                                                <th class="info">Max</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>B001-行動3G續約專案</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>GA</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>LOY</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>NP</td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end IA/備援單-->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Boundle Promotion -->
+
     <!--6 促代新增  -->
     <div class="modal fade fullscreen-modal" id="Modal6" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -2206,7 +3478,7 @@
                                     <thead>
                                         <tr class="headings">
                                             <th class="text-center table-header-color">
-                                                <input type="checkbox" id="check-all" class="flat"> NO.
+                                                <input type="checkbox" id="check-all"> NO.
                                             </th>
                                             <th class="text-center sorting_asc column-title table-header-color">SPV NO.</th>
                                             <th class="text-center sorting column-title table-header-color">SR NO.</th>
@@ -2220,7 +3492,7 @@
                                     <tbody>
                                         <tr class="even pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110208003</td>
                                             <td class=" "></td>
@@ -2232,7 +3504,7 @@
                                         </tr>
                                         <tr class="odd pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110325001</td>
                                             <td class=" "></td>
@@ -2244,7 +3516,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110321003</td>
                                             <td class=" "></td>
@@ -2256,7 +3528,7 @@
                                         </tr>
                                         <tr class="odd pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110301007</td>
                                             <td class=" "></td>
@@ -2268,7 +3540,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110520004</td>
                                             <td class=" "></td>
@@ -2280,7 +3552,7 @@
                                         </tr>
                                         <tr class="odd pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20110330009</td>
                                             <td class=" ">20110421001</td>
@@ -2324,7 +3596,7 @@
                                     <thead>
                                         <tr class="headings">
                                             <th class="text-center table-header-color" rowspan="2">
-                                                <input type="checkbox" id="check-all" class="flat"> NO.
+                                                <input type="checkbox" id="check-all"> NO.
                                             </th>
                                             <th class="text-center sorting_asc column-title table-header-color" rowspan="2">SPV單號
                                             </th>
@@ -2349,7 +3621,7 @@
                                     <tbody>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129001</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2362,7 +3634,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129002</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2375,7 +3647,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129003</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2388,7 +3660,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129004</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2401,7 +3673,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129005</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2414,7 +3686,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129006</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2427,7 +3699,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129007</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2440,7 +3712,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129008</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2453,7 +3725,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129009</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2466,7 +3738,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129010</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2479,7 +3751,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129011</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2492,7 +3764,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129012</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2505,7 +3777,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129013</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2518,7 +3790,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129014</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2531,7 +3803,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129015</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2544,7 +3816,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129016</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2557,7 +3829,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129017</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2570,7 +3842,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129019</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2583,7 +3855,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129019</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2596,7 +3868,7 @@
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
-                                                <input type="checkbox" class="flat" name="table_records">
+                                                <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129020</td>
                                             <td class=" ">2016/11/29 10:33</td>
@@ -2648,7 +3920,7 @@
                                     <thead>
                                         <tr class="headings">
                                             <th class="text-center table-header-color">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </th>
                                             <th class="text-center sorting_asc column-title table-header-color">SPV單號
                                             </th>
@@ -2663,7 +3935,7 @@
                                     <tbody>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td><a class="" role="tab" id="headingOne2" data-toggle="collapse" data-parent="#accordion2"
                                                     href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne">
@@ -2812,7 +4084,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129002</td>
                                             <td>活動</td>
@@ -2832,7 +4104,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129003</td>
                                             <td>促代</td>
@@ -2852,7 +4124,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129004</td>
                                             <td>促代</td>
@@ -2872,7 +4144,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all2" class="flat">
+                                                <input type="checkbox" id="check-all2">
                                             </td>
                                             <td><a class="" role="tab" id="headingOne3" data-toggle="collapse" data-parent="#accordion3"
                                                     href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne">
@@ -2973,7 +4245,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129007</td>
                                             <td>促代</td>
@@ -2993,7 +4265,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129008</td>
                                             <td>促代</td>
@@ -3013,7 +4285,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129009</td>
                                             <td>促代</td>
@@ -3033,7 +4305,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <input type="checkbox" id="check-all" class="flat">
+                                                <input type="checkbox" id="check-all">
                                             </td>
                                             <td>20161129010</td>
                                             <td>促代</td>
