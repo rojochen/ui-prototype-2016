@@ -27,7 +27,7 @@ define(['btModule'], function (btModule) {
         $timeout(function () {
 
             $(document).ready(function () {
-                console.log(moment);
+                // console.log(moment);
                 // knob
                 $(".knobColor1").knob({
                     'width': 100,
@@ -257,6 +257,14 @@ define(['btModule'], function (btModule) {
                         firstDay: 1
                     }
                 };
+                var optionSet2 = {
+                    locale: {
+                        applyLabel: '送出',
+                        cancelLabel: '清除',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+                    }
+                };
                 $('#reportrange span').html(moment().subtract(29, 'days').format('MM DD, YYYY') + ' - ' + moment().format('MM DD, YYYY'));
                 $('#reportrange').daterangepicker(optionSet1, cb);
                 $('#reportrange').on('show.daterangepicker', function () {
@@ -305,11 +313,11 @@ define(['btModule'], function (btModule) {
                 }, function (start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
                 });
-                $('#reservation').daterangepicker(null, function (start, end, label) {
+                $('#reservation').daterangepicker(optionSet2, function (start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
                 });
             });
-        }),100;
+        },100);
     }]);
     // 進階圖表
     app.controller('echarts2', ['$scope', '$timeout', function ($scope, $timeout) {
