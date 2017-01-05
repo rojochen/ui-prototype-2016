@@ -5,7 +5,7 @@ define(['btModule'], function (btModule) {
     app.directive('btPagination', function(){
         
         function link(scope, element, attrs){
-            var totalCount = scope.info.totalCount,
+            var totalCount = scope.ngModel.totalCount,
                 pageSize = Number.isNaN(Number.parseInt(attrs['pageSize']))?10:Number.parseInt(attrs['pageSize']),
                 pageCount = Number.isNaN(Number.parseInt(attrs['pageCount']))?5:Number.parseInt(attrs['pageCount']);
             // console.log(totalCount);
@@ -16,25 +16,24 @@ define(['btModule'], function (btModule) {
                 // console.log(x);
                 scope.showPageArray = [];
                 if(scope.pageArray.length <= pageCount){
-                    console.log('aa');
                     scope.showPageArray = angular.copy(scope.pageArray);
-                    console.log(scope.showPageArray);
+                    // console.log(scope.showPageArray);
                 }else {
-                    console.log('bb');  //page-count=1 會有問題...再看一下
                     var point = null;
                     if(x === 1){
-                        console.log('bb-1');
                         point = x - 1;
                     }
-                    if(x !== 1){
-                        console.log('bb-2');
-                        point = x -2;
-                        if(point + pageCount > scope.pageArray.length){
-                            point = point - (point + pageCount - scope.pageArray.length);
+                    if(x !== 1 && x !== scope.pageArray.length){
+                        if(pageCount !== 1){
+                            point = x -2;
+                            if(point + pageCount > scope.pageArray.length){
+                                point = point - (point + pageCount - scope.pageArray.length);
+                            }
+                        }else{
+                            point = x -1;
                         }
                     }
                     if(x === scope.pageArray.length){
-                        console.log('bb-3');
                         point = x - pageCount;
                     }
                     
@@ -42,7 +41,7 @@ define(['btModule'], function (btModule) {
                     for(point; scope.showPageArray.length<pageCount; point++){
                         scope.showPageArray.push(scope.pageArray[point]);
                     }
-                    console.log(scope.showPageArray);
+                    // console.log(scope.showPageArray);
                 }
 
                 scope.page = x;
@@ -90,10 +89,9 @@ define(['btModule'], function (btModule) {
         }
 
         return {
-            restrict: 'A',  //為何選Ａ？
+            restrict: 'A',
             scope: {
-                // dataInfo: '=info'  //如何用dataInfo？
-                info: '='  //後續是否改用ng-model接值？
+                ngModel: '='
             },
             link: link,
             template: `<ul class="pagination" ng-show="isShowPagination">
@@ -103,7 +101,7 @@ define(['btModule'], function (btModule) {
 						<li ng-class="{'disabled': page === pageArray.length}"><a href ng-click="changeNext()">下一頁 ›</a></li>
 						<li ng-class="{'disabled': page === pageArray.length}"><a href ng-click="changeLast()">最後一頁 »</a></li>
 					</ul>
-                    <p ng-show="isShowPagination">顯示第{{startList}}筆至第{{endList}}筆，共有{{info.totalCount}}筆</p>
+                    <p ng-show="isShowPagination">顯示第{{startList}}筆至第{{endList}}筆，共有{{ngModel.totalCount}}筆</p>
                     <p ng-show="!isShowPagination">沒有資料...，請確認資料格式！</p>`
         };
     });
