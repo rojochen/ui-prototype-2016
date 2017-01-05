@@ -3976,16 +3976,17 @@
                               });">核可
                             </button>
                         <div class="form-group">
-                            <div class="table-responsive">
+                            <!--<div class="table-responsive">
                                 <table class="table table-striped table-bordered dataTable no-footer compact">
                                     <thead>
                                         <tr class="headings">
                                             <th class="text-center table-header-color">
                                                 <input type="checkbox" id="check-all">
                                             </th>
-                                            <th class="text-center sorting_asc column-title table-header-color">SPV單號
+                                            <th class="text-center sorting_asc column-title table-header-color">NPV單號
                                             </th>
                                             <th class="text-center sorting column-title table-header-color">類型</th>
+                                            <th class="text-center sorting column-title table-header-color">Promotion Type</th>
                                             <th class="text-center sorting column-title table-header-color">筆數</th>
                                             <th class="text-center sorting column-title table-header-color">PM</th>
                                             <th class="text-center sorting column-title table-header-color">傳送時間</th>
@@ -4374,6 +4375,573 @@
                                             <td>yiyang</td>
                                             <td>2016/11/29 10:33</td>
                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>-->
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered dataTable no-footer">
+                                    <thead>
+                                        <tr class="headings">
+                                            <th class="text-center table-header-color" rowspan="2">
+                                                <input type="checkbox" id="check-all">
+                                            </th>
+                                            <th class="text-center sorting_asc column-title table-header-color" rowspan="2">NPV單號
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                類型
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                Promation Type
+                                            </th>
+                                             <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                筆數
+                                            </th>
+                                            <th class="text-center column-title table-header-color" colspan="6">數量</th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                PM
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                退單
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                匯出SPV
+                                            </th>
+                                        </tr>
+                                        <tr class="headings">
+                                            <th class="text-center sorting column-title table-header-color">Single Promotion
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color">Boundle Promotion
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color">折扣</th>
+                                            <th class="text-center sorting column-title table-header-color">寬頻</th>
+                                            <th class="text-center sorting column-title table-header-color">活動類別</th>
+                                            <th class="text-center sorting column-title table-header-color">贈品加碼活動</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129001</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">12筆</td>
+                                            <td class=" ">8</td>
+                                            <td class=" ">4</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                        
+                                            <td class=" ">yiyang</td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129002</td>
+                                            <td class=" ">活動</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" ">8</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                           
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129003</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129004</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129005</td>
+                                            <td class=" ">折扣</td>
+                                            <td class=" "></td>
+                                            <td class=" ">2筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">2</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129006</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">3筆</td>
+                                            <td class=" ">3</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129007</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129008</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129009</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129010</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">201611290011</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129012</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129013</td>
+                                            <td class=" ">折扣</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129014</td>
+                                            <td class=" ">活動</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129015</td>
+                                            <td class=" ">贈品加碼活動</td>
+                                            <td class=" "></td>
+                                            <td class=" ">3筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129016</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129017</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129018</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129019</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129020</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
                                                 <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
                                                     退單
                                                 </a>
