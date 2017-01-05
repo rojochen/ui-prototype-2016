@@ -4033,8 +4033,34 @@ ul.notifications {
 /** bootstrap-daterangepicker **/
 .daterangepicker.dropdown-menu {
   font-size: 13px;
-  padding: 0;
+  // padding: 0;
+  padding: 4px;
   overflow: hidden;
+}
+
+.daterangepicker .daterangepicker_input {
+  position: relative;
+  .input-mini {
+    padding: 0 6px 0 28px;
+    border-radius: 4px;
+    margin: 0 0 5px 0;
+  }
+  i {
+    position: absolute;
+    left: 8px;
+    top: 10px;
+  }
+}
+
+.daterangepicker.rtl .daterangepicker_input i {
+  left: auto;
+  right: 8px;
+}
+
+@media (min-width: 564px){
+  .daterangepicker.ltr .left .daterangepicker_input {
+    padding-right: 12px;
+  }
 }
 
 .daterangepicker table.table-condensed thead tr:first-child th {
@@ -4153,8 +4179,11 @@ ul.notifications {
   box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
-.daterangepicker.opensright .ranges, .daterangepicker.opensright .calendar, .daterangepicker.openscenter .ranges, .daterangepicker.openscenter .calendar {
+.daterangepicker.opensright .ranges, .daterangepicker.openscenter .ranges, .daterangepicker.openscenter .calendar {
   float: right;
+}
+.daterangepicker.opensright .calendar{
+  float: left; 
 }
 
 .daterangepicker.dropdown-menu .calendar {}
