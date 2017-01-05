@@ -1,0 +1,61 @@
+<div class="" ng-controller="paginationCtrl">
+	<div class="page-title">
+		<div class="title_left">
+			<h3>分頁</h3>
+		</div>
+
+		<div class="title_right">
+			<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="搜尋">
+					<span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<bt-portlet titlename="'分頁設計'" refreshbtn="true" switchbtn="true" selectbtn="true" closebtn="true">
+				<p>可藉由bt-pagination這個directive新增分頁。</p>
+				<p>其中，page-size可設定一頁顯示幾筆資料，預設10筆。page-count可設定一次顯示幾個分頁按鈕，預設5個。</p>
+				<p><code>&lt;div <strong>bt-pagination</strong> ng-model="tableInfo" <strong>page-size</strong>="4" <strong>page-count</strong>="3"&gt;&lt;/div&gt;</code></p>
+				<!--<div class="table-responsive">
+					<table class="table table-striped jambo_table bulk_action">
+						<thead>
+							<tr class="headings">
+								<th class="column-title">單據條碼 </th>
+								<th class="column-title">開單日期 </th>
+								<th class="column-title">訂單編號 </th>
+								<th class="column-title">開單人員 </th>
+								<th class="column-title">狀態 </th>
+								<th class="column-title">總計 </th>
+								<th class="column-title no-link last"><span class="nobr">查閱</span>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="x in tableInfo.result">
+								<td ng-bind="x.id"></td>
+								<td ng-bind="x.date"></td>
+								<td ng-bind="x.number"></td>
+								<td ng-bind="x.people"></td>
+								<td ng-bind="x.status"></td>
+								<td ng-bind="x.total"></td>
+								<td><a href="#">{{x.list}}</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>-->
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="pull-right">
+						<div bt-pagination ng-model="tableInfo" page-size="4" page-count="3"></div>
+					</div>
+				</div>
+			</bt-portlet>
+		</div>
+	</div>
+</div>
