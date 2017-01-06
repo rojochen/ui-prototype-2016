@@ -111,7 +111,7 @@
                                 </div>-->
                                 <div class="x_title">一、促代設計
                                     <span style="padding-left: 15px;">
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#Modal2-2">新增單一促案</button>
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#Modal2">新增單一促案</button>
                                          <button type="button" class="btn btn-info " data-toggle="modal" data-target="#Modal4-2">查詢</button>
                                     </span>
                                 </div>
@@ -223,7 +223,7 @@
         </div>
     </div>
     <!-- 2 活動類別編輯  -->
-    <div class="col-md-12 col-sm-12 col-xs-12">
+    <!--<div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal fade" id="Modal2" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -896,17 +896,17 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <!--<button type="button" class="btn btn-default" >取消</button>-->
+                        <button type="button" class="btn btn-default" >取消</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- end 活動類別編輯  -->
     <!-- 2  新活動類別編輯  MPM -->
     <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="modal fullscreen-modal fade" id="Modal2-2" tabindex="-1" role="dialog">
+        <div class="modal fullscreen-modal fade" id="Modal2" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -945,262 +945,15 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" ng-click="openItem()">確定</button>
-                        <button type="button" class="btn btn-default">取消</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end 2 新活動類別編輯  -->
-    <!-- 3-2 活動類別查詢  -->
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="modal fullscreen-modal fade" id="Modal3-2" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span
-                                aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                        </button>
-                        <h4 class="modal-title">活動類別查詢-MPM</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form class="form-horizontal">
-                            <div class="form-group">
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">SPV NO</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <input type="text" id="SPV" required="required" class="form-control col-md-7 col-xs-12" ng-model="SPV">
-                                </div>
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityCode">活動類別代碼</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <input type="text" id="activityCode" required="required" class="form-control col-md-7 col-xs-12">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityName">活動類別名稱</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <input type="text" id="activityName" required="required" class="form-control col-md-7 col-xs-12" ng-model="activityName">
-                                </div>
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="groupCode">活動群組代碼</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <input type="text" id="groupCode" required="required" class="form-control col-md-7 col-xs-12" ng-model="groupCode">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">活動群組</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <select class="select2_single form-control" style="width:100%" id="activityGroup" tabindex="-1" ng-options="x for x in activityGroupItem"
-                                        ng-model="activityGroup">
-                          <option></option>
-                          <option value="{{x}}" ng-bind="x"></option>
-                            </select>
-                                </div>
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="numberType">門號類型</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <select class="select2_single form-control" style="width:100%" id="numberType" tabindex="-1" ng-options="x for x in numberTypeItem"
-                                        ng-model="numberType">
-                          <option></option>
-                          <option value="{{x}}" ng-bind="x"></option>
-                            </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="type">種類</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <select class="select2_single form-control" style="width:100%" id="type" tabindex="-1" ng-options="x for x in typeItem" ng-model="type">
-                          <option></option>
-                          <option value="{{x}}" ng-bind="x"></option>
-                            </select>
-                                </div>
-                            </div>
-                            <div class="form-group pull-right">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <button type="button" class="btn btn-primary" ng-click="activities_Advanced()">查詢</button>
-                                </div>
-                            </div>
-                            <!-- begin 活動進階搜尋表格 -->
-                            <div class="col-md-12 col-sm-12 col-xs-12" ng-show="showActivitiesTable">
-                                <table id="datatable_activities" class="table  table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="11" class=" text-center table-header-color">活動類別項目</th>
-                                            <th colspan="3" class=" text-center table-header-color">活動條件設定</th>
-                                            <th colspan="3" class=" text-center table-header-color">申辦條件設定</th>
-                                            <th colspan="1" class=" text-center table-header-color">申辦條件設定</th>
-                                        </tr>
-                                        <tr>
-                                            <th class=" text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending"
-                                                style="width:50px;">
-                                                <input type="checkbox" name="table_records"> NO.
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:60px;">門號類型
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:50px;">種類
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:90px;">活動類別代碼
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">活動類別名稱
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:80px;">活動期間
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">活動群組
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">使用名單
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">PM Owner
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">檔案生效日
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">狀態效期
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">停機可能率
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">ARPB
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">有效終止日
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">關係
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">種類
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">項目
-                                            </th>
-                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">負責PM
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr role="row" ng-repeat="x in activitiesTableData track by $index">
-                                            <td>
-                                                <input type="checkbox" name="table_records"> {{x.NO}}
-                                            </td>
-                                            <td ng-bind="x.gateType"></td>
-                                            <td ng-bind="x.sort"></td>
-                                            <td ng-bind="x.activityCode"></td>
-                                            <td ng-bind="x.activityName"></td>
-                                            <td ng-bind="x.activityRange"></td>
-                                            <td ng-bind="x.groupName"></td>
-                                            <td ng-bind="x.useOfPersonnel"></td>
-                                            <td ng-bind="x.pmOwner"></td>
-                                            <td ng-bind="x.fileEffectiveDate"></td>
-                                            <td ng-bind="x.stateEffective"></td>
-                                            <td>
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="row">
-                                                                <table class="table">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>高</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>低</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>低</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>無限制 </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>高</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>A</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="row">
-                                                                <table class="table">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>0-999</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>0-999</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>1000-1999</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>1000-1999 </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>20000-1999999</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>099999</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="row">
-                                                                <table class="table">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>93</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>93</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>無合約</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>93 </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>365</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>185</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td ng-bind="x.relationship"></td>
-                                            <td ng-bind="x.species"></td>
-                                            <td ng-bind="x.item"></td>
-                                            <td ng-bind="x.pm"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- end 活動進階搜尋表格 -->
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">重新上架</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end 活動類別查詢  -->
-    <!-- 3-1 活動類別明細-MPM  新 -->
+    <!-- end 2 新活動類別編輯  -->
+
+     <!-- 3-1 活動類別明細-MPM  新 -->
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal fade" id="Modal3-1" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -1668,7 +1421,7 @@
                                         <hr>
                                         <div class="form-group">
                                             <div class="col-md-10 col-md-offset-2 col-sm-12 col-xs-12">
-                                                <button type="button" class="btn btn-default" style="color: #73879c;">
+                                                <button type="button" class="btn btn-primary">
                                                 新增
                                             </button>
                                             </div>
@@ -1848,6 +1601,255 @@
         </div>
     </div>
     <!-- end 3-1  活動類別查詢 新 -->
+
+    <!-- 3-2 活動類別查詢  -->
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="modal fullscreen-modal fade" id="Modal3-2" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span
+                                aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title">活動類別查詢-MPM</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">SPV NO</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="text" id="SPV" required="required" class="form-control col-md-7 col-xs-12" ng-model="SPV">
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityCode">活動類別代碼</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="text" id="activityCode" required="required" class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityName">活動類別名稱</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="text" id="activityName" required="required" class="form-control col-md-7 col-xs-12" ng-model="activityName">
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="groupCode">活動群組代碼</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="text" id="groupCode" required="required" class="form-control col-md-7 col-xs-12" ng-model="groupCode">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">活動群組</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <select class="select2_single form-control" style="width:100%" id="activityGroup" tabindex="-1" ng-options="x for x in activityGroupItem"
+                                        ng-model="activityGroup">
+                          <option></option>
+                          <option value="{{x}}" ng-bind="x"></option>
+                            </select>
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="numberType">門號類型</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <select class="select2_single form-control" style="width:100%" id="numberType" tabindex="-1" ng-options="x for x in numberTypeItem"
+                                        ng-model="numberType">
+                          <option></option>
+                          <option value="{{x}}" ng-bind="x"></option>
+                            </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="type">種類</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <select class="select2_single form-control" style="width:100%" id="type" tabindex="-1" ng-options="x for x in typeItem" ng-model="type">
+                          <option></option>
+                          <option value="{{x}}" ng-bind="x"></option>
+                            </select>
+                                </div>
+                            </div>
+                            <div class="form-group pull-right">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <button type="button" class="btn btn-primary" ng-click="activities_Advanced()">查詢</button>
+                                </div>
+                            </div>
+                            <!-- begin 活動進階搜尋表格 -->
+                            <div class="col-md-12 col-sm-12 col-xs-12" ng-show="showActivitiesTable">
+                                <table id="datatable_activities" class="table  table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="11" class=" text-center table-header-color">活動類別項目</th>
+                                            <th colspan="3" class=" text-center table-header-color">活動條件設定</th>
+                                            <th colspan="3" class=" text-center table-header-color">申辦條件設定</th>
+                                            <th colspan="1" class=" text-center table-header-color">申辦條件設定</th>
+                                        </tr>
+                                        <tr>
+                                            <th class=" text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending"
+                                                style="width:50px;">
+                                                <input type="checkbox" name="table_records"> NO.
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:60px;">門號類型
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:50px;">種類
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:90px;">活動類別代碼
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">活動類別名稱
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:80px;">活動期間
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">活動群組
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">使用名單
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">PM Owner
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">檔案生效日
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">狀態效期
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">停機可能率
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">ARPB
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">有效終止日
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">關係
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">種類
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">項目
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">負責PM
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr role="row" ng-repeat="x in activitiesTableData track by $index">
+                                            <td>
+                                                <input type="checkbox" name="table_records"> {{x.NO}}
+                                            </td>
+                                            <td ng-bind="x.gateType"></td>
+                                            <td ng-bind="x.sort"></td>
+                                            <td ng-bind="x.activityCode"></td>
+                                            <td ng-bind="x.activityName"></td>
+                                            <td ng-bind="x.activityRange"></td>
+                                            <td ng-bind="x.groupName"></td>
+                                            <td ng-bind="x.useOfPersonnel"></td>
+                                            <td ng-bind="x.pmOwner"></td>
+                                            <td ng-bind="x.fileEffectiveDate"></td>
+                                            <td ng-bind="x.stateEffective"></td>
+                                            <td>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>高</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>低</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>低</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>無限制 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>高</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>A</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>0-999</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>0-999</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1000-1999</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>1000-1999 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>20000-1999999</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>099999</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>93</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>93</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>無合約</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>93 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>365</td>
+                                                                        </tr>
+                                                                        <tr class="info">
+                                                                            <td>185</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td ng-bind="x.relationship"></td>
+                                            <td ng-bind="x.species"></td>
+                                            <td ng-bind="x.item"></td>
+                                            <td ng-bind="x.pm"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end 活動進階搜尋表格 -->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">重新上架</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end 活動類別查詢  -->
     <!-- 4 促代新增  -->
     <div class="modal fade bs-example-modal-lg" id="Modal4" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -1859,16 +1861,6 @@
                     <h4 class="modal-title" id="myModalLabel2">促代新增</h4>
                 </div>
                 <div class="modal-body">
-                    <!--<form class="form-horizontal form-label-left">-->
-                    <!--<div class="form-group">-->
-                    <!--<label class="control-label col-md-3 col-sm-3 col-xs-12">請選取作業項目:</label>-->
-                    <!--<div class="col-md-9 col-sm-9 col-xs-12">
-                                <select class="form-control" style="width: 300px" ng-model="offerItem" ng-options="x for x in offerList">
-                                        <option value="">選擇促代Offer項目</option>
-                                    </select>
-                            </div>-->
-                    <!--</div>-->
-                    <br>
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12 text-right">請選取作業項目:</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -3043,7 +3035,7 @@
         </div>
     </div>
     <!--end 5-2 促代附約編輯 -->
-    <!-- Boundle Promotion -->
+    <!--6 Boundle Promotion -->
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="ModalBoundle">
             <div class="modal-dialog" role="document">
@@ -3369,7 +3361,7 @@
     </div>
     <!-- end Boundle Promotion -->
     <!--6 促代新增  -->
-    <div class="modal fade fullscreen-modal" id="Modal6" tabindex="-1" role="dialog">
+    <!--<div class="modal fade fullscreen-modal" id="Modal6" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -3547,9 +3539,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!--end 6 促代附約編輯 -->
-    <!-- 9 草稿 Modal -->
+
+    <!-- 8 草稿 Modal -->
     <div class="modal fade fullscreen-modal" id="Modal9" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -3570,16 +3563,22 @@
                                     <thead>
                                         <tr class="headings">
                                             <th class="text-center table-header-color" rowspan="2">
-                                                <input type="checkbox" id="check-all"> NO.
+                                                <input type="checkbox" id="check-all">
                                             </th>
-                                            <th class="text-center sorting_asc column-title table-header-color" rowspan="2">SPV單號
+                                            <th class="text-center sorting_asc column-title table-header-color" rowspan="2">NPV單號
                                             </th>
-                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
-                                                傳送時間
-                                            </th>
-                                            <th class="text-center column-title table-header-color" colspan="5">數量</th>
                                             <th class="text-center sorting column-title table-header-color" rowspan="2">
                                                 類型
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                Promation Type
+                                            </th>
+                                             <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                筆數
+                                            </th>
+                                            <th class="text-center column-title table-header-color" colspan="6">數量</th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                PM
                                             </th>
                                         </tr>
                                         <tr class="headings">
@@ -3588,6 +3587,7 @@
                                             <th class="text-center sorting column-title table-header-color">Boundle Promotion
                                             </th>
                                             <th class="text-center sorting column-title table-header-color">折扣</th>
+                                            <th class="text-center sorting column-title table-header-color">寬頻</th>
                                             <th class="text-center sorting column-title table-header-color">活動類別</th>
                                             <th class="text-center sorting column-title table-header-color">贈品加碼活動</th>
                                         </tr>
@@ -3598,260 +3598,320 @@
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129001</td>
-                                            <td class=" ">2016/11/29 10:33</td>
-                                            <td class=" ">3</td>
-                                            <td class=" ">3</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">12筆</td>
+                                            <td class=" ">8</td>
+                                            <td class=" ">4</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129002</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">活動</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" ">8</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
-                                            <td class=" ">活動類別</td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129003</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129004</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
                                             <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129005</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">折扣</td>
                                             <td class=" "></td>
+                                            <td class=" ">2筆</td>
                                             <td class=" "></td>
                                             <td class=" ">2</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
-                                            <td class=" ">折扣</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129006</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">3筆</td>
                                             <td class=" ">3</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129007</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129008</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
-                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129009</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
-                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129010</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
-                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
-                                            <td class=" ">20161129011</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">201611290011</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
-                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129012</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
                                             <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129013</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">折扣</td>
                                             <td class=" "></td>
+                                            <td class=" ">1筆</td>
                                             <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
-                                            <td class=" ">折扣</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129014</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">活動</td>
                                             <td class=" "></td>
-                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
                                             <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
-                                            <td class=" ">活動類別</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129015</td>
-                                            <td class=" ">2016/11/29 10:33</td>
-                                            <td class=" "></td>
-                                            <td class=" "></td>
-                                            <td class=" "></td>
-                                            <td class=" "></td>
-                                            <td class=" ">3</td>
                                             <td class=" ">贈品加碼活動</td>
+                                            <td class=" "></td>
+                                            <td class=" ">3筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129016</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
-                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129017</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
                                             <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
+                                            <td class=" ">yiyang</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129018</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129019</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
-                                            <td class=" "></td>
-                                        </tr>
-                                        <tr class="even pointer">
-                                            <td class="text-center ">
-                                                <input type="checkbox" name="table_records">
-                                            </td>
-                                            <td class=" ">20161129019</td>
-                                            <td class=" ">2016/11/29 10:33</td>
-                                            <td class=" ">1</td>
-                                            <td class=" "></td>
-                                            <td class=" "></td>
-                                            <td class=" "></td>
-                                            <td class=" "></td>
-                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                         <tr class="even pointer">
                                             <td class="text-center ">
                                                 <input type="checkbox" name="table_records">
                                             </td>
                                             <td class=" ">20161129020</td>
-                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
                                             <td class=" ">1</td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
                                             <td class=" "></td>
-                                            <td class=" "></td>
+                                            <td class=" ">yiyang</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -3866,8 +3926,9 @@
             </div>
         </div>
     </div>
-    <!-- end 9 草稿 Modal -->
-    <!-- 10 待處理  -->
+    <!-- end 8 草稿 Modal -->
+
+    <!-- 9 待處理  -->
     <div class="modal fade fullscreen-modal" id="Modal10" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -3889,16 +3950,17 @@
                               });">核可
                             </button>
                         <div class="form-group">
-                            <div class="table-responsive">
+                            <!--<div class="table-responsive">
                                 <table class="table table-striped table-bordered dataTable no-footer compact">
                                     <thead>
                                         <tr class="headings">
                                             <th class="text-center table-header-color">
                                                 <input type="checkbox" id="check-all">
                                             </th>
-                                            <th class="text-center sorting_asc column-title table-header-color">SPV單號
+                                            <th class="text-center sorting_asc column-title table-header-color">NPV單號
                                             </th>
                                             <th class="text-center sorting column-title table-header-color">類型</th>
+                                            <th class="text-center sorting column-title table-header-color">Promotion Type</th>
                                             <th class="text-center sorting column-title table-header-color">筆數</th>
                                             <th class="text-center sorting column-title table-header-color">PM</th>
                                             <th class="text-center sorting column-title table-header-color">傳送時間</th>
@@ -4299,6 +4361,594 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>-->
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered dataTable no-footer">
+                                    <thead>
+                                        <tr class="headings">
+                                            <th class="text-center table-header-color" rowspan="2">
+                                                <input type="checkbox" id="check-all">
+                                            </th>
+                                            <th class="text-center sorting_asc column-title table-header-color" rowspan="2">NPV單號
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                類型
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                Promation Type
+                                            </th>
+                                             <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                筆數
+                                            </th>
+                                            <th class="text-center column-title table-header-color" colspan="6">數量</th>
+                                             <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                傳送時間
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                PM
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                退單
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color" rowspan="2">
+                                                匯出SPV
+                                            </th>
+                                        </tr>
+                                        <tr class="headings">
+                                            <th class="text-center sorting column-title table-header-color">Single Promotion
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color">Boundle Promotion
+                                            </th>
+                                            <th class="text-center sorting column-title table-header-color">折扣</th>
+                                            <th class="text-center sorting column-title table-header-color">寬頻</th>
+                                            <th class="text-center sorting column-title table-header-color">活動類別</th>
+                                            <th class="text-center sorting column-title table-header-color">贈品加碼活動</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129001</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">12筆</td>
+                                            <td class=" ">8</td>
+                                            <td class=" ">4</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                             <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129002</td>
+                                            <td class=" ">活動</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" ">8</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129003</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129004</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129005</td>
+                                            <td class=" ">折扣</td>
+                                            <td class=" "></td>
+                                            <td class=" ">2筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">2</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129006</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">3筆</td>
+                                            <td class=" ">3</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129007</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129008</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                             <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129009</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129010</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">201611290011</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129012</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129013</td>
+                                            <td class=" ">折扣</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129014</td>
+                                            <td class=" ">活動</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129015</td>
+                                            <td class=" ">贈品加碼活動</td>
+                                            <td class=" "></td>
+                                            <td class=" ">3筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129016</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129017</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129018</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129019</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                            <td class="text-center ">
+                                                <input type="checkbox" name="table_records">
+                                            </td>
+                                            <td class=" ">20161129020</td>
+                                            <td class=" ">促代</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1筆</td>
+                                            <td class=" "></td>
+                                            <td class=" ">1</td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" "></td>
+                                            <td class=" ">2016/11/29 10:33</td>
+                                            <td class=" ">yiyang</td>
+                                             <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal11">
+                                                    退單
+                                                </a>
+                                            </td>
+                                            <td class="text-center" style="padding-top: 6px; padding-bottom: 6px;">
+                                                <a href="" class="btn btn-success btn-xs">
+                                                    匯出SPV
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </form>
@@ -4310,7 +4960,7 @@
             </div>
         </div>
     </div>
-    <!-- end 10 待處理  -->
+    <!-- end 9 待處理  -->
     <!-- 11 退單-原因輸入  -->
     <div class="modal fade bs-example-modal-lg" id="Modal11" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
