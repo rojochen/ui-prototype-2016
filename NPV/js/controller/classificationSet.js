@@ -35,26 +35,76 @@ define(['btModule'], function (btModule) {
             $scope.btnShow1 = true;
             $scope.btnShow2 = false;
             $scope.advancedSearch = function () {
-                    if ($scope.advancedControl) {
-                        $scope.advancedControl = false;
-                        $scope.btnShow1 = true;
-                        $scope.btnShow2 = false;
-                    } else {
-                        $scope.advancedControl = true;
-                        $scope.btnShow1 = false;
-                        $scope.btnShow2 = true;
-                    }
+                if ($scope.advancedControl) {
+                    $scope.advancedControl = false;
+                    $scope.btnShow1 = true;
+                    $scope.btnShow2 = false;
+                } else {
+                    $scope.advancedControl = true;
+                    $scope.btnShow1 = false;
+                    $scope.btnShow2 = true;
                 }
-                /* end */
+            };
+            /* end */
+
+            /* 促代類別設定表格 begin */
+            var opt = {
+                "oLanguage": {
+                    "sProcessing": "處理中...",
+                    "sLengthMenu": "顯示 _MENU_ 項結果",
+                    "sZeroRecords": "沒有匹配結果",
+                    "sInfo": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                    "sInfoEmpty": "顯示第 0 至 0 項結果，共 0 項",
+                    "sInfoFiltered": "(從 _MAX_ 項結果過濾)",
+                    "sSearch": "搜索:",
+                    "oPaginate": {
+                        "sFirst": "首頁",
+                        "sPrevious": "上一頁",
+                        "sNext": "下一頁",
+                        "sLast": "尾頁"
+                    },
+                },
+                "searching": false,
+                "bInfo": false,
+                "bPaginate": false
+                    // "scrollX": true,
+                    // "scrollY": true
+            };
+
+            $timeout(function () {
+                $('#datatable_classificationSet').DataTable(opt);
+            }, 100)
+
+            // 表格內容資料
+            $scope.classificationTableData = [{
+                "classificationSorting": "1",
+                "classificationID": "V",
+                "classificationName": "Voice類促代",
+                "classificationRole": "SPV",
+                "classificationDate": "08-3月 -10"
+            }, {
+                "classificationSorting": "2",
+                "classificationID": "D",
+                "classificationName": "Data類促代",
+                "classificationRole": "SPV",
+                "classificationDate": "08-3月 -10"
+            }, {
+                "classificationSorting": "3",
+                "classificationID": "X",
+                "classificationName": "Non SIM類促代",
+                "classificationRole": "SPV",
+                "classificationDate": "08-3月 -10"
+            }];
+
+            $('#datatable_classificationSet').DataTable().destroy();
+            /* 促代類別設定表格 end */
 
             /* begin */
             $scope.tableControl = false;
             $scope.showTable = function () {
-                    $scope.tableControl = true;
-                }
-                /* end */
-
-
+                $scope.tableControl = true;
+            };
+            /* end */
         }
     ]);
     return app;
