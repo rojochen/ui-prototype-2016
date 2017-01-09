@@ -134,6 +134,14 @@ define(['btModule'], function (btModule) {
                 // $scope.alertMassege = "New item add on list successfully!!";
             };
 
+            // -----編輯-----
+            $scope.editInfo = function (x) {
+                $scope.info = {
+                    'marginSort': x.marginSort,
+                    'marginMoney': x.marginMoney,
+                };
+            };
+
         }
     ]);
     return app;
