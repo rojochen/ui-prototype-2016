@@ -47,6 +47,37 @@ define(['btModule'], function (btModule) {
             };
             /* end */
 
+            /* 查詢活動期間 begin */
+            $('#activityGroupTime-1').daterangepicker({
+                singleDatePicker: true,
+                // calender_style: "picker_4"
+            }, function (start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+            });
+
+            $('#activityGroupTime-2').daterangepicker({
+                singleDatePicker: true,
+                // calender_style: "picker_4"
+            }, function (start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+            });
+            /* 查詢活動期間 end */
+            /* 新增活動期間 begin */
+            $('#activityGroupTime-3').daterangepicker({
+                singleDatePicker: true,
+                // calender_style: "picker_4"
+            }, function (start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+            });
+
+            $('#activityGroupTime-4').daterangepicker({
+                singleDatePicker: true,
+                // calender_style: "picker_4"
+            }, function (start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+            });
+            /* 新增活動期間 end */
+
             /* 活動群組表格 begin */
             var opt = {
                 "oLanguage": {
@@ -66,9 +97,9 @@ define(['btModule'], function (btModule) {
                 },
                 "searching": false,
                 "bInfo": false,
-                "bPaginate": false
-                    // "scrollX": true,
-                    // "scrollY": true
+                "bPaginate": true
+                // "scrollX": true,
+                // "scrollY": true
             };
 
             $timeout(function () {
@@ -146,6 +177,76 @@ define(['btModule'], function (btModule) {
                 "activityGroupTime": "2014/6/6 ～ 2030/12/31",
                 "activityGroupRole": "sandyh",
                 "activityGroupDate": "2014/6/6 14:27"
+            }, {
+                "activityGroupSorting": "11",
+                "activityGroupID": "G0129",
+                "activityGroupName": "企業3G無線飆網經銷_設備",
+                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
+                "activityGroupRole": "sandyh",
+                "activityGroupDate": "2014/6/6 14:27"
+            }, {
+                "activityGroupSorting": "12",
+                "activityGroupID": "G0041",
+                "activityGroupName": "Program D BST",
+                "activityGroupTime": "2014/5/12 ～ 2014/5/30",
+                "activityGroupRole": "ejchen",
+                "activityGroupDate": "2014/5/6 10:36"
+            }, {
+                "activityGroupSorting": "13",
+                "activityGroupID": "G0063",
+                "activityGroupName": "4G續約-長期免預繳方案",
+                "activityGroupTime": "2014/5/26 ～ 2030/12/31",
+                "activityGroupRole": "ejchen",
+                "activityGroupDate": "2014/5/26 18:47"
+            }, {
+                "activityGroupSorting": "14",
+                "activityGroupID": "G0064",
+                "activityGroupName": "新啟用-4G SIM Alone",
+                "activityGroupTime": "2014/5/28 ～ 2030/12/31",
+                "activityGroupRole": "sfan",
+                "activityGroupDate": "2014/5/28 10:34"
+            }, {
+                "activityGroupSorting": "15",
+                "activityGroupID": "G0101",
+                "activityGroupName": "4G-企業客戶智慧手機專案",
+                "activityGroupTime": "2014/6/1 ～ 2030/12/31",
+                "activityGroupRole": "lhyang",
+                "activityGroupDate": "2014/6/1 10:30"
+            }, {
+                "activityGroupSorting": "16",
+                "activityGroupID": "G0102",
+                "activityGroupName": "4G-企業客戶專案",
+                "activityGroupTime": "2014/6/1 ～ 2030/12/31",
+                "activityGroupRole": "lhyang",
+                "activityGroupDate": "2014/6/1 10:31"
+            }, {
+                "activityGroupSorting": "17",
+                "activityGroupID": "G0103",
+                "activityGroupName": "4G-企業客戶門市專案",
+                "activityGroupTime": "2014/6/1 ～ 2030/12/31",
+                "activityGroupRole": "sandyh",
+                "activityGroupDate": "2016/11/29 15:13"
+            }, {
+                "activityGroupSorting": "18",
+                "activityGroupID": "G0104",
+                "activityGroupName": "4G-企業客戶委外續約專案",
+                "activityGroupTime": "2014/6/1 ～ 2030/12/31",
+                "activityGroupRole": "sandyh",
+                "activityGroupDate": "2016/11/29 15:13"
+            }, {
+                "activityGroupSorting": "19",
+                "activityGroupID": "G0105",
+                "activityGroupName": "4G-企業客戶A手機專案",
+                "activityGroupTime": "2014/6/1 ～ 2030/12/31",
+                "activityGroupRole": "lhyang",
+                "activityGroupDate": "2014/6/1 10:33"
+            }, {
+                "activityGroupSorting": "20",
+                "activityGroupID": "G0126",
+                "activityGroupName": "企業3G無線飆網_單門號",
+                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
+                "activityGroupRole": "sandyh",
+                "activityGroupDate": "2014/6/6 14:26"
             }];
 
             $('#datatable_activityGroup').DataTable().destroy();
