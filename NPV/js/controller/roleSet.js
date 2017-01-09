@@ -47,10 +47,10 @@ define(['btModule'], function (btModule) {
                         "sLast": "尾頁"
                     },
                 },
-                "searching": false,
-                "bInfo": false,
-                "bPaginate": false
-                    // "scrollX": true,
+                 "searching": false,
+                "bInfo": true,
+                "bPaginate": true,
+                "bLengthChange": false
 
             };
 
