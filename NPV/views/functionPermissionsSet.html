@@ -31,7 +31,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="col-md-6 col-sm-6 col-xs-12"><br></div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#Modal3">套用</button>
+                            <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#ApplyMechanically">套用</button>
                             <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#Modal3">重置</button>
                             <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#Modal2">修改</button>
                             <button type="button" class="btn btn-info btn-default pull-right">新增</button>
@@ -286,16 +286,56 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="col-md-12 col-sm-12 col-xs-12">
+                <!--<div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="col-md-6 col-sm-6 col-xs-12"><br></div>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <button type="button" class="btn btn-info btn-default pull-right">取消</button>
                         <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#Modal2">重置</button>
                         <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#Modal3">確認</button>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
     <!-- End to do list -->
+    <!--6 套用modal-->
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="modal fullscreen-modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="ApplyMechanically">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                      
+                            <h4 class=" modal-title " id="myModalLabel ">套用</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal form-label-left" style="margin-top:20px;">
+                            <!-- begin 表格 -->
+                            <table id="datatable_functionPermissionSet" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="table-header-color">使用者角色ID
+                                        </th>
+                                        <th class="table-header-color">使用者角色名稱
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in roleTableData track by $index">
+                                        <td ng-bind="x.roleId"></td>
+                                        <td ng-bind="x.roleName"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- end 表格 -->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">確定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end 套用modal--->
 </div>
