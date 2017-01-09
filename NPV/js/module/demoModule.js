@@ -56,7 +56,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/functionPermissionsSet', {
 				templateUrl: "../NPV/views/functionPermissionsSet.html"
 			})
-
+			.when('/activityGroup', {
+				templateUrl: "../NPV/views/activityGroup.html"
+			})
 
 
 
