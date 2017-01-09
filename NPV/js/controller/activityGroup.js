@@ -97,9 +97,8 @@ define(['btModule'], function (btModule) {
                 },
                 "searching": false,
                 "bInfo": false,
-                "bPaginate": true
-                // "scrollX": true,
-                // "scrollY": true
+                "bPaginate": true,
+                "bLengthChange": false
             };
 
             $timeout(function () {
