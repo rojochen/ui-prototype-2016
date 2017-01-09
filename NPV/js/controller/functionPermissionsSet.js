@@ -192,6 +192,10 @@ define(['btModule'], function (btModule) {
                 $('#datatable_functionPermissionSet').DataTable(opt);
             }, 100)
 
+            $timeout(function () {
+                $('#datatable_functionPermissionSet2').DataTable(opt);
+            }, 100)
+
             $scope.roleTableData = [{
                 "roleId": "1",
                 "roleName": "System Admin",
