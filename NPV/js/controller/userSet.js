@@ -51,8 +51,9 @@ define(['btModule'], function (btModule) {
                     },
                 },
                 "searching": false,
-                "bInfo": false,
-                "bPaginate": false,
+                "bInfo": true,
+                "bPaginate": true,
+                "bLengthChange": false
 
                 // "scrollX": true,
                 // "scrollY": true
@@ -244,9 +245,9 @@ define(['btModule'], function (btModule) {
             /* begin */
             $scope.multiselectControl = false;
             $scope.showMultiselect = function () {
-                    $scope.multiselectControl = true;
-                }
-                /* end */
+                $scope.multiselectControl = true;
+            }
+            /* end */
 
 
         }
