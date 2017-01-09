@@ -30,13 +30,13 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
-                                <button type="button" class="btn btn-primary"  ng-click="showTable()">查詢</button>
-                                <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#Modal14-2">新增</button>
+                                <button type="button" class="btn btn-primary" ng-click="showTable()">查詢</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal14-2">新增</button>
                                 <button type="button" class="btn btn-primary">重置</button>
                             </div>
                         </div>
                         <br>
-                        <div class="form-group" ng-show="tableControl">
+                        <!--<div class="form-group" ng-show="tableControl">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table class="table table-striped table-bordered dataTable no-footer">
                                     <thead>
@@ -112,7 +112,32 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        </div>-->
+                        <!-- begin 保證金設定表格 -->
+                        <table id="datatable_marginSet" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="table-header-color">排序</th>
+                                    <th class="table-header-color">保證金金額</th>
+                                    <th class="table-header-color">修改人員</th>
+                                    <th class="table-header-color">修改日期</th>
+                                    <th class="table-header-color">編輯</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in marginSetTableData track by $index">
+                                    <td ng-bind="x.marginSort"></td>
+                                    <td ng-bind="x.marginMoney"></td>
+                                    <td ng-bind="x.modifyPersonnel"></td>
+                                    <td ng-bind="x.modifyDate"></td>
+                                    <td>
+                                        <button type="button" class="btn  btn-info btn-xs"><i class="fa fa-pencil"></i> 修改</button>
+                                        <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal" ata-toggle="modal" data-target="#Modal3-1"><i class="glyphicon glyphicon-remove"></i> 刪除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- end 保證金設定表格 -->
                     </form>
                     <!-- 14-2 -->
                     <div class="modal fade bs-example-modal-lg" id="Modal14-2" tabindex="-1" role="dialog">
@@ -124,31 +149,25 @@
                                     <h4 class="modal-title" id="14-2"></h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="form-horizontal form-label-left">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">保證金金額</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+                                    <div class="container">
+                                        <form class="form-horizontal form-label-left">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">保證金金額</label>
                                                 <div class="col-md-5 col-sm-5">
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                                <label class="text-center col-md-2 col-sm-2" for="">～</label>
-                                                <div class="col-md-5 col-sm-5">
-                                                    <input type="text" class="form-control">
+                                                    <input type="text" class="form-control" ng-model="newMarginSetTableData.marginMoney">
                                                 </div>
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="">排序</label>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
+                                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12" ng-model="newMarginSetTableData.marginSort">
+                                                </div>
                                             </div>
-                                            <div class="col-md-offset-8 col-sm-offset-8"></div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="saveMarginSetTable()">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
