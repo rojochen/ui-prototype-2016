@@ -35,26 +35,88 @@ define(['btModule'], function (btModule) {
             $scope.btnShow1 = true;
             $scope.btnShow2 = false;
             $scope.advancedSearch = function () {
-                    if ($scope.advancedControl) {
-                        $scope.advancedControl = false;
-                        $scope.btnShow1 = true;
-                        $scope.btnShow2 = false;
-                    } else {
-                        $scope.advancedControl = true;
-                        $scope.btnShow1 = false;
-                        $scope.btnShow2 = true;
-                    }
+                if ($scope.advancedControl) {
+                    $scope.advancedControl = false;
+                    $scope.btnShow1 = true;
+                    $scope.btnShow2 = false;
+                } else {
+                    $scope.advancedControl = true;
+                    $scope.btnShow1 = false;
+                    $scope.btnShow2 = true;
                 }
-                /* end */
+            };
+            /* end */
+
+            /* 促銷活動類型表格 begin */
+            var opt = {
+                "oLanguage": {
+                    "sProcessing": "處理中...",
+                    "sLengthMenu": "顯示 _MENU_ 項結果",
+                    "sZeroRecords": "沒有匹配結果",
+                    "sInfo": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                    "sInfoEmpty": "顯示第 0 至 0 項結果，共 0 項",
+                    "sInfoFiltered": "(從 _MAX_ 項結果過濾)",
+                    "sSearch": "搜索:",
+                    "oPaginate": {
+                        "sFirst": "首頁",
+                        "sPrevious": "上一頁",
+                        "sNext": "下一頁",
+                        "sLast": "尾頁"
+                    },
+                },
+                "searching": false,
+                "bInfo": false,
+                "bPaginate": false
+                    // "scrollX": true,
+                    // "scrollY": true
+            };
+
+            $timeout(function () {
+                $('#datatable_activityType').DataTable(opt);
+            }, 100)
+
+            // 表格內容資料
+            $scope.activityTypeTableData = [{
+                "activityTypeSorting": "1",
+                "activityTypeID": "1",
+                "activityTypeName": "通話優惠",
+                "activityTypeRole": "SPV",
+                "activityTypeDate": "08-3月 -10"
+            }, {
+                "activityTypeSorting": "2",
+                "activityTypeID": "2",
+                "activityTypeName": "手機專案",
+                "activityTypeRole": "SPV",
+                "activityTypeDate": "08-3月 -10"
+            }, {
+                "activityTypeSorting": "3",
+                "activityTypeID": "3",
+                "activityTypeName": "i-mode手機專案/雙倍加值專案",
+                "activityTypeRole": "SPV",
+                "activityTypeDate": "08-3月 -10"
+            }, {
+                "activityTypeSorting": "4",
+                "activityTypeID": "4",
+                "activityTypeName": "禮品方案",
+                "activityTypeRole": "ejchen",
+                "activityTypeDate": "23-9月 -16"
+            }, {
+                "activityTypeSorting": "5",
+                "activityTypeID": "5",
+                "activityTypeName": "HappyGo點數卡",
+                "activityTypeRole": "SPV",
+                "activityTypeDate": "08-3月 -10"
+            }];
+
+            $('#datatable_activityType').DataTable().destroy();
+            /* 促銷活動類型表格 end */
 
             /* begin */
             $scope.tableControl = false;
             $scope.showTable = function () {
-                    $scope.tableControl = true;
-                }
-                /* end */
-
-
+                $scope.tableControl = true;
+            };
+            /* end */
         }
     ]);
     return app;
