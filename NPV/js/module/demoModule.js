@@ -62,7 +62,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/numberType', {
 				templateUrl: "../NPV/views/numberType.html"
 			})
-
+			.when('/promotingGenerationType', {
+				templateUrl: "../NPV/views/promotingGenerationType.html"
+			})
 
 
 
