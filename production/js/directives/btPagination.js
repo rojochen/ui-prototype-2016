@@ -7,10 +7,12 @@ define(['btModule'], function (btModule) {
         function link(scope, element, attrs){
             var totalCount = scope.ngModel.totalCount,
                 pageSize = Number.isNaN(Number.parseInt(attrs['pageSize']))?10:Number.parseInt(attrs['pageSize']),
-                pageCount = Number.isNaN(Number.parseInt(attrs['pageCount']))?5:Number.parseInt(attrs['pageCount']);
+                pageCount = Number.isNaN(Number.parseInt(attrs['pageCount']))?5:Number.parseInt(attrs['pageCount']),
+                currentPage = Number.isNaN(Number.parseInt(attrs['currentPage']))?1:Number.parseInt(attrs['currentPage']);
             // console.log(totalCount);
             // console.log(pageSize);
             // console.log(pageCount);
+            // console.log(currentPage);
 
             scope.changePage = function(x){
                 // console.log(x);
@@ -47,7 +49,11 @@ define(['btModule'], function (btModule) {
                 scope.page = x;
                 scope.startList = (x-1)*pageSize+1;
                 scope.endList = (totalCount < x*pageSize)?totalCount:x*pageSize;
-
+                
+                scope.onChangePage({e:{
+                    pageSize: pageSize,
+                    currentPage: x
+                }});
             }
             
             scope.changeFirst = function(){
@@ -84,14 +90,15 @@ define(['btModule'], function (btModule) {
                 }
                 // console.log(scope.pageArray);
 
-                scope.changePage(1);
+                scope.changePage(currentPage);
             }
         }
 
         return {
             restrict: 'A',
             scope: {
-                ngModel: '='
+                ngModel: '=',
+                onChangePage: "&"
             },
             link: link,
             template: `<ul class="pagination" ng-show="isShowPagination">

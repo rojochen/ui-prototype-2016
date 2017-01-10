@@ -575,6 +575,9 @@ define(['btModule'], function (btModule) {
         "list": "View"
       }]
     };
+    $scope.eventChange = function(e){
+      console.log(e);
+    };
   }
   app.controller('paginationCtrl', paginationCtrl);
 

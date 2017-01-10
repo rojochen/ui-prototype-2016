@@ -21,9 +21,15 @@
 	<div class="row">
 		<div class="col-md-12 col-sm-12 col-xs-12">
 			<bt-portlet titlename="'分頁設計'" refreshbtn="true" switchbtn="true" selectbtn="true" closebtn="true">
-				<p>可藉由bt-pagination這個directive新增分頁。</p>
-				<p>其中，page-size可設定一頁顯示幾筆資料，預設10筆。page-count可設定一次顯示幾個分頁按鈕，預設5個。</p>
-				<p><code>&lt;div <strong>bt-pagination</strong> ng-model="tableInfo" <strong>page-size</strong>="4" <strong>page-count</strong>="3"&gt;&lt;/div&gt;</code></p>
+				<p>可藉由bt-pagination這個directive新增分頁功能。</p>
+				<p>說明如下：</p>
+				<ol>
+					<li>page-size可設定一頁顯示幾筆資料，預設10筆。</li>
+					<li>page-count可設定一次顯示幾個分頁按鈕，預設5個。</li>
+					<li>current-page指定當前顯示第幾頁，預設第1頁。</li>
+					<li>on-change-page，更換頁面事件，提供當前分頁參數。</li>
+				</ol>
+				<p><code>&lt;div <strong>bt-pagination</strong> ng-model="tableInfo" <strong>page-size</strong>="4" <strong>page-count</strong>="3" <strong>current-page</strong>="2" <strong>on-change-page</strong>="eventChange(e)"&gt;&lt;/div&gt;</code></p>
 				<!--<div class="table-responsive">
 					<table class="table table-striped jambo_table bulk_action">
 						<thead>
@@ -52,7 +58,7 @@
 				</div>-->
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="pull-right">
-						<div bt-pagination ng-model="tableInfo" page-size="4" page-count="3"></div>
+						<div bt-pagination ng-model="tableInfo" page-size="4" page-count="3" current-page="2" on-change-page="eventChange(e)"></div>
 					</div>
 				</div>
 			</bt-portlet>
