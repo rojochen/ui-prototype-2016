@@ -7,7 +7,7 @@ define(['btModule'], function (btModule) {
 
     });
 
-    app.controller('marginSetCtrl', ['$scope', '$timeout', '$log', '$element',
+    app.controller('numberTypeCtrl', ['$scope', '$timeout', '$log', '$element',
         'ShoppingCartEntity',
         function ($scope, $timeout, $log, $element, shoppingCartEntity) {
             var vm = this;

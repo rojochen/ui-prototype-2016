@@ -1,0 +1,295 @@
+<div class="page-no-title">
+</div>
+<div class="row" ng-controller="marginSetCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>保證金設定</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">保證金金額</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-5">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <label class="text-center col-md-2 col-sm-2">～</label>
+                                    <div class="col-md-5 col-sm-5">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
+                                <button type="button" class="btn btn-primary">查詢</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">新增</button>
+                                <button type="button" class="btn btn-primary">重置</button>
+                            </div>
+                        </div>
+                        <br>
+                        <table id="datatable_marginSet" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="table-header-color">排序</th>
+                                    <th class="table-header-color">保證金金額</th>
+                                    <th class="table-header-color">修改人員</th>
+                                    <th class="table-header-color">修改日期</th>
+                                    <th class="table-header-color">編輯</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in marginSetTableData track by $index">
+                                    <td ng-bind="x.marginSort"></td>
+                                    <td ng-bind="x.marginMoney"></td>
+                                    <td ng-bind="x.modifyPersonnel"></td>
+                                    <td ng-bind="x.modifyDate"></td>
+                                    <td>
+                                        <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" data-target="#editModal"><i class="fa fa-pencil"></i> 修改</button>
+                                        <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal" data-toggle="modal" data-target="#deleteModal"><i class="glyphicon glyphicon-remove"></i> 刪除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- end 保證金設定表格 -->
+                    </form>
+                    <!-- 新增畫面-->
+                    <div class="modal fade bs-example-modal-lg" id="addModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title" id="14-2"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <form class="form-horizontal form-label-left">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">保證金金額</label>
+                                                <div class="col-md-5 col-sm-5">
+                                                    <input type="text" class="form-control" ng-model="newMarginSetTableData.marginMoney">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
+                                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12" ng-model="newMarginSetTableData.marginSort">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#addConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 新增畫面 end -->
+                    <!-- 新增確認畫面 -->
+                    <div class="modal fade bs-example-modal-lg" id="addConfirm" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+                                    <h4 class="modal-title" id="13-2">確認畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定新增?</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="saveMarginSetTable()" data-toggle="modal" data-target="#addComplete">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 新增確認畫面-->
+                    <!-- 新增完成 -->
+                    <div class="modal fade bs-example-modal-lg" id="addComplete" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>新增完成</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 新增確認畫面-->
+                    <!-- 修改畫面-->
+                    <div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <form class="form-horizontal form-label-left">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">保證金金額</label>
+                                                <div class="col-md-5 col-sm-5">
+                                                    <input type="text" class="form-control" ng-model="info.marginMoney">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
+                                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12" ng-model="info.marginSort">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改畫面 end -->
+                    <!-- 修改確認畫面 modal -->
+                    <div class="modal fade bs-example-modal-lg" id="editConfirm" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+                                    <h4 class="modal-title">確認畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定修改?</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editComplete">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 修改確認畫面  modal -->
+                    <!-- 修改完成 -->
+                    <div class="modal fade bs-example-modal-lg" id="editComplete" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>修改完成</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改完成 end -->
+                    <!-- 確認畫面 刪除 modal -->
+                    <div class="modal fade bs-example-modal-lg" id="deleteModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+                                    <h4 class="modal-title">確認畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定刪除?</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#deleteComplete">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 確認畫面 修改 modal -->
+                    <!-- 修改完成 -->
+                    <div class="modal fade bs-example-modal-lg" id="deleteComplete" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>刪除完成</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改完成 end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
