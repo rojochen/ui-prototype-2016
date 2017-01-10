@@ -260,9 +260,39 @@ define(['btModule'], function (btModule) {
 
             // $('#datatable_editGroup').DataTable().destroy();
 
-            $timeout(function () {
-                $('#datatable_editGroup').DataTable(opt2);
-            }, 100)
+
+
+
+            // $timeout(function () {
+            //         $('#datatable_editGroup').DataTable(opt2);
+            //     }, 100)
+
+
+            $scope.editGroup = function () {
+                $timeout(function () {
+                    // $('#addModal').modal('hide');
+                    $('#editGroup').modal('show');
+                }, 400);
+
+            }
+
+            $scope.addGroup = function () {
+                $timeout(function () {
+                    // $('#addModal').modal('hide');
+                    // $('#editGroup').modal('hide');
+                    $('#addGroup').modal('show');
+                }, 400);
+            }
+
+            $scope.addGroupConfirm = function () {
+                $timeout(function () {
+                    $('#addGroup').modal('hide');
+                    $('#editGroup').modal('show');
+                }, 400);
+
+            }
+
+
 
         }
     ]);
