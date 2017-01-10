@@ -32,9 +32,9 @@
                         <div class="col-md-6 col-sm-6 col-xs-12"><br></div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#ApplyMechanically">套用</button>
-                            <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#Modal3">重置</button>
-                            <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#Modal2">修改</button>
-                            <button type="button" class="btn btn-info btn-default pull-right">新增</button>
+                            <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#resetModal">重置</button>
+                            <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#editModal">修改</button>
+                            <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#addModal">新增</button>
                         </div>
                     </div>
                     <!-- begin 表格 -->
@@ -55,95 +55,6 @@
                         </tbody>
                     </table>
                     <!-- end 表格 -->
-                    <!-- 確認畫面 新增 modal -->
-                    <div class="modal fade bs-example-modal-lg" id="Modal1" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <h4 class="modal-title" id="13-2">確認畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-3"></div>
-                                        <div class="col-md-6" style="font-size:30px;">
-                                            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> 確定新增角色嗎？
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end 確認畫面 新  -->
-                    <!-- 確認畫面 修改 modal -->
-                    <div class="modal fade bs-example-modal-lg" id="Modal2" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <h4 class="modal-title" id="13-2">確認畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-3"></div>
-                                        <div class="col-md-6" style="font-size:30px;">
-                                            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> 確定修改角色嗎？
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end 確認畫面 新  -->
-                    <!-- 確認畫面 刪除 modal -->
-                    <div class="modal fade bs-example-modal-lg" id="Modal3" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <h4 class="modal-title" id="13-2">確認畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-3"></div>
-                                        <div class="col-md-6" style="font-size:30px;">
-                                            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> 確定刪除角色嗎？
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end 確認畫面 新  -->
                 </form>
             </div>
         </div>
@@ -298,6 +209,90 @@
         </div>
     </div>
     <!-- End to do list -->
+    <!-- 確認畫面 新增 modal -->
+    <div class="modal fade bs-example-modal-lg" id="addModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">確認畫面</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <br>
+                        <div class="col-md-12 text-center">
+                            <h3>確定新增角色嗎？</h3>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end 確認畫面 新  -->
+    <!-- 確認畫面 修改 modal -->
+    <div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">確認畫面</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <br>
+                        <div class="col-md-12 text-center">
+                            <h3>確定修改角色嗎？</h3>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end 確認畫面 新  -->
+    <!-- 確認畫面 刪除 modal -->
+    <div class="modal fade bs-example-modal-lg" id="resetModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">確認畫面</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <br>
+                        <div class="col-md-12 text-center">
+                            <h3>確定重置角色嗎？</h3>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end 確認畫面 新  -->
     <!--6 套用modal-->
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="ApplyMechanically">
