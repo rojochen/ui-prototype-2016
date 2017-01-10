@@ -82,48 +82,76 @@ define(['btModule'], function (btModule) {
 
             };
 
-            $scope.marginSetTableData = [{
-                "marginSort": "1",
-                "marginMoney": "2400",
+            $scope.numberTypeTableData = [{
+                "numberTypeSort": "3",
+                "codeNumber": "2G",
+                "numberType": "2G",
+                "specialNumberType": "N",
                 "modifyPersonnel": "SPV",
-                "modifyDate": "08-3月 -10"
+                "modifyDate": "04-3月 -13"
             }, {
-                "marginSort": "2",
-                "marginMoney": "3000",
+                "numberTypeSort": "2",
+                "codeNumber": "3G",
+                "numberType": "3G",
+                "specialNumberType": "N",
                 "modifyPersonnel": "SPV",
-                "modifyDate": "08-3月 -10"
+                "modifyDate": "02-4月 -12"
             }, {
-                "marginSort": "3",
-                "marginMoney": "0",
+                "numberTypeSort": "5",
+                "codeNumber": "wala",
+                "numberType": "全虹",
+                "specialNumberType": "Y",
                 "modifyPersonnel": "SPV",
-                "modifyDate": "08-3月 -10"
+                "modifyDate": "31-3月 -14"
             }, {
-                "marginSort": "4",
-                "marginMoney": "1200",
+                "numberTypeSort": "7",
+                "codeNumber": "K",
+                "numberType": "KG",
+                "specialNumberType": "N",
                 "modifyPersonnel": "SPV",
-                "modifyDate": "03-4月 -10"
+                "modifyDate": "09-12月 -15"
             }, {
-                "marginSort": "5",
-                "marginMoney": "2000",
+                "numberTypeSort": "6",
+                "codeNumber": "X",
+                "numberType": "Non SIM",
+                "specialNumberType": "Y",
                 "modifyPersonnel": "SPV",
-                "modifyDate": "03-4月 -10"
+                "modifyDate": "23-12月 -15"
             }, {
-                "marginSort": "5",
-                "marginMoney": "2500",
+                "numberTypeSort": "4",
+                "codeNumber": "king",
+                "numberType": "統一超商",
+                "specialNumberType": "N",
                 "modifyPersonnel": "SPV",
-                "modifyDate": "03-4月 -10"
+                "modifyDate": "23-12月 -15"
             }, {
-                "marginSort": "6",
-                "marginMoney": "1500",
+                "numberTypeSort": "1",
+                "codeNumber": "4G",
+                "numberType": "4G",
+                "specialNumberType": "N",
                 "modifyPersonnel": "SPV",
-                "modifyDate": "03-4月 -10"
+                "modifyDate": "09-12月 -15"
+            }, {
+                "numberTypeSort": "8",
+                "codeNumber": "ELD",
+                "numberType": "ELD",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "09-12月 -15"
+            }, {
+                "numberTypeSort": "9",
+                "codeNumber": "CLD",
+                "numberType": "CLD",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "31-12月 -14"
             }];
 
 
-            $('#datatable_marginSet').DataTable().destroy();
+            $('#datatable_numberType').DataTable().destroy();
 
             $timeout(function () {
-                $('#datatable_marginSet').DataTable(opt);
+                $('#datatable_numberType').DataTable(opt);
             }, 100)
 
 
