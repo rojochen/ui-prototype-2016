@@ -47,37 +47,6 @@ define(['btModule'], function (btModule) {
             };
             /* end */
 
-            /* 查詢活動期間 begin */
-            $('#activityGroupTime-1').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-
-            $('#activityGroupTime-2').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-            /* 查詢活動期間 end */
-            /* 新增活動期間 begin */
-            $('#activityGroupTime-3').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-
-            $('#activityGroupTime-4').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-            /* 新增活動期間 end */
-
             /* 活動群組表格 begin */
             var opt = {
                 "oLanguage": {
@@ -102,153 +71,88 @@ define(['btModule'], function (btModule) {
             };
 
             $timeout(function () {
-                $('#datatable_activityGroup').DataTable(opt);
+                $('#datatable_classificationOffer').DataTable(opt);
             }, 100)
 
             // 表格內容資料
-            $scope.activityGroupTableData = [{
-                "activityGroupSorting": "1",
-                "activityGroupID": "G0261",
-                "activityGroupName": "免費體驗專案",
-                "activityGroupTime": "2016/11/25 ～ 2030/12/31",
-                "activityGroupRole": "oet01",
-                "activityGroupDate": "2016/11/25 17:54"
+            $scope.classificationOfferTableData = [{
+                "classificationOfferName": "113221-POS RP 企業2001月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "26-4月 -10",
             }, {
-                "activityGroupSorting": "2",
-                "activityGroupID": "G0065",
-                "activityGroupName": "新啟用-4G Plan B",
-                "activityGroupTime": "2014/5/28 ～ 2030/12/31",
-                "activityGroupRole": "sfan",
-                "activityGroupDate": "2014/5/28 10:34"
+                "classificationOfferName": "113218-POS RP 超值598月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "26-4月 -10",
             }, {
-                "activityGroupSorting": "3",
-                "activityGroupID": "G0066",
-                "activityGroupName": "新啟用-4G BAU",
-                "activityGroupTime": "2014/5/28 ～ 2030/12/31",
-                "activityGroupRole": "sfan",
-                "activityGroupDate": "2014/5/28 10:35"
+                "classificationOfferName": "112644-POS RC 行動上網GPRS 100型月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "26-4月 -10",
             }, {
-                "activityGroupSorting": "4",
-                "activityGroupID": "G0121",
-                "activityGroupName": "企業平板電腦",
-                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2014/6/6 14:24"
+                "classificationOfferName": "119860-POS RP 帳戶移轉專用月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "26-4月 -10",
             }, {
-                "activityGroupSorting": "5",
-                "activityGroupID": "G0122",
-                "activityGroupName": "企業iPad",
-                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2014/6/6 14:25"
+                "classificationOfferName": "148078-POS3RP 離島399月租費",
+                "classificationOfferAbbr": "離島399",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "13-1月 -11",
             }, {
-                "activityGroupSorting": "6",
-                "activityGroupID": "GG0123",
-                "activityGroupName": "企業網卡",
-                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2014/6/6 14:25"
+                "classificationOfferName": "150700-POS3RP 國內上網專用-無線飆網基本月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "21-10月-11",
             }, {
-                "activityGroupSorting": "7",
-                "activityGroupID": "G0124",
-                "activityGroupName": "企業校園_設備",
-                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2014/6/6 14:26"
+                "classificationOfferName": "150697-POS3RC 國內上網專用-無線飆網775月租費",
+                "classificationOfferAbbr": "飆網775",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "21-10月-11",
             }, {
-                "activityGroupSorting": "8",
-                "activityGroupID": "G0125",
-                "activityGroupName": "企業校園_單門號",
-                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2014/6/6 14:26"
+                "classificationOfferName": "150964-POS RC Wifly/FET Wi-Fi 199月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "10-11月-11",
             }, {
-                "activityGroupSorting": "9",
-                "activityGroupID": "G0127",
-                "activityGroupName": "企業3G無線飆網經銷_單門號",
-                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2014/6/6 14:27"
+                "classificationOfferName": "150966-POS3RC Wifly/FET Wi-Fi 199月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "10-11月-11",
             }, {
-                "activityGroupSorting": "10",
-                "activityGroupID": "G0128",
-                "activityGroupName": "企業3G無線飆網_設備",
-                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2014/6/6 14:27"
+                "classificationOfferName": "150965-POS3RC Wifly/FET Wi-Fi 計時型月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "10-11月-11",
             }, {
-                "activityGroupSorting": "11",
-                "activityGroupID": "G0129",
-                "activityGroupName": "企業3G無線飆網經銷_設備",
-                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2014/6/6 14:27"
+                "classificationOfferName": "113221-POS RP 企業2001月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "26-4月 -10",
             }, {
-                "activityGroupSorting": "12",
-                "activityGroupID": "G0041",
-                "activityGroupName": "Program D BST",
-                "activityGroupTime": "2014/5/12 ～ 2014/5/30",
-                "activityGroupRole": "ejchen",
-                "activityGroupDate": "2014/5/6 10:36"
+                "classificationOfferName": "113218-POS RP 超值598月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "26-4月 -10",
             }, {
-                "activityGroupSorting": "13",
-                "activityGroupID": "G0063",
-                "activityGroupName": "4G續約-長期免預繳方案",
-                "activityGroupTime": "2014/5/26 ～ 2030/12/31",
-                "activityGroupRole": "ejchen",
-                "activityGroupDate": "2014/5/26 18:47"
+                "classificationOfferName": "112644-POS RC 行動上網GPRS 100型月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "26-4月 -10",
             }, {
-                "activityGroupSorting": "14",
-                "activityGroupID": "G0064",
-                "activityGroupName": "新啟用-4G SIM Alone",
-                "activityGroupTime": "2014/5/28 ～ 2030/12/31",
-                "activityGroupRole": "sfan",
-                "activityGroupDate": "2014/5/28 10:34"
+                "classificationOfferName": "119860-POS RP 帳戶移轉專用月租費",
+                "classificationOfferAbbr": "",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "26-4月 -10",
             }, {
-                "activityGroupSorting": "15",
-                "activityGroupID": "G0101",
-                "activityGroupName": "4G-企業客戶智慧手機專案",
-                "activityGroupTime": "2014/6/1 ～ 2030/12/31",
-                "activityGroupRole": "lhyang",
-                "activityGroupDate": "2014/6/1 10:30"
-            }, {
-                "activityGroupSorting": "16",
-                "activityGroupID": "G0102",
-                "activityGroupName": "4G-企業客戶專案",
-                "activityGroupTime": "2014/6/1 ～ 2030/12/31",
-                "activityGroupRole": "lhyang",
-                "activityGroupDate": "2014/6/1 10:31"
-            }, {
-                "activityGroupSorting": "17",
-                "activityGroupID": "G0103",
-                "activityGroupName": "4G-企業客戶門市專案",
-                "activityGroupTime": "2014/6/1 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2016/11/29 15:13"
-            }, {
-                "activityGroupSorting": "18",
-                "activityGroupID": "G0104",
-                "activityGroupName": "4G-企業客戶委外續約專案",
-                "activityGroupTime": "2014/6/1 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2016/11/29 15:13"
-            }, {
-                "activityGroupSorting": "19",
-                "activityGroupID": "G0105",
-                "activityGroupName": "4G-企業客戶A手機專案",
-                "activityGroupTime": "2014/6/1 ～ 2030/12/31",
-                "activityGroupRole": "lhyang",
-                "activityGroupDate": "2014/6/1 10:33"
-            }, {
-                "activityGroupSorting": "20",
-                "activityGroupID": "G0126",
-                "activityGroupName": "企業3G無線飆網_單門號",
-                "activityGroupTime": "2014/6/6 ～ 2030/12/31",
-                "activityGroupRole": "sandyh",
-                "activityGroupDate": "2014/6/6 14:26"
+                "classificationOfferName": "148078-POS3RP 離島399月租費",
+                "classificationOfferAbbr": "離島399",
+                "classificationOfferRole": "SYSTEM",
+                "classificationOfferDate": "13-1月 -11",
             }];
 
-            $('#datatable_activityGroup').DataTable().destroy();
+            $('#datatable_classificationOffer').DataTable().destroy();
             /* 活動群組表格 end */
 
             /* begin */
