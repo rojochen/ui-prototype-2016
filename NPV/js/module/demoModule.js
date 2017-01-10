@@ -62,14 +62,16 @@ define(['pokemon'], function (pokemon) {
 			.when('/classificationOfferSet', {
 				templateUrl: "../NPV/views/classificationOfferSet.html"
 			})
+			.when('/agreementAdd', {
+				templateUrl: "../NPV/views/agreementAdd.html"
+			})
 
 
 
 
-
-		.otherwise({
-			redirectTo: '/'
-		});
+			.otherwise({
+				redirectTo: '/'
+			});
 	}]);
 
 	return app;
