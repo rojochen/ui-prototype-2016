@@ -59,13 +59,18 @@ define(['pokemon'], function (pokemon) {
 			.when('/activityGroup', {
 				templateUrl: "../NPV/views/activityGroup.html"
 			})
+			.when('/numberType', {
+				templateUrl: "../NPV/views/numberType.html"
+			})
 
 
 
 
-		.otherwise({
-			redirectTo: '/'
-		});
+
+
+			.otherwise({
+				redirectTo: '/'
+			});
 	}]);
 
 	return app;
