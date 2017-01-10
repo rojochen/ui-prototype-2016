@@ -76,8 +76,9 @@ define(['btModule'], function (btModule) {
                     },
                 },
                 "searching": false,
-                "bInfo": false,
-                "bPaginate": false
+                "bInfo": true,
+                "bPaginate": true,
+                "bLengthChange": false
                 // "scrollX": true,
 
             };

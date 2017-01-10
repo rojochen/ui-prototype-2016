@@ -31,7 +31,7 @@ define(['btModule'], function (btModule) {
             /*end 版面縮合*/
 
 
-            // it參數設定
+
             /* begin */
             $scope.btnShow1 = true;
             $scope.btnShow2 = false;
@@ -48,12 +48,146 @@ define(['btModule'], function (btModule) {
             }
             /* end */
 
-            /* begin */
-            $scope.tableControl = false;
-            $scope.showTable = function () {
-                $scope.tableControl = true;
-            }
-            /* end */
+            var opt = {
+                "oLanguage": {
+                    "sProcessing": "處理中...",
+                    "sLengthMenu": "顯示 _MENU_ 項結果",
+                    "sZeroRecords": "沒有匹配結果",
+                    "sInfo": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                    "sInfoEmpty": "顯示第 0 至 0 項結果，共 0 項",
+                    "sInfoFiltered": "(從 _MAX_ 項結果過濾)",
+                    "sSearch": "搜索:",
+                    "oPaginate": {
+                        "sFirst": "首頁",
+                        "sPrevious": "上一頁",
+                        "sNext": "下一頁",
+                        "sLast": "尾頁"
+                    },
+                },
+                "searching": false,
+                "bInfo": true,
+                "bPaginate": true,
+                "bLengthChange": false
+                // "scrollX": true,
+
+            };
+
+            $scope.promotingGenerationTypeTableData = [{
+                "promotingGenerationTypeSort": "3",
+                "promotingGenerationTypeCodeName": "G2",
+                "promotingGenerationType": "新啟用:(G1)",
+                "promotingGenerationTypeName": "2G啟用",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "08-3月 -10"
+            }, {
+                "promotingGenerationTypeSort": "2",
+                "promotingGenerationTypeCodeName": "G3",
+                "promotingGenerationType": "新啟用:(G1)",
+                "promotingGenerationTypeName": "3G啟用",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "08-3月 -10"
+            }, {
+                "promotingGenerationTypeSort": "7",
+                "promotingGenerationTypeCodeName": "LP",
+                "promotingGenerationType": "2轉3:(G2)",
+                "promotingGenerationTypeName": "2G月租轉3G",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "08-3月 -10"
+            }, {
+                "promotingGenerationTypeSort": "11",
+                "promotingGenerationTypeCodeName": "Li",
+                "promotingGenerationType": "2轉3:(G2)",
+                "promotingGenerationTypeName": "IF轉3G",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "03-4月 -10"
+            }, {
+                "promotingGenerationTypeSort": "12",
+                "promotingGenerationTypeCodeName": "LC",
+                "promotingGenerationType": "2轉3:(G2)",
+                "promotingGenerationTypeName": "NC轉3G",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "03-4月 -10"
+            }, {
+                "promotingGenerationTypeSort": "13",
+                "promotingGenerationTypeCodeName": "LK",
+                "promotingGenerationType": "2轉3:(G2)",
+                "promotingGenerationTypeName": "KG轉3G",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "03-4月 -10"
+            }, {
+                "promotingGenerationTypeSort": "6",
+                "promotingGenerationTypeCodeName": "L2",
+                "promotingGenerationType": "續約:(L1)",
+                "promotingGenerationTypeName": "2G續約",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "03-4月 -10"
+            }, {
+                "promotingGenerationTypeSort": "6",
+                "promotingGenerationTypeCodeName": "L2",
+                "promotingGenerationType": "續約:(L1)",
+                "promotingGenerationTypeName": "2G續約",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "03-4月 -10"
+            }, {
+                "promotingGenerationTypeSort": "6",
+                "promotingGenerationTypeCodeName": "L2",
+                "promotingGenerationType": "續約:(L1)",
+                "promotingGenerationTypeName": "2G續約",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "03-4月 -10"
+            }, {
+                "promotingGenerationTypeSort": "5",
+                "promotingGenerationTypeCodeName": "L3",
+                "promotingGenerationType": "續約:(L1)",
+                "promotingGenerationTypeName": "3G續約",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "03-4月 -10"
+            }, {
+                "promotingGenerationTypeSort": "20",
+                "promotingGenerationTypeCodeName": "X1",
+                "promotingGenerationType": "新啟用:(G1)",
+                "promotingGenerationTypeName": "MonSIM啟用",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "03-4月 -10"
+            }, {
+                "promotingGenerationTypeSort": "20",
+                "promotingGenerationTypeCodeName": "k1",
+                "promotingGenerationType": "新啟用:(G1)",
+                "promotingGenerationTypeName": "統一超商新啟用",
+                "promotingGenerationTypeIACODE": "",
+                "promotingGenerationTypeMNP": "",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "03-4月 -10"
+            }];
+
+
+            $('#datatable_promotingGenerationType').DataTable().destroy();
+
+            $timeout(function () {
+                $('#datatable_promotingGenerationType').DataTable(opt);
+            }, 100)
 
         }
     ]);
