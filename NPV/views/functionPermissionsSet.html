@@ -230,13 +230,37 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#addComplete">確定</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- end 確認畫面 新  -->
+    <!-- 新增完成 -->
+    <div class="modal fade bs-example-modal-lg" id="addComplete" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <br>
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <h3>新增完成</h3>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end 新增確認畫面-->
     <!-- 確認畫面 修改 modal -->
     <div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -258,14 +282,38 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editComplete">確定</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- end 確認畫面 新  -->
-    <!-- 確認畫面 刪除 modal -->
+    <!-- 修改完成 -->
+    <div class="modal fade bs-example-modal-lg" id="editComplete" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <br>
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <h3>修改完成</h3>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 修改完成 end -->
+    <!-- 確認畫面 重置 modal -->
     <div class="modal fade bs-example-modal-lg" id="resetModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -286,20 +334,44 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#resetComplete">確定</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end 確認畫面 新  -->
+    <!-- end 確認畫面 重置  -->
+    <!-- 重置完成 -->
+    <div class="modal fade bs-example-modal-lg" id="resetComplete" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <br>
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <h3>重置完成</h3>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 重置完成 end -->
     <!--6 套用modal-->
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="ApplyMechanically">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class=" modal-title " id="myModalLabel ">套用</h4>
+                        <h4 class=" modal-title " id="myModalLabel">套用</h4>
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal form-label-left">
@@ -324,12 +396,36 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">確定</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ApplyMechanicallyComplete">確定</button>
+                        <button type="button " class="btn btn-default " data-dismiss="modal ">取消</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- end 套用modal -->
+    <!-- 套用完成 -->
+    <div class="modal fade bs-example-modal-lg" id="ApplyMechanicallyComplete" tabindex="-1 " role="dialog ">
+        <div class="modal-dialog " role="document ">
+            <div class="modal-content ">
+                <div class="modal-body ">
+                    <div class="row ">
+                        <br>
+                        <div class="col-md-4 col-md-offset-4 text-center ">
+                            <h3>套用完成</h3>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="col-md-4 col-md-offset-4 text-center ">
+                            <button type="button " class="btn btn-primary " data-dismiss="modal ">確定</button>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 套用完成 end -->
 </div>
