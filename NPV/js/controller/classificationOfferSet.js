@@ -47,7 +47,7 @@ define(['btModule'], function (btModule) {
             };
             /* end */
 
-            /* 活動群組表格 begin */
+            /* 促代offer簡稱設定 begin */
             var opt = {
                 "oLanguage": {
                     "sProcessing": "處理中...",
@@ -153,7 +153,7 @@ define(['btModule'], function (btModule) {
             }];
 
             $('#datatable_classificationOffer').DataTable().destroy();
-            /* 活動群組表格 end */
+            /* 促代offer簡稱設定表格 end */
 
             /* begin */
             $scope.tableControl = false;
