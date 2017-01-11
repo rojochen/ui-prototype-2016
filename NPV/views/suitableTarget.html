@@ -109,7 +109,7 @@
                         </div>
                     </form>
                     <!-- it  參數設定 end -->
-                    <!-- 參數設定新增 -->
+                    <!-- 適用對象新增 -->
                     <div class="modal fade bs-example-modal-lg" id="addModal" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -117,98 +117,74 @@
                                     <button type="button" class="close" data-dismiss="modal"><span
                             aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                     </button>
-                                    <h4 class="modal-title">it參數設定設定</h4>
+                                    <h4 class="modal-title">適用對象新增</h4>
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>目錄:</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>對象名稱:</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <select class="form-control">
                                                     <option></option>
-                                                    <option>FET</option>
+                                                    <option>BAN-企業客戶</option>
+                                                    <option>VD_USERS-V+D Users</option>
+                                                    <option>WBB_BLACK_LIST-WBB不續約客戶</option>
+                                                    <option>DATA_USAGE-WBB Data usage</option>
+                                                    <option>ONCE_CONTRACT_60-同證號限三年一次(60日)</option>
+                                                    <option>VIP-VIP</option>
+                                                    <option>MNP-攜碼</option>
+                                                    <option>TENURE-年資</option>
+                                                    <option>DEVICE_CONTRACT-商品合約</option>
+                                                    <option>AGE-年齡</option>
+                                                    <option>NEWNEW-用戶身份限制條件</option>
+                                                    <option>IS_LIST-指定名單</option>
+                                                    <option>MAX_PS_ARPB-用戶證號＿ARPB</option>
+                                                    <option>MAX_PS_TENURE-用戶證號＿年資</option>
                                                 </select>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <button type="button" class="btn btn-info" data-toggle="modal" ng-click="editGroup()">編輯對象</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>對象分類:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
                                             <div class="col-md-offset-2 col-sm-offset-2"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>分類:</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>系統顯示名稱:</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <select class="form-control">
-                                                    <option></option>
-                                                    <option>F</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>類型:</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <select class="form-control">
-                                                    <option></option>
-                                                    <option>DISC_EFFECTIVE_METHOD</option>
-                                                    <option>REMOVE_METHOD</option>
-                                                    <option>VAS_VALIDITY</option>
-                                                    <option>CARRYING_AMOUNT</option>
-                                                    <option>DISC_SMS_ELEMENT</option>
-                                                    <option>DISC_MMS_ELEMENT</option>
-                                                    <option>DOMESTIC_CALLING</option>
-                                                    <option>DISC_IDD_ELEMENT</option>
-                                                    <option>DISC_OC_ELEMENT</option>
-                                                    <option>VAS_VOICE_ELEMENT</option>
-                                                    <option>VAS_VIDEO_ELEMENT</option>
-                                                    <option>DISC_GPRS_ELEMENT</option>
-                                                    <option>DISC_TAPOUT_ELEMENT</option>
-                                                    <option>DISC_TAPIN_ELEMENT</option> 
-                                                </select>
-                                            </div>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <button type="button" class="btn btn-info" ng-click="" data-toggle="modal" data-target="#editType">編輯類型</button>
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>群組:</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <select class="form-control">
-                                                    <option></option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <button type="button" class="btn btn-info" data-toggle="modal" ng-click="editGroup()">編輯群組</button>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">類別:</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" value="">主約促代
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" value="">附約促代
+                                                </label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>KEY:
+                                                備註:
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>值:
+                                                排序:
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                                <input type="text" class="form-control col-md-2 col-xs-2">
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">PARAMETMR:
-                                            </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序:</label>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-8 col-sm-offset-8"></div>
                                         </div>
                                     </form>
                                 </div>
@@ -219,8 +195,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end 參數設定新增  -->
-                    <!-- 編輯類型 -->
+                    <!-- end 適用對象新增  -->
+                    <!-- 編輯對象 -->
                     <div class="modal fade bs-example-modal-lg" id="editType" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
