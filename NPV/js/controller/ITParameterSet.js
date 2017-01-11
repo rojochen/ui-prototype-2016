@@ -284,13 +284,13 @@ define(['btModule'], function (btModule) {
                 }, 400);
             }
 
-            $scope.addGroupConfirm = function () {
-                $timeout(function () {
-                    $('#addGroup').modal('hide');
-                    $('#editGroup').modal('show');
-                }, 400);
+            // $scope.addGroupConfirm = function () {
+            //     $timeout(function () {
+            //         $('#addGroup').modal('hide');
+            //         $('#editGroup').modal('show');
+            //     }, 400);
 
-            }
+            // }
 
 
 

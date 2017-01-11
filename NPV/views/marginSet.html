@@ -150,7 +150,7 @@
                     </div>
                     <!-- end 新增完成-->
                     <!-- 修改畫面-->
-                    <div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog" ng-repeat="x in marginSetTableData track by $index">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -164,13 +164,13 @@
                                             <div class="form-group">
                                                 <label class="control-label col-md-2 col-sm-2 col-xs-12">保證金金額</label>
                                                 <div class="col-md-5 col-sm-5">
-                                                    <input type="text" class="form-control" ng-model="info.marginMoney">
+                                                    <input type="text" class="form-control" ng-model="x.marginMoney">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
                                                 <div class="col-md-2 col-sm-2 col-xs-12">
-                                                    <input type="text" class="form-control col-md-7 col-xs-12" ng-model="info.marginSort">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12" ng-model="x.marginSort">
                                                 </div>
                                             </div>
                                         </form>
@@ -263,8 +263,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end 確認畫面 修改 modal -->
-                    <!-- 修改完成 -->
+                    <!-- end 確認畫面  刪除 modal -->
+                    <!-- 刪除完成 -->
                     <div class="modal fade bs-example-modal-lg" id="deleteComplete" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -287,7 +287,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 修改完成 end -->
+                    <!-- 刪除完成 end -->
                 </div>
             </div>
         </div>
