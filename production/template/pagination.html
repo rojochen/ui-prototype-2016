@@ -58,8 +58,13 @@
 				</div>-->
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="pull-right">
-						<div bt-pagination ng-model="tableInfo" page-size="4" page-count="3" current-page="2" on-change-page="eventChange(e)"></div>
+						<div bt-pagination id="ss" ng-model="tableInfo" page-size="4" page-count="3" current-page="2" show-info="true" info-text="顯示第 0 至 0 項結果，共 0 項" on-change-page="eventChange(e)"></div>
 					</div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="pull-right">
+				        <button class="btn btn-primary" ng-click="goFirst()">go first function</button>
+				    </div>
 				</div>
 			</bt-portlet>
 		</div>

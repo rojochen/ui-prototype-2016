@@ -449,8 +449,8 @@ define(['btModule'], function (btModule) {
 
 
   //pagination頁面
-  paginationCtrl.$inject = ['$scope', '$log'];
-  function paginationCtrl($scope, $log) {
+  paginationCtrl.$inject = ['$scope', '$log', 'paginationService'];
+  function paginationCtrl($scope, $log, paginationService) {
     $scope.tableInfo = {
       "totalCount": 15,
       "result": [{
@@ -578,6 +578,11 @@ define(['btModule'], function (btModule) {
     $scope.eventChange = function(e){
       console.log(e);
     };
+    //begin goFirst
+    $scope.goFirst = function(){
+      paginationService.goFirst('ss');
+    }
+    //end goFirst
   }
   app.controller('paginationCtrl', paginationCtrl);
 

@@ -2,19 +2,26 @@ define(['btModule'], function (btModule) {
     'use strict';
     var app = angular.module("btModule");
 
-    app.directive('btPagination', function(){
-        
+    app.directive('btPagination', ['paginationService', function(paginationService){
         function link(scope, element, attrs){
             var totalCount = scope.ngModel.totalCount,
                 pageSize = Number.isNaN(Number.parseInt(attrs['pageSize']))?10:Number.parseInt(attrs['pageSize']),
                 pageCount = Number.isNaN(Number.parseInt(attrs['pageCount']))?5:Number.parseInt(attrs['pageCount']),
-                currentPage = Number.isNaN(Number.parseInt(attrs['currentPage']))?1:Number.parseInt(attrs['currentPage']);
+                currentPage = Number.isNaN(Number.parseInt(attrs['currentPage']))?1:Number.parseInt(attrs['currentPage']),
+                showInfo = (angular.isUndefined(attrs['showInfo'])?'true':attrs['showInfo']) == 'true',
+                infoText = attrs['infoText'],
+                id = attrs['id'];
             // console.log(totalCount);
             // console.log(pageSize);
             // console.log(pageCount);
             // console.log(currentPage);
+            // console.log(showInfo);
+            console.log(infoText);  //預設？try
+            // console.log(id);
+            
 
-            scope.changePage = function(x){
+            scope.changePage = function(x, isInit){
+                // console.log(isInit);
                 // console.log(x);
                 scope.showPageArray = [];
                 if(scope.pageArray.length <= pageCount){
@@ -49,11 +56,19 @@ define(['btModule'], function (btModule) {
                 scope.page = x;
                 scope.startList = (x-1)*pageSize+1;
                 scope.endList = (totalCount < x*pageSize)?totalCount:x*pageSize;
-                
-                scope.onChangePage({e:{
+                //try
+                scope.ss = '顯示第 '+ scope.startList +' 筆至第 '+ scope.endList +' 筆，共有 '+ scope.ngModel.totalCount +' 筆';
+                //try
+                scope.info = {
+                    id: id,
                     pageSize: pageSize,
                     currentPage: x
-                }});
+                }
+                paginationService.setInfo(scope.info);
+                
+                if(!isInit){
+                    scope.onChangePage({e:scope.info});
+                }
             }
             
             scope.changeFirst = function(){
@@ -76,10 +91,17 @@ define(['btModule'], function (btModule) {
                 scope.changePage(scope.pageArray.length);
             }
 
+            element.on('goFirst', function(){
+                scope.changePage(1);
+            })
 
-            if(totalCount === 0){
+
+            if(!totalCount || totalCount === 0 || !id){
                 scope.isShowPagination = false;
+                scope.isShowInfo = showInfo;
             }else{
+                console.log(infoText);  //?try
+                scope.isShowInfo = showInfo;
                 scope.isShowPagination = true;
 
                 scope.pageArray = [];
@@ -90,15 +112,16 @@ define(['btModule'], function (btModule) {
                 }
                 // console.log(scope.pageArray);
 
-                scope.changePage(currentPage);
+                scope.changePage(currentPage, 'init');
             }
+
         }
 
         return {
             restrict: 'A',
             scope: {
                 ngModel: '=',
-                onChangePage: "&"
+                onChangePage: '&'
             },
             link: link,
             template: `<ul class="pagination" ng-show="isShowPagination">
@@ -108,10 +131,10 @@ define(['btModule'], function (btModule) {
 						<li ng-class="{'disabled': page === pageArray.length}"><a href ng-click="changeNext()">下一頁 ›</a></li>
 						<li ng-class="{'disabled': page === pageArray.length}"><a href ng-click="changeLast()">最後一頁 »</a></li>
 					</ul>
-                    <p ng-show="isShowPagination">顯示第{{startList}}筆至第{{endList}}筆，共有{{ngModel.totalCount}}筆</p>
-                    <p ng-show="!isShowPagination">沒有資料...，請確認資料格式！</p>`
+                    <p ng-show="isShowPagination && isShowInfo">{{ss}}</p>
+                    <p ng-show="!isShowPagination">沒有資料或未設定id...，請確認格式！</p>`
         };
-    });
+    }])
 
     return app;
 });
