@@ -22,43 +22,23 @@
 		<div class="col-md-12 col-sm-12 col-xs-12">
 			<bt-portlet titlename="'分頁設計'" refreshbtn="true" switchbtn="true" selectbtn="true" closebtn="true">
 				<p>可藉由bt-pagination這個directive新增分頁功能。</p>
+				<p><code>&lt;bt-pagination <strong>id</strong>="ss" <strong>ng-model</strong>="tableInfo" <strong>page-size</strong>="4" <strong>page-count</strong>="3" <strong>current-page</strong>="2" <strong>show-info</strong>="true" <strong>info-text</strong>="顯示第 0 至 0 項結果，共 0 項" <strong>is-disabled</strong>="false" <strong>on-change-page</strong>="eventChange(e)"&gt;&lt;/bt-pagination&gt;</code></p>
 				<p>說明如下：</p>
 				<ol>
-					<li>page-size可設定一頁顯示幾筆資料，預設10筆。</li>
-					<li>page-count可設定一次顯示幾個分頁按鈕，預設5個。</li>
-					<li>current-page指定當前顯示第幾頁，預設第1頁。</li>
+					<li>id。(必填)</li>
+					<li>ng-model，藉此注入資料，總筆數對應key名為totalCount。(必填)</li>
+					<li>page-size，可設定一頁顯示幾筆資料，預設10筆。</li>
+					<li>page-count，可設定一次顯示幾個分頁按鈕，預設5個。</li>
+					<li>current-page，指定當前顯示第幾頁，預設第1頁。</li>
+					<li>show-info，可設定是否顯示分頁資訊，預設true。</li>
+					<li>info-text，可另外設定分頁呈現文字。</li>
+					<li>is-disabled，可設定元件是否作用，預設false。</li>
 					<li>on-change-page，更換頁面事件，提供當前分頁參數。</li>
+					<li>提供paginationService.goFirst(id Name)，設定分頁回預設第一頁。</li>
 				</ol>
-				<p><code>&lt;div <strong>bt-pagination</strong> ng-model="tableInfo" <strong>page-size</strong>="4" <strong>page-count</strong>="3" <strong>current-page</strong>="2" <strong>on-change-page</strong>="eventChange(e)"&gt;&lt;/div&gt;</code></p>
-				<!--<div class="table-responsive">
-					<table class="table table-striped jambo_table bulk_action">
-						<thead>
-							<tr class="headings">
-								<th class="column-title">單據條碼 </th>
-								<th class="column-title">開單日期 </th>
-								<th class="column-title">訂單編號 </th>
-								<th class="column-title">開單人員 </th>
-								<th class="column-title">狀態 </th>
-								<th class="column-title">總計 </th>
-								<th class="column-title no-link last"><span class="nobr">查閱</span>
-							</tr>
-						</thead>
-						<tbody>
-							<tr ng-repeat="x in tableInfo.result">
-								<td ng-bind="x.id"></td>
-								<td ng-bind="x.date"></td>
-								<td ng-bind="x.number"></td>
-								<td ng-bind="x.people"></td>
-								<td ng-bind="x.status"></td>
-								<td ng-bind="x.total"></td>
-								<td><a href="#">{{x.list}}</a></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>-->
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="pull-right">
-						<div bt-pagination id="ss" ng-model="tableInfo" page-size="4" page-count="3" current-page="2" show-info="true" info-text="顯示第 0 至 0 項結果，共 0 項" on-change-page="eventChange(e)"></div>
+						<bt-pagination id="ss" ng-model="tableInfo" page-size="4" page-count="3" current-page="2" show-info="true" info-text="顯示第 0 至 0 項結果，共 0 項" is-disabled="false" on-change-page="eventChange(e)"></bt-pagination>
 					</div>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12">

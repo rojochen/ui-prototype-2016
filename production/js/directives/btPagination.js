@@ -9,14 +9,16 @@ define(['btModule'], function (btModule) {
                 pageCount = Number.isNaN(Number.parseInt(attrs['pageCount']))?5:Number.parseInt(attrs['pageCount']),
                 currentPage = Number.isNaN(Number.parseInt(attrs['currentPage']))?1:Number.parseInt(attrs['currentPage']),
                 showInfo = (angular.isUndefined(attrs['showInfo'])?'true':attrs['showInfo']) == 'true',
-                infoText = attrs['infoText'],
+                infoText = angular.isUndefined(attrs['infoText'])?'顯示第 0 筆至第 0 筆，共有 0 筆':attrs['infoText'],
+                isDisabled = (angular.isUndefined(attrs['isDisabled'])?'false':attrs['isDisabled']) == 'true',
                 id = attrs['id'];
             // console.log(totalCount);
             // console.log(pageSize);
             // console.log(pageCount);
             // console.log(currentPage);
             // console.log(showInfo);
-            console.log(infoText);  //預設？try
+            // console.log(infoText);
+            // console.log(isDisabled);
             // console.log(id);
             
 
@@ -56,9 +58,10 @@ define(['btModule'], function (btModule) {
                 scope.page = x;
                 scope.startList = (x-1)*pageSize+1;
                 scope.endList = (totalCount < x*pageSize)?totalCount:x*pageSize;
-                //try
-                scope.ss = '顯示第 '+ scope.startList +' 筆至第 '+ scope.endList +' 筆，共有 '+ scope.ngModel.totalCount +' 筆';
-                //try
+                var infoTextArray = [];
+                infoTextArray = infoText.match(/\D+/g);
+                scope.infoText = infoTextArray[0] + scope.startList + infoTextArray[1] + scope.endList + infoTextArray[2] + scope.ngModel.totalCount + infoTextArray[3];
+                
                 scope.info = {
                     id: id,
                     pageSize: pageSize,
@@ -72,23 +75,23 @@ define(['btModule'], function (btModule) {
             }
             
             scope.changeFirst = function(){
-                scope.changePage(1);
+                if(scope.page !== 1 && !isDisabled) scope.changePage(1);
             }
 
             scope.changePre = function(){
-                if(scope.page-1 > 0){
+                if(scope.page-1 > 0 && !isDisabled){
                     scope.changePage(scope.page-1);
                 }
             }
 
             scope.changeNext = function(){
-                if(scope.page+1 <= scope.pageArray.length){
+                if(scope.page+1 <= scope.pageArray.length && !isDisabled){
                     scope.changePage(scope.page+1);
                 }
             }
 
             scope.changeLast = function(){
-                scope.changePage(scope.pageArray.length);
+                if(scope.page !== scope.pageArray.length && !isDisabled) scope.changePage(scope.pageArray.length);
             }
 
             element.on('goFirst', function(){
@@ -96,29 +99,39 @@ define(['btModule'], function (btModule) {
             })
 
 
+            element.on('$destroy', function () {
+                // console.log("on destroy");
+                scope.$destroy();
+            });
+
+
             if(!totalCount || totalCount === 0 || !id){
                 scope.isShowPagination = false;
                 scope.isShowInfo = showInfo;
             }else{
-                console.log(infoText);  //?try
                 scope.isShowInfo = showInfo;
                 scope.isShowPagination = true;
 
-                scope.pageArray = [];
-                var endPage = Math.ceil(totalCount/pageSize);
-                // console.log(endPage);
-                for (var num = 1; num <= endPage;num++){
-                    scope.pageArray.push(num);
-                }
-                // console.log(scope.pageArray);
+                if(isDisabled !== true){
+                    scope.pageArray = [];
+                    var endPage = Math.ceil(totalCount/pageSize);
+                    // console.log(endPage);
+                    for (var num = 1; num <= endPage;num++){
+                        scope.pageArray.push(num);
+                    }
+                    // console.log(scope.pageArray);
 
-                scope.changePage(currentPage, 'init');
+                    scope.changePage(currentPage, 'init');
+                }else{
+                    scope.page = 1;
+                    scope.pageArray = [''];
+                }
             }
 
         }
 
         return {
-            restrict: 'A',
+            restrict: 'E',
             scope: {
                 ngModel: '=',
                 onChangePage: '&'
@@ -131,7 +144,7 @@ define(['btModule'], function (btModule) {
 						<li ng-class="{'disabled': page === pageArray.length}"><a href ng-click="changeNext()">下一頁 ›</a></li>
 						<li ng-class="{'disabled': page === pageArray.length}"><a href ng-click="changeLast()">最後一頁 »</a></li>
 					</ul>
-                    <p ng-show="isShowPagination && isShowInfo">{{ss}}</p>
+                    <p ng-show="isShowPagination && isShowInfo">{{infoText}}</p>
                     <p ng-show="!isShowPagination">沒有資料或未設定id...，請確認格式！</p>`
         };
     }])
