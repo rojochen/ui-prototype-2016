@@ -578,11 +578,9 @@ define(['btModule'], function (btModule) {
     $scope.eventChange = function(e){
       console.log(e);
     };
-    //begin goFirst
     $scope.goFirst = function(){
       paginationService.goFirst('ss');
     }
-    //end goFirst
   }
   app.controller('paginationCtrl', paginationCtrl);
 
