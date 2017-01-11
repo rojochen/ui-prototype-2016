@@ -180,13 +180,41 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#addComplete">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#addConfirm">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end 新增畫面  -->
+                    <!-- 新增確認畫面 -->
+                    <div class="modal fade bs-example-modal-lg" id="addConfirm" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+                                    <h4 class="modal-title" id="13-2">確認畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定新增?</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="saveMarginSetTable()" data-toggle="modal" data-target="#addComplete">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 新增確認畫面-->
                     <!-- 新增完成 -->
                     <div class="modal fade bs-example-modal-lg" id="addComplete" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -211,6 +239,136 @@
                         </div>
                     </div>
                     <!-- end 新增完成-->
+                    <!-- 修改畫面  -->
+                    <div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">促代類型新增</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>促代類別:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>新啟用:(G1)</option>
+                                                    <option>2轉3:(G2)</option>
+                                                    <option>續約:(L1)</option>
+                                                    <option>2轉3:(G3)</option>
+                                                    <option>2轉3:(G4)</option>
+                                                    <option>4轉3:(G5)</option>
+                                                 </select>
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>代號:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>促代類型名稱:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>IA CODE:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">MNP:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" >
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 新增畫面  -->
+                    <!-- 修改確認畫面 modal -->
+                    <div class="modal fade bs-example-modal-lg" id="editConfirm" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+                                    <h4 class="modal-title">確認畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定修改?</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editComplete">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 修改確認畫面  modal -->
+                    <!-- 修改完成 -->
+                    <div class="modal fade bs-example-modal-lg" id="editComplete" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>修改完成</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改完成 end -->
                 </div>
             </div>
         </div>
