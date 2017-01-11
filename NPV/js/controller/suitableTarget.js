@@ -288,8 +288,14 @@ define(['btModule'], function (btModule) {
 
 
             $scope.editTarget = function () {
+
+                // $timeout(function () {
+                //     $('#datatable_editTarget').DataTable(opt2);
+                // }, 100)
+
                 $timeout(function () {
                     // $('#addModal').modal('hide');
+
                     $('#editTarget').modal('show');
                 }, 400);
 
