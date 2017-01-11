@@ -27,7 +27,29 @@
                                 <input type="text" class="form-control col-md-7 col-xs-12">
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-2">
-                                <button type="button" class="btn btn-default" style="color: #73879c">進階查詢</button>
+                                <button type="button" class="btn btn-default" style="color: #73879c" ng-click="vm.searchAdv=!vm.searchAdv">進階查詢</button>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-if="vm.searchAdv">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">是否顯示</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select class="form-control col-md-3 col-xs-12">
+                                         <option>是</option>
+                                         <option>否</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-if="vm.searchAdv">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">適用兌換方式</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select class="form-control col-md-3 col-xs-12">
+                                         <option></option>
+                                         <option>禮遇專區</option>
+                                         <option>申辦加碼禮</option>
+                                         <option>Booster</option>
+                                         <option>QR Code</option>
+                                         <option>現有客戶加碼禮</option>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">
@@ -75,7 +97,7 @@
                     <!-- 贈品/加碼活動條件類型維護 表單 end -->
                     <!-- 新增 begin -->
                     <div class="modal fade bs-example-modal-lg" id="giftActivityTypeAdd" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span
@@ -141,10 +163,10 @@
                                         </div>
                                         <div class="form-group ">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
-                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
                                                 <input type="text " class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-12"></div>
+                                            <div class="col-md-5 col-sm-5 col-xs-12"></div>
                                         </div>
                                     </form>
                                 </div>
@@ -215,7 +237,7 @@
                     <!-- 新增完成 end -->
                     <!-- 修改 begin -->
                     <div class="modal fade bs-example-modal-lg" id="giftActivityTypeEdit" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span
@@ -281,10 +303,10 @@
                                         </div>
                                         <div class="form-group ">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
-                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
                                                 <input type="text " class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-12"></div>
+                                            <div class="col-md-5 col-sm-5 col-xs-12"></div>
                                         </div>
                                     </form>
                                 </div>
