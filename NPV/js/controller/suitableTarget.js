@@ -295,11 +295,11 @@ define(['btModule'], function (btModule) {
 
             }
 
-            $scope.addGroup = function () {
+            $scope.addEditTarget = function () {
                 $timeout(function () {
                     // $('#addModal').modal('hide');
                     // $('#editGroup').modal('hide');
-                    $('#addGroup').modal('show');
+                    $('#addEditTarget').modal('show');
                 }, 400);
             }
 
