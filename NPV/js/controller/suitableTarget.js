@@ -293,11 +293,11 @@ define(['btModule'], function (btModule) {
                 //     $('#datatable_editTarget').DataTable(opt2);
                 // }, 100)
 
-                $timeout(function () {
-                    // $('#addModal').modal('hide');
+                // $timeout(function () {
+                //     // $('#addModal').modal('hide');
 
-                    $('#editTarget').modal('show');
-                }, 400);
+                //     $('#editTarget').modal('show');
+                // }, 400);
 
             }
 
