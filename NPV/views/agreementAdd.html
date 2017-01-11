@@ -24,7 +24,7 @@
                                 </select>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-2">
-                                <button type="button" class="btn btn-default" style="color: #73879c">進階查詢</button>
+                                <button type="button" class="btn btn-default" style="color: #73879c" ng-click="vm.searchAdv=!vm.searchAdv">進階查詢</button>
                             </div>
                         </div>
                         <div class="form-group">
@@ -33,6 +33,23 @@
                                 <input type="text" class="form-control col-md-7 col-xs-12">
                             </div>
                             <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group" ng-if="vm.searchAdv">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">名稱</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group" ng-if="vm.searchAdv">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">是否可修改</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select class="form-control col-md-3 col-xs-12">
+                                         <option></option>
+                                         <option>Y</option>
+                                         <option>N</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12 col-sm-12 col-xs-12 ">
@@ -53,7 +70,7 @@
                                     <th class="table-header-color">是否可修改</th>
                                     <th class="table-header-color">修改人員</th>
                                     <th class="table-header-color">修改日期</th>
-                                    <th class="table-header-color"></th>
+                                    <th class="table-header-color col-md-2 col-sm-2 col-xs-12"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -94,8 +111,8 @@
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>群組類型</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>群組類型</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <select class="form-control">
                                                     <option></option>
                                                     <option>WAIVED</option>
@@ -103,26 +120,24 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-3 col-sm-3 col-xs-2">
-                                                <button type="button" class="btn btn-default" style="color: #73879c">編輯群組</button>
+                                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#agreementAddGroup" style="color: #73879c">編輯群組</button>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>代碼</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>代碼</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>名稱</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>名稱</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>是否須輸入數量</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>是否須輸入數量</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="radio">
                                                     <label>
                                                     <input type="radio" checked value="option1" 
@@ -134,21 +149,18 @@
                                                 </label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">預設數量</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">預設數量</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-12"></div>
                                         </div>
                                         <div class="form-group ">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">排序</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
                                             <div class="col-md-2 col-sm-2 col-xs-12">
                                                 <input type="text " class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-12"></div>
                                         </div>
                                     </form>
                                 </div>
@@ -217,6 +229,145 @@
                         </div>
                     </div>
                     <!-- 新增完成 end -->
+                    <!-- 新增-編輯群組 表單 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementAddGroup" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">合約群組代碼</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">合約群組名稱</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">關閉</button>
+                                                <button type="button" class="btn btn-primary pull-right">重置</button>
+                                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#agreementEditGroupAdd">新增</button>
+                                                <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
+                                            </div>
+                                        </div>
+                                        <!-- 編輯群組表格 begin-->
+                                        <table id="datatable_agreementAddGroup" class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="table-header-color">排序</th>
+                                                    <th class="table-header-color">合約群組代碼</th>
+                                                    <th class="table-header-color">合約群組名稱</th>
+                                                    <th class="table-header-color">修改人員</th>
+                                                    <th class="table-header-color">修改日期</th>
+                                                    <th class="table-header-color"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="x in agreementAddGroupTableData track by $index">
+                                                    <td ng-bind="x.agreementAddGroupSorting"></td>
+                                                    <td ng-bind="x.agreementAddGroupID "></td>
+                                                    <td ng-bind="x.agreementAddGroupName"></td>
+                                                    <td ng-bind="x.agreementAddGroupRole"></td>
+                                                    <td ng-bind="x.agreementAddGroupDate"></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#agreementEditGroupEdit">修改</button>
+                                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#agreementAddDelConfirm">刪除</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- 編輯群組表格 end -->
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 新增-編輯群組 表單 end -->
+                    <!-- 新增-編輯群組-新增 表單 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupAdd" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true ">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組代碼</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組名稱</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">備註</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#agreementEditGroupAddConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 新增-編輯群組-新增 表單 end -->
+                    <!-- 新增-編輯群組-修改 表單 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupEdit" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true ">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組代碼</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組名稱</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">備註</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#agreementEditGroupEditConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 新增-編輯群組-修改 表單 end -->
                     <!-- 修改 begin -->
                     <div class="modal fade bs-example-modal-lg" id="agreementAddEdit" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -230,8 +381,8 @@
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>群組類型</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>群組類型</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <select class="form-control">
                                                     <option></option>
                                                     <option>WAIVED</option>
@@ -239,52 +390,41 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-3 col-sm-3 col-xs-2">
-                                                <button type="button" class="btn btn-default" style="color: #73879c">編輯群組</button>
+                                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#agreementAddEditGroup" style="color: #73879c">編輯群組</button>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>代碼</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>代碼</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>名稱</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>名稱</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>是否須輸入數量</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
-                                                <div class="radio">
-                                                    <label>
-                                                    <input type="radio" checked value="option1" 
-                                                           name="optionsRadios2"> 是
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>是否須輸入數量</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox">
                                                     </label>
-                                                    <label>
-                                                    <input type="radio" value="option2" 
-                                                           name="optionsRadios2"> 否
-                                                </label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">預設數量</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">預設數量</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-12"></div>
                                         </div>
                                         <div class="form-group ">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">排序</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
                                             <div class="col-md-2 col-sm-2 col-xs-12">
                                                 <input type="text " class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-12"></div>
                                         </div>
                                     </form>
                                 </div>
@@ -353,6 +493,259 @@
                         </div>
                     </div>
                     <!-- 修改完成 end -->
+                    <!-- 修改-編輯群組 表單 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementAddEditGroup" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">合約群組代碼</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">合約群組名稱</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">關閉</button>
+                                                <button type="button" class="btn btn-primary pull-right">重置</button>
+                                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#agreementEditGroupAdd2">新增</button>
+                                                <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
+                                            </div>
+                                        </div>
+                                        <!-- 編輯群組表格 begin-->
+                                        <table id="datatable_agreementAddEditGroup" class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="table-header-color">排序</th>
+                                                    <th class="table-header-color">合約群組代碼</th>
+                                                    <th class="table-header-color">合約群組名稱</th>
+                                                    <th class="table-header-color">修改人員</th>
+                                                    <th class="table-header-color">修改日期</th>
+                                                    <th class="table-header-color"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="x in agreementAddGroupTableData track by $index">
+                                                    <td ng-bind="x.agreementAddGroupSorting"></td>
+                                                    <td ng-bind="x.agreementAddGroupID"></td>
+                                                    <td ng-bind="x.agreementAddGroupName"></td>
+                                                    <td ng-bind="x.agreementAddGroupRole"></td>
+                                                    <td ng-bind="x.agreementAddGroupDate"></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#agreementEditGroupEdit2">修改</button>
+                                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#agreementAddDelConfirm">刪除</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- 編輯群組表格 end -->
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改-編輯群組 表單 end -->
+                    <!-- 修改-編輯群組-新增 表單 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupAdd2" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true ">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組代碼</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組名稱</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">備註</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#agreementEditGroupAddConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改-編輯群組-新增 表單 end -->
+                    <!-- 修改-編輯群組-新增-確定新增 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupAddConfirm" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定新增畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定新增？</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#agreementEditGroupAddOk">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改-編輯群組-新增-確定新增 end -->
+                    <!-- 修改-編輯群組-新增-新增完成 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupAddOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">新增完成畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>新增完成。</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改-編輯群組-新增-新增完成 end -->
+                    <!-- 修改-編輯群組-修改 表單 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupEdit2" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true ">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組代碼</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組名稱</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">備註</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#agreementEditGroupEditConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改-編輯群組-修改 表單 end -->
+                    <!-- 修改-編輯群組-修改-確定修改 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupEditConfirm" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定修改畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定修改？</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#agreementEditGroupEditOk">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改-編輯群組-修改-確定修改 end -->
+                    <!-- 修改-編輯群組-修改-修改完成 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupEditOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">修改完成畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>修改完成。</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 修改-編輯群組-修改-修改完成 end -->
                     <!-- 刪除 begin -->
                     <div class="modal fade bs-example-modal-lg" id="agreementAddDelConfirm" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
