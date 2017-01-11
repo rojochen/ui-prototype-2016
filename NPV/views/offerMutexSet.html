@@ -1,0 +1,471 @@
+<div class="page-no-title"></div>
+<div class="row" ng-controller="offerMutexSetCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>offer互斥設定維護</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <!-- offer互斥設定維護 表單 begin -->
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Offer ID</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Offer Name</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-2">
+                                <button type="button" class="btn btn-default" style="color: #73879c" ng-click="vm.searchAdv=!vm.searchAdv">進階查詢</button>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-if="vm.searchAdv">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">訊息描述</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group" ng-if="vm.searchAdv">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">是否提示警訊</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select class="form-control col-md-3 col-xs-12">
+                                         <option></option>
+                                         <option>是</option>
+                                         <option>否</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-if="vm.searchAdv">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">設定互斥原因</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 col-sm-12 col-xs-12 ">
+                                <button type="button" class="btn btn-primary pull-right">重置</button>
+                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#offerMutexSetAdd">新增</button>
+                                <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
+                            </div>
+                        </div>
+                        <!--offer互斥設定維護 表格 start -->
+                        <table id="datatable_offerMutexSet" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="table-header-color">OfferID</th>
+                                    <th class="table-header-color">OfferName</th>
+                                    <th class="table-header-color">互斥OfferID</th>
+                                    <th class="table-header-color">互斥OfferName</th>
+                                    <th class="table-header-color">訊息描述</th>
+                                    <th class="table-header-color">是否提示警訊</th>
+                                    <th class="table-header-color">設定互斥原因</th>
+                                    <th class="table-header-color">修改人員</th>
+                                    <th class="table-header-color">修改日期</th>
+                                    <th class="table-header-color"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat=" x in offerMutexSetTableData track by $index">
+                                    <td ng-bind="x.offerMutexID"></td>
+                                    <td ng-bind="x.offerMutexName"></td>
+                                    <td ng-bind="x.offerMutexMutexID"></td>
+                                    <td ng-bind="x.offerMutexMutexName"></td>
+                                    <td ng-bind="x.offerMutexMessage"></td>
+                                    <td ng-bind="x.offerMutexAlert"></td>
+                                    <td ng-bind="x.offerMutexReason"></td>
+                                    <td ng-bind="x.offerMutexRole"></td>
+                                    <td ng-bind="x.offerMutexDate"></td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#offerMutexSetEdit">修改</button>
+                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#offerMutexSetDelConfirm">刪除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- offer互斥設定維護 表格 end -->
+                        <!-- 頁籤 begin -->
+                        <div class="pull-right">
+                            <div bt-pagination ng-model="tableInfo" page-size="2" page-count="10"></div>
+                        </div>
+                        <!-- 頁籤 end -->
+                    </form>
+                    <!-- offer互斥設定維護 表單 end -->
+                    <!-- 新增 begin -->
+                    <div class="modal fade bs-example-modal-lg " id="offerMutexSetAdd " tabindex="-1 " role="dialog ">
+                        <div class="modal-dialog modal-lg " role="document ">
+                            <div class="modal-content ">
+                                <div class="modal-header ">
+                                    <button type="button " class="close " data-dismiss="modal "><span
+                            aria-hidden="true ">&times;</span><span class="sr-only ">Close</span>
+                                    </button>
+                                    <h4 class="modal-title "></h4>
+                                </div>
+                                <div class="modal-body ">
+                                    <form class="form-horizontal form-label-left ">
+                                        <div class="form-group ">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 "><span style="color:red; ">*</span>條件類型中文說明</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                                <input type="text " class="form-control col-md-7 col-xs-12 ">
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 "><span style="color:red; ">*</span>條件類型代碼</label>
+                                            <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                                <input type="text " class="form-control col-md-7 col-xs-12 ">
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 "><span style="color:red; ">*</span>是否顯示</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12 ">
+                                                <div class="radio ">
+                                                    <label>
+                                                    <input type="radio " checked value="option1 " 
+                                                           name="optionsRadios2 "> 是
+                                                    </label>
+                                                    <label>
+                                                    <input type="radio " value="option2 " 
+                                                           name="optionsRadios2 "> 否
+                                                </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12 "></div>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 ">適用兌換方式</label>
+                                            <div class="container-fluid col-md-9 col-sm-9 col-xs-12 " style="padding-left:
+                                        0px;padding-right: 0px; ">
+                                                <div class="col-md-5 ">
+                                                    <input type="text " class="form-control " placeholder="請輸入文字
+                                        " ng-model="searchText ">
+                                                        <select id="select1 " class="form-control " size="8 " multiple="multiple
+                                        " ng-model="select1 " ng-options="item for item in names | filter:searchText "></select>
+                                                </div>
+                                                <div class="col-md-2 ">
+                                                    <button type="button " class="btn btn-default col-md-12 " style="color:
+                                        #73879c ">篩選</button>
+                                                        <button type="button " id="add_all " class="btn btn-default btn-sm
+                                        col-md-12 " style="color: #73879c "><i class="glyphicon glyphicon-forward "></i></button>
+                                                            <button type="button " id="add " class="btn btn-default btn-sm col-md-12
+                                        " style="color: #73879c "><i class="glyphicon glyphicon-chevron-right "></i></button>
+                                                                <button type="button " id="remove " class="btn btn-default btn-sm col-md-12
+                                        " style="color: #73879c "><i class="glyphicon glyphicon-chevron-left "></i></button>
+                                                                    <button type="button " id="remove_all " class="btn btn-default btn-sm
+                                        col-md-12 " style="color: #73879c "><i class="glyphicon glyphicon-backward "></i></button>
+                                                </div>
+                                                <div class="col-md-5 ">
+                                                    <input type="text " class="form-control " placeholder="請輸入文字
+                                        " ng-model="searchText1 ">
+                                                        <select id="select2 " class="form-control " size="8 " multiple="multiple
+                                        " ng-model="select2 " ng-options="item for item in names1 | filter:searchText1 "></select>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12 ">備註</label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                        <textarea class="form-control " rows="3 "></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12 ">排序</label>
+                                    <div class="col-md-2 col-sm-2 col-xs-12 ">
+                                        <input type="text " class="form-control col-md-7 col-xs-12 ">
+                                    </div>
+                                    <div class="col-md-5 col-sm-5 col-xs-12 "></div>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer ">
+                                <button type="button " class="btn btn-primary " data-dismiss="modal " data-toggle="modal
+                                        " data-target="#offerMutexSetAddConfirm ">確定</button>
+                                    <button type="button " class="btn btn-default " data-dismiss="modal ">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 新增 end -->
+                <!-- 確定新增 begin -->
+                <div class="modal fade bs-example-modal-lg " id="offerMutexSetAddConfirm " tabindex="-1 " role="dialog ">
+                    <div class="modal-dialog " role="document ">
+                        <div class="modal-content ">
+                            <div class="modal-header ">
+                                <button type="button " class="close " data-dismiss="modal "><span
+                            aria-hidden="true ">&times;</span><span class="sr-only ">Close</span>
+                                    </button>
+                                <h4 class="modal-title ">確定新增畫面</h4>
+                            </div>
+                            <div class="modal-body ">
+                                <div class="row ">
+                                    <br>
+                                    <div class="col-md-4 col-md-offset-4 text-center ">
+                                        <h3>確定新增？</h3>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="modal-footer ">
+                                <button type="button " class="btn btn-primary " data-dismiss="modal " data-toggle="modal
+                                        " data-target="#offerMutexSetAddOk ">確定</button>
+                                    <button type="button " class="btn btn-default " data-dismiss="modal ">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 確定新增 end -->
+                <!-- 新增完成 begin -->
+                <div class="modal fade bs-example-modal-lg " id="offerMutexSetAddOk " tabindex="-1 " role="dialog ">
+                    <div class="modal-dialog " role="document ">
+                        <div class="modal-content ">
+                            <div class="modal-header ">
+                                <button type="button " class="close " data-dismiss="modal "><span
+                            aria-hidden="true ">&times;</span><span class="sr-only ">Close</span>
+                                    </button>
+                                <h4 class="modal-title ">新增完成畫面</h4>
+                            </div>
+                            <div class="modal-body ">
+                                <div class="row ">
+                                    <br>
+                                    <div class="col-md-4 col-md-offset-4 text-center ">
+                                        <h3>新增完成。</h3>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="modal-footer ">
+                                <button type="button " class="btn btn-primary " data-dismiss="modal ">確定</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 新增完成 end -->
+                <!-- 修改 begin -->
+                <div class="modal fade bs-example-modal-lg " id="offerMutexSetEdit " tabindex="-1 " role="dialog ">
+                    <div class="modal-dialog modal-lg " role="document ">
+                        <div class="modal-content ">
+                            <div class="modal-header ">
+                                <button type="button " class="close " data-dismiss="modal "><span
+                            aria-hidden="true ">&times;</span><span class="sr-only ">Close</span>
+                                    </button>
+                                <h4 class="modal-title "></h4>
+                            </div>
+                            <div class="modal-body ">
+                                <form class="form-horizontal form-label-left ">
+                                    <div class="form-group ">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12 "><span style="color:red; ">*</span>條件類型中文說明</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                            <input type="text " class="form-control col-md-7 col-xs-12 ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12 "><span style="color:red; ">*</span>條件類型代碼</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                            <input type="text " class="form-control col-md-7 col-xs-12 ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12 "><span style="color:red; ">*</span>是否顯示</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12 ">
+                                            <div class="radio ">
+                                                <label>
+                                                    <input type="radio " checked value="option1 " 
+                                                           name="optionsRadios2 "> 是
+                                                    </label>
+                                                <label>
+                                                    <input type="radio " value="option2 " 
+                                                           name="optionsRadios2 "> 否
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-xs-12 "></div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12 ">適用兌換方式</label>
+                                        <div class="container-fluid col-md-9 col-sm-9 col-xs-12 " style="padding-left:
+                                        0px;padding-right: 0px; ">
+                                            <div class="col-md-5 ">
+                                                <input type="text " class="form-control " placeholder="請輸入文字
+                                        " ng-model="searchText ">
+                                                    <select id="select1 " class="form-control " size="8 " multiple="multiple
+                                        " ng-model="select1 " ng-options="item for item in names | filter:searchText "></select>
+                                            </div>
+                                            <div class="col-md-2 ">
+                                                <button type="button " class="btn btn-default col-md-12 " style="color:
+                                        #73879c ">篩選</button>
+                                                    <button type="button " id="add_all " class="btn btn-default btn-sm
+                                        col-md-12 " style="color: #73879c "><i class="glyphicon glyphicon-forward "></i></button>
+                                                        <button type="button " id="add " class="btn btn-default btn-sm col-md-12
+                                        " style="color: #73879c "><i class="glyphicon glyphicon-chevron-right "></i></button>
+                                                            <button type="button " id="remove " class="btn btn-default btn-sm col-md-12
+                                        " style="color: #73879c "><i class="glyphicon glyphicon-chevron-left "></i></button>
+                                                                <button type="button " id="remove_all " class="btn btn-default btn-sm
+                                        col-md-12 " style="color: #73879c "><i class="glyphicon glyphicon-backward "></i></button>
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <input type="text " class="form-control " placeholder="請輸入文字
+                                        " ng-model="searchText1 ">
+                                                    <select id="select2 " class="form-control " size="8 " multiple="multiple
+                                        " ng-model="select2 " ng-options="item for item in names1 | filter:searchText1 "></select>
+                                            </div>
+                                    </div>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12 ">備註</label>
+                                <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                    <textarea class="form-control " rows="3 "></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12 ">排序</label>
+                                <div class="col-md-2 col-sm-2 col-xs-12 ">
+                                    <input type="text " class="form-control col-md-7 col-xs-12 ">
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-12 "></div>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-primary " data-dismiss="modal " data-toggle="modal
+                                        " data-target="#offerMutexSetEditConfirm ">確定</button>
+                                <button type="button " class="btn btn-default " data-dismiss="modal ">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 修改 end -->
+            <!-- 確定修改 begin -->
+            <div class="modal fade bs-example-modal-lg " id="offerMutexSetEditConfirm " tabindex="-1 " role="dialog ">
+                <div class="modal-dialog " role="document ">
+                    <div class="modal-content ">
+                        <div class="modal-header ">
+                            <button type="button " class="close " data-dismiss="modal "><span
+                            aria-hidden="true ">&times;</span><span class="sr-only ">Close</span>
+                                    </button>
+                            <h4 class="modal-title ">確定修改畫面</h4>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="row ">
+                                <br>
+                                <div class="col-md-4 col-md-offset-4 text-center ">
+                                    <h3>確定修改？</h3>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-primary " data-dismiss="modal " data-toggle="modal
+                                        " data-target="#offerMutexSetEditOk ">確定</button>
+                                <button type="button " class="btn btn-default " data-dismiss="modal ">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 確定修改 end -->
+            <!-- 修改完成 begin -->
+            <div class="modal fade bs-example-modal-lg " id="offerMutexSetEditOk " tabindex="-1 " role="dialog ">
+                <div class="modal-dialog " role="document ">
+                    <div class="modal-content ">
+                        <div class="modal-header ">
+                            <button type="button " class="close " data-dismiss="modal "><span
+                            aria-hidden="true ">&times;</span><span class="sr-only ">Close</span>
+                                    </button>
+                            <h4 class="modal-title ">修改完成畫面</h4>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="row ">
+                                <br>
+                                <div class="col-md-4 col-md-offset-4 text-center ">
+                                    <h3>修改完成。</h3>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-primary " data-dismiss="modal ">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 修改完成 end -->
+            <!-- 刪除 begin -->
+            <div class="modal fade bs-example-modal-lg " id="offerMutexSetDelConfirm " tabindex="-1 " role="dialog ">
+                <div class="modal-dialog " role="document ">
+                    <div class="modal-content ">
+                        <div class="modal-header ">
+                            <button type="button " class="close " data-dismiss="modal "><span
+                            aria-hidden="true ">&times;</span><span class="sr-only ">Close</span>
+                                    </button>
+                            <h4 class="modal-title ">確定刪除畫面</h4>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="row ">
+                                <br>
+                                <div class="col-md-4 col-md-offset-4 text-center ">
+                                    <h3>確定刪除？</h3>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-primary " data-dismiss="modal " data-toggle="modal
+                                        " data-target="#offerMutexSetDelOk ">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 刪除 end -->
+            <!-- 刪除完成 begin -->
+            <div class="modal fade bs-example-modal-lg " id="offerMutexSetDelOk " tabindex="-1 " role="dialog ">
+                <div class="modal-dialog " role="document ">
+                    <div class="modal-content ">
+                        <div class="modal-header ">
+                            <button type="button " class="close " data-dismiss="modal "><span
+                            aria-hidden="true ">&times;</span><span class="sr-only ">Close</span>
+                                    </button>
+                            <h4 class="modal-title ">刪除完成畫面</h4>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="row ">
+                                <br>
+                                <div class="col-md-4 col-md-offset-4 text-center ">
+                                    <h3>刪除完成。</h3>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-primary " data-dismiss="modal ">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 刪除完成 end -->
+        </div>
+    </div>
+</div>
+</div>
+</div>

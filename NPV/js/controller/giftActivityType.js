@@ -73,13 +73,6 @@ define(['btModule'], function (btModule) {
                 $('#datatable_giftActivityType').DataTable(opt);
             }, 100)
 
-            //    <td ng-bind="x.giftActivityTypeSorting"></td>
-            //                                     <td ng-bind="x.giftActivityTypeID"></td>
-            //                                     <td ng-bind="x.giftActivityTypeChinese"></td>
-            //                                     <td ng-bind="x.giftActivityTypeShow"></td>
-            //                                     <td ng-bind="x.giftActivityTypeRole"></td>
-            //                                     <td ng-bind="x.giftActivityTypeDate"></td>
-
             // 表格內容資料
             $scope.giftActivityTypeTableData = [{
                 "giftActivityTypeSorting": "101",
