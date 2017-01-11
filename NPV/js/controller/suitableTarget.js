@@ -299,6 +299,7 @@ define(['btModule'], function (btModule) {
                     $('#editTarget').modal('show');
                 }, 400);
 
+
             }
 
             $scope.addEditTarget = function () {
@@ -309,13 +310,22 @@ define(['btModule'], function (btModule) {
                 }, 400);
             }
 
-            $scope.addGroupConfirm = function () {
-                $timeout(function () {
-                    $('#addGroup').modal('hide');
-                    $('#editGroup').modal('show');
-                }, 400);
+            // $scope.addGroupConfirm = function () {
+            //     $timeout(function () {
+            //         $('#addGroup').modal('hide');
+            //         $('#editGroup').modal('show');
+            //     }, 400);
 
+            // }
+
+            $scope.aaa = function () {
+                $timeout(function () {
+                    // $('#addModal').modal('hide');
+                    // $('#editGroup').modal('hide');
+                    $('#editEditTarget').modal('show');
+                }, 400);
             }
+
 
 
 
