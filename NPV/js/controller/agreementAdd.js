@@ -115,6 +115,52 @@ define(['btModule'], function (btModule) {
             $('#datatable_agreementAdd').DataTable().destroy();
             /* 合約相關新增/維護表格 end */
 
+            /* 新增-編輯群組  begin */
+            $timeout(function () {
+                $('#datatable_agreementAddGroup').DataTable(opt);
+            }, 100)
+
+            // 新增-編輯群組 表格內容資料
+            $scope.agreementAddGroupTableData = [{
+                "agreementAddGroupSorting": "1",
+                "agreementAddGroupID": "W",
+                "agreementAddGroupName": "WAIVED",
+                "agreementAddGroupRole": "admin",
+                "agreementAddGroupDate": "2015/01/04",
+            }, {
+                "agreementAddGroupSorting": "2",
+                "agreementAddGroupID": "T",
+                "agreementAddGroupName": "TEST",
+                "agreementAddGroupRole": "admin",
+                "agreementAddGroupDate": "2015/01/04",
+            }];
+
+            $('#datatable_agreementAddGroup').DataTable().destroy();
+            /* 新增-編輯群組  end */
+
+            /* 修改-編輯群組  begin */
+            $timeout(function () {
+                $('#datatable_agreementAddEditGroup').DataTable(opt);
+            }, 100)
+
+            // 修改-編輯群組 表格內容資料
+            // $scope.agreementAddEditGroupTableData = [{
+            //     "agreementAddEditGroupSorting": "1",
+            //     "agreementAddEditGroupID": "W",
+            //     "agreementAddEditGroupName": "WAIVED",
+            //     "agreementAddEditGroupRole": "admin",
+            //     "agreementAddEditGroupDate": "2015/01/04",
+            // }, {
+            //     "agreementAddEditGroupSorting": "2",
+            //     "agreementAddEditGroupID": "T",
+            //     "agreementAddEditGroupName": "TEST",
+            //     "agreementAddEditGroupRole": "admin",
+            //     "agreementAddEditGroupDate": "2015/01/04",
+            // }];
+
+            $('#datatable_agreementAddEditGroup').DataTable().destroy();
+            /* 修改-編輯群組  end */
+
             /* begin */
             $scope.tableControl = false;
             $scope.showTable = function () {

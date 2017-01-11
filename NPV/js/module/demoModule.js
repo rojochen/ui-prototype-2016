@@ -71,7 +71,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/agreementAdd', {
 				templateUrl: "../NPV/views/agreementAdd.html"
 			})
-
+			.when('/giftActivityType', {
+				templateUrl: "../NPV/views/giftActivityType.html"
+			})
 
 
 

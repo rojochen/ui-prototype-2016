@@ -31,10 +31,11 @@
 			numberTypeCtrl: 'js/controller/numberType',
 			promotingGenerationTypeCtrl: 'js/controller/promotingGenerationType',
 			classificationOfferSetCtrl: 'js/controller/classificationOfferSet',
-			agreementAddCtrl: 'js/controller/agreementAdd'
+			agreementAddCtrl: 'js/controller/agreementAdd',
+			giftActivityTypeCtrl: 'js/controller/giftActivityType'
 		}
 	});
-	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'floatWindows', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'marginSetCtrl', 'downtimeProbabilitySetCtrl', 'ARPBSetCtrl', 'renewalDateCtrl', 'changeLimitCtrl', 'salesSetCtrl', 'systemSetCtrl', 'classificationSetCtrl', 'activityClassificationCtrl', 'activityTypeCtrl', 'functionPermissionsSetCtrl', 'activityGroupCtrl', 'numberTypeCtrl', 'promotingGenerationTypeCtrl', 'classificationOfferSetCtrl', 'agreementAddCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, floatWindows, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, marginSetCtrl, downtimeProbabilitySetCtrl, ARPBSetCtrl, renewalDateCtrl, changeLimitCtrl, salesSetCtrl, systemSetCtrl, classificationCtrl, activityClassificationCtrl, activityTypeCtrl, functionPermissionsSetCtrl, activityGroupCtrl, numberTypeCtrl, promotingGenerationTypeCtrl, classificationOfferSetCtrl, agreementAddCtrl) {
+	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'floatWindows', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'marginSetCtrl', 'downtimeProbabilitySetCtrl', 'ARPBSetCtrl', 'renewalDateCtrl', 'changeLimitCtrl', 'salesSetCtrl', 'systemSetCtrl', 'classificationSetCtrl', 'activityClassificationCtrl', 'activityTypeCtrl', 'functionPermissionsSetCtrl', 'activityGroupCtrl', 'numberTypeCtrl', 'promotingGenerationTypeCtrl', 'classificationOfferSetCtrl', 'agreementAddCtrl', 'giftActivityTypeCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, floatWindows, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, marginSetCtrl, downtimeProbabilitySetCtrl, ARPBSetCtrl, renewalDateCtrl, changeLimitCtrl, salesSetCtrl, systemSetCtrl, classificationCtrl, activityClassificationCtrl, activityTypeCtrl, functionPermissionsSetCtrl, activityGroupCtrl, numberTypeCtrl, promotingGenerationTypeCtrl, classificationOfferSetCtrl, agreementAddCtrl, giftActivityTypeCtrl) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
