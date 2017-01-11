@@ -103,120 +103,115 @@ define(['btModule'], function (btModule) {
 
             };
 
-            $scope.ITParameterSetTableData = [{
-                "ITParameterSetSort": "1",
-                "ITParameterSetList": "FET",
-                "ITParameterSetClassification": "F",
-                "ITParameterSetType": "DISC_EFFECTIVE_METHOD",
-                "ITParameterSetKEY": "Now",
+            $scope.suitableTargetTableData = [{
+                "suitableTargetSort": "1",
+                "suitableTargetName": "AGE-年齡",
+                "suitableTargetClassification": ">=|60",
+                "systemName": "消費者年齡60歲(含)以上",
+                "classification": ";1;2;",
                 "ITParameterSetValue": "立即",
                 "ITParameterSetPARAMETE": "",
-                "modifyPersonnel": "SPV",
+                "modifyPersonnel": "admin",
                 "modifyDate": "08-3月 -10"
             }, {
-                "ITParameterSetSort": "2",
-                "ITParameterSetList": "FET",
-                "ITParameterSetClassification": "F",
-                "ITParameterSetType": "DISC_EFFECTIVE_METHOD",
-                "ITParameterSetKEY": "cycle",
+                "suitableTargetSort": "2",
+                "suitableTargetName": "BAN-企業客戶",
+                "suitableTargetClassification": "=|36518140",
+                "systemName": "中國人壽(36518140)",
+                "classification": ";1;2;",
                 "ITParameterSetValue": "下一個cycle勿選",
                 "ITParameterSetPARAMETE": "",
-                "modifyPersonnel": "SPV",
+                "modifyPersonnel": "admin",
                 "modifyDate": "08-3月 -10"
             }, {
-                "ITParameterSetSort": "3",
-                "ITParameterSetList": "FET",
-                "ITParameterSetClassification": "F",
-                "ITParameterSetType": "REMOVE_METHOD",
-                "ITParameterSetKEY": "y",
+                "suitableTargetSort": "3",
+                "suitableTargetName": "BAN-企業客戶",
+                "suitableTargetClassification": "=|03434016",
+                "systemName": "中國人壽(03434016)",
+                "classification": ";1;2;",
                 "ITParameterSetValue": "雙向簡訊移除",
                 "ITParameterSetPARAMETE": "",
-                "modifyPersonnel": "SPV",
+                "modifyPersonnel": "admin",
                 "modifyDate": "08-3月 -10"
             }, {
-                "ITParameterSetSort": "4",
-                "ITParameterSetList": "FET",
-                "ITParameterSetClassification": "F",
-                "ITParameterSetType": "REMOVE_METHOD",
-                "ITParameterSetKEY": "N",
+                "suitableTargetSort": "4",
+                "suitableTargetName": "BAN-企業客戶",
+                "suitableTargetClassification": "=|84443471",
+                "systemName": "三商美邦人壽(84443471)",
+                "classification": ";1;2;",
                 "ITParameterSetValue": "不移除",
                 "ITParameterSetPARAMETE": "",
-                "modifyPersonnel": "SPV",
+                "modifyPersonnel": "admin",
                 "modifyDate": "08-3月 -10"
             }, {
-                "ITParameterSetSort": "5",
-                "ITParameterSetList": "FET",
-                "ITParameterSetClassification": "F",
-                "ITParameterSetType": "REMOVE_METHOD",
-                "ITParameterSetKEY": "48",
-                "ITParameterSetValue": "無限制",
-                "ITParameterSetPARAMETE": "",
-                "modifyPersonnel": "SPV",
+                "suitableTargetSort": "5",
+                "suitableTargetName": "BAN-企業客戶",
+                "suitableTargetClassification": "=|01061004",
+                "systemName": "士林靈糧堂(01061004)",
+                "classification": ";1;2;",
+                "modifyPersonnel": "admin",
                 "modifyDate": "08-3月 -10"
             }, {
-                "ITParameterSetSort": "6",
-                "ITParameterSetList": "FET",
-                "ITParameterSetClassification": "F",
-                "ITParameterSetType": "VAS_VALIDITY",
-                "ITParameterSetKEY": "49",
+                "suitableTargetSort": "6",
+                "suitableTargetName": "BAN-企業客戶",
+                "suitableTargetClassification": "=|23060248",
+                "systemName": "全家便利商店(23060248)",
+                "classification": ";1;2;",
                 "ITParameterSetValue": "一個月",
                 "ITParameterSetPARAMETE": "",
-                "modifyPersonnel": "SPV",
+                "modifyPersonnel": "admin",
                 "modifyDate": "08-3月 -10"
             }, {
-                "ITParameterSetSort": "7",
-                "ITParameterSetList": "FET",
-                "ITParameterSetClassification": "F",
-                "ITParameterSetType": "VAS_VALIDITY",
-                "ITParameterSetKEY": "50",
+                "suitableTargetSort": "7",
+                "suitableTargetName": "BAN-企業客戶",
+                "suitableTargetClassification": "=|22819125",
+                "systemName": "中部汽車(22819125)",
+                "classification": ";1;2;",
                 "ITParameterSetValue": "二個月",
                 "ITParameterSetPARAMETE": "",
-                "modifyPersonnel": "SPV",
+                "modifyPersonnel": "admin",
                 "modifyDate": "08-3月 -10"
             }, {
-                "ITParameterSetSort": "8",
-                "ITParameterSetList": "FET",
-                "ITParameterSetClassification": "F",
-                "ITParameterSetType": "VAS_VALIDITY",
-                "ITParameterSetKEY": "51",
+                "suitableTargetSort": "8",
+                "suitableTargetName": "BAN-企業客戶",
+                "suitableTargetClassification": "=|31275691",
+                "systemName": "三商電腦(31275691)",
+                "classification": ";1;2;",
                 "ITParameterSetValue": "三個月",
                 "ITParameterSetPARAMETE": "",
-                "modifyPersonnel": "SPV",
+                "modifyPersonnel": "admin",
                 "modifyDate": "08-3月 -10"
             }, {
-                "ITParameterSetSort": "9",
-                "ITParameterSetList": "FET",
-                "ITParameterSetClassification": "F",
-                "ITParameterSetType": "VAS_VALIDITY",
-                "ITParameterSetKEY": "Now",
+                "suitableTargetSort": "9",
+                "suitableTargetName": "BAN-企業客戶",
+                "suitableTargetClassification": "=|23224657",
+                "systemName": "台灣屈臣氏(23224657)",
+                "classification": ";1;2;",
                 "ITParameterSetValue": "值",
                 "ITParameterSetPARAMETE": "",
-                "modifyPersonnel": "SPV",
+                "modifyPersonnel": "admin",
                 "modifyDate": "08-3月 -10"
             }, {
-                "ITParameterSetSort": "10",
-                "ITParameterSetList": "FET",
-                "ITParameterSetClassification": "F",
-                "ITParameterSetType": "DISC_EFFECTIVE_METHOD",
-                "ITParameterSetKEY": "Now",
+                "suitableTargetSort": "10",
+                "suitableTargetName": "BAN-企業客戶",
+                "suitableTargetClassification": "=|23471299",
+                "systemName": "統聯客運(23471299)",
+                "classification": ";1;2;",
                 "ITParameterSetValue": "值",
                 "ITParameterSetPARAMETE": "",
-                "modifyPersonnel": "SPV",
+                "modifyPersonnel": "admin",
                 "modifyDate": "08-3月 -10"
             }];
 
 
-            $('#datatable_ITParameterSet').DataTable().destroy();
+            $('#datatable_suitableTarget').DataTable().destroy();
 
 
-            $scope.ITParameterSetTable = false;
-            $scope.inquireTable = function () {
-                $timeout(function () {
-                    $('#datatable_ITParameterSet').DataTable(opt);
 
-                }, 100)
-                $scope.ITParameterSetTable = true;
-            }
+            $timeout(function () {
+                $('#datatable_suitableTarget').DataTable(opt);
+
+            }, 100)
 
 
             $scope.editGroupTableData = [{
