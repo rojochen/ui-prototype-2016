@@ -84,12 +84,12 @@ define(['btModule'], function (btModule) {
             };
 
             $scope.numberTypeTableData = [{
-                "numberTypeSort": "3",
-                "codeNumber": "2G",
-                "numberType": "2G",
+                "numberTypeSort": "1",
+                "codeNumber": "4G",
+                "numberType": "4G",
                 "specialNumberType": "N",
                 "modifyPersonnel": "SPV",
-                "modifyDate": "04-3月 -13"
+                "modifyDate": "09-12月 -15"
             }, {
                 "numberTypeSort": "2",
                 "codeNumber": "3G",
@@ -97,6 +97,20 @@ define(['btModule'], function (btModule) {
                 "specialNumberType": "N",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "02-4月 -12"
+            }, {
+                "numberTypeSort": "3",
+                "codeNumber": "2G",
+                "numberType": "2G",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "04-3月 -13"
+            }, {
+                "numberTypeSort": "4",
+                "codeNumber": "king",
+                "numberType": "統一超商",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "23-12月 -15"
             }, {
                 "numberTypeSort": "5",
                 "codeNumber": "wala",
@@ -118,20 +132,6 @@ define(['btModule'], function (btModule) {
                 "specialNumberType": "Y",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "23-12月 -15"
-            }, {
-                "numberTypeSort": "4",
-                "codeNumber": "king",
-                "numberType": "統一超商",
-                "specialNumberType": "N",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "23-12月 -15"
-            }, {
-                "numberTypeSort": "1",
-                "codeNumber": "4G",
-                "numberType": "4G",
-                "specialNumberType": "N",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "09-12月 -15"
             }, {
                 "numberTypeSort": "8",
                 "codeNumber": "ELD",
