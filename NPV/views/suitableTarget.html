@@ -143,7 +143,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <button type="button" class="btn btn-info" data-toggle="modal" ng-click="editGroup()">編輯對象</button>
+                                                <button type="button" class="btn btn-info" data-toggle="modal" ng-click="editTarget()">編輯對象</button>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -197,42 +197,26 @@
                     </div>
                     <!-- end 適用對象新增  -->
                     <!-- 編輯對象 -->
-                    <div class="modal fade bs-example-modal-lg" id="editType" tabindex="-1" role="dialog">
+                    <!--<div class="modal fade bs-example-modal-lg" id="editType" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span
                             aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                     </button>
-                                    <h4 class="modal-title">編輯類型</h4>
+                                    <h4 class="modal-title">編輯對象</h4>
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>目錄:</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">對象代碼:</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>分類:
-                                            </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>類型:
-                                            </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>類型中文名稱:
+                                                <span style="color:red;">*</span>對象名稱:
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
@@ -247,10 +231,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!-- end 編輯類型 -->
-                    <!-- 編輯群組 -->
-                    <div class="modal fade bs-example-modal-lg" id="editGroup" tabindex="-1" role="dialog">
+                    <!-- 編輯對象  -->
+                    <div class="modal fade bs-example-modal-lg" id="editTarget" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -262,14 +246,14 @@
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">群組代碼:</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">對象代碼:</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                群組名稱:
+                                                對象名稱:
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
@@ -284,7 +268,7 @@
                                                 <button type="button" class="btn btn-primary">關閉</button>
                                             </div>
                                         </div>
-                                        <table id="datatable_editGroup" class="table table-striped table-bordered">
+                                        <table id="datatable_editTarget" class="table table-striped table-bordered">
                                             <thead>
                                                 <tr>
                                                     <th class="table-header-color">排序</th>
@@ -296,10 +280,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr ng-repeat="x in editGroupTableData track by $index">
-                                                    <td ng-bind="x.groupSort"></td>
-                                                    <td ng-bind="x.groupNumber"></td>
-                                                    <td ng-bind="x.groupName"></td>
+                                                <tr ng-repeat="x in editTargetTableData track by $index">
+                                                    <td ng-bind="x.targetSort"></td>
+                                                    <td ng-bind="x.targetNumber"></td>
+                                                    <td ng-bind="x.targetName"></td>
                                                     <td ng-bind="x.modifyPersonnel"></td>
                                                     <td ng-bind="x.modifyDate"></td>
                                                     <td>

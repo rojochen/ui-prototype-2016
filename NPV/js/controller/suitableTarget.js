@@ -214,41 +214,65 @@ define(['btModule'], function (btModule) {
             }, 100)
 
 
-            $scope.editGroupTableData = [{
-                "groupSort": "1",
-                "groupNumber": "9ebaf8",
-                "groupName": "一般國內通話金額",
+            $scope.editTargetTableData = [{
+                "targetSort": "1",
+                "targetNumber": "BAN",
+                "targetName": "企業客戶",
+                "modifyPersonnel": "lhchang",
+                "modifyDate": "2015/1/3"
+            }, {
+                "targetSort": "2",
+                "targetNumber": "VD_USERS",
+                "targetName": "V+D Users",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
-                "groupSort": "2",
-                "groupNumber": "7ae716",
-                "groupName": "EBU - 一般國內通話金額",
+                "targetSort": "3",
+                "targetNumber": "WBB不續約客戶",
+                "targetName": "網外市話通話費折抵",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
-                "groupSort": "3",
-                "groupNumber": "cedf83",
-                "groupName": "網外市話通話費折抵",
+                "targetSort": "4",
+                "targetNumber": "WBB Data usage",
+                "targetName": "他網通話(不含市話)",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
-                "groupSort": "4",
-                "groupNumber": "83e5b9",
-                "groupName": "他網通話(不含市話)",
+                "targetSort": "5",
+                "targetNumber": "同證號三年一次(7日)",
+                "targetName": "他網通話(不含市話)",
+                "modifyPersonnel": "wsun",
+                "modifyDate": "2015/1/3"
+            }, {
+                "targetSort": "6",
+                "targetNumber": "SRVPRODDTYPE",
+                "targetName": "用戶方案別",
+                "modifyPersonnel": "wsun",
+                "modifyDate": "2015/1/3"
+            }, {
+                "targetSort": "7",
+                "targetNumber": "ONCE_CONTRACT_60",
+                "targetName": "同證號三年一次(60日)",
+                "modifyPersonnel": "wsun",
+                "modifyDate": "2015/1/3"
+            }, {
+                "targetSort": "8",
+                "targetNumber": "VIP",
+                "targetName": "VIP",
+                "modifyPersonnel": "wsun",
+                "modifyDate": "2015/1/3"
+            }, {
+                "targetSort": "9",
+                "targetNumber": "MNP",
+                "targetName": "攜碼",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
-                "groupSort": "5",
-                "groupNumber": "f67ce1",
-                "groupName": "他網通話(不含市話)",
-                "modifyPersonnel": "admin",
-                "modifyDate": "2015/1/3"
-            }, {
-                "groupSort": "6",
-                "groupNumber": "f67ce1",
-                "groupName": "他網通話(不含市話)",
-                "modifyPersonnel": "admin",
+                "targetSort": "10",
+                "targetNumber": "TENURE",
+                "targetName": "年資",
+                "modifyPersonnel": "wsun",
                 "modifyDate": "2015/1/3"
             }];
 
@@ -263,10 +287,10 @@ define(['btModule'], function (btModule) {
             //     }, 100)
 
 
-            $scope.editGroup = function () {
+            $scope.editTarget = function () {
                 $timeout(function () {
                     // $('#addModal').modal('hide');
-                    $('#editGroup').modal('show');
+                    $('#editTarget').modal('show');
                 }, 400);
 
             }
