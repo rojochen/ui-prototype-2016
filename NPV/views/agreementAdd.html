@@ -229,7 +229,7 @@
                         </div>
                     </div>
                     <!-- 新增完成 end -->
-                    <!-- 新增-編輯群組表單 begin -->
+                    <!-- 新增-編輯群組 表單 begin -->
                     <div class="modal fade bs-example-modal-lg" id="agreementAddGroup" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
@@ -251,7 +251,7 @@
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">關閉</button>
                                                 <button type="button" class="btn btn-primary pull-right">重置</button>
-                                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#agreementAddAdd">新增</button>
+                                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#agreementEditGroupAdd">新增</button>
                                                 <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@
                                                     <td ng-bind="x.agreementAddGroupRole"></td>
                                                     <td ng-bind="x.agreementAddGroupDate"></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#agreementAddEdit">修改</button>
+                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#agreementEditGroupEdit">修改</button>
                                                         <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#agreementAddDelConfirm">刪除</button>
                                                     </td>
                                                 </tr>
@@ -287,7 +287,87 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 新增-編輯群組表單 end -->
+                    <!-- 新增-編輯群組 表單 end -->
+                    <!-- 新增-編輯群組-新增 表單 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupAdd" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true ">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組代碼</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組名稱</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">備註</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#agreementEditGroupAddConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 新增-編輯群組-新增 表單 end -->
+                    <!-- 新增-編輯群組-修改 表單 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupEdit" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true ">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組代碼</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>合約群組名稱</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">備註</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#agreementEditGroupEditConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 新增-編輯群組-修改 表單 end -->
                     <!-- 修改 begin -->
                     <div class="modal fade bs-example-modal-lg" id="agreementAddEdit" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -413,7 +493,7 @@
                         </div>
                     </div>
                     <!-- 修改完成 end -->
-                    <!-- 修改-編輯群組表單 begin -->
+                    <!-- 修改-編輯群組 表單 begin -->
                     <div class="modal fade bs-example-modal-lg" id="agreementAddEditGroup" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
@@ -435,7 +515,7 @@
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">關閉</button>
                                                 <button type="button" class="btn btn-primary pull-right">重置</button>
-                                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#agreementEditGroupAdd">新增</button>
+                                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#agreementEditGroupAdd2">新增</button>
                                                 <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
                                             </div>
                                         </div>
@@ -459,7 +539,7 @@
                                                     <td ng-bind="x.agreementAddGroupRole"></td>
                                                     <td ng-bind="x.agreementAddGroupDate"></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#agreementEditGroupEdit">修改</button>
+                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#agreementEditGroupEdit2">修改</button>
                                                         <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#agreementAddDelConfirm">刪除</button>
                                                     </td>
                                                 </tr>
@@ -471,9 +551,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 修改-編輯群組表單 end -->
+                    <!-- 修改-編輯群組 表單 end -->
                     <!-- 修改-編輯群組-新增 表單 begin -->
-                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupAdd" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupAdd2" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -570,7 +650,7 @@
                     </div>
                     <!-- 修改-編輯群組-新增-新增完成 end -->
                     <!-- 修改-編輯群組-修改 表單 begin -->
-                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupEdit" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="agreementEditGroupEdit2" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
