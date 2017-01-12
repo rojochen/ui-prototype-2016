@@ -33,7 +33,8 @@
                         <div class="form-group" ng-if="vm.searchAdv">
                             <label class="control-label col-md-4 col-sm-4 col-xs-12">是否顯示</label>
                             <div class="col-md-4 col-sm-4 col-xs-12">
-                                <select class="form-control col-md-3 col-xs-12">
+                                <select class="form-control">
+                                         <option></option>
                                          <option>是</option>
                                          <option>否</option>
                                 </select>
@@ -42,7 +43,7 @@
                         <div class="form-group" ng-if="vm.searchAdv">
                             <label class="control-label col-md-4 col-sm-4 col-xs-12">適用兌換方式</label>
                             <div class="col-md-4 col-sm-4 col-xs-12">
-                                <select class="form-control col-md-3 col-xs-12">
+                                <select class="form-control">
                                          <option></option>
                                          <option>禮遇專區</option>
                                          <option>申辦加碼禮</option>
@@ -121,19 +122,12 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>是否顯示</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <div class="radio">
-                                                    <label>
-                                                    <input type="radio" checked value="option1" 
-                                                           name="optionsRadios2"> 是
-                                                    </label>
-                                                    <label>
-                                                    <input type="radio" value="option2" 
-                                                           name="optionsRadios2"> 否
-                                                </label>
-                                                </div>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <select class="form-control">
+                                                    <option>是</option>
+                                                    <option>否</option>
+                                                </select>
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">適用兌換方式</label>
@@ -143,7 +137,6 @@
                                                     <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText"></select>
                                                 </div>
                                                 <div class="col-md-2">
-                                                    <button type="button" class="btn btn-default col-md-12" style="color: #73879c">篩選</button>
                                                     <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-forward"></i></button>
                                                     <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
                                                     <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
@@ -261,19 +254,12 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>是否顯示</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <div class="radio">
-                                                    <label>
-                                                    <input type="radio" checked value="option1" 
-                                                           name="optionsRadios2"> 是
-                                                    </label>
-                                                    <label>
-                                                    <input type="radio" value="option2" 
-                                                           name="optionsRadios2"> 否
-                                                </label>
-                                                </div>
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <select class="form-control">
+                                                    <option>是</option>
+                                                    <option>否</option>
+                                                </select>
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">適用兌換方式</label>
@@ -283,7 +269,6 @@
                                                     <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText"></select>
                                                 </div>
                                                 <div class="col-md-2">
-                                                    <button type="button" class="btn btn-default col-md-12" style="color: #73879c">篩選</button>
                                                     <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-forward"></i></button>
                                                     <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
                                                     <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
