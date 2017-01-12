@@ -81,6 +81,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/offerMutexSet', {
 				templateUrl: "../NPV/views/offerMutexSet.html"
 			})
+			.when('/discountConditions', {
+				templateUrl: "../NPV/views/discountConditions.html"
+			})
 
 
 
