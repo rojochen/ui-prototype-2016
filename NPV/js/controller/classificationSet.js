@@ -8,8 +8,8 @@ define(['btModule'], function (btModule) {
     });
 
     app.controller('classificationSetCtrl', ['$scope', '$timeout', '$log', '$element',
-        'ShoppingCartEntity',
-        function ($scope, $timeout, $log, $element, shoppingCartEntity) {
+        'ShoppingCartEntity', 'pnotifyService',
+        function ($scope, $timeout, $log, $element, shoppingCartEntity, pnotifyService) {
             var vm = this;
 
             /*begin 版面縮合*/
@@ -67,8 +67,8 @@ define(['btModule'], function (btModule) {
                 "searching": false,
                 "bInfo": false,
                 "bPaginate": false
-                    // "scrollX": true,
-                    // "scrollY": true
+                // "scrollX": true,
+                // "scrollY": true
             };
 
             $timeout(function () {
@@ -98,6 +98,39 @@ define(['btModule'], function (btModule) {
 
             $('#datatable_classificationSet').DataTable().destroy();
             /* 促代類別設定表格 end */
+
+            /* notify 通知訊息 begin */
+            // Success
+            // $(document).ready(function () {
+            //     $('body').on('click', '.pnotifyAddSuccess', function () {
+            //         pnotifyService.pnotifySuccess('Success', '新增完成！');
+            //     })
+            // });
+
+            // $(document).ready(function () {
+            //     $('body').on('click', '.pnotifyEditSuccess', function () {
+            //         pnotifyService.pnotifySuccess('Success', '修改完成！');
+            //     })
+            // });
+
+            // $(document).ready(function () {
+            //     $('body').on('click', '.pnotifyDelSuccess', function () {
+            //         pnotifyService.pnotifySuccess('Success', '刪除完成！');
+            //     })
+            // });
+
+            $scope.pnotifyAddSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '新增完成！');
+            }
+
+            $scope.pnotifyEditSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '修改完成！');
+            }
+
+            $scope.pnotifyDelSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '刪除完成！');
+            }
+            /* notify 通知訊息 end*/
 
             /* begin */
             $scope.tableControl = false;
