@@ -7,8 +7,8 @@ define(['btModule'], function (btModule) {
     });
 
     app.controller('agreementAddCtrl', ['$scope', '$timeout', '$log', '$element',
-        'ShoppingCartEntity',
-        function ($scope, $timeout, $log, $element, shoppingCartEntity) {
+        'ShoppingCartEntity', 'pnotifyService',
+        function ($scope, $timeout, $log, $element, shoppingCartEntity, pnotifyService) {
             var vm = this;
 
             /*begin 版面縮合*/
@@ -143,23 +143,23 @@ define(['btModule'], function (btModule) {
                 $('#datatable_agreementAddEditGroup').DataTable(opt);
             }, 100)
 
-            // 修改-編輯群組 表格內容資料
-            // $scope.agreementAddEditGroupTableData = [{
-            //     "agreementAddEditGroupSorting": "1",
-            //     "agreementAddEditGroupID": "W",
-            //     "agreementAddEditGroupName": "WAIVED",
-            //     "agreementAddEditGroupRole": "admin",
-            //     "agreementAddEditGroupDate": "2015/01/04",
-            // }, {
-            //     "agreementAddEditGroupSorting": "2",
-            //     "agreementAddEditGroupID": "T",
-            //     "agreementAddEditGroupName": "TEST",
-            //     "agreementAddEditGroupRole": "admin",
-            //     "agreementAddEditGroupDate": "2015/01/04",
-            // }];
-
             $('#datatable_agreementAddEditGroup').DataTable().destroy();
             /* 修改-編輯群組  end */
+
+            /* notify 通知訊息 begin */
+            // Success
+            $scope.pnotifyAddSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '新增完成！');
+            }
+
+            $scope.pnotifyEditSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '修改完成！');
+            }
+
+            $scope.pnotifyDelSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '刪除完成！');
+            }
+            /* notify 通知訊息 end*/
 
             /* begin */
             $scope.tableControl = false;
