@@ -78,81 +78,118 @@ define(['btModule'], function (btModule) {
                 "searching": false,
                 "bInfo": true,
                 "bPaginate": true,
-                "bLengthChange": false
-                // "scrollX": true,
+                "bLengthChange": false,
+                "scrollX": true,
 
             };
 
-            $scope.numberTypeTableData = [{
-                "numberTypeSort": "1",
-                "codeNumber": "4G",
-                "numberType": "4G",
-                "specialNumberType": "N",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "09-12月 -15"
+            $scope.discountConditionsTableData = [{
+                "discountConditionSort": "10",
+                "discountConditionName": "到期通知_折扣類型「網內互打免費」",
+                "discountConditionType": "SMS_ONNETFREE",
+                "defaultValue": "N",
+                "restocking": "N",
+                "ITSR": "N",
+                "PC": "N",
+                "modifyPersonnel": "admiv",
+                "modifyDate": "27-10月 -15"
             }, {
-                "numberTypeSort": "2",
-                "codeNumber": "3G",
-                "numberType": "3G",
-                "specialNumberType": "N",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "02-4月 -12"
+                "discountConditionSort": "11",
+                "discountConditionName": "到期通知_折扣類型「上網傳輸量吃到飽」",
+                "discountConditionType": "SMS_GPRSUNLIMITED",
+                "defaultValue": "N",
+                "restocking": "N",
+                "ITSR": "N",
+                "PC": "N",
+                "modifyPersonnel": "admiv",
+                "modifyDate": "27-10月 -15"
             }, {
-                "numberTypeSort": "3",
-                "codeNumber": "2G",
-                "numberType": "2G",
-                "specialNumberType": "N",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "04-3月 -13"
+                "discountConditionSort": "12",
+                "discountConditionName": "到期通知_折扣類型「數據加贈傳輸量」",
+                "discountConditionType": "SMS_BOOSTER",
+                "defaultValue": "N",
+                "restocking": "N",
+                "ITSR": "N",
+                "PC": "N",
+                "modifyPersonnel": "admiv",
+                "modifyDate": "27-10月 -15"
             }, {
-                "numberTypeSort": "4",
-                "codeNumber": "king",
-                "numberType": "統一超商",
-                "specialNumberType": "N",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "23-12月 -15"
+                "discountConditionSort": "13",
+                "discountConditionName": "到期通知_折扣類型「上網傳輸量吃到飽」",
+                "discountConditionType": "SMS_FREEMINS",
+                "defaultValue": "N",
+                "restocking": "N",
+                "ITSR": "N",
+                "PC": "N",
+                "modifyPersonnel": "admiv",
+                "modifyDate": "27-10月 -15"
             }, {
-                "numberTypeSort": "5",
-                "codeNumber": "wala",
-                "numberType": "全虹",
-                "specialNumberType": "Y",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "31-3月 -14"
+                "discountConditionSort": "14",
+                "discountConditionName": "到期通知_折扣類型「簡訊優惠」",
+                "discountConditionType": "SMS_SMSDISC",
+                "defaultValue": "N",
+                "restocking": "N",
+                "ITSR": "N",
+                "PC": "N",
+                "modifyPersonnel": "admiv",
+                "modifyDate": "27-10月 -15"
             }, {
-                "numberTypeSort": "7",
-                "codeNumber": "K",
-                "numberType": "KG",
-                "specialNumberType": "N",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "09-12月 -15"
+                "discountConditionSort": "15",
+                "discountConditionName": "到期通知_折扣類型「月租優惠」",
+                "discountConditionType": "SMS_MONTHLYFEEDISC",
+                "defaultValue": "N",
+                "restocking": "N",
+                "ITSR": "N",
+                "PC": "N",
+                "modifyPersonnel": "admiv",
+                "modifyDate": "27-10月 -15"
             }, {
-                "numberTypeSort": "6",
-                "codeNumber": "X",
-                "numberType": "Non SIM",
-                "specialNumberType": "Y",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "23-12月 -15"
+                "discountConditionSort": "1",
+                "discountConditionName": "允許折扣重覆安裝",
+                "discountConditionType": "",
+                "defaultValue": "N",
+                "restocking": "N",
+                "ITSR": "N",
+                "PC": "N",
+                "modifyPersonnel": "admiv",
+                "modifyDate": "27-10月 -15"
             }, {
-                "numberTypeSort": "8",
-                "codeNumber": "ELD",
-                "numberType": "ELD",
-                "specialNumberType": "N",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "09-12月 -15"
+                "discountConditionSort": "16",
+                "discountConditionName": "為「預繳優惠折扣」",
+                "discountConditionType": "",
+                "defaultValue": "N",
+                "restocking": "N",
+                "ITSR": "N",
+                "PC": "N",
+                "modifyPersonnel": "admiv",
+                "modifyDate": "27-10月 -15"
             }, {
-                "numberTypeSort": "9",
-                "codeNumber": "CLD",
-                "numberType": "CLD",
-                "specialNumberType": "N",
-                "modifyPersonnel": "SPV",
-                "modifyDate": "31-12月 -14"
+                "discountConditionSort": "7",
+                "discountConditionName": "改至非折扣適用範圍需移除",
+                "discountConditionType": "",
+                "defaultValue": "N",
+                "restocking": "N",
+                "ITSR": "N",
+                "PC": "N",
+                "modifyPersonnel": "admiv",
+                "modifyDate": "27-10月 -15"
+            }, {
+                "discountConditionSort": "3",
+                "discountConditionName": "2G轉3G時折扣帶至3G",
+                "discountConditionType": "",
+                "defaultValue": "N",
+                "restocking": "N",
+                "ITSR": "N",
+                "PC": "N",
+                "modifyPersonnel": "admiv",
+                "modifyDate": "27-10月 -15"
             }];
 
 
-            $('#datatable_numberType').DataTable().destroy();
+            $('#datatable_discountConditions').DataTable().destroy();
 
             $timeout(function () {
-                $('#datatable_numberType').DataTable(opt);
+                $('#datatable_discountConditions').DataTable(opt);
             }, 100)
 
 
