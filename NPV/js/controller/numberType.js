@@ -15,7 +15,12 @@ define(['btModule'], function (btModule) {
             // $scope.newMarginSetTableData = {};
 
             $(document).on('hidden.bs.modal', '.modal', function () {
+
                 $('.modal:visible').length && $(document.body).addClass('modal-open');
+
+            });
+
+            $(document).on('show.bs.modal', '.modal', function () {
                 $("element.style").css("padding-right", "0");
             });
 

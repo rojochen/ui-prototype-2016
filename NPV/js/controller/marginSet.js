@@ -12,6 +12,15 @@ define(['btModule'], function (btModule) {
         function ($scope, $timeout, $log, $element, shoppingCartEntity) {
             var vm = this;
 
+            $(document).on('hidden.bs.modal', '.modal', function () {
+                $('.modal:visible').length && $(document.body).addClass('modal-open');
+
+            });
+
+            $(document).on('show.bs.modal', '.modal', function () {
+                $("element.style").css("padding-right", "0");
+            });
+
             $scope.newMarginSetTableData = {};
 
             /*begin 版面縮合*/
