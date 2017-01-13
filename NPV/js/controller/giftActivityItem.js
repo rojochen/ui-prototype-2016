@@ -8,9 +8,34 @@ define(['btModule'], function (btModule) {
     });
 
     app.controller('giftActivityItemCtrl', ['$scope', '$timeout', '$log', '$element',
-        'ShoppingCartEntity',
-        function ($scope, $timeout, $log, $element, shoppingCartEntity) {
+        'ShoppingCartEntity', 'pnotifyService',
+        function ($scope, $timeout, $log, $element, shoppingCartEntity, pnotifyService) {
             var vm = this;
+
+            $(document).on('hidden.bs.modal', '.modal', function () {
+                $('.modal:visible').length && $(document.body).addClass('modal-open');
+
+            });
+
+            $(document).on('show.bs.modal', '.modal', function () {
+                $("element.style").css("padding-right", "0");
+            });
+
+            /* notify 通知訊息 begin */
+            // Success
+            $scope.pnotifyAddSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '新增完成！');
+
+            }
+
+            $scope.pnotifyEditSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '修改完成！');
+            }
+
+            $scope.pnotifyDelSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '刪除完成！');
+            }
+            /* notify 通知訊息 end*/
 
             /*begin 版面縮合*/
             $element.on('click', '.collapse-link', function () {
