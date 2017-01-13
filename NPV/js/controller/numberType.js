@@ -8,11 +8,11 @@ define(['btModule'], function (btModule) {
     });
 
     app.controller('numberTypeCtrl', ['$scope', '$timeout', '$log', '$element',
-        'ShoppingCartEntity',
-        function ($scope, $timeout, $log, $element, shoppingCartEntity) {
+        'ShoppingCartEntity', 'pnotifyService',
+        function ($scope, $timeout, $log, $element, shoppingCartEntity, pnotifyService) {
             var vm = this;
 
-            $scope.newMarginSetTableData = {};
+            // $scope.newMarginSetTableData = {};
 
             /*begin 版面縮合*/
             $element.on('click', '.collapse-link', function () {
@@ -32,33 +32,8 @@ define(['btModule'], function (btModule) {
             });
             /*end 版面縮合*/
 
-            // it參數設定
-            /* begin */
-            $scope.btnShow1 = true;
-            $scope.btnShow2 = false;
-            $scope.advancedSearch = function () {
-                if ($scope.advancedControl) {
-                    $scope.advancedControl = false;
-                    $scope.btnShow1 = true;
-                    $scope.btnShow2 = false;
-                } else {
-                    $scope.advancedControl = true;
-                    $scope.btnShow1 = false;
-                    $scope.btnShow2 = true;
-                }
-            }
-            /* end */
 
-            /* begin */
-            $scope.tableControl = false;
-            $scope.showTable = function () {
-                $scope.tableControl = true;
-            }
-            /* end */
-
-
-
-            /*begin 問卷-查詢*/
+            /*begin 表格設定*/
             var opt = {
                 "oLanguage": {
                     "sProcessing": "處理中...",
@@ -82,7 +57,11 @@ define(['btModule'], function (btModule) {
                 // "scrollX": true,
 
             };
+            /*end 表格設定*/
 
+
+
+            /*begin 門號類型表格*/
             $scope.numberTypeTableData = [{
                 "numberTypeSort": "1",
                 "codeNumber": "4G",
@@ -148,6 +127,7 @@ define(['btModule'], function (btModule) {
                 "modifyDate": "31-12月 -14"
             }];
 
+            /*end 門號類型表格*/
 
             $('#datatable_numberType').DataTable().destroy();
 
@@ -155,22 +135,47 @@ define(['btModule'], function (btModule) {
                 $('#datatable_numberType').DataTable(opt);
             }, 100)
 
+            /* notify 通知訊息 begin */
+            // Success
+            $scope.pnotifyAddSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '新增完成！');
+            }
 
-            $scope.saveMarginSetTable = function () {
-                $scope.marginSetTableData.push($scope.newMarginSetTableData);
-                $scope.newMarginSetTableData = {};
+            $scope.pnotifyEditSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '修改完成！');
+            }
 
-                // $scope.alertMassege = "New item add on list successfully!!";
-            };
+            $scope.pnotifyDelSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '刪除完成！');
+            }
+            /* notify 通知訊息 end*/
+
+            /* 重置 begin */
+
+            $scope.reset = function () {
+
+                $scope.number = "";
+                $scope.name = "";
+            }
+
+
+            /* 重置  end*/
+
+            // $scope.saveMarginSetTable = function () {
+            //     $scope.marginSetTableData.push($scope.newMarginSetTableData);
+            //     $scope.newMarginSetTableData = {};
+
+            //     // $scope.alertMassege = "New item add on list successfully!!";
+            // };
 
             // -----編輯-----
-            $scope.editInfo = function (x) {
-                $scope.info = {
-                    'marginSort': x.marginSort,
-                    'marginMoney': x.marginMoney,
-                    'marginMoney': x.marginMoney,
-                };
-            };
+            // $scope.editInfo = function (x) {
+            //     $scope.info = {
+            //         'marginSort': x.marginSort,
+            //         'marginMoney': x.marginMoney,
+            //         'marginMoney': x.marginMoney,
+            //     };
+            // };
 
         }
     ]);
