@@ -153,7 +153,6 @@ define(['btModule'], function (btModule) {
             /* 重置 begin */
 
             $scope.reset = function () {
-
                 $scope.number = "";
                 $scope.name = "";
             }
