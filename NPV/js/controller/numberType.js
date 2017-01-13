@@ -32,33 +32,8 @@ define(['btModule'], function (btModule) {
             });
             /*end 版面縮合*/
 
-            // it參數設定
-            /* begin */
-            $scope.btnShow1 = true;
-            $scope.btnShow2 = false;
-            $scope.advancedSearch = function () {
-                if ($scope.advancedControl) {
-                    $scope.advancedControl = false;
-                    $scope.btnShow1 = true;
-                    $scope.btnShow2 = false;
-                } else {
-                    $scope.advancedControl = true;
-                    $scope.btnShow1 = false;
-                    $scope.btnShow2 = true;
-                }
-            }
-            /* end */
 
-            /* begin */
-            $scope.tableControl = false;
-            $scope.showTable = function () {
-                $scope.tableControl = true;
-            }
-            /* end */
-
-
-
-            /*begin 問卷-查詢*/
+            /*begin 表格設定*/
             var opt = {
                 "oLanguage": {
                     "sProcessing": "處理中...",
@@ -82,7 +57,11 @@ define(['btModule'], function (btModule) {
                 // "scrollX": true,
 
             };
+            /*end 表格設定*/
 
+
+
+            /*begin 門號類型表格*/
             $scope.numberTypeTableData = [{
                 "numberTypeSort": "1",
                 "codeNumber": "4G",
@@ -148,6 +127,7 @@ define(['btModule'], function (btModule) {
                 "modifyDate": "31-12月 -14"
             }];
 
+            /*end 門號類型表格*/
 
             $('#datatable_numberType').DataTable().destroy();
 
