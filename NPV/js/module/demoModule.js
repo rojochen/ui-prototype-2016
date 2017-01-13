@@ -87,10 +87,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/giftActivityItem', {
 				templateUrl: "../NPV/views/giftActivityItem.html"
 			})
-
-
-
-
+			.when('/activemenuService', {
+				templateUrl: "../NPV/views/activemenuService.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
