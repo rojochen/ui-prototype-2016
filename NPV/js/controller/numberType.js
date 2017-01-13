@@ -14,6 +14,11 @@ define(['btModule'], function (btModule) {
 
             // $scope.newMarginSetTableData = {};
 
+            $(document).on('hidden.bs.modal', '.modal', function () {
+                $('.modal:visible').length && $(document.body).addClass('modal-open');
+                $("element.style").css("padding-right", "0");
+            });
+
             /*begin 版面縮合*/
             $element.on('click', '.collapse-link', function () {
                 var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -139,6 +144,7 @@ define(['btModule'], function (btModule) {
             // Success
             $scope.pnotifyAddSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '新增完成！');
+                $("element.style").css("padding-right", "0");
             }
 
             $scope.pnotifyEditSuccess = function () {

@@ -70,7 +70,7 @@
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
                                 <button type="button" class="btn btn-primary" style="margin-right: 15px" ng-click="showTable()">查詢</button>
-                                <button type="button" class="btn btn-primary" style="margin-right: 15px" data-toggle="modal" data-target="#addModal">新增</button>
+                                <button type="button" class="btn btn-primary" style="margin-right: 15px" data-toggle="modal" href="#addModal">新增</button>
                                 <button type="button" class="btn btn-primary">重置</button>
                             </div>
                         </div>
@@ -101,7 +101,8 @@
                                         <td ng-bind="x.modifyPersonnel"></td>
                                         <td ng-bind="x.modifyDate"></td>
                                         <td>
-                                            <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" data-target="#editModal"><i class="fa fa-pencil"></i> 修改</button>
+                                            <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" href="#
+                                            editModal"><i class="fa fa-pencil"></i> 修改</button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -183,7 +184,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#addConfirm">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#addConfirm">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
@@ -291,7 +292,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editConfirm">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#editConfirm">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>

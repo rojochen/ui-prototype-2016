@@ -13,6 +13,11 @@ define(['btModule'], function (btModule) {
         function ($scope, $timeout, $log, $element, shoppingCartEntity, pnotifyService) {
             var vm = this;
 
+            $(document).on('hidden.bs.modal', '.modal', function () {
+                $('.modal:visible').length && $(document.body).addClass('modal-open');
+                $("element.style").css("padding-right", "0");
+            });
+
             /*begin 版面縮合*/
             $element.on('click', '.collapse-link', function () {
                 var $BOX_PANEL = $(this).closest('.x_panel'),
