@@ -28,7 +28,7 @@ define(['btModule'], function (btModule) {
             // Success
             $scope.pnotifyAddSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '新增完成！');
-                $("element.style").css("padding-right", "0");
+
             }
 
             $scope.pnotifyEditSuccess = function () {
