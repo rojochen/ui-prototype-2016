@@ -32,7 +32,7 @@
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
                                 <button type="button" class="btn btn-primary">查詢</button>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">新增</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" href="#addModal">新增</button>
                                 <button type="button" class="btn btn-primary">重置</button>
                             </div>
                         </div>
@@ -54,8 +54,8 @@
                                     <td ng-bind="x.modifyPersonnel"></td>
                                     <td ng-bind="x.modifyDate"></td>
                                     <td>
-                                        <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" data-target="#editModal"><i class="fa fa-pencil"></i> 修改</button>
-                                        <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal" data-toggle="modal" data-target="#deleteModal"><i class="glyphicon glyphicon-remove"></i> 刪除</button>
+                                        <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" href="#editModal"><i class="fa fa-pencil"></i> 修改</button>
+                                        <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal" data-toggle="modal" href="#deleteModal"><i class="glyphicon glyphicon-remove"></i> 刪除</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -118,37 +118,13 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="saveMarginSetTable()" data-toggle="modal" data-target="#addComplete">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyAddSuccess()">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end 新增確認畫面-->
-                    <!-- 新增完成 -->
-                    <div class="modal fade bs-example-modal-lg" id="addComplete" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>新增完成</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                        </div>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end 新增完成-->
                     <!-- 修改畫面-->
                     <div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog" ng-repeat="x in marginSetTableData track by $index">
                         <div class="modal-dialog" role="document">
@@ -205,37 +181,13 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editComplete">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyEditSuccess()">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end 修改確認畫面  modal -->
-                    <!-- 修改完成 -->
-                    <div class="modal fade bs-example-modal-lg" id="editComplete" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>修改完成</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                        </div>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 修改完成 end -->
                     <!-- 確認畫面 刪除 modal -->
                     <div class="modal fade bs-example-modal-lg" id="deleteModal" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -257,37 +209,13 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#deleteComplete">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyDelSuccess()">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end 確認畫面  刪除 modal -->
-                    <!-- 刪除完成 -->
-                    <div class="modal fade bs-example-modal-lg" id="deleteComplete" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>刪除完成</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                        </div>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 刪除完成 end -->
                 </div>
             </div>
         </div>
