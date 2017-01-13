@@ -36,9 +36,9 @@
                                 <label class="control-label col-md-4 col-sm-4 col-xs-12">是否顯示:</label>
                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                     <select class="form-control">
-                                    <option>是</option>
-                                    <option>否</option>
-                                </select>
+                                        <option>是</option>
+                                        <option>否</option>
+                                    </select>
                                 </div>
                             </div>
                             <label class="control-label col-md-4 col-sm-4 col-xs-12">Min:</label>
@@ -147,14 +147,10 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>是否顯示:</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" checked="" value="option1" name="optionsRadios2"> 是
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" value="option2" name="optionsRadios2"> 否
-                                                    </label>
-                                                </div>
+                                                <select class="form-control">
+                                                    <option>是</option>
+                                                    <option>否</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -193,13 +189,110 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#addConfirm">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editConfirm">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end 贈品加碼活動條件項目維護新增  -->
+                    <!-- 贈品加碼活動條件項目維護SOL修改 -->
+                    <div class="modal fullscreen-modal fade in" id="editModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">贈品加碼活動條件項目維護修改</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件類型:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option>FET</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <button type="button" class="btn btn-info" data-toggle="modal" href="#SQL">SQL</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目代碼:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目中文說明:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>是否顯示:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <select class="form-control">
+                                                    <option>是</option>
+                                                    <option>否</option>
+                                                 </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>Min(包含):
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>Max(包含):
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註:
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序:</label>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-8 col-sm-offset-8"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 贈品加碼活動條件項目維護SOL修改 -->
                     <!-- 贈品加碼活動條件項目維護SOL -->
                     <div class="modal fade bs-example-modal-lg" id="SQL" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -247,159 +340,6 @@
                         </div>
                     </div>
                     <!-- end 確認畫面  刪除 modal -->
-                    <!-- 贈品加碼活動條件項目維護SOL修改 -->
-                    <div class="modal fullscreen-modal fade in" id="editModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">贈品加碼活動條件項目維護新增</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <form class="form-horizontal form-label-left">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件類型:</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <select class="form-control">
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option>FET</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <button type="button" class="btn btn-info" data-toggle="modal" href="#SQL">SQL</button>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目代碼:</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目中文說明:</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>是否顯示:</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" checked="" value="option1" name="optionsRadios2"> 是
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" value="option2" name="optionsRadios2"> 否
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>Min(包含):
-                                            </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>Max(包含):
-                                            </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註:
-                                            </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <textarea class="form-control" rows="3"></textarea>
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序:</label>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-8 col-sm-offset-8"></div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editConfirm">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end 贈品加碼活動條件項目維護SOL修改 -->
-                    <!-- 確認畫面 刪除 modal -->
-                    <div class="modal fade bs-example-modal-lg" id="deleteModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                        </button>
-                                    <h4 class="modal-title">確認畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>確定刪除?</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#deleteComplete">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end 確認畫面  刪除 modal -->
-                    <!-- 刪除完成 -->
-                    <div class="modal fade bs-example-modal-lg" id="deleteComplete" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>刪除完成</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                        </div>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 刪除完成 end -->
                     <!-- 新增確認畫面 -->
                     <div class="modal fade bs-example-modal-lg" id="addConfirm" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -421,37 +361,13 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="saveMarginSetTable()" data-toggle="modal" data-target="#addComplete">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyAddSuccess()">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end 新增確認畫面-->
-                    <!-- 新增完成 -->
-                    <div class="modal fade bs-example-modal-lg" id="addComplete" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>新增完成</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                        </div>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end 新增完成-->
                     <!-- 修改確認畫面 modal -->
                     <div class="modal fade bs-example-modal-lg" id="editConfirm" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -473,37 +389,41 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#editComplete">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyEditSuccess()">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end 修改確認畫面  modal -->
-                    <!-- 修改完成 -->
-                    <div class="modal fade bs-example-modal-lg" id="editComplete" tabindex="-1" role="dialog">
+                    <!-- 確認畫面 刪除 modal -->
+                    <div class="modal fade bs-example-modal-lg" id="deleteModal" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+                                    <h4 class="modal-title">確認畫面</h4>
+                                </div>
                                 <div class="modal-body">
                                     <div class="row">
                                         <br>
                                         <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>修改完成</h3>
+                                            <h3>確定刪除?</h3>
                                         </div>
                                         <br>
-                                        <br>
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                        </div>
                                         <br>
                                         <br>
                                     </div>
                                 </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyDelSuccess()">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- 修改完成 end -->
+                    <!-- end 確認畫面  刪除 modal -->
                 </div>
             </div>
         </div>
