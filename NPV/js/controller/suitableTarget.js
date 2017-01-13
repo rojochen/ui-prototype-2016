@@ -315,28 +315,28 @@ define(['btModule'], function (btModule) {
             //     }, 100)
 
 
-            $scope.editTarget = function () {
+            // $scope.editTarget = function () {
 
-                // $timeout(function () {
-                //     $('#datatable_editTarget').DataTable(opt2);
-                // }, 100)
+            //     // $timeout(function () {
+            //     //     $('#datatable_editTarget').DataTable(opt2);
+            //     // }, 100)
 
-                $timeout(function () {
-                    // $('#addModal').modal('hide');
+            //     $timeout(function () {
+            //         // $('#addModal').modal('hide');
 
-                    $('#editTarget').modal('show');
-                }, 400);
+            //         $('#editTarget').modal('show');
+            //     }, 400);
 
 
-            }
+            // }
 
-            $scope.addEditTarget = function () {
-                $timeout(function () {
-                    // $('#addModal').modal('hide');
-                    // $('#editGroup').modal('hide');
-                    $('#addEditTarget').modal('show');
-                }, 400);
-            }
+            // $scope.addEditTarget = function () {
+            //     $timeout(function () {
+            //         // $('#addModal').modal('hide');
+            //         // $('#editGroup').modal('hide');
+            //         $('#addEditTarget').modal('show');
+            //     }, 400);
+            // }
 
             // $scope.addGroupConfirm = function () {
             //     $timeout(function () {
