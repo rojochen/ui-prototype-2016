@@ -150,7 +150,16 @@ define(['btModule'], function (btModule) {
             }
             /* notify 通知訊息 end*/
 
+            /* 重置 begin */
 
+            $scope.reset = function () {
+
+                $scope.number = "";
+                $scope.name = "";
+            }
+
+
+            /* 重置  end*/
 
             // $scope.saveMarginSetTable = function () {
             //     $scope.marginSetTableData.push($scope.newMarginSetTableData);
