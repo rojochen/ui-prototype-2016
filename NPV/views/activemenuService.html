@@ -1,0 +1,490 @@
+<div class="page-no-title"></div>
+<div class="row" ng-controller="activemenuServiceCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>贈品_加碼活動下拉選單維護</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <!--下拉選單維護 start-->
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">下拉群組代碼:</label>
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <select class="form-control">
+                                    <option></option>
+                                    <option>兌換條件</option>
+                                    <option>兌換方式</option>
+                                    <option>是否選單</option>
+                                    <option>包含贈品類型</option>
+                                    <option>名單類型</option>
+                                    <option>活動類型</option>
+                                </select>
+                            </div>
+                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">下拉選項代碼:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">下拉選項名稱:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
+                                <button type="button" class="btn btn-primary" style="margin-right: 15px" ng-click="showTable()">查詢</button>
+                                <button type="button" class="btn btn-primary" style="margin-right: 15px" data-toggle="modal" data-target="#addComplete">新增</button>
+                                <button type="button" class="btn btn-primary">重置</button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <table id="datatable_activemenuServiceTableData" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="table-header-color col-md-1">排序</th>
+                                        <th class="table-header-color col-md-1">下拉選項代碼</th>
+                                        <th class="table-header-color col-md-2">下拉選項名稱</th>
+                                        <th class="table-header-color col-md-1">數值</th>
+                                        <th class="table-header-color col-md-1">修改人員</th>
+                                        <th class="table-header-color col-md-2">修改日期</th>
+                                        <th class="table-header-color col-md-2"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in activemenuServiceTableData track by $index">
+                                        <td ng-bind="x.activemenuServiceTypeSort"></td>
+                                        <td ng-bind="x.activemenuServiceDropOptionCode"></td>
+                                        <td ng-bind="x.activemenuServiceDropdownName"></td>
+                                        <td ng-bind="x.activemenuServiceDropdownValue"></td>
+                                        <td ng-bind="x.modifyPersonnel"></td>
+                                        <td ng-bind="x.modifyDate"></td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#modifyComplete"><i class="fa fa-pencil"></i> 修改</button>
+                                            <button class="btn btn-danger btn-xs" data-toggle="modal" href="#activemenuServiceDelete"><i class="glyphicon glyphicon-remove"></i>刪除</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <!--下拉選單維護 end-->
+                    <!--新增畫面 start-->
+                    <div class="modal fade bs-example-model-lg" id="addComplete" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">贈品_加碼活動下拉選單維護新增</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>下拉群組代碼:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>兌換條件</option>
+                                                    <option>兌換方式</option>
+                                                    <option>是否選單</option>
+                                                    <option>包含贈品類型</option>
+                                                    <option>名單類型</option>
+                                                    <option>活動類型</option>
+                                                 </select>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <button type="button" class="btn btn-info" ng-click="" data-toggle="modal" href="#editGroup">編輯群組</button>
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>下拉選項代碼:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>下拉選項名稱:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>下拉選項數值:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <textarea row="25" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序:</label>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#activemenuServiceConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--新增畫面 end-->
+                    <!--修改畫面 start-->
+                    <div class="modal fade bs-example-model-lg" id="modifyComplete" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">贈品_加碼活動下拉選單維護修改</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>下拉群組代碼:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>兌換條件</option>
+                                                    <option>兌換方式</option>
+                                                    <option>是否選單</option>
+                                                    <option>包含贈品類型</option>
+                                                    <option>名單類型</option>
+                                                    <option>活動類型</option>
+                                                 </select>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <button type="button" class="btn btn-info" ng-click="" data-toggle="modal" href="#editGroup">編輯群組</button>
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>下拉選項代碼:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>下拉選項名稱:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>下拉選項數值:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <textarea row="25" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序:</label>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#activemenuServiceModify">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--修改畫面 end-->
+                    <!--編輯群組 start-->
+                    <div class="modal fullscreen-modal fade in" id="editGroup" tabindex="-1" role="dialog" style="display: none; padding-right: 17px;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                                        </button>
+                                    <h4 class="modal-title">編輯群組</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">下拉選項代碼:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">下拉選項名稱:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"></label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="">查詢</button>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="" href="#editGroupAdd">新增</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="">重置</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="">關閉</button>
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <table id="datatable_activemenuServiceTableData" class="table table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="table-header-color">排序</th>
+                                                        <th class="table-header-color">下拉選項代碼</th>
+                                                        <th class="table-header-color">下拉選項名稱</th>
+                                                        <th class="table-header-color">修改人員</th>
+                                                        <th class="table-header-color">修改日期</th>
+                                                        <th class="table-header-color"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="x in activemenuServiceTableData track by $index">
+                                                        <td ng-bind="x.activemenuServiceTypeSort"></td>
+                                                        <td ng-bind="x.activemenuServiceDropOptionCode"></td>
+                                                        <td ng-bind="x.activemenuServiceDropdownName"></td>
+                                                        <td ng-bind="x.modifyPersonnel"></td>
+                                                        <td ng-bind="x.modifyDate"></td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#editGroupModify"><i class="fa fa-pencil"></i> 修改</button>
+                                                            <button class="btn btn-danger btn-xs" data-toggle="modal" href="#activemenuServiceDelete"><i class="glyphicon glyphicon-remove"></i>刪除</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--編輯群組 end-->
+                    <!--編輯群組新增 start-->
+                    <div class="modal fade bs-example-modal-lg in" id="editGroupAdd" tabindex="-1" role="dialog" style="display: none;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">編輯群組新增</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left ng-pristine ng-valid">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>下拉選項群組代碼:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>下拉選項群組名稱:
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>備註:
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#activemenuServiceConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--編輯群組新增 end-->
+                    <!--編輯群組修改 start-->
+                    <div class="modal fade bs-example-modal-lg in" id="editGroupModify" tabindex="-1" role="dialog" style="display: none;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">編輯群組修改</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left ng-pristine ng-valid">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>下拉選項群組代碼:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>下拉選項群組名稱:
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>備註:
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#activemenuServiceModify">確定</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--編輯群組修改 end-->
+                    <!--確定新增 start-->
+                    <div class="modal fade bs-example-modal-lg" id="activemenuServiceConfirm" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定新增畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定新增？</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyAddSuccess()">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定新增 end-->
+                    <!--確定刪除 start-->
+                    <div class="modal fade bs-example-modal-lg" id="activemenuServiceDelete" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定刪除畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定刪除？</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyDelSuccess()">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定刪除 end-->
+                    <!--確定修改 start-->
+                    <div class="modal fade bs-example-modal-lg" id="activemenuServiceModify" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定修改畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定修改？</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyEditSuccess()">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定修改 end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
