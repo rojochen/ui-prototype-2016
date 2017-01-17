@@ -75,7 +75,7 @@
                     </form>
                     <!-- 新增畫面-->
                     <div class="modal bs-example-modal-lg" id="addModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span
@@ -86,21 +86,21 @@
                                     <div class="container">
                                         <form class="form-horizontal form-label-left">
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>代號:</label>
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>代號:</label>
                                                 <div class="col-md-7 col-sm-7 col-xs-12">
                                                     <input type="text " class="form-control col-md-7 col-xs-12">
                                                 </div>
                                                 <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>門號類型名稱:</label>
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>門號類型名稱:</label>
                                                 <div class="col-md-7 col-sm-7 col-xs-12">
                                                     <input type="text " class="form-control col-md-7 col-xs-12">
                                                 </div>
                                                 <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">特殊門號類型:</label>
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">特殊門號類型:</label>
                                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                                     <select class="form-control">
                                                         <option value=""></option>
@@ -111,7 +111,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group ">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
                                                 <div class="col-md-2 col-sm-2 col-xs-12">
                                                     <input type="text " class="form-control col-md-7 col-xs-12">
                                                 </div>
@@ -158,7 +158,7 @@
                     <!-- end 新增確認畫面-->
                     <!-- 修改畫面-->
                     <div class="modal  bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog" ng-repeat="x in numberTypeTableData track by $index">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span
@@ -169,21 +169,21 @@
                                     <div class="container">
                                         <form class="form-horizontal form-label-left">
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>代號:</label>
+                                                <label class="control-label col-md-2 col-sm-3 col-xs-12"><span style="color:red;">*</span>代號:</label>
                                                 <div class="col-md-7 col-sm-7 col-xs-12">
                                                     <input type="text " class="form-control col-md-7 col-xs-12" ng-model="x.codeNumber">
                                                 </div>
                                                 <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>門號類型名稱:</label>
+                                                <label class="control-label col-md-2 col-sm-3 col-xs-12"><span style="color:red;">*</span>門號類型名稱:</label>
                                                 <div class="col-md-7 col-sm-7 col-xs-12">
                                                     <input type="text " class="form-control col-md-7 col-xs-12" ng-model="x.numberType">
                                                 </div>
                                                 <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">特殊門號類型:</label>
+                                                <label class="control-label col-md-2 col-sm-3 col-xs-12">特殊門號類型:</label>
                                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                                     <select class="form-control">
                                                         <option value=""></option>
@@ -194,7 +194,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group ">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
+                                                <label class="control-label col-md-2 col-sm-3 col-xs-12">排序</label>
                                                 <div class="col-md-2 col-sm-2 col-xs-12">
                                                     <input type="text " class="form-control col-md-7 col-xs-12" ng-model="x.numberTypeSort">
                                                 </div>
