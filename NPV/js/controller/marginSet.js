@@ -173,6 +173,8 @@ define(['btModule'], function (btModule) {
             $scope.confirmCancel = function () {
                 $timeout(function () {
                     $('#addModal').modal('hide')
+                    $('#editModal').modal('hide')
+
                 }, 100)
 
 
