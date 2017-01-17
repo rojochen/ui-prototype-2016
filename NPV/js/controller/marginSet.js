@@ -183,6 +183,8 @@ define(['btModule'], function (btModule) {
             $scope.cancel = function () {
                 $timeout(function () {
                     $('#cancelModal').modal('hide')
+                    $('#cancelEditModal').modal('hide')
+
                 }, 100)
 
             }
