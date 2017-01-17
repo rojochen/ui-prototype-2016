@@ -248,53 +248,74 @@ define(['btModule'], function (btModule) {
             }
 
 
-            $scope.editGroupTableData = [{
+            $scope.editTypeTableData = [{
                 "groupSort": "1",
-                "groupNumber": "9ebaf8",
-                "groupName": "一般國內通話金額",
+                "groupType": "REMOVE_METHOD",
+                "groupName": "合約到期移除方式",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
                 "groupSort": "2",
-                "groupNumber": "7ae716",
-                "groupName": "EBU - 一般國內通話金額",
+                "groupType": "VAS_VALIDITY",
+                "groupName": "　服務合約有效期限",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
                 "groupSort": "3",
-                "groupNumber": "cedf83",
-                "groupName": "網外市話通話費折抵",
+                "groupType": "CARRYING_AMOUNT",
+                "groupName": "帳面金額",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
                 "groupSort": "4",
-                "groupNumber": "83e5b9",
-                "groupName": "他網通話(不含市話)",
+                "groupType": "DISC_SMS_ELEMENT",
+                "groupName": "簡訊費用",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
                 "groupSort": "5",
-                "groupNumber": "f67ce1",
-                "groupName": "他網通話(不含市話)",
+                "groupType": "DISC_MMS_ELEMENT",
+                "groupName": "MMS費用",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
                 "groupSort": "6",
-                "groupNumber": "f67ce1",
-                "groupName": "他網通話(不含市話)",
+                "groupType": "DOMESTIC_CALING",
+                "groupName": "國內通話費",
+                "modifyPersonnel": "admin",
+                "modifyDate": "2015/1/3"
+            }, {
+                "groupSort": "7",
+                "groupType": "DOMESTIC_IDD_ELEMENT",
+                "groupName": "IDD",
+                "modifyPersonnel": "admin",
+                "modifyDate": "2015/1/3"
+            }, {
+                "groupSort": "8",
+                "groupType": "DISC_OC_ELEMENT",
+                "groupName": "OC Charge",
+                "modifyPersonnel": "admin",
+                "modifyDate": "2015/1/3"
+            }, {
+                "groupSort": "9",
+                "groupType": "VAS_VOICE_ELEMENT",
+                "groupName": "語音(Voice)加值服務",
+                "modifyPersonnel": "admin",
+                "modifyDate": "2015/1/3"
+            }, {
+                "groupSort": "10",
+                "groupType": "VAS_VOICE_ELEMENT",
+                "groupName": "影音(Voice)加值服務",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }];
 
 
-            // $('#datatable_editGroup').DataTable().destroy();
+            $('#datatable_editType').DataTable().destroy();
 
-
-
-
-            // $timeout(function () {
-            //         $('#datatable_editGroup').DataTable(opt2);
-            //     }, 100)
+            $timeout(function () {
+                $('#datatable_editType').DataTable(opt2);
+            }, 100)
 
 
             // $scope.editGroup = function () {
@@ -321,7 +342,24 @@ define(['btModule'], function (btModule) {
 
             // }
 
+            // 取消鍵
+            $scope.confirmCancel = function () {
+                $timeout(function () {
+                    $('#addModal').modal('hide')
+                    $('#editModal').modal('hide')
 
+                }, 100)
+
+
+            }
+
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#cancelModal').modal('hide')
+                    $('#cancelEditModal').modal('hide')
+                }, 100)
+
+            }
 
         }
     ]);
