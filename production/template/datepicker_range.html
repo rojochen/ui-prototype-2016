@@ -1,0 +1,45 @@
+<div class="" ng-controller="datepickerCtrl">
+	<div class="page-title">
+		<div class="title_left">
+			<h3>日期區間選擇器</h3>
+		</div>
+
+		<div class="title_right">
+			<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="搜尋">
+					<span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<bt-portlet titlename="'日期區間選擇器設計'" refreshbtn="true" switchbtn="true" selectbtn="true" closebtn="true">
+				<!--<p>可藉由bt-pagination這個directive新增分頁功能。</p>
+				<p><code>&lt;bt-pagination <strong>id</strong>="ss" <strong>ng-model</strong>="tableInfo" <strong>page-size</strong>="4" <strong>page-count</strong>="3" <strong>current-page</strong>="2" <strong>show-info</strong>="true" <strong>info-text</strong>="顯示第 0 至 0 項結果，共 0 項" <strong>is-disabled</strong>="false" <strong>on-change-page</strong>="eventChange(e)"&gt;&lt;/bt-pagination&gt;</code></p>
+				<p>說明如下：</p>
+				<ol>
+					<li>id。(必填)</li>
+				</ol>-->
+			</bt-portlet>
+		</div>
+
+
+
+		<div class="col-md-6 col-sm-12 col-xs-12">
+			<bt-datepicker-range datepicker-id="ss" ng-model="daterange1" format="YYYY-MM-DD h:mm:ss A" min-date="2016-03-10" max-date="2017-10-23" show-dropdowns="true" time-picker="true" time-picker-increment="30" time-picker24-hour="false" time-picker-seconds="true"></bt-datepicker-range>
+		</div>
+
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<button ng-click='aa()'>aa</button>
+		</div>
+
+
+	</div>
+</div>
