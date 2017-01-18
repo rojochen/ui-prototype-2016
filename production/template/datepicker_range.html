@@ -31,14 +31,38 @@
 		</div>
 
 
-
+        <!--<p style="height:400px;"></p>-->
 		<div class="col-md-6 col-sm-12 col-xs-12">
-			<bt-datepicker-range datepicker-id="ss" ng-model="daterange1" format="YYYY-MM-DD h:mm:ss A" min-date="2016-03-10" max-date="2017-10-23" show-dropdowns="true" time-picker="true" time-picker-increment="30" time-picker24-hour="false" time-picker-seconds="true"></bt-datepicker-range>
+			<bt-datepicker-range datepicker-id="ss" ng-model="daterange1" format="YYYY-MM-DD h:mm:ss A" drops="down" opens="right" min-date="2016-03-10" max-date="2017-10-23" show-dropdowns="true" time-picker="false" time-picker-increment="30" time-picker24-hour="false" time-picker-seconds="true"></bt-datepicker-range>
 		</div>
 
-		<div class="col-md-12 col-sm-12 col-xs-12">
+		<!--<div class="col-md-12 col-sm-12 col-xs-12">
 			<button ng-click='aa()'>aa</button>
-		</div>
+		</div>-->
+
+
+		<!-- Large modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large model</button>
+            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Model 標題</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Text in a model</h4>
+                            <bt-datepicker-range datepicker-id="ww" ng-model="daterange1" format="YYYY-MM-DD h:mm:ss A" drops="down" opens="right" min-date="2016-03-10" max-date="2017-10-23" show-dropdowns="true" time-picker="false" time-picker-increment="30" time-picker24-hour="false" time-picker-seconds="true"></bt-datepicker-range>
+							<p style="height:1000px;"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary">儲存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Large modal -->
 
 
 	</div>

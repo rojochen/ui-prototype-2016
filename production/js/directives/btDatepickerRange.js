@@ -6,6 +6,8 @@ define(['btModule'], function (btModule) {
         function link(scope, element, attrs){
             var datepickerId = attrs['datepickerId'],
                 format = attrs['format']?attrs['format']:"YYYY/MM/DD",
+                drops = attrs['drops']?attrs['drops']:'down',
+                opens = attrs['opens']?attrs['opens']:'right',
                 minDate = attrs['minDate'],
                 maxDate = attrs['maxDate'],
                 showDropdowns = attrs['showDropdowns']?attrs['showDropdowns']=='true':false,
@@ -26,10 +28,15 @@ define(['btModule'], function (btModule) {
                     timePickerIncrement: timePickerIncrement,
                     timePicker24Hour: timePicker24Hour,
                     timePickerSeconds: timePickerSeconds,
+                    drops: drops,
+                    opens: opens,
+                    // autoApply: true  //可否僅顯示清除按鈕...
                     // autoUpdateInput: false  //取消自動
                 };
             // console.log(datepickerId);
             // console.log(format);
+            // console.log(drops);
+            // console.log(opens);
             // console.log(minDate);
             // console.log(maxDate);
             // console.log(showDropdowns);
@@ -51,10 +58,9 @@ define(['btModule'], function (btModule) {
 
                 if(minDate && minDate.replace(/\D/g, "").length >= 7) optionSet.minDate = minDate;
                 if(maxDate && maxDate.replace(/\D/g, "").length >= 7) optionSet.maxDate = maxDate;
-                // console.log(optionSet);
+                
 
-
-                $timeout(function(){  //確認一下整個 包含controller取值問題
+                $timeout(function(){
                     $('#'+ datepickerId).daterangepicker(optionSet,function(start, end, label){  //自動
                         console.log('ff');
                         scope.ngModel = [];
@@ -62,9 +68,10 @@ define(['btModule'], function (btModule) {
                         scope.ngModel.push(end._d);
                         // console.log(scope.ngModel);
                     });
+
                     $('#'+ datepickerId).on('apply.daterangepicker', function(ev, picker) {  //手動
                         $(this).val(picker.startDate.format(format) + ' - ' + picker.endDate.format(format));
-                        // console.log('ff-1');
+                        console.log('ff-1');
                         // scope.value = [];
                         // scope.value.push(picker.startDate._d);
                         // scope.value.push(picker.endDate._d);
@@ -75,10 +82,30 @@ define(['btModule'], function (btModule) {
                         // scope.ngModel.push(picker.endDate._d);
                         // console.log(scope.ngModel);
                     });
+
                     $('#'+ datepickerId).on('cancel.daterangepicker', function(ev, picker) {
                         console.log('ff-2');
                         $(this).val('');
                         scope.ngModel.length = 0;
+                    });
+
+                    $('#'+ datepickerId).on('showCalendar.daterangepicker', function(){
+                        console.log('open-1');
+                    });
+
+                    $('#'+ datepickerId).on('show.daterangepicker', function(){
+                        console.log('open-2');
+                    });
+
+                    $('#'+ datepickerId).on('hideCalendar.daterangepicker', function(){
+                        console.log('close-1');
+                    });
+
+                    $('#'+ datepickerId).on('hide.daterangepicker', function(){
+                        console.log('close-2');
+                        if(!scope.ngModel || scope.ngModel.length === 0){
+                            scope.value = [];
+                        }
                     });
 
                     if(!scope.ngModel || scope.ngModel.length === 0){
