@@ -168,6 +168,28 @@ define(['btModule'], function (btModule) {
             //     };
             // };
 
+
+            // 取消鍵
+            $scope.confirmCancel = function () {
+                $timeout(function () {
+                    $('#addModal').modal('hide')
+                    $('#editModal').modal('hide')
+
+                }, 100)
+
+
+            }
+
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#cancelModal').modal('hide')
+                    $('#cancelEditModal').modal('hide')
+
+                }, 100)
+
+            }
+
+
         }
     ]);
     return app;
