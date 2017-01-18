@@ -84,6 +84,9 @@ define(['btModule'], function (btModule) {
             }
             /* end */
 
+
+
+
             var opt = {
                 "oLanguage": {
                     "sProcessing": "處理中...",
@@ -136,9 +139,9 @@ define(['btModule'], function (btModule) {
                 "ITParameterSetSort": "1",
                 "ITParameterSetList": "FET",
                 "ITParameterSetClassification": "F",
-                "ITParameterSetType": "DISC_EFFECTIVE_METHOD",
-                "ITParameterSetKEY": "Now",
-                "ITParameterSetValue": "立即",
+                "ITParameterSetType": "CARRYING_AMOUNT-帳面金額",
+                "ITParameterSetKEY": "005",
+                "ITParameterSetValue": "折抵帳單上所有各類通話費用",
                 "ITParameterSetPARAMETE": "",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "08-3月 -10"
@@ -146,9 +149,9 @@ define(['btModule'], function (btModule) {
                 "ITParameterSetSort": "2",
                 "ITParameterSetList": "FET",
                 "ITParameterSetClassification": "F",
-                "ITParameterSetType": "DISC_EFFECTIVE_METHOD",
-                "ITParameterSetKEY": "cycle",
-                "ITParameterSetValue": "下一個cycle勿選",
+                "ITParameterSetType": "CARRYING_AMOUNT-帳面金額",
+                "ITParameterSetKEY": "004",
+                "ITParameterSetValue": "折抵帳單上所有各類通話費用",
                 "ITParameterSetPARAMETE": "",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "08-3月 -10"
@@ -156,9 +159,9 @@ define(['btModule'], function (btModule) {
                 "ITParameterSetSort": "3",
                 "ITParameterSetList": "FET",
                 "ITParameterSetClassification": "F",
-                "ITParameterSetType": "REMOVE_METHOD",
-                "ITParameterSetKEY": "y",
-                "ITParameterSetValue": "雙向簡訊移除",
+                "ITParameterSetType": "CARRYING_AMOUNT-帳面金額",
+                "ITParameterSetKEY": "003",
+                "ITParameterSetValue": "折抵帳單上所有各類通話費用",
                 "ITParameterSetPARAMETE": "",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "08-3月 -10"
@@ -166,9 +169,9 @@ define(['btModule'], function (btModule) {
                 "ITParameterSetSort": "4",
                 "ITParameterSetList": "FET",
                 "ITParameterSetClassification": "F",
-                "ITParameterSetType": "REMOVE_METHOD",
+                "ITParameterSetType": "CARRYING_AMOUNT-帳面金額",
                 "ITParameterSetKEY": "N",
-                "ITParameterSetValue": "不移除",
+                "ITParameterSetValue": "折抵帳單上所有各類通話費用",
                 "ITParameterSetPARAMETE": "",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "08-3月 -10"
@@ -176,9 +179,9 @@ define(['btModule'], function (btModule) {
                 "ITParameterSetSort": "5",
                 "ITParameterSetList": "FET",
                 "ITParameterSetClassification": "F",
-                "ITParameterSetType": "REMOVE_METHOD",
+                "ITParameterSetType": "CARRYING_AMOUNT-帳面金額",
                 "ITParameterSetKEY": "48",
-                "ITParameterSetValue": "無限制",
+                "ITParameterSetValue": "折抵帳單上所有各類通話費用",
                 "ITParameterSetPARAMETE": "",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "08-3月 -10"
@@ -186,9 +189,9 @@ define(['btModule'], function (btModule) {
                 "ITParameterSetSort": "6",
                 "ITParameterSetList": "FET",
                 "ITParameterSetClassification": "F",
-                "ITParameterSetType": "VAS_VALIDITY",
+                "ITParameterSetType": "DISC_GPRS_ELEMENT-GPRS",
                 "ITParameterSetKEY": "49",
-                "ITParameterSetValue": "一個月",
+                "ITParameterSetValue": "折抵帳單上所有各類通話費用",
                 "ITParameterSetPARAMETE": "",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "08-3月 -10"
@@ -196,9 +199,9 @@ define(['btModule'], function (btModule) {
                 "ITParameterSetSort": "7",
                 "ITParameterSetList": "FET",
                 "ITParameterSetClassification": "F",
-                "ITParameterSetType": "VAS_VALIDITY",
+                "ITParameterSetType": "DISC_GPRS_ELEMENT-GPRS",
                 "ITParameterSetKEY": "50",
-                "ITParameterSetValue": "二個月",
+                "ITParameterSetValue": "折抵帳單上所有各類通話費用",
                 "ITParameterSetPARAMETE": "",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "08-3月 -10"
@@ -206,9 +209,9 @@ define(['btModule'], function (btModule) {
                 "ITParameterSetSort": "8",
                 "ITParameterSetList": "FET",
                 "ITParameterSetClassification": "F",
-                "ITParameterSetType": "VAS_VALIDITY",
+                "ITParameterSetType": "DISC_GPRS_ELEMENT-GPRS",
                 "ITParameterSetKEY": "51",
-                "ITParameterSetValue": "三個月",
+                "ITParameterSetValue": "折抵帳單上所有各類通話費用",
                 "ITParameterSetPARAMETE": "",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "08-3月 -10"
@@ -216,9 +219,9 @@ define(['btModule'], function (btModule) {
                 "ITParameterSetSort": "9",
                 "ITParameterSetList": "FET",
                 "ITParameterSetClassification": "F",
-                "ITParameterSetType": "VAS_VALIDITY",
+                "ITParameterSetType": "DISC_GPRS_ELEMENT-GPRS",
                 "ITParameterSetKEY": "Now",
-                "ITParameterSetValue": "值",
+                "ITParameterSetValue": "折抵帳單上所有各類通話費用",
                 "ITParameterSetPARAMETE": "",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "08-3月 -10"
@@ -226,9 +229,9 @@ define(['btModule'], function (btModule) {
                 "ITParameterSetSort": "10",
                 "ITParameterSetList": "FET",
                 "ITParameterSetClassification": "F",
-                "ITParameterSetType": "DISC_EFFECTIVE_METHOD",
+                "ITParameterSetType": "DISC_GPRS_ELEMENT-GPRS",
                 "ITParameterSetKEY": "Now",
-                "ITParameterSetValue": "值",
+                "ITParameterSetValue": "折抵帳單上所有各類通話費用",
                 "ITParameterSetPARAMETE": "",
                 "modifyPersonnel": "SPV",
                 "modifyDate": "08-3月 -10"
@@ -248,53 +251,74 @@ define(['btModule'], function (btModule) {
             }
 
 
-            $scope.editGroupTableData = [{
+            $scope.editTypeTableData = [{
                 "groupSort": "1",
-                "groupNumber": "9ebaf8",
-                "groupName": "一般國內通話金額",
+                "groupType": "REMOVE_METHOD",
+                "groupName": "合約到期移除方式",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
                 "groupSort": "2",
-                "groupNumber": "7ae716",
-                "groupName": "EBU - 一般國內通話金額",
+                "groupType": "VAS_VALIDITY",
+                "groupName": "　服務合約有效期限",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
                 "groupSort": "3",
-                "groupNumber": "cedf83",
-                "groupName": "網外市話通話費折抵",
+                "groupType": "CARRYING_AMOUNT",
+                "groupName": "帳面金額",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
                 "groupSort": "4",
-                "groupNumber": "83e5b9",
-                "groupName": "他網通話(不含市話)",
+                "groupType": "DISC_SMS_ELEMENT",
+                "groupName": "簡訊費用",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
                 "groupSort": "5",
-                "groupNumber": "f67ce1",
-                "groupName": "他網通話(不含市話)",
+                "groupType": "DISC_MMS_ELEMENT",
+                "groupName": "MMS費用",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }, {
                 "groupSort": "6",
-                "groupNumber": "f67ce1",
-                "groupName": "他網通話(不含市話)",
+                "groupType": "DOMESTIC_CALING",
+                "groupName": "國內通話費",
+                "modifyPersonnel": "admin",
+                "modifyDate": "2015/1/3"
+            }, {
+                "groupSort": "7",
+                "groupType": "DOMESTIC_IDD_ELEMENT",
+                "groupName": "IDD",
+                "modifyPersonnel": "admin",
+                "modifyDate": "2015/1/3"
+            }, {
+                "groupSort": "8",
+                "groupType": "DISC_OC_ELEMENT",
+                "groupName": "OC Charge",
+                "modifyPersonnel": "admin",
+                "modifyDate": "2015/1/3"
+            }, {
+                "groupSort": "9",
+                "groupType": "VAS_VOICE_ELEMENT",
+                "groupName": "語音(Voice)加值服務",
+                "modifyPersonnel": "admin",
+                "modifyDate": "2015/1/3"
+            }, {
+                "groupSort": "10",
+                "groupType": "VAS_VOICE_ELEMENT",
+                "groupName": "影音(Voice)加值服務",
                 "modifyPersonnel": "admin",
                 "modifyDate": "2015/1/3"
             }];
 
 
-            // $('#datatable_editGroup').DataTable().destroy();
+            $('#datatable_editType').DataTable().destroy();
 
-
-
-
-            // $timeout(function () {
-            //         $('#datatable_editGroup').DataTable(opt2);
-            //     }, 100)
+            $timeout(function () {
+                $('#datatable_editType').DataTable(opt2);
+            }, 100)
 
 
             // $scope.editGroup = function () {
@@ -321,7 +345,30 @@ define(['btModule'], function (btModule) {
 
             // }
 
+            // 取消鍵
+            $scope.confirmCancel = function () {
+                $timeout(function () {
+                    $('#addModal').modal('hide')
+                    $('#editModal').modal('hide')
+                    $('#addType').modal('hide')
+                    $('#addTypeEdit').modal('hide')
+                    $('#addGroup').modal('hide')
 
+
+
+
+                }, 100)
+
+
+            }
+
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#cancelModal').modal('hide')
+                    $('#cancelEditModal').modal('hide')
+                }, 100)
+
+            }
 
         }
     ]);
