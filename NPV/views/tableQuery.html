@@ -1,0 +1,197 @@
+<div class="page-no-title"></div>
+<div class="row" ng-controller="tableQueryCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>大表查詢/匯入</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <!-- 活動群組表單 begin -->
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">專案大表名稱</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">大表狀態</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select class="form-control">
+                                         <option>全選</option>
+                                         <option></option>
+                                         <option></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">負責人員</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">匯入人員</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control">
+                            </div>
+                            <label>(NT帳號)</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">匯入日期區間</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input id="tableQueryTime-1" type="text" class="form-control" style="width: 145px; display: inline-block;">                                ~
+                                <input id="tableQueryTime-2" type="text" class="form-control" style="width: 145px; display: inline-block;">
+                            </div>
+                            <!--<div class="col-md-offset-4 col-sm-offset-4"></div>-->
+                            <a href="#" class="col-md-4 col-sm-4 col-xs-12">『一般專案』大表範本Excel2010(*.xlsx)</a>
+                            <a href="#" class="col-md-4 col-sm-4 col-xs-12">『分享包』大表範本Excel2010(*.xlsx)</a>
+                        </div>
+                        <!--<div class="form-group">
+                            <a href="#">
+                                <ul class="col-md-6 col-md-offset-4 col-sm-4 col-xs-12">
+                                    <li>『一般專案』大表範本Excel2010(*.xlsx)</li>
+                                    <li>『分享包』大表範本Excel2010(*.xlsx)</li>
+                                </ul>
+                            </a>
+                        </div>-->
+                        <div class="form-group">
+                            <div class="col-md-12 col-sm-12 col-xs-12 ">
+                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#tableQueryImport" ng-click="inputFile()">匯入大表</button>
+                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#tableQueryExport">匯出大表</button>
+                                <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
+                            </div>
+                        </div>
+                        <!--活動群組表格 start -->
+                        <table id="datatable_tableQuery" class="table table-striped table-bordered" ng-show="isTable">
+                            <thead>
+                                <tr>
+                                    <th class="table-header-color"><input type="checkbox"></th>
+                                    <th class="table-header-color col-md-1">NO</th>
+                                    <th class="table-header-color">專案大表名稱</th>
+                                    <th class="table-header-color">檔案名稱</th>
+                                    <th class="table-header-color col-md-1">版次</th>
+                                    <th class="table-header-color">負責人員</th>
+                                    <th class="table-header-color">匯入人員</th>
+                                    <th class="table-header-color col-md-2">匯入日期</th>
+                                    <th class="table-header-color col-md-2">狀態</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in tableQueryTableData track by $index">
+                                    <td><input type="checkbox"> </td>
+                                    <td ng-bind="x.tableQueryID"></td>
+                                    <td ng-bind="x.tableQueryName"></td>
+                                    <td ng-bind="x.tableQueryFile"></td>
+                                    <td ng-bind="x.tableQueryVersion"></td>
+                                    <td ng-bind="x.tableQueryRole"></td>
+                                    <td ng-bind="x.tableQueryImportRole"></td>
+                                    <td ng-bind="x.tableQueryDate"></td>
+                                    <td ng-bind="x.tableQueryStatus"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 活動群組表格 end -->
+                        <!-- 頁籤 begin -->
+                        <div class="pull-right">
+                            <div bt-pagination ng-model="tableInfo" page-size="10" page-count="32"></div>
+                        </div>
+                        <!-- 頁籤 end -->
+                    </form>
+                    <!-- 活動群組表單 end -->
+                    <!-- 匯出大表 begin -->
+                    <div class="modal bs-example-modal-lg" id="tableQueryExport" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確認執行畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-12 text-center">
+                                            <h3>匯出Excel，確認執行？</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 匯出大表 end -->
+                    <!-- 匯入大表 begin -->
+                    <div class="modal bs-example-modal-lg" id="tableQueryImport" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">請選擇上傳匯入的Excel檔案</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="text-center">
+                                            <input type="file" name="file">
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#tableQueryFileOK">上傳</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 匯入大表 end -->
+                    <!-- 匯入大表 檔案匯入成功 begin -->
+                    <div class="modal bs-example-modal-lg" id="tableQueryFileOK" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">匯入大表</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="text-center">
+                                            <h3>檔案已匯入，請等待MAIL通知(約五分鐘)</h3>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 匯入大表 檔案匯入成功 end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

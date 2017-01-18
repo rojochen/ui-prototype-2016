@@ -90,6 +90,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/activemenuService', {
 				templateUrl: "../NPV/views/activemenuService.html"
 			})
+			.when('/tableQuery', {
+				templateUrl: "../NPV/views/tableQuery.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
