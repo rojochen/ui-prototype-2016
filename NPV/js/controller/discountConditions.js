@@ -84,11 +84,21 @@ define(['btModule'], function (btModule) {
             };
 
             $scope.discountConditionsTableData = [{
+                "discountConditionSort": "22",
+                "discountConditionName": "月租折扣適用安心講資費",
+                "discountConditionType": "",
+                "defaultValue": "N",
+                "restocking": "Y",
+                "ITSR": "Y",
+                "PC": "Y",
+                "modifyPersonnel": "lhchang",
+                "modifyDate": "24-8月 -16"
+            }, {
                 "discountConditionSort": "10",
                 "discountConditionName": "到期通知_折扣類型「網內互打免費」",
                 "discountConditionType": "SMS_ONNETFREE",
                 "defaultValue": "N",
-                "restocking": "N",
+                "restocking": "Y",
                 "ITSR": "N",
                 "PC": "N",
                 "modifyPersonnel": "admiv",
@@ -98,7 +108,7 @@ define(['btModule'], function (btModule) {
                 "discountConditionName": "到期通知_折扣類型「上網傳輸量吃到飽」",
                 "discountConditionType": "SMS_GPRSUNLIMITED",
                 "defaultValue": "N",
-                "restocking": "N",
+                "restocking": "Y",
                 "ITSR": "N",
                 "PC": "N",
                 "modifyPersonnel": "admiv",
@@ -108,7 +118,7 @@ define(['btModule'], function (btModule) {
                 "discountConditionName": "到期通知_折扣類型「數據加贈傳輸量」",
                 "discountConditionType": "SMS_BOOSTER",
                 "defaultValue": "N",
-                "restocking": "N",
+                "restocking": "Y",
                 "ITSR": "N",
                 "PC": "N",
                 "modifyPersonnel": "admiv",
