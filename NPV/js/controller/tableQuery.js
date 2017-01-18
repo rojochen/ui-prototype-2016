@@ -30,23 +30,6 @@ define(['btModule'], function (btModule) {
             });
             /*end 版面縮合*/
 
-            // it參數設定
-            /* begin */
-            $scope.btnShow1 = true;
-            $scope.btnShow2 = false;
-            $scope.advancedSearch = function () {
-                if ($scope.advancedControl) {
-                    $scope.advancedControl = false;
-                    $scope.btnShow1 = true;
-                    $scope.btnShow2 = false;
-                } else {
-                    $scope.advancedControl = true;
-                    $scope.btnShow1 = false;
-                    $scope.btnShow2 = true;
-                }
-            };
-            /* end */
-
             /* 匯入日期區間 begin */
             $('#tableQueryTime-1').daterangepicker({
                 singleDatePicker: true,
@@ -207,15 +190,7 @@ define(['btModule'], function (btModule) {
             /* notify 通知訊息 begin */
             // Success
             $scope.pnotifyAddSuccess = function () {
-                pnotifyService.pnotifySuccess('Success', '新增完成！');
-            }
-
-            $scope.pnotifyEditSuccess = function () {
-                pnotifyService.pnotifySuccess('Success', '修改完成！');
-            }
-
-            $scope.pnotifyDelSuccess = function () {
-                pnotifyService.pnotifySuccess('Success', '刪除完成！');
+                pnotifyService.pnotifySuccess('Success', '檔案已匯入，請等待 MAIL 通知(約五分鐘)');
             }
             /* notify 通知訊息 end */
 
