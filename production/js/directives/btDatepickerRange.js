@@ -43,17 +43,10 @@ define(['btModule'], function (btModule) {
                 scope.isShowDatepicker = true;
                 scope.id = datepickerId;
 
-                console.log(scope.ngModel);
                 if(scope.ngModel && scope.ngModel.length !== 0){
                     console.log('aa');
                     if(scope.ngModel[0]) optionSet.startDate = scope.ngModel[0];
                     if(scope.ngModel[1]) optionSet.endDate = scope.ngModel[1];
-                    // console.log(optionSet);
-                }else{
-                    console.log('bb');  //如何清除預設？?
-                    // console.log(optionSet);
-                    console.log(scope.value);
-                    // scope.value.length = 0;
                 }
 
                 if(minDate && minDate.replace(/\D/g, "").length >= 7) optionSet.minDate = minDate;
@@ -67,7 +60,7 @@ define(['btModule'], function (btModule) {
                         scope.ngModel = [];
                         scope.ngModel.push(start._d);
                         scope.ngModel.push(end._d);
-                        console.log(scope.ngModel);
+                        // console.log(scope.ngModel);
                     });
                     $('#'+ datepickerId).on('apply.daterangepicker', function(ev, picker) {  //手動
                         $(this).val(picker.startDate.format(format) + ' - ' + picker.endDate.format(format));
@@ -87,6 +80,11 @@ define(['btModule'], function (btModule) {
                         $(this).val('');
                         scope.ngModel.length = 0;
                     });
+
+                    if(!scope.ngModel || scope.ngModel.length === 0){
+                        console.log('bb');
+                        scope.value = [];
+                    }
                 },100);
             }else{
                 scope.isShowDatepicker = false;
