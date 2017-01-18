@@ -96,6 +96,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/importDevice', {
 				templateUrl: "../NPV/views/importDevice.html"
 			})
+			.when('/importTableXML', {
+				templateUrl: "../NPV/views/importTableXML.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
