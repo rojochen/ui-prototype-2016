@@ -352,6 +352,8 @@ define(['btModule'], function (btModule) {
                     $('#editModal').modal('hide')
                     $('#addType').modal('hide')
                     $('#addTypeEdit').modal('hide')
+                    $('#addGroup').modal('hide')
+
 
 
 
