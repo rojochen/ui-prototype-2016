@@ -350,6 +350,10 @@ define(['btModule'], function (btModule) {
                 $timeout(function () {
                     $('#addModal').modal('hide')
                     $('#editModal').modal('hide')
+                    $('#addType').modal('hide')
+                    $('#addTypeEdit').modal('hide')
+
+
 
                 }, 100)
 

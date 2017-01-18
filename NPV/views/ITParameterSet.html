@@ -92,8 +92,8 @@
                                         <th class="table-header-color col-md-1">分類</th>
                                         <th class="table-header-color col-md-1">類型</th>
                                         <th class="table-header-color col-md-1">KEY</th>
-                                        <th class="table-header-color col-md-1">值</th>
-                                        <th class="table-header-color col-md-1">PARAMETE</th>
+                                        <th class="table-header-color col-md-2">值</th>
+                                        <th class="table-header-color ">PARAMETE</th>
                                         <th class="table-header-color col-md-1">修改人員</th>
                                         <th class="table-header-color col-md-2">修改日期</th>
                                         <th class="table-header-color col-md-2"></th>
@@ -333,7 +333,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#editConfirm">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelEditModal">取消</button>
                                 </div>
                             </div>
                         </div>
@@ -379,7 +379,7 @@
                                                 <button type="button" class="btn btn-primary" ng-click="inquireTable()">查詢</button>
                                                 <button type="button" class="btn btn-primary" data-toggle="modal" href="#addType">新增</button>
                                                 <button type="button" class="btn btn-primary">重置</button>
-                                                <button type="button" class="btn btn-primary">關閉</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -402,7 +402,7 @@
                                                         <td ng-bind="x.modifyPersonnel"></td>
                                                         <td ng-bind="x.modifyDate"></td>
                                                         <td>
-                                                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#editAddGroup"><i class="fa fa-pencil"></i> 修改</button>
+                                                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#addTypeEdit"><i class="fa fa-pencil"></i> 修改</button>
                                                             <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" href="#deleteModal"><i class="glyphicon glyphicon-remove"></i> 刪除</button>
                                                         </td>
                                                     </tr>
@@ -410,10 +410,6 @@
                                             </table>
                                         </div>
                                     </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
                         </div>
@@ -494,12 +490,93 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#addConfirm">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- end 編輯群組 -->
+                    <!-- end 新增編輯類型 -->
+                    <!-- 新增編輯類型修改 -->
+                    <div class="modal bs-example-modal-lg" id="addTypeEdit" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">新增編輯類型修改</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>目錄:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>
+                                            分類:
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>
+                                            類型:
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>
+                                            類型中文名稱:
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">是否有群組
+                                            :
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <select class="form-control">
+                                                    <option value="">否</option>
+                                                    <option value="">是</option>
+                                                    
+                                                </select>
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">是否有預設值
+                                            :
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <select class="form-control">
+                                                    <option value="">否</option>
+                                                    <option value="">是</option>
+                                                    
+                                                </select>
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#editConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelEditModal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 新增編輯類型修改  -->
                     <!-- 編輯群組 -->
                     <div class="modal fullscreen-modal in" id="editGroup" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
