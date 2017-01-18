@@ -6,7 +6,7 @@ define(['btModule'], function (btModule) {
         $logProvider.debugEnabled(true);
     });
 
-    app.controller('importTableXMLCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity',
+    app.controller('exportTableXMLCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity',
         function ($scope, $timeout, $log, $element, shoppingCartEntity) {
             var vm = this;
 
