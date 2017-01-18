@@ -23,6 +23,8 @@
                                     <option>VD_USERS-V+D Users</option>
                                     <option>WBB_BLACK_LIST-WBB不續約客戶</option>
                                     <option>DATA_USAGE-WBB Data usage</option>
+                                    <option>ONCE_CONTRACT-同證號限三年一次(7日)</option>
+                                    <option>SRVPRODTYPE-用戶方案別</option>
                                     <option>ONCE_CONTRACT_60-同證號限三年一次(60日)</option>
                                     <option>VIP-VIP</option>
                                     <option>MNP-攜碼</option>
@@ -111,8 +113,8 @@
                     </form>
                     <!-- 適用對象設定 end -->
                     <!-- 適用對象新增modal -->
-                    <div class="modal fade bs-example-modal-lg" id="addModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
+                    <div class="modal  bs-example-modal-lg" id="addModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span
@@ -131,6 +133,8 @@
                                                     <option>VD_USERS-V+D Users</option>
                                                     <option>WBB_BLACK_LIST-WBB不續約客戶</option>
                                                     <option>DATA_USAGE-WBB Data usage</option>
+                                                    <option>ONCE_CONTRACT-同證號限三年一次(7日)</option>
+                                                    <option>SRVPRODTYPE-用戶方案別</option>
                                                     <option>ONCE_CONTRACT_60-同證號限三年一次(60日)</option>
                                                     <option>VIP-VIP</option>
                                                     <option>MNP-攜碼</option>
@@ -161,7 +165,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">類別:</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>類別:</label>
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                                 <label class="checkbox-inline">
                                                     <input type="checkbox" value="">主約促代
@@ -198,8 +202,8 @@
                     </div>
                     <!-- end 適用對象新增modal  -->
                     <!-- 適用對象修改modal -->
-                    <div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
+                    <div class="modal  bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span
@@ -218,6 +222,8 @@
                                                     <option>VD_USERS-V+D Users</option>
                                                     <option>WBB_BLACK_LIST-WBB不續約客戶</option>
                                                     <option>DATA_USAGE-WBB Data usage</option>
+                                                    <option>ONCE_CONTRACT-同證號限三年一次(7日)</option>
+                                                    <option>SRVPRODTYPE-用戶方案別</option>
                                                     <option>ONCE_CONTRACT_60-同證號限三年一次(60日)</option>
                                                     <option>VIP-VIP</option>
                                                     <option>MNP-攜碼</option>
@@ -285,7 +291,7 @@
                     </div>
                     <!-- end 適用對象修改modal  -->
                     <!-- 編輯對象modal  -->
-                    <div class="modal fullscreen-modal fade in" id="editTarget" tabindex="-1" role="dialog">
+                    <div class="modal fullscreen-modal  in" id="editTarget" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -323,11 +329,11 @@
                                             <thead>
                                                 <tr>
                                                     <th class="table-header-color">排序</th>
-                                                    <th class="table-header-color">代碼</th>
-                                                    <th class="table-header-color">名稱</th>
-                                                    <th class="table-header-color">修改人員</th>
+                                                    <th class="table-header-color col-md-3">代碼</th>
+                                                    <th class="table-header-color col-md-3">名稱</th>
+                                                    <th class="table-header-color col-md-2">修改人員</th>
                                                     <th class="table-header-color">修改日期</th>
-                                                    <th class="table-header-color">編輯</th>
+                                                    <th class="table-header-color col-md-2">編輯</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -355,7 +361,7 @@
                     </div>
                     <!-- end 編輯對象modal -->
                     <!-- 編輯對象新增modal  -->
-                    <div class="modal fade bs-example-modal-lg" id="addEditTarget" tabindex="-1" role="dialog">
+                    <div class="modal  bs-example-modal-lg" id="addEditTarget" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -392,7 +398,7 @@
                     </div>
                     <!-- end 編輯對象新增modal -->
                     <!-- 編輯對象修改modal  -->
-                    <div class="modal fade bs-example-modal-lg" id="editEditTarget" tabindex="-1" role="dialog">
+                    <div class="modal  bs-example-modal-lg" id="editEditTarget" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -429,7 +435,7 @@
                     </div>
                     <!-- end 編輯對象新增modal -->
                     <!-- 新增確認畫面 -->
-                    <div class="modal fade bs-example-modal-lg" id="addConfirm" tabindex="-1" role="dialog">
+                    <div class="modal  bs-example-modal-lg" id="addConfirm" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -457,7 +463,7 @@
                     </div>
                     <!-- end 新增確認畫面-->
                     <!-- 修改確認畫面 modal -->
-                    <div class="modal fade bs-example-modal-lg" id="editConfirm" tabindex="-1" role="dialog">
+                    <div class="modal  bs-example-modal-lg" id="editConfirm" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -485,7 +491,7 @@
                     </div>
                     <!-- end 修改確認畫面  modal -->
                     <!-- 確認畫面 刪除 modal -->
-                    <div class="modal fade bs-example-modal-lg" id="deleteModal" role="dialog">
+                    <div class="modal  bs-example-modal-lg" id="deleteModal" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
