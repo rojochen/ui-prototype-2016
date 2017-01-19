@@ -83,8 +83,8 @@
                     </form>
                     <!--下拉選單維護 end-->
                     <!--新增畫面 start-->
-                    <div class="modal  bs-example-model-lg" id="addComplete" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
+                    <div class="modal bs-example-modal-lg" id="addComplete" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">
@@ -132,7 +132,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>下拉選項數值:</label>
+                                               下拉選項數值:</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
@@ -141,7 +141,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">備註:</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <textarea row="25" class="form-control"></textarea>
+                                                <textarea row="25" class="form-control" rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -155,15 +155,15 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#activemenuServiceConfirm">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--新增畫面 end-->
                     <!--修改畫面 start-->
-                    <div class="modal  bs-example-model-lg" id="modifyComplete" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
+                    <div class="modal  bs-example-modal-lg" id="modifyComplete" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">
@@ -211,7 +211,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>下拉選項數值:</label>
+                                                下拉選項數值:</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
@@ -220,7 +220,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">備註:</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <textarea row="25" class="form-control"></textarea>
+                                                <textarea row="25" class="form-control" rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -234,14 +234,14 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#activemenuServiceModify">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelEditModal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--修改畫面 end-->
                     <!--編輯群組 start-->
-                    <div class="modal fullscreen-modal in" id="editGroup" tabindex="-1" role="dialog" style="display: none; padding-right: 17px;">
+                    <div class="modal fullscreen-modal in" id="editGroup" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -309,8 +309,8 @@
                     </div>
                     <!--編輯群組 end-->
                     <!--編輯群組新增 start-->
-                    <div class="modal  bs-example-modal-lg in" id="editGroupAdd" tabindex="-1" role="dialog" style="display: none;">
-                        <div class="modal-dialog" role="document">
+                    <div class="modal  bs-example-modal-lg in" id="editGroupAdd" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
@@ -335,7 +335,7 @@
                                             <div class="col-md-offset-2 col-sm-offset-2"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>備註:
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註:
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <textarea class="form-control" rows="3"></textarea>
@@ -346,15 +346,15 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-toggle="modal" href="#activemenuServiceConfirm" data-dismiss="modal">確定</button>
-                                    <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--編輯群組新增 end-->
                     <!--編輯群組修改 start-->
-                    <div class="modal  bs-example-modal-lg in" id="editGroupModify" tabindex="-1" role="dialog" style="display: none;">
-                        <div class="modal-dialog" role="document">
+                    <div class="modal  bs-example-modal-lg in" id="editGroupModify" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
@@ -379,7 +379,7 @@
                                             <div class="col-md-offset-2 col-sm-offset-2"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>備註:
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註:
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <textarea class="form-control" rows="3"></textarea>
@@ -390,7 +390,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-toggle="modal" href="#activemenuServiceModify" data-dismiss="modal">確定</button>
-                                    <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelEditModal">取消</button>
                                 </div>
                             </div>
                         </div>
@@ -483,6 +483,62 @@
                         </div>
                     </div>
                     <!--確定修改 end-->
+                    <!-- 確認畫面 取消新增 modal -->
+                    <div class="modal  bs-example-modal-lg" id="cancelAddModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+                                    <h4 class="modal-title">確認畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定取消新增?</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="confirmCancel()">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancel()">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 確認畫面  取消 modal -->
+                    <!-- 確認畫面 取消修改 modal -->
+                    <div class="modal  bs-example-modal-lg" id="cancelEditModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+                                    <h4 class="modal-title">確認畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定取消編輯?</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="confirmCancel()">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancel()">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end 確認畫面  取消 modal -->
                 </div>
             </div>
         </div>
