@@ -353,10 +353,6 @@ define(['btModule'], function (btModule) {
                     $('#addType').modal('hide')
                     $('#addTypeEdit').modal('hide')
                     $('#addGroup').modal('hide')
-
-
-
-
                 }, 100)
 
 
