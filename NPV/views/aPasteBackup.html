@@ -116,7 +116,7 @@
                                                 <div class="radio">
                                                     <label><input type="radio" value="optionsRadios" name="classOption1"> 活動類別</label>
                                                     <label><input type="radio" value="optionsRadios" name="classOption1"> 促代</label>
-                                                    <label><input type="radio" value="optionsRadios" name="classOption1"> 加值</label>
+                                                    <label><input type="radio" value="optionsRadios" name="classOption1" ng-click="showValueAddedTable()"> 加值</label>
                                                 </div>
                                             </div>
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">A貼/備援單</label>
@@ -128,6 +128,7 @@
                                             </div>
                                         </div>
                                     </form>
+                                    <!-- 活動類別or促代、A貼 畫面 begin -->
                                     <!-- A貼維護 begin -->
                                     <div class="x_panel" ng-if="isAPasteTable">
                                         <div class="x_title">
@@ -340,7 +341,8 @@
                                         </div>
                                     </div>
                                     <!-- 合約內容 end -->
-                                    <!-- 備援單 畫面 begin -->
+                                    <!-- 活動類別or促代、A貼 畫面 end -->
+                                    <!-- 活動類別or促代、備援單 畫面 begin -->
                                     <!-- 備援單維護 begin -->
                                     <div class="x_panel" ng-if="isBackupTable">
                                         <div class="x_title">
@@ -392,7 +394,76 @@
                                         </div>
                                     </div>
                                     <!-- 備援單維護 end -->
-                                    <!-- 備援單 畫面 end -->
+                                    <!-- 內容 begin -->
+                                    <div class="x_panel" ng-if="isBackupTable">
+                                        <div class="x_title">
+                                            <h2>內容</h2>
+                                            <ul class="nav navbar-right panel_toolbox">
+                                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="x_content">
+                                            <form class="form-horizontal form-label-left">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">預繳金額</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案需預繳【＊預繳金額＊】，預繳金額自申辦後第一期帳單起開始抵扣帳單金額，扣完為止（不含專案補貼款、手機捐款及代收代付小額付款等）。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">使用語音費率GSM月租費高改低限制</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案啟用後【＊高改低限制時間＊】個月內不得調降低於啟用當時選用之語音月租費率，之後可變更165(含)以上語音費率，新費率將於變更申請後下一個帳單結帳日開始生效。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">租約期間</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本合約起始日為客戶辦理續約當天起算，若原合約未到期，則本合約起始日為原合約到期日隔天。若於合約期間內提前退租（含一租一退、轉至2G或預付卡、因違約或違反法令遭致停機者），除需依本合約規定繳交專案補貼款外，若為原合約未滿者尚需依原合約規定繳交手機或專案補貼款或不予退還保證金。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">違約金</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案合約期間為【＊租約期間＊】個月，合約期間內不得退租、不得調降語音費率，亦不得單獨取消【＊附約VAS服務名稱＊】服務。提前退租或調降語音費率者需繳交{專案補貼款【＊主+附違約金＊】，調降語音費率需繳交專案補貼款NT$XXX，調降或提前取消【＊附約VAS服務名稱＊】服務者需繳交{專案補貼款【＊附約VAS違約金＊】}，實際應繳之專案補貼款以本專案合約未到期之"日"為單位，按合約總日數比例計算。合約未到期之日數自解約當日起算，計算公式：專案補貼款 x（合約未到期日數/合約總日數）=實際應繳專案補貼款（四捨五入計算至整數）。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">使用Data費率漫遊條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">【＊VAS對應條款＊】</textarea>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="col-md-12 col-sm-12 col-xs-12 text-center">固定字</label>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">資費方案條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">資料條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- 內容 end -->
+                                    <!-- 活動類別or促代、備援單 畫面 end -->
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal">預覽</button>

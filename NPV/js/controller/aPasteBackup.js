@@ -108,17 +108,25 @@ define(['btModule'], function (btModule) {
                 $scope.isTable = true;
             };
 
-            // 新增預設畫面＆A貼選項
+            // 顯示「新增的預設畫面」＆「A貼」畫面
             $scope.showAPasteTable = function () {
                 $scope.isAPasteTable = true;
                 $scope.isBackupTable = false;
             };
 
-            // 備援單
+            // 顯示「備援單」畫面
             $scope.isBackupTable = false;
             $scope.showBackupTable = function () {
                 $scope.isBackupTable = true;
                 $scope.isAPasteTable = false;
+            };
+
+            // 顯示「加值」畫面
+            $scope.isValueAddedTable = false;
+            $scope.showValueAddedTable = function () {
+                $scope.isAPasteTable = false;
+                $scope.isBackupTable = false;
+                $scope.isValueAddedTable = true;
             };
             /* Show Table end */
         }
