@@ -16,33 +16,41 @@
                     <form class="form-horizontal form-label-left">
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">類別</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
+                            <!--<div class="col-md-4 col-sm-4 col-xs-12">
                                 <select class="form-control">
                                          <option></option>
                                          <option>活動類別</option>
                                          <option>促代</option>
                                          <option>加值</option>
                                 </select>
-                            </div>
-                            <label class="control-label col-md-2 col-sm-2 col-xs-12">A貼/備援單</label>
+                            </div>-->
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <div class="radio">
-                                    <label><input type="radio" value="option1" name="optionsRadios"> A貼</label>
-                                    <label><input type="radio" value="option2" name="optionsRadios"> 備援單</label>
+                                    <label><input type="radio" value="option1" name="optionsRadios"> 活動類別</label>
+                                    <label><input type="radio" value="option2" name="optionsRadios"> 促代</label>
+                                    <label><input type="radio" value="option2" name="optionsRadios"> 加值</label>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-2 col-sm-2 col-xs-12">類型</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="radio">
-                                    <label><input type="radio" value="option1" name="optionsRadios"> 手機約</label>
-                                    <label><input type="radio" value="option2" name="optionsRadios"> 月租通話約</label>
+                            <div class="form-group">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12">A貼/備援單</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <div class="radio">
+                                        <label><input type="radio" value="option1" name="optionsRadios"> A貼</label>
+                                        <label><input type="radio" value="option2" name="optionsRadios"> 備援單</label>
+                                    </div>
                                 </div>
                             </div>
-                            <label class="control-label col-md-2 col-sm-2 col-xs-12">促代類型</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <select class="form-control">
+                            <div class="form-group">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12">類型</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <div class="radio">
+                                        <label><input type="radio" value="option1" name="optionsRadios"> 手機約</label>
+                                        <label><input type="radio" value="option2" name="optionsRadios"> 月租通話約</label>
+                                    </div>
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12">促代類型</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <select class="form-control">
                                          <option></option>
                                          <option>新啟用</option>
                                          <option>223</option>
@@ -52,315 +60,349 @@
                                          <option>續約</option>
                                          <option>4G續約</option> 
                                 </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12 col-sm-12 col-xs-12 ">
-                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#actGroupAdd">新增</button>
-                                <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
+                            <div class="form-group">
+                                <div class="col-md-12 col-sm-12 col-xs-12 ">
+                                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#actGroupAdd" ng-click="showAPasteTable()">新增</button>
+                                    <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
+                                </div>
                             </div>
+                            <!--A貼/備援單 表格 start -->
+                            <table id="datatable_aPasteBackup" class="table table-striped table-bordered" ng-show="isTable">
+                                <thead>
+                                    <tr>
+                                        <th class="table-header-color">類別</th>
+                                        <th class="table-header-color">A貼/備援單</th>
+                                        <th class="table-header-color">類型</th>
+                                        <th class="table-header-color">促代類型</th>
+                                        <th class="table-header-color">範本名稱</th>
+                                        <th class="table-header-color col-md-2"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in aPasteBackupTableData track by $index">
+                                        <td ng-bind="x.aPasteBackupClass"></td>
+                                        <td ng-bind="x.aPasteBackupDoc"></td>
+                                        <td ng-bind="x.aPasteBackupType"></td>
+                                        <td ng-bind="x.saleType"></td>
+                                        <td ng-bind="x.exampleName"></td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-pencil"></i>修改</button>
+                                            <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#actGroupDelConfirm"><i class="glyphicon glyphicon-remove"></i>刪除</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- A貼/備援單 表格 end -->
                         </div>
-                        <!--A貼/備援單 表格 start -->
-                        <table id="datatable_aPasteBackup" class="table table-striped table-bordered" ng-show="isTable">
-                            <thead>
-                                <tr>
-                                    <th class="table-header-color">類別</th>
-                                    <th class="table-header-color">A貼/備援單</th>
-                                    <th class="table-header-color">類型</th>
-                                    <th class="table-header-color">促代類型</th>
-                                    <th class="table-header-color">範本名稱</th>
-                                    <th class="table-header-color col-md-2"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="x in aPasteBackupTableData track by $index">
-                                    <td ng-bind="x.aPasteBackupClass"></td>
-                                    <td ng-bind="x.aPasteBackupDoc"></td>
-                                    <td ng-bind="x.aPasteBackupType"></td>
-                                    <td ng-bind="x.classificationType"></td>
-                                    <td ng-bind="x.exampleName"></td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-pencil"></i>修改</button>
-                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#actGroupDelConfirm"><i class="glyphicon glyphicon-remove"></i>刪除</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- A貼/備援單 表格 end -->
                     </form>
                     <!-- A貼/備援單 表單 end -->
                     <!-- 新增 begin -->
-                    <div class="modal fade bs-example-modal-lg" id="actGroupAdd" tabindex="-1" role="dialog">
+                    <div class="modal fullscreen-modal fade in" id="actGroupAdd" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true ">&times;</span><span class="sr-only">Close</span>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true ">&times;</span><span class="sr-only">Close</span>
                                     </button>
                                     <h4 class="modal-title"></h4>
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>活動群組代碼</label>
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">類別</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="radio">
+                                                    <label><input type="radio" value="optionsRadios" name="classOption1"> 活動類別</label>
+                                                    <label><input type="radio" value="optionsRadios" name="classOption1"> 促代</label>
+                                                    <label><input type="radio" value="optionsRadios" name="classOption1"> 加值</label>
+                                                </div>
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>活動群組名稱</label>
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">A貼/備援單</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="radio">
+                                                    <label><input type="radio" value="optionsRadios" name="option1" ng-click="showAPasteTable()"> A貼</label>
+                                                    <label><input type="radio" value="optionsRadios" name="option1" ng-click="showBackupTable()"> 備援單</label>
+                                                </div>
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">活動期間</label>
-                                            <div class="col-md-7 col-sm-7col-xs-12">
-                                                <input id="aPasteBackupTime-3" type="text" class="form-control" style="width: 147px; display: inline-block;">                                                ~
-                                                <input id="aPasteBackupTime-4" type="text" class="form-control" style="width: 147px; display: inline-block;">
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-4"></div>
-                                        </div>
-                                        <div class="form-group ">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-7 col-sm-offset-7 col-xs-12"></div>
                                         </div>
                                     </form>
+                                    <!-- A貼維護 begin -->
+                                    <div class="x_panel" ng-if="isAPasteTable">
+                                        <div class="x_title">
+                                            <h2>A貼維護</h2>
+                                            <ul class="nav navbar-right panel_toolbox">
+                                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="x_content">
+                                            <form class="form-horizontal form-label-left">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">類型</label>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                                        <div class="radio">
+                                                            <label><input type="radio" value="optionsRadios" name="aTypeOption"> 手機約</label>
+                                                            <label><input type="radio" value="optionsRadios" name="aTypeOption"> 月租通話約</label>
+                                                        </div>
+                                                    </div>
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">促代類型</label>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                                        <div class="radio">
+                                                            <label><input type="radio" value="optionsRadios" name="saleTypeOption1"> 新啟用</label>
+                                                            <label><input type="radio" value="optionsRadios" name="saleTypeOption1"> 223</label>
+                                                            <label><input type="radio" value="optionsRadios" name="saleTypeOption1"> 224</label>
+                                                            <label><input type="radio" value="optionsRadios" name="saleTypeOption1"> 324</label>
+                                                            <label><input type="radio" value="optionsRadios" name="saleTypeOption1"> 423</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">種類</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">限制型</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">標題</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">【＊促代名稱＊】</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">副標題</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">【＊促代代碼＊】&amp;amp;It;w:br/&amp;amp;gt;【＊促代名稱＊】（每月月租費至少【＊最低月租費＊】）</textarea>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- A貼維護 end -->
+                                    <!-- 合約內容 begin -->
+                                    <div class="x_panel" ng-if="isAPasteTable">
+                                        <div class="x_title">
+                                            <h2>合約內容</h2>
+                                            <ul class="nav navbar-right panel_toolbox">
+                                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="x_content">
+                                            <form class="form-horizontal form-label-left">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">預繳金額</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案需預繳【＊預繳金額＊】，可享「【＊指定折扣項目＊】，自第二個結帳日開始抵扣帳單金額。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">使用語音費率GSM月租費高改低限制</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案啟用後【＊高改低限制時間＊】個月內不得調降低於啟用當時選用之語音月租費率，之後可變更165(含)以上語音費率，新費率將於變更申請後下一個帳單結帳日開始生效。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">租約期間</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案合約期間為【＊租約期間＊】個月，申辦後於合約期間內不得退租（含一租一退、轉至預付卡或2G、因違約或違反法令遭致停機者），</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">違約金</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">若於啟用後1-12個月退租者須繳專案補貼款為每月贈送之優惠金額[【＊折扣名稱＊】]X實際回饋月數，若於【＊部分違約期間＊】個月內退租，需繳交{專案補貼款【＊部分違約金＊】}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">月租費折抵條款一</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">「【＊指定折扣項目＊】」為啟用後下個結帳日開始生效連續回饋【＊折扣期間＊】免費用租費折抵，僅可折抵月租費且限當月使用，不可遞延次月或要求折抵現金。且限制月租費需為【＊最低月租費＊】以上，折扣才能生效。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">月租費折抵條款二</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案需附上完整之規定資料，始享有優惠，且不得與其他優惠方案併用。若未勾選服務或勾選不清，遠傳電信將直接以【語音資費】＋【上網資費】服務啟用。本專案之各項優惠均僅限申請人當月使用，不得遞延、轉讓或折現。請確認所選擇之專案及優惠內容，若已完成辦理，恕不受理要求變更或取消；遠傳電信保留隨時修改或終止本活動內容之權利。</textarea>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="col-md-12 col-sm-12 col-xs-12 text-center">固定字</label>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">資費方案條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">各項資費方案內容以遠傳網站 www.fetnet.net 公告為主。本專案是為一般用戶正常使用所提供之通信費率方案，如發現商業使用或不正常使用，本公司得逕行停止本專案服務，並就所使用量，依用戶租用服務類型之服務費率回溯收費。於國外使用數據服務上網，需另支付數據國際漫遊費，漫遊期間累積大額上網費用時，系統將發出簡訊提示，惟實際用量費用仍以帳單為準，詳情請見遠傳網站。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">資料條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案需附上完整之規定資料，始享有優惠。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">2轉3條款一</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">遠傳2G服務「900 來電答鈴」、「CSP 代收服務」、「i-mode 代收服務」加值功能及「自動轉帳服務」會帶至3G服務，和信2G服務「900來電答鈴(超過十組之群組設定/好友清單/精選音樂盒/個人問候語除外)」及「i-mode 代收服務」及「CSP 代收服務」及「郵局/信用卡自動轉帳」會帶至遠傳3G服務。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">2轉3條款二</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">※本人同意辦理遠傳2G/和信門號攜碼至遠傳3G，並同意遠傳於辦理本人之攜碼申請時，得向遠傳2G/和信業者取得本人之個人資料。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">2轉4條款一</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">2轉4條款二</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">3轉4條款一</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">3轉4條款二</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">4轉3條款一</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">4轉3條款二</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">GA條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">◻︎本人同意填寫本申請書之同時直接領取手機及SIM卡；倘若號碼可攜服務失敗或本人取消該服務時，遠傳得自行為本人啟用新門號以替代援攜碼門號。</textarea>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="col-md-12 col-sm-12 col-xs-12 text-center">同意聲明</label>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">條約內容一</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">條約內容二</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">條約內容三</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">條約內容四</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">條約內容五</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- 合約內容 end -->
+                                    <!-- 備援單 畫面 begin -->
+                                    <!-- 備援單維護 begin -->
+                                    <div class="x_panel" ng-if="isBackupTable">
+                                        <div class="x_title">
+                                            <h2>備援單維護</h2>
+                                            <ul class="nav navbar-right panel_toolbox">
+                                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="x_content">
+                                            <form class="form-horizontal form-label-left">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">類型</label>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                                        <div class="radio">
+                                                            <label><input type="radio" value="optionsRadios" name="backupOption"> 手機約</label>
+                                                            <label><input type="radio" value="optionsRadios" name="backupOption"> 月租通話約</label>
+                                                        </div>
+                                                    </div>
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">促代類型</label>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                                        <div class="radio">
+                                                            <label><input type="radio" value="option1" name="saleTypeOption2"> 續約</label>
+                                                            <label><input type="radio" value="option2" name="saleTypeOption2"> 4G續約</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">專案名稱</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">【＊促代代碼＊】【＊促代名稱＊】</textarea>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">標題</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">副標題</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">【＊促代代碼＊】&amp;amp;It;w:br/&amp;amp;gt;【＊促代名稱＊】（每月月租費至少【＊最低月租費＊】）</textarea>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- 備援單維護 end -->
+                                    <!-- 備援單 畫面 end -->
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#actGroupAddConfirm">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">預覽</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#actGroupAddConfirm">儲存</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">復原</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- 新增 end -->
-                    <!-- 確定新增 begin -->
-                    <div class="modal fade bs-example-modal-lg" id="actGroupAddConfirm" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">確定新增畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>確定新增？</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="pnotifyAddSuccess()">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 確定新增 end -->
-                    <!-- 新增完成 begin -->
-                    <!--<div class="modal fade bs-example-modal-lg" id="actGroupAddOk" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">新增完成畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>新增完成。</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
-                    <!-- 新增完成 end -->
-                    <!-- 修改 begin -->
-                    <div class="modal fade bs-example-modal-lg" id="actGroupEdit" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true ">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title"></h4>
-                                </div>
-                                <div class="modal-body">
-                                    <form class="form-horizontal form-label-left">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>活動群組代碼</label>
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>活動群組名稱</label>
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">活動期間</label>
-                                            <div class="col-md-7 col-sm-7col-xs-12">
-                                                <input id="aPasteBackupTime-3" type="text" class="form-control" style="width: 147px; display: inline-block;">                                                ~
-                                                <input id="aPasteBackupTime-4" type="text" class="form-control" style="width: 147px; display: inline-block;">
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-4"></div>
-                                        </div>
-                                        <div class="form-group ">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                            <div class="col-md-offset-7 col-sm-offset-7 col-xs-12"></div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#actGroupEditConfirm">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 修改 end -->
-                    <!-- 確定修改 begin -->
-                    <div class="modal fade bs-example-modal-lg" id="actGroupEditConfirm" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">確定修改畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>確定修改？</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="pnotifyEditSuccess()">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 確定修改 end -->
-                    <!-- 修改完成 begin -->
-                    <!--<div class="modal fade bs-example-modal-lg" id="actGroupEditOk" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">修改完成畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>修改完成。</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
-                    <!-- 修改完成 end -->
-                    <!-- 刪除 begin -->
-                    <div class="modal fade bs-example-modal-lg" id="actGroupDelConfirm" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">確定刪除畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>確定刪除？</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="pnotifyDelSuccess()">確定</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 刪除 end -->
-                    <!-- 刪除完成 begin -->
-                    <!--<div class="modal fade bs-example-modal-lg" id="actGroupDelOk" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">刪除完成畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <br>
-                                        <div class="col-md-4 col-md-offset-4 text-center">
-                                            <h3>刪除完成。</h3>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
-                    <!-- 刪除完成 end -->
                 </div>
             </div>
         </div>

@@ -62,25 +62,25 @@ define(['btModule'], function (btModule) {
                 "aPasteBackupClass": "活動類別",
                 "aPasteBackupDoc": "A貼",
                 "aPasteBackupType": "月租通話約",
-                "classificationType": "新啟用",
+                "saleType": "新啟用",
                 "exampleName": "學生方案_新啟用範本"
             }, {
                 "aPasteBackupClass": "促代",
                 "aPasteBackupDoc": "A貼",
                 "aPasteBackupType": "月租通話約",
-                "classificationType": "223",
+                "saleType": "223",
                 "exampleName": "長青方案_2轉3範本"
             }, {
                 "aPasteBackupClass": "促代",
                 "aPasteBackupDoc": "備援單",
                 "aPasteBackupType": "手機約",
-                "classificationType": "續約",
+                "saleType": "續約",
                 "exampleName": "小資女方案_續約範本"
             }, {
                 "aPasteBackupClass": "加值",
                 "aPasteBackupDoc": "備援單",
                 "aPasteBackupType": "－",
-                "classificationType": "－",
+                "saleType": "－",
                 "exampleName": "來電答鈴_範本"
             }];
 
@@ -106,6 +106,19 @@ define(['btModule'], function (btModule) {
             $scope.isTable = false;
             $scope.showTable = function () {
                 $scope.isTable = true;
+            };
+
+            // 新增預設畫面＆A貼選項
+            $scope.showAPasteTable = function () {
+                $scope.isAPasteTable = true;
+                $scope.isBackupTable = false;
+            };
+
+            // 備援單
+            $scope.isBackupTable = false;
+            $scope.showBackupTable = function () {
+                $scope.isBackupTable = true;
+                $scope.isAPasteTable = false;
             };
             /* Show Table end */
         }
