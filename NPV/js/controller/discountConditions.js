@@ -231,21 +231,40 @@ define(['btModule'], function (btModule) {
             }, 100)
 
 
-            $scope.saveMarginSetTable = function () {
-                $scope.marginSetTableData.push($scope.newMarginSetTableData);
-                $scope.newMarginSetTableData = {};
+            // $scope.saveMarginSetTable = function () {
+            //     $scope.marginSetTableData.push($scope.newMarginSetTableData);
+            //     $scope.newMarginSetTableData = {};
 
-                // $scope.alertMassege = "New item add on list successfully!!";
-            };
+            //     // $scope.alertMassege = "New item add on list successfully!!";
+            // };
 
-            // -----編輯-----
-            $scope.editInfo = function (x) {
-                $scope.info = {
-                    'marginSort': x.marginSort,
-                    'marginMoney': x.marginMoney,
-                    'marginMoney': x.marginMoney,
-                };
-            };
+            // // -----編輯-----
+            // $scope.editInfo = function (x) {
+            //     $scope.info = {
+            //         'marginSort': x.marginSort,
+            //         'marginMoney': x.marginMoney,
+            //         'marginMoney': x.marginMoney,
+            //     };
+            // };
+
+            // 取消鍵
+            $scope.confirmCancel = function () {
+                $timeout(function () {
+                    $('#addModal').modal('hide')
+                    $('#editModal').modal('hide')
+
+                }, 100)
+
+
+            }
+
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#cancelModal').modal('hide')
+                    $('#cancelEditModal').modal('hide')
+                }, 100)
+
+            }
 
         }
     ]);
