@@ -269,6 +269,39 @@ define(['btModule'], function (btModule) {
                 "modifyDate": "2015/1/3"
             }];
 
+            // 取消鍵
+            $scope.confirmCancel = function () {
+                $timeout(function () {
+                    $('#addModal').modal('hide')
+                    $('#editModal').modal('hide')
+
+
+
+                }, 100)
+
+
+            }
+            $scope.confirmCancel2 = function () {
+                $timeout(function () {
+                    $('#SQL').modal('hide')
+
+
+
+
+                }, 100)
+
+
+            }
+
+
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#cancelModal').modal('hide')
+                    $('#cancelEditModal').modal('hide')
+                }, 100)
+
+            }
+
 
             // $('#datatable_editGroup').DataTable().destroy();
 
