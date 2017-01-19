@@ -38,11 +38,14 @@
 			pnotifyService: 'js/service/pnotifyService',
 			discountConditionsCtrl: 'js/controller/discountConditions',
 			giftActivityItemCtrl: 'js/controller/giftActivityItem',
-			activemenuServiceCtrl: 'js/controller/activemenuService'
-
+			activemenuServiceCtrl: 'js/controller/activemenuService',
+			tableQueryCtrl: 'js/controller/tableQuery',
+			importDeviceCtrl: 'js/controller/importDevice',
+			exportTableXMLCtrl: 'js/controller/exportTableXML',
+			aPasteBackupCtrl: 'js/controller/aPasteBackup',
 		}
 	});
-	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'floatWindows', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'marginSetCtrl', 'downtimeProbabilitySetCtrl', 'ARPBSetCtrl', 'renewalDateCtrl', 'changeLimitCtrl', 'salesSetCtrl', 'systemSetCtrl', 'classificationSetCtrl', 'activityClassificationCtrl', 'activityTypeCtrl', 'functionPermissionsSetCtrl', 'activityGroupCtrl', 'numberTypeCtrl', 'promotingGenerationTypeCtrl', 'classificationOfferSetCtrl', 'agreementAddCtrl', 'suitableTargetCtrl', 'giftActivityTypeCtrl', 'offerMutexSetCtrl', 'pnotifyService', 'discountConditionsCtrl', 'giftActivityItemCtrl', 'activemenuServiceCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, floatWindows, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, marginSetCtrl, downtimeProbabilitySetCtrl, ARPBSetCtrl, renewalDateCtrl, changeLimitCtrl, salesSetCtrl, systemSetCtrl, classificationCtrl, activityClassificationCtrl, activityTypeCtrl, functionPermissionsSetCtrl, activityGroupCtrl, numberTypeCtrl, promotingGenerationTypeCtrl, classificationOfferSetCtrl, agreementAddCtrl, suitableTargetCtrl, giftActivityTypeCtrl, offerMutexSetCtrl, pnotifyService, discountConditionsCtrl, giftActivityItemCtrl, activemenuServiceCtrl) {
+	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'floatWindows', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'marginSetCtrl', 'downtimeProbabilitySetCtrl', 'ARPBSetCtrl', 'renewalDateCtrl', 'changeLimitCtrl', 'salesSetCtrl', 'systemSetCtrl', 'classificationSetCtrl', 'activityClassificationCtrl', 'activityTypeCtrl', 'functionPermissionsSetCtrl', 'activityGroupCtrl', 'numberTypeCtrl', 'promotingGenerationTypeCtrl', 'classificationOfferSetCtrl', 'agreementAddCtrl', 'suitableTargetCtrl', 'giftActivityTypeCtrl', 'offerMutexSetCtrl', 'pnotifyService', 'discountConditionsCtrl', 'giftActivityItemCtrl', 'activemenuServiceCtrl', 'tableQueryCtrl', 'importDeviceCtrl', 'exportTableXMLCtrl', 'aPasteBackupCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, floatWindows, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, marginSetCtrl, downtimeProbabilitySetCtrl, ARPBSetCtrl, renewalDateCtrl, changeLimitCtrl, salesSetCtrl, systemSetCtrl, classificationCtrl, activityClassificationCtrl, activityTypeCtrl, functionPermissionsSetCtrl, activityGroupCtrl, numberTypeCtrl, promotingGenerationTypeCtrl, classificationOfferSetCtrl, agreementAddCtrl, suitableTargetCtrl, giftActivityTypeCtrl, offerMutexSetCtrl, pnotifyService, discountConditionsCtrl, giftActivityItemCtrl, activemenuServiceCtrl, tableQueryCtrl, importDeviceCtrl, exportTableXMLCtrl, aPasteBackupCtrl) {
 		angular.bootstrap(document, ['btModule']);
 	});
 })();
