@@ -346,12 +346,32 @@ define(['btModule'], function (btModule) {
 
             // }
 
-            $scope.aaa = function () {
+
+
+            // 取消鍵
+            $scope.confirmCancel = function () {
                 $timeout(function () {
-                    // $('#addModal').modal('hide');
-                    // $('#editGroup').modal('hide');
-                    $('#editEditTarget').modal('show');
-                }, 400);
+                    $('#addModal').modal('hide')
+                    $('#editModal').modal('hide')
+                    $('#addType').modal('hide')
+                    $('#addTypeEdit').modal('hide')
+                    $('#addGroup').modal('hide')
+                    $('#addEditTarget').modal('hide')
+                    $('#editEditTarget').modal('hide')
+
+
+
+                }, 100)
+
+
+            }
+
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#cancelModal').modal('hide')
+                    $('#cancelEditModal').modal('hide')
+                }, 100)
+
             }
 
 
