@@ -26,17 +26,17 @@
                             </div>-->
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <div class="radio">
-                                    <label><input type="radio" value="option1" name="optionsRadios"> 活動類別</label>
-                                    <label><input type="radio" value="option2" name="optionsRadios"> 促代</label>
-                                    <label><input type="radio" value="option2" name="optionsRadios"> 加值</label>
+                                    <label><input type="radio" value="option1" name="option1"> 活動類別</label>
+                                    <label><input type="radio" value="option1" name="option1"> 促代</label>
+                                    <label><input type="radio" value="option1" name="option1"> 加值</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-2 col-sm-2 col-xs-12">A貼/備援單</label>
                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                     <div class="radio">
-                                        <label><input type="radio" value="option1" name="optionsRadios"> A貼</label>
-                                        <label><input type="radio" value="option2" name="optionsRadios"> 備援單</label>
+                                        <label><input type="radio" value="option2" name="option2"> A貼</label>
+                                        <label><input type="radio" value="option2" name="option2"> 備援單</label>
                                     </div>
                                 </div>
                             </div>
@@ -44,8 +44,8 @@
                                 <label class="control-label col-md-2 col-sm-2 col-xs-12">類型</label>
                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                     <div class="radio">
-                                        <label><input type="radio" value="option1" name="optionsRadios"> 手機約</label>
-                                        <label><input type="radio" value="option2" name="optionsRadios"> 月租通話約</label>
+                                        <label><input type="radio" value="option3" name="option3"> 手機約</label>
+                                        <label><input type="radio" value="option3" name="option3"> 月租通話約</label>
                                     </div>
                                 </div>
                                 <label class="control-label col-md-2 col-sm-2 col-xs-12">促代類型</label>
@@ -106,7 +106,7 @@
                                     <button type="button" class="close" data-dismiss="modal">
                                         <span aria-hidden="true ">&times;</span><span class="sr-only">Close</span>
                                     </button>
-                                    <h4 class="modal-title"></h4>
+                                    <h4 class="modal-title">A貼/備援單維護－新增</h4>
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
@@ -114,16 +114,16 @@
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">類別</label>
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                                 <div class="radio">
-                                                    <label><input type="radio" value="optionsRadios" name="classOption1"> 活動類別</label>
-                                                    <label><input type="radio" value="optionsRadios" name="classOption1"> 促代</label>
-                                                    <label><input type="radio" value="optionsRadios" name="classOption1" ng-click="showValueAddedTable()"> 加值</label>
+                                                    <label><input type="radio" value="option4" name="option4"> 活動類別</label>
+                                                    <label><input type="radio" value="option4" name="option4"> 促代</label>
+                                                    <label><input type="radio" value="option4" name="option4" ng-click="showValueAddedTable()" ng-model="disabled"> 加值</label>
                                                 </div>
                                             </div>
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">A貼/備援單</label>
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                                 <div class="radio">
-                                                    <label><input type="radio" value="optionsRadios" name="option1" ng-click="showAPasteTable()"> A貼</label>
-                                                    <label><input type="radio" value="optionsRadios" name="option1" ng-click="showBackupTable()"> 備援單</label>
+                                                    <label><input type="radio" value="option5" name="option5" ng-click="showAPasteTable()" ng-disabled="disabled"> A貼</label>
+                                                    <label><input type="radio" value="option5" name="option5" ng-click="showBackupTable()"> 備援單</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,18 +145,18 @@
                                                     <label class="control-label col-md-2 col-sm-2 col-xs-12">類型</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                                         <div class="radio">
-                                                            <label><input type="radio" value="optionsRadios" name="aTypeOption"> 手機約</label>
-                                                            <label><input type="radio" value="optionsRadios" name="aTypeOption"> 月租通話約</label>
+                                                            <label><input type="radio" value="aTypeOption" name="aTypeOption"> 手機約</label>
+                                                            <label><input type="radio" value="aTypeOption" name="aTypeOption"> 月租通話約</label>
                                                         </div>
                                                     </div>
                                                     <label class="control-label col-md-2 col-sm-2 col-xs-12">促代類型</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                                         <div class="radio">
-                                                            <label><input type="radio" value="optionsRadios" name="saleTypeOption1"> 新啟用</label>
-                                                            <label><input type="radio" value="optionsRadios" name="saleTypeOption1"> 223</label>
-                                                            <label><input type="radio" value="optionsRadios" name="saleTypeOption1"> 224</label>
-                                                            <label><input type="radio" value="optionsRadios" name="saleTypeOption1"> 324</label>
-                                                            <label><input type="radio" value="optionsRadios" name="saleTypeOption1"> 423</label>
+                                                            <label><input type="radio" value="saleTypeOption1" name="saleTypeOption1"> 新啟用</label>
+                                                            <label><input type="radio" value="saleTypeOption1" name="saleTypeOption1"> 223</label>
+                                                            <label><input type="radio" value="saleTypeOption1" name="saleTypeOption1"> 224</label>
+                                                            <label><input type="radio" value="saleTypeOption1" name="saleTypeOption1"> 324</label>
+                                                            <label><input type="radio" value="saleTypeOption1" name="saleTypeOption1"> 423</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -359,15 +359,15 @@
                                                     <label class="control-label col-md-2 col-sm-2 col-xs-12">類型</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                                         <div class="radio">
-                                                            <label><input type="radio" value="optionsRadios" name="backupOption"> 手機約</label>
-                                                            <label><input type="radio" value="optionsRadios" name="backupOption"> 月租通話約</label>
+                                                            <label><input type="radio" value="backupOption" name="backupOption"> 手機約</label>
+                                                            <label><input type="radio" value="backupOption" name="backupOption"> 月租通話約</label>
                                                         </div>
                                                     </div>
                                                     <label class="control-label col-md-2 col-sm-2 col-xs-12">促代類型</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                                         <div class="radio">
-                                                            <label><input type="radio" value="option1" name="saleTypeOption2"> 續約</label>
-                                                            <label><input type="radio" value="option2" name="saleTypeOption2"> 4G續約</label>
+                                                            <label><input type="radio" value="saleTypeOption2" name="saleTypeOption2"> 續約</label>
+                                                            <label><input type="radio" value="saleTypeOption2" name="saleTypeOption2"> 4G續約</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -464,6 +464,115 @@
                                     </div>
                                     <!-- 內容 end -->
                                     <!-- 活動類別or促代、備援單 畫面 end -->
+                                    <!-- 加值、備援單 畫面 begin -->
+                                    <!-- 備援單維護 begin -->
+                                    <div class="x_panel" ng-if="isValueAddedTable">
+                                        <div class="x_title">
+                                            <h2>備援單維護</h2>
+                                            <ul class="nav navbar-right panel_toolbox">
+                                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="x_content">
+                                            <form class="form-horizontal form-label-left">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">專案名稱</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">【＊促代代碼＊】【＊促代名稱＊】</textarea>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- 備援單維護 end -->
+                                    <!-- 合約內容 begin -->
+                                    <div class="x_panel" ng-if="isValueAddedTable">
+                                        <div class="x_title">
+                                            <h2>合約內容</h2>
+                                            <ul class="nav navbar-right panel_toolbox">
+                                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="x_content">
+                                            <form class="form-horizontal form-label-left">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">預繳金額</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案需預繳【＊預繳金額＊】，可享「【＊指定折扣項目＊】」，自第二個結帳日開始底扣帳單金額。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">使用語音費率GSM月租費高改低限制</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案啟用後【＊租約期間＊】個月內不得調降低於啟用當時選用之加值服務月租費率。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">租約期間</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本合約起始日為客戶辦理續約加值服務當天起算，若原加值服務合約未到期，則本合約起始日為原加值服務合約到期日隔天。若於合約期間內提前退租（含一退一租、轉至2G或預付卡、因違約或違反法令致遭停機者），除需依本合約規定繳交專案補貼款外，若為原合約未滿者尚需依原合約規定繳交手機或專案補貼款或不予退還保證金。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">違約金</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案啟用後【＊租約期間＊】個月內不得退租、不得調降本專案【＊促代名稱＊】服務。於限制期間內單獨取消本專案【＊促代名稱＊】服務，需繳交{專案補貼款【＊全額違約金＊】}。實際應繳之專案補貼款以本專案合約未到期之&quot;日&quot;為單位，按合約總日數比例計算。合約未到期之日數自解約當日起算，計算公式：專案補貼款 x（合約未到期日數/合約總日數）=實際應繳專案補貼款（四捨五入計算至整數）。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">違約金</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">若於【＊租約期間＊】個月內退租，需繳交{專案補貼款【＊全額違約金＊】}。</textarea>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="col-md-12 col-sm-12 col-xs-12 text-center">月租費折抵條款一</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">「【＊指定折扣項目＊】」為啟用後下個結帳日開始生效連續回饋【＊折扣期間＊】免費月租費折抵，僅可折抵月租費且限當月使用，不可遞延次月或要求折抵現金。</textarea>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">月租費折抵條款二</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">折扣優惠期間，若客戶更改較低之加值服務費率之後又更改回較高之費率或停機又復機，可繼續享有剩餘之折扣。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">資費方案條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本公司各項資費方案內容以遠傳網站 www.fetnet.net 公告為主。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">資料條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">本專案需附上完整之規定資料，始享有優惠。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3">請確認所選擇之續約方案及優惠內容，若已完成辦理，恕不受理要求變更或取消；遠傳電信保留隨時修改或終止本活動內容之權利。</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">加值服務條款</label>
+                                                    <div class="col-md-10 col-sm-6 col-xs-12">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- 合約內容 end -->
+                                    <!-- 加值、備援單 畫面 end -->
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal">預覽</button>
