@@ -62,7 +62,7 @@ define(['btModule'], function (btModule) {
 
                 var unbindWatcher = scope.$watch('ngModel', function(newValue, oldValue) {
                     // console.log('$watch' + newValue);
-                    if(newValue.length === 0){
+                    if(newValue && newValue.length === 0){
                         scope.value = [];
                     }
                 },true);
