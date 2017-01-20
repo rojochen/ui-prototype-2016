@@ -31,8 +31,7 @@ define(['btModule'], function (btModule) {
                     drops: drops,
                     opens: opens
                 },
-                modelZIndex = $(element).parents('.modal').css('z-index'),
-                layuiLayerZIndex = $(element).parents('.layui-layer').css('z-index');
+                modelZIndex = $(element).parents('.modal').css('z-index');
             // console.log(datepickerId);
             // console.log(format);
             // console.log(drops);
@@ -58,7 +57,7 @@ define(['btModule'], function (btModule) {
                 if(minDate && minDate.replace(/\D/g, "").length >= 7) optionSet.minDate = minDate;
                 if(maxDate && maxDate.replace(/\D/g, "").length >= 7) optionSet.maxDate = maxDate;
 
-                if(modelZIndex)  optionSet.parentEl = '.modal';  //確認浮動部分 絕對位置
+                if(modelZIndex)  optionSet.parentEl = '.modal';
 
 
                 var unbindWatcher = scope.$watch('ngModel', function(newValue, oldValue) {
@@ -89,9 +88,10 @@ define(['btModule'], function (btModule) {
                         scope.ngModel.length = 0;
                     });
 
-                    $('#'+ datepickerId).on('showCalendar.daterangepicker', function(){  //確認浮動部分 x-index 
+                    $('#'+ datepickerId).on('showCalendar.daterangepicker', function(){
                         // console.log('open-1');
-                        var zIndex = 2;
+                        var zIndex = 2,
+                            layuiLayerZIndex = $(this).parents('.layui-layer').css('z-index');
                         if(modelZIndex)  zIndex = modelZIndex;
                         if(layuiLayerZIndex) zIndex = layuiLayerZIndex;
                         // console.log(zIndex);
