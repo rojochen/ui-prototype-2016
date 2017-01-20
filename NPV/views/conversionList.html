@@ -1,0 +1,1452 @@
+<div class="page-no-title"></div>
+<div class="row" ng-controller="conversionListCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>轉單/拆單/合併</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12">請選擇:</label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control input-sm" ng-model="changeListFunction">
+                                    <option value="conversionList" seleceted="seleceted">轉單</option>
+                                    <option value="disassembleList">拆單</option>
+                                    <option value="mergeList">併單</option>
+                                </select>
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12">作業</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--轉單畫面 start-->
+                    <form class="form-horizontal form-label-left" ng-show="changeListFunction == 'conversionList'">
+                        <div class="form-group">
+                            <div class="x_panel">
+                                <div class="x_title panelTitle">
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                    </ul>
+                                    <h2>轉單設定</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-12 col-sm-12 col-xs-12 borderStyle" style="min-height:150px">
+                                                    <div class="form-group">
+                                                        <div id="datatable_conversionListData_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                                            <div class="row">
+                                                                <div class="col-sm-6"></div>
+                                                                <div class="col-sm-6"></div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <table id="datatable_conversionListData" class="table table-striped table-bordered no-footer dataTable" role="grid" aria-describedby="datatable_conversionListData_info">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="table-header-color"></th>
+                                                                                <th class="table-header-color">SPV NO.</th>
+                                                                                <th class="table-header-color">主約</th>
+                                                                                <th class="table-header-color">附約</th>
+                                                                                <th class="table-header-color">KG</th>
+                                                                                <th class="table-header-color">折扣</th>
+                                                                                <th class="table-header-color">寬頻</th>
+                                                                                <th class="table-header-color">活動類別</th>
+                                                                                <th class="table-header-color">贈品/加碼活動</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr ng-repeat="x in conversionListData track by $index">
+                                                                                <td><input type="radio" name="conversionListRadio"></td>
+                                                                                <td ng-bind="x.conversionListSpvNo"></td>
+                                                                                <td ng-bind="x.conversionListMaster"></td>
+                                                                                <td ng-bind="x.conversionListSup"></td>
+                                                                                <td ng-bind="x.conversionListKg"></td>
+                                                                                <td ng-bind="x.conversionListDiscount"></td>
+                                                                                <td ng-bind="x.conversionListBroad"></td>
+                                                                                <td ng-bind="x.conversionListType"></td>
+                                                                                <td ng-bind="x.conversionListPremiums"></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:5px">
+                                                    <div class="row">
+                                                        <button type="button" class="btn btn-default btn-sm col-md-offset-4 col-md-2 glyphicon glyphicon-triangle-top"></button>
+                                                        <button type="button" class="btn btn-default btn-sm col-md-2 glyphicon glyphicon-triangle-bottom"></button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 co-xs-12 borderStyle" style="min-height:150px">
+                                                    <div class="form-group">
+                                                        <div id="datatable_turnOutTableData_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                                            <div class="row">
+                                                                <div class="col-sm-6"></div>
+                                                                <div class="col-sm-6"></div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <table id="datatable_turnOutTableData" class="table table-striped table-bordered no-footer dataTable" role="grid" aria-describedby="datatable_turnOutTableData_info">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="table-header-color">轉出人員</th>
+                                                                                <th class="table-header-color">SPV No.</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr ng-repeat="x in turnOutTableData track by $index">
+                                                                                <td class="col-md-6 col-sm-2 col-xs-12">
+                                                                                    <select class="form-control input-sm">
+                                                                                        <option value=""></option>
+                                                                                        <option value="">item1</option>
+                                                                                        <option value="">item2</option>
+                                                                                        <option value="">item3</option>
+                                                                                        <option value="">item4</option>
+                                                                                        <option value="">item5</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                                <td ng-bind="x.turnOutSpvNo" class="col-md-6 col-sm-10 col-xs-12"></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <button type="button" class="btn btn-primary col-md-offset-4 col-md-2" data-toggle="modal" data-dismiss="modal" href="#conversionOk">確定轉單</button>
+                                                        <button type="button" class="btn btn-primary col-md-2" data-toggle="modal" data-dismiss="modal" href="#conversionReset">重置</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div id="datatable_conversionListStatusData_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                                    <div class="row">
+                                                        <div class="col-sm-6"></div>
+                                                        <div class="col-sm-6"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="datatable_conversionListStatusData" class="table table-striped table-bordered no-footer dataTable" role="grid"
+                                                                aria-describedby="datatable_conversionListStatusData_info">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="table-header-color">NO.</th>
+                                                                        <th class="table-header-color">SPV No.</th>
+                                                                        <th class="table-header-color">SPV狀態</th>
+                                                                        <th class="table-header-color">接受狀態</th>
+                                                                        <th class="table-header-color">轉單時間</th>
+                                                                        <th class="table-header-color">轉出人員</th>
+                                                                        <th class="table-header-color">轉入人員</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr ng-repeat="x in conversionListStatusData track by $index">
+                                                                        <td ng-bind="x.conversionListStatusSpvNo"></td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-link" data-toggle="modal" data-dismiss="modal" ng-bind="x.conversionListStatusMaster"
+                                                                                href="#conversionListStatusSpvDetail"></button>
+                                                                        </td>
+                                                                        <td ng-bind="x.conversionListStatusSup"></td>
+                                                                        <td ng-bind="x.conversionListStatusKg"></td>
+                                                                        <td ng-bind="x.conversionListStatusDiscount"></td>
+                                                                        <td ng-bind="x.conversionListStatusBroad"></td>
+                                                                        <td ng-bind="x.conversionListStatusType"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--轉單畫面 end-->
+                    <!--拆單畫面 start-->
+                    <form class="form-horizontal form-label-left" ng-show="changeListFunction == 'disassembleList'">
+                        <div ng-show="changeListFunction == 'disassembleList'" class="form-group">
+                            <div class="form-group">
+                                <div class="x_panel">
+                                    <div class="x_title panelTitle">
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <h2>轉單設定</h2>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="accordion" id="disassembleList" role="tablist" aria-multiselectable="true">
+                                                        <div class="panel">
+                                                            <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#disassembleList" href="#collapseOne"
+                                                                aria-expanded="true" aria-controls="collapseOne">
+                                                                <h4 class="panel-title">SPV:20161222001</h4>
+                                                                </a>
+                                                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                                    <div class="panel-body">
+                                                                        <table class="table table-striped jambo_table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                        <input type="checkbox" ng-model="disassembleListAllClick">全選
+                                                                                    </th>
+                                                                                    <th>代號</th>
+                                                                                    <th>名稱</th>
+                                                                                    <th>類型</th>
+                                                                                    <th>狀態</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-repeat="x in disassembleListTableData">
+                                                                                    <td>
+                                                                                        <input type="checkbox" ng-checked="disassembleListAllClick"></td>
+                                                                                    <td>
+                                                                                        <button type="button" class="btn btn-link" ng-bind="x.disassembleListItemCode"></button>
+                                                                                    </td>
+                                                                                    <td ng-bind="x.disassembleListIemName"></td>
+                                                                                    <td ng-bind="x.disassembleListType"></td>
+                                                                                    <td ng-bind="x.disassembleListBool"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <a class="panel-heading collapsed" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#disassembleList" href="#collapseTwo"
+                                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                                <h4 class="panel-title">SPV:20161222002</h4>
+                                                                </a>
+                                                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                                    <div class="panel-body">
+                                                                        <table class="table table-striped jambo_table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                        <input type="checkbox" ng-model="disassembleListAllClick">全選
+                                                                                    </th>
+                                                                                    <th>代號</th>
+                                                                                    <th>名稱</th>
+                                                                                    <th>類型</th>
+                                                                                    <th>狀態</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-repeat="x in disassembleListTableData">
+                                                                                    <td>
+                                                                                        <input type="checkbox" ng-checked="disassembleListAllClick"></td>
+                                                                                    <td>
+                                                                                        <button type="button" class="btn btn-link" ng-bind="x.disassembleListItemCode"></button>
+                                                                                    </td>
+                                                                                    <td ng-bind="x.disassembleListIemName"></td>
+                                                                                    <td ng-bind="x.disassembleListType"></td>
+                                                                                    <td ng-bind="x.disassembleListBool"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <a class="panel-heading collapsed" role="tab" id="headingThree" data-toggle="collapse" data-parent="#disassembleList" href="#collapseThree"
+                                                                aria-expanded="false" aria-controls="collapseThree">
+                                                                <h4 class="panel-title">SPV:20161222003</h4>
+                                                                </a>
+                                                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                                    <div class="panel-body">
+                                                                        <table class="table table-striped jambo_table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                        <input type="checkbox" ng-model="disassembleListAllClick">全選
+                                                                                    </th>
+                                                                                    <th>代號</th>
+                                                                                    <th>名稱</th>
+                                                                                    <th>類型</th>
+                                                                                    <th>狀態</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-repeat="x in disassembleListTableData">
+                                                                                    <td>
+                                                                                        <input type="checkbox" ng-checked="disassembleListAllClick"></td>
+                                                                                    <td>
+                                                                                        <button type="button" class="btn btn-link" ng-bind="x.disassembleListItemCode"></button>
+                                                                                    </td>
+                                                                                    <td ng-bind="x.disassembleListIemName"></td>
+                                                                                    <td ng-bind="x.disassembleListType"></td>
+                                                                                    <td ng-bind="x.disassembleListBool"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <button type="button" class="btn btn-primary col-md-offset-4 col-md-2" data-toggle="modal" data-dismiss="modal" href="#disassembleListOk">確定拆單</button>
+                                                        <button type="button" class="btn btn-primary col-md-2" data-toggle="modal" data-dismiss="modal" href="#disassembleListReset">重置</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--拆單畫面 end-->
+                    <!--併單畫面 start-->
+                    <form class="form-horizontal form-label-left" ng-show="changeListFunction == 'mergeList'">
+                        <div ng-show="changeListFunction == 'mergeList'" class="form-group">
+                            <div class="form-guoup">
+                                <div class="x_panel">
+                                    <div class="x_title panelTitle">
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <h2>併單</h2>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <!--<div class="col-md-6">
+                                                        <div class="accordion" id="disassembleList" role="tablist" aria-multiselectable="true">
+                                                        <div class="panel">
+                                                            <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#disassembleList" href="#collapseOne"
+                                                                aria-expanded="true" aria-controls="collapseOne">
+                                                                <h4 class="panel-title">SPV:20161222001</h4>
+                                                                </a>
+                                                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                                    <div class="panel-body">
+                                                                        <table class="table table-striped jambo_table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                        <input type="checkbox" ng-model="disassembleListAllClick">全選
+                                                                                    </th>
+                                                                                    <th>代號</th>
+                                                                                    <th>名稱</th>
+                                                                                    <th>類型</th>
+                                                                                    <th>狀態</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-repeat="x in disassembleListTableData">
+                                                                                    <td>
+                                                                                        <input type="checkbox" ng-checked="disassembleListAllClick"></td>
+                                                                                    <td>
+                                                                                        <button type="button" class="btn btn-link" ng-bind="x.disassembleListItemCode"></button>
+                                                                                    </td>
+                                                                                    <td ng-bind="x.disassembleListIemName"></td>
+                                                                                    <td ng-bind="x.disassembleListType"></td>
+                                                                                    <td ng-bind="x.disassembleListBool"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <a class="panel-heading collapsed" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#disassembleList" href="#collapseTwo"
+                                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                                <h4 class="panel-title">SPV:20161222002</h4>
+                                                                </a>
+                                                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                                    <div class="panel-body">
+                                                                        <table class="table table-striped jambo_table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                        <input type="checkbox" ng-model="disassembleListAllClick">全選
+                                                                                    </th>
+                                                                                    <th>代號</th>
+                                                                                    <th>名稱</th>
+                                                                                    <th>類型</th>
+                                                                                    <th>狀態</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-repeat="x in disassembleListTableData">
+                                                                                    <td>
+                                                                                        <input type="checkbox" ng-checked="disassembleListAllClick"></td>
+                                                                                    <td>
+                                                                                        <button type="button" class="btn btn-link" ng-bind="x.disassembleListItemCode"></button>
+                                                                                    </td>
+                                                                                    <td ng-bind="x.disassembleListIemName"></td>
+                                                                                    <td ng-bind="x.disassembleListType"></td>
+                                                                                    <td ng-bind="x.disassembleListBool"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <a class="panel-heading collapsed" role="tab" id="headingThree" data-toggle="collapse" data-parent="#disassembleList" href="#collapseThree"
+                                                                aria-expanded="false" aria-controls="collapseThree">
+                                                                <h4 class="panel-title">SPV:20161222003</h4>
+                                                                </a>
+                                                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                                    <div class="panel-body">
+                                                                        <table class="table table-striped jambo_table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                        <input type="checkbox" ng-model="disassembleListAllClick">全選
+                                                                                    </th>
+                                                                                    <th>代號</th>
+                                                                                    <th>名稱</th>
+                                                                                    <th>類型</th>
+                                                                                    <th>狀態</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-repeat="x in disassembleListTableData">
+                                                                                    <td>
+                                                                                        <input type="checkbox" ng-checked="disassembleListAllClick"></td>
+                                                                                    <td>
+                                                                                        <button type="button" class="btn btn-link" ng-bind="x.disassembleListItemCode"></button>
+                                                                                    </td>
+                                                                                    <td ng-bind="x.disassembleListIemName"></td>
+                                                                                    <td ng-bind="x.disassembleListType"></td>
+                                                                                    <td ng-bind="x.disassembleListBool"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-6"></div>-->
+                                                    <div class="container-fluid">
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                    <div class="accordion" id="mergeList" role="tablist" aria-multiselectable="true">
+                                                                        <div class="panel">
+                                                                            <a class="panel-heading" role="tab" id="mergeListOne" data-toggle="collapse" data-parent="#disassembleList" href="#mergeListCollapseOne"
+                                                                                aria-expanded="true" aria-controls="collapseOne">
+                                                                                <h4 class="panel-title">SPV:20161222001</h4>
+                                                                                </a>
+                                                                                <div id="mergeListCollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="mergeListOne">
+                                                                                    <div class="panel-body">
+                                                                                        <table class="table table-striped jambo_table">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th>
+                                                                                                        <input type="checkbox" ng-model="disassembleListAllClick">全選
+                                                                                                    </th>
+                                                                                                    <th>代號</th>
+                                                                                                    <th>名稱</th>
+                                                                                                    <th>類型</th>
+                                                                                                    <th>狀態</th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr ng-repeat="x in disassembleListTableData">
+                                                                                                    <td>
+                                                                                                        <input type="checkbox" ng-checked="disassembleListAllClick"></td>
+                                                                                                    <td>
+                                                                                                        <button type="button" class="btn btn-link" ng-bind="x.disassembleListItemCode"></button>
+                                                                                                    </td>
+                                                                                                    <td ng-bind="x.disassembleListIemName"></td>
+                                                                                                    <td ng-bind="x.disassembleListType"></td>
+                                                                                                    <td ng-bind="x.disassembleListBool"></td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="panel">
+                                                                            <a class="panel-heading collapsed" role="tab" id="mergeListTwo" data-toggle="collapse" data-parent="#disassembleList" href="#mergeListCollapseTwo"
+                                                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                                                <h4 class="panel-title">SPV:20161222002</h4>
+                                                                                </a>
+                                                                                <div id="mergeListCollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mergeListTwo">
+                                                                                    <div class="panel-body">
+                                                                                        <table class="table table-striped jambo_table">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th>
+                                                                                                        <input type="checkbox" ng-model="disassembleListAllClick">全選
+                                                                                                    </th>
+                                                                                                    <th>代號</th>
+                                                                                                    <th>名稱</th>
+                                                                                                    <th>類型</th>
+                                                                                                    <th>狀態</th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr ng-repeat="x in disassembleListTableData">
+                                                                                                    <td>
+                                                                                                        <input type="checkbox" ng-checked="disassembleListAllClick"></td>
+                                                                                                    <td>
+                                                                                                        <button type="button" class="btn btn-link" ng-bind="x.disassembleListItemCode"></button>
+                                                                                                    </td>
+                                                                                                    <td ng-bind="x.disassembleListIemName"></td>
+                                                                                                    <td ng-bind="x.disassembleListType"></td>
+                                                                                                    <td ng-bind="x.disassembleListBool"></td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="panel">
+                                                                            <a class="panel-heading collapsed" role="tab" id="mergeListThree" data-toggle="collapse" data-parent="#disassembleList" href="#mergeListCollapseThree"
+                                                                                aria-expanded="false" aria-controls="collapseThree">
+                                                                                <h4 class="panel-title">SPV:20161222003</h4>
+                                                                                </a>
+                                                                                <div id="mergeListCollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mergeListThree">
+                                                                                    <div class="panel-body">
+                                                                                        <table class="table table-striped jambo_table">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th>
+                                                                                                        <input type="checkbox" ng-model="disassembleListAllClick">全選
+                                                                                                    </th>
+                                                                                                    <th>代號</th>
+                                                                                                    <th>名稱</th>
+                                                                                                    <th>類型</th>
+                                                                                                    <th>狀態</th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr ng-repeat="x in disassembleListTableData">
+                                                                                                    <td>
+                                                                                                        <input type="checkbox" ng-checked="disassembleListAllClick"></td>
+                                                                                                    <td>
+                                                                                                        <button type="button" class="btn btn-link" ng-bind="x.disassembleListItemCode"></button>
+                                                                                                    </td>
+                                                                                                    <td ng-bind="x.disassembleListIemName"></td>
+                                                                                                    <td ng-bind="x.disassembleListType"></td>
+                                                                                                    <td ng-bind="x.disassembleListBool"></td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:5px">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <button type="button" class="btn btn-default btn-sm col-md-offset-4 col-md-2 glyphicon glyphicon-triangle-top"></button>
+                                                                            <button type="button" class="btn btn-default btn-sm col-md-2 glyphicon glyphicon-triangle-bottom"></button>
+                                                                        </div>
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                            <div class="row">
+                                                                                <label class="control-label col-md-offset-2 col-md-2 col-sm-2 col-xs-12">SPV No.</label>
+                                                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                                                    <select class="form-control">
+                                                                                    <option value="">20161222001</option>
+                                                                                    <option value="">20161222002</option>
+                                                                                    <option value="">20161222003</option>
+                                                                                    <option value="">20161222004</option>
+                                                                                    <option value="">20161222005</option>
+                                                                                    <option value="">20161222006</option>
+                                                                                </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                    <table class="table table-striped jambo_table">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>
+                                                                                    <input type="checkbox" ng-model="disassembleListAllClick">全選
+                                                                                </th>
+                                                                                <th>代號</th>
+                                                                                <th>名稱</th>
+                                                                                <th>類型</th>
+                                                                                <th>狀態</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr ng-repeat="x in disassembleListTableData">
+                                                                                <td>
+                                                                                    <input type="checkbox" ng-checked="disassembleListAllClick"></td>
+                                                                                <td>
+                                                                                    <button type="button" class="btn btn-link" ng-bind="x.disassembleListItemCode"></button>
+                                                                                </td>
+                                                                                <td ng-bind="x.disassembleListIemName"></td>
+                                                                                <td ng-bind="x.disassembleListType"></td>
+                                                                                <td ng-bind="x.disassembleListBool"></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                <button type="button" class="btn btn-primary col-md-offset-4 col-md-2" data-toggle="modal" data-dismiss="modal" href="#mergeListOk">確定併單</button>
+                                                                <button type="button" class="btn btn-primary col-md-2" data-toggle="modal" data-dismiss="modal" href="#mergeListReset">重置</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--併單畫面 end-->
+                    <!--SPVNO start-->
+                    <div class="modal bs-example-modal-sm in" id="conversionListStatusSpvDetail" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">SPV NO詳細</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <div id="datatable_conversionListStatusSpvDetailData_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                                    <div class="row">
+                                                        <div class="col-sm-6"></div>
+                                                        <div class="col-sm-6"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="datatable_conversionListStatusSpvDetailData" class="table table-striped table-bordered no-footer dataTable" role="grid"
+                                                                aria-describedby="datatable_conversionListStatusSpvDetailData_info">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="table-header-color"></th>
+                                                                        <th class="table-header-color">類型</th>
+                                                                        <th class="table-header-color">代碼</th>
+                                                                        <th class="table-header-color">名稱</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr ng-repeat="x in conversionListStatusSpvDetailData track by $index">
+                                                                        <td><input type="radio"></td>
+                                                                        <td ng-bind="x.conversionListStatusSpvDetailType"></td>
+                                                                        <td ng-bind="x.conversionListStatusSpvDetailCode"></td>
+                                                                        <td ng-bind="x.conversionListStatusSpvDetailName"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#conversionItemDetail">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SPVNO end-->
+                    <!--SPVNO項目詳細資料 start-->
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="modal fullscreen-modal in" id="conversionItemDetail" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                                        </button>
+                                        <h4 class="modal-title">SPV NO詳細明細</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal form-label-left ng-pristine ng-valid">
+                                            <table class="table table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="table-header-color">SR NO</th>
+                                                        <th class="table-header-color">SPV NO</th>
+                                                        <th class="table-header-color">OFFER ID</th>
+                                                        <th class="table-header-color">上架次數</th>
+                                                        <th class="table-header-color">上一版本編號</th>
+                                                        <th class="table-header-color">促代群組</th>
+                                                        <th class="table-header-color">重新上架備註</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-danger">N/A</td>
+                                                        <td class="text-danger">N/A</td>
+                                                        <td class="text-danger">N/A</td>
+                                                        <td>N/A</td>
+                                                        <td>N/A</td>
+                                                        <td>N/A</td>
+                                                        <td>
+                                                            <input class="form-control input-sm" type="text" placeholder="N/A" disabled=""></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--主促代碼 start-->
+                                            <table class="table table-striped jambo_table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-right">項目</th>
+                                                        <th class="text-center" colspan="2">內容</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-right">主約促代 代碼/名稱(80 Bytes)</td>
+                                                        <td>
+                                                            <input class="form-control input-sm" type="text" placeholder="N/A" disabled=""></td>
+                                                        <td>
+                                                            <input class="form-control input-sm" type="text" placeholder="N/A" disabled=""></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--主促代碼 end-->
+                                            <!--合約資訊設定 start-->
+                                            <div class="x_panel">
+                                                <div class="x_title panelTitle">
+                                                    <ul class="nav navbar-right panel_toolbox">
+                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                    <h2>合約資訊設定</h2>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="x_content">
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 col-sm-2 col-xs-12 text-right">項目</label>
+                                                        <label class="col-md-10 col-sm-10 col-xs-12 text-center">內容</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">GSM Voice 合約</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <label class="control-label">最低月租費:1118913-大雙網165月租費</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">合約期限</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <label class="control-label">30個月</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">GSM Voice 合約違約金額</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">違約金版本:</label>
+                                                                <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                    <div class="col-md-3 col-sm-3 col-xs-10">
+                                                                        <select class="form-control">                                       
+                                                                            <option>請選擇</option>
+                                                                            <option>選項 1</option>
+                                                                            <option>選項 2</option>
+                                                                            <option>選項 3</option>
+                                                                            <option>選項 4</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-md-3 col-sm-3 col xs-2">
+                                                                        <button type="button" class="btn btn-primary">查詢</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--<div class="form-group">
+                                                                    <label class="control-label col-md-2 col-sm-2 col-xs-12 text-danger">目前版本:</label>
+                                                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                        <div class="col-md-3 col-sm-3 col-xs-12">
+                                                                            <label>是否回溯:</label>
+                                                                            <label>
+                                                                                <input type="radio" name="backtracking" id="">是
+                                                                            </label>
+                                                                            <label>
+                                                                                <input type="radio" name="backtracking" id="">否
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="col-md-7 col-sm-7 col-xs-12">
+                                                                            <label>開賣日:</label>
+                                                                            <label><input class="form-control input-sm" type="text" placeholder="N/A" disabled=""></label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>-->
+                                                            <div class="form-horizontal">
+                                                                <div class="form-group">
+                                                                    <label class="control-label text-danger">目前版本:</label>
+                                                                    <label class="control-label">是否回溯:</label>
+                                                                    <label class="control-label">
+                                                                            <input type="radio" name="backtracking" id="">是
+                                                                        </label>
+                                                                    <label class="control-label">
+                                                                            <input type="radio" name="backtracking" id="">否
+                                                                        </label>
+                                                                    <label class="control-label">開賣日:</label>
+                                                                    <label class="control-label"><input class="form-control input-sm" type="text" placeholder="N/A" disabled=""></label>
+                                                                </div>
+                                                            </div>
+                                                            <table class="table table-striped table-bordered">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="table-header-color">違約金項目</th>
+                                                                        <th class="table-header-color">違約金類型</th>
+                                                                        <th class="table-header-color">簽約起始期限</th>
+                                                                        <th class="table-header-color">簽約結束期限</th>
+                                                                        <th class="table-header-color">違約金</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr ng-repeat="x in conversionPunitiveTableData  track by $index">
+                                                                        <td ng-bind="x.conversionPunitiveNo"></td>
+                                                                        <td ng-bind="x.conversionPunitiveType"></td>
+                                                                        <td ng-bind="x.conversionPunitiveStartDate"></td>
+                                                                        <td ng-bind="x.conversionPunitiveEndDate"></td>
+                                                                        <td ng-bind="x.conversionPunitiveGold"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="5">違約金以日計算</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">高改低限制</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <label class="control-label">三十個月</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--合約資訊設定 end-->
+                                            <!--折扣優惠設定 start-->
+                                            <div class="x_panel">
+                                                <div class="x_title panelTitle">
+                                                    <ul class="nav navbar-right panel_toolbox">
+                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                    <h2>折扣優惠設定</h2>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="x_content">
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 col-sm-2 col-xs-12 text-right">項目</label>
+                                                        <label class="col-md-10 col-sm-10 col-xs-12 text-center">內容</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">指定折扣項目</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <table class="table table-striped table-bordered">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="table-header-color">折扣項目</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr ng-repeat="x in conversionDiscountTableData">
+                                                                        <td ng-bind="x.conversionDiscountItem"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">Happy Go贈點</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <label class="control-label">0</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--折扣優惠設定 end-->
+                                            <!--加值服務項目 start-->
+                                            <div class="x_panel">
+                                                <div class="x_title panelTitle">
+                                                    <ul class="nav navbar-right panel_toolbox">
+                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                    <h2>加值服務設定</h2>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="x_content">
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 col-sm-2 col-xs-12 text-right">項目</label>
+                                                        <label class="col-md-10 col-sm-10 col-xs-12 text-center">內容</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">VAS 服務</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <table class="table table-striped table-bordered">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="table-header-color">指定加值功能</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr ng-repeat="x in discountTableData">
+                                                                        <td ng-bind="x.discountItem"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--加值服務項目 end-->
+                                            <!--上線設定 start-->
+                                            <div class="x_panel">
+                                                <div class="x_title panelTitle">
+                                                    <ul class="nav navbar-right panel_toolbox">
+                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                    <h2>上線設定</h2>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="x_content">
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 col-sm-2 col-xs-12 text-right">項目</label>
+                                                        <label class="col-md-10 col-sm-10 col-xs-12 text-center">內容</label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">活動類別</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <label class="control-label">L0853-3G續約-續留省很大方案(H)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">續約適用活動期間</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <label class="control-label">IA/FS有效起始日 2015/11/19 ~ 2016/12/31</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">續約可選費率</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <table class="table table-striped table-bordered">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>N/A</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>N/A</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>N/A</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>N/A</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>N/A</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>N/A</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">附約可PM授權提前續約</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <label class="control-label">是</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">是否為指定商品</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <label class="control-label">是</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--上線設定 end-->
+                                            <!--加值好禮活動 start-->
+                                            <div class="x_panel">
+                                                <div class="x_title panelTitle">
+                                                    <h2>加值好禮活動</h2>
+                                                    <ul class="nav navbar-right panel_toolbox">
+                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="x_content">
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 col-sm-2 col-xs-12 text-right">項目</label>
+                                                        <label class="col-md-10 col-sm-10 col-xs-12 text-center">內容</label>
+                                                    </div>
+                                                    <hr>
+                                                    <!--<div class="form-group">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">加值好禮活動</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                                                <label class="text-center col-md-12 col-sm-12 col-xs-12 bg-primary">已選加值好禮活動</label>
+                                                                <div class="borderStyle col-md-12 col-sm-12 col-xs-12" style="height:150px"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>-->
+                                                    <div class="">
+                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">加值好禮活動</label>
+                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                                <div class="panel panel-dark">
+                                                                    <div class="panel-heading text-center">已選加值好禮活動</div>
+                                                                    <div class="panel-body">
+                                                                        <p>內容</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--加值好禮活動 end-->
+                                            <!--IA/備援單 start-->
+                                            <div class="x_panel">
+                                                <div class="x_title panelTitle">
+                                                    <h2>IA/備援單</h2>
+                                                    <ul class="nav navbar-right panel_toolbox">
+                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="x_content">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" disabled rows="10" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita incidunt beatae dolores voluptatibus architecto assumenda perspiciatis, blanditiis adipisci autem debitis doloribus voluptatum labore quasi ipsa distinctio soluta deserunt laborum maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, similique est animi! Distinctio optio amet maxime iusto ex alias laudantium unde minima non. Dolor doloribus libero earum, soluta esse ullam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, perspiciatis id. Cum rerum doloremque quibusdam, nihil, eius, labore placeat, nemo cumque molestias rem officia reprehenderit! Ipsa, rem autem quidem alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptates odit fugit repellat iste eveniet soluta voluptatem laboriosam perferendis, dolorem consectetur veritatis explicabo! Unde id, rem officiis vero, molestias velit."></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--IA/備援單 end-->
+                                            <!--DEVICE start-->
+                                            <div class="x_panel">
+                                                <div class="x_title panelTitle">
+                                                    <h2>DEVICE</h2>
+                                                    <ul class="nav navbar-right panel_toolbox">
+                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="x_content">
+                                                    <form class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">專案生效日</label>
+                                                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                <div class="col-md-3 col-sm-3">
+                                                                    <div class="row">
+                                                                        <select class="form-control">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">商品類型</label>
+                                                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                                                    <div class="row">
+                                                                        <select class="form-control">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">商品類別</label>
+                                                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                <table class="table table-striped table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="table-header-color">商品群</th>
+                                                                            <th class="table-header-color">專案生效日</th>
+                                                                            <th class="table-header-color">專案價最後銷售日</th>
+                                                                            <th class="table-header-color">商品型態</th>
+                                                                            <th class="table-header-color">手機型號</th>
+                                                                            <th class="table-header-color">單機價</th>
+                                                                            <th class="table-header-color">轉換值</th>
+                                                                            <th class="table-header-color">Subsidy</th>
+                                                                            <th class="table-header-color">Rebate</th>
+                                                                            <th class="table-header-color">專案價</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <!--DEVICE end-->
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SPVNO項目詳細資料 end-->
+                    <!--確定轉單畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="conversionOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確認執行轉單動作</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定要執行轉單</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#conversionOkOk" ng-click="masterMultiItemEditCancel()">確認</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#conversionOkCancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定轉單畫面 end-->
+                    <!--轉單成功畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="conversionOkOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">執行成功畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">執行轉單成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--轉單成功畫面 end-->
+                    <!--確定重置畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="conversionReset" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確認重置動作</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定重置</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#conversionResetOk" ng-click="masterMultiItemEditCancel()">確認</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#conversionResetCancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定重置畫面 end-->
+                    <!--轉單重置成功畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="conversionResetOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">重置成功畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">重置成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--轉單重置成功畫面 end-->
+                    <!--確定拆單畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="disassembleListOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確認執行拆單動作</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定要執行拆單</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#disassembleListOkOk" ng-click="masterMultiItemEditCancel()">確認</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#disassembleListCancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定拆單畫面 end-->
+                    <!--拆單成功畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="disassembleListOkOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">執行拆單成功畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">執行拆單成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--拆單成功畫面 end-->
+                    <!--拆單確定重置畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="disassembleListReset" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確認重置動作</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定重置</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#disassembleListResetOk" ng-click="masterMultiItemEditCancel()">確認</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#disassembleListResetCancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--拆單確定重置畫面 end-->
+                    <!--拆單重置成功畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="disassembleListResetOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">重置成功畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">重置成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--拆單重置成功畫面 end-->
+                    <!--確定併單畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="mergeListOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確認執行併單動作</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定要執行併單</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#mergeListOkOk">確認</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#mergeListOkCancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定併單畫面 end-->
+                    <!--併單成功畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="mergeListOkOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">執行成功畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">執行併單成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--併單成功畫面 end-->
+                    <!--確定重置畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="mergeListReset" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確認重置動作</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定重置</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#mergeListResetOk" ng-click="masterMultiItemEditCancel()">確認</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#mergeListResetCancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定重置畫面 end-->
+                    <!--轉單重置成功畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="mergeListResetOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">重置成功畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">重置成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--轉單重置成功畫面 end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
