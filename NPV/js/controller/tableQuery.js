@@ -164,7 +164,7 @@ define(['btModule'], function (btModule) {
                 "tableQueryImportRole": "pm01",
                 "tableQueryDate": "2016/07/01 13:55:45",
                 "tableQueryStatus": "匯入失敗 促代數量1筆,Device數量2筆",
-            }, , {
+            }, {
                 "tableQueryID": "11",
                 "tableQueryName": "NEW_2轉4升級方案",
                 "tableQueryFile": "政府補助2轉4升級方案_2G易付精選_20160601.xlsx",
