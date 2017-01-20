@@ -588,69 +588,17 @@ define(['btModule'], function (btModule) {
   //pagination頁面
   datepickerCtrl.$inject = ['$scope', '$log', '$timeout'];
   function datepickerCtrl($scope, $log, $timeout) {
-    var optionSet2 = {
-        locale: {
-            applyLabel: '送出',
-            cancelLabel: '取消',
-            format: 'YYYY-MM-DD',
-            daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
-            monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
-        },
-        startDate: '2017-01-16',  //預設開始時間
-        endDate: new Date('2017-2-20'),  //預設結束時間
-        // minDate: '2017-01-10',  //預設最小可選時間，與dateLimit僅能二選一
-        // maxDate: '2017-2-25',  //預設最大可選時間
-        // dateLimit: {  //預設可選區間，與minDate、maxDate僅能二選一
-        //   // days: 30,
-        //   months: 1
-        // },
-        showDropdowns: true,  //顯示年月選擇框
-        showWeekNumbers: false,  //顯示周數 - 當月算第一週
-        timePicker: true,  //顯示timePicker-12小時制
-        // timePickerIncrement: 30,  //預設分鐘間隔數
-        // timePicker24Hour: true,  //顯示timePicker-24小時制
-        // timePickerSeconds: true, //顯示秒數設定
-        ranges: {
-          "Today": [
-            "2017-01-16T09:31:58.453Z",
-            "2017-01-16T09:31:58.453Z"
-          ],
-          "Yesterday": [
-              "2017-01-15T09:31:58.453Z",
-              "2017-01-15T09:31:58.453Z"
-          ]
-        },
-        // showCustomRangeLabel: true,  //預設是否啟用自選範圍
-        // alwaysShowCalendars: true, //預設是否永遠啟用自選範圍
-        drops: 'down',  //預設顯示在up or down  //要考慮rwd問題... 
-        // singleDatePicker: true,  //預設為一般datePicker
-        autoApply: true,  //預設是否顯示送出清除按鈕，timePicker啟用時，無法作用
-        linkedCalendars: false,  //開始時間日曆與結束時間日曆是否連動
-        isInvalidDate: function(date){
-          // console.log(date);
-        },
-        isCustomDate: function(date){
-          // console.log(date);
-        }
-    };
-    // $timeout(function () {
-    //   $('#reservation').daterangepicker(optionSet2, function (start, end, label) {
-    //     console.log(start.toISOString(), end.toISOString(), label);
-    //     console.log(start);
-    //     console.log(start._d);
-    //     console.log(new Date());
-    //   });
-    // },100);
-
-    
-    // var d1 = new Date('2015/02/23');
-    // var d2 = new Date('2015/03/20');
-    // $scope.daterange1 = [d1,d2];
+    var d1 = new Date('2016/02/23 9:00:00 AM');
+    var d2 = new Date('2016/03/20 6:30:00 PM');
+    $scope.daterange1 = [d1,d2];
     // console.log($scope.daterange1);
-    $scope.daterange1 = [];
+    // $scope.daterange1 = [];
 
-    $scope.aa = function(){
+    $scope.console = function(){
       console.log($scope.daterange1);
+    }
+    $scope.remove = function(){
+      $scope.daterange1 = [];
     }
   }
   app.controller('datepickerCtrl', datepickerCtrl);
