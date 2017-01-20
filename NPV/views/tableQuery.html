@@ -47,11 +47,13 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-4 col-sm-4 col-xs-12">匯入日期區間</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input id="tableQueryTime-1" type="text" class="form-control" style="width: 145px; display: inline-block;">                                ~
-                                <input id="tableQueryTime-2" type="text" class="form-control" style="width: 145px; display: inline-block;">
+                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                <input id="tableQueryTime-1" type="text" class="form-control">
                             </div>
-                            <!--<div class="col-md-offset-4 col-sm-offset-4"></div>-->
+                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                ~
+                                <input id="tableQueryTime-2" type="text" class="form-control">
+                            </div>
                             <a href="#" class="col-md-4 col-sm-4 col-xs-12">『一般專案』大表範本Excel2010(*.xlsx)</a>
                             <a href="#" class="col-md-4 col-sm-4 col-xs-12">『分享包』大表範本Excel2010(*.xlsx)</a>
                         </div>
@@ -64,7 +66,7 @@
                             </a>
                         </div>-->
                         <div class="form-group">
-                            <div class="col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#tableQueryImport" ng-click="inputFile()">匯入大表</button>
                                 <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#tableQueryExport">匯出大表</button>
                                 <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
@@ -150,7 +152,7 @@
                                     <div class="row">
                                         <br>
                                         <div class="text-center">
-                                            <input type="file" name="file">
+                                            <input type="file" name="file" class="col-md-8 col-md-offset-4 col-sm-12 col-xs-12">
                                         </div>
                                         <br>
                                         <br>
