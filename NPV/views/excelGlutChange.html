@@ -1,0 +1,115 @@
+<div class="page-no-title"></div>
+<div class="row"  ng-controller="excelGlutChangeCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>EXCEL大批修改</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <!--EXCEL大批修改畫面 start-->
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <label class="control-label col-md-5 col-sm-5 col-xs-12">匯入EXCEL:</label>
+                            <div class="col-md-1 col-sm-2 col-xs-12">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" href="#addExcel">匯入</button>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <button type="button" class="btn btn-link">範本EXCEL下載</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!--EXCEL大批修改畫面 end-->
+                    <!--選擇上傳EXCEL匯入檔案 start-->
+                    <div class="modal bs-example-modal-lg" id="addExcel" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">請選擇上傳EXCEL大批修改匯入檔案</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="col-md-12 col-sm-12 col-xs-12">請上傳</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <input type="file" multiple id="fileType" ng-model="fileNumber">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="" href="#addExcelOk" id="upData">上傳</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#addExcelCancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--選擇上傳EXCEL匯入檔案 end-->  
+                    <!--匯入成功 start-->
+                    <div class="modal bs-example-modal-lg in" id="addExcelOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">EXCEL大批修改</h4>
+                                </div>
+                                <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="col-md-12 col-sm-12 col-xs-12">匯入成功，資料已修改並存檔</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12 col-sm-12 col-xs-12">匯入成功筆數:1筆</label>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--匯入成功 end-->   
+                    <!--取消畫面 start-->
+                    <div class="modal bs-example-modal-lg in" id="addExcelCancel" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消匯入畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="col-md-12 col-sm-12 col-xs-12">確定取消匯入</label>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#addExcelCancelOk" ng-click="confirmCancel()">確認</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#addExcelCancelCancel" ng-click="cancel()">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--取消畫面 end-->                              
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
