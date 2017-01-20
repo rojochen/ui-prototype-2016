@@ -8,8 +8,9 @@ define(['btModule'], function (btModule) {
     });
 
     app.controller('userSetCtrl', ['$scope', '$timeout', '$log', '$element',
-        'ShoppingCartEntity',
-        function ($scope, $timeout, $log, $element, shoppingCartEntity) {
+        'ShoppingCartEntity', 'pnotifyService',
+
+        function ($scope, $timeout, $log, $element, shoppingCartEntity, pnotifyService) {
             var vm = this;
 
             // $('#datatable_userSet').DataTable(opt);
@@ -32,6 +33,22 @@ define(['btModule'], function (btModule) {
                 $ICON.toggleClass('fa-minus  fa-plus');
             });
             /*end 版面縮合*/
+
+            /* notify 通知訊息 begin */
+            // Success
+            $scope.pnotifyAddSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '新增完成！');
+
+            }
+
+            $scope.pnotifyEditSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '修改完成！');
+            }
+
+            $scope.pnotifyDelSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '刪除完成！');
+            }
+            /* notify 通知訊息 end*/
 
             /*begin 問卷-查詢*/
             var opt = {

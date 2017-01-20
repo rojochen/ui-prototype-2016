@@ -49,24 +49,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">使用者群組:</label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                <select class="form-control">
-                                        <option value="請選擇">請選擇</option>
-                                        <option value="選項 1">選項 1</option>
-                                        <option value="選項 2">選項 2</option>
-                                        <option value="選項 3">選項 3</option>
-                                        <option value="選項 4">選項 4</option>
-                                    </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">使用者角色:</label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">使用者角色:</label>
+                            <div class="col-md-10 col-sm-10 col-xs-12">
                                 <select class="form-control">
                                         <option value="請選擇">請選擇</option>
                                         <option value="選項 1">選項 1</option>
@@ -93,7 +79,6 @@
                                 <th class="table-header-color">使用者帳號</th>
                                 <th class="table-header-color">姓名</th>
                                 <th class="table-header-color">E-Mamil</th>
-                                <th class="table-header-color">使用者群組</th>
                                 <th class="table-header-color">使用者角色</th>
                                 <th class="table-header-color">狀態</th>
                             </tr>
@@ -104,7 +89,6 @@
                                 <td ng-bind="x.accountName "></td>
                                 <td ng-bind="x.userName"></td>
                                 <td ng-bind="x.userEamil"></td>
-                                <td ng-bind="x.userGroup"></td>
                                 <td ng-bind="x.userRole"></td>
                                 <td ng-bind="x.userStatus"></td>
                             </tr>
@@ -123,8 +107,8 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <br>
-                                        <div class="col-md-6 col-md-offset-3" style="font-size:24px;">
-                                            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> 確定新增使用者？
+                                        <div class="col-md-12 text-center">
+                                            <h3>確定新增使用者?</h3>
                                         </div>
                                         <br>
                                         <br>
