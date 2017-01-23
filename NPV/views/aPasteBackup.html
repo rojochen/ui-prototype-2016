@@ -128,7 +128,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <!-- 活動類別or促代、A貼 畫面 begin -->
+                                    <!-- 1.活動類別or促代、A貼 畫面 begin -->
                                     <!-- A貼維護 begin -->
                                     <div class="x_panel" ng-if="isAPasteTable">
                                         <div class="x_title">
@@ -184,7 +184,7 @@
                                     </div>
                                     <!-- A貼維護 end -->
                                     <!-- 合約內容 begin -->
-                                    <div class="x_panel" ng-if="isAPasteTable">
+                                    <div class="x_panel" ng-if="isAPasteTable" style="width:1050px;">
                                         <div class="x_title">
                                             <h2>合約內容</h2>
                                             <ul class="nav navbar-right panel_toolbox">
@@ -341,8 +341,26 @@
                                         </div>
                                     </div>
                                     <!-- 合約內容 end -->
-                                    <!-- 活動類別or促代、A貼 畫面 end -->
-                                    <!-- 活動類別or促代、備援單 畫面 begin -->
+                                    <div class="x_panel" ng-if="isAPasteTable" style="display:inline-block;">
+                                        <button type="button" class="btn btn-info btn-xs">促代代碼</button>
+                                        <button type="button" class="btn btn-info btn-xs">促代名稱</button>
+                                        <button type="button" class="btn btn-info btn-xs">最低月租費</button>
+                                        <button type="button" class="btn btn-info btn-xs">預繳金額</button>
+                                        <button type="button" class="btn btn-info btn-xs">指定折扣項目</button>
+                                        <button type="button" class="btn btn-info btn-xs">高改低限制時間</button>
+                                        <button type="button" class="btn btn-info btn-xs">租約期間</button>
+                                        <button type="button" class="btn btn-info btn-xs">附約VAS服務名稱</button>
+                                        <button type="button" class="btn btn-info btn-xs">主+附違約金</button>
+                                        <button type="button" class="btn btn-info btn-xs">全額違約金</button>
+                                        <button type="button" class="btn btn-info btn-xs">部分違約期間</button>
+                                        <button type="button" class="btn btn-info btn-xs">部分違約金</button>
+                                        <button type="button" class="btn btn-info btn-xs">折扣名稱</button>
+                                        <button type="button" class="btn btn-info btn-xs">折扣期間</button>
+                                        <button type="button" class="btn btn-info btn-xs">VAS對應條款</button>
+                                        <button type="button" class="btn btn-info btn-xs">啟用適用費率</button>
+                                    </div>
+                                    <!-- 1.活動類別or促代、A貼 畫面 end -->
+                                    <!-- 2.活動類別or促代、備援單 畫面 begin -->
                                     <!-- 備援單維護 begin -->
                                     <div class="x_panel" ng-if="isBackupTable">
                                         <div class="x_title">
@@ -395,7 +413,7 @@
                                     </div>
                                     <!-- 備援單維護 end -->
                                     <!-- 內容 begin -->
-                                    <div class="x_panel" ng-if="isBackupTable">
+                                    <div class="x_panel" ng-if="isBackupTable" style="width:1050px;">
                                         <div class="x_title">
                                             <h2>內容</h2>
                                             <ul class="nav navbar-right panel_toolbox">
@@ -463,8 +481,25 @@
                                         </div>
                                     </div>
                                     <!-- 內容 end -->
-                                    <!-- 活動類別or促代、備援單 畫面 end -->
-                                    <!-- 加值、備援單 畫面 begin -->
+                                    <div class="x_panel" ng-if="isBackupTable" style="display:inline-block;">
+                                        <button type="button" class="btn btn-info btn-xs">促代代碼</button>
+                                        <button type="button" class="btn btn-info btn-xs">最低月租費</button>
+                                        <button type="button" class="btn btn-info btn-xs">預繳金額</button>
+                                        <button type="button" class="btn btn-info btn-xs">指定折扣項目</button>
+                                        <button type="button" class="btn btn-info btn-xs">高改低限制時間</button>
+                                        <button type="button" class="btn btn-info btn-xs">租約期間</button>
+                                        <button type="button" class="btn btn-info btn-xs">附約VAS服務名稱</button>
+                                        <button type="button" class="btn btn-info btn-xs">主+附違約金</button>
+                                        <button type="button" class="btn btn-info btn-xs">附約VAS違約金</button>
+                                        <button type="button" class="btn btn-info btn-xs">全額違約金</button>
+                                        <button type="button" class="btn btn-info btn-xs">部分違約期間</button>
+                                        <button type="button" class="btn btn-info btn-xs">部分違約金</button>
+                                        <button type="button" class="btn btn-info btn-xs">折扣名稱</button>
+                                        <button type="button" class="btn btn-info btn-xs">折扣期間</button>
+                                        <button type="button" class="btn btn-info btn-xs">VAS對應條款</button>
+                                    </div>
+                                    <!-- 2.活動類別or促代、備援單 畫面 end -->
+                                    <!-- 3.加值、備援單 畫面 begin -->
                                     <!-- 備援單維護 begin -->
                                     <div class="x_panel" ng-if="isValueAddedTable">
                                         <div class="x_title">
@@ -489,7 +524,7 @@
                                     </div>
                                     <!-- 備援單維護 end -->
                                     <!-- 合約內容 begin -->
-                                    <div class="x_panel" ng-if="isValueAddedTable">
+                                    <div class="x_panel" ng-if="isValueAddedTable" style="width:1050px;">
                                         <div class="x_title">
                                             <h2>合約內容</h2>
                                             <ul class="nav navbar-right panel_toolbox">
@@ -572,7 +607,23 @@
                                         </div>
                                     </div>
                                     <!-- 合約內容 end -->
-                                    <!-- 加值、備援單 畫面 end -->
+                                    <div class="x_panel" ng-if="isValueAddedTable" style="display:inline-block;">
+                                        <button type="button" class="btn btn-info btn-xs">促代代碼</button>
+                                        <button type="button" class="btn btn-info btn-xs">促代名稱</button>
+                                        <button type="button" class="btn btn-info btn-xs">最低月租費</button>
+                                        <button type="button" class="btn btn-info btn-xs">預繳金額</button>
+                                        <button type="button" class="btn btn-info btn-xs">指定折扣項目</button>
+                                        <button type="button" class="btn btn-info btn-xs">高改低限制時間</button>
+                                        <button type="button" class="btn btn-info btn-xs">租約期間</button>
+                                        <button type="button" class="btn btn-info btn-xs">附約VAS服務名稱</button>
+                                        <button type="button" class="btn btn-info btn-xs">全額違約金</button>
+                                        <button type="button" class="btn btn-info btn-xs">部分違約期間</button>
+                                        <button type="button" class="btn btn-info btn-xs">部分違約金</button>
+                                        <button type="button" class="btn btn-info btn-xs">折扣名稱</button>
+                                        <button type="button" class="btn btn-info btn-xs">折扣期間</button>
+                                        <button type="button" class="btn btn-info btn-xs">VAS對應條款</button>
+                                    </div>
+                                    <!-- 3.加值、備援單 畫面 end -->
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal">預覽</button>
