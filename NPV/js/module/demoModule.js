@@ -111,6 +111,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/multiEditService', {
 				templateUrl: "../NPV/views/multiEditService.html"
 			})
+			.when('/alreadyDeal', {
+				templateUrl: "../NPV/views/alreadyDeal.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
