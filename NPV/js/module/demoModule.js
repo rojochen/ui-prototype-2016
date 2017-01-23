@@ -105,6 +105,12 @@ define(['pokemon'], function (pokemon) {
 			.when('/excelGlutChange', {
 				templateUrl: "../NPV/views/excelGlutChange.html"
 			})
+			.when('/conversionList', {
+				templateUrl: "../NPV/views/conversionList.html"
+			})
+			.when('/multiEditService', {
+				templateUrl: "../NPV/views/multiEditService.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
