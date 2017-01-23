@@ -42,8 +42,8 @@
 			tableQueryCtrl: 'js/controller/tableQuery',
 			importDeviceCtrl: 'js/controller/importDevice',
 			exportTableXMLCtrl: 'js/controller/exportTableXML',
-			aPasteBackupCtrl: '/js/controller/aPasteBackup',
-			excelGlutChangeCtrl: 'js/controller/excelGlutChange',
+			aPasteBackupCtrl: 'js/controller/aPasteBackup',
+			excelGlutChangeCtrl: 'js/controller/excelGlutChange'
 		}
 	});
 	require(['pokemon', 'btModule', 'btController', 'demoCtrl', 'footer', 'header', 'floatWindows', 'shoppingCartEntity', 'ITParameterSetCtrl', 'roleSetCtrl', 'userSetCtrl', 'groupsSetCtrl', 'marginSetCtrl', 'downtimeProbabilitySetCtrl', 'ARPBSetCtrl', 'renewalDateCtrl', 'changeLimitCtrl', 'salesSetCtrl', 'systemSetCtrl', 'classificationSetCtrl', 'activityClassificationCtrl', 'activityTypeCtrl', 'functionPermissionsSetCtrl', 'activityGroupCtrl', 'numberTypeCtrl', 'promotingGenerationTypeCtrl', 'classificationOfferSetCtrl', 'agreementAddCtrl', 'suitableTargetCtrl', 'giftActivityTypeCtrl', 'offerMutexSetCtrl', 'pnotifyService', 'discountConditionsCtrl', 'giftActivityItemCtrl', 'activemenuServiceCtrl', 'tableQueryCtrl', 'importDeviceCtrl', 'exportTableXMLCtrl', 'aPasteBackupCtrl', 'excelGlutChangeCtrl'], function (pokemon, btModule, btController, demoCtrl, footer, header, floatWindows, shoppingCartEntity, ITParameterSetCtrl, roleSetCtrl, userSetCtrl, groupsSetCtrl, marginSetCtrl, downtimeProbabilitySetCtrl, ARPBSetCtrl, renewalDateCtrl, changeLimitCtrl, salesSetCtrl, systemSetCtrl, classificationCtrl, activityClassificationCtrl, activityTypeCtrl, functionPermissionsSetCtrl, activityGroupCtrl, numberTypeCtrl, promotingGenerationTypeCtrl, classificationOfferSetCtrl, agreementAddCtrl, suitableTargetCtrl, giftActivityTypeCtrl, offerMutexSetCtrl, pnotifyService, discountConditionsCtrl, giftActivityItemCtrl, activemenuServiceCtrl, tableQueryCtrl, importDeviceCtrl, exportTableXMLCtrl, aPasteBackupCtrl, excelGlutChangeCtrl) {

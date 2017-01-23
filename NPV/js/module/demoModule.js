@@ -105,7 +105,6 @@ define(['pokemon'], function (pokemon) {
 			.when('/excelGlutChange', {
 				templateUrl: "../NPV/views/excelGlutChange.html"
 			})
-
 			.otherwise({
 				redirectTo: '/'
 			});
