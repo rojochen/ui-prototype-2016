@@ -49,8 +49,10 @@ define(['btModule'], function (btModule) {
                     },
                 },
                 "searching": false,
-                "scrollX": true,
-                "scrollY": true
+                "bInfo": true,
+                "bPaginate": true,
+                "bLengthChange": false
+                // "scrollX": true,
 
             };
 
@@ -741,48 +743,48 @@ define(['btModule'], function (btModule) {
             }
 
             $scope.addItem = function () {
-                    // $log.debug($scope.selectType);
-                    if ($scope.selectType === '活動') {
-                        $('#Modal2-1').modal('show');
-                    }
-                    if ($scope.selectType === '促代') {
-                        $('#Modal4').modal('show');
-                    }
+                // $log.debug($scope.selectType);
+                if ($scope.selectType === '活動') {
+                    $('#Modal2-1').modal('show');
                 }
-                /*end 問卷-查詢*/
+                if ($scope.selectType === '促代') {
+                    $('#Modal4').modal('show');
+                }
+            }
+            /*end 問卷-查詢*/
 
 
             /* begin */
             $scope.offerList = ['POS3RP 大雙網哈拉550月租費 -- RP', 'POS3RV 來電答鈴69超值包 -- RV'];
             $scope.definiteOffer = function () {
-                    // $log.debug($scope.offerItem);
-                    // if ($scope.offerItem) {
-                    //     $('#Modal4').modal('hide');
-                    //     $timeout(function () {
-                    //         if ($scope.offerItem === $scope.offerList[0]) {
-                    //             $('#Modal5-1').modal('show');
-                    //         }
-                    //         if ($scope.offerItem === $scope.offerList[1]) {
-                    //             $('#Modal5-2').modal('show');
-                    //         }
-                    //         $scope.offerItem = '';
-                    //     }, 400);
-                    // }
+                // $log.debug($scope.offerItem);
+                // if ($scope.offerItem) {
+                //     $('#Modal4').modal('hide');
+                //     $timeout(function () {
+                //         if ($scope.offerItem === $scope.offerList[0]) {
+                //             $('#Modal5-1').modal('show');
+                //         }
+                //         if ($scope.offerItem === $scope.offerList[1]) {
+                //             $('#Modal5-2').modal('show');
+                //         }
+                //         $scope.offerItem = '';
+                //     }, 400);
+                // }
 
-                    if ($scope.offerItem) {
-                        $('#Modal4').modal('hide');
-                        $timeout(function () {
-                            if ($scope.offerItem === "1") {
-                                $('#Modal5-1').modal('show');
-                            }
-                            if ($scope.offerItem === "2") {
-                                $('#Modal5-2').modal('show');
-                            }
-                            $scope.offerItem = '';
-                        }, 400);
-                    }
+                if ($scope.offerItem) {
+                    $('#Modal4').modal('hide');
+                    $timeout(function () {
+                        if ($scope.offerItem === "1") {
+                            $('#Modal5-1').modal('show');
+                        }
+                        if ($scope.offerItem === "2") {
+                            $('#Modal5-2').modal('show');
+                        }
+                        $scope.offerItem = '';
+                    }, 400);
                 }
-                /* end */
+            }
+            /* end */
 
 
             $scope.openbuy = function () {
@@ -825,43 +827,43 @@ define(['btModule'], function (btModule) {
             $scope.btnShow1 = true;
             $scope.btnShow2 = false;
             $scope.advancedSearch = function () {
-                    if ($scope.advancedControl) {
-                        $scope.advancedControl = false;
-                        $scope.btnShow1 = true;
-                        $scope.btnShow2 = false;
-                    } else {
-                        $scope.advancedControl = true;
-                        $scope.btnShow1 = false;
-                        $scope.btnShow2 = true;
-                    }
+                if ($scope.advancedControl) {
+                    $scope.advancedControl = false;
+                    $scope.btnShow1 = true;
+                    $scope.btnShow2 = false;
+                } else {
+                    $scope.advancedControl = true;
+                    $scope.btnShow1 = false;
+                    $scope.btnShow2 = true;
                 }
-                /* end */
+            }
+            /* end */
 
             /* begin */
             $scope.tableControl = false;
             $scope.showTable = function () {
-                    $scope.tableControl = true;
-                }
-                /* end */
+                $scope.tableControl = true;
+            }
+            /* end */
 
 
 
             $scope.addList = function () {
-                    $timeout(function () {
-                        $('#Modal2-2').modal('hide');
-                        $('#Modal3-1').modal('show');
-                    }, 400);
-                }
-                /* end */
+                $timeout(function () {
+                    $('#Modal2-2').modal('hide');
+                    $('#Modal3-1').modal('show');
+                }, 400);
+            }
+            /* end */
 
 
             $scope.inquiry = function () {
-                    $timeout(function () {
-                        $('#Modal2-2').modal('hide');
-                        $('#Modal3-2').modal('show');
-                    }, 400);
-                }
-                /* end */
+                $timeout(function () {
+                    $('#Modal2-2').modal('hide');
+                    $('#Modal3-2').modal('show');
+                }, 400);
+            }
+            /* end */
 
 
             $scope.downtimeCanRateData = [{
@@ -885,45 +887,114 @@ define(['btModule'], function (btModule) {
 
 
             $scope.openItem = function () {
-                    $timeout(function () {
-                        $('#Modal2-2').modal('hide');
-                        $('#Modal4').modal('show');
-                    }, 400);
-                }
-                /* end */
+                $timeout(function () {
+                    $('#Modal2-2').modal('hide');
+                    $('#Modal4').modal('show');
+                }, 400);
+            }
+            /* end */
 
 
 
             $scope.offerList = ['POS3RP 大雙網哈拉550月租費 -- RP', 'POS3RV 來電答鈴69超值包 -- RV'];
             $scope.definiteOffer = function () {
-                    // $log.debug($scope.offerItem);
-                    // if ($scope.offerItem) {
-                    //     $('#Modal4').modal('hide');
-                    //     $timeout(function () {
-                    //         if ($scope.offerItem === $scope.offerList[0]) {
-                    //             $('#Modal5-1').modal('show');
-                    //         }
-                    //         if ($scope.offerItem === $scope.offerList[1]) {
-                    //             $('#Modal5-2').modal('show');
-                    //         }
-                    //         $scope.offerItem = '';
-                    //     }, 400);
-                    // }
+                // $log.debug($scope.offerItem);
+                // if ($scope.offerItem) {
+                //     $('#Modal4').modal('hide');
+                //     $timeout(function () {
+                //         if ($scope.offerItem === $scope.offerList[0]) {
+                //             $('#Modal5-1').modal('show');
+                //         }
+                //         if ($scope.offerItem === $scope.offerList[1]) {
+                //             $('#Modal5-2').modal('show');
+                //         }
+                //         $scope.offerItem = '';
+                //     }, 400);
+                // }
 
-                    if ($scope.offerItem) {
-                        $('#Modal4').modal('hide');
-                        $timeout(function () {
-                            if ($scope.offerItem === "1") {
-                                $('#Modal5-1').modal('show');
-                            }
-                            if ($scope.offerItem === "2") {
-                                $('#Modal5-2').modal('show');
-                            }
-                            $scope.offerItem = '';
-                        }, 400);
-                    }
+                if ($scope.offerItem) {
+                    $('#Modal4').modal('hide');
+                    $timeout(function () {
+                        if ($scope.offerItem === "1") {
+                            $('#Modal5-1').modal('show');
+                        }
+                        if ($scope.offerItem === "2") {
+                            $('#Modal5-2').modal('show');
+                        }
+                        $scope.offerItem = '';
+                    }, 400);
                 }
-                /* end */
+            }
+            /* end */
+
+            $('#datatable_draft').DataTable().destroy();
+
+            $timeout(function () {
+                $('#datatable_draft').DataTable(opt);
+            }, 100)
+
+
+            $scope.draftData = [{
+                "number": "20170111001",
+                "numberType": "促代-4G",
+                "subType": "Bundle(1)",
+            }, {
+                "number": "20170111002",
+                "numberType": "促代-4G/3G",
+                "subType": "Single(5)/Bundle(3)",
+            }, {
+                "number": "20170111003",
+                "numberType": "促代-4G",
+                "subType": "Single(1)",
+            }, {
+                "number": "20170111004",
+                "numberType": "促代-4G/3G",
+                "subType": "Single(3)",
+            }, {
+                "number": "20170111005",
+                "numberType": "促代-4G",
+                "subType": "Single(1)",
+            }, {
+                "number": "20170111006",
+                "numberType": "促代-4G",
+                "subType": "Single(1)",
+            }, {
+                "number": "20170111007",
+                "numberType": "促代-4G",
+                "subType": "Single(1)",
+            }, {
+                "number": "20170111008",
+                "numberType": "促代-4G",
+                "subType": "Single(1)",
+            }, {
+                "number": "20170111009",
+                "numberType": "促代-4G",
+                "subType": "Bundle(1)",
+            }, {
+                "number": "20170111010",
+                "numberType": "促代3G",
+                "subType": "Single(1)",
+            }, {
+                "number": "20170111011",
+                "numberType": "促代4G",
+                "subType": "Single(1)",
+            }, {
+                "number": "20170111012",
+                "numberType": "促代4G",
+                "subType": "Bundle(1)",
+            }, {
+                "number": "20170111013",
+                "numberType": "促代3G",
+                "subType": "Single(1)",
+            }, {
+                "number": "20170111014",
+                "numberType": "促代3G",
+                "subType": "Single(1)",
+            }, {
+                "number": "20170111015",
+                "numberType": "促代4G",
+                "subType": "Single(1)",
+            }];
 
         }
     ]);
