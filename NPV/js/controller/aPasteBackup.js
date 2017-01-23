@@ -112,6 +112,7 @@ define(['btModule'], function (btModule) {
             $scope.showAPasteTable = function () {
                 $scope.isAPasteTable = true;
                 $scope.isBackupTable = false;
+                $scope.isValueAddedTable = false;
             };
 
             // 顯示「備援單」畫面
@@ -119,14 +120,15 @@ define(['btModule'], function (btModule) {
             $scope.showBackupTable = function () {
                 $scope.isBackupTable = true;
                 $scope.isAPasteTable = false;
+                $scope.isValueAddedTable = false;
             };
 
             // 顯示「加值」畫面
-            $scope.isValueAddedTable = false;
+            // $scope.isValueAddedTable = false;
             $scope.showValueAddedTable = function () {
+                $scope.isValueAddedTable = true;
                 $scope.isAPasteTable = false;
                 $scope.isBackupTable = false;
-                $scope.isValueAddedTable = true;
             };
             /* Show Table end */
         }
