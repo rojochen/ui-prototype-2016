@@ -137,13 +137,81 @@ define(['btModule'], function (btModule) {
                 "modifyDate": "31-12月 -14"
             }];
 
-            /*end 門號類型表格*/
+
+            /*begin 草稿資料表格*/
+            $scope.numberTypeTableData = [{
+                "numberTypeSort": "1",
+                "codeNumber": "4G",
+                "numberType": "4G",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "09-12月 -15"
+            }, {
+                "numberTypeSort": "2",
+                "codeNumber": "3G",
+                "numberType": "3G",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "02-4月 -12"
+            }, {
+                "numberTypeSort": "3",
+                "codeNumber": "2G",
+                "numberType": "2G",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "04-3月 -13"
+            }, {
+                "numberTypeSort": "4",
+                "codeNumber": "king",
+                "numberType": "統一超商",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "23-12月 -15"
+            }, {
+                "numberTypeSort": "5",
+                "codeNumber": "wala",
+                "numberType": "全虹",
+                "specialNumberType": "Y",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "31-3月 -14"
+            }, {
+                "numberTypeSort": "7",
+                "codeNumber": "K",
+                "numberType": "KG",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "09-12月 -15"
+            }, {
+                "numberTypeSort": "6",
+                "codeNumber": "X",
+                "numberType": "Non SIM",
+                "specialNumberType": "Y",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "23-12月 -15"
+            }, {
+                "numberTypeSort": "8",
+                "codeNumber": "ELD",
+                "numberType": "ELD",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "09-12月 -15"
+            }, {
+                "numberTypeSort": "9",
+                "codeNumber": "CLD",
+                "numberType": "CLD",
+                "specialNumberType": "N",
+                "modifyPersonnel": "SPV",
+                "modifyDate": "31-12月 -14"
+            }];
+            /*end 草稿資料表格*/
 
             $('#datatable_numberType').DataTable().destroy();
 
             $timeout(function () {
                 $('#datatable_numberType').DataTable(opt);
             }, 100)
+
+
 
             /* notify 通知訊息 begin */
             // Success
