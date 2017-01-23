@@ -4,7 +4,6 @@ define(['btModule'], function (btModule) {
 
     app.config(function ($logProvider) {
         $logProvider.debugEnabled(true);
-
     });
 
     app.controller('alreadyDealCtrl', ['$scope', '$timeout', '$log', '$element',
@@ -30,23 +29,6 @@ define(['btModule'], function (btModule) {
             });
             /*end 版面縮合*/
 
-            // it參數設定
-            /* begin */
-            $scope.btnShow1 = true;
-            $scope.btnShow2 = false;
-            $scope.advancedSearch = function () {
-                if ($scope.advancedControl) {
-                    $scope.advancedControl = false;
-                    $scope.btnShow1 = true;
-                    $scope.btnShow2 = false;
-                } else {
-                    $scope.advancedControl = true;
-                    $scope.btnShow1 = false;
-                    $scope.btnShow2 = true;
-                }
-            };
-            /* end */
-
             /* 傳送時間 begin */
             $('#alreadyDealTime-1').daterangepicker({
                 singleDatePicker: true,
@@ -62,6 +44,13 @@ define(['btModule'], function (btModule) {
                 console.log(start.toISOString(), end.toISOString(), label);
             });
             /* 傳送時間 end */
+
+            /* 展開表格 begin */
+            $scope.isTable = false;
+            $scope.showTable = function () {
+                $scope.isTable = true;
+            }
+            /* 展開表格 end */
 
             /* 表格 begin */
             var opt = {
@@ -85,7 +74,6 @@ define(['btModule'], function (btModule) {
                 "bPaginate": true,
                 "bLengthChange": false
             };
-
             $timeout(function () {
                 $('#datatable_alreadyDeal').DataTable(opt);
             }, 100)
@@ -95,20 +83,46 @@ define(['btModule'], function (btModule) {
                 "alreadyDealNpvID": "20161129001",
                 "alreadyDealType": "促代",
                 "alreadyDealStatus": "OET-Member審核",
-                "alreadyDealTime": "2016/11/29  10:25",
+                "alreadyDealTime": "2016/11/29 10:25",
                 "alreadyDealRole": "yiyang（代理人：pm01）",
 
-            }];
+            }, {
+                "alreadyDealNpvID": "20161129002",
+                "alreadyDealType": "活動類別",
+                "alreadyDealStatus": "OET-Leader指派",
+                "alreadyDealTime": "2016/11/29 15:33",
+                "alreadyDealRole": "yiyang（代理人：pm01）",
 
+            }, {
+                "alreadyDealNpvID": "20161129003",
+                "alreadyDealType": "折扣",
+                "alreadyDealStatus": "IT-Member審核",
+                "alreadyDealTime": "2016/12/1 9:28",
+                "alreadyDealRole": "yiyang",
+
+            }, {
+                "alreadyDealNpvID": "20161129004",
+                "alreadyDealType": "XXXXXX",
+                "alreadyDealStatus": "IT-Member審核",
+                "alreadyDealTime": "2016/12/2 13:12",
+                "alreadyDealRole": "yiyang",
+
+            }, {
+                "alreadyDealNpvID": "20161129005",
+                "alreadyDealType": "促代",
+                "alreadyDealStatus": "退件",
+                "alreadyDealTime": "2016/11/29 13:05",
+                "alreadyDealRole": "wsun",
+
+            }];
             $('#datatable_alreadyDeal').DataTable().destroy();
             /* 表格 end */
 
-            /* begin */
-            $scope.tableControl = false;
-            $scope.showTable = function () {
-                $scope.tableControl = true;
-            };
-            /* end */
+            /* 手風琴 begin*/
+            $('#myCollapsible').collapse({
+                toggle: false
+            })
+            /* 手風琴 end*/
         }
     ]);
     return app;
