@@ -99,6 +99,18 @@ define(['pokemon'], function (pokemon) {
 			.when('/exportTableXML', {
 				templateUrl: "../NPV/views/exportTableXML.html"
 			})
+			.when('/aPasteBackup', {
+				templateUrl: "../NPV/views/aPasteBackup.html"
+			})
+			.when('/excelGlutChange', {
+				templateUrl: "../NPV/views/excelGlutChange.html"
+			})
+			.when('/conversionList', {
+				templateUrl: "../NPV/views/conversionList.html"
+			})
+			.when('/multiEditService', {
+				templateUrl: "../NPV/views/multiEditService.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
