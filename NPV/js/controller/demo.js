@@ -30,6 +30,16 @@ define(['btModule'], function (btModule) {
             });
             /*end 版面縮合*/
 
+            $(document).on('hidden.bs.modal', '.modal', function () {
+
+                $('.modal:visible').length && $(document.body).addClass('modal-open');
+
+            });
+
+            $(document).on('show.bs.modal', '.modal', function () {
+                $("element.style").css("padding-right", "0");
+            });
+
 
             /*begin 問卷-查詢*/
             var opt = {
@@ -822,7 +832,7 @@ define(['btModule'], function (btModule) {
 
             }
 
-            // it參數設定
+
             /* begin */
             $scope.btnShow1 = true;
             $scope.btnShow2 = false;
@@ -940,7 +950,7 @@ define(['btModule'], function (btModule) {
                 "subType": "Bundle(1)",
             }, {
                 "number": "20170111002",
-                "numberType": "促代-4G/3G",
+                "numberType": "活動類型(1)",
                 "subType": "Single(5)/Bundle(3)",
             }, {
                 "number": "20170111003",
@@ -996,6 +1006,23 @@ define(['btModule'], function (btModule) {
                 "subType": "Single(1)",
             }];
 
+
+
+
+
+            console.log($scope.draftData[0].numberType);
+
+            $scope.inquire = function (numberType) {
+                if (numberType === "促代-4G") {
+                    $('#promotingGenerationInquire').modal('show');
+                    $('#Modal3-1').modal('hide');
+                } else {
+                    $('#Modal3-1').modal('show');
+                    $('#promotingGenerationInquire').modal('hide');
+                }
+
+            }
+            /* end */
         }
     ]);
     return app;
