@@ -120,6 +120,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/npvStatusQuery', {
 				templateUrl: "../NPV/views/npvStatusQuery.html"
 			})
+			.when('/confirmBill', {
+				templateUrl: "../NPV/views/confirmBill.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
