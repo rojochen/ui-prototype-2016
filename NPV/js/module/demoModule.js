@@ -114,6 +114,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/alreadyDeal', {
 				templateUrl: "../NPV/views/alreadyDeal.html"
 			})
+			.when('/demoYvonne', {
+				templateUrl: "../NPV/views/demoYvonne.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
