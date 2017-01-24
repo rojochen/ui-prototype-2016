@@ -1,0 +1,268 @@
+<div class="page-no-title"></div>
+<div class="row" ng-controller="waitTreatmentListCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>待處理</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#dataBecomeEffective">檔案生效日期</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div id="datatable_waitTreatmentListData_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                        <div class="row">
+                                            <div class="col-sm-6"></div>
+                                            <div class="col-sm-6"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 panel-group">
+                                                <table id="datatable_waitTreatmentListData" class="table table-striped table-bordered no-footer dataTable" role="grid" aria-describedby="datatable_waitTreatmentListData_info">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="table-header-color">NPV 單號</th>
+                                                            <th class="table-header-color">類型</th>
+                                                            <th class="table-header-color">次類型</th>
+                                                            <th class="table-header-color">傳送時間</th>
+                                                            <th class="table-header-color">PM</th>
+                                                            <th class="table-header-color">狀態(關</th>
+                                                            <th class="table-header-color">指派/審核</th>
+                                                            <th class="table-header-color">退單</th>
+                                                            <th class="table-header-color">匯出SPV</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody ng-repeat="x in waitTreatmentListData  track by $index">
+                                                        <tr data-toggle="collapse" ng-href="#{{x.waitId}}" aria-expanded="true" data-parent="#accordion" aria-controls="{{x.waitId}}">
+                                                            <td ng-bind="x.waitNpv"></td>
+                                                            <td ng-bind="x.waitType1"></td>
+                                                            <td ng-bind="x.waitType2"></td>
+                                                            <td ng-bind="x.waitTime"></td>
+                                                            <td ng-bind="x.waitPM"></td>
+                                                            <td ng-bind="x.waitStatus"></td>
+                                                            <td><button type="button" class="btn btn-primary">{{x.waitDesignate}}</button></td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-primary">退單</button>
+                                                            </td>
+                                                            <td><button type="button" class="btn btn-primary">匯出SPV</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <!--NPV單號詳細 start-->
+                                                            <td colspan="9" id="datatable_waitNpvItemData_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer" ng-style="waitItemStyle">
+                                                                <div id="{{x.waitId}}" class="collapse">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                            <table id="datatable_waitNpvItemData" class="table table-striped table-bordered no-footer dataTable jambo_table" role="grid"
+                                                                                aria-describedby="datatable_waitNpvItemData_info">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th class="table-header-color ">
+                                                                                            NO
+                                                                                        </th>
+                                                                                        <th class="table-header-color ">代碼</th>
+                                                                                        <th class="table-header-color ">類型</th>
+                                                                                        <th class="table-header-color ">名稱</th>
+                                                                                        <th class="table-header-color ">版號</th>
+                                                                                        <th class="table-header-color ">版本比對</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr ng-repeat="y in waitNpvItemData track by $index">
+                                                                                        <td ng-bind="y.npvNo"></td>
+                                                                                        <td>
+                                                                                            <button type="button" class="btn btn-link" data-toggle="modal" href="#" ng-bind="y.npvCode"></button>
+                                                                                        </td>
+                                                                                        <td>Single</td>
+                                                                                        <td>4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000</td>
+                                                                                        <td>1.1</td>
+                                                                                        <td><button type="button">版本比對</button></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                </table>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </td>
+                                                </tr>
+                                                <!--NPV單號詳細 end-->
+                                                </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--檔案生效日期設定 start-->
+                    <div class="modal fullscreen-modal in" id="dataBecomeEffective" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">檔案生效日期設定</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left ng-pristine ng-valid">
+                                        <div class="form-group">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <label class="control-label col-md-1 col-sm-1 col-xs-12">類型:</label>
+                                                    <div class="col-md-2 col-sm-2 col-xs-12">
+                                                        <select ng-model="changeItemTypeFunction" class="form-control" ng-options="x.dataName for x in dataBecomeEffectiveSelect track by x.dataValue">
+                                                            <!--<option ng-repeat="x in dataBecomeEffectiveSelect" ng-bind="x.dataName" value="{{x.dataValue}}">全部</option>-->
+                                                        </select>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary" ng-click="searchType()">查詢</button>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#dataBecomeEffectiveSet">修改檔案生效日</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="form-group">
+                                                            <div id="datatable_dataBecomeEffectiveSequence_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6"></div>
+                                                                    <div class="col-sm-6"></div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        <table id="datatable_dataBecomeEffectiveSequence" class="table table-striped table-bordered no-footer dataTable" role="grid"
+                                                                            aria-describedby="datatable_dataBecomeEffectiveSequence_info">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th class="table-header-color"><input type="checkbox" ng-modal="dataBecomeEffectiveAll"></th>
+                                                                                    <th class="table-header-color">檔案生效日期</th>
+                                                                                    <th class="table-header-color">代碼</th>
+                                                                                    <th class="table-header-color">類型</th>
+                                                                                    <th class="table-header-color">次類型</th>
+                                                                                    <th class="table-header-color">名稱</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr ng-modal="dataBecomeEffectiveSequence" ng-repeat="x in dataBecomeEffectiveSequence track by $index" ng-show="x.show=='true'">
+                                                                                    <td><input type="checkbox" ng-checked="dataBecomeEffectiveAll"></td>
+                                                                                    <td ng-bind="x.dateBecomeEffective"></td>
+                                                                                    <td ng-bind="x.dateCode"></td>
+                                                                                    <td ng-bind="x.dateType"></td>
+                                                                                    <td ng-bind="x.dateTwoType"></td>
+                                                                                    <td ng-bind="x.dateName"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                            </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--檔案生效日期設定 end-->
+                    <!--檔案生效日日期視窗 start-->
+                    <div class="modal bs-example-modal-sm in" id="dataBecomeEffectiveSet" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">修改檔案生效日</h4>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-body form-horizontal">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="control-label col-md-offset-2 col-md-2 col-sm-2 col-xs-12">檔案生效日:</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <input id="dataBecomeEffectiveSetDate" type="text" class="form-control" style="width: 147px; display: inline-block;">
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <button type="button" data-toggle="modal" class="btn btn-primary" href="#dataBecomeEffectiveSetOk">確定</button>
+                                                <button type="button" data-toggle="modal" data-dismiss="modal" class="btn btn-default">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--檔案生效日日期視窗 end-->
+                    <!--確定修改日期畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="dataBecomeEffectiveSetOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確認修改生效日動作</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定要修改生效日</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#dataBecomeEffectiveSetOkOk"
+                                        ng-click="dateOk()">確定</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#conversionOkCancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定修改日期畫面 end-->
+                    <!--修改日期成功畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="dataBecomeEffectiveSetOkOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">修改生效日成功畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">修改生效日成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--修改日期成功畫面 end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
