@@ -1009,9 +1009,6 @@ define(['btModule'], function (btModule) {
 
 
 
-
-            console.log($scope.draftData[0].numberType);
-
             $scope.inquire = function (numberType) {
                 if (numberType === "促代-4G") {
                     $('#promotingGenerationInquire').modal('show');
