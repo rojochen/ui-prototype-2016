@@ -1,7 +1,7 @@
 <div class="" ng-controller="datepickerCtrl">
 	<div class="page-title">
 		<div class="title_left">
-			<h3>日期區間選擇器</h3>
+			<h3>日期選擇器</h3>
 		</div>
 
 		<div class="title_right">
@@ -20,16 +20,15 @@
 
 	<div class="row">
 		<div class="col-md-12 col-sm-12 col-xs-12">
-			<bt-portlet titlename="'日期區間選擇器設計'" refreshbtn="true" switchbtn="true" selectbtn="true" closebtn="true">
-				<p>可藉由bt-datepicker-range這個directive新增日期區間選擇器。</p>
-				<p><code>&lt;bt-datepicker-range <strong>datepicker-id</strong>="ss" <strong>ng-model</strong>="daterange1" <strong>format</strong>="YYYY-MM-DD h:mm:ss A" <strong>drops</strong>="up" <strong>opens</strong>="right" <strong>min-date</strong>="2016-01-10" <strong>max-date</strong>="2017-10-23" <strong>show-dropdowns</strong>="true" <strong>time-picker</strong>="true" <strong>time-picker-increment</strong>="30" <strong>time-picker24-hour</strong>="false" <strong>time-picker-seconds</strong>="true"&gt;&lt;/bt-datepicker-range&gt;</code></p>
+			<bt-portlet titlename="'日期選擇器設計'" refreshbtn="true" switchbtn="true" selectbtn="true" closebtn="true">
+				<p>可藉由bt-datepicker這個directive新增日期選擇器。</p>
+				<p><code>&lt;bt-datepicker <strong>datepicker-id</strong>="ss" <strong>ng-model</strong>="datesingle" <strong>format</strong>="YYYY-MM-DD h:mm:ss A" <strong>drops</strong>="up" <strong>min-date</strong>="2016-01-10" <strong>max-date</strong>="2017-10-23" <strong>show-dropdowns</strong>="true" <strong>time-picker</strong>="true" <strong>time-picker-increment</strong>="30" <strong>time-picker24-hour</strong>="false" <strong>time-picker-seconds</strong>="true"&gt;&lt;/bt-datepicker&gt;</code></p>
 				<p>說明如下：</p>
 				<ol>
 					<li>datepicker-id。(必填)</li>
-                    <li>ng-model，可設定日期。(必填，Array)</li>
+                    <li>ng-model，可設定日期。(必填)</li>
                     <li>format，可設定日期格式，預設YYYY/MM/DD。</li>
                     <li>drops，可設定開啟方向，預設down。(up、down)</li>
-					<li>opens，可設定偏移方向，預設right。(left、right)</li>
                     <li>min-date，可設定最小日期區間。</li>
                     <li>max-date，可設定最大日期區間。</li>
                     <li>show-dropdowns，可設定月份的選擇方式。(boolean)</li>
@@ -40,16 +39,13 @@
 				</ol>
 			</bt-portlet>
 		</div>
-
-
-        <!--<p style="height:400px;"></p>-->
 		<div class="col-md-6 col-sm-12 col-xs-12">
-			<bt-datepicker-range datepicker-id="ss" ng-model="daterange1" format="YYYY-MM-DD h:mm:ss A" drops="up" opens="right" min-date="2016-01-10" max-date="2017-10-23" show-dropdowns="true" time-picker="true" time-picker-increment="30" time-picker24-hour="false" time-picker-seconds="true"></bt-datepicker-range>
+			<bt-datepicker datepicker-id="aa" ng-model="datesingle" format="YYYY-MM-DD h:mm:ss A" drops="up" min-date="2016-01-10" max-date="2017-10-23" show-dropdowns="true" time-picker="true" time-picker-increment="30" time-picker24-hour="false" time-picker-seconds="true"></bt-datepicker>
 		</div>
 
 		<div class="col-md-12 col-sm-12 col-xs-12">
-			<button ng-click='console()'>console</button>
-			<button ng-click='remove()'>remove</button>
+			<button ng-click='console_single()'>console_single</button>
+			<button ng-click='remove_single()'>remove_single</button>
 		</div>
 	</div>
 </div>

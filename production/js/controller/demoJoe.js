@@ -600,6 +600,14 @@ define(['btModule'], function (btModule) {
     $scope.remove = function(){
       $scope.daterange1 = [];
     }
+
+    $scope.datesingle = new Date('2016/02/28 9:00:00 PM');
+    $scope.console_single = function(){
+      console.log($scope.datesingle);
+    }
+    $scope.remove_single = function(){
+      $scope.datesingle = [];
+    }
   }
   app.controller('datepickerCtrl', datepickerCtrl);
 

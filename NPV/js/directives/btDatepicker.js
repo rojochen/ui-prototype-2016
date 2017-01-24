@@ -2,12 +2,11 @@ define(['btModule'], function (btModule) {
     'use strict';
     var app = angular.module("btModule");
 
-    app.directive('btDatepickerRange', ['$timeout', function($timeout){
+    app.directive('btDatepicker', ['$timeout', function($timeout){
         function link(scope, element, attrs){
             var datepickerId = attrs['datepickerId'],
                 format = attrs['format'],
                 drops = attrs['drops']?attrs['drops']:'down',
-                opens = attrs['opens']?attrs['opens']:'right',
                 minDate = attrs['minDate'],
                 maxDate = attrs['maxDate'],
                 showDropdowns = attrs['showDropdowns']?attrs['showDropdowns']=='true':false,
@@ -28,13 +27,12 @@ define(['btModule'], function (btModule) {
                     timePicker24Hour: timePicker24Hour,
                     timePickerSeconds: timePickerSeconds,
                     drops: drops,
-                    opens: opens
+                    singleDatePicker: true
                 },
                 modelZIndex = $(element).parents('.modal').css('z-index');
             // console.log(datepickerId);
             // console.log(format);
             // console.log(drops);
-            // console.log(opens);
             // console.log(minDate);
             // console.log(maxDate);
             // console.log(showDropdowns);
@@ -47,10 +45,9 @@ define(['btModule'], function (btModule) {
             if(datepickerId){
                 scope.isShowDatepicker = true;
                 scope.id = datepickerId;
-
+                
                 if(scope.ngModel && scope.ngModel.length !== 0){
-                    if(scope.ngModel[0]) optionSet.startDate = scope.ngModel[0];
-                    if(scope.ngModel[1]) optionSet.endDate = scope.ngModel[1];
+                    optionSet.startDate = scope.ngModel;
                 }
 
                 if(!format && timePicker === false){
@@ -98,8 +95,6 @@ define(['btModule'], function (btModule) {
                     $('#'+ datepickerId).daterangepicker(optionSet,function(start, end, label){
                         scope.ngModel = [];
                         scope.ngModel.push(start._d);
-                        scope.ngModel.push(end._d);
-                        // console.log(scope.ngModel);
                     });
 
                     $('#'+ datepickerId).on('cancel.daterangepicker', function(ev, picker) {

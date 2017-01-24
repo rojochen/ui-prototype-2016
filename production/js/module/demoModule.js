@@ -25,6 +25,9 @@ define(['pokemon'], function(pokemon) {
 				.when('/form_buttons', {
 					templateUrl: '../template/form_buttons.html'
 				})
+				.when('/datepicker', {
+					templateUrl: '../template/datepicker.html'
+				})
 				.when('/datepicker_range', {
 					templateUrl: '../template/datepicker_range.html'
 				})
