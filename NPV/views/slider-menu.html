@@ -22,34 +22,46 @@
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
   <div class="menu_section">
     <ul class="nav side-menu">
-      <li><a><i class="fa fa-edit"></i> 個人工作區 <span class="fa fa-chevron-down"></span></a>
+      <li><a><i class="fa fa-edit"></i> 促代管理 <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
           <li><a href="#">促代維護</a></li>
-          <li><a href="#">折扣維護</a></li>
-          <li><a href="#">贈品加碼維護</a></li>
-          <li><a href="#">草稿</a></li>
-          <li><a href="#">大量匯入促代草稿</a></li>
           <li><a href="#excelGlutChange">Excel大批修改</a></li>
           <li><a href="#">多筆促代新增</a></li>
           <li><a href="#multiEditService">多筆編輯維護</a></li>
-          <li><a href="#">待處理</a></li>
-          <li><a href="#alreadyDeal">已處理</a></li>
-          <li><a href="#">退件記錄</a></li>
-          <li><a href="#">上傳促代等待排程</a></li>
-          <li><a href="#">促代設定檢查(PM記錄)</a></li>
+          <li><a href="#">強制退單</a></li>
           <li><a href="#conversionList">轉單/拆單/合併</a></li>
+          <li><a href="#">個人設定</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa fa-diamond"></i> 折扣申請維護 </a></li>
+      <li><a href="#"><i class="fa fa-gift"></i> 贈品/加碼活動 </a></li>
+      <li><a href="#"><i class="fa fa-file-text"></i> 草稿 </a></li>
+      <li><a href="#"><i class="fa fa-flag-o"></i> 待處理 </a></li>
+      <li><a href="#"><i class="fa fa-flag-checkered"></i> 退件記錄 </a></li>
+      <li><a href="#alreadyDeal"><i class="fa fa-flag"></i> 已處理 </a></li>
+      <li><a href="#"><i class="fa fa-wpforms"></i> 認單作業 </a></li>
+      <li><a href="#"><i class="fa fa-files-o"></i> 大量匯入促代草稿 </a></li>
+      <li><a><i class="fa fa-desktop"></i> Device管理 <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
           <li><a href="#importDevice">匯入單機價、轉換值</a></li>
           <li><a href="#exportTableXML">匯出大表測試檔(XML)</a></li>
           <li><a href="#tableQuery">大表查詢/匯入</a></li>
         </ul>
       </li>
-      <li><a><i class="fa fa-bar-chart"></i> 查詢&amp;報表管理 <span class="fa fa-chevron-down"></span></a>
+      <li><a><i class="fa fa-bar-chart"></i> 查詢與報表管理 <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
-          <li><a href="#">版本異動紀錄查詢</a></li>
+          <li><a href="#">促代版本異動紀錄查詢</a></li>
+          <li><a href="#">促代版本異動紀錄查詢(Incentive)</a></li>
+          <li><a href="#">折扣版本異動紀錄查詢</a></li>
+          <li><a href="#">活動類別版本異動紀錄查詢</a></li>
+          <li><a href="#">贈品/加碼活動版本異動紀錄查詢</a></li>
+          <!--<li><a href="#">版本異動紀錄查詢</a></li>-->
           <li><a href="#">促代查詢及報表</a></li>
+          <li><a href="#">促代查詢及報表(Incentive)</a></li>
           <li><a href="#">活動類別查詢及報表</a></li>
           <li><a href="#">贈品加碼活動查詢及報表</a></li>
-          <li><a href="#">Bundle Promotion查詢及報表</a></li>
+          <li><a href="#">折扣查詢(New)</a></li>
+          <!--<li><a href="#">Bundle Promotion查詢及報表</a></li>-->
           <li><a href="#">Product Offer information查詢及報表</a></li>
           <li><a href="#">Product Offer&amp;Billing Offer Relation查詢及報表</a></li>
           <li><a href="#">Product hierarchy查詢及報表</a></li>
@@ -59,31 +71,29 @@
           <li><a href="#">ePC 折扣查詢及報表</a></li>
         </ul>
       </li>
-      <li><a><i class="fa fa-cog"></i> 促代參數設定  <span class="fa fa-chevron-down"></span></a>
+      <li><a><i class="fa fa-cog"></i> 促代參數設定 <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
+          <!--<li><a href="#">違約金設定維護</a></li>-->
           <li><a href="#">Service新增/維護</a></li>
-          <li><a href="#marginSet">保證金設定</a></li>
-          <li><a href="#downtimeProbabilitySet">停機可能率設定</a></li>
-          <li><a href="#ARPBSet">ARPB設定</a></li>
+          <li><a href="#marginSet">保證金</a></li>
+          <li><a href="#downtimeProbabilitySet">停機可能率</a></li>
+          <li><a href="#ARPBSet">ARPB</a></li>
           <li><a href="#renewalDate">可提前續約日</a></li>
-          <li><a href="#changeLimit">高改低限制設定</a></li>
-          <li><a href="#salesSet">適用通路設定</a></li>
-          <li><a href="#systemSet">啟用系統設定</a></li>
+          <li><a href="#changeLimit">高改低限制</a></li>
+          <li><a href="#salesSet">適用通路</a></li>
+          <li><a href="#systemSet">啟用系統</a></li>
           <li><a href="#classificationSet">促代類別設定</a></li>
           <li><a href="#activityClassification">促銷活動類別</a></li>
           <li><a href="#activityType">促銷活動類型</a></li>
-          <li><a href="#">常用資費設定</a></li>
           <li><a href="#activityGroup">活動群組設定</a></li>
           <li><a href="#numberType">門號類型</a></li>
           <li><a href="#promotingGenerationType">促代類型</a></li>
           <li><a href="#ITParameterSet"> IT參數設定</a></li>
           <li><a href="#suitableTarget">適用對象設定</a></li>
           <li><a href="#discountConditions">折扣條件組態設定</a></li>
-          <li><a href="#">附約VAS設定</a></li>
           <li><a href="#">活動類別條件設定</a></li>
-          <li><a href="#">設定費/預繳金額設定</a></li>
+          <li><a href="#">預繳金額設定</a></li>
           <li><a href="#aPasteBackup">A貼/備援單維護</a></li>
-          <li><a href="#">違約金設定維護</a></li>
           <li><a href="#classificationOfferSet">促代OFFER簡稱設定</a></li>
           <li><a href="#agreementAdd">合約相關新增/維護</a></li>
           <li><a href="#">折扣範本維護</a></li>
@@ -91,22 +101,24 @@
           <li><a href="#giftActivityItem">贈品/加碼活動條件項目維護</a></li>
           <li><a href="#activemenuService">贈品/加碼活動下拉選單維護</a></li>
           <li><a href="#">畫面連動維護</a></li>
-          <li><a href="#offerMutexSet">Offer互斥設定維護</a></li>
           <li><a href="#">IT折扣特殊控制</a></li>
+          <li><a href="#offerMutexSet">Offer互斥設定維護</a></li>
         </ul>
       </li>
       <li><a><i class="fa fa-table"></i> 簽核設定管理 <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
           <li><a href="#">簽核流程設定</a></li>
-          <li><a href="#">簽核紀錄查詢</a></li>
+          <li><a href="#">強制轉單</a></li>
+          <li><a href="#">NPV單狀態查詢</a></li>
+          <li><a href="#">強制退單</a></li>
         </ul>
       </li>
       <li><a><i class="fa fa-th-large"></i> 權限管理 <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
-          <li><a href="#userSet">使用者設定</a></li>
           <li><a href="#roleSet">角色設定</a></li>
           <!--<li><a href="#groupsSet">群組設定</a></li>-->
-          <li><a href="#functionPermissionsSet">功能權限設定</a></li>
+          <li><a href="#userSet">使用者角色設定</a></li>
+          <li><a href="#functionPermissionsSet">使用者功能權限設定</a></li>
         </ul>
       </li>
       <li><a><i class="fa fa-clone"></i> 系統管理 <span class="fa fa-chevron-down"></span></a>
@@ -117,6 +129,7 @@
           <li><a href="#">IT環境設定</a></li>
           <li><a href="#">重整環境設定</a></li>
           <li><a href="#">資料庫編輯</a></li>
+          <li><a href="#">測試檔產檔</a></li>
         </ul>
       </li>
     </ul>
