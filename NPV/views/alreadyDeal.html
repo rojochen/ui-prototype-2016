@@ -1,0 +1,299 @@
+<div class="page-no-title"></div>
+<div class="row" ng-controller="alreadyDealCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>已處理</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <!-- 已處理 表單 begin -->
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">NPV 單號</label>
+                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12" value="20161101">
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                <select class="form-control">
+                                         <option>等於</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">處理日期</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+                                <div class="col-md-5 col-sm-5">
+                                    <input id="alreadyDealTime-1" type="text" class="form-control">
+                                </div>
+                                <label class="text-center col-md-2 col-sm-2">～</label>
+                                <div class="col-md-5 col-sm-5">
+                                    <input id="alreadyDealTime-2" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
+                            </div>
+                        </div>
+                        <!--表格 start -->
+                        <!--<table id="datatable_alreadyDeal" class="table table-striped table-bordered" ng-show="isTable">-->
+                        <table class="table table-striped table-bordered table-hover" ng-show="isTable">
+                            <thead>
+                                <tr>
+                                    <th class="table-header-color">NPV單號</th>
+                                    <th class="table-header-color">類型</th>
+                                    <th class="table-header-color">目前狀態</th>
+                                    <th class="table-header-color">傳送時間</th>
+                                    <th class="table-header-color">起單者</th>
+                                    <th class="table-header-color">歷程查詢</th>
+                                </tr>
+                            </thead>
+                            <!--<tbody>
+                                <tr ng-repeat="x in alreadyDealTableData track by $index ">
+                                    <td ng-bind="x.alreadyDealNpvID " ng-click="showData() "></td>
+                                    <td ng-bind="x.alreadyDealType "></td>
+                                    <td ng-bind="x.alreadyDealStatus "></td>
+                                    <td ng-bind="x.alreadyDealTime "></td>
+                                    <td ng-bind="x.alreadyDealRole "></td>
+                                    <td>
+                                        <button type="button " class="btn btn-info btn-xs " data-toggle="modal
+                                        " data-target="#actGroupEdit "><i class="fa fa-search "></i>查詢</button>
+                                    </td>
+                                </tr>
+                            </tbody>-->
+                            <tbody>
+                                <tr data-toggle="collapse" data-target="#accordion-1" class="clickable">
+                                    <td>20161129001</td>
+                                    <td>促代</td>
+                                    <td>OET-Member審核</td>
+                                    <td>2016/11/29 10:25</td>
+                                    <td>yiyang（代理人：pm01）</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-search"></i>查詢</button>
+                                    </td>
+                                </tr>
+                                <!--展開 begin-->
+                                <tr id="accordion-1" class="collapse">
+                                    <td colspan="6">
+                                        <table class="table table-bordered table-hover" style="margin:0px;">
+                                            <thead>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="table-header-color">狀態</td>
+                                                    <td>OET Leader指派</td>
+                                                    <td>OET Member審核</td>
+                                                    <td>Mobility PM確認</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-header-color">負責人</td>
+                                                    <td>oet01</td>
+                                                    <td>oet11</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-header-color">日期</td>
+                                                    <td>2016/11/30</td>
+                                                    <td>2016/11/30</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!--展開 end-->
+                                <tr data-toggle="collapse" data-target="#accordion-2" class="clickable">
+                                    <td>20161129002</td>
+                                    <td>活動類別</td>
+                                    <td>OET-Leader指派</td>
+                                    <td>2016/11/29 15:33</td>
+                                    <td>yiyang（代理人：pm01）</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-search"></i>查詢</button>
+                                    </td>
+                                </tr>
+                                <!--展開 begin-->
+                                <tr id="accordion-2" class="collapse">
+                                    <td colspan="6">
+                                        <table class="table table-bordered table-hover" style="margin:0px;">
+                                            <thead>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="table-header-color">關卡</td>
+                                                    <td>OET Leader指派</td>
+                                                    <td>OET Member審核</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-header-color">負責人</td>
+                                                    <td>oet01</td>
+                                                    <td>oet11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-header-color">日期</td>
+                                                    <td>42704</td>
+                                                    <td>2016/11/30</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!--展開 end-->
+                                <tr data-toggle="collapse" data-target="#accordion-3" class="clickable">
+                                    <td>20161129003</td>
+                                    <td>折扣</td>
+                                    <td>IT-Member審核</td>
+                                    <td>2016/12/1 9:28</td>
+                                    <td>yiyang</td>
+                                    <td>
+                                        <button type="button " class="btn btn-info btn-xs " data-toggle="modal
+                                        " data-target="#actGroupEdit "><i class="fa fa-search "></i>查詢</button>
+                                    </td>
+                                </tr>
+                                <!--展開 begin-->
+                                <tr id="accordion-3" class="collapse">
+                                    <td colspan="6">
+                                        <table class="table table-bordered table-hover" style="margin:0px;">
+                                            <thead>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="table-header-color">狀態</td>
+                                                    <td>OET Leader指派</td>
+                                                    <td>OET Member審核</td>
+                                                    <td>IT Member指派</td>
+                                                    <td>IT Member審核</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-header-color">負責人</td>
+                                                    <td>oet01</td>
+                                                    <td>oet11(代理人：oet13)</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-header-color">日期</td>
+                                                    <td>2016/12/1</td>
+                                                    <td>2016/12/01</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!--展開 end-->
+                                <tr data-toggle="collapse" data-target="#accordion-4" class="clickable">
+                                    <td>20161129004</td>
+                                    <td>XXXXXX</td>
+                                    <td>IT-Member審核</td>
+                                    <td>2016/12/2 13:12</td>
+                                    <td>yiyang</td>
+                                    <td>
+                                        <button type="button " class="btn btn-info btn-xs " data-toggle="modal
+                                        " data-target="#actGroupEdit "><i class="fa fa-search "></i>查詢</button>
+                                    </td>
+                                </tr>
+                                <!--展開 begin-->
+                                <tr id="accordion-4" class="collapse">
+                                    <td colspan="6">
+                                        <table class="table table-bordered table-hover" style="margin:0px;">
+                                            <thead>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="table-header-color">狀態</td>
+                                                    <td>OET Leader指派</td>
+                                                    <td>OET Member審核</td>
+                                                    <td>IT Member指派</td>
+                                                    <td>IT Member審核</td>
+                                                    <td>OET Member審核</td>
+                                                    <td>OET Member審核</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-header-color">負責人</td>
+                                                    <td>oet01</td>
+                                                    <td>oet11(代理人：oet13)</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-header-color">日期</td>
+                                                    <td>2016/12/1</td>
+                                                    <td>2016/12/1</td>
+                                                    <td>2016/12/1</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!--展開 end-->
+                                <tr data-toggle="collapse" data-target="#accordion-5" class="clickable">
+                                    <td>20161129005</td>
+                                    <td>促代</td>
+                                    <td>退件</td>
+                                    <td>2016/11/29 13:05</td>
+                                    <td>wsun</td>
+                                    <td>
+                                        <button type="button " class="btn btn-info btn-xs " data-toggle="modal
+                                        " data-target="#actGroupEdit "><i class="fa fa-search "></i>查詢</button>
+                                    </td>
+                                </tr>
+                                <!--展開 begin-->
+                                <tr id="accordion-5" class="collapse">
+                                    <td colspan="6">
+                                        <table class="table table-bordered table-hover" style="margin:0px;">
+                                            <thead>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="table-header-color">狀態</td>
+                                                    <td>OET Leader指派</td>
+                                                    <td>OET Member審核</td>
+                                                    <td>Mobility PM確認</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-header-color">負責人</td>
+                                                    <td>oet01</td>
+                                                    <td>oet11</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-header-color">日期</td>
+                                                    <td>2016/11/30</td>
+                                                    <td>2016/11/30</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!--展開 end-->
+                            </tbody>
+                        </table>
+                        <!-- 表格 end -->
+                        <!-- 頁籤 begin -->
+                        <div class="pull-right">
+                            <div bt-pagination ng-model="tableInfo" page-size="9" page-count="10"></div>
+                        </div>
+                        <!-- 頁籤 end -->
+                    </form>
+                    <!-- 已處理 表單 end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
