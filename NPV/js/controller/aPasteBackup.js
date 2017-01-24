@@ -49,8 +49,7 @@ define(['btModule'], function (btModule) {
                 },
                 "searching": false,
                 "bInfo": false,
-                "bPaginate": false,
-                "bLengthChange": false
+                "bSort": false
             };
 
             $timeout(function () {

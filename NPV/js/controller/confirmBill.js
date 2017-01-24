@@ -79,64 +79,64 @@ define(['btModule'], function (btModule) {
             }, 100)
 
             // 表格內容資料
-            $scope.confirmBillTableData = [{
-                "confirmBillNpvID": "20161129004",
-                "confirmBillType": "促代-4G",
-                "confirmBillSecondType": "Bundle(1)",
-                "confirmBillTime": "2016/11/29 11:55",
-                "confirmBillPM": "yiyang",
-                "confirmBillStatus": "待派單"
-            }, {
-                "confirmBillNpvID": "20161129005",
-                "confirmBillType": "折扣 (2)",
-                "confirmBillSecondType": "N/A",
-                "confirmBillTime": "2016/11/29 14:21",
-                "confirmBillPM": "tatakao",
-                "confirmBillStatus": "待派單"
-            }, {
-                "confirmBillNpvID": "20161129006",
-                "confirmBillType": "促代-4G／3G",
-                "confirmBillSecondType": "Single(3)",
-                "confirmBillTime": "2016/11/29 14:32",
-                "confirmBillPM": "tatakao",
-                "confirmBillStatus": "待派單"
-            }, {
-                "confirmBillNpvID": "20161129007",
-                "confirmBillType": "促代-3G",
-                "confirmBillSecondType": "Single(1)",
-                "confirmBillTime": "2016/11/29 11:45",
-                "confirmBillPM": "yiyang",
-                "confirmBillStatus": "待派單"
-            }, {
-                "confirmBillNpvID": "20161129017",
-                "confirmBillType": "促代-4G",
-                "confirmBillSecondType": "Single(1)",
-                "confirmBillTime": "2016/11/29 15:25",
-                "confirmBillPM": "yiyang",
-                "confirmBillStatus": "待派單"
-            }, {
-                "confirmBillNpvID": "20161129018",
-                "confirmBillType": "促代-4G",
-                "confirmBillSecondType": "Single(1)",
-                "confirmBillTime": "2016/11/29 16:55",
-                "confirmBillPM": "yiyang",
-                "confirmBillStatus": "待派單"
-            }, {
-                "confirmBillNpvID": "20161129019",
-                "confirmBillType": "促代-4G",
-                "confirmBillSecondType": "Single(1)",
-                "confirmBillTime": "2016/11/29 17:55",
-                "confirmBillPM": "yiyang",
-                "confirmBillStatus": "待派單"
-            }, {
-                "confirmBillNpvID": "20161129020",
-                "confirmBillType": "促代-4G",
-                "confirmBillSecondType": "Single(1)",
-                "confirmBillTime": "2016/11/29 17:55",
-                "confirmBillPM": "yiyang",
-                "confirmBillStatus": "待派單"
-            }, ];
-            $('#datatable_confirmBill').DataTable().destroy();
+            // $scope.confirmBillTableData = [{
+            //     "confirmBillNpvID": "20161129004",
+            //     "confirmBillType": "促代-4G",
+            //     "confirmBillSecondType": "Bundle(1)",
+            //     "confirmBillTime": "2016/11/29 11:55",
+            //     "confirmBillPM": "yiyang",
+            //     "confirmBillStatus": "待派單"
+            // }, {
+            //     "confirmBillNpvID": "20161129005",
+            //     "confirmBillType": "折扣 (2)",
+            //     "confirmBillSecondType": "N/A",
+            //     "confirmBillTime": "2016/11/29 14:21",
+            //     "confirmBillPM": "tatakao",
+            //     "confirmBillStatus": "待派單"
+            // }, {
+            //     "confirmBillNpvID": "20161129006",
+            //     "confirmBillType": "促代-4G／3G",
+            //     "confirmBillSecondType": "Single(3)",
+            //     "confirmBillTime": "2016/11/29 14:32",
+            //     "confirmBillPM": "tatakao",
+            //     "confirmBillStatus": "待派單"
+            // }, {
+            //     "confirmBillNpvID": "20161129007",
+            //     "confirmBillType": "促代-3G",
+            //     "confirmBillSecondType": "Single(1)",
+            //     "confirmBillTime": "2016/11/29 11:45",
+            //     "confirmBillPM": "yiyang",
+            //     "confirmBillStatus": "待派單"
+            // }, {
+            //     "confirmBillNpvID": "20161129017",
+            //     "confirmBillType": "促代-4G",
+            //     "confirmBillSecondType": "Single(1)",
+            //     "confirmBillTime": "2016/11/29 15:25",
+            //     "confirmBillPM": "yiyang",
+            //     "confirmBillStatus": "待派單"
+            // }, {
+            //     "confirmBillNpvID": "20161129018",
+            //     "confirmBillType": "促代-4G",
+            //     "confirmBillSecondType": "Single(1)",
+            //     "confirmBillTime": "2016/11/29 16:55",
+            //     "confirmBillPM": "yiyang",
+            //     "confirmBillStatus": "待派單"
+            // }, {
+            //     "confirmBillNpvID": "20161129019",
+            //     "confirmBillType": "促代-4G",
+            //     "confirmBillSecondType": "Single(1)",
+            //     "confirmBillTime": "2016/11/29 17:55",
+            //     "confirmBillPM": "yiyang",
+            //     "confirmBillStatus": "待派單"
+            // }, {
+            //     "confirmBillNpvID": "20161129020",
+            //     "confirmBillType": "促代-4G",
+            //     "confirmBillSecondType": "Single(1)",
+            //     "confirmBillTime": "2016/11/29 17:55",
+            //     "confirmBillPM": "yiyang",
+            //     "confirmBillStatus": "待派單"
+            // }, ];
+            // $('#datatable_confirmBill').DataTable().destroy();
             /* 表格 end */
 
             /* 手風琴 begin*/
