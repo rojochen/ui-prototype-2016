@@ -1,0 +1,152 @@
+<div class="page-no-tilte"></div>
+<div class="row" ng-controller="forciblyCancellationCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>強制退單</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" href="#forciblyCancellationOk">強制退單</button>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div id="datatable_forciblyCancellationData_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                        <div class="row">
+                                            <div class="col-sm-6"></div>
+                                            <div class="col-sm-6"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 panel-group">
+                                                <table id="datatable_forciblyCancellationData" class="table table-striped table-bordered no-footer dataTable" role="grid"
+                                                    aria-describedby="datatable_forciblyCancellationData_info">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="table-header-color"><input type="checkbox" ng-modal="waitNpvMaster"></th>
+                                                            <th class="table-header-color">NPV 單號</th>
+                                                            <th class="table-header-color">類型</th>
+                                                            <th class="table-header-color">次類型</th>
+                                                            <th class="table-header-color">傳送時間</th>
+                                                            <th class="table-header-color">PM</th>
+                                                            <th class="table-header-color">匯出SPV</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody ng-repeat="z in forciblyCancellationData  track by $index">
+                                                        <tr data-toggle="collapse" ng-href="#{{z.waitId}}" aria-expanded="true" data-parent="#accordion" aria-controls="{{x.waitId}}">
+                                                            <td><input type="checkbox" ng-checked="waitNpvMaster"></td>
+                                                            <td ng-bind="z.waitNpv"></td>
+                                                            <td ng-bind="z.waitType1"></td>
+                                                            <td ng-bind="z.waitType2"></td>
+                                                            <td ng-bind="z.waitTime"></td>
+                                                            <td ng-bind="z.waitPM"></td>
+                                                            <td><button type="button" class="btn btn-primary">匯出SPV</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <!--NPV單號詳細 start-->
+                                                            <td colspan="9" id="datatable_forciblyCancellationDetail_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"
+                                                                ng-style="setStyle">
+                                                                <div id="{{z.waitId}}" class="collapse">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                            <table id="datatable_forciblyCancellationDetail" class="table table-striped table-bordered no-footer dataTable jambo_table"
+                                                                                role="grid" aria-describedby="datatable_forciblyCancellationDetail_info">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th class="table-header-color ">退單</th>
+                                                                                        <th class="table-header-color ">代碼</th>
+                                                                                        <th class="table-header-color ">類型</th>
+                                                                                        <th class="table-header-color ">名稱</th>
+                                                                                        <th class="table-header-color ">檔案生效日</th>
+                                                                                        <th class="table-header-color ">版號</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr ng-repeat="e in waitNpvItemData track by $index">
+                                                                                        <td>
+                                                                                            <input type="checkbox" ng-checked="waitNpvMaster"></td>
+                                                                                        <td>
+                                                                                            <button type="button" class="btn btn-link" data-toggle="modal" href="#" ng-bind="e.npvCode"></button>
+                                                                                        </td>
+                                                                                        <td>Single</td>
+                                                                                        <td>4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000</td>
+                                                                                        <td>2017/10/22</td>
+                                                                                        <td>1.1</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                                </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </td>
+                                                                <!--NPV單號詳細 end-->
+                                                        </tr>
+                                                    </tbody>
+                                                    </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--強制退單確定畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="forciblyCancellationOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確認強制退單動作</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定強制退單</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#forciblyCancellationOkOk">確認</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#mergeListResetCancel">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--強制退單確定畫面 end-->
+                    <!--強制退單成功畫面 start-->
+                    <div class="modal bs-example-modal-sm in" id="forciblyCancellationOkOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">強制退單成功畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">強制退單成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="forciblyCancellationOkClick()">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--強制退單成功畫面 end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

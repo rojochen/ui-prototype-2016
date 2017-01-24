@@ -129,6 +129,16 @@ define(['pokemon'], function (pokemon) {
 			.when('/specialSet', {
 				templateUrl: "../NPV/views/specialSet.html"
 			})
+			.when('/waitTreatmentList', {
+				templateUrl: "../NPV/views/waitTreatmentList.html"
+			})
+			.when('/forciblyCancellation', {
+				templateUrl: "../NPV/views/forciblyCancellation.html"
+			})
+			.when('/enforceTurnSingle', {
+				templateUrl: "../NPV/views/enforceTurnSingle.html"
+			})
+
 			.otherwise({
 				redirectTo: '/'
 			});
