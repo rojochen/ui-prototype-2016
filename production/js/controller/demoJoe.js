@@ -585,6 +585,25 @@ define(['btModule'], function (btModule) {
   app.controller('paginationCtrl', paginationCtrl);
 
 
+  //pagination頁面
+  datepickerCtrl.$inject = ['$scope', '$log', '$timeout'];
+  function datepickerCtrl($scope, $log, $timeout) {
+    var d1 = new Date('2016/02/23 9:00:00 AM');
+    var d2 = new Date('2016/03/20 6:30:00 PM');
+    $scope.daterange1 = [d1,d2];
+    // console.log($scope.daterange1);
+    // $scope.daterange1 = [];
+
+    $scope.console = function(){
+      console.log($scope.daterange1);
+    }
+    $scope.remove = function(){
+      $scope.daterange1 = [];
+    }
+  }
+  app.controller('datepickerCtrl', datepickerCtrl);
+
+
   //表單構成頁面
   app.controller('form', ['$scope', '$timeout', '$element', function ($scope, $timeout, $element) {
     //bootstrap-daterangepicker

@@ -21,10 +21,11 @@
 			btPanel:'js/component/btPanel',
 			btAlert:'js/component/btAlert',
 			btPagination: 'js/directives/btPagination',
-			paginationService: 'js/service/btpaginationService'
+			paginationService: 'js/service/btpaginationService',
+			btDatepickerRange: 'js/directives/btDatepickerRange'
 		}
 	});	
-	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'yvonneController', 'indexComponent','demoComponent', 'indexComponent_2','footer','header','btPortlet','btCheckList','btNgTable','btPanel','btAlert', 'btPagination', 'paginationService'], function(pokemon, btModule, btController, louisController, joeController, yvonneController, indexComponent,demoComponent, indexComponent_2, footer, header, btPortlet, btCheckList,btNgTable,btPanel,btAlert, btPagination, paginationService) {
+	require(['pokemon', 'btModule', 'btController', 'louisController', 'joeController', 'yvonneController', 'indexComponent','demoComponent', 'indexComponent_2','footer','header','btPortlet','btCheckList','btNgTable','btPanel','btAlert', 'btPagination', 'paginationService', 'btDatepickerRange'], function(pokemon, btModule, btController, louisController, joeController, yvonneController, indexComponent,demoComponent, indexComponent_2, footer, header, btPortlet, btCheckList,btNgTable,btPanel,btAlert, btPagination, paginationService, btDatepickerRange) {
 
 		angular.bootstrap(document, ['btModule']);
 	});
