@@ -123,6 +123,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/confirmBill', {
 				templateUrl: "../NPV/views/confirmBill.html"
 			})
+			.when('/rejectBill', {
+				templateUrl: "../NPV/views/rejectBill.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
