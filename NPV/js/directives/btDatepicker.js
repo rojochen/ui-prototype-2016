@@ -45,8 +45,8 @@ define(['btModule'], function (btModule) {
             if(datepickerId){
                 scope.isShowDatepicker = true;
                 scope.id = datepickerId;
-                
-                if(scope.ngModel && scope.ngModel.length !== 0){
+
+                if(scope.ngModel){
                     optionSet.startDate = scope.ngModel;
                 }
 
@@ -78,8 +78,8 @@ define(['btModule'], function (btModule) {
 
                 var unbindWatcher = scope.$watch('ngModel', function(newValue, oldValue) {
                     // console.log('$watch' + newValue);
-                    if(newValue && newValue.length === 0){
-                        scope.value = [];
+                    if(!newValue){
+                        scope.value = '';
                     }
                 },true);
 
@@ -93,13 +93,14 @@ define(['btModule'], function (btModule) {
 
                 $timeout(function(){
                     $('#'+ datepickerId).daterangepicker(optionSet,function(start, end, label){
-                        scope.ngModel = [];
-                        scope.ngModel.push(start._d);
+                        scope.ngModel = start._d;
                     });
 
                     $('#'+ datepickerId).on('cancel.daterangepicker', function(ev, picker) {
                         $(this).val('');
-                        scope.ngModel.length = 0;
+                        scope.$apply(function(){
+                            scope.ngModel = '';
+                        });
                     });
 
                     $('#'+ datepickerId).on('showCalendar.daterangepicker', function(){
@@ -123,14 +124,14 @@ define(['btModule'], function (btModule) {
 
                     $('#'+ datepickerId).on('hide.daterangepicker', function(){
                         // console.log('close-2');
-                        if(!scope.ngModel || scope.ngModel.length === 0){
+                        if(!scope.ngModel){
                             $(this).val('');
-                            scope.value = [];
+                            scope.value = '';
                         }
                     });
 
-                    if(!scope.ngModel || scope.ngModel.length === 0){
-                        scope.value = [];
+                    if(!scope.ngModel){
+                        scope.value = '';
                     }
                 },100);
             }else{

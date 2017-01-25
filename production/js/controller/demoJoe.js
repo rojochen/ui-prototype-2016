@@ -606,7 +606,7 @@ define(['btModule'], function (btModule) {
       console.log($scope.datesingle);
     }
     $scope.remove_single = function(){
-      $scope.datesingle = [];
+      $scope.datesingle = '';
     }
   }
   app.controller('datepickerCtrl', datepickerCtrl);
