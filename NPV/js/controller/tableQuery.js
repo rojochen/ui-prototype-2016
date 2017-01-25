@@ -182,7 +182,7 @@ define(['btModule'], function (btModule) {
                 "tableQueryImportRole": "pm01",
                 "tableQueryDate": "2016/07/01 13:55:45",
                 "tableQueryStatus": "匯入失敗 促代數量1筆,Device數量2筆",
-            }, ];
+            }];
 
             $('#datatable_tableQuery').DataTable().destroy();
             /* 表格 end */

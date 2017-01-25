@@ -114,6 +114,18 @@ define(['pokemon'], function (pokemon) {
 			.when('/alreadyDeal', {
 				templateUrl: "../NPV/views/alreadyDeal.html"
 			})
+			.when('/demoYvonne', {
+				templateUrl: "../NPV/views/demoYvonne.html"
+			})
+			.when('/npvStatusQuery', {
+				templateUrl: "../NPV/views/npvStatusQuery.html"
+			})
+			.when('/confirmBill', {
+				templateUrl: "../NPV/views/confirmBill.html"
+			})
+			.when('/rejectBill', {
+				templateUrl: "../NPV/views/rejectBill.html"
+			})
 			.when('/activityClassSet', {
 				templateUrl: "../NPV/views/activityClassSet.html"
 			})
@@ -138,7 +150,6 @@ define(['pokemon'], function (pokemon) {
 			.when('/enforceTurnSingle', {
 				templateUrl: "../NPV/views/enforceTurnSingle.html"
 			})
-
 			.otherwise({
 				redirectTo: '/'
 			});
