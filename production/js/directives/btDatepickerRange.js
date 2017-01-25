@@ -5,7 +5,7 @@ define(['btModule'], function (btModule) {
     app.directive('btDatepickerRange', ['$timeout', function($timeout){
         function link(scope, element, attrs){
             var datepickerId = attrs['datepickerId'],
-                format = attrs['format']?attrs['format']:"YYYY/MM/DD",
+                format = attrs['format'],
                 drops = attrs['drops']?attrs['drops']:'down',
                 opens = attrs['opens']?attrs['opens']:'right',
                 minDate = attrs['minDate'],
@@ -19,7 +19,6 @@ define(['btModule'], function (btModule) {
                     locale: {
                         applyLabel: '送出',
                         cancelLabel: '清除',
-                        format: format,
                         daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
                         monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
                     },
@@ -53,6 +52,26 @@ define(['btModule'], function (btModule) {
                     if(scope.ngModel[0]) optionSet.startDate = scope.ngModel[0];
                     if(scope.ngModel[1]) optionSet.endDate = scope.ngModel[1];
                 }
+
+                if(!format && timePicker === false){
+                    format = "YYYY/MM/DD";
+                }
+                if(!format && timePicker === true){
+                    if(timePicker24Hour === true && timePickerSeconds === true){
+                        format = "YYYY/MM/DD HH:mm:ss";
+                    }
+                    if(timePicker24Hour === true && timePickerSeconds === false){
+                        format = "YYYY/MM/DD HH:mm";
+                    }
+                    if(timePicker24Hour === false && timePickerSeconds === true){
+                        format = "YYYY/MM/DD h:mm:ss A";
+                    }
+                    if(timePicker24Hour === false && timePickerSeconds === false){
+                        format = "YYYY/MM/DD h:mm A";
+                    }
+                }
+                optionSet.locale.format = format;
+                // console.log(optionSet);
 
                 if(minDate && minDate.replace(/\D/g, "").length >= 7) optionSet.minDate = minDate;
                 if(maxDate && maxDate.replace(/\D/g, "").length >= 7) optionSet.maxDate = maxDate;
@@ -136,7 +155,7 @@ define(['btModule'], function (btModule) {
                             </span>
                             <input type="text" id="{{id}}" class="form-control" ng-model="value">
                         </div>
-                        <span ng-show="!isShowDatepicker">請設定bt-datepicker-range的id。</span>`
+                        <span ng-show="!isShowDatepicker">請設定bt-datepicker-range的datepicker-id。</span>`
         };
     }])
 
