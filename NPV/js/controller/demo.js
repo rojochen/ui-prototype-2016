@@ -867,7 +867,7 @@ define(['btModule'], function (btModule) {
             $scope.inquiry = function () {
                 $timeout(function () {
                     $('#Modal2-2').modal('hide');
-                    $('#Modal3-2').modal('show');
+                    $('#activityInquire').modal('show');
                 }, 400);
             }
             /* end */
