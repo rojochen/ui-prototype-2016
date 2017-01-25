@@ -75,11 +75,11 @@ define(['btModule'], function (btModule) {
                 "bLengthChange": false
             };
             $timeout(function () {
-                $('#datatable_npvStatusQuery').DataTable(opt);
+                $('#datatable_npvStatusQuery_1').DataTable(opt);
             }, 100)
 
             // 表格內容資料
-            $scope.npvStatusQueryTableData = [{
+            $scope.npvStatusQueryTableData_1 = [{
                 "npvStatusQueryNpvID": "20161129001",
                 "npvStatusQueryType": "促代",
                 "npvStatusQueryStatus": "OET-Member審核",
@@ -115,8 +115,131 @@ define(['btModule'], function (btModule) {
                 "npvStatusQueryRole": "wsun",
 
             }];
-            $('#datatable_npvStatusQuery').DataTable().destroy();
+            $('#datatable_npvStatusQuery_1').DataTable().destroy();
             /* 表格 end */
+
+            // 表格-2 內容資料
+            $scope.npvStatusQueryTableData_2 = [{
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "草稿編輯",
+                "npvSpec": "草稿編輯",
+                "npvTime": "2016/11/29 10:10",
+                "npvRole": "Mobility PM",
+                "npvPeople": "pm01",
+                "npvAgent": "yiyang"
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "草稿編輯",
+                "npvSpec": "草稿編輯",
+                "npvTime": "2016/11/29 10:15",
+                "npvRole": "Mobility PM",
+                "npvPeople": "pm01",
+                "npvAgent": "yiyang"
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "待OET-Leader指派",
+                "npvSpec": "草稿編輯",
+                "npvTime": "2016/11/29 10:25",
+                "npvRole": "Mobility PM",
+                "npvPeople": "pm01",
+                "npvAgent": "yiyang"
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "待OET-Leader指派",
+                "npvSpec": "送審起單",
+                "npvTime": "2016/11/29 10:25",
+                "npvRole": "Mobility PM",
+                "npvPeople": "pm01",
+                "npvAgent": "yiyang"
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "草稿編輯",
+                "npvSpec": "退件-草稿編輯(MPM/pm01)",
+                "npvTime": "2016/11/29 10:30",
+                "npvRole": "OET-Leader",
+                "npvPeople": "oet01",
+                "npvAgent": ""
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "待OET-Leader指派",
+                "npvSpec": "退件重送",
+                "npvTime": "2016/11/29 10:55",
+                "npvRole": "Mobility PM",
+                "npvPeople": "pm01",
+                "npvAgent": ""
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "待OET-Member審核",
+                "npvSpec": "指派",
+                "npvTime": "2016/11/29 11:05",
+                "npvRole": "OET-Leader",
+                "npvPeople": "oet01",
+                "npvAgent": ""
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "草稿編輯",
+                "npvSpec": "退件-草稿編輯(MPM/pm01)",
+                "npvTime": "2016/11/29 11:15",
+                "npvRole": "OET-Member",
+                "npvPeople": "oet01",
+                "npvAgent": ""
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "待OET-Member審核",
+                "npvSpec": "退件重送",
+                "npvTime": "2016/11/29 11:30",
+                "npvRole": "Mobility PM",
+                "npvPeople": "pm01",
+                "npvAgent": ""
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "待PM確認",
+                "npvSpec": "審核",
+                "npvTime": "2016/11/29 11:45",
+                "npvRole": "OET-Member",
+                "npvPeople": "oet01",
+                "npvAgent": ""
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "待IA上傳",
+                "npvSpec": "審核",
+                "npvTime": "2016/11/29 12:10",
+                "npvRole": "Mobility PM",
+                "npvPeople": "pm01",
+                "npvAgent": ""
+            }, {
+                "npvID": "20161129001",
+                "npvType": "促代",
+                "npvStatus": "檔案上傳",
+                "npvSpec": "",
+                "npvTime": "2016/11/30 12:00",
+                "npvRole": "API",
+                "npvPeople": "Batch API Name",
+                "npvAgent": ""
+            }];
+            $('#datatable_npvStatusQuery_2').DataTable().destroy();
+            /* 表格-2 end */
+
+            /* modal begin */
+            $(document).on('hidden.bs.modal', '.modal', function () {
+                $('.modal:visible').length && $(document.body).addClass('modal-open');
+            });
+
+            $(document).on('show.bs.modal', '.modal', function () {
+                $("element.style").css("padding-right", "0");
+            });
+            /* modal end */
 
             /* 手風琴 begin*/
             $('#myCollapsible').collapse({
