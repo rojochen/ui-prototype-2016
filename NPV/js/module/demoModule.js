@@ -114,9 +114,6 @@ define(['pokemon'], function (pokemon) {
 			.when('/alreadyDeal', {
 				templateUrl: "../NPV/views/alreadyDeal.html"
 			})
-			.when('/demoYvonne', {
-				templateUrl: "../NPV/views/demoYvonne.html"
-			})
 			.when('/npvStatusQuery', {
 				templateUrl: "../NPV/views/npvStatusQuery.html"
 			})
