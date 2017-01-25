@@ -1020,6 +1020,86 @@ define(['btModule'], function (btModule) {
 
             }
             /* end */
+
+
+            /* begin menu tree */
+            $('.tree-folder-content').css('display', 'none');
+            $('body').on('click', '.tree-folder', function () {
+                if ($(this).children('.tree-folder-content').css('display') == 'none') {
+                    $(this).children('.tree-folder-content').css('display', 'block');
+                    $(this).children('.tree-folder-header').children('i').removeClass('fa-plus-square-o');
+                    $(this).children('.tree-folder-header').children('i').addClass('fa-minus-square-o');
+                    return false;
+                } else {
+                    $(this).children('.tree-folder-header').children('i').removeClass('fa-minus-square-o');
+                    $(this).children('.tree-folder-header').children('i').addClass('fa-plus-square-o');
+                    $(this).children('.tree-folder-content').css('display', 'none');
+                    return false;
+                }
+            });
+            /* end menu tree */
+
+
+            $scope.menutTreeData = [{
+                "name": "B001＿3G學生＿新啟用專案(同生共死)",
+                "id": 1,
+                "list": [{
+                    "name": "S001_大雙網3G_599月租費方案(Single)",
+                    "id": 3,
+                    "list": []
+                }, {
+                    "name": "S002_行動上網優惠6個月(Single)",
+                    "id": 2,
+                    "list": []
+                }]
+            }, {
+                "name": "B002＿3G學生＿新啟用專案(各自分飛)",
+                "id": 1,
+                "list": [{
+                    "name": "S003_新絕配3G_599方案(Single)",
+                    "id": 1,
+                    "list": []
+                }, {
+                    "name": "S004_3G行動上網(Single)",
+                    "id": 2,
+                    "list": []
+                }, {
+                    "name": "S005_來電答鈴優惠2個月(Single)",
+                    "id": 2,
+                    "list": []
+                }]
+            }]
+
+
+            $scope.menutTreeData2 = [{
+                "name": "L2573續約＿新手機方案A",
+                "id": 1,
+                "list": [{
+                    "name": "",
+                    "id": 3,
+                    "list": []
+                }, {
+                    "name": "",
+                    "id": 2,
+                    "list": []
+                }]
+            }, {
+                "name": "",
+                "id": 1,
+                "list": [{
+                    "name": "",
+                    "id": 1,
+                    "list": []
+                }, {
+                    "name": "",
+                    "id": 2,
+                    "list": []
+                }, {
+                    "name": "",
+                    "id": 2,
+                    "list": []
+                }]
+            }]
         }
     ]);
     return app;
