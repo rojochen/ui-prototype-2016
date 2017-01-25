@@ -785,10 +785,10 @@ define(['btModule'], function (btModule) {
                     $('#Modal4').modal('hide');
                     $timeout(function () {
                         if ($scope.offerItem === "1") {
-                            $('#Modal5-1').modal('show');
+                            $('#generationEdit').modal('show');
                         }
                         if ($scope.offerItem === "2") {
-                            $('#Modal5-2').modal('show');
+                            $('#valueAdded').modal('show');
                         }
                         $scope.offerItem = '';
                     }, 400);
@@ -818,7 +818,6 @@ define(['btModule'], function (btModule) {
                 })
 
 
-
                 var index = shoppingCartEntity.getCartID();
                 // $log.debug(index);
                 if (index === null) {
@@ -826,9 +825,7 @@ define(['btModule'], function (btModule) {
                     shoppingCartEntity.setCartID(index);
                 }
 
-
-
-
+                $('#addSingleGeneration').modal('hide');
 
             }
 
@@ -926,10 +923,10 @@ define(['btModule'], function (btModule) {
                     $('#Modal4').modal('hide');
                     $timeout(function () {
                         if ($scope.offerItem === "1") {
-                            $('#Modal5-1').modal('show');
+                            $('#generationEdit').modal('show');
                         }
                         if ($scope.offerItem === "2") {
-                            $('#Modal5-2').modal('show');
+                            $('#valueAdded').modal('show');
                         }
                         $scope.offerItem = '';
                     }, 400);
