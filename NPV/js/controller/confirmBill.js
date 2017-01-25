@@ -72,71 +72,87 @@ define(['btModule'], function (btModule) {
                 "searching": false,
                 "bInfo": false,
                 "bPaginate": true,
-                "bLengthChange": false
+                "bLengthChange": false,
+                "bSort": false
             };
             $timeout(function () {
                 $('#datatable_confirmBill').DataTable(opt);
+                $('#datatable_confirmBill_2').DataTable(opt);
             }, 100)
 
             // 表格內容資料
-            // $scope.confirmBillTableData = [{
-            //     "confirmBillNpvID": "20161129004",
-            //     "confirmBillType": "促代-4G",
-            //     "confirmBillSecondType": "Bundle(1)",
-            //     "confirmBillTime": "2016/11/29 11:55",
-            //     "confirmBillPM": "yiyang",
-            //     "confirmBillStatus": "待派單"
+            $scope.confirmBillTableData = [{
+                "confirmBillNpvID": "20161129004",
+                "confirmBillType": "促代-4G",
+                "confirmBillSecondType": "Bundle(1)",
+                "confirmBillTime": "2016/11/29 11:55",
+                "confirmBillPM": "yiyang",
+                "confirmBillStatus": "待派單"
+            }, {
+                "confirmBillNpvID": "20161129005",
+                "confirmBillType": "折扣 (2)",
+                "confirmBillSecondType": "N/A",
+                "confirmBillTime": "2016/11/29 14:21",
+                "confirmBillPM": "tatakao",
+                "confirmBillStatus": "待派單"
+            }, {
+                "confirmBillNpvID": "20161129006",
+                "confirmBillType": "促代-4G／3G",
+                "confirmBillSecondType": "Single(3)",
+                "confirmBillTime": "2016/11/29 14:32",
+                "confirmBillPM": "tatakao",
+                "confirmBillStatus": "待派單"
+            }, {
+                "confirmBillNpvID": "20161129007",
+                "confirmBillType": "促代-3G",
+                "confirmBillSecondType": "Single(1)",
+                "confirmBillTime": "2016/11/29 11:45",
+                "confirmBillPM": "yiyang",
+                "confirmBillStatus": "待派單"
+            }, {
+                "confirmBillNpvID": "20161129017",
+                "confirmBillType": "促代-4G",
+                "confirmBillSecondType": "Single(1)",
+                "confirmBillTime": "2016/11/29 15:25",
+                "confirmBillPM": "yiyang",
+                "confirmBillStatus": "待派單"
+            }, {
+                "confirmBillNpvID": "20161129018",
+                "confirmBillType": "促代-4G",
+                "confirmBillSecondType": "Single(1)",
+                "confirmBillTime": "2016/11/29 16:55",
+                "confirmBillPM": "yiyang",
+                "confirmBillStatus": "待派單"
+            }, {
+                "confirmBillNpvID": "20161129019",
+                "confirmBillType": "促代-4G",
+                "confirmBillSecondType": "Single(1)",
+                "confirmBillTime": "2016/11/29 17:55",
+                "confirmBillPM": "yiyang",
+                "confirmBillStatus": "待派單"
+            }, {
+                "confirmBillNpvID": "20161129020",
+                "confirmBillType": "促代-4G",
+                "confirmBillSecondType": "Single(1)",
+                "confirmBillTime": "2016/11/29 17:55",
+                "confirmBillPM": "yiyang",
+                "confirmBillStatus": "待派單"
+            }];
+            $('#datatable_confirmBill').DataTable().destroy();
+
+            // 表格-2 內容資料
+            // $scope.confirmBillTableData_2 = [{
+            //     "confirmBillNpvID": "1",
+            //     "confirmBillType": "BB01",
+            //     "confirmBillSecondType": "Bundle(團結力量大)",
+            //     "confirmBillTime": "3G團體優惠專案"
             // }, {
-            //     "confirmBillNpvID": "20161129005",
-            //     "confirmBillType": "折扣 (2)",
-            //     "confirmBillSecondType": "N/A",
-            //     "confirmBillTime": "2016/11/29 14:21",
-            //     "confirmBillPM": "tatakao",
-            //     "confirmBillStatus": "待派單"
-            // }, {
-            //     "confirmBillNpvID": "20161129006",
-            //     "confirmBillType": "促代-4G／3G",
-            //     "confirmBillSecondType": "Single(3)",
-            //     "confirmBillTime": "2016/11/29 14:32",
-            //     "confirmBillPM": "tatakao",
-            //     "confirmBillStatus": "待派單"
-            // }, {
-            //     "confirmBillNpvID": "20161129007",
-            //     "confirmBillType": "促代-3G",
-            //     "confirmBillSecondType": "Single(1)",
-            //     "confirmBillTime": "2016/11/29 11:45",
-            //     "confirmBillPM": "yiyang",
-            //     "confirmBillStatus": "待派單"
-            // }, {
-            //     "confirmBillNpvID": "20161129017",
-            //     "confirmBillType": "促代-4G",
-            //     "confirmBillSecondType": "Single(1)",
-            //     "confirmBillTime": "2016/11/29 15:25",
-            //     "confirmBillPM": "yiyang",
-            //     "confirmBillStatus": "待派單"
-            // }, {
-            //     "confirmBillNpvID": "20161129018",
-            //     "confirmBillType": "促代-4G",
-            //     "confirmBillSecondType": "Single(1)",
-            //     "confirmBillTime": "2016/11/29 16:55",
-            //     "confirmBillPM": "yiyang",
-            //     "confirmBillStatus": "待派單"
-            // }, {
-            //     "confirmBillNpvID": "20161129019",
-            //     "confirmBillType": "促代-4G",
-            //     "confirmBillSecondType": "Single(1)",
-            //     "confirmBillTime": "2016/11/29 17:55",
-            //     "confirmBillPM": "yiyang",
-            //     "confirmBillStatus": "待派單"
-            // }, {
-            //     "confirmBillNpvID": "20161129020",
-            //     "confirmBillType": "促代-4G",
-            //     "confirmBillSecondType": "Single(1)",
-            //     "confirmBillTime": "2016/11/29 17:55",
-            //     "confirmBillPM": "yiyang",
-            //     "confirmBillStatus": "待派單"
-            // }, ];
-            // $('#datatable_confirmBill').DataTable().destroy();
+            //     "confirmBillNpvID": "1",
+            //     "confirmBillType": "LVK00EN-YEN3",
+            //     "confirmBillSecondType": "Bundle(同生共死)",
+            //     "confirmBillTime": "G GOGORO方案_新絕配599限30手機案-預繳1200"
+            // }];
+            // $('#datatable_confirmBill_2').DataTable().destroy();
             /* 表格 end */
 
             /* 手風琴 begin*/
