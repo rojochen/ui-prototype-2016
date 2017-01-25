@@ -1,0 +1,137 @@
+<div class="page-no-title"></div>
+<div class="row" ng-controller="activityClassSetCtrl">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>活動類別條件設定</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">條件項目代碼</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">條件項目中文說明</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <button type="button" class="btn btn-info" ng-show="btnShow1" ng-click="advancedSearch()">進階查詢
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-if="advancedControl">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Min</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+                                <div class="col-md-5 col-sm-5">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <label class="text-center col-md-2 col-sm-2">～</label>
+                                <div class="col-md-5 col-sm-5">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                        </div>
+                        <div class="form-group" ng-if="advancedControl">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Max</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+                                <div class="col-md-5 col-sm-5">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <label class="text-center col-md-2 col-sm-2">～</label>
+                                <div class="col-md-5 col-sm-5">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <button type="button" class="btn btn-info" ng-show="btnShow2" ng-click="advancedSearch()">進階查詢
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
+                                <button type="button" class="btn btn-primary" style="margin-right: 15px" ng-click="showTable()">查詢
+                                </button>
+                                <button type="button" class="btn btn-primary" style="margin-right: 15px" data-toggle="modal" data-target="#Modal16-2">新增
+                                </button>
+                                <button type="button" class="btn btn-primary">重置</button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group" ng-show="tableControl">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <table class="table table-striped table-bordered dataTable no-footer">
+                                    <thead>
+                                        <tr class="headings">
+                                            <th class="text-center sorting column-title table-header-color">排序</th>
+                                            <th class="text-center sorting_asc column-title table-header-color">條件類型</th>
+                                            <th class="text-center sorting column-title table-header-color">條件項目代碼</th>
+                                            <th class="text-center sorting column-title table-header-color">條件項目中文名稱</th>
+                                            <th class="text-center sorting column-title table-header-color">Min</th>
+                                            <th class="text-center sorting column-title table-header-color">Max</th>
+                                            <th class="text-center sorting column-title table-header-color">修改人員</th>
+                                            <th class="text-center sorting column-title table-header-color">修改日期</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- 16-2 -->
+                    <div class="modal fade bs-example-modal-lg" id="Modal16-2" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title" id="16-2"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">ARPB</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+                                                <div class="col-md-5 col-sm-5">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <label class="text-center col-md-2 col-sm-2">～</label>
+                                                <div class="col-md-5 col-sm-5">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
+                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-8 col-sm-offset-8"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -126,6 +126,30 @@ define(['pokemon'], function (pokemon) {
 			.when('/rejectBill', {
 				templateUrl: "../NPV/views/rejectBill.html"
 			})
+			.when('/activityClassSet', {
+				templateUrl: "../NPV/views/activityClassSet.html"
+			})
+			.when('/newSet', {
+				templateUrl: "../NPV/views/newSet.html"
+			})
+			.when('/pageGearingSet', {
+				templateUrl: "../NPV/views/pageGearingSet.html"
+			})
+			.when('/prepaidSet', {
+				templateUrl: "../NPV/views/prepaidSet.html"
+			})
+			.when('/specialSet', {
+				templateUrl: "../NPV/views/specialSet.html"
+			})
+			.when('/waitTreatmentList', {
+				templateUrl: "../NPV/views/waitTreatmentList.html"
+			})
+			.when('/forciblyCancellation', {
+				templateUrl: "../NPV/views/forciblyCancellation.html"
+			})
+			.when('/enforceTurnSingle', {
+				templateUrl: "../NPV/views/enforceTurnSingle.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
