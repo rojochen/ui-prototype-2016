@@ -1810,7 +1810,6 @@
         </div>
     </div>
     <!--加值服務  end  -->
-    
     <!--Boundle Promotion start-->
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal " tabindex="-1" role="dialog" aria-hidden="true" id="">
@@ -2136,7 +2135,6 @@
         </div>
     </div>
     <!--Boundle Promotion end-->
-
     <!--Boundle Promotion start-->
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal " tabindex="-1" role="dialog" aria-hidden="true" id="Boundle">
@@ -2147,7 +2145,7 @@
                         <h4 class="modal-title" id="myModalLabel">Boundle Promotion-編輯</h4>
                     </div>
                     <div class="modal-body">
-                        <form class="form-horizontal" role="form">
+                        <!--<form class="form-horizontal" role="form">
                             <div class="form-group">
                                 <label class="control-label col-md-1 col-sm-1 col-xs-12">活動類別</label>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="addList()">新增</button>
@@ -2170,10 +2168,11 @@
 								</select>
                                 </div>
                             </div>
-                        </form>
+                        </form>-->
+                        <!--  活動設定-->
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>折扣優惠設定</h2>
+                                <h2>活動設定</h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -2184,13 +2183,63 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-12 text-center">
-                                            <div class="col-md-3">項目</div>
-                                            <div class="col-md-9">內容</div>
+                                            <div class="col-md-2 text-right">項目</div>
+                                            <div class="col-md-10">內容</div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="col-md-12 listdistance text-right">
+                                                <div class="col-md-2">活動類別</div>
+                                                <div class="col-md-10">
+                                                    <div class="form-group">
+                                                        <div class="container-fluid">
+                                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
+                                                            <div class="col-md-2" style="margin-top:30px">
+                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+                                                            </div>
+                                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end 活動設定-->
+                        <!--  合約資訊設定-->
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>合約資訊設定</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-2 text-right">項目</div>
+                                            <div class="col-md-10 text-center">內容</div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="col-md-12 listdistance">
-                                                <div class="col-md-3">指定折扣項目</div>
-                                                <div class="col-md-9">
+                                                <div class="col-md-2 text-right">促代名稱</div>
+                                                <div class="col-md-10">
+                                                    <div class="form-group">
+                                                        <div class="container-fluid">
+                                                            <input class="form-control col-md-7" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 listdistance">
+                                                <div class="col-md-2 text-right">促代項目</div>
+                                                <div class="col-md-10">
                                                     <div class="form-group">
                                                         <div class="container-fluid">
                                                             <div class="col-md-5 borderStyle" style="height:150px"></div>
@@ -2205,15 +2254,46 @@
                                                 </div>
                                                 <div class="col-md-3"></div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end 合約資訊設定-->
+                        <!--  折扣優惠設定-->
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>折扣優惠設定</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-2 text-right">項目</div>
+                                            <div class="col-md-10 text-center">內容</div>
+                                        </div>
+                                        <div class="col-md-12">
                                             <div class="col-md-12 listdistance">
-                                                <div class="col-md-3">Happy GO 贈點</div>
-                                                <div class="col-md-9">
+                                                <div class="col-md-2 text-right">指定折扣項目</div>
+                                                <div class="col-md-10">
                                                     <div class="form-group">
                                                         <div class="container-fluid">
-                                                            <input class="form-control input-sm" type="text" placeholder="10" style="width:100px;">
+                                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
+                                                            <div class="col-md-2" style="margin-top:30px">
+                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">篩選</button>
+                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">選取</button>
+                                                                <button type="button" class="btn btn-default btn-sm col-md-12" style="color: #73879c">移除</button>
+                                                            </div>
+                                                            <div class="col-md-5 borderStyle" style="height:150px"></div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-3"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2262,200 +2342,10 @@
                             </div>
                         </div>
                         <!-- end IA/備援單-->
-                        <!--設定上下限值-->
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h2>設定上下限值</h2>
-                                <ul class="nav navbar-right panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                    </li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="x_content">
-                                <div ng-switch="contractType">
-                                    <div ng-switch-when="1">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <table class="table  table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="info">各自分飛/同生共死/分享包</th>
-                                                                <th class="info">Min</th>
-                                                                <th class="info">Max</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>S010-續約升級-1~249手機搭765方案</td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>S015-續約升級-1~249i-mode手機搭765方案</td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <table class="table  table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="info">Bundle層</th>
-                                                                <th class="info">Min</th>
-                                                                <th class="info">Max</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>B001-行動3G續約專案</td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div ng-switch-when="2">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <table class="table  table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="info">各自分飛/同生共死/分享包</th>
-                                                                <th class="info">Min</th>
-                                                                <th class="info">Max</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>S010-續約升級-1~249手機搭765方案</td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>S015-續約升級-1~249i-mode手機搭765方案</td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <table class="table  table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="info">Bundle層</th>
-                                                                <th class="info">Min</th>
-                                                                <th class="info">Max</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>B001-行動3G續約專案</td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div ng-switch-when="3">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <table class="table  table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="info">團結力量大</th>
-                                                                <th class="info">Min</th>
-                                                                <th class="info">Max</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>B001-行動3G續約專案</td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>S001-遠傳e書城149跟12</td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                                <td><input type="text" class="form-control col-md-7 col-xs-12"></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <table class="table  table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="info">Bundle層</th>
-                                                                <th class="info">Min</th>
-                                                                <th class="info">Max</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>B001-行動3G續約專案</td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>GA</td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>LOY</td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>NP</td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" class="form-control col-md-7 col-xs-12">
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end IA/備援單-->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">確定</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+                   
                     </div>
                 </div>
             </div>
@@ -2464,6 +2354,10 @@
     <!--Boundle Promotion end-->
 
 
+
+
+
+    
     <!--   活動類別編輯 -->
     <!--<div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal " id="activityEdit" tabindex="-1" role="dialog">
