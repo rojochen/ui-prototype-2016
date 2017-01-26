@@ -147,6 +147,14 @@ define(['pokemon'], function (pokemon) {
 			.when('/enforceTurnSingle', {
 				templateUrl: "../NPV/views/enforceTurnSingle.html"
 			})
+			.when('/bouncedRecord', {
+				templateUrl: "../NPV/views/bouncedRecord.html"
+			})
+			.when('/LOASet', {
+				templateUrl: "../NPV/views/LOASet.html"
+			})
+
+
 			.otherwise({
 				redirectTo: '/'
 			});
