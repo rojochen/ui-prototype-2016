@@ -1,0 +1,606 @@
+<div class="page-no-title"></div>
+<div class="row" ng-controller="bouncedRecordCtrl">
+    <div class="col-md-12 col-sm-12 col xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>退件紀錄</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <form class="form-horizontal form-label-left">
+                        <!--重送按鈕 start-->
+                        <div class="form-guoup">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#resetSend">重送</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--重送按鈕 end-->
+                        <!--退件紀錄表單 start-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div id="datatable_bouncedRecordListData_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                        <div class="row">
+                                            <div class="col-sm-6"></div>
+                                            <div class="col-sm-6"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 panel-group">
+                                                <table id="datatable_bouncedRecordListData" class="table table-striped table-bordered no-footer dataTable" role="grid" aria-describedby="datatable_bouncedRecordListData_info">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="table-header-color">
+                                                                <input type="checkbox" ng-model="bouncedItemChecked">
+                                                            </th>
+                                                            <th class="table-header-color">NPV 單號</th>
+                                                            <th class="table-header-color">類型</th>
+                                                            <th class="table-header-color">次類型</th>
+                                                            <th class="table-header-color">傳送時間</th>
+                                                            <th class="table-header-color">PM</th>
+                                                            <th class="table-header-color">編輯</th>
+                                                            <th class="table-header-color">匯出SPV</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody ng-repeat="x in bouncedRecordListData  track by $index">
+                                                        <tr data-toggle="collapse" ng-href="#{{x.bouncedId}}" aria-expanded="true" data-parent="#accordion" aria-controls="{{x.bouncedId}}">
+                                                            <td>
+                                                                <input type="checkbox" ng-checked="bouncedItemChecked">
+                                                            </td>
+                                                            <td ng-bind="x.bouncedNpv"></td>
+                                                            <td ng-bind="x.bouncedType1"></td>
+                                                            <td ng-bind="x.bouncedType2"></td>
+                                                            <td ng-bind="x.bouncedTime"></td>
+                                                            <td ng-bind="x.bouncedPM"></td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="openBuyCart()">編輯</button>
+                                                            </td>
+                                                            <td><button type="button" class="btn btn-primary">匯出SPV</button></td>
+                                                        </tr>
+                                                        <!--NPV單號詳細 start-->
+                                                        <tr>
+                                                            <td colspan="9" id="datatable_bouncedRecordItemData_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"
+                                                                ng-style="waitItemStyle">
+                                                                <div id="{{x.bouncedId}}" class="collapse">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                            <table id="datatable_bouncedRecordItemData" class="table table-striped table-bordered no-footer dataTable jambo_table" role="grid"
+                                                                                aria-describedby="datatable_bouncedRecordItemData_info">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th class="table-header-color ">
+                                                                                            NO
+                                                                                        </th>
+                                                                                        <th class="table-header-color ">代碼</th>
+                                                                                        <th class="table-header-color ">類型</th>
+                                                                                        <th class="table-header-color ">名稱</th>
+                                                                                        <!--<th class="table-header-color">檔案生效日</th>-->
+                                                                                        <th class="table-header-color ">版號</th>
+                                                                                        <th class="table-header-color ">版本比對</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr ng-repeat="y in bouncedRecordItemData track by $index">
+                                                                                        <td ng-bind="y.npvNo"></td>
+                                                                                        <td>
+                                                                                            <button type="button" class="btn btn-link" data-toggle="modal" href="#bouncedRecordItemCode" ng-bind="y.npvCode"></button>
+                                                                                        </td>
+                                                                                        <td>Single</td>
+                                                                                        <td>4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000</td>
+                                                                                        <!--<td ng-bind="y.npvTime"></td>-->
+                                                                                        <td>1.1</td>
+                                                                                        <td><button type="button" class="btn btn-primary">版本比對</button></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                </table>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </td>
+                                                </tr>
+                                                <!--NPV單號詳細 end-->
+                                                </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--退件紀錄表單 end-->
+                        <!--(100)-促代明細查詢畫面-共用 end-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="modal fullscreen-modal" id="bouncedRecordItemCode" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">
+                                                                    <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                                                                </button>
+                                                    <h4 class="modal-title">促代明細查詢</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="row">
+                                                                    <div class="col-md-3">
+                                                                        <div class="tree">
+                                                                            <div ng-repeat="x in menutTreeData track by $index">
+                                                                                <div ng-show="x.list.length !== 0" class='tree-folder'>
+                                                                                    <div class='tree-folder-header'>
+                                                                                        <i class='fa fa-plus-square-o'></i>
+                                                                                        <div class='tree-folder-name' title="{{x.name}}">{{x.name}}</div>
+                                                                                    </div>
+                                                                                    <div class='tree-folder-content' style="display: none;">
+                                                                                        <div ng-repeat="y in x.list track by $index">
+                                                                                            <div ng-show="y.list.length !== 0" class='tree-folder'>
+                                                                                                <div class='tree-folder-header'>
+                                                                                                    <i class='fa fa-plus-square-o'></i>
+                                                                                                    <div class='tree-folder-name' title="{{y.name}}">{{y.name}}</div>
+                                                                                                </div>
+                                                                                                <div class='tree-folder-content' style="display: none;">
+                                                                                                    <div ng-repeat="z in y.list track by $index">
+                                                                                                        <div class='tree-item'>
+                                                                                                            <div class='tree-item-name' title="{{z.name}}">{{z.name}}</div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div ng-show="y.list.length === 0" class='tree-item'>
+                                                                                                <div class='tree-item-name' title="{{y.name}}">{{y.name}}</div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div ng-show="x.list.length === 0" class='tree-item'>
+                                                                                    <div class='tree-item-name' title="{{x.name}}">{{x.name}}</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-9">
+                                                                        <form class="form-horizontal form-label-left ng-pristine ng-valid">
+                                                                            <table class="table table-striped table-bordered">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th class="table-header-color">SR NO</th>
+                                                                                        <th class="table-header-color">SPV NO</th>
+                                                                                        <th class="table-header-color">OFFER ID</th>
+                                                                                        <th class="table-header-color">上架次數</th>
+                                                                                        <th class="table-header-color">上一版本編號</th>
+                                                                                        <th class="table-header-color">促代群組</th>
+                                                                                        <th class="table-header-color">重新上架備註</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="text-danger">N/A</td>
+                                                                                        <td class="text-danger">N/A</td>
+                                                                                        <td class="text-danger">N/A</td>
+                                                                                        <td>N/A</td>
+                                                                                        <td>N/A</td>
+                                                                                        <td>N/A</td>
+                                                                                        <td>
+                                                                                            <input class="form-control input-sm" type="text" placeholder="N/A" disabled=""></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <!--主促代碼 start-->
+                                                                            <table class="table table-striped jambo_table">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th class="text-right">項目</th>
+                                                                                        <th class="text-center" colspan="2">內容</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="text-right">主約促代 代碼/名稱(80 Bytes)</td>
+                                                                                        <td>
+                                                                                            <input class="form-control input-sm" type="text" placeholder="N/A" disabled=""></td>
+                                                                                        <td>
+                                                                                            <input class="form-control input-sm" type="text" placeholder="N/A" disabled=""></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <!--主促代碼 end-->
+                                                                            <!--合約資訊設定 start-->
+                                                                            <div class="x_panel">
+                                                                                <div class="x_title panelTitle">
+                                                                                    <ul class="nav navbar-right panel_toolbox">
+                                                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <h2>合約資訊設定</h2>
+                                                                                    <div class="clearfix"></div>
+                                                                                </div>
+                                                                                <div class="x_content">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-md-2 col-sm-2 col-xs-12 text-right">項目</label>
+                                                                                        <label class="col-md-10 col-sm-10 col-xs-12 text-center">內容</label>
+                                                                                    </div>
+                                                                                    <hr>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">GSM Voice 合約</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <label class="control-label">最低月租費:1118913-大雙網165月租費</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">合約期限</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <label class="control-label">30個月</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">GSM Voice 合約違約金額</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">違約金版本:</label>
+                                                                                                <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                                    <div class="col-md-3 col-sm-3 col-xs-10">
+                                                                                                        <select class="form-control">                                       
+                                                                                                    <option>請選擇</option>
+                                                                                                    <option>選項 1</option>
+                                                                                                    <option>選項 2</option>
+                                                                                                    <option>選項 3</option>
+                                                                                                    <option>選項 4</option>
+                                                                                                </select>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-3 col-sm-3 col xs-2">
+                                                                                                        <button type="button" class="btn btn-primary">查詢</button>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-horizontal">
+                                                                                                <div class="form-group">
+                                                                                                    <label class="control-label text-danger">目前版本:</label>
+                                                                                                    <label class="control-label">是否回溯:</label>
+                                                                                                    <label class="control-label">
+                                                                                                    <input type="radio" name="backtracking" id="">是
+                                                                                                </label>
+                                                                                                    <label class="control-label">
+                                                                                                    <input type="radio" name="backtracking" id="">否
+                                                                                                </label>
+                                                                                                    <label class="control-label">開賣日:</label>
+                                                                                                    <label class="control-label"><input class="form-control input-sm" type="text" placeholder="N/A" disabled=""></label>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <table class="table table-striped table-bordered">
+                                                                                                <thead>
+                                                                                                    <tr>
+                                                                                                        <th class="table-header-color">違約金項目</th>
+                                                                                                        <th class="table-header-color">違約金類型</th>
+                                                                                                        <th class="table-header-color">簽約起始期限</th>
+                                                                                                        <th class="table-header-color">簽約結束期限</th>
+                                                                                                        <th class="table-header-color">違約金</th>
+                                                                                                    </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr ng-repeat="x in punitiveTableData  track by $index">
+                                                                                                        <td ng-bind="x.punitiveNo"></td>
+                                                                                                        <td ng-bind="x.punitiveType"></td>
+                                                                                                        <td ng-bind="x.punitiveStartDate"></td>
+                                                                                                        <td ng-bind="x.punitiveEndDate"></td>
+                                                                                                        <td ng-bind="x.punitiveGold"></td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td colspan="5">違約金以日計算</td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">高改低限制</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <label class="control-label">三十個月</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--合約資訊設定 end-->
+                                                                            <!--折扣優惠設定 start-->
+                                                                            <div class="x_panel">
+                                                                                <div class="x_title panelTitle">
+                                                                                    <ul class="nav navbar-right panel_toolbox">
+                                                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <h2>折扣優惠設定</h2>
+                                                                                    <div class="clearfix"></div>
+                                                                                </div>
+                                                                                <div class="x_content">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-md-2 col-sm-2 col-xs-12 text-right">項目</label>
+                                                                                        <label class="col-md-10 col-sm-10 col-xs-12 text-center">內容</label>
+                                                                                    </div>
+                                                                                    <hr>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">指定折扣項目</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <table class="table table-striped table-bordered">
+                                                                                                <thead>
+                                                                                                    <tr>
+                                                                                                        <th class="table-header-color">折扣項目</th>
+                                                                                                    </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr ng-repeat="x in discountTableData">
+                                                                                                        <td ng-bind="x.discountItem"></td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">Happy Go贈點</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <label class="control-label">0</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--折扣優惠設定 end-->
+                                                                            <!--加值服務項目 start-->
+                                                                            <div class="x_panel">
+                                                                                <div class="x_title panelTitle">
+                                                                                    <ul class="nav navbar-right panel_toolbox">
+                                                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <h2>加值服務設定</h2>
+                                                                                    <div class="clearfix"></div>
+                                                                                </div>
+                                                                                <div class="x_content">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-md-2 col-sm-2 col-xs-12 text-right">項目</label>
+                                                                                        <label class="col-md-10 col-sm-10 col-xs-12 text-center">內容</label>
+                                                                                    </div>
+                                                                                    <hr>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">VAS 服務</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <table class="table table-striped table-bordered">
+                                                                                                <thead>
+                                                                                                    <tr>
+                                                                                                        <th class="table-header-color">指定加值功能</th>
+                                                                                                    </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr ng-repeat="x in discountTableData">
+                                                                                                        <td ng-bind="x.discountItem"></td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--加值服務項目 end-->
+                                                                            <!--上線設定 start-->
+                                                                            <div class="x_panel">
+                                                                                <div class="x_title panelTitle">
+                                                                                    <ul class="nav navbar-right panel_toolbox">
+                                                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <h2>上線設定</h2>
+                                                                                    <div class="clearfix"></div>
+                                                                                </div>
+                                                                                <div class="x_content">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-md-2 col-sm-2 col-xs-12 text-right">項目</label>
+                                                                                        <label class="col-md-10 col-sm-10 col-xs-12 text-center">內容</label>
+                                                                                    </div>
+                                                                                    <hr>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">活動類別</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <label class="control-label">L0853-3G續約-續留省很大方案(H)</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">續約適用活動期間</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <label class="control-label">IA/FS有效起始日 2015/11/19 ~ 2016/12/31</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">續約可選費率</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <table class="table table-striped table-bordered">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td>N/A</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>N/A</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>N/A</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>N/A</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>N/A</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>N/A</td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">附約可PM授權提前續約</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <label class="control-label">是</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">是否為指定商品</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <label class="control-label">是</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--上線設定 end-->
+                                                                            <!--加值好禮活動 start-->
+                                                                            <div class="x_panel">
+                                                                                <div class="x_title panelTitle">
+                                                                                    <h2>加值好禮活動</h2>
+                                                                                    <ul class="nav navbar-right panel_toolbox">
+                                                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <div class="clearfix"></div>
+                                                                                </div>
+                                                                                <div class="x_content">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-md-2 col-sm-2 col-xs-12 text-right">項目</label>
+                                                                                        <label class="col-md-10 col-sm-10 col-xs-12 text-center">內容</label>
+                                                                                    </div>
+                                                                                    <hr>
+                                                                                    <!--<div class="form-group">
+                                                                                <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">加值好禮活動</label>
+                                                                                <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                                                                        <label class="text-center col-md-12 col-sm-12 col-xs-12 bg-primary">已選加值好禮活動</label>
+                                                                                        <div class="borderStyle col-md-12 col-sm-12 col-xs-12" style="height:150px"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>-->
+                                                                                    <div class="">
+                                                                                        <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">加值好禮活動</label>
+                                                                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                                                                <div class="panel panel-dark">
+                                                                                                    <div class="panel-heading text-center">已選加值好禮活動</div>
+                                                                                                    <div class="panel-body">
+                                                                                                        <p>內容</p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--加值好禮活動 end-->
+                                                                            <!--IA/備援單 start-->
+                                                                            <div class="x_panel">
+                                                                                <div class="x_title panelTitle">
+                                                                                    <h2>IA/備援單</h2>
+                                                                                    <ul class="nav navbar-right panel_toolbox">
+                                                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <div class="clearfix"></div>
+                                                                                </div>
+                                                                                <div class="x_content">
+                                                                                    <div class="form-group">
+                                                                                        <textarea class="form-control" disabled rows="10" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita incidunt beatae dolores voluptatibus architecto assumenda perspiciatis, blanditiis adipisci autem debitis doloribus voluptatum labore quasi ipsa distinctio soluta deserunt laborum maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, similique est animi! Distinctio optio amet maxime iusto ex alias laudantium unde minima non. Dolor doloribus libero earum, soluta esse ullam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, perspiciatis id. Cum rerum doloremque quibusdam, nihil, eius, labore placeat, nemo cumque molestias rem officia reprehenderit! Ipsa, rem autem quidem alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptates odit fugit repellat iste eveniet soluta voluptatem laboriosam perferendis, dolorem consectetur veritatis explicabo! Unde id, rem officiis vero, molestias velit."></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--IA/備援單 end-->
+                                                                            <!--DEVICE start-->
+                                                                            <div class="x_panel">
+                                                                                <div class="x_title panelTitle">
+                                                                                    <h2>DEVICE</h2>
+                                                                                    <ul class="nav navbar-right panel_toolbox">
+                                                                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <div class="clearfix"></div>
+                                                                                </div>
+                                                                                <div class="x_content">
+                                                                                    <form class="form-horizontal">
+                                                                                        <div class="form-group">
+                                                                                            <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">專案生效日</label>
+                                                                                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                                <div class="col-md-3 col-sm-3">
+                                                                                                    <div class="row">
+                                                                                                        <select class="form-control">
+                                                                                                <option value=""></option>
+                                                                                                <option value=""></option>
+                                                                                                <option value=""></option>
+                                                                                            </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">商品類型</label>
+                                                                                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                                                                                    <div class="row">
+                                                                                                        <select class="form-control">
+                                                                                                <option value=""></option>
+                                                                                                <option value=""></option>
+                                                                                                <option value=""></option>
+                                                                                            </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right">商品類別</label>
+                                                                                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                                                                                <table class="table table-striped table-bordered">
+                                                                                                    <thead>
+                                                                                                        <tr>
+                                                                                                            <th class="table-header-color">商品群</th>
+                                                                                                            <th class="table-header-color">專案生效日</th>
+                                                                                                            <th class="table-header-color">專案價最後銷售日</th>
+                                                                                                            <th class="table-header-color">商品型態</th>
+                                                                                                            <th class="table-header-color">手機型號</th>
+                                                                                                            <th class="table-header-color">單機價</th>
+                                                                                                            <th class="table-header-color">轉換值</th>
+                                                                                                            <th class="table-header-color">Subsidy</th>
+                                                                                                            <th class="table-header-color">Rebate</th>
+                                                                                                            <th class="table-header-color">專案價</th>
+                                                                                                        </tr>
+                                                                                                    </thead>
+                                                                                                    <tbody>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--DEVICE end-->
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--(100)-促代明細查詢畫面-共用 end-->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

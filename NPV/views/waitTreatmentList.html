@@ -15,7 +15,7 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#dataBecomeEffective">檔案生效日期</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#dataBecomeEffective" ng-click="dataBecomeEffective()">檔案生效日期</button>
                                 </div>
                             </div>
                         </div>
@@ -37,8 +37,8 @@
                                                             <th class="table-header-color">次類型</th>
                                                             <th class="table-header-color">傳送時間</th>
                                                             <th class="table-header-color">PM</th>
-                                                            <th class="table-header-color">狀態(關</th>
                                                             <th class="table-header-color">指派/審核</th>
+                                                            <th class="table-header-color">狀態(關卡)</th>
                                                             <th class="table-header-color">退單</th>
                                                             <th class="table-header-color">匯出SPV</th>
                                                         </tr>
@@ -50,10 +50,12 @@
                                                             <td ng-bind="x.waitType2"></td>
                                                             <td ng-bind="x.waitTime"></td>
                                                             <td ng-bind="x.waitPM"></td>
-                                                            <td ng-bind="x.waitStatus"></td>
-                                                            <td><button type="button" class="btn btn-primary">{{x.waitDesignate}}</button></td>
                                                             <td>
-                                                                <button type="button" class="btn btn-primary">退單</button>
+                                                                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="designation()">{{x.waitDesignate}}</button>
+                                                            </td>
+                                                            <td ng-bind="x.waitStatus"></td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="chargebackCause()">退單</button>
                                                             </td>
                                                             <td><button type="button" class="btn btn-primary">匯出SPV</button></td>
                                                         </tr>
@@ -73,6 +75,7 @@
                                                                                         <th class="table-header-color ">代碼</th>
                                                                                         <th class="table-header-color ">類型</th>
                                                                                         <th class="table-header-color ">名稱</th>
+                                                                                        <th class="table-header-color">檔案生效日</th>
                                                                                         <th class="table-header-color ">版號</th>
                                                                                         <th class="table-header-color ">版本比對</th>
                                                                                     </tr>
@@ -85,8 +88,9 @@
                                                                                         </td>
                                                                                         <td>Single</td>
                                                                                         <td>4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000</td>
+                                                                                        <td ng-bind="y.npvTime"></td>
                                                                                         <td>1.1</td>
-                                                                                        <td><button type="button">版本比對</button></td>
+                                                                                        <td><button type="button" class="btn btn-primary">版本比對</button></td>
                                                                                     </tr>
                                                                                 </tbody>
                                                 </table>
@@ -106,7 +110,7 @@
                         </div>
                     </form>
                     <!--檔案生效日期設定 start-->
-                    <div class="modal fullscreen-modal in" id="dataBecomeEffective" tabindex="-1" role="dialog">
+                    <div class="modal fade fullscreen-modal" id="dataBecomeEffective" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -128,7 +132,7 @@
                                                         </select>
                                                     </div>
                                                     <button type="button" class="btn btn-primary" ng-click="searchType()">查詢</button>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#dataBecomeEffectiveSet">修改檔案生效日</button>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#dataBecomeEffectiveSet" ng-click="dataBecomeEffectiveSet()">修改檔案生效日</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -182,7 +186,7 @@
                     </div>
                     <!--檔案生效日期設定 end-->
                     <!--檔案生效日日期視窗 start-->
-                    <div class="modal bs-example-modal-sm in" id="dataBecomeEffectiveSet" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="dataBecomeEffectiveSet" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -212,7 +216,7 @@
                     </div>
                     <!--檔案生效日日期視窗 end-->
                     <!--確定修改日期畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="dataBecomeEffectiveSetOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="dataBecomeEffectiveSetOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -230,7 +234,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#dataBecomeEffectiveSetOkOk"
-                                        ng-click="dateOk()">確定</button>
+                                        ng-click="dataBecomeEffectiveSetOkOk()">確定</button>
                                         <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#conversionOkCancel">取消</button>
                                 </div>
                             </div>
@@ -238,7 +242,7 @@
                     </div>
                     <!--確定修改日期畫面 end-->
                     <!--修改日期成功畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="dataBecomeEffectiveSetOkOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="dataBecomeEffectiveSetOkOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -255,12 +259,171 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="dateOk()">確認</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--修改日期成功畫面 end-->
+                    <!--300指派menu start-->
+                    <div class="modal fade bs-example-modal-sm" id="designationObjects" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">指派對象</h4>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-body form-horizontal">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">請選擇指派對象:</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <select ng-model="designationObjectsSelectDefault" class="form-control" ng-options="x.ObjectName for x in designationObjectsSelect"></select>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <button type="button" class="btn btn-primary" ng-click="designationOk()">確定</button>
+                                                <button type="button" data-toggle="modal" data-dismiss="modal" class="btn btn-default">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--300指派menu end-->
+                    <!--確定指派對象 start-->
+                    <div class="modal fade bs-example-modal-lg" id="designationOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定指派畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定指派對象</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#designationDoubleOk" ng-click="designationDoubleOk()">確認</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定指派對象 end-->
+                    <!--確定指派成功 start-->
+                    <div class="modal fade bs-example-modal-lg" id="designationDoubleOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定指派成功畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">指派對象成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="designationchecked()">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定指派成功 end-->
+                    <!--400退單原因 start-->
+                    <div class="modal fade bs-example-modal-sm" id="chargebackCause" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title" ng-model="dataBecomeEffectiveSequence">「{{dataBecomeEffectiveSequence[0].dateBecomeEffective}}」退件原因</h4>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-body form-horizontal">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-md-12 col-sm-12 col-xs-12 text-left">請輸入退單原因:</label>
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <textarea cols="40" class="form-control"></textarea>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="chargebackCauseOk()">確定</button>
+                                    <button type="button" data-toggle="modal" data-dismiss="modal" class="btn btn-default">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--400退單原因 end-->
+                    <!--退單確定視窗 start-->
+                    <div class="modal fade bs-example-modal-sm" id="chargebackCauseOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定退單畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定退單原因</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="chargebackCauseDoubleOk" ng-click="chargebackCauseDoubleOk()">確認</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--退單確定視窗 end-->
+                    <!--確定退單成功 start-->
+                    <div class="modal fade bs-example-modal-lg" id="chargebackCauseDoubleOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定退單成功畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">退單成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="chargebackCausechecked()">確認</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--確定退單成功 end-->
                 </div>
             </div>
         </div>
