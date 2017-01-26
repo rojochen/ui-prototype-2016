@@ -2405,228 +2405,332 @@
                         <form class="form-horizontal">
                             <div class="form-group">
                                 <label class="control-label col-md-2 col-sm-2 col-xs-12" for="SPV">SPV NO</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="col-md-2 col-sm-2 col-xs-12">
                                     <input type="text" id="SPV" required="required" class="form-control col-md-7 col-xs-12" ng-model="SPV">
                                 </div>
                                 <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityCode">活動類別代碼</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="col-md-2 col-sm-2 col-xs-12">
                                     <input type="text" id="activityCode" required="required" class="form-control col-md-7 col-xs-12">
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-12 pull-right">
+                                    <button class="form-control btn btn-primary">匯入Excel</button>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityName">活動類別名稱</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="col-md-2 col-sm-2 col-xs-12">
                                     <input type="text" id="activityName" required="required" class="form-control col-md-7 col-xs-12" ng-model="activityName">
                                 </div>
                                 <label class="control-label col-md-2 col-sm-2 col-xs-12" for="groupCode">活動群組代碼</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <input type="text" id="groupCode" required="required" class="form-control col-md-7 col-xs-12" ng-model="groupCode">
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <input type="text" id="groupCode" required="required" class="form-control col-md-7 col-xs-12" ng-model="groupCode">                                    或
+                                    <select name="" id="" class="form-control">
+                                        <option value="">指定群組活動</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="groupCode">類型</label>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <select name="" id="" class="form-control">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">活動群組</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <select class="select2_single form-control" style="width:100%" id="activityGroup" tabindex="-1" ng-options="x for x in activityGroupItem"
-                                        ng-model="activityGroup">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">門號類型</label>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <select class="select2_single form-control" id="activityGroup" tabindex="-1" ng-options="x for x in activityGroupItem" ng-model="activityGroup">
                                         <option></option>
                                         <option value="{{x}}" ng-bind="x"></option>
                                         </select>
                                 </div>
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="numberType">門號類型</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <select class="select2_single form-control" style="width:100%" id="numberType" tabindex="-1" ng-options="x for x in numberTypeItem"
-                                        ng-model="numberType">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="numberType">種類</label>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <select class="select2_single form-control" id="numberType" tabindex="-1" ng-options="x for x in numberTypeItem" ng-model="numberType">
+                                        <option></option>
+                                        <option value="{{x}}" ng-bind="x"></option>
+                                        </select>
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="numberType">使用名單</label>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <select class="select2_single form-control" id="numberType" tabindex="-1" ng-options="x for x in numberTypeItem" ng-model="numberType">
                                         <option></option>
                                         <option value="{{x}}" ng-bind="x"></option>
                                         </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="type">種類</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <select class="select2_single form-control" style="width:100%" id="type" tabindex="-1" ng-options="x for x in typeItem" ng-model="type">
-                          <option></option>
-                          <option value="{{x}}" ng-bind="x"></option>
-                            </select>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="type">停機可能率
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <select class="select2_single form-control" id="type" tabindex="-1" ng-options="x for x in typeItem" ng-model="type">
+                                        <option></option>
+                                        <option value="{{x}}" ng-bind="x"></option>
+                                    </select>
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="type">ARPB
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <select class="select2_single form-control" id="type" tabindex="-1" ng-options="x for x in typeItem" ng-model="type">
+                                        <option></option>
+                                        <option value="{{x}}" ng-bind="x"></option>
+                                    </select>
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="type">可提前續約日
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <select class="select2_single form-control" id="type" tabindex="-1" ng-options="x for x in typeItem" ng-model="type">
+                                        <option></option>
+                                        <option value="{{x}}" ng-bind="x"></option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="form-group pull-right">
+                            <div class="form-group">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">PM:(NT帳號)</label>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <input type="text" class="form-control col-md-7">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">*活動效期</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">全部(所有SPV上的活動)
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">上架中("適用活動期間-結束日期" >= 當日查詢日期)
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">過期活動("適用活動期間-結束日期" < 當日查詢日期)
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">尚未開始"適用活動期間-結束日期" > 當日查詢日期)
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">自訂:活動起始時間
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="form-group">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <button type="button" class="btn btn-primary" ng-click="activities_Advanced()">查詢</button>
+                                    <div>
+                                        <button type="button" class="btn btn-primary col-md-1 col-md-offset-2 text-center" ng-click="activities_Advanced()">查詢</button>
+                                    <button type="button" class="btn btn-primary col-md-1" ng-click="activities_Advanced()">重新上架</button>
+
+                                    </div>
+                                    
+                                    <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+                                    <div>
+                                        <button type="button" class="btn btn-primary col-md-1" ng-click="activities_Advanced()">查詢</button>
+                                    <button type="button" class="btn btn-primary col-md-1" ng-click="activities_Advanced()">查詢</button>
+
+                                    </div>
+                                    
                                 </div>
-                            </div>
-                            <!-- begin 活動進階搜尋表格 -->
-                            <div class="col-md-12 col-sm-12 col-xs-12" ng-show="showActivitiesTable">
-                                <table id="datatable_activities" class="table  table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="11" class=" text-center table-header-color">活動類別項目</th>
-                                            <th colspan="3" class=" text-center table-header-color">活動條件設定</th>
-                                            <th colspan="3" class=" text-center table-header-color">申辦條件設定</th>
-                                            <th colspan="1" class=" text-center table-header-color">申辦條件設定</th>
-                                        </tr>
-                                        <tr>
-                                            <th class=" text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending"
-                                                style="width:50px;">
-                                                <input type="checkbox" name="table_records"> NO.
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:60px;">門號類型
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:50px;">種類
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:90px;">活動類別代碼
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">活動類別名稱
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:80px;">活動期間
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">活動群組
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">使用名單
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">PM Owner
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">檔案生效日
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">狀態效期
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">停機可能率
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">ARPB
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">有效終止日
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">關係
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">種類
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">項目
-                                                </th>
-                                                <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">負責PM
-                                                </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr role="row" ng-repeat="x in activitiesTableData track by $index">
-                                            <td>
-                                                <input type="checkbox" name="table_records"> {{x.NO}}
-                                            </td>
-                                            <td ng-bind="x.gateType"></td>
-                                            <td ng-bind="x.sort"></td>
-                                            <td ng-bind="x.activityCode"></td>
-                                            <td ng-bind="x.activityName"></td>
-                                            <td ng-bind="x.activityRange"></td>
-                                            <td ng-bind="x.groupName"></td>
-                                            <td ng-bind="x.useOfPersonnel"></td>
-                                            <td ng-bind="x.pmOwner"></td>
-                                            <td ng-bind="x.fileEffectiveDate"></td>
-                                            <td ng-bind="x.stateEffective"></td>
-                                            <td>
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="row">
-                                                                <table class="table">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>高</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>低</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>低</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>無限制 </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>高</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>A</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="row">
-                                                                <table class="table">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>0-999</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>0-999</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>1000-1999</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>1000-1999 </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>20000-1999999</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>099999</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="row">
-                                                                <table class="table">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>93</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>93</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>無合約</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>93 </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>365</td>
-                                                                        </tr>
-                                                                        <tr class="info">
-                                                                            <td>185</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td ng-bind="x.relationship"></td>
-                                            <td ng-bind="x.species"></td>
-                                            <td ng-bind="x.item"></td>
-                                            <td ng-bind="x.pm"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- end 活動進階搜尋表格 -->
+                            </div>-->
+                            <hr>
                         </form>
+                        <form class="form-inline" role="form">
+                            <div class="container-fluid">
+                                <button type="submit" class="btn btn-primary col-md-offset-4 col-md-1" ng-click="activities_Advanced()">查詢</button>
+                                <button type="submit" class="btn btn-primary col-md-1 ">重新上架</button>
+                                <div class="col-md-2 text-center">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> 保留勾選結果
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary col-md-1">查詢</button>
+                                <button type="submit" class="btn btn-primary col-md-1 ">重新上架</button>
+                            </div>
+                        </form>
+                        <!-- begin 活動進階搜尋表格 -->
+                        <div class="col-md-12 col-sm-12 col-xs-12" ng-show="showActivitiesTable">
+                            <table id="datatable_activities" class="table  table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
+                                <thead>
+                                    <tr>
+                                        <th colspan="11" class=" text-center table-header-color">活動類別項目</th>
+                                        <th colspan="3" class=" text-center table-header-color">活動條件設定</th>
+                                        <th colspan="3" class=" text-center table-header-color">申辦條件設定</th>
+                                        <th colspan="1" class=" text-center table-header-color">申辦條件設定</th>
+                                    </tr>
+                                    <tr>
+                                        <th class=" text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-sort="ascending"
+                                            style="width:50px;">
+                                            <input type="checkbox" name="table_records"> NO.
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:60px;">門號類型
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:50px;">種類
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:90px;">活動類別代碼
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">活動類別名稱
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:80px;">活動期間
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">活動群組
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">使用名單
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">PM Owner
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">檔案生效日
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">狀態效期
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">停機可能率
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">ARPB
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">有效終止日
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">關係
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">種類
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:40px;">項目
+                                            </th>
+                                            <th class="sorting text-center table-header-color" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width:120px;">負責PM
+                                            </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr role="row" ng-repeat="x in activitiesTableData track by $index">
+                                        <td>
+                                            <input type="checkbox" name="table_records"> {{x.NO}}
+                                        </td>
+                                        <td ng-bind="x.gateType"></td>
+                                        <td ng-bind="x.sort"></td>
+                                        <td ng-bind="x.activityCode"></td>
+                                        <td ng-bind="x.activityName"></td>
+                                        <td ng-bind="x.activityRange"></td>
+                                        <td ng-bind="x.groupName"></td>
+                                        <td ng-bind="x.useOfPersonnel"></td>
+                                        <td ng-bind="x.pmOwner"></td>
+                                        <td ng-bind="x.fileEffectiveDate"></td>
+                                        <td ng-bind="x.stateEffective"></td>
+                                        <td>
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>高</td>
+                                                                    </tr>
+                                                                    <tr class="info">
+                                                                        <td>低</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>低</td>
+                                                                    </tr>
+                                                                    <tr class="info">
+                                                                        <td>無限制 </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>高</td>
+                                                                    </tr>
+                                                                    <tr class="info">
+                                                                        <td>A</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>0-999</td>
+                                                                    </tr>
+                                                                    <tr class="info">
+                                                                        <td>0-999</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>1000-1999</td>
+                                                                    </tr>
+                                                                    <tr class="info">
+                                                                        <td>1000-1999 </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>20000-1999999</td>
+                                                                    </tr>
+                                                                    <tr class="info">
+                                                                        <td>099999</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>93</td>
+                                                                    </tr>
+                                                                    <tr class="info">
+                                                                        <td>93</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>無合約</td>
+                                                                    </tr>
+                                                                    <tr class="info">
+                                                                        <td>93 </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>365</td>
+                                                                    </tr>
+                                                                    <tr class="info">
+                                                                        <td>185</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td ng-bind="x.relationship"></td>
+                                        <td ng-bind="x.species"></td>
+                                        <td ng-bind="x.item"></td>
+                                        <td ng-bind="x.pm"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- end 活動進階搜尋表格 -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">重新上架</button>
