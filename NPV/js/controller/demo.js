@@ -61,8 +61,8 @@ define(['btModule'], function (btModule) {
                 "searching": false,
                 "bInfo": true,
                 "bPaginate": true,
-                "bLengthChange": false
-                // "scrollX": true,
+                "bLengthChange": false,
+                "scrollX": true,
 
             };
 
