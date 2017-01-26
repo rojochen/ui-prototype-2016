@@ -75,8 +75,8 @@ define(['btModule'], function (btModule) {
 
                 if(modelZIndex){
                     var id = $(element).parents('.modal').attr('id');
-                    optionSet.parentEl = id;
-                }  
+                    optionSet.parentEl = '#' + id;
+                }
 
                 var unbindWatcher = scope.$watch('ngModel', function(newValue, oldValue) {
                     // console.log('$watch' + newValue);
