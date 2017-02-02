@@ -153,8 +153,9 @@ define(['pokemon'], function (pokemon) {
 			.when('/LOASet', {
 				templateUrl: "../NPV/views/LOASet.html"
 			})
-
-
+			.when('/draft', {
+				templateUrl: "../NPV/views/draft.html"
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
