@@ -5,8 +5,7 @@
             <div class="x_title">
                 <h2>認單作業</h2>
                 <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
@@ -15,375 +14,92 @@
                     <!-- 認單作業 表單 begin -->
                     <form class="form-horizontal form-label-left">
                         <div class="form-group">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">認領</button>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal">認領</button>
+                                </div>
                             </div>
                         </div>
-                        <!--表格 start -->
-                        <!--<table id="datatable_confirmBill" class="table table-striped table-bordered" ng-show="isTable">-->
-                        <table id="datatable_confirmBill" class="table table-striped table-bordered table-hover" ng-show="isTable">
-                            <thead>
-                                <tr>
-                                    <th class="table-header-color"><input type="checkbox"></th>
-                                    <th class="table-header-color" data-toggle="collapse" data-target="#accordion-1">NPV單號</th>
-                                    <th class="table-header-color">類型</th>
-                                    <th class="table-header-color">次類型</th>
-                                    <th class="table-header-color">傳送時間</th>
-                                    <th class="table-header-color">PM</th>
-                                    <th class="table-header-color">狀態(關卡)</th>
-                                    <th class="table-header-color">匯出SPV</th>
-                                </tr>
-                            </thead>
-                            <!--<tbody>
-                                <tr ng-repeat="x in confirmBillTableData track by $index">
-                                    <td ng-bind="x.confirmBillNpvID" ng-click="showData()"></td>
-                                    <td ng-bind="x.confirmBillType"></td>
-                                    <td ng-bind="x.confirmBillSecondType"></td>
-                                       <td ng-bind="x.confirmBillTime"></td>
-                                            <td ng-bind="x.confirmBillPM"></td>
-                                    <td ng-bind="x.confirmBillStatus"></td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal"><i class="fa fa-download"></i>匯出SPV</button>
-                                    </td>
-                                </tr>
-                            </tbody>-->
-                            <tbody>
-                                <!--展開 begin-->
-                                <tr id="accordion-1" class="collapse">
-                                    <td colspan="8">
-                                        <table class="table table-bordered table-hover" style="margin:0px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-header-color">NO</td>
-                                                    <td class="table-header-color">代碼</td>
-                                                    <td class="table-header-color">類型</td>
-                                                    <td class="table-header-color">名稱</td>
-                                                    <td class="table-header-color">版本比對</td>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div id="datatable_confirmBill_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                        <div class="row">
+                                            <div class="col-sm-6"></div>
+                                            <div class="col-sm-6"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 panel-group">
+                                                <!--表格 start -->
+                                                <table id="datatable_confirmBill" class="table table-striped table-bordered no-footer dataTable" role="grid" aria-describedby="datatable_confirmBill_info">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="table-header-color"><input type="checkbox"></th>
+                                                            <th class="table-header-color">NPV單號</th>
+                                                            <th class="table-header-color">類型</th>
+                                                            <th class="table-header-color">次類型</th>
+                                                            <th class="table-header-color">傳送時間</th>
+                                                            <th class="table-header-color">PM</th>
+                                                            <th class="table-header-color">狀態(關卡)</th>
+                                                            <th class="table-header-color">匯出SPV</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody ng-repeat="x in confirmBillTableData track by $index">
+                                                        <tr>
+                                                            <td><input type="checkbox"></td>
+                                                            <td ng-bind="x.confirmBillNpvID" data-toggle="collapse" ng-href="#{{x.confirmBillID}}" aria-expanded="true" data-parent="#accordion"
+                                                                aria-controls="{{x.confirmBillID}}"></td>
+                                                                <td ng-bind="x.confirmBillType"></td>
+                                                                <td ng-bind="x.confirmBillSecondType"></td>
+                                                                <td ng-bind="x.confirmBillTime"></td>
+                                                                <td ng-bind="x.confirmBillPM"></td>
+                                                                <td ng-bind="x.confirmBillStatus"></td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-info btn-xs" data-toggle="modal"><i class="fa fa-download"></i>匯出SPV</button>
+                                                                </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <!--展開表格 start-->
+                                                            <td colspan="8" id="datatable_confirmBill_2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer" ng-style="table2ItemStyle">
+                                                                <div id="{{x.confirmBillID}}" class="collapse">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                            <table id="datatable_confirmBill_2" class="table table-striped table-bordered no-footer dataTable jambo_table" role="grid"
+                                                                                aria-describedby="datatable_confirmBill_2_info">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th class="table-header-color">
+                                                                                            NO
+                                                                                        </th>
+                                                                                        <th class="table-header-color">代碼</th>
+                                                                                        <th class="table-header-color">類型</th>
+                                                                                        <th class="table-header-color">名稱</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr ng-repeat="y in confirmBillTableData_2 track by $index">
+                                                                                        <td ng-bind="y.confirmBillNpvID"></td>
+                                                                                        <td ng-bind="y.confirmBillType"></td>
+                                                                                        <td ng-bind="y.confirmBillSecondType"></td>
+                                                                                        <td ng-bind="y.confirmBillTime"></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                </table>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>BB01</td>
-                                                    <td>Bundle(團結力量大)</td>
-                                                    <td>3G團體優惠專案</td>
-                                                    <td></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--展開 end-->
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td data-toggle="collapse" data-target="#accordion-2">20161129004</td>
-                                    <td data-toggle="collapse" data-target="#accordion-2">促代-4G</td>
-                                    <td data-toggle="collapse" data-target="#accordion-2">Bundle(1)</td>
-                                    <td data-toggle="collapse" data-target="#accordion-2">2016/11/29 11:55</td>
-                                    <td data-toggle="collapse" data-target="#accordion-2">yiyang</td>
-                                    <td data-toggle="collapse" data-target="#accordion-2">待派單</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-download"></i> 匯出SPV</button>
-                                    </td>
-                                </tr>
-                                <!--展開 begin-->
-                                <tr id="accordion-2" class="collapse">
-                                    <td colspan="8">
-                                        <table class="table table-bordered table-hover" style="margin:0px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-header-color">NO</td>
-                                                    <td class="table-header-color">代碼</td>
-                                                    <td class="table-header-color">類型</td>
-                                                    <td class="table-header-color">名稱</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>LVK00EN-YEN3</td>
-                                                    <td>Bundle(同生共死)</td>
-                                                    <td>4G GOGORO方案_新絕配599限30手機案-預繳1200</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--展開 end-->
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td data-toggle="collapse" data-target="#accordion-3">20161129005</td>
-                                    <td data-toggle="collapse" data-target="#accordion-3">折扣 (2)</td>
-                                    <td data-toggle="collapse" data-target="#accordion-3">N/A</td>
-                                    <td data-toggle="collapse" data-target="#accordion-3">2016/11/29 14:21</td>
-                                    <td data-toggle="collapse" data-target="#accordion-3">tatakao</td>
-                                    <td data-toggle="collapse" data-target="#accordion-3">待派單</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-download"></i> 匯出SPV</button>
-                                    </td>
-                                </tr>
-                                <!--展開 begin-->
-                                <tr id="accordion-3" class="collapse">
-                                    <td colspan="8">
-                                        <table class="table table-bordered table-hover" style="margin:0px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-header-color">NO</td>
-                                                    <td class="table-header-color">代碼</td>
-                                                    <td class="table-header-color">類型</td>
-                                                    <td class="table-header-color">名稱</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>LVK00EN-YEN3</td>
-                                                    <td>Bundle(同生共死)</td>
-                                                    <td>4G GOGORO方案_新絕配599限30手機案-預繳1200</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--展開 end-->
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td data-toggle="collapse" data-target="#accordion-4">20161129006</td>
-                                    <td data-toggle="collapse" data-target="#accordion-4">促代-4G／3G</td>
-                                    <td data-toggle="collapse" data-target="#accordion-4">Single(3)</td>
-                                    <td data-toggle="collapse" data-target="#accordion-4">2016/11/29 14:32</td>
-                                    <td data-toggle="collapse" data-target="#accordion-4">tatakao</td>
-                                    <td data-toggle="collapse" data-target="#accordion-4">待派單</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-download"></i> 匯出SPV</button>
-                                    </td>
-                                </tr>
-                                <!--展開 begin-->
-                                <tr id="accordion-4" class="collapse">
-                                    <td colspan="8">
-                                        <table class="table table-bordered table-hover" style="margin:0px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-header-color">NO</td>
-                                                    <td class="table-header-color">代碼</td>
-                                                    <td class="table-header-color">類型</td>
-                                                    <td class="table-header-color">名稱</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>IXC00FP-YFY4</td>
-                                                    <td>Single</td>
-                                                    <td>4G GOGORO方案_新絕配599限30手機案-預繳2400</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>IXAVHE555435</td>
-                                                    <td>Single</td>
-                                                    <td>(附)4G新絕配599限30-手機</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>IXLVHE555436</td>
-                                                    <td>Single</td>
-                                                    <td>(附)4G新絕配1199限24-手機</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--展開 end-->
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td data-toggle="collapse" data-target="#accordion-5">20161129007</td>
-                                    <td data-toggle="collapse" data-target="#accordion-5">促代-3G</td>
-                                    <td data-toggle="collapse" data-target="#accordion-5">Single(1)</td>
-                                    <td data-toggle="collapse" data-target="#accordion-5">2016/11/29 11:45</td>
-                                    <td data-toggle="collapse" data-target="#accordion-5">yiyang</td>
-                                    <td data-toggle="collapse" data-target="#accordion-5">待派單</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-download"></i> 匯出SPV</button>
-                                    </td>
-                                </tr>
-                                <!--展開 begin-->
-                                <tr id="accordion-5" class="collapse">
-                                    <td colspan="8">
-                                        <table class="table table-bordered table-hover" style="margin:0px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-header-color">NO</td>
-                                                    <td class="table-header-color">代碼</td>
-                                                    <td class="table-header-color">類型</td>
-                                                    <td class="table-header-color">名稱</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>CAOVH0555349</td>
-                                                    <td>Single</td>
-                                                    <td>遠傳視訊會議1500元</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--展開 end-->
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td data-toggle="collapse" data-target="#accordion-6">20161129017</td>
-                                    <td data-toggle="collapse" data-target="#accordion-6">促代-4G</td>
-                                    <td data-toggle="collapse" data-target="#accordion-6">Single(1)</td>
-                                    <td data-toggle="collapse" data-target="#accordion-6">2016/11/29 15:25</td>
-                                    <td data-toggle="collapse" data-target="#accordion-6">yiyang</td>
-                                    <td data-toggle="collapse" data-target="#accordion-6">待派單</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-download"></i> 匯出SPV</button>
-                                    </td>
-                                </tr>
-                                <!--展開 begin-->
-                                <tr id="accordion-6" class="collapse">
-                                    <td colspan="8">
-                                        <table class="table table-bordered table-hover" style="margin:0px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-header-color">NO</td>
-                                                    <td class="table-header-color">代碼</td>
-                                                    <td class="table-header-color">類型</td>
-                                                    <td class="table-header-color">名稱</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>TADVHF555789</td>
-                                                    <td>Single</td>
-                                                    <td>4G_新絕配799限30_手機</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--展開 end-->
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td data-toggle="collapse" data-target="#accordion-7">20161129018</td>
-                                    <td data-toggle="collapse" data-target="#accordion-7">促代-4G</td>
-                                    <td data-toggle="collapse" data-target="#accordion-7">Single(1)</td>
-                                    <td data-toggle="collapse" data-target="#accordion-7">2016/11/29 16:55</td>
-                                    <td data-toggle="collapse" data-target="#accordion-7">yiyang</td>
-                                    <td data-toggle="collapse" data-target="#accordion-7">待派單</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-download"></i> 匯出SPV</button>
-                                    </td>
-                                </tr>
-                                <!--展開 begin-->
-                                <tr id="accordion-7" class="collapse">
-                                    <td colspan="8">
-                                        <table class="table table-bordered table-hover" style="margin:0px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-header-color">NO</td>
-                                                    <td class="table-header-color">代碼</td>
-                                                    <td class="table-header-color">類型</td>
-                                                    <td class="table-header-color">名稱</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>EHELLFP-NFY4</td>
-                                                    <td>Single</td>
-                                                    <td>4G續約+新絕配799(30)_預繳6000</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--展開 end-->
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td data-toggle="collapse" data-target="#accordion-8">20161129019</td>
-                                    <td data-toggle="collapse" data-target="#accordion-8">促代-4G</td>
-                                    <td data-toggle="collapse" data-target="#accordion-8">Single(1)</td>
-                                    <td data-toggle="collapse" data-target="#accordion-8">2016/11/29 17:55</td>
-                                    <td data-toggle="collapse" data-target="#accordion-8">yiyang</td>
-                                    <td data-toggle="collapse" data-target="#accordion-8">待派單</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-download"></i> 匯出SPV</button>
-                                    </td>
-                                </tr>
-                                <!--展開 begin-->
-                                <tr id="accordion-8" class="collapse">
-                                    <td colspan="8">
-                                        <table class="table table-bordered table-hover" style="margin:0px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-header-color">NO</td>
-                                                    <td class="table-header-color">代碼</td>
-                                                    <td class="table-header-color">類型</td>
-                                                    <td class="table-header-color">名稱</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>FYGVHF555693</td>
-                                                    <td>Single</td>
-                                                    <td>(附)4G續約_新絕配799限30_手機</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--展開 end-->
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td data-toggle="collapse" data-target="#accordion-9">20161129020</td>
-                                    <td data-toggle="collapse" data-target="#accordion-9">促代-4G</td>
-                                    <td data-toggle="collapse" data-target="#accordion-9">Single(1)</td>
-                                    <td data-toggle="collapse" data-target="#accordion-9">2016/11/29 17:55</td>
-                                    <td data-toggle="collapse" data-target="#accordion-9">yiyang</td>
-                                    <td data-toggle="collapse" data-target="#accordion-9">待派單</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-download"></i> 匯出SPV</button>
-                                    </td>
-                                </tr>
-                                <!--展開 begin-->
-                                <tr id="accordion-9" class="collapse">
-                                    <td colspan="8">
-                                        <table class="table table-bordered table-hover" style="margin:0px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="table-header-color">NO</td>
-                                                    <td class="table-header-color">代碼</td>
-                                                    <td class="table-header-color">類型</td>
-                                                    <td class="table-header-color">名稱</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>MTU00FP-NFY4</td>
-                                                    <td>Single</td>
-                                                    <td>4G啟用+新絕配1199(30)_預繳10000</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--展開 end-->
-                            </tbody>
-                        </table>
-                        <!-- 表格 end -->
-                        <!-- 頁籤 begin -->
-                        <div class="pull-right">
-                            <div bt-pagination ng-model="tableInfo" page-size="3" page-count="8"></div>
+                                                <!--展開表格 end-->
+                                                </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- 頁籤 end -->
                     </form>
-                    <!-- 認單作業 表單 end -->
                 </div>
             </div>
         </div>
