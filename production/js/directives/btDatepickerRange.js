@@ -76,7 +76,10 @@ define(['btModule'], function (btModule) {
                 if(minDate && minDate.replace(/\D/g, "").length >= 7) optionSet.minDate = minDate;
                 if(maxDate && maxDate.replace(/\D/g, "").length >= 7) optionSet.maxDate = maxDate;
 
-                if(modelZIndex)  optionSet.parentEl = '.modal';
+                if(modelZIndex){
+                    var id = $(element).parents('.modal').attr('id');
+                    optionSet.parentEl = '#' + id;
+                }
 
 
                 var unbindWatcher = scope.$watch('ngModel', function(newValue, oldValue) {

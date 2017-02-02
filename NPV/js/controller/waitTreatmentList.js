@@ -114,6 +114,7 @@ define(['btModule'], function (btModule) {
             'npvCode': 'HSADSFER-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/12/11',
             'npvVer': '1.1'
         }, {
             'id': 'list1',
@@ -121,6 +122,7 @@ define(['btModule'], function (btModule) {
             'npvCode': 'FSDF2FSD-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/11/11',
             'npvVer': '1.1'
         }, {
             'id': 'list1',
@@ -128,6 +130,7 @@ define(['btModule'], function (btModule) {
             'npvCode': 'JKLYUJ4E5-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/09/21',
             'npvVer': '1.1'
         }, {
             'id': 'list1',
@@ -135,6 +138,7 @@ define(['btModule'], function (btModule) {
             'npvCode': 'JER2JFLAWK-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/09/22',
             'npvVer': '1.1'
         }, {
             'id': 'list1',
@@ -142,6 +146,7 @@ define(['btModule'], function (btModule) {
             'npvCode': 'HASLDFKE3-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/07/18',
             'npvVer': '1.1'
         }, {
             'id': 'list1',
@@ -149,6 +154,7 @@ define(['btModule'], function (btModule) {
             'npvCode': 'RHLE24HL44-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/09/23',
             'npvVer': '1.1'
         }, {
             'id': 'list1',
@@ -156,6 +162,7 @@ define(['btModule'], function (btModule) {
             'npvCode': '4G44RT66-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/05/01',
             'npvVer': '1.1'
         }, {
             'id': 'list1',
@@ -163,6 +170,7 @@ define(['btModule'], function (btModule) {
             'npvCode': 'DFGHR3SDF-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/03/02',
             'npvVer': '1.1'
         }, {
             'id': 'list1',
@@ -170,6 +178,7 @@ define(['btModule'], function (btModule) {
             'npvCode': '4R5SDFGH-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/03/21',
             'npvVer': '1.1'
         }, {
             'id': 'list1',
@@ -177,6 +186,7 @@ define(['btModule'], function (btModule) {
             'npvCode': '4G5G3G2E2-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/03/01',
             'npvVer': '1.1'
         }, {
             'id': 'list1',
@@ -184,6 +194,7 @@ define(['btModule'], function (btModule) {
             'npvCode': 'FHNXASF6HG-KF3D4',
             'npvType': 'Single',
             'npvName': '4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000',
+            'npvTime': '2017/03/10',
             'npvVer': '1.1'
         }, ];
         // NPV單號詳細 end
@@ -333,6 +344,108 @@ define(['btModule'], function (btModule) {
             'padding': '0px'
         };
         // 表格第二欄樣式 end
+        // 指派對象選單 start
+        $scope.designationObjectsSelect = [{
+            'ObjectName': 'Chong, Luke 張立暉'
+        }, {
+            'ObjectName': 'Chen, Moggie 陳美玲'
+        }, {
+            'ObjectName': 'Chen, Moureen 陳杍宣'
+        }, {
+            'ObjectName': 'Chien, Teresa 簡茗芳'
+        }, {
+            'ObjectName': 'Fan, Moggie 范莉宣'
+        }];
+        // 指派對象選單 end
+        $scope.designationObjectsSelectDefault = $scope.designationObjectsSelect[0];
+
+
+        // 指派按鈕 start
+        $scope.designation = function () {
+            $timeout(function () {
+                $('#designationObjects').modal('show');
+            }, 400);
+        };
+        // 指派按鈕 end
+        // 指派對象OK按鈕 start
+        $scope.designationOk = function () {
+            $timeout(function () {
+                $('#designationOk').modal('show');
+            }, 400);
+        };
+        // 指派對象OK按鈕 end
+        // 指派對象顯示OK視窗 start
+        $scope.designationDoubleOk = function () {
+            $timeout(function () {
+                $('#designationDoubleOk').modal('show');
+            }, 400);
+        };
+        // 指派對象OK視窗 end
+        // 指派對象成功頁面按鈕 start
+        $scope.designationchecked = function () {
+            $timeout(function () {
+                $('#designationObjects').modal('hide');
+            }, 400);
+        };
+        // 指派對象成功頁面按鈕 end
+
+        // 退單按鈕 start
+        $scope.chargebackCause = function () {
+            $timeout(function () {
+                $('#chargebackCause').modal('show');
+            }, 400);
+        };
+        // 退單按鈕 end
+        // 退單確定按紐 start
+        $scope.chargebackCauseOk = function () {
+            $timeout(function () {
+                $('#chargebackCauseOk').modal('show');
+            }, 400);
+        };
+        // 退單確定按紐 end
+        // 退單成功畫面 start
+        $scope.chargebackCauseDoubleOk = function () {
+            $timeout(function () {
+                $('#chargebackCauseDoubleOk').modal('show');
+            }, 400);
+        };
+        // 退單成功畫面 end
+        // 退單成功確認按鈕 start
+        $scope.chargebackCausechecked = function () {
+            $timeout(function () {
+                $('#chargebackCause').modal('hide');
+            }, 400);
+        };
+        // 退單成功確認按鈕 end
+        // 檔案生效日按鈕 start
+        $scope.dataBecomeEffective = function () {
+            $timeout(function () {
+                $('#dataBecomeEffective').modal('show');
+            }, 400);
+        }
+        // 檔案生效日按鈕 end
+        // 修改檔案生效日 start
+        $scope.dataBecomeEffectiveSet = function () {
+            $timeout(function () {
+                $('#dataBecomeEffectiveSet').modal('show');
+            }, 400);
+        }
+        // 修改檔案生效日 end
+        // 修改檔案生效日按鈕 start
+        $scope.dataBecomeEffectiveSetOk = function () {
+            $timeout(function () {
+                $('#dataBecomeEffectiveSetOk').modal('show');
+            }, 400);
+        }
+        // 修改檔案生效日按鈕 end
+        // 修改檔案生效日成功畫面 start
+        $scope.dataBecomeEffectiveSetOkOk = function () {
+            $timeout(function () {
+                $('#dataBecomeEffectiveSetOkOk').modal('show');
+            }, 400);
+        }
+        // 修改檔案生效日成功畫面 end
+
 
         $('#datatable_waitTreatmentListData').DataTable().destroy();
 
