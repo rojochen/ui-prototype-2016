@@ -62,6 +62,7 @@ define(['btModule'], function (btModule) {
             $timeout(function () {
                 $('#datatable_confirmBill').DataTable(opt);
                 $('#datatable_confirmBill_2').DataTable(opt);
+                $('#datatable_confirmBill_3').DataTable(opt);
             }, 100)
 
             /* lightbox open */
