@@ -85,7 +85,7 @@ define(['btModule'], function (btModule) {
                     }
                 },true);
 
-                var unbindonDataWatcher = scope.$watch('bindonData', function(newValue, oldValue){  //range部分未加...先研究disabled與event
+                var unbindonDataWatcher = scope.$watch('bindonData', function(newValue, oldValue){  //range部分未加...說明未改...先研究event
                     // console.log(newValue);
                     if(newValue && newValue.minDate){
                         optionSet.minDate = newValue.minDate;
@@ -100,13 +100,20 @@ define(['btModule'], function (btModule) {
                     }
                     $('#'+ datepickerId).daterangepicker(optionSet);
                     // console.log(optionSet);
-                },true)
+                },true);
+
+                var unBindonDisable = scope.$watch('bindonDisable', function(newValue, oldValue){  //range部分未加...說明未改...先研究event
+                    // console.log('$watch' + newValue);
+                    var disableStatus = newValue?newValue:false;
+                    element.find('input').attr('disabled', disableStatus);
+                })
 
 
                 element.on('$destroy', function () {
                     // console.log("on destroy");
                     unbindWatcher();
                     unbindonDataWatcher();
+                    unBindonDisable();
                     scope.$destroy();
                 });
                 
@@ -163,7 +170,8 @@ define(['btModule'], function (btModule) {
             restrict: 'E',
             scope: {
                 ngModel: '=',
-                bindonData: '='
+                bindonData: '=',
+                bindonDisable: '='
             },
             link: link,
             template: `<div class="input-prepend input-group" ng-show="isShowDatepicker">

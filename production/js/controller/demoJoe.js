@@ -614,6 +614,9 @@ define(['btModule'], function (btModule) {
         'maxDate': '2017-11-11'
       }
     }
+    $scope.disabled_change = function(){
+      $scope.disableStatus = !$scope.disableStatus;
+    }
   }
   app.controller('datepickerCtrl', datepickerCtrl);
 

@@ -40,12 +40,13 @@
 			</bt-portlet>
 		</div>
 		<div class="col-md-6 col-sm-12 col-xs-12">
-				<bt-datepicker datepicker-id="aa" ng-model="datesingle" format="YYYY-MM-DD h:mm:ss A" drops="up" min-date="2016-01-10" max-date="2017-10-23" show-dropdowns="true" time-picker="true" time-picker-increment="30" time-picker24-hour="false" time-picker-seconds="true" bindon-data="obj"></bt-datepicker>
+				<bt-datepicker datepicker-id="aa" ng-model="datesingle" format="YYYY-MM-DD h:mm:ss A" drops="up" min-date="2016-01-10" max-date="2017-10-23" show-dropdowns="true" time-picker="true" time-picker-increment="30" time-picker24-hour="false" time-picker-seconds="true" bindon-data="obj" bindon-disable="disableStatus"></bt-datepicker>
 		</div>
 		<div class="col-md-6 col-sm-12 col-xs-12">
 			<button class="btn btn-primary" ng-click='console_single()'>console_single</button>
 			<button class="btn btn-default" ng-click='remove_single()'>remove_single</button>
 			<button class="btn btn-default" ng-click='minMax_change()'>minMax_change</button>
+			<button class="btn btn-default" ng-click='disabled_change()'>disabled_change</button>
 		</div>
 	</div>
 </div>
