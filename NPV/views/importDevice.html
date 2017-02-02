@@ -53,7 +53,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#importDeviceFileOK"
                                         ng-click="pnotifyAddSuccess()">上傳</button>
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#importDeviceConfirmCancel">取消</button>
                                 </div>
                             </div>
                         </div>
@@ -86,6 +86,35 @@
                         </div>
                     </div>-->
                     <!-- 匯入大表 檔案匯入成功 end -->
+                    <!-- 確定取消匯入 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="importDeviceConfirmCancel" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定取消匯入畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定取消匯入？</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="cancel()">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 確定取消匯入 end -->
                 </div>
             </div>
         </div>

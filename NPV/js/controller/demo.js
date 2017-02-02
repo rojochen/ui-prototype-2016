@@ -826,7 +826,6 @@ define(['btModule'], function (btModule) {
                 }
 
                 $('#addSingleGeneration').modal('hide');
-
             }
 
 
@@ -933,19 +932,6 @@ define(['btModule'], function (btModule) {
                 }
             }
             /* end */
-
-            
-
-
-
-
-          
-
-
-           
-
-
-            
         }
     ]);
     return app;

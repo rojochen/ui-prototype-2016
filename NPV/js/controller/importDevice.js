@@ -46,6 +46,15 @@ define(['btModule'], function (btModule) {
                 pnotifyService.pnotifySuccess('Success', '匯入成功，資料已修改並存檔！<br>匯入成功筆數：1 筆');
             }
             /* notify 通知訊息 end */
+
+            /* 取消鍵 begin */
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#importDeviceImport').modal('hide')
+                    $('#importDeviceConfirmCancel').modal('hide')
+                }, 100)
+            }
+            /* 取消鍵 end */
         }
     ]);
     return app;
