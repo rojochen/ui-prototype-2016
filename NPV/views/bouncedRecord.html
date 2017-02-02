@@ -16,7 +16,7 @@
                         <div class="form-guoup">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#resetSend">重送</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#resetSend" ng-click="openbuy()">重送</button>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                                                             <td ng-bind="x.bouncedTime"></td>
                                                             <td ng-bind="x.bouncedPM"></td>
                                                             <td>
-                                                                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="openBuyCart()">編輯</button>
+                                                                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="openbuy()">編輯</button>
                                                             </td>
                                                             <td><button type="button" class="btn btn-primary">匯出SPV</button></td>
                                                         </tr>
