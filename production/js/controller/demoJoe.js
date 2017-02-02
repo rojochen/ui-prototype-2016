@@ -608,6 +608,12 @@ define(['btModule'], function (btModule) {
     $scope.remove_single = function(){
       $scope.datesingle = '';
     }
+    $scope.minMax_change = function(){
+      $scope.obj = {
+        'minDate': '2016-01-15',
+        'maxDate': '2017-11-11'
+      }
+    }
   }
   app.controller('datepickerCtrl', datepickerCtrl);
 

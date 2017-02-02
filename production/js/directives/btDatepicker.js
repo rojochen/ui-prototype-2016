@@ -68,10 +68,10 @@ define(['btModule'], function (btModule) {
                     }
                 }
                 optionSet.locale.format = format;
-                // console.log(optionSet);
 
                 if(minDate && minDate.replace(/\D/g, "").length >= 7) optionSet.minDate = minDate;
                 if(maxDate && maxDate.replace(/\D/g, "").length >= 7) optionSet.maxDate = maxDate;
+                // console.log(optionSet);
 
                 if(modelZIndex){
                     var id = $(element).parents('.modal').attr('id');
@@ -85,10 +85,28 @@ define(['btModule'], function (btModule) {
                     }
                 },true);
 
+                var unbindonDataWatcher = scope.$watch('bindonData', function(newValue, oldValue){  //range部分未加...先研究disabled與event
+                    // console.log(newValue);
+                    if(newValue && newValue.minDate){
+                        optionSet.minDate = newValue.minDate;
+                        attrs.$set('minDate',newValue.minDate);
+                    }
+                    if(newValue && newValue.maxDate){
+                        optionSet.maxDate = newValue.maxDate;
+                        attrs.$set('maxDate',newValue.maxDate);
+                    }
+                    if(scope.ngModel){
+                        optionSet.startDate = scope.ngModel;
+                    }
+                    $('#'+ datepickerId).daterangepicker(optionSet);
+                    // console.log(optionSet);
+                },true)
+
 
                 element.on('$destroy', function () {
                     // console.log("on destroy");
                     unbindWatcher();
+                    unbindonDataWatcher();
                     scope.$destroy();
                 });
                 
@@ -145,6 +163,7 @@ define(['btModule'], function (btModule) {
             restrict: 'E',
             scope: {
                 ngModel: '=',
+                bindonData: '='
             },
             link: link,
             template: `<div class="input-prepend input-group" ng-show="isShowDatepicker">
