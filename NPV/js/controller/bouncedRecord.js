@@ -6,7 +6,7 @@ define(['btModule'], function (btModule) {
         $logProvider.debugEnabled(true);
     });
 
-    app.controller('bouncedRecordCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, ShoppingCartEntity) {
+    app.controller('bouncedRecordCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, shoppingCartEntity) {
         /*begin 版面縮合*/
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -268,15 +268,36 @@ define(['btModule'], function (btModule) {
         // 表格第二欄樣式 end
 
         // 購物車顯示 start
-        $scope.openBuyCart = function () {
-            $scope.bouncedItemData = [{
-                'bouncedNpv': '20161022201',
-                'bouncedType1': '促代',
-                'bouncedType2': 'N/A',
-                'bouncedTime': '2016/10/21 20:00',
-                'bouncedPM': 'yuind',
+        $scope.openbuy = function () {
+
+            $scope.actionData = [{
+                "type": "活動",
+                "name": "學生方案",
+                "activityCode": "D3600",
+                "dateRange": "2016/07/01-2017/03/31"
+            }, {
+                "type": "促案",
+                "name": "小資方案",
+                "activityCode": "D3611",
+                "dateRange": "2016/09/01-2017/12/31"
             }];
-            //未完成
+
+
+            angular.forEach($scope.actionData, function (item) {
+                shoppingCartEntity.addItem(item);
+
+            })
+
+
+            var index = shoppingCartEntity.getCartID();
+            // $log.debug(index);
+            if (index === null) {
+                index = shoppingCartEntity.openShoppingCart();
+                shoppingCartEntity.setCartID(index);
+            }
+
+            $('#addSingleGeneration').modal('hide');
+
         }
         // 購物車顯示 end
 
