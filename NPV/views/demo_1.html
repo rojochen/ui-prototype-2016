@@ -2974,80 +2974,10 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
     <!--end 4-2 促代查詢-MPM-->
-    <!-- 8-1 大量匯入促代草稿-PM Modal -->
-    <div class="modal  fullscreen-modal" id="Modal9" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span
-                                aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                        </button>
-                    <h4 class="modal-title" id="myModalLabel4">草稿</h4>
-                </div>
-                <div class="modal-body">
-                    <form class="form-horizontal form-label-left">
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12 text-danger">
-                                        <span class="glyphicon glyphicon-record"></span>
-                                        匯入檔案不得超過3MB:</label>
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <button class="btn btn-primary">匯入excel</button>
-                                    </div>
-                                    <a href=""><label class="control-label col-md-3 col-sm-3 col-xs-12">樣板excel下載</label></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <button type="button" class="btn btn-success">
-                                    送審
-                            </button>
-                            <button type="button" class="btn btn-success">
-                                    刪除
-                            </button>
-                        </div>
-                        <div class="form-group">
-                            <!--  大量匯入促代草稿-PM表格 -->
-                            <table id="datatable_draft" class="table table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th class="table-header-color"></th>
-                                        <th class="table-header-color">NPV單號</th>
-                                        <th class="table-header-color">類型</th>
-                                        <th class="table-header-color">次類型</th>
-                                        <th class="table-header-color">編輯</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="x in draftData track by $index">
-                                        <td><input type="checkbox"></td>
-                                        <td ng-bind="x.number"></td>
-                                        <td ng-bind="x.numberType" ng-click="inquire(x.numberType)"></td>
-                                        <td ng-bind="x.subType"></td>
-                                        <td>
-                                            <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" href="#editModal"><i class="fa fa-pencil"></i>編輯</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!-- end 大量匯入促代草稿-PM表格 -->
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end 8 草稿 Modal -->
     <!-- 9 待處理  -->
     <div class="modal  fullscreen-modal" id="Modal10" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
