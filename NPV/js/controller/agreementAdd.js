@@ -150,10 +150,22 @@ define(['btModule'], function (btModule) {
             // Success
             $scope.pnotifyAddSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '新增完成！');
+
+                // 取消鍵
+                $timeout(function () {
+                    $('#agreementAddAdd').modal('hide')
+                    $('#agreementConfirmCancelAdd').modal('hide')
+                }, 100)
             }
 
             $scope.pnotifyEditSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '修改完成！');
+
+                // 取消鍵
+                $timeout(function () {
+                    $('#agreementAddEdit').modal('hide')
+                    $('#actTypeAddConfirmCancel').modal('hide')
+                }, 100)
             }
 
             $scope.pnotifyDelSuccess = function () {
@@ -167,6 +179,22 @@ define(['btModule'], function (btModule) {
                 $scope.tableControl = true;
             };
             /* end */
+
+            /* 取消鍵 begin */
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#agreementAddAdd').modal('hide')
+                    $('#agreementConfirmCancelAdd').modal('hide')
+                }, 100)
+            }
+
+            $scope.cancel2 = function () {
+                $timeout(function () {
+                    $('#agreementAddEdit').modal('hide')
+                    $('#agreementConfirmCancelEdit').modal('hide')
+                }, 100)
+            }
+            /* 取消鍵 end */
         }
     ]);
     return app;

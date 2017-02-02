@@ -95,8 +95,8 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#classOfferEditConfirm">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#classOfferEditConfirm">確定</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#classOfferEditConfirmCancel">取消</button>
                                 </div>
                             </div>
                         </div>
@@ -159,6 +159,35 @@
                         </div>
                     </div>-->
                     <!-- 修改完成 end -->
+                    <!-- 確定取消修改 begin -->
+                    <div class="modal fade bs-example-modal-lg" id="classOfferEditConfirmCancel" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定取消修改畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定取消修改？</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="cancel()">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 確定取消修改 end -->
                     <!-- 刪除 begin -->
                     <div class="modal fade bs-example-modal-lg" id="classOfferDelConfirm" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">

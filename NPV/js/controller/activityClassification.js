@@ -146,10 +146,22 @@ define(['btModule'], function (btModule) {
 
             $scope.pnotifyAddSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '新增完成！');
+
+                // 取消鍵
+                $timeout(function () {
+                    $('#actClassifcationAdd').modal('hide')
+                    $('#actClassAddConfirmCancel').modal('hide')
+                }, 100)
             }
 
             $scope.pnotifyEditSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '修改完成！');
+
+                // 取消鍵
+                $timeout(function () {
+                    $('#actClassifcationEdit').modal('hide')
+                    $('#actClassEditConfirmCancel').modal('hide')
+                }, 100)
             }
 
             $scope.pnotifyDelSuccess = function () {
@@ -163,6 +175,22 @@ define(['btModule'], function (btModule) {
                 $scope.tableControl = true;
             };
             /* end */
+
+            /* 取消鍵 begin */
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#actClassifcationAdd').modal('hide')
+                    $('#actClassAddConfirmCancel').modal('hide')
+                }, 100)
+            }
+
+            $scope.cancel2 = function () {
+                $timeout(function () {
+                    $('#actClassifcationEdit').modal('hide')
+                    $('#actClassEditConfirmCancel').modal('hide')
+                }, 100)
+            }
+            /* 取消鍵 end */
         }
     ]);
     return app;

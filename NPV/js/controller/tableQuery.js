@@ -204,6 +204,24 @@ define(['btModule'], function (btModule) {
             });
             /* modal end */
 
+            /* 取消鍵 begin */
+            //匯出大表
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#tableQueryExport').modal('hide')
+                    $('#tableQueryExportConfirmCancel').modal('hide')
+                }, 100)
+            }
+
+            //匯入大表
+            $scope.cancel2 = function () {
+                $timeout(function () {
+                    $('#tableQueryImport').modal('hide')
+                    $('#tableQueryImportConfirmCancel').modal('hide')
+                }, 100)
+            }
+            /* 取消鍵 end */
+
             /* begin */
             $scope.isTable = false;
             $scope.showTable = function () {
