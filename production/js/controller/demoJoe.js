@@ -617,6 +617,12 @@ define(['btModule'], function (btModule) {
     $scope.disabled_change = function(){
       $scope.disableStatus = !$scope.disableStatus;
     }
+    $scope.eventSelect = function(e){
+      console.log(e);
+    }
+    $scope.eventCancel = function(e){
+      console.log(e);
+    }
   }
   app.controller('datepickerCtrl', datepickerCtrl);
 
