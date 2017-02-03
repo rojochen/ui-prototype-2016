@@ -5,7 +5,7 @@ define(['btModule'], function (btModule) {
     app.config(function ($logProvider) {
         $logProvider.debugEnabled(true);
     });
-    app.controller('conversionListCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, ShoppingCartEntity) {
+    app.controller('conversionListCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, shoppingCartEntity) {
         /*begin 版面縮合*/
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -387,6 +387,68 @@ define(['btModule'], function (btModule) {
             $('.modal:visible').length && $(document.body).addClass('modal-open');
         });
         /* lightbox end */
+
+        // SPV關閉 start
+        $scope.spvClose = function () {
+            $timeout(function () {
+                $('#conversionListStatusSpvDetail').modal('hide');
+            }, 400);
+        }
+        // SPV關閉 end
+        // 確定轉單成功按鈕 start
+        $scope.conversionOk = function () {
+            $timeout(function () {
+                $('#conversionOk').modal('hide');
+            }, 400);
+        }
+        // 確定轉單成功按鈕 end
+        // 取消、重置轉單,併單,拆單 start
+        $scope.closeAll = function () {
+            $timeout(function () {
+                $('#conversionOk:visible').length && $('#conversionOk').modal('hide');
+                $('#conversionReset:visible').length && $('#conversionReset').modal('hide');
+                $('#disassembleListOk:visible').length && $('#disassembleListOk').modal('hide');
+                $('#disassembleListReset:visible').length && $('#disassembleListReset').modal('hide');
+                $('#mergeListOk:visible').length && $('#mergeListOk').modal('hide');
+                $('#mergeListReset:visible').length && $('#mergeListReset').modal('hide');
+            }, 400);
+        }
+        // 取消、重置轉單,併單,拆單 end
+        // 轉單重置成功按鈕 start
+        $scope.conversionReset = function () {
+            $timeout(function () {
+                $('#conversionReset').modal('hide');
+            }, 400);
+        }
+        // 轉單重置成功按鈕 end
+        // 確定拆單成功按鈕 start
+        $scope.disassembleListOk = function () {
+            $timeout(function () {
+                $('#disassembleListOk').modal('hide');
+            }, 400);
+        }
+        // 確定拆單成功按鈕 end
+        // 拆單重置成功按鈕 start
+        $scope.disassembleListReset = function () {
+            $timeout(function () {
+                $('#disassembleListReset').modal('hide');
+            }, 400);
+        }
+        // 拆單重置成功按鈕 end
+        // 確定併單成功按鈕 start
+        $scope.mergeListOk = function () {
+            $timeout(function () {
+                $('#mergeListOk').modal('hide');
+            }, 400);
+        }
+        // 確定併單成功按鈕 end
+        // 併單重置成功按鈕 start
+        $scope.mergeListReset = function () {
+            $timeout(function () {
+                $('#mergeListReset').modal('hide');
+            }, 400);
+        }
+        // 併單重置成功按鈕 end
 
         $scope.changeListFunction = 'conversionList';
         //排序

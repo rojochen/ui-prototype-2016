@@ -46,7 +46,7 @@
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
                                 <button type="button" class="btn btn-primary" style="margin-right: 15px" ng-click="showTable()">查詢</button>
-                                <button type="button" class="btn btn-primary" style="margin-right: 15px" data-toggle="modal" data-target="#addComplete">新增</button>
+                                <button type="button" class="btn btn-primary" style="margin-right: 15px" data-toggle="modal" href="#addComplete" ng-click="addComplete()">新增</button>
                                 <button type="button" class="btn btn-primary">重置</button>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                                         <td ng-bind="x.modifyPersonnel"></td>
                                         <td ng-bind="x.modifyDate"></td>
                                         <td>
-                                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#modifyComplete"><i class="fa fa-pencil"></i> 修改</button>
+                                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#modifyComplete" ng-click="modifyComplete()"><i class="fa fa-pencil"></i> 修改</button>
                                             <button class="btn btn-danger btn-xs" data-toggle="modal" href="#activemenuServiceDelete"><i class="glyphicon glyphicon-remove"></i>刪除</button>
                                         </td>
                                     </tr>
@@ -83,7 +83,7 @@
                     </form>
                     <!--下拉選單維護 end-->
                     <!--新增畫面 start-->
-                    <div class="modal bs-example-modal-lg" id="addComplete" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="addComplete" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -110,7 +110,7 @@
                                                  </select>
                                             </div>
                                             <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <button type="button" class="btn btn-info" ng-click="" data-toggle="modal" href="#editGroup">編輯群組</button>
+                                                <button type="button" class="btn btn-info" ng-click="" data-toggle="modal" href="#editGroup" ng-click="editGroup()">編輯群組</button>
                                             </div>
                                             <div class="col-md-offset-2 col-sm-offset-2"></div>
                                         </div>
@@ -154,7 +154,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#activemenuServiceConfirm">確定</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#activemenuServiceConfirm" ng-click="activemenuServiceConfirm()">確定</button>
                                     <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                                 </div>
                             </div>
@@ -162,7 +162,7 @@
                     </div>
                     <!--新增畫面 end-->
                     <!--修改畫面 start-->
-                    <div class="modal  bs-example-modal-lg" id="modifyComplete" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="modifyComplete" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -233,7 +233,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#activemenuServiceModify">確定</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#activemenuServiceModify">確定</button>
                                     <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelEditModal">取消</button>
                                 </div>
                             </div>
@@ -241,7 +241,7 @@
                     </div>
                     <!--修改畫面 end-->
                     <!--編輯群組 start-->
-                    <div class="modal fullscreen-modal in" id="editGroup" tabindex="-1" role="dialog">
+                    <div class="modal fade fullscreen-modal" id="editGroup" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -269,9 +269,9 @@
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"></label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="">查詢</button>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="" href="#editGroupAdd">新增</button>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" href="#editGroupAdd" ng-click="editGroupAdd()">新增</button>
                                                 <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="">重置</button>
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="">關閉</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="editGroupClose()">關閉</button>
                                             </div>
                                             <div class="col-md-offset-2 col-sm-offset-2"></div>
                                         </div>
@@ -309,7 +309,7 @@
                     </div>
                     <!--編輯群組 end-->
                     <!--編輯群組新增 start-->
-                    <div class="modal  bs-example-modal-lg in" id="editGroupAdd" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="editGroupAdd" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -345,7 +345,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#activemenuServiceConfirm" data-dismiss="modal">確定</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#mutliActivemenuServiceConfirm" ng-click="mutliActivemenuServiceConfirm()">確定</button>
                                     <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                                 </div>
                             </div>
@@ -353,7 +353,7 @@
                     </div>
                     <!--編輯群組新增 end-->
                     <!--編輯群組修改 start-->
-                    <div class="modal  bs-example-modal-lg in" id="editGroupModify" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="editGroupModify" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -389,7 +389,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#activemenuServiceModify" data-dismiss="modal">確定</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#activemenuServiceModify">確定</button>
                                     <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelEditModal">取消</button>
                                 </div>
                             </div>
@@ -397,7 +397,7 @@
                     </div>
                     <!--編輯群組修改 end-->
                     <!--確定新增 start-->
-                    <div class="modal  bs-example-modal-lg" id="activemenuServiceConfirm" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="activemenuServiceConfirm" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -425,8 +425,37 @@
                         </div>
                     </div>
                     <!--確定新增 end-->
-                    <!--確定刪除 start-->
-                    <div class="modal  bs-example-modal-lg" id="activemenuServiceDelete" tabindex="-1" role="dialog">
+                    <!--編輯確定新增 start-->
+                    <div class="modal fade bs-example-modal-lg" id="mutliActivemenuServiceConfirm" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定新增畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>確定新增？</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="mutliPnotifyAddSuccess()">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--編輯確定新增 end-->
+                    <!--下拉選單項目確定刪除 start-->
+                    <div class="modal fade bs-example-modal-lg" id="activemenuServiceDelete" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -448,14 +477,42 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyDelSuccess()">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" ng-click="activemenuServiceDeleteChecked()">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--確定刪除 end-->
+                    <!--下拉選單項目確定刪除 end-->
+                    <!--取消刪除 start-->
+                    <div class="modal fade bs-example-modal-lg" id="activemenuServiceDeleteChecked" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">確定刪除畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <br>
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h3>取消刪除成功</h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--取消刪除 end-->
                     <!--確定修改 start-->
-                    <div class="modal  bs-example-modal-lg" id="activemenuServiceModify" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="activemenuServiceModify" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -484,13 +541,13 @@
                     </div>
                     <!--確定修改 end-->
                     <!-- 確認畫面 取消新增 modal -->
-                    <div class="modal  bs-example-modal-lg" id="cancelAddModal" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="cancelAddModal" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                         </button>
-                                    <h4 class="modal-title">確認畫面</h4>
+                                    <h4 class="modal-title">取消新增畫面</h4>
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
@@ -512,13 +569,13 @@
                     </div>
                     <!-- end 確認畫面  取消 modal -->
                     <!-- 確認畫面 取消修改 modal -->
-                    <div class="modal  bs-example-modal-lg" id="cancelEditModal" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="cancelEditModal" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                         </button>
-                                    <h4 class="modal-title">確認畫面</h4>
+                                    <h4 class="modal-title">取消編輯畫面</h4>
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
@@ -532,8 +589,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="confirmCancel()">確定</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancel()">取消</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="cancelOk()">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancelAddModal()">取消</button>
                                 </div>
                             </div>
                         </div>
