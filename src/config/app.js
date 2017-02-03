@@ -1,13 +1,13 @@
 // var $ = require('../../vendors/jquery/dist/jquery.min.js');
-define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,PNotify) {
+define(['jquery', 'angular', 'moment', 'PNotify'], function (jquery, angular, moment, PNotify) {
     console.log(angular);
-    
+
     var $ = jquery;
     global.jQuery = $;
-    global.$ = $;   
-
-    global.moment= moment;
-    global.PNotify=PNotify; 
+    global.$ = $;
+    window.jQuery = $;
+    global.moment = moment;
+    global.PNotify = PNotify;
 
 
 
@@ -48,27 +48,27 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
 
     require('../js/helpers/smartresize.js');
     // require('../js/custom.js');
-    global.echarts =  require('echarts');
+    global.echarts = require('echarts');
     require('../../src/config/joe.js');
     // require('../../vendors/angular/angular.min.js');
     //require("expose?angular!../../vendors/angular/angular.min.js");
-    
+
     require('angular-route');
     require('angular-datatables');
     require('promise-finally');
 
 
     //layer
-    var layer= require('../../vendors/layer/build/layer.js');
+    var layer = require('../../vendors/layer/build/layer.js');
     layer.config({
-        path:false
+        path: false
     })
     // require('../../production/js/lib/layer/build/layer.js');
     //require('../../production/js/lib/layer/src/layer.js');
 
 
-    angular.module('pokemon', ['ngRoute','datatables']);
- 
+    angular.module('pokemon', ['ngRoute', 'datatables']);
+
     return angular;
 });
 // require(['../../vendors/jquery/dist/jquery.min.js'], function(jquery) {
@@ -132,7 +132,7 @@ define(['jquery','angular','moment','PNotify'], function (jquery,angular,moment,
 // require('angular-resource');
 
 
-// require('../js/page/blockUI.js'); 
+// require('../js/page/blockUI.js');
 // require('../js/page/echarts.js');
 
 // require(['../../vendors/jquery/dist/jquery.min.js'], function(jquery) {

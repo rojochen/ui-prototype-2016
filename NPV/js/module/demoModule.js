@@ -2,6 +2,11 @@ define(['pokemon'], function (pokemon) {
 	'use strict';
 	var app = angular.module('btModule', ['pokemon']);
 	// 導頁路徑
+
+	// hide Possibly unhandled rejection in Angular 1.6
+	app.config(['$qProvider', function ($qProvider) {
+		$qProvider.errorOnUnhandledRejections(false);
+	}]);
 	app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 		$locationProvider.hashPrefix('');
 		$routeProvider
