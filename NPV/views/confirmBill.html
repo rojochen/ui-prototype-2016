@@ -35,13 +35,14 @@
                                                     <thead>
                                                         <tr>
                                                             <th class="table-header-color"><input type="checkbox"></th>
-                                                            <th class="table-header-color">NPV單號</th>
-                                                            <th class="table-header-color">類型</th>
-                                                            <th class="table-header-color">次類型</th>
-                                                            <th class="table-header-color">傳送時間</th>
-                                                            <th class="table-header-color">PM</th>
-                                                            <th class="table-header-color">狀態(關卡)</th>
-                                                            <th class="table-header-color">匯出SPV</th>
+                                                            <th class="table-header-color" data-toggle="collapse" ng-href="#{{x.confirmBillID[0]}}" aria-expanded="true" data-parent="#accordion"
+                                                                aria-controls="{{x.confirmBillID[0]}}">NPV單號</th>
+                                                                <th class="table-header-color">類型</th>
+                                                                <th class="table-header-color">次類型</th>
+                                                                <th class="table-header-color">傳送時間</th>
+                                                                <th class="table-header-color">PM</th>
+                                                                <th class="table-header-color">狀態(關卡)</th>
+                                                                <th class="table-header-color">匯出SPV</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody ng-repeat="x in confirmBillTableData track by $index">
@@ -58,8 +59,41 @@
                                                                     <button type="button" class="btn btn-info btn-xs" data-toggle="modal"><i class="fa fa-download"></i>匯出SPV</button>
                                                                 </td>
                                                         </tr>
+                                                        <!--展開表格1 start-->
+                                                        <!--<tr>
+                                                            <td colspan="8" id="datatable_confirmBill_1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer" ng-style="table2ItemStyle">
+                                                                <div id="{{x.confirmBillID[0]}}" class="collapse">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                            <table id="datatable_confirmBill_1" class="table table-striped table-bordered no-footer dataTable jambo_table" role="grid"
+                                                                                aria-describedby="datatable_confirmBill_1_info">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th class="table-header-color">NO</th>
+                                                                                        <th class="table-header-color">代碼</th>
+                                                                                        <th class="table-header-color">類型</th>
+                                                                                        <th class="table-header-color">名稱</th>
+                                                                                        <th class="table-header-color">版本比對</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td ng-bind="x.second.id"></td>
+                                                                                        <td ng-bind="x.second.type"></td>
+                                                                                        <td ng-bind="x.second.secondType"></td>
+                                                                                        <td ng-bind="x.second.time"></td>
+                                                                                        <td></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                </table>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </td>
+                                                </tr>-->
+                                                        <!--展開表格1 end-->
+                                                        <!--展開表格2 start-->
                                                         <tr>
-                                                            <!--展開表格 start-->
                                                             <td colspan="8" id="datatable_confirmBill_2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer" ng-style="table2ItemStyle">
                                                                 <div id="{{x.confirmBillID}}" class="collapse">
                                                                     <div class="row">
@@ -77,11 +111,11 @@
                                                                                     </tr>
                                                                                 </thead>
                                                                                 <tbody>
-                                                                                    <tr ng-repeat="y in confirmBillTableData_2 track by $index">
-                                                                                        <td ng-bind="y.confirmBillNpvID"></td>
-                                                                                        <td ng-bind="y.confirmBillType"></td>
-                                                                                        <td ng-bind="y.confirmBillSecondType"></td>
-                                                                                        <td ng-bind="y.confirmBillTime"></td>
+                                                                                    <tr>
+                                                                                        <td ng-bind="x.second.id"></td>
+                                                                                        <td ng-bind="x.second.type"></td>
+                                                                                        <td ng-bind="x.second.secondType"></td>
+                                                                                        <td ng-bind="x.second.time"></td>
                                                                                     </tr>
                                                                                 </tbody>
                                                 </table>
@@ -90,7 +124,7 @@
                                                 </div>
                                                 </td>
                                                 </tr>
-                                                <!--展開表格 end-->
+                                                <!--展開表格2 end-->
                                                 </tbody>
                                                 </table>
                                             </div>
