@@ -600,6 +600,21 @@ define(['btModule'], function (btModule) {
     $scope.remove = function(){
       $scope.daterange1 = [];
     }
+    $scope.minMax = function(){
+      $scope.obj_range = {
+        'minDate': '2016-01-15',
+        'maxDate': '2017-11-11'
+      }
+    }
+    $scope.disabled = function(){
+      $scope.disable = !$scope.disable;
+    }
+    $scope.eventSelect_range = function(e){
+      console.log(e);
+    }
+    $scope.eventCancel_range = function(e){
+      console.log(e);
+    }
 
     $scope.datesingle = new Date('2016/02/28 9:00:00 PM');
     $scope.console_single = function(){
@@ -607,6 +622,21 @@ define(['btModule'], function (btModule) {
     }
     $scope.remove_single = function(){
       $scope.datesingle = '';
+    }
+    $scope.minMax_change = function(){
+      $scope.obj = {
+        'minDate': '2016-01-15',
+        'maxDate': '2017-11-11'
+      }
+    }
+    $scope.disabled_change = function(){
+      $scope.disableStatus = !$scope.disableStatus;
+    }
+    $scope.eventSelect = function(e){
+      console.log(e);
+    }
+    $scope.eventCancel = function(e){
+      console.log(e);
     }
   }
   app.controller('datepickerCtrl', datepickerCtrl);

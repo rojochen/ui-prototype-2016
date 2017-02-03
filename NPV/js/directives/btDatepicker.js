@@ -41,62 +41,49 @@ define(['btModule'], function (btModule) {
             // console.log(timePicker24Hour);
             // console.log(timePickerSeconds);
 
+            var unbindWatcher = scope.$watch('ngModel', function(newValue, oldValue) {
+                // console.log('$watch' + newValue);
+                if(!newValue){
+                    scope.value = '';
+                    scope.onDateCancel({e:'cancel'});
+                }
+            },true);
 
-            if(datepickerId){
-                scope.isShowDatepicker = true;
-                scope.id = datepickerId;
-
+            var unBindonDataWatcher = scope.$watch('bindonData', function(newValue, oldValue){
+                // console.log(newValue);
+                if(newValue && newValue.minDate){
+                    optionSet.minDate = newValue.minDate;
+                    attrs.$set('minDate',newValue.minDate);
+                }
+                if(newValue && newValue.maxDate){
+                    optionSet.maxDate = newValue.maxDate;
+                    attrs.$set('maxDate',newValue.maxDate);
+                }
                 if(scope.ngModel){
                     optionSet.startDate = scope.ngModel;
                 }
+                init();
+            },true);
 
-                if(!format && timePicker === false){
-                    format = "YYYY/MM/DD";
-                }
-                if(!format && timePicker === true){
-                    if(timePicker24Hour === true && timePickerSeconds === true){
-                        format = "YYYY/MM/DD HH:mm:ss";
-                    }
-                    if(timePicker24Hour === true && timePickerSeconds === false){
-                        format = "YYYY/MM/DD HH:mm";
-                    }
-                    if(timePicker24Hour === false && timePickerSeconds === true){
-                        format = "YYYY/MM/DD h:mm:ss A";
-                    }
-                    if(timePicker24Hour === false && timePickerSeconds === false){
-                        format = "YYYY/MM/DD h:mm A";
-                    }
-                }
-                optionSet.locale.format = format;
-                // console.log(optionSet);
+            var unBindonDisable = scope.$watch('bindonDisable', function(newValue, oldValue){
+                // console.log('$watch' + newValue);
+                var disableStatus = newValue?newValue:false;
+                element.find('input').attr('disabled', disableStatus);
+            })
 
-                if(minDate && minDate.replace(/\D/g, "").length >= 7) optionSet.minDate = minDate;
-                if(maxDate && maxDate.replace(/\D/g, "").length >= 7) optionSet.maxDate = maxDate;
+            element.on('$destroy', function () {
+                // console.log("on destroy");
+                unbindWatcher();
+                unBindonDataWatcher();
+                unBindonDisable();
+                scope.$destroy();
+            });
 
-                if(modelZIndex){
-                    var id = $(element).parents('.modal').attr('id');
-                    optionSet.parentEl = '#' + id;
-                } 
-
-
-                var unbindWatcher = scope.$watch('ngModel', function(newValue, oldValue) {
-                    // console.log('$watch' + newValue);
-                    if(!newValue){
-                        scope.value = '';
-                    }
-                },true);
-
-
-                element.on('$destroy', function () {
-                    // console.log("on destroy");
-                    unbindWatcher();
-                    scope.$destroy();
-                });
-                
-
+            var init = function(){
                 $timeout(function(){
                     $('#'+ datepickerId).daterangepicker(optionSet,function(start, end, label){
                         scope.ngModel = start._d;
+                        scope.onDateSelect({e:start._d});
                     });
 
                     $('#'+ datepickerId).on('cancel.daterangepicker', function(ev, picker) {
@@ -137,6 +124,44 @@ define(['btModule'], function (btModule) {
                         scope.value = '';
                     }
                 },100);
+            }
+
+
+            if(datepickerId){
+                scope.isShowDatepicker = true;
+                scope.id = datepickerId;
+
+                if(scope.ngModel) optionSet.startDate = scope.ngModel;
+
+                if(!format && timePicker === false){
+                    format = "YYYY/MM/DD";
+                }
+                if(!format && timePicker === true){
+                    if(timePicker24Hour === true && timePickerSeconds === true){
+                        format = "YYYY/MM/DD HH:mm:ss";
+                    }
+                    if(timePicker24Hour === true && timePickerSeconds === false){
+                        format = "YYYY/MM/DD HH:mm";
+                    }
+                    if(timePicker24Hour === false && timePickerSeconds === true){
+                        format = "YYYY/MM/DD h:mm:ss A";
+                    }
+                    if(timePicker24Hour === false && timePickerSeconds === false){
+                        format = "YYYY/MM/DD h:mm A";
+                    }
+                }
+                optionSet.locale.format = format;
+
+                if(minDate && minDate.replace(/\D/g, "").length >= 7) optionSet.minDate = minDate;
+                if(maxDate && maxDate.replace(/\D/g, "").length >= 7) optionSet.maxDate = maxDate;
+                // console.log(optionSet);
+
+                if(modelZIndex){
+                    var id = $(element).parents('.modal').attr('id');
+                    optionSet.parentEl = '#' + id;
+                }
+
+                init();
             }else{
                 scope.isShowDatepicker = false;
             }
@@ -146,6 +171,10 @@ define(['btModule'], function (btModule) {
             restrict: 'E',
             scope: {
                 ngModel: '=',
+                bindonData: '=',
+                bindonDisable: '=',
+                onDateSelect: '&',
+                onDateCancel: '&'
             },
             link: link,
             template: `<div class="input-prepend input-group" ng-show="isShowDatepicker">

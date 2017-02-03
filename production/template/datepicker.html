@@ -22,7 +22,7 @@
 		<div class="col-md-12 col-sm-12 col-xs-12">
 			<bt-portlet titlename="'日期選擇器設計'" refreshbtn="true" switchbtn="true" selectbtn="true" closebtn="true">
 				<p>可藉由bt-datepicker這個directive新增日期選擇器。</p>
-				<p><code>&lt;bt-datepicker <strong>datepicker-id</strong>="ss" <strong>ng-model</strong>="datesingle" <strong>format</strong>="YYYY-MM-DD h:mm:ss A" <strong>drops</strong>="up" <strong>min-date</strong>="2016-01-10" <strong>max-date</strong>="2017-10-23" <strong>show-dropdowns</strong>="true" <strong>time-picker</strong>="true" <strong>time-picker-increment</strong>="30" <strong>time-picker24-hour</strong>="false" <strong>time-picker-seconds</strong>="true"&gt;&lt;/bt-datepicker&gt;</code></p>
+				<p><code>&lt;bt-datepicker <strong>datepicker-id</strong>="ss" <strong>ng-model</strong>="datesingle" <strong>format</strong>="YYYY-MM-DD h:mm:ss A" <strong>drops</strong>="up" <strong>min-date</strong>="2016-01-10" <strong>max-date</strong>="2017-10-23" <strong>show-dropdowns</strong>="true" <strong>time-picker</strong>="true" <strong>time-picker-increment</strong>="30" <strong>time-picker24-hour</strong>="false" <strong>time-picker-seconds</strong>="true" <strong>bindon-data</strong>="obj" <strong>bindon-disable</strong>="disableStatus" <strong>on-date-select</strong>="eventSelect(e)" <strong>on-date-cancel</strong>="eventCancel(e)"&gt;&lt;/bt-datepicker&gt;</code></p>
 				<p>說明如下：</p>
 				<ol>
 					<li>datepicker-id，視同id，唯一值。(必填)</li>
@@ -36,15 +36,21 @@
                     <li>time-picker-increment，可設定分鐘間隔。</li>
                     <li>time-picker24-hour，可設定是否顯示24小時制。(boolean)</li>
                     <li>time-picker-seconds，可設定是否顯示秒數。(boolean)</li>
+					<li>bindon-data，可動態調整最大、最小日期區間。(object)</li>
+					<li>bindon-disable，可設定是否失效。(boolean)</li>
+					<li>on-date-select，datepicker選擇後的事件。</li>
+					<li>on-date-cancel，datepicker清除後的事件。</li>
 				</ol>
 			</bt-portlet>
 		</div>
 		<div class="col-md-6 col-sm-12 col-xs-12">
-				<bt-datepicker datepicker-id="aa" ng-model="datesingle" format="YYYY-MM-DD h:mm:ss A" drops="up" min-date="2016-01-10" max-date="2017-10-23" show-dropdowns="true" time-picker="true" time-picker-increment="30" time-picker24-hour="false" time-picker-seconds="true"></bt-datepicker>
+				<bt-datepicker datepicker-id="aa" ng-model="datesingle" format="YYYY-MM-DD h:mm:ss A" drops="up" min-date="2016-01-10" max-date="2017-10-23" show-dropdowns="true" time-picker="true" time-picker-increment="30" time-picker24-hour="false" time-picker-seconds="true" bindon-data="obj" bindon-disable="disableStatus" on-date-select="eventSelect(e)" on-date-cancel="eventCancel(e)"></bt-datepicker>
 		</div>
 		<div class="col-md-6 col-sm-12 col-xs-12">
 			<button class="btn btn-primary" ng-click='console_single()'>console_single</button>
 			<button class="btn btn-default" ng-click='remove_single()'>remove_single</button>
+			<button class="btn btn-default" ng-click='minMax_change()'>minMax_change</button>
+			<button class="btn btn-default" ng-click='disabled_change()'>disabled_change</button>
 		</div>
 	</div>
 </div>
