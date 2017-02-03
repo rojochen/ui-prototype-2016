@@ -29,15 +29,31 @@ define(['btModule'], function (btModule) {
             // Success
             $scope.pnotifyAddSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '新增完成！');
-
+                $timeout(function(){
+                    $('#addComplete').modal('hide');
+                },400);
+            }
+            $scope.mutliPnotifyAddSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '新增完成！');
+                $timeout(function(){
+                    $('#editGroupAdd').modal('hide');
+                },400);
             }
 
             $scope.pnotifyEditSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '修改完成！');
+                var  modalLength=$('.modal:visible').length;
+                $timeout(function(){
+                    $('#editGroupModify').modal('hide');
+                    modalLength ==2 &&  $('#modifyComplete').modal('hide');
+                },400);
             }
 
             $scope.pnotifyDelSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '刪除完成！');
+                $timeout(function(){
+                    $('#activemenuServiceDelete').modal('hide');
+                },400);
             }
             /* notify 通知訊息 end*/
 
@@ -261,14 +277,14 @@ define(['btModule'], function (btModule) {
 
 
 
-                }, 100)
+                }, 400)
 
 
             }
             $scope.confirmCancel2 = function () {
                 $timeout(function () {
                     $('#SQL').modal('hide')
-                }, 100)
+                }, 400)
 
 
             }
@@ -277,10 +293,74 @@ define(['btModule'], function (btModule) {
                 $timeout(function () {
                     $('#cancelModal').modal('hide')
                     $('#cancelEditModal').modal('hide')
-                }, 100)
+                }, 400)
 
             }
-
+            //下拉選單維護新增按鈕 start
+            $scope.showTable=function(){
+                $timeout(function(){
+                    $('#addComplete').modal('show');
+                },400);
+            }
+            //下拉選單維護新增按鈕 end
+            //新增畫面確定按鈕 start
+            $scope.activemenuServiceConfirm=function(){
+                $timeout(function(){
+                    $('#activemenuServiceConfirm').modal('show');
+                },400);
+            }
+            //新增畫面確定按鈕 end
+            // 編輯群組按鈕 start
+            $scope.editGroup=function(){
+                $timeout(function(){
+                    $('#editGroup').modal('show');
+                },400);
+            }
+            // 編輯群組按鈕 end
+            // 編輯群組新增按鈕 start
+            $scope.editGroupAdd=function(){
+                $timeout(function(){
+                    $('#editGroupAdd').modal('show');
+                },400);
+            }
+            // 編輯群新增組按鈕 end
+            //編輯群組關閉按鈕 start
+            $scope.editGroupClose=function(){
+                $timeout(function(){
+                    $('#editGroup').modal('hide');
+                },400);
+            } 
+            //編輯群組關閉按鈕 end
+            // 贈品_加碼活動下拉選單維護修改按鈕 start
+            $scope.modifyComplete=function(){
+                $timeout(function(){
+                    $('#modifyComplete').modal('show');
+                },400);
+            }
+            // 贈品_加碼活動下拉選單維護修改按鈕 end
+            // 編輯群組新增取消按鈕 start
+            $scope.cancelAddModal=function(){
+                $timeout(function(){
+                    $('#cancelEditModal').modal('hide');
+                },400);
+            }
+            // 編輯群組新增取消按鈕 end
+            // 編輯群組修改確定按鈕 start
+            $scope.cancelOk=function(){
+                 var modifyLength=$('.modal:visible').length;
+                $timeout(function(){
+                    $('#editGroupModify').modal('hide');
+                    modifyLength==2 && $('#modifyComplete').modal('hide');
+                },400);
+            }
+            // 編輯群組修改確定按鈕 end
+            // 下拉選單項目確定刪除 start
+            $scope.activemenuServiceDeleteChecked=function(){
+                $timeout(function(){
+                    $('#activemenuServiceDeleteChecked').modal('show');
+                },400);
+            }
+            // 下拉選單項目確定刪除 end
         }
     ]);
     return app;

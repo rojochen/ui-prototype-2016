@@ -191,7 +191,7 @@
                                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                             </li>
                                         </ul>
-                                        <h2>轉單設定</h2>
+                                        <h2>拆單設定</h2>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
@@ -330,7 +330,7 @@
                                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                             </li>
                                         </ul>
-                                        <h2>併單</h2>
+                                        <h2>併單設定</h2>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
@@ -640,7 +640,7 @@
                     </form>
                     <!--併單畫面 end-->
                     <!--SPVNO start-->
-                    <div class="modal bs-example-modal-sm in" id="conversionListStatusSpvDetail" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="conversionListStatusSpvDetail" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -689,7 +689,7 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#conversionItemDetail">確認</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#conversionItemDetail">確認</button>
                                 </div>
                             </div>
                         </div>
@@ -697,7 +697,7 @@
                     <!--SPVNO end-->
                     <!--SPVNO項目詳細資料 start-->
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="modal fullscreen-modal in" id="conversionItemDetail" tabindex="-1" role="dialog">
+                        <div class="modal fade fullscreen-modal" id="conversionItemDetail" tabindex="-1" role="dialog">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -1142,7 +1142,7 @@
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="spvClose()">關閉</button>
                                     </div>
                                 </div>
                             </div>
@@ -1150,7 +1150,7 @@
                     </div>
                     <!--SPVNO項目詳細資料 end-->
                     <!--確定轉單畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="conversionOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="conversionOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1167,15 +1167,15 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#conversionOkOk" ng-click="masterMultiItemEditCancel()">確認</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#conversionOkCancel">取消</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#conversionOkOk">確認</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#conversionOkCancel">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--確定轉單畫面 end-->
                     <!--轉單成功畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="conversionOkOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="conversionOkOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1192,14 +1192,61 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="conversionOk()">確認</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--轉單成功畫面 end-->
+                    <!--轉單取消 start-->
+                    <div class="modal fade bs-example-modal-lg" id="conversionOkCancel" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消轉單畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定取消轉單?</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#conversionOkCancelOk">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--轉單取消 end-->
+                    <!--轉單取消成功 start-->
+                    <div class="modal fade bs-example-modal-lg" id="conversionOkCancelOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消轉單畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">取消轉單成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="closeAll()">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--轉單取消成功 end-->
                     <!--確定重置畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="conversionReset" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="conversionReset" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1216,15 +1263,15 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#conversionResetOk" ng-click="masterMultiItemEditCancel()">確認</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#conversionResetCancel">取消</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#conversionResetOk">確認</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#conversionResetCancel">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--確定重置畫面 end-->
                     <!--轉單重置成功畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="conversionResetOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="conversionResetOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1241,14 +1288,61 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="conversionReset()">確認</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--轉單重置成功畫面 end-->
+                    <!--轉單重置取消 start-->
+                    <div class="modal fade bs-example-modal-lg" id="conversionResetCancel" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消轉單重置畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定取消轉單重置?</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#conversionResetCancelOk">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--轉單重置取消 end-->
+                    <!--轉單重置取消成功 start-->
+                    <div class="modal fade bs-example-modal-lg" id="conversionResetCancelOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消轉單重置畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">取消轉單重置成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="closeAll()">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--轉單重置取消成功 end-->
                     <!--確定拆單畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="disassembleListOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="disassembleListOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1265,15 +1359,15 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#disassembleListOkOk" ng-click="masterMultiItemEditCancel()">確認</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#disassembleListCancel">取消</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#disassembleListOkOk">確認</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#disassembleListCancel">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--確定拆單畫面 end-->
                     <!--拆單成功畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="disassembleListOkOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="disassembleListOkOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1290,14 +1384,61 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="disassembleListOk()">確認</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--拆單成功畫面 end-->
+                    <!--拆單取消 start-->
+                    <div class="modal fade bs-example-modal-lg" id="disassembleListCancel" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消拆單畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定取消拆單?</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#disassembleListCancelOk">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--拆單取消 end-->
+                    <!--拆單取消成功 start-->
+                    <div class="modal fade bs-example-modal-lg" id="disassembleListCancelOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消拆單畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">取消拆單成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="closeAll()">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--拆單取消成功 end-->
                     <!--拆單確定重置畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="disassembleListReset" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="disassembleListReset" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1314,15 +1455,15 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#disassembleListResetOk" ng-click="masterMultiItemEditCancel()">確認</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#disassembleListResetCancel">取消</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#disassembleListResetOk">確認</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#disassembleListResetCancel">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--拆單確定重置畫面 end-->
                     <!--拆單重置成功畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="disassembleListResetOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="disassembleListResetOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1339,14 +1480,61 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="disassembleListReset()">確認</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--拆單重置成功畫面 end-->
+                    <!--拆單重置取消 start-->
+                    <div class="modal fade bs-example-modal-lg" id="disassembleListResetCancel" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消拆單重置畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定取消拆單重置?</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#disassembleListResetCancelOk">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--拆單重置取消 end-->
+                    <!--拆單重置取消成功 start-->
+                    <div class="modal fade bs-example-modal-lg" id="disassembleListResetCancelOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消拆單重置畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">取消拆單重置成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="closeAll()">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--拆單重置取消成功 end-->
                     <!--確定併單畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="mergeListOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="mergeListOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1363,15 +1551,15 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#mergeListOkOk">確認</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#mergeListOkCancel">取消</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#mergeListOkOk">確認</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#mergeListOkCancel">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--確定併單畫面 end-->
                     <!--併單成功畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="mergeListOkOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="mergeListOkOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1388,14 +1576,61 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="mergeListOk()">確認</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--併單成功畫面 end-->
+                    <!--併單取消 start-->
+                    <div class="modal fade bs-example-modal-lg" id="mergeListOkCancel" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消併單畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定取消併單?</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#mergeListOkCancelOk">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--併單取消 end-->
+                    <!--併單取消成功 start-->
+                    <div class="modal fade bs-example-modal-lg" id="mergeListOkCancelOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消併單畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">取消併單成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="closeAll()">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--併單取消成功 end-->
                     <!--確定重置畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="mergeListReset" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-sm" id="mergeListReset" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1412,15 +1647,15 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#mergeListResetOk" ng-click="masterMultiItemEditCancel()">確認</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#mergeListResetCancel">取消</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#mergeListResetOk">確認</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" href="#mergeListResetCancel">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--確定重置畫面 end-->
-                    <!--轉單重置成功畫面 start-->
-                    <div class="modal bs-example-modal-sm in" id="mergeListResetOk" tabindex="-1" role="dialog">
+                    <!--併單重置成功畫面 start-->
+                    <div class="modal fade bs-example-modal-sm" id="mergeListResetOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1437,12 +1672,59 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">確認</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="mergeListReset()">確認</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--轉單重置成功畫面 end-->
+                    <!--併單重置成功畫面 end-->
+                    <!--併單重置取消 start-->
+                    <div class="modal fade bs-example-modal-lg" id="mergeListResetCancel" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消併單重置畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">確定取消併單重置?</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#mergeListResetCancelOk">確定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--併單重置取消 end-->
+                    <!--併單重置取消成功 start-->
+                    <div class="modal fade bs-example-modal-lg" id="mergeListResetCancelOk" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">取消併單重置畫面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="col-md-12 col-sm-12 col-xs-12">取消併單重置成功</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="closeAll()">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--併單重置取消成功 end-->
                 </div>
             </div>
         </div>

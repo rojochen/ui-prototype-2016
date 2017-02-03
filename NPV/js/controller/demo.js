@@ -8,8 +8,8 @@ define(['btModule'], function (btModule) {
     });
 
     app.controller('demoCtrl', ['$scope', '$timeout', '$log', '$element',
-        'ShoppingCartEntity',
-        function ($scope, $timeout, $log, $element, shoppingCartEntity) {
+        'ShoppingCartEntity', 'pnotifyService',
+        function ($scope, $timeout, $log, $element, shoppingCartEntity, pnotifyService) {
             var vm = this;
 
             /*begin 版面縮合*/
@@ -782,10 +782,11 @@ define(['btModule'], function (btModule) {
                 // }
 
                 if ($scope.offerItem) {
-                    $('#Modal4').modal('hide');
+                    $('#addSingleGeneration').modal('hide');
                     $timeout(function () {
                         if ($scope.offerItem === "1") {
                             $('#generationEdit').modal('show');
+
                         }
                         if ($scope.offerItem === "2") {
                             $('#valueAdded').modal('show');
@@ -932,6 +933,85 @@ define(['btModule'], function (btModule) {
                 }
             }
             /* end */
+
+
+            // 取消鍵
+            $scope.confirmCancel = function () {
+                $timeout(function () {
+                    $('#addSingleGeneration').modal('hide')
+                    $('#editModal').modal('hide')
+
+                }, 400)
+
+
+            }
+
+            $scope.cancel = function () {
+                $timeout(function () {
+                    $('#cancelModal').modal('hide')
+                    $('#cancelEditModal').modal('hide')
+                }, 400)
+
+            }
+
+            /* notify 通知訊息 begin */
+            // Success
+            $scope.pnotifyAddSuccess = function () {
+
+                pnotifyService.pnotifySuccess('Success', '新增完成！');
+
+                $timeout(function () {
+                    $('#valueAdded').modal('hide')
+                    $('#generationEdit').modal('hide')
+                    $('#addSingleGeneration').modal('hide')
+                    $('#generationEdit').modal('hide')
+                    $('#valueAdded').modal('hide')
+                    $('#addConfirm').modal('hide')
+                    $('#activityEdit').modal('hide')
+
+                }, 400)
+
+
+                $scope.actionData = [{
+                    "type": "活動",
+                    "name": "學生方案",
+                    "activityCode": "D3600",
+                    "dateRange": "2016/07/01-2017/03/31"
+                }, {
+                    "type": "促案",
+                    "name": "小資方案",
+                    "activityCode": "D3611",
+                    "dateRange": "2016/09/01-2017/12/31"
+                }];
+
+
+                angular.forEach($scope.actionData, function (item) {
+                    shoppingCartEntity.addItem(item);
+
+                })
+
+
+                var index = shoppingCartEntity.getCartID();
+                // $log.debug(index);
+                if (index === null) {
+                    index = shoppingCartEntity.openShoppingCart();
+                    shoppingCartEntity.setCartID(index);
+                }
+
+
+
+
+
+            }
+
+            $scope.pnotifyEditSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '修改完成！');
+            }
+
+            $scope.pnotifyDelSuccess = function () {
+                pnotifyService.pnotifySuccess('Success', '刪除完成！');
+            }
+            /* notify 通知訊息 end*/
         }
     ]);
     return app;

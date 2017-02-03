@@ -26,7 +26,7 @@
                     </form>
                     <!--EXCEL大批修改畫面 end-->
                     <!--選擇上傳EXCEL匯入檔案 start-->
-                    <div class="modal bs-example-modal-lg" id="addExcel" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="addExcel" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -49,7 +49,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="" href="#addExcelOk" id="upData">上傳</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#addExcelOk" id="upData">上傳</button>
                                     <button type="button" class="btn btn-default" data-toggle="modal" href="#addExcelCancel">取消</button>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                     </div>
                     <!--選擇上傳EXCEL匯入檔案 end-->
                     <!--匯入成功 start-->
-                    <div class="modal bs-example-modal-lg in" id="addExcelOk" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="addExcelOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -77,14 +77,14 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">確認</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="addExcelOk()">確認</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--匯入成功 end-->
                     <!--取消畫面 start-->
-                    <div class="modal bs-example-modal-lg in" id="addExcelCancel" tabindex="-1" role="dialog">
+                    <div class="modal fade bs-example-modal-lg" id="addExcelCancel" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -96,7 +96,11 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label class="col-md-12 col-sm-12 col-xs-12">確定取消匯入</label>
+                                        <div class="row">
+                                            <label class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                                <h3>確定取消匯入</h3>
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>

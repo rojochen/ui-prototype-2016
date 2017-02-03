@@ -6,7 +6,7 @@ define(['btModule'], function (btModule) {
         $logProvider.debugEnabled(true);
     });
 
-    app.controller('enforceTurnSingleCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, ShoppingCartEntity) {
+    app.controller('enforceTurnSingleCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, shoppingCartEntity) {
         /*begin 版面縮合*/
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -214,6 +214,13 @@ define(['btModule'], function (btModule) {
             }, 400);
         }
         // 輸入轉單確定按鈕 end
+        // 取消、重置 start
+        $scope.closeAll = function () {
+            $timeout(function () {
+                $('#turnSingleObjects:visible').length && $('#turnSingleObjects').modal('hide');
+            }, 400);
+        }
+        //取消、重置 end
         /* lightbox open */
         $(document).on('hidden.bs.modal', '.modal', function () {
             $('.modal:visible').length && $(document.body).addClass('modal-open');

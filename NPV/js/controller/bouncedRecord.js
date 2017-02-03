@@ -227,7 +227,37 @@ define(['btModule'], function (btModule) {
             'npvVer': '1.1'
         }, ];
         // NPV單號詳細 end
+        /* begin menu tree */
 
+        $('.tree-folder-content').css('display', 'none');
+
+        $('body').on('click', '.tree-folder', function () {
+
+            if ($(this).children('.tree-folder-content').css('display') == 'none') {
+
+                $(this).children('.tree-folder-content').css('display', 'block');
+
+                $(this).children('.tree-folder-header').children('i').removeClass('fa-plus-square-o');
+
+                $(this).children('.tree-folder-header').children('i').addClass('fa-minus-square-o');
+
+                return false;
+
+            } else {
+
+                $(this).children('.tree-folder-header').children('i').removeClass('fa-minus-square-o');
+
+                $(this).children('.tree-folder-header').children('i').addClass('fa-plus-square-o');
+
+                $(this).children('.tree-folder-content').css('display', 'none');
+
+                return false;
+
+            }
+
+        });
+
+        /* end menu tree */
         // 代碼明細樹狀選單 start
         $scope.menutTreeData = [{
             "name": "B001＿3G學生＿新啟用專案(同生共死)",
@@ -270,35 +300,38 @@ define(['btModule'], function (btModule) {
         // 購物車顯示 start
         $scope.openbuy = function () {
 
-            $scope.actionData = [{
-                "type": "活動",
-                "name": "學生方案",
-                "activityCode": "D3600",
-                "dateRange": "2016/07/01-2017/03/31"
-            }, {
-                "type": "促案",
-                "name": "小資方案",
-                "activityCode": "D3611",
-                "dateRange": "2016/09/01-2017/12/31"
-            }];
+                $scope.actionData = [{
+                    "type": "活動",
+                    "name": "學生方案",
+                    "activityCode": "D3600",
+                    "dateRange": "2016/07/01-2017/03/31"
+                }, {
+                    "type": "促案",
+                    "name": "小資方案",
+                    "activityCode": "D3611",
+                    "dateRange": "2016/09/01-2017/12/31"
+                }];
 
 
-            angular.forEach($scope.actionData, function (item) {
-                shoppingCartEntity.addItem(item);
+                angular.forEach($scope.actionData, function (item) {
+                    shoppingCartEntity.addItem(item);
 
-            })
+                })
 
 
-            var index = shoppingCartEntity.getCartID();
-            // $log.debug(index);
-            if (index === null) {
-                index = shoppingCartEntity.openShoppingCart();
-                shoppingCartEntity.setCartID(index);
+
+                var index = shoppingCartEntity.getCartID();
+                // $log.debug(index);
+                if (index === null) {
+                    index = shoppingCartEntity.openShoppingCart();
+                    shoppingCartEntity.setCartID(index);
+                }
+
+
+
+
+
             }
-
-            $('#addSingleGeneration').modal('hide');
-
-        }
         // 購物車顯示 end
 
 
