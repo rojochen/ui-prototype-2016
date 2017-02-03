@@ -43,6 +43,94 @@ define(['btModule'], function (btModule) {
             // console.log(timePicker24Hour);
             // console.log(timePickerSeconds);
 
+            var unbindWatcher = scope.$watch('ngModel', function(newValue, oldValue) {
+                // console.log('$watch' + newValue);
+                if(newValue && newValue.length === 0){
+                    scope.value = [];
+                    scope.onDateCancel({e:'cancel'});
+                }
+            },true);
+
+            var unBindonDataWatcher = scope.$watch('bindonData', function(newValue, oldValue){
+                // console.log(newValue);
+                if(newValue && newValue.minDate){
+                    optionSet.minDate = newValue.minDate;
+                    attrs.$set('minDate',newValue.minDate);
+                }
+                if(newValue && newValue.maxDate){
+                    optionSet.maxDate = newValue.maxDate;
+                    attrs.$set('maxDate',newValue.maxDate);
+                }
+                if(scope.ngModel){
+                    optionSet.startDate = scope.ngModel[0];
+                    optionSet.endDate = scope.ngModel[1];
+                }
+                init();
+            },true);
+
+            var unBindonDisable = scope.$watch('bindonDisable', function(newValue, oldValue){
+                // console.log('$watch' + newValue);
+                var disableStatus = newValue?newValue:false;
+                element.find('input').attr('disabled', disableStatus);
+            })
+
+            element.on('$destroy', function () {
+                // console.log("on destroy");
+                unbindWatcher();
+                unBindonDataWatcher();
+                unBindonDisable();
+                scope.$destroy();
+            });
+
+            var init = function(){
+                $timeout(function(){
+                    $('#'+ datepickerId).daterangepicker(optionSet,function(start, end, label){
+                        scope.ngModel = [];
+                        scope.ngModel.push(start._d);
+                        scope.ngModel.push(end._d);
+                        scope.onDateSelect({e:[start._d, end._d]});
+                    });
+
+                    $('#'+ datepickerId).on('cancel.daterangepicker', function(ev, picker) {
+                        $(this).val('');
+                        scope.$apply(function(){
+                            scope.ngModel.length = 0;
+                        });
+                    });
+
+                    $('#'+ datepickerId).on('showCalendar.daterangepicker', function(){
+                        // console.log('open-1');
+                        var zIndex = 2,
+                            layuiLayerZIndex = $(this).parents('.layui-layer').css('z-index');
+                        if(modelZIndex)  zIndex = modelZIndex;
+                        if(layuiLayerZIndex) zIndex = layuiLayerZIndex;
+                        // console.log(zIndex);
+                        $(this).css('z-index', zIndex);
+                        $('.daterangepicker').css('z-index', zIndex);
+                    });
+
+                    $('#'+ datepickerId).on('show.daterangepicker', function(){
+                        // console.log('open-2');
+                    });
+
+                    $('#'+ datepickerId).on('hideCalendar.daterangepicker', function(){
+                        console.log('close-1');
+                    });
+
+                    $('#'+ datepickerId).on('hide.daterangepicker', function(){
+                        // console.log('close-2');
+                        if(!scope.ngModel || scope.ngModel.length === 0){
+                            $(this).val('');
+                            scope.value = [];
+                        }
+                    });
+
+                    if(!scope.ngModel || scope.ngModel.length === 0){
+                        scope.value = [];
+                    }
+                },100);
+            }
+
 
             if(datepickerId){
                 scope.isShowDatepicker = true;
@@ -81,66 +169,7 @@ define(['btModule'], function (btModule) {
                     optionSet.parentEl = '#' + id;
                 }
 
-
-                var unbindWatcher = scope.$watch('ngModel', function(newValue, oldValue) {
-                    // console.log('$watch' + newValue);
-                    if(newValue && newValue.length === 0){
-                        scope.value = [];
-                    }
-                },true);
-
-
-                element.on('$destroy', function () {
-                    // console.log("on destroy");
-                    unbindWatcher();
-                    scope.$destroy();
-                });
-                
-
-                $timeout(function(){
-                    $('#'+ datepickerId).daterangepicker(optionSet,function(start, end, label){
-                        scope.ngModel = [];
-                        scope.ngModel.push(start._d);
-                        scope.ngModel.push(end._d);
-                        // console.log(scope.ngModel);
-                    });
-
-                    $('#'+ datepickerId).on('cancel.daterangepicker', function(ev, picker) {
-                        $(this).val('');
-                        scope.ngModel.length = 0;
-                    });
-
-                    $('#'+ datepickerId).on('showCalendar.daterangepicker', function(){
-                        // console.log('open-1');
-                        var zIndex = 2,
-                            layuiLayerZIndex = $(this).parents('.layui-layer').css('z-index');
-                        if(modelZIndex)  zIndex = modelZIndex;
-                        if(layuiLayerZIndex) zIndex = layuiLayerZIndex;
-                        // console.log(zIndex);
-                        $(this).css('z-index', zIndex);
-                        $('.daterangepicker').css('z-index', zIndex);
-                    });
-
-                    $('#'+ datepickerId).on('show.daterangepicker', function(){
-                        // console.log('open-2');
-                    });
-
-                    $('#'+ datepickerId).on('hideCalendar.daterangepicker', function(){
-                        console.log('close-1');
-                    });
-
-                    $('#'+ datepickerId).on('hide.daterangepicker', function(){
-                        // console.log('close-2');
-                        if(!scope.ngModel || scope.ngModel.length === 0){
-                            $(this).val('');
-                            scope.value = [];
-                        }
-                    });
-
-                    if(!scope.ngModel || scope.ngModel.length === 0){
-                        scope.value = [];
-                    }
-                },100);
+                init();
             }else{
                 scope.isShowDatepicker = false;
             }
@@ -150,6 +179,10 @@ define(['btModule'], function (btModule) {
             restrict: 'E',
             scope: {
                 ngModel: '=',
+                bindonData: '=',
+                bindonDisable: '=',
+                onDateSelect: '&',
+                onDateCancel: '&'
             },
             link: link,
             template: `<div class="input-prepend input-group" ng-show="isShowDatepicker">

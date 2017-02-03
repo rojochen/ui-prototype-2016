@@ -61,8 +61,6 @@ define(['btModule'], function (btModule) {
                 }
                 if(scope.ngModel){
                     optionSet.startDate = scope.ngModel;
-                }else{
-                    $('#'+ datepickerId).val('');
                 }
                 init();
             },true);
