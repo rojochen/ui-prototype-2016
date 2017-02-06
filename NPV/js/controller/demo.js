@@ -957,7 +957,6 @@ define(['btModule'], function (btModule) {
             /* notify 通知訊息 begin */
             // Success
             $scope.pnotifyAddSuccess = function () {
-
                 pnotifyService.pnotifySuccess('Success', '新增完成！');
 
                 $timeout(function () {
@@ -971,25 +970,35 @@ define(['btModule'], function (btModule) {
 
                 }, 400)
 
+                /* begin 實際位置 待替換*/
+                // $scope.menutTreeData = [{
+                //     "name": "aaa",
+                //     "id": 1,
+                //     "list": [{
+                //         "name": "aaa-child-1",
+                //         "id": 3,
+                //         "list": [{
+                //             "name": "aaa-grandson-1.1",
+                //             "id": 1
+                //         }, {
+                //             "name": "aaa-grandson-1.2",
+                //             "id": 2
+                //         }]
+                //     }, {
+                //         "name": "aaa-child-2",
+                //         "id": 2,
+                //         "list": []
+                //     }]
+                // }, {
+                //     "name": "bbb",
+                //     "id": 3,
+                //     "list": []
+                // }]
 
-                $scope.actionData = [{
-                    "type": "活動",
-                    "name": "學生方案",
-                    "activityCode": "D3600",
-                    "dateRange": "2016/07/01-2017/03/31"
-                }, {
-                    "type": "促案",
-                    "name": "小資方案",
-                    "activityCode": "D3611",
-                    "dateRange": "2016/09/01-2017/12/31"
-                }];
-
-
-                angular.forEach($scope.actionData, function (item) {
-                    shoppingCartEntity.addItem(item);
-
-                })
-
+                // angular.forEach($scope.menutTreeData, function (item) {
+                //     shoppingCartEntity.addItem(item);
+                // })
+                /* end 實際位置 待替換*/
 
                 var index = shoppingCartEntity.getCartID();
                 // $log.debug(index);
@@ -997,10 +1006,6 @@ define(['btModule'], function (btModule) {
                     index = shoppingCartEntity.openShoppingCart();
                     shoppingCartEntity.setCartID(index);
                 }
-
-
-
-
 
             }
 
