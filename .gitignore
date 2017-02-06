@@ -2,6 +2,7 @@ nbproject
 npm-debug.log
 node_modules
 .sass-cache
+.vscode
 build
 vendors
 production/assets
