@@ -940,7 +940,8 @@ define(['btModule'], function (btModule) {
                 $timeout(function () {
                     $('#addSingleGeneration').modal('hide')
                     $('#editModal').modal('hide')
-
+                    $('#CompoundPromptSet').modal('hide')
+                    $('#CompoundPromptSetTable').modal('hide')
                 }, 400)
 
 

@@ -2082,7 +2082,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#CompoundPromptSetTable">確定</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                     </div>
                 </div>
             </div>
@@ -2198,8 +2198,8 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="openbuy()">確定</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="openbuy()">確定</button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                     </div>
                 </div>
             </div>
@@ -2686,13 +2686,11 @@
                                                 </div>
                                             </label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
-                                            <bt-datepicker datepicker-id="actionDateStart" ng-model="renewalSuitableDateStart" format="YYYY-MM-DD" drops="down"
-                                                show-dropdowns="true"></bt-datepicker>
+                                            <bt-datepicker datepicker-id="actionDateStart" ng-model="renewalSuitableDateStart" format="YYYY-MM-DD" drops="down" show-dropdowns="true"></bt-datepicker>
                                         </div>
                                         <label class="col-md-1">~</label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
-                                            <bt-datepicker datepicker-id="actionDateEnd" ng-model="renewalSuitableDateEnd" format="YYYY-MM-DD" drops="down"
-                                                show-dropdowns="true"></bt-datepicker>
+                                            <bt-datepicker datepicker-id="actionDateEnd" ng-model="renewalSuitableDateEnd" format="YYYY-MM-DD" drops="down" show-dropdowns="true"></bt-datepicker>
                                         </div>
                                     </div>
                                 </div>
