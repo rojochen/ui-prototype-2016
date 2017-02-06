@@ -6,8 +6,8 @@ define(['btModule'], function (btModule) {
         $logProvider.debugEnabled(true);
     });
 
-    app.controller('multiEditServiceCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, ShoppingCartEntity) {
-        /*begin 版面縮合*/
+    /*begin 版面縮合*/
+    app.controller('multiEditServiceCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', 'pnotifyService', function ($scope, $timeout, $log, $element, ShoppingCartEntity, pnotifyService) {
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
                 $ICON = $(this).find('i'),
@@ -23,6 +23,21 @@ define(['btModule'], function (btModule) {
             }
             $ICON.toggleClass('fa-minus  fa-plus');
         });
+        /* notify 通知訊息 begin */
+        // Success
+        $scope.masterMultiItemEditUploadOk = function () {
+            pnotifyService.pnotifySuccess('Success', '更新完成！');
+            $timeout(function () {
+                $('#masterMultiItemEdit').modal('hide');
+            }, 400);
+        }
+        $scope.masterMultiItemEditResetOk = function () {
+            pnotifyService.pnotifySuccess('Success', '重置完成！');
+            $timeout(function () {
+                $('#masterMultiItemEditReset').modal('hide');
+            }, 400);
+        }
+        /* notify 通知訊息 end*/
         /*end 版面縮合*/
         /* begin */
         $scope.btnShow1 = true;
@@ -276,6 +291,10 @@ define(['btModule'], function (btModule) {
         $(document).on('hidden.bs.modal', '.modal', function () {
             $('.modal:visible').length && $(document.body).addClass('modal-open');
         });
+        $(document).on('show.bs.modal', '.modal', function () {
+            $("element.style").css("padding-right", "0");
+        });
+
         /* lightbox end */
 
         // modal日期bug
@@ -294,12 +313,20 @@ define(['btModule'], function (btModule) {
         //     });
         // });
         //主約類型多筆編輯維護修改按鈕動作 start
-        $scope.masterMultiItemEditCancel = function () {
+        $scope.masterMultiItemEditUploadCancelOk = function () {
             $timeout(function () {
-                $('#masterMultiItemEdit').modal('hide');
-            }, 100);
+                $('#masterMultiItemEditUpload').modal('hide');
+            }, 400);
         }
         //主約類型多筆編輯維護修改按鈕動作 end
+        // 重置取消按鈕start
+        $scope.mergeListResetCancelOk = function () {
+            $timeout(function () {
+                $('#masterMultiItemEditReset').modal('hide');
+            }, 400);
+        }
+
+        // 重置取消按鈕end
         //續約適用活動期間 start
         $('#renewalSuitableDateStart').daterangepicker({
             singleDatePicker: true

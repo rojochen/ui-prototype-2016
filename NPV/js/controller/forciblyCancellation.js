@@ -6,7 +6,16 @@ define(['btModule'], function (btModule) {
         $logProvider.debugEnabled(true);
     });
 
-    app.controller('forciblyCancellationCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, ShoppingCartEntity) {
+    app.controller('forciblyCancellationCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', 'pnotifyService', function ($scope, $timeout, $log, $element, ShoppingCartEntity, pnotifyService) {
+        /* notify 通知訊息 begin */
+        // Success
+        $scope.forciblyCancellationOkOk = function () {
+            pnotifyService.pnotifySuccess('Success', '退單完成！');
+            $timeout(function () {
+                $('#forciblyCancellationOk').modal('hide');
+            }, 400);
+        }
+        /* notify 通知訊息 end*/
         /*begin 版面縮合*/
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -244,14 +253,13 @@ define(['btModule'], function (btModule) {
         };
         // 表格第二欄樣式 end
 
-
-        // 強制退單按鈕動作 start
-        $scope.forciblyCancellationOkClick = function () {
+        // 強制退單取消確定 start
+        $scope.forciblyCancellationChecked = function () {
             $timeout(function () {
-                $('#forciblyCancellationDetail').modal('hide');
-            }, 100);
+                $('#forciblyCancellationOk').modal('hide');
+            }, 400);
         }
-        // 強制退單按鈕動作 end
+        // 強制退單取消確定 end
         //續約適用活動期間 start
         $('#renewalSuitableDateStart').daterangepicker({
             singleDatePicker: true
