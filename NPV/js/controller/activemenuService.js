@@ -55,6 +55,12 @@ define(['btModule'], function (btModule) {
                     $('#activemenuServiceDelete').modal('hide');
                 }, 400);
             }
+            $scope.editReset = function () {
+                pnotifyService.pnotifySuccess('Success', '重置完成！');
+                $timeout(function () {
+                    $('#editReset').modal('hide');
+                }, 400);
+            }
 
             /* notify 通知訊息 end*/
 
