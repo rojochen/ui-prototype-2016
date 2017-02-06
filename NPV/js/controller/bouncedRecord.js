@@ -6,7 +6,17 @@ define(['btModule'], function (btModule) {
         $logProvider.debugEnabled(true);
     });
 
-    app.controller('bouncedRecordCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, shoppingCartEntity) {
+    app.controller('bouncedRecordCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', 'pnotifyService', function ($scope, $timeout, $log, $element, shoppingCartEntity, pnotifyService) {
+        /* notify 通知訊息 begin */
+        // Success
+        // $scope.pnotifyAddSuccess = function () {
+        //     pnotifyService.pnotifySuccess('Success', '新增完成！');
+        //     $timeout(function () {
+        //         $('#addComplete').modal('hide');
+        //     }, 400);
+        // }
+
+        /* notify 通知訊息 end*/
         /*begin 版面縮合*/
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -67,6 +77,9 @@ define(['btModule'], function (btModule) {
         /* lightbox open */
         $(document).on('hidden.bs.modal', '.modal', function () {
             $('.modal:visible').length && $(document.body).addClass('modal-open');
+        });
+        $(document).on('show.bs.modal', '.modal', function () {
+            $("element.style").css("padding-right", "0");
         });
         /* lightbox end */
 
@@ -300,38 +313,38 @@ define(['btModule'], function (btModule) {
         // 購物車顯示 start
         $scope.openbuy = function () {
 
-                $scope.actionData = [{
-                    "type": "活動",
-                    "name": "學生方案",
-                    "activityCode": "D3600",
-                    "dateRange": "2016/07/01-2017/03/31"
-                }, {
-                    "type": "促案",
-                    "name": "小資方案",
-                    "activityCode": "D3611",
-                    "dateRange": "2016/09/01-2017/12/31"
-                }];
+            $scope.actionData = [{
+                "type": "活動",
+                "name": "學生方案",
+                "activityCode": "D3600",
+                "dateRange": "2016/07/01-2017/03/31"
+            }, {
+                "type": "促案",
+                "name": "小資方案",
+                "activityCode": "D3611",
+                "dateRange": "2016/09/01-2017/12/31"
+            }];
 
 
-                angular.forEach($scope.actionData, function (item) {
-                    shoppingCartEntity.addItem(item);
+            angular.forEach($scope.actionData, function (item) {
+                shoppingCartEntity.addItem(item);
 
-                })
-
-
-
-                var index = shoppingCartEntity.getCartID();
-                // $log.debug(index);
-                if (index === null) {
-                    index = shoppingCartEntity.openShoppingCart();
-                    shoppingCartEntity.setCartID(index);
-                }
+            })
 
 
 
-
-
+            var index = shoppingCartEntity.getCartID();
+            // $log.debug(index);
+            if (index === null) {
+                index = shoppingCartEntity.openShoppingCart();
+                shoppingCartEntity.setCartID(index);
             }
+
+
+
+
+
+        }
         // 購物車顯示 end
 
 

@@ -6,7 +6,28 @@ define(['btModule'], function (btModule) {
         $logProvider.debugEnabled(true);
     });
 
-    app.controller('waitTreatmentListCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, ShoppingCartEntity) {
+    app.controller('waitTreatmentListCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', 'pnotifyService', function ($scope, $timeout, $log, $element, ShoppingCartEntity, pnotifyService) {
+        /* notify 通知訊息 begin */
+        // Success
+        $scope.dataBecomeEffectiveSetOkOk = function () {
+            pnotifyService.pnotifySuccess('Success', '修改完成！');
+            $timeout(function () {
+                $('#dataBecomeEffectiveSet').modal('hide');
+            }, 400);
+        }
+        $scope.designationDoubleOk = function () {
+            pnotifyService.pnotifySuccess('Success', '指派完成！');
+            $timeout(function () {
+                $('#designationObjects').modal('hide');
+            }, 400);
+        }
+        $scope.chargebackCauseDoubleOk = function () {
+            pnotifyService.pnotifySuccess('Success', '退單完成！');
+            $timeout(function () {
+                $('#chargebackCause').modal('hide');
+            }, 400);
+        }
+        /* notify 通知訊息 end*/
         /*begin 版面縮合*/
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -62,21 +83,77 @@ define(['btModule'], function (btModule) {
             // "scrollX": true,
 
         };
+        /* begin menu tree */
 
+        $('.tree-folder-content').css('display', 'none');
+
+        $('body').on('click', '.tree-folder', function () {
+
+            if ($(this).children('.tree-folder-content').css('display') == 'none') {
+
+                $(this).children('.tree-folder-content').css('display', 'block');
+
+                $(this).children('.tree-folder-header').children('i').removeClass('fa-plus-square-o');
+
+                $(this).children('.tree-folder-header').children('i').addClass('fa-minus-square-o');
+
+                return false;
+
+            } else {
+
+                $(this).children('.tree-folder-header').children('i').removeClass('fa-minus-square-o');
+
+                $(this).children('.tree-folder-header').children('i').addClass('fa-plus-square-o');
+
+                $(this).children('.tree-folder-content').css('display', 'none');
+
+                return false;
+
+            }
+
+        });
+
+        /* end menu tree */
+        // 代碼明細樹狀選單 start
+        $scope.menutTreeData = [{
+            "name": "B001＿3G學生＿新啟用專案(同生共死)",
+            "id": 1,
+            "list": [{
+                "name": "S001_大雙網3G_599月租費方案(Single)",
+                "id": 3,
+                "list": []
+            }, {
+                "name": "S002_行動上網優惠6個月(Single)",
+                "id": 2,
+                "list": []
+            }]
+        }, {
+            "name": "B002＿3G學生＿新啟用專案(各自分飛)",
+            "id": 1,
+            "list": [{
+                "name": "S003_新絕配3G_599方案(Single)",
+                "id": 1,
+                "list": []
+            }, {
+                "name": "S004_3G行動上網(Single)",
+                "id": 2,
+                "list": []
+            }, {
+                "name": "S005_來電答鈴優惠2個月(Single)",
+                "id": 2,
+                "list": []
+            }]
+        }]
+        // 代碼明細樹狀選單 end
 
         /* lightbox open */
         $(document).on('hidden.bs.modal', '.modal', function () {
             $('.modal:visible').length && $(document.body).addClass('modal-open');
         });
+        $(document).on('show.bs.modal', '.modal', function () {
+            $('.modal:visible').css('padding-right', '0px');
+        });
         /* lightbox end */
-
-        // 確定修改生效日按鈕start
-        $scope.dateOk = function () {
-            $timeout(function () {
-                $('#dataBecomeEffectiveSet').modal('hide');
-            }, 100);
-        }
-        // 確定修改生效日按鈕end
         // 代處理 start
         $scope.waitTreatmentListData = [{
             'waitId': 'list1',
@@ -374,21 +451,13 @@ define(['btModule'], function (btModule) {
             }, 400);
         };
         // 指派對象OK按鈕 end
-        // 指派對象顯示OK視窗 start
-        $scope.designationDoubleOk = function () {
-            $timeout(function () {
-                $('#designationDoubleOk').modal('show');
-            }, 400);
-        };
-        // 指派對象OK視窗 end
-        // 指派對象成功頁面按鈕 start
-        $scope.designationchecked = function () {
+        // 指派取消確定按鈕 start
+        $scope.designationObjectsCancelOk = function () {
             $timeout(function () {
                 $('#designationObjects').modal('hide');
             }, 400);
-        };
-        // 指派對象成功頁面按鈕 end
-
+        }
+        // 指派取消確定按鈕 end
         // 退單按鈕 start
         $scope.chargebackCause = function () {
             $timeout(function () {
@@ -403,20 +472,13 @@ define(['btModule'], function (btModule) {
             }, 400);
         };
         // 退單確定按紐 end
-        // 退單成功畫面 start
-        $scope.chargebackCauseDoubleOk = function () {
-            $timeout(function () {
-                $('#chargebackCauseDoubleOk').modal('show');
-            }, 400);
-        };
-        // 退單成功畫面 end
-        // 退單成功確認按鈕 start
-        $scope.chargebackCausechecked = function () {
+        // 退單取消確定按鈕 start
+        $scope.chargebackCauseCancelOk = function () {
             $timeout(function () {
                 $('#chargebackCause').modal('hide');
             }, 400);
         };
-        // 退單成功確認按鈕 end
+        // 退單取消確定按鈕 end
         // 檔案生效日按鈕 start
         $scope.dataBecomeEffective = function () {
             $timeout(function () {
@@ -438,14 +500,11 @@ define(['btModule'], function (btModule) {
             }, 400);
         }
         // 修改檔案生效日按鈕 end
-        // 修改檔案生效日成功畫面 start
-        $scope.dataBecomeEffectiveSetOkOk = function () {
+        $scope.dataBecomeEffectiveSetCancelOk = function () {
             $timeout(function () {
-                $('#dataBecomeEffectiveSetOkOk').modal('show');
+                $("#dataBecomeEffectiveSet").modal('hide');
             }, 400);
         }
-        // 修改檔案生效日成功畫面 end
-
 
         $('#datatable_waitTreatmentListData').DataTable().destroy();
 

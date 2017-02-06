@@ -114,37 +114,13 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#forciblyCancellationOkOk">確認</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="forciblyCancellationOkOk()">確認</button>
                                     <button type="button" class="btn btn-default" data-toggle="modal" href="#forciblyCancellationDelete">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--強制退單確定畫面 end-->
-                    <!--強制退單成功畫面 start-->
-                    <div class="modal fade bs-example-modal-sm" id="forciblyCancellationOkOk" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">
-                                        <span aria-hidden="true">&times;</span>
-                                        <span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">強制退單成功畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label class="col-md-12 col-sm-12 col-xs-12">強制退單成功</label>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="forciblyCancellationOkClick()">確認</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--強制退單成功畫面 end-->
                     <!--強制退單取消 start-->
                     <div class="modal fade bs-example-modal-lg" id="forciblyCancellationDelete" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -169,29 +145,6 @@
                         </div>
                     </div>
                     <!--強制退單取消 end-->
-                    <!--強制退單取消成功 start-->
-                    <div class="modal fade bs-example-modal-lg" id="forciblyCancellationChecked" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">取消強制退單畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label class="col-md-12 col-sm-12 col-xs-12">取消強制退單成功</label>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="closeAll()">確定</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--強制退單取消成功 end-->
                 </div>
             </div>
         </div>

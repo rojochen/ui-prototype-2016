@@ -6,7 +6,17 @@ define(['btModule'], function (btModule) {
         $logProvider.debugEnabled(true);
     });
 
-    app.controller('excelGlutChangeCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, ShoppingCartEntity) {
+    app.controller('excelGlutChangeCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', 'pnotifyService', function ($scope, $timeout, $log, $element, ShoppingCartEntity, pnotifyService) {
+        /* notify 通知訊息 begin */
+        // Success
+        // $scope.upDataExcelOk = function () {
+        //     pnotifyService.pnotifySuccess('Success', '上傳完成！');
+        //     $timeout(function () {
+        //         $('#addExcel').modal('hide');
+        //     }, 400);
+        // }
+
+        /* notify 通知訊息 end*/
         /*begin 版面縮合*/
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -43,12 +53,15 @@ define(['btModule'], function (btModule) {
         $(document).on('hidden.bs.modal', '.modal', function () {
             $('.modal:visible').length && $(document.body).addClass('modal-open');
         });
+        $(document).on('show.bs.modal', '.modal', function () {
+            $('.modal:visible').css('padding-right', '0px');
+        });
         /* lightbox end */
         // 確定按鈕跳窗動作
         $scope.confirmCancel = function () {
             $timeout(function () {
                 $('#addExcel').modal('hide')
-            }, 100)
+            }, 400)
 
 
         }
@@ -56,7 +69,14 @@ define(['btModule'], function (btModule) {
         $scope.cancel = function () {
             $timeout(function () {
                 $('#addExcelCancel').modal('hide')
-            }, 100)
+            }, 400)
+
+        }
+        // 匯入成功確認按鈕
+        $scope.addExcelOk = function () {
+            $timeout(function () {
+                $('#addExcel').modal('hide')
+            }, 400)
 
         }
     }]);

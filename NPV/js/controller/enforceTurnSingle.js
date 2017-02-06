@@ -6,7 +6,18 @@ define(['btModule'], function (btModule) {
         $logProvider.debugEnabled(true);
     });
 
-    app.controller('enforceTurnSingleCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', function ($scope, $timeout, $log, $element, shoppingCartEntity) {
+    app.controller('enforceTurnSingleCtrl', ['$scope', '$timeout', '$log', '$element', 'ShoppingCartEntity', 'pnotifyService', function ($scope, $timeout, $log, $element, shoppingCartEntity, pnotifyService) {
+
+
+        /* notify 通知訊息 begin */
+        // Success
+        $scope.turnSingleDoubleOk = function () {
+            pnotifyService.pnotifySuccess('Success', '轉單完成！');
+            $timeout(function () {
+                $('#turnSingleObjects').modal('hide');
+            }, 400);
+        }
+        /* notify 通知訊息 end*/
         /*begin 版面縮合*/
         $element.on('click', '.collapse-link', function () {
             var $BOX_PANEL = $(this).closest('.x_panel'),
@@ -159,15 +170,20 @@ define(['btModule'], function (btModule) {
 
         // 轉單對象選單 start
         $scope.turnSingleObjectsSelect = [{
-            'ObjectName': 'Chong, Luke 張立暉'
+            'ObjectName': 'Chong, Luke 張立暉',
+            'id': '1'
         }, {
-            'ObjectName': 'Chen, Moggie 陳美玲'
+            'ObjectName': 'Chen, Moggie 陳美玲',
+            'id': '2'
         }, {
-            'ObjectName': 'Chen, Moureen 陳杍宣'
+            'ObjectName': 'Chen, Moureen 陳杍宣',
+            'id': '3'
         }, {
-            'ObjectName': 'Chien, Teresa 簡茗芳'
+            'ObjectName': 'Chien, Teresa 簡茗芳',
+            'id': '4'
         }, {
-            'ObjectName': 'Fan, Moggie 范莉宣'
+            'ObjectName': 'Fan, Moggie 范莉宣',
+            'id': '5'
         }];
         // 轉單對象選單 end
         $scope.turnSingleObjectsSelectDefault = $scope.turnSingleObjectsSelect[0];
@@ -193,13 +209,6 @@ define(['btModule'], function (btModule) {
         // 已停用帳號預設 start
         $scope.disableNumberDefault = $scope.disableNumber[0]
         // 已停用帳號預設 end
-        // 確定轉單畫面確定按鈕 start
-        $scope.turnSinglechecked = function () {
-            $timeout(function () {
-                $('#turnSingleObjects').modal('hide');
-            }, 400);
-        }
-        // 確定轉單畫面確定按鈕 end
         // 轉單按鈕 start
         $scope.turnSingleObjects = function () {
             $timeout(function () {
@@ -224,6 +233,9 @@ define(['btModule'], function (btModule) {
         /* lightbox open */
         $(document).on('hidden.bs.modal', '.modal', function () {
             $('.modal:visible').length && $(document.body).addClass('modal-open');
+        });
+        $(document).on('show.bs.modal', '.modal', function () {
+            $('.modal:visible').css('padding-right', '0px');
         });
         /* lightbox end */
 

@@ -1112,7 +1112,8 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#masterMultiItemEditUploadOk">確認</button>
+                                    <!--<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#masterMultiItemEditUploadOk">確認</button>-->
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="masterMultiItemEditUploadOk()">確認</button>
                                     <button type="button" class="btn btn-default" data-toggle="modal" href="#masterMultiItemEditUploadCancel">取消</button>
                                 </div>
                             </div>
@@ -1120,7 +1121,7 @@
                     </div>
                     <!--修改畫面 end-->
                     <!--修改成功畫面 start-->
-                    <div class="modal fade bs-example-modal-sm" id="masterMultiItemEditUploadOk" tabindex="-1" role="dialog">
+                    <!--<div class="modal fade bs-example-modal-sm" id="masterMultiItemEditUploadOk" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -1141,7 +1142,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!--修改成功畫面 end-->
                     <!--修改取消 start-->
                     <div class="modal fade bs-example-modal-lg" id="masterMultiItemEditUploadCancel" tabindex="-1" role="dialog">
@@ -1160,36 +1161,13 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#masterMultiItemEditUploadCancelOk">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="masterMultiItemEditUploadCancelOk()">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--修改取消 end-->
-                    <!--修改取消成功 start-->
-                    <div class="modal fade bs-example-modal-lg" id="masterMultiItemEditUploadCancelOk" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">取消修改畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label class="col-md-12 col-sm-12 col-xs-12">取消修改成功</label>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="closeAll()">確定</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--修改取消成功 end-->
                     <!--重置畫面 start-->
                     <div class="modal fade bs-example-modal-lg" id="masterMultiItemEditReset" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -1208,37 +1186,13 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#masterMultiItemEditResetOk">確認</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="masterMultiItemEditResetOk()">確認</button>
                                     <button type="button" class="btn btn-default" data-toggle="modal" href="#masterMultiItemEditResetCancel">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--重置畫面 end-->
-                    <!--重置成功畫面 start-->
-                    <div class="modal fade bs-example-modal-sm" id="masterMultiItemEditResetOk" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">
-                                        <span aria-hidden="true">&times;</span>
-                                        <span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">重置成功畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label class="col-md-12 col-sm-12 col-xs-12">重置成功</label>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="closeAll()">確認</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--重置成功畫面 end-->
                     <!--重置取消 start-->
                     <div class="modal fade bs-example-modal-lg" id="masterMultiItemEditResetCancel" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
@@ -1256,36 +1210,13 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#mergeListResetCancelOk">確定</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="mergeListResetCancelOk()">確定</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal">取消</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--重置取消 end-->
-                    <!--重置取消成功 start-->
-                    <div class="modal fade bs-example-modal-lg" id="mergeListResetCancelOk" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title">取消重置畫面</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label class="col-md-12 col-sm-12 col-xs-12">取消重置成功</label>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="closeAll()">確定</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--重置取消成功 end-->
                 </div>
             </div>
         </div>
