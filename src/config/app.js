@@ -58,7 +58,6 @@ define(['jquery', 'angular', 'moment', 'PNotify'], function (jquery, angular, mo
     require('../../vendors/blockUI/jquery.blockUI.js');
 
     //form.html and form_layout.html
-    require('../../vendors/moment/moment.js');
     require('../../vendors/select2/dist/js/select2.full.min.js');
     require('../../vendors/jquery.tagsinput/src/jquery.tagsinput.js');
     require('../../vendors/parsleyjs/dist/parsley.min.js');
