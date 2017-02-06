@@ -970,35 +970,74 @@ define(['btModule'], function (btModule) {
 
                 }, 400)
 
-                /* begin 實際位置 待替換*/
-                // $scope.menutTreeData = [{
-                //     "name": "aaa",
-                //     "id": 1,
-                //     "list": [{
-                //         "name": "aaa-child-1",
-                //         "id": 3,
-                //         "list": [{
-                //             "name": "aaa-grandson-1.1",
-                //             "id": 1
-                //         }, {
-                //             "name": "aaa-grandson-1.2",
-                //             "id": 2
-                //         }]
-                //     }, {
-                //         "name": "aaa-child-2",
-                //         "id": 2,
-                //         "list": []
-                //     }]
-                // }, {
-                //     "name": "bbb",
-                //     "id": 3,
-                //     "list": []
-                // }]
-
-                // angular.forEach($scope.menutTreeData, function (item) {
-                //     shoppingCartEntity.addItem(item);
-                // })
-                /* end 實際位置 待替換*/
+                /* begin tree data */
+                $scope.menutTreeData = [{
+                    "name": "學生專案",
+                    "code": "L001",
+                    "type": "Single",
+                    "id": 1,
+                    "list": []
+                }, {
+                    "name": "3G終極管家Plus月租699A限24",
+                    "code": "S002",
+                    "id": 2,
+                    "type": "L001學生專案",
+                    "list": []
+                }, {
+                    "name": "長青專案",
+                    "code": "L004",
+                    "id": 3,
+                    "list": [{
+                        "name": "長青_團結力量大",
+                        "code": "B003",
+                        "id": 3,
+                        "list": [{
+                            "name": "aaa-grandson-1.1",
+                            "code": "L001",
+                            "id": 1,
+                            "list": [{
+                                "name": "遠傳e書城149限12",
+                                "code": "S001",
+                                "id": 1,
+                            }]
+                        }, {
+                            "name": "aaa-grandson-1.2",
+                            "code": "L002",
+                            "id": 2,
+                            "list": [{
+                                "name": "行動3G續約專案",
+                                "code": "B001",
+                                "id": 1,
+                                "list": [{
+                                    "name": "續約升級-1~249手機搭765方案",
+                                    "code": "S010",
+                                    "id": 1
+                                }, {
+                                    "name": "續約升級-1~249i-mode手機搭765方案",
+                                    "code": "S015",
+                                    "id": 2
+                                }, {
+                                    "name": "續約250~749手機搭開講168方案",
+                                    "code": "S020",
+                                    "id": 3
+                                }]
+                            }]
+                        }, {
+                            "name": "aaa-grandson-1.3",
+                            "code": "L001",
+                            "id": 3,
+                            "list": [{
+                                "name": "安心講180單門號專案",
+                                "code": "B002",
+                                "id": 1,
+                            }]
+                        }]
+                    }]
+                }]
+                angular.forEach($scope.menutTreeData, function (item) {
+                    shoppingCartEntity.addItem(item);
+                })
+                /* end tree data*/
 
                 var index = shoppingCartEntity.getCartID();
                 // $log.debug(index);
@@ -1008,6 +1047,49 @@ define(['btModule'], function (btModule) {
                 }
 
             }
+
+            $scope.isShowshoppingCartTable = false;
+            $scope.shoppingCartList = [];
+            var opt_shoppingCartTable = {
+                "oLanguage": {
+                    "sProcessing": "處理中...",
+                    "sLengthMenu": "顯示 _MENU_ 項結果",
+                    "sZeroRecords": "沒有匹配結果",
+                    "sInfo": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                    "sInfoEmpty": "顯示第 0 至 0 項結果，共 0 項",
+                    "sInfoFiltered": "(從 _MAX_ 項結果過濾)",
+                    "sSearch": "搜索:",
+                    "oPaginate": {
+                        "sFirst": "首頁",
+                        "sPrevious": "上一頁",
+                        "sNext": "下一頁",
+                        "sLast": "尾頁"
+                    },
+                },
+                "searching": false,
+                "bInfo": false,
+                "bPaginate": false,
+                "bLengthChange": false,
+            };
+            //try
+            $("#shoppingCartTable_area").on('showShoppingCartList', function(event, param1){
+                $scope.isShowshoppingCartTable = true;
+                $scope.shoppingCartList = [];
+                $scope.shoppingCartList.push(param1);
+                console.log(param1.id);
+                $('#shoppingCartTable_1').DataTable().destroy();
+                $('#shoppingCartTable_2').DataTable().destroy();
+                $('#shoppingCartTable_3').DataTable().destroy();
+                $timeout(function(){
+                    $('#shoppingCartTable_'+ param1.id).DataTable(opt_shoppingCartTable);
+                    console.log('ddd')
+                }, 100)
+            })
+
+            $scope.btn_define = function(){
+                $scope.isShowshoppingCartTable = false;
+            }
+
 
             $scope.pnotifyEditSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '修改完成！');

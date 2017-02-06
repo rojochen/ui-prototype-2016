@@ -18,48 +18,6 @@ define([
         var vm = this;
         
         vm.openList = function () {
-            /* begin 暫時位置 */
-            console.log('暫時位置');
-            $scope.menutTreeData = [{
-                "name": "學生專案",
-                "code": "L001",
-                "id": 1,
-                "list": []
-            }, {
-                "name": "3G終極管家Plus月租699A限24",
-                "code": "S002",
-                "id": 2,
-                "list": []
-            }, {
-                "name": "長青專案",
-                "code": "L004",
-                "id": 3,
-                "list": [{
-                    "name": "aaa-child-1",
-                    "id": 3,
-                    "list": [{
-                        "name": "aaa-grandson-1.1",
-                        "id": 1,
-                        "list": []
-                    }, {
-                        "name": "aaa-grandson-1.2",
-                        "id": 2,
-                        "list": [{
-                            "name": "aaa-grandson-1.21",
-                            "id": 1,
-                        }]
-                    }]
-                }, {
-                    "name": "aaa-child-2",
-                    "id": 2,
-                    "list": []
-                }]
-            }]
-            angular.forEach($scope.menutTreeData, function (item) {
-                shoppingCartEntity.addItem(item);
-            })
-            /* end 暫時位置 */
-
             shoppingCartEntity.toggleShoppingCart();
         }
 

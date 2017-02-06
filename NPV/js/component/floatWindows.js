@@ -55,6 +55,23 @@ define([
             $scope.selectList = shoppingCartEntity.getList();
         }
 
+
+        $scope.edit_list = function(x){
+            $('#shoppingCartTable_area').triggerHandler('showShoppingCartList', x);
+        }
+
+        $scope.remove_list = function(x, index){
+            var selectItem = shoppingCartEntity.getList();
+            shoppingCartEntity.removeItem();
+            angular.forEach(selectItem, function (item) {
+                if (item.id !== x.id) {
+                    shoppingCartEntity.addItem(item);
+                }
+            })
+            // $log.debug(shoppingCartEntity.getList());
+            $scope.selectList = shoppingCartEntity.getList();
+        }
+
     };
 
     return app;

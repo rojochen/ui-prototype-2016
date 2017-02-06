@@ -32,36 +32,36 @@
 			<div ng-show="x.list.length !== 0" class='tree-folder'>
 				<div class='tree-folder-header'>
 					<i class='fa fa-plus-square-o'></i>
-					<div class='tree-folder-name' title="{{x.name}}">{{x.code}} {{x.name}}</div>
-					<div style="text-align: end;width: 30%;float: right;">
-						<button type="button" class="btn  btn-info btn-xs"><i class="fa fa-pencil"></i></button>
-						<button type="button" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+					<div class="tree_btn">
+						<button type="button" class="btn  btn-info btn-xs" ng-click="edit_list(x)"><i class="fa fa-pencil"></i></button>
+						<button type="button" class="btn btn-danger btn-xs" ng-click="remove_list(x, $index)"><i class="glyphicon glyphicon-remove"></i></button>
 					</div>
+					<div class='tree-folder-name levelOne_text' title="{{x.code}} {{x.name}}">{{x.code}} {{x.name}}</div>
 				</div>
-				<div class='tree-folder-content' style="display: none;">
+				<div class='tree-folder-content'>
 					<div ng-repeat="y in x.list track by $index">
 						<div ng-show="y.list.length !== 0" class='tree-folder'>
 							<div class='tree-folder-header'>
 								<i class='fa fa-plus-square-o'></i>
-								<div class='tree-folder-name' title="{{y.name}}">{{y.name}}</div>
+								<div class='tree-folder-name' title="{{y.code}} {{y.name}}">{{y.code}} {{y.name}}</div>
 							</div>
-							<div class='tree-folder-content' style="display: none;">
+							<div class='tree-folder-content'>
 								<div ng-repeat="z in y.list track by $index">
 									<div ng-show="z.list.length !== 0" class='tree-folder'>
 										<div class='tree-folder-header'>
 											<i class='fa fa-plus-square-o'></i>
-											<div class='tree-folder-name' title="{{z.name}}">{{z.name}}</div>
+											<div class='tree-folder-name' title="{{z.code}}">{{z.code}}</div>
 										</div>
-										<div class='tree-folder-content' style="display: none;">
+										<div class='tree-folder-content'>
 											<div ng-repeat="a in z.list track by $index">
 												<div class='tree-item'>
-													<div class='tree-item-name' title="{{a.name}}">{{a.name}}</div>
+													<div class='tree-item-name' title="{{a.code}} {{a.name}}">{{a.code}} {{a.name}}</div>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div ng-show="z.list.length === 0" class='tree-item'>
-										<div class='tree-item-name' title="{{z.name}}">{{z.name}}</div>
+										<div class='tree-item-name' title="{{z.code}}">{{z.code}}</div>
 									</div>
 									<!--<div class='tree-item'>
 										<div class='tree-item-name' title="{{z.name}}">{{z.name}}</div>
@@ -70,18 +70,18 @@
 							</div>
 						</div>
 						<div ng-show="y.list.length === 0" class='tree-item'>
-							<div class='tree-item-name' title="{{y.name}}">{{y.name}}</div>
+							<div class='tree-item-name' title="{{y.code}} {{y.name}}">{{y.code}} {{y.name}}</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div ng-show="x.list.length === 0" class='tree-item'>
-				<div class='tree-item-name' title="{{x.name}}">{{x.code}} {{x.name}}</div>
-				<div style="text-align: end;width: 30%;float: right;">
-					<button type="button" class="btn  btn-info btn-xs"><i class="fa fa-pencil"></i></button>
-					<button type="button" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+				<div class="tree_btn">
+					<button type="button" class="btn  btn-info btn-xs" ng-click="edit_list(x)"><i class="fa fa-pencil"></i></button>
+					<button type="button" class="btn btn-danger btn-xs" ng-click="remove_list(x, $index)"><i class="glyphicon glyphicon-remove"></i></button>
 				</div>
+				<div class='tree-item-name levelOne_text' title="{{x.code}} {{x.name}}">{{x.code}} {{x.name}}</div>
 			</div>
 		</div>
 	</div>
