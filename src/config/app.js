@@ -51,7 +51,49 @@ define(['jquery', 'angular', 'moment', 'PNotify'], function (jquery, angular, mo
     require('../js/helpers/smartresize.js');
     // require('../js/custom.js');
     global.echarts = require('echarts');
-    require('../../src/config/joe.js');
+    // require('../../src/config/joe.js');
+
+
+    //blockUI.html
+    require('../../vendors/blockUI/jquery.blockUI.js');
+
+    //form.html and form_layout.html
+    require('../../vendors/moment/moment.js');
+    require('../../vendors/select2/dist/js/select2.full.min.js');
+    require('../../vendors/jquery.tagsinput/src/jquery.tagsinput.js');
+    require('../../vendors/parsleyjs/dist/parsley.min.js');
+
+    // //tables_dynamic.html
+    require('../../vendors/datatables.net/js/jquery.dataTables.min.js'); 
+    require('../../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js');
+
+    // //gridslider.html
+    require('../../vendors/ion.rangeSlider/js/ion.rangeSlider.min.js');
+
+    //threeCol.html
+    require('../../vendors/jquery-slimscroll/jquery.slimscroll.min.js');
+    require('../js/page/threeCol.js');
+
+    //notifications.html - louis
+    require('../../vendors/pnotify/dist/pnotify.js');
+    require('../../vendors/sweetalert2/dist/sweetalert2.js');
+
+    //switch.html - louis
+    require('../../vendors/bootstrap-switch/dist/js/bootstrap-switch.min.js');
+
+    //projects.html - louis
+    require('../../vendors/iCheck/icheck.min.js');
+    
+    //form_advanced.html - louis
+    require('../../vendors/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js');
+    require('../../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js');
+    require('../../vendors/jquery-knob/dist/jquery.knob.min.js');
+    require('../../vendors/cropper/dist/cropper.min.js');
+
+    //dragDrop.html
+    require('../js/page/dragDrop.js');
+
+
     // require('../../vendors/angular/angular.min.js');
     //require("expose?angular!../../vendors/angular/angular.min.js");
 
