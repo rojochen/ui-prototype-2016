@@ -109,32 +109,35 @@
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>條件類型中文說明</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件類型中文說明</label>
+                                            <div class="col-md-9 col-sm-10 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-offset-1 col-sm-offset-2"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件類型代碼</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>條件類型代碼</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>是否顯示</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>是否顯示</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <select class="form-control">
                                                     <option>是</option>
                                                     <option>否</option>
                                                 </select>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">適用兌換方式</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">適用兌換方式</label>
                                             <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
-                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchAddText">
+                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchAddText"></select>
                                                 </div>
                                                 <div class="col-md-2">
                                                     <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-forward"></i></button>
@@ -143,19 +146,21 @@
                                                     <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
-                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchAddText1">
+                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchAddText1"></select>
                                                 </div>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">備註</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <textarea class="form-control" rows="3"></textarea>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group ">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
                                             <div class="col-md-2 col-sm-2 col-xs-12">
                                                 <input type="text " class="form-control col-md-7 col-xs-12">
                                             </div>
@@ -270,53 +275,58 @@
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>條件類型中文說明</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件類型中文說明</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>條件類型代碼</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件類型代碼</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>是否顯示</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>是否顯示</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <select class="form-control">
                                                     <option>是</option>
                                                     <option>否</option>
                                                 </select>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">適用兌換方式</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">適用兌換方式</label>
                                             <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
-                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchEditText">
+                                                    <select id="exchangeSelect1" class="form-control" size="8" multiple="multiple" ng-model="exchangeSelect1" ng-options="item for item in names | filter:searchEditText"></select>
                                                 </div>
                                                 <div class="col-md-2">
-                                                    <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-forward"></i></button>
-                                                    <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
-                                                    <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
-                                                    <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
+                                                    <button type="button" id="exchangeAdd_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-forward"></i></button>
+                                                    <button type="button" id="exchangeAdd" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                                                    <button type="button" id="exchangeRemove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                                                    <button type="button" id="exchangeRemove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
-                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchEditText1">
+                                                    <select id="exchangeSelect2" class="form-control" size="8" multiple="multiple" ng-model="exchangeSelect2" ng-options="item for item in names1 | filter:searchEditText1"></select>
                                                 </div>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">備註</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <textarea class="form-control" rows="3"></textarea>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group ">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
                                             <div class="col-md-2 col-sm-2 col-xs-12">
                                                 <input type="text " class="form-control col-md-7 col-xs-12">
                                             </div>

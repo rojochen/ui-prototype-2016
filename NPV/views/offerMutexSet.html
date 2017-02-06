@@ -98,7 +98,7 @@
                         <!-- offer互斥設定維護 表格 end -->
                         <!-- 頁籤 begin -->
                         <div class="pull-right">
-                            <div bt-pagination ng-model="tableInfo" page-size="2" page-count="10"></div>
+                            <div bt-pagination ng-model="tableInfo" page-size="2" page-count=-9></div>
                         </div>
                         <!-- 頁籤 end -->
                     </form>
@@ -134,51 +134,54 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>Offer項目</label>
-                                            <div class="container-fluid col-md-10 col-sm-10 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                            <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
-                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="addSearchText1">
+                                                    <select id="offerSelect1" class="form-control" size="8" multiple="multiple" ng-model="offerSelect1" ng-options="item for item in names | filter:addSearchText1"></select>
                                                 </div>
                                                 <div class="col-md-2 ">
-                                                    <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                    <button type="button" id="offerAdd1_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-forward"></i>
                                                     </button>
-                                                    <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
-                                                    <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
-                                                    <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
+                                                    <button type="button" id="offerAdd1" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                                                    <button type="button" id="offerRemove1" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                                                    <button type="button" id="offerRemove1_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
-                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="addSearchText2">
+                                                    <select id="offerSelect2" class="form-control" size="8" multiple="multiple" ng-model="offerSelect2" ng-options="item for item in names1 | filter:addSearchText2"></select>
                                                 </div>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>互斥Offer項目</label>
-                                            <div class="container-fluid col-md-10 col-sm-10 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                            <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
-                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="addSearchText3">
+                                                    <select id="offerMutexSelect1" class="form-control" size="8" multiple="multiple" ng-model="offerMutexSelect1" ng-options="item for item in names | filter:addSearchText3"></select>
                                                 </div>
                                                 <div class="col-md-2 ">
-                                                    <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                    <button type="button" id="offerMutexAdd1_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-forward"></i>
                                                     </button>
-                                                    <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
-                                                    <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
-                                                    <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
+                                                    <button type="button" id="offerMutexAdd1" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                                                    <button type="button" id="offerMutexRemove1" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                                                    <button type="button" id="offerMutexRemove1_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
-                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="addSearchText4">
+                                                    <select id="offerMutexSelect2" class="form-control" size="8" multiple="multiple" ng-model="offerMutexSelect2" ng-options="item for item in names1 | filter:addSearchText4"></select>
                                                 </div>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>訊息描述</label>
-                                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <textarea class="form-control" rows="3"></textarea>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>是否提示警訊</label>
@@ -192,10 +195,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">設定互斥原因</label>
-                                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <textarea class="form-control" rows="3"></textarea>
                                             </div>
                                         </div>
+                                        <div class="col-md-offset-1 col-sm-offset-1"></div>
                                     </form>
                                 </div>
                                 <div class="modal-footer">
@@ -323,49 +327,50 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>Offer項目</label>
-                                            <div class="container-fluid col-md-10 col-sm-10 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                            <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
-                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="editSearchText1">
+                                                    <select id="offerSelect3" class="form-control" size="8" multiple="multiple" ng-model="offerSelect3" ng-options="item for item in names | filter:editSearchText1"></select>
                                                 </div>
                                                 <div class="col-md-2 ">
-                                                    <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                    <button type="button" id="offerAdd2_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-forward"></i>
                                                     </button>
-                                                    <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
-                                                    <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
-                                                    <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
+                                                    <button type="button" id="offerAdd2" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                                                    <button type="button" id="offerRemove2" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                                                    <button type="button" id="offerRemove2_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
-                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="editSearchText2">
+                                                    <select id="offerSelect4" class="form-control" size="8" multiple="multiple" ng-model="offerSelect4" ng-options="item for item in names1 | filter:editSearchText2"></select>
                                                 </div>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>互斥Offer項目</label>
-                                            <div class="container-fluid col-md-10 col-sm-10 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+                                            <div class="container-fluid col-md-9 col-sm-9 col-xs-12" style="padding-left: 0px;padding-right: 0px;">
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText">
-                                                    <select id="select1" class="form-control" size="8" multiple="multiple" ng-model="select1" ng-options="item for item in names | filter:searchText"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="editSearchText3">
+                                                    <select id="offerMutexSelect3" class="form-control" size="8" multiple="multiple" ng-model="offerMutexSelect3" ng-options="item for item in names | filter:editSearchText3"></select>
                                                 </div>
                                                 <div class="col-md-2 ">
-                                                    <button type="button" id="add_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
+                                                    <button type="button" id="offerMutexAdd2_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-forward"></i>
                                                     </button>
-                                                    <button type="button" id="add" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
-                                                    <button type="button" id="remove" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
-                                                    <button type="button" id="remove_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
+                                                    <button type="button" id="offerMutexAdd2" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                                                    <button type="button" id="offerMutexRemove2" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                                                    <button type="button" id="offerMutexRemove2_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c"><i class="glyphicon glyphicon-backward"></i></button>
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="searchText1">
-                                                    <select id="select2" class="form-control" size="8" multiple="multiple" ng-model="select2" ng-options="item for item in names1 | filter:searchText1"></select>
+                                                    <input type="text" class="form-control" placeholder="請輸入文字" ng-model="editSearchText4">
+                                                    <select id="offerMutexSelect4" class="form-control" size="8" multiple="multiple" ng-model="offerMutexSelect4" ng-options="item for item in names1 | filter:editSearchText4"></select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>訊息描述</label>
-                                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <textarea class="form-control" rows="3"></textarea>
                                             </div>
                                         </div>
@@ -381,9 +386,10 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">設定互斥原因</label>
-                                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <textarea class="form-control" rows="3"></textarea>
                                             </div>
+                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                     </form>
                                 </div>

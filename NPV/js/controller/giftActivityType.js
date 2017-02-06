@@ -167,6 +167,48 @@ define(['btModule'], function (btModule) {
             $('#datatable_giftActivityType').DataTable().destroy();
             /* 合約相關新增/維護表格 end */
 
+            /* 左右多選框 begin */
+            $scope.names = ["禮遇專區", "申辦加碼禮", "Booster", "QR Code", "現有客戶加碼禮"];
+            $scope.names1 = ["禮遇專區", "申辦加碼禮", "Booster", "QR Code", "現有客戶加碼禮"];
+
+            $(function () {
+                //新增
+                $("#add").click(function () {
+                    var option = $("#select1 option:selected");
+                    option.appendTo("#select2");
+                });
+                $("#add_all").click(function () {
+                    var $option = $("#select1 option");
+                    $option.appendTo("#select2");
+                });
+                $("#remove").click(function () {
+                    var $option = $("#select2 option:selected");
+                    $option.appendTo("#select1");
+                });
+                $("#remove_all").click(function () {
+                    var $option = $("#select2 option");
+                    $option.appendTo("#select1");
+                });
+                //修改
+                $("#exchangeAdd").click(function () {
+                    var option = $("#exchangeSelect1 option:selected");
+                    option.appendTo("#exchangeSelect2");
+                });
+                $("#exchangeAdd_all").click(function () {
+                    var $option = $("#exchangeSelect1 option");
+                    $option.appendTo("#exchangeSelect2");
+                });
+                $("#exchangeRemove").click(function () {
+                    var $option = $("#exchangeSelect2 option:selected");
+                    $option.appendTo("#exchangeSelect1");
+                });
+                $("#exchangeRemove_all").click(function () {
+                    var $option = $("#exchangeSelect2 option");
+                    $option.appendTo("#exchangeSelect1");
+                });
+            });
+            /* 左右多選框 end */
+
             /* notify 通知訊息 begin */
             // Success
             $scope.pnotifyAddSuccess = function () {

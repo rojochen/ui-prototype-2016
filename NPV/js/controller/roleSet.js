@@ -47,7 +47,7 @@ define(['btModule'], function (btModule) {
                         "sLast": "尾頁"
                     },
                 },
-                 "searching": false,
+                "searching": false,
                 "bInfo": true,
                 "bPaginate": true,
                 "bLengthChange": false
@@ -168,9 +168,9 @@ define(['btModule'], function (btModule) {
             /* begin */
             $scope.multiselectControl = false;
             $scope.showMultiselect = function () {
-                    $scope.multiselectControl = true;
-                }
-                /* end */
+                $scope.multiselectControl = true;
+            }
+            /* end */
 
 
         }
