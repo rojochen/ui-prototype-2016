@@ -212,7 +212,8 @@
         
         .tree .tree-folder .tree-folder-content {
           margin-left: 23px;
-          position: relative
+          position: relative;
+          display: none;
         }
         
         .tree .tree-folder .tree-folder-content:before {
@@ -414,5 +415,20 @@
         .nav-sm .main_menu_side {
           margin-top: 30px;
         }
+        .tree .tree_btn{
+          text-align: end;
+          width: 30%;
+          float: right;
+        }
+        .tree .tree-folder-name.levelOne_text{
+          width: 70%;
+        }
         /* end left menu */
+
+
+        /* begin shoppingCartTable */
+        #shoppingCartTable_area{
+          margin:20px 0;
+        }
+        /* end shoppingCartTable */
 
