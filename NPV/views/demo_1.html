@@ -2312,7 +2312,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">*活動效期</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="col-md-10 col-sm-4 col-xs-12">
                                     <div class="form-group">
                                         <div class="radio">
                                             <label>
@@ -2335,9 +2335,20 @@
                                             </label>
                                         </div>
                                         <div class="radio">
-                                            <label>
+                                            <label class="col-md-2">
+                                                <div>
                                                 <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">自訂:活動起始時間
+                                                </div>
                                             </label>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <bt-datepicker datepicker-id="renewalSuitableDateStart" ng-model="renewalSuitableDateStart" format="YYYY-MM-DD" drops="down"
+                                                    show-dropdowns="true"></bt-datepicker>
+                                            </div>
+                                            <label class="col-md-1">~</label>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <bt-datepicker datepicker-id="renewalSuitableDateEnd" ng-model="renewalSuitableDateEnd" format="YYYY-MM-DD" drops="down"
+                                                    show-dropdowns="true"></bt-datepicker>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2646,7 +2657,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12" for="activityGroup">*活動效期</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="col-md-10 col-sm-10 col-xs-12">
                                 <div class="form-group">
                                     <div class="radio">
                                         <label>
@@ -2669,9 +2680,20 @@
                                             </label>
                                     </div>
                                     <div class="radio">
-                                        <label>
+                                        <label class="col-md-2">
+                                                <div>
                                                 <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">自訂:活動起始時間
+                                                </div>
                                             </label>
+                                        <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <bt-datepicker datepicker-id="actionDateStart" ng-model="renewalSuitableDateStart" format="YYYY-MM-DD" drops="down"
+                                                show-dropdowns="true"></bt-datepicker>
+                                        </div>
+                                        <label class="col-md-1">~</label>
+                                        <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <bt-datepicker datepicker-id="actionDateEnd" ng-model="renewalSuitableDateEnd" format="YYYY-MM-DD" drops="down"
+                                                show-dropdowns="true"></bt-datepicker>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
