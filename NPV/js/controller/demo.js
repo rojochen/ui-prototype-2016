@@ -1012,6 +1012,22 @@ define(['btModule'], function (btModule) {
                 pnotifyService.pnotifySuccess('Success', '刪除完成！');
             }
             /* notify 通知訊息 end*/
+
+
+            //續約適用活動期間 start
+            $('#actionDateStart').daterangepicker({
+                singleDatePicker: true
+                // calender_style: "picker_4"
+            }, function (start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+            });
+            $('#actionDateEnd').daterangepicker({
+                singleDatePicker: true
+                // calender_style: "picker_4"
+            }, function (start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+            });
+            //續約適用活動期間 end
         }
     ]);
     return app;
