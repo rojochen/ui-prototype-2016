@@ -20,6 +20,77 @@
                         <button type="button" class="btn btn-info " data-toggle="modal" data-target="#generationInquire">促代查詢</button>
                     </form>
                 </form>
+                <div id="shoppingCartTable_area" ng-show="isShowshoppingCartTable">
+                    <!-- begin ShowshoppingCartTable 活動-->
+                    <table id="shoppingCartTable_1" class="table table-striped table-bordered" ng-show="shoppingCartList[0].id === 1">
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>類別</th>
+                                <th>活動代碼</th>
+                                <th>活動類別名稱</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in shoppingCartList">
+                                <td ng-bind="$index+1"></td>
+                                <td ng-bind="x.type"></td>
+                                <td ng-bind="x.code"></td>
+                                <td ng-bind="x.name"></td>
+                                <td><button type="button" class="btn  btn-info btn-xs" data-toggle="modal" href="#activityEdit"><i class="fa fa-pencil"></i> 修改</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- end ShowshoppingCartTable 活動-->
+                    <!-- begin ShowshoppingCartTable 促代-->
+                    <table id="shoppingCartTable_2" class="table table-striped table-bordered" ng-show="shoppingCartList[0].id === 2">
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>活動類別</th>
+                                <th>促代代碼</th>
+                                <th>促代名稱</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in shoppingCartList">
+                                <td ng-bind="$index+1"></td>
+                                <td ng-bind="x.type"></td>
+                                <td ng-bind="x.code"></td>
+                                <td ng-bind="x.name"></td>
+                                <td><button type="button" class="btn  btn-info btn-xs" data-toggle="modal" href="#generationEdit"><i class="fa fa-pencil"></i> 修改</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- end ShowshoppingCartTable 促代-->
+                    <!-- begin ShowshoppingCartTable boundle -->
+                    <table id="shoppingCartTable_3" class="table table-striped table-bordered" ng-show="shoppingCartList[0].id === 3">
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>活動類別</th>
+                                <th>促代代碼</th>
+                                <th>促代名稱</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in shoppingCartList[0].list[0].list">
+                                <td ng-bind="$index+1"></td>
+                                <td ng-bind="x.type"></td>
+                                <td ng-bind="x.code"></td>
+                                <td ng-bind="x.name"></td>
+                                <td><button type="button" class="btn  btn-info btn-xs" data-toggle="modal" href="#Boundle"><i class="fa fa-pencil"></i> 修改</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- begin ShowshoppingCartTable boundle-->
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary" ng-click="btn_define()">確定</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -2082,7 +2153,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#CompoundPromptSetTable">確定</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                     </div>
                 </div>
             </div>
@@ -2198,8 +2269,8 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="openbuy()">確定</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="openbuy()">確定</button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                     </div>
                 </div>
             </div>
@@ -2686,13 +2757,11 @@
                                                 </div>
                                             </label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
-                                            <bt-datepicker datepicker-id="actionDateStart" ng-model="renewalSuitableDateStart" format="YYYY-MM-DD" drops="down"
-                                                show-dropdowns="true"></bt-datepicker>
+                                            <bt-datepicker datepicker-id="actionDateStart" ng-model="renewalSuitableDateStart" format="YYYY-MM-DD" drops="down" show-dropdowns="true"></bt-datepicker>
                                         </div>
                                         <label class="col-md-1">~</label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
-                                            <bt-datepicker datepicker-id="actionDateEnd" ng-model="renewalSuitableDateEnd" format="YYYY-MM-DD" drops="down"
-                                                show-dropdowns="true"></bt-datepicker>
+                                            <bt-datepicker datepicker-id="actionDateEnd" ng-model="renewalSuitableDateEnd" format="YYYY-MM-DD" drops="down" show-dropdowns="true"></bt-datepicker>
                                         </div>
                                     </div>
                                 </div>
