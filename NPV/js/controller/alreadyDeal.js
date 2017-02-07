@@ -123,6 +123,10 @@ define(['btModule'], function (btModule) {
                 toggle: false
             })
             /* 手風琴 end*/
+
+            $scope.aa = function () {
+                alert('hello');
+            }
         }
     ]);
     return app;
