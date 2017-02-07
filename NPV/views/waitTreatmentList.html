@@ -15,7 +15,7 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#dataBecomeEffective" ng-click="dataBecomeEffective()">檔案生效日期</button>
+                                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" href="#dataBecomeEffective" ng-click="dataBecomeEffective()">檔案生效日期</button>
                                 </div>
                             </div>
                         </div>
@@ -51,13 +51,13 @@
                                                             <td ng-bind="x.waitTime"></td>
                                                             <td ng-bind="x.waitPM"></td>
                                                             <td>
-                                                                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="designation()">{{x.waitDesignate}}</button>
+                                                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" ng-click="designation($event);"><i class="fa fa-id-card"></i> {{x.waitDesignate}}</button>
                                                             </td>
                                                             <td ng-bind="x.waitStatus"></td>
                                                             <td>
-                                                                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="chargebackCause()">退單</button>
+                                                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" ng-click="chargebackCause($event,x.waitNpv);"><i class="fa fa-reply"></i> 退單</button>
                                                             </td>
-                                                            <td><button type="button" class="btn btn-primary">匯出SPV</button></td>
+                                                            <td><button type="button" class="btn btn-info btn-xs" ng-click="exportSpv($event)"><i class="fa fa-download"></i> 匯出SPV</button></td>
                                                         </tr>
                                                         <tr>
                                                             <!--NPV單號詳細 start-->
@@ -90,7 +90,7 @@
                                                                                         <td>4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000</td>
                                                                                         <td ng-bind="y.npvTime"></td>
                                                                                         <td>1.1</td>
-                                                                                        <td><button type="button" class="btn btn-primary">版本比對</button></td>
+                                                                                        <td><button type="button" class="btn btn-primary btn-xs"><i class="fa fa-compress"></i> 版本比對</button></td>
                                                                                     </tr>
                                                                                 </tbody>
                                                 </table>
@@ -372,7 +372,7 @@
                                         <span aria-hidden="true">&times;</span>
                                         <span class="sr-only">Close</span>
                                     </button>
-                                    <h4 class="modal-title" ng-model="dataBecomeEffectiveSequence">「{{dataBecomeEffectiveSequence[0].dateBecomeEffective}}」退件原因</h4>
+                                    <h4 class="modal-title">「{{npvTitle}}」退件原因</h4>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="modal-body form-horizontal">
