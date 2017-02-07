@@ -13,7 +13,11 @@
                 <div class="row">
                     <form class="form-horizontal form-label-left">
                         <div class="form-group">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" href="#forciblyCancellationOk">強制退單</button>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" href="#forciblyCancellationOk">強制退單</button>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="row">
@@ -46,7 +50,7 @@
                                                             <td ng-bind="z.waitType2"></td>
                                                             <td ng-bind="z.waitTime"></td>
                                                             <td ng-bind="z.waitPM"></td>
-                                                            <td><button type="button" class="btn btn-primary">匯出SPV</button></td>
+                                                            <td><button type="button" class="btn btn-info btn-xs" ng-click="outSpv($event);"><i class="fa fa-download"></i>匯出SPV</button></td>
                                                         </tr>
                                                         <tr>
                                                             <!--NPV單號詳細 start-->
