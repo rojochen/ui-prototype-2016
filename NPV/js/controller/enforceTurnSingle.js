@@ -207,7 +207,7 @@ define(['btModule'], function (btModule) {
         }];
         // 已停用帳號 end
         // 已停用帳號預設 start
-        $scope.disableNumberDefault = $scope.disableNumber[0]
+        $scope.disableNumberDefault = $scope.disableNumber[0];
         // 已停用帳號預設 end
         // 轉單按鈕 start
         $scope.turnSingleObjects = function () {
@@ -230,6 +230,11 @@ define(['btModule'], function (btModule) {
             }, 400);
         }
         //取消、重置 end
+        // 匯出SPV start
+        $scope.exportSpv = function ($event) {
+            $event.stopPropagation();
+        }
+        // 匯出SPV end
         /* lightbox open */
         $(document).on('hidden.bs.modal', '.modal', function () {
             $('.modal:visible').length && $(document.body).addClass('modal-open');

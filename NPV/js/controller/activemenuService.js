@@ -306,7 +306,7 @@ define(['btModule'], function (btModule) {
 
             }
             //下拉選單維護新增按鈕 start
-            $scope.showTable = function () {
+            $scope.addComplete = function () {
                 $timeout(function () {
                     $('#addComplete').modal('show');
                 }, 400);

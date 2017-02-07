@@ -409,12 +409,12 @@ define(['btModule'], function (btModule) {
         }
         // 檔案生效日查詢事件 end
         // 檔案生效日期設定 start
-        $('#dataBecomeEffectiveSetDate').daterangepicker({
-            singleDatePicker: true
-            // calender_style: "picker_4"
-        }, function (start, end, label) {
-            console.log(start.toISOString(), end.toISOString(), label);
-        });
+        // $('#dataBecomeEffectiveSetDate').daterangepicker({
+        //     singleDatePicker: true
+        //     // calender_style: "picker_4"
+        // }, function (start, end, label) {
+        //     console.log(start.toISOString(), end.toISOString(), label);
+        // });
         // 檔案生效日期設定 end
         // 表格第二欄樣式 start
         $scope.waitItemStyle = {
@@ -438,7 +438,8 @@ define(['btModule'], function (btModule) {
 
 
         // 指派按鈕 start
-        $scope.designation = function () {
+        $scope.designation = function ($event) {
+            $event.stopPropagation();
             $timeout(function () {
                 $('#designationObjects').modal('show');
             }, 400);
@@ -459,12 +460,19 @@ define(['btModule'], function (btModule) {
         }
         // 指派取消確定按鈕 end
         // 退單按鈕 start
-        $scope.chargebackCause = function () {
+        $scope.chargebackCause = function ($event, Npv) {
+            $event.stopPropagation();
             $timeout(function () {
                 $('#chargebackCause').modal('show');
             }, 400);
+            $scope.npvTitle = Npv;
         };
         // 退單按鈕 end
+        // 匯出SPV start
+        $scope.exportSpv = function ($event) {
+            $event.stopPropagation();
+        };
+        // 匯出SPV end
         // 退單確定按紐 start
         $scope.chargebackCauseOk = function () {
             $timeout(function () {

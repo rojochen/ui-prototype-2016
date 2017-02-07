@@ -14,7 +14,15 @@
                     <form class="form-horizontal form-label-left">
                         <!--LOA流程名稱 start-->
                         <div class="form-group">
-                            <div class="row">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">流程名稱:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control" placeholder="促代維護">
+                            </div>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">退單方式:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <select class="form-control" ng-model="LOADefaultCharacter" ng-options="y.chargeName for y in chargebackFunction track by $index"></select>
+                            </div>
+                            <!--<div class="row">
                                 <div class="form-group">
                                     <label class="control-label col-md-1">流程名稱:</label>
                                     <div class="col-md-2 col-sm-2 col-xs-12">
@@ -30,6 +38,14 @@
                                             <button type="button" class="btn btn-primary col-md-5 btn-sm glyphicon glyphicon-minus"></button>
                                         </div>
                                     </div>
+                                </div>
+                            </div>-->
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-primary">新增</button>
+                                    <button type="button" class="btn btn-primary">刪除</button>
                                 </div>
                             </div>
                         </div>
@@ -68,10 +84,10 @@
                                                             <td ng-bind="x.LOASetGuid"></td>
                                                             <td ng-bind="x.LOASetParameter"></td>
                                                             <td>
-                                                                <div class="btn-group col-md-12">
-                                                                    <button type="button" class="btn btn-primary col-md-6 btn-sm glyphicon glyphicon-triangle-top"></button>
-                                                                    <button type="button" class="btn btn-primary col-md-6 btn-sm glyphicon glyphicon-triangle-bottom"></button>
-                                                                </div>
+                                                               
+                                                                    <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-triangle-top"></button>
+                                                                    <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-triangle-bottom"></button>
+                                                            
                                                             </td>
                                                         </tr>
                                                     </tbody>

@@ -15,8 +15,8 @@
                     <!--下拉選單維護 start-->
                     <form class="form-horizontal form-label-left">
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">下拉群組代碼:</label>
-                            <div class="col-md-3 col-sm-3 col-xs-12">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">下拉群組代碼:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
                                 <select class="form-control">
                                     <option></option>
                                     <option>兌換條件</option>
@@ -27,27 +27,34 @@
                                     <option>活動類型</option>
                                 </select>
                             </div>
-                            <div class="col-md-offset-2 col-sm-offset-2"></div>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">下拉選項代碼:</label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            </div>
                         </div>
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label class="control-label col-md-4 col-sm-4 col-xs-12">下拉選項代碼:</label>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <input type="text" class="form-control col-md-7 col-xs-12">
                             </div>
                             <div class="col-md-offset-4 col-sm-offset-4"></div>
-                        </div>
+                        </div>-->
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">下拉選項名稱:</label>
+                            <label class="control-label col-md-2 col-sm-2 col-xs-12">下拉選項名稱:</label>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <input type="text" class="form-control col-md-7 col-xs-12">
                             </div>
                             <div class="col-md-offset-4 col-sm-offset-4"></div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
-                                <button type="button" class="btn btn-primary" style="margin-right: 15px" ng-click="showTable()">查詢</button>
-                                <button type="button" class="btn btn-primary" style="margin-right: 15px" data-toggle="modal" href="#addComplete" ng-click="addComplete()">新增</button>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" href="#editReset">重置</button>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="pull-right">
+                                        <button type="button" class="btn btn-primary">查詢</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="addComplete()">新增</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" href="#editReset">重置</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <br>
