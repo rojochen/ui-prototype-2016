@@ -37,7 +37,15 @@
                                     <h4 class="modal-title">請選擇上傳EXCEL大批修改匯入檔案</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="form-horizontal form-label-left">
+                                    <div class="row">
+                                        <br>
+                                        <div>
+                                            <input type="file" multiple id="fileType" ng-model="fileNumber" class="col-md-8 col-md-offset-4 col-sm-12 col-xs-12">
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                    <!--<form class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="col-md-12 col-sm-12 col-xs-12">請上傳</label>
                                         </div>
@@ -46,7 +54,7 @@
                                                 <input type="file" multiple id="fileType" ng-model="fileNumber">
                                             </div>
                                         </div>
-                                    </form>
+                                    </form>-->
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-toggle="modal" href="#addExcelOk" id="upData" ng-click="upDataExcelOk()">上傳</button>
