@@ -252,7 +252,9 @@ define(['btModule'], function (btModule) {
             'padding': '0px'
         };
         // 表格第二欄樣式 end
-
+        $scope.outSpv = function ($event) {
+            $event.stopPropagation();
+        }
         // 強制退單取消確定 start
         $scope.forciblyCancellationChecked = function () {
             $timeout(function () {
