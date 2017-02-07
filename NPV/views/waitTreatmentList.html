@@ -51,11 +51,11 @@
                                                             <td ng-bind="x.waitTime"></td>
                                                             <td ng-bind="x.waitPM"></td>
                                                             <td>
-                                                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" ng-click="designation($event);"><i class="fa fa-id-card"></i> {{x.waitDesignate}}</button>
+                                                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" ng-click="designation($event);"><i class="fa fa-id-card"></i> {{x.waitDesignate}}</button>
                                                             </td>
                                                             <td ng-bind="x.waitStatus"></td>
                                                             <td>
-                                                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" ng-click="chargebackCause($event,x.waitNpv);"><i class="fa fa-reply"></i> 退單</button>
+                                                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" ng-click="chargebackCause($event,x.waitNpv);"><i class="fa fa-reply"></i> 退單</button>
                                                             </td>
                                                             <td><button type="button" class="btn btn-info btn-xs" ng-click="exportSpv($event)"><i class="fa fa-download"></i> 匯出SPV</button></td>
                                                         </tr>
@@ -90,7 +90,7 @@
                                                                                         <td>4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000</td>
                                                                                         <td ng-bind="y.npvTime"></td>
                                                                                         <td>1.1</td>
-                                                                                        <td><button type="button" class="btn btn-primary btn-xs"><i class="fa fa-compress"></i> 版本比對</button></td>
+                                                                                        <td><button type="button" class="btn btn-info btn-xs"><i class="fa fa-compress"></i> 版本比對</button></td>
                                                                                     </tr>
                                                                                 </tbody>
                                                 </table>
@@ -201,14 +201,21 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <label class="control-label col-md-offset-2 col-md-2 col-sm-2 col-xs-12">檔案生效日:</label>
-                                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                                <input id="dataBecomeEffectiveSetDate" type="text" class="form-control" style="width: 147px; display: inline-block;">
+                                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                                <!--<input id="dataBecomeEffectiveSetDate" type="text" class="form-control" style="width: 147px; display: inline-block;">-->
+                                                <bt-datepicker datepicker-id="dataBecomeEffectiveSetDate" ng-model="datesingle" format="YYYY-MM-DD" show-dropdowns="true"></bt-datepicker>
                                             </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                            <!--<div class="col-md-4 col-sm-4 col-xs-12">
                                                 <button type="button" data-toggle="modal" class="btn btn-primary" href="#dataBecomeEffectiveSetOk">確定</button>
                                                 <button type="button" data-toggle="modal" class="btn btn-default" href="#dataBecomeEffectiveSetCancel">取消</button>
-                                            </div>
+                                            </div>-->
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <button type="button" data-toggle="modal" class="btn btn-primary" href="#dataBecomeEffectiveSetOk">確定</button>
+                                        <button type="button" data-toggle="modal" class="btn btn-default" href="#dataBecomeEffectiveSetCancel">取消</button>
                                     </div>
                                 </div>
                             </div>
@@ -290,7 +297,10 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <label class="control-label col-md-4 col-sm-4 col-xs-12">請選擇指派對象:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <!--<div class="col-md-6 col-sm-6 col-xs-12">
+                                                <select ng-model="designationObjectsSelectDefault" class="form-control" ng-options="x.ObjectName for x in designationObjectsSelect"></select>
+                                            </div>-->
+                                            <div class="col-md-5 col-sm-5 col-xs-12">
                                                 <select ng-model="designationObjectsSelectDefault" class="form-control" ng-options="x.ObjectName for x in designationObjectsSelect"></select>
                                             </div>
                                         </div>

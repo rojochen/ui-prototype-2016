@@ -311,7 +311,8 @@ define(['btModule'], function (btModule) {
         // 表格第二欄樣式 end
 
         // 購物車顯示 start
-        $scope.openbuy = function () {
+        $scope.openbuy = function ($event) {
+            $event.stopPropagation();
             $scope.actionData = [{
                 "type": "活動",
                 "name": "學生方案",
@@ -336,7 +337,11 @@ define(['btModule'], function (btModule) {
             }
         }
         // 購物車顯示 end
-
+        // 匯出SPV start
+        $scope.exportSpv = function ($event) {
+            $event.stopPropagation();
+        }
+        // 匯出SPV end
         // 退件紀錄 start
         $('#datatable_bouncedRecordListData').DataTable().destroy();
 

@@ -409,12 +409,12 @@ define(['btModule'], function (btModule) {
         }
         // 檔案生效日查詢事件 end
         // 檔案生效日期設定 start
-        $('#dataBecomeEffectiveSetDate').daterangepicker({
-            singleDatePicker: true
-            // calender_style: "picker_4"
-        }, function (start, end, label) {
-            console.log(start.toISOString(), end.toISOString(), label);
-        });
+        // $('#dataBecomeEffectiveSetDate').daterangepicker({
+        //     singleDatePicker: true
+        //     // calender_style: "picker_4"
+        // }, function (start, end, label) {
+        //     console.log(start.toISOString(), end.toISOString(), label);
+        // });
         // 檔案生效日期設定 end
         // 表格第二欄樣式 start
         $scope.waitItemStyle = {
