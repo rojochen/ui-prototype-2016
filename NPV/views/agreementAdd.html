@@ -43,6 +43,15 @@
                         </div>
                         <div class="form-group" ng-if="vm.searchAdv">
                             <label class="control-label col-md-4 col-sm-4 col-xs-12">是否可修改</label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <div class="radio">
+                                    <label><input type="radio" value="option1" name="optionsRadios">Y</label>
+                                    <label><input type="radio" value="option2" name="optionsRadios">N</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="form-group" ng-if="vm.searchAdv">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12">是否可修改</label>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <select class="form-control col-md-3 col-xs-12">
                                          <option></option>
@@ -50,7 +59,7 @@
                                          <option>N</option>
                                 </select>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="form-group">
                             <div class="col-md-12 col-sm-12 col-xs-12 ">
                                 <button type="button" class="btn btn-primary pull-right">重置</button>
@@ -65,7 +74,7 @@
                                     <th class="table-header-color">排序</th>
                                     <th class="table-header-color">代碼</th>
                                     <th class="table-header-color">名稱</th>
-                                    <th class="table-header-color">是否須輸入</th>
+                                    <th class="table-header-color">是否須輸入值</th>
                                     <th class="table-header-color">預設數量</th>
                                     <th class="table-header-color">是否可修改</th>
                                     <th class="table-header-color">修改人員</th>
@@ -137,13 +146,21 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>是否須輸入數量</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <div class="radio">
+                                                    <label><input type="radio" value="option2" name="optionsRadios">是</label>                                                    <label><input type="radio" value="option1" name="optionsRadios">否</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>是否須輸入數量</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <select class="form-control">
                                                     <option>否</option>
                                                     <option>是</option>
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div>-->
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">預設數量</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -298,8 +315,8 @@
                                                     <td ng-bind="x.agreementAddGroupRole"></td>
                                                     <td ng-bind="x.agreementAddGroupDate"></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#agreementEditGroupEdit">修改</button>
-                                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#agreementAddDelConfirm">刪除</button>
+                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#agreementEditGroupEdit"><i class="fa fa-pencil">修改</i></button>
+                                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#agreementAddDelConfirm"><i class="glyphicon glyphicon-remove">刪除</i></button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -430,13 +447,21 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>是否須輸入數量</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <div class="radio">
+                                                    <label><input type="radio" value="option2" name="optionsRadios">是</label>                                                    <label><input type="radio" value="option1" name="optionsRadios">否</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>是否須輸入數量</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <select class="form-control">
                                                     <option>否</option>
                                                     <option>是</option>
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div>-->
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">預設數量</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -591,8 +616,8 @@
                                                     <td ng-bind="x.agreementAddGroupRole"></td>
                                                     <td ng-bind="x.agreementAddGroupDate"></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#agreementEditGroupEdit2">修改</button>
-                                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#agreementAddDelConfirm">刪除</button>
+                                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#agreementEditGroupEdit2"><i class="fa fa-pencil">修改</i></button>
+                                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#agreementAddDelConfirm"><i class="glyphicon glyphicon-remove">刪除</i></button>
                                                     </td>
                                                 </tr>
                                             </tbody>
