@@ -77,9 +77,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="x in shoppingCartList[0].list[0].list">
+                            <tr ng-repeat="x in boundledata">
                                 <td ng-bind="$index+1"></td>
-                                <td ng-bind="x.type"></td>
+                                <td ng-bind="x.parentText"></td>
                                 <td ng-bind="x.code"></td>
                                 <td ng-bind="x.name"></td>
                                 <td><button type="button" class="btn  btn-info btn-xs" data-toggle="modal" href="#Boundle"><i class="fa fa-pencil"></i> 修改</button></td>
