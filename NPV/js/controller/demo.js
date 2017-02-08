@@ -846,12 +846,12 @@ define(['btModule'], function (btModule) {
             }
             /* end */
 
-            /* begin */
-            $scope.tableControl = false;
+            /* 展開表格 begin */
+            $scope.isForm = false;
             $scope.showTable = function () {
-                $scope.tableControl = true;
+                $scope.isForm = true;
             }
-            /* end */
+            /* 展開表格 end */
 
 
 
@@ -1073,26 +1073,26 @@ define(['btModule'], function (btModule) {
                 "bLengthChange": false,
             };
             //try
-            var addboundledata = function(item, itemText){
-                angular.forEach(item, function(itemList_3){
+            var addboundledata = function (item, itemText) {
+                angular.forEach(item, function (itemList_3) {
                     // console.log(itemList_3);
                     itemList_3.parentText = itemText;
-                    if(itemList_3.list){
-                        angular.forEach(itemList_3.list, function(itemList_4){
+                    if (itemList_3.list) {
+                        angular.forEach(itemList_3.list, function (itemList_4) {
                             itemList_4.parentText = itemText;
                         })
                     }
                     $scope.boundledata.push(itemList_3);
                 });
             };
-            $("#shoppingCartTable_area").on('showShoppingCartList', function(event, param1){
+            $("#shoppingCartTable_area").on('showShoppingCartList', function (event, param1) {
                 $scope.isShowshoppingCartTable = true;
                 $scope.shoppingCartList = [];
                 $scope.boundledata = [];
                 $scope.shoppingCartList.push(param1);
                 // console.log(param1.id);
-                if(param1.id === 3){
-                    angular.forEach($scope.shoppingCartList[0].list[0].list, function(item){
+                if (param1.id === 3) {
+                    angular.forEach($scope.shoppingCartList[0].list[0].list, function (item) {
                         var itemText = item.code + item.name;
                         addboundledata(item.list, itemText);
                     });
@@ -1101,12 +1101,12 @@ define(['btModule'], function (btModule) {
                 $('#shoppingCartTable_1').DataTable().destroy();
                 $('#shoppingCartTable_2').DataTable().destroy();
                 $('#shoppingCartTable_3').DataTable().destroy();
-                $timeout(function(){
-                    $('#shoppingCartTable_'+ param1.id).DataTable(opt_shoppingCartTable);
+                $timeout(function () {
+                    $('#shoppingCartTable_' + param1.id).DataTable(opt_shoppingCartTable);
                 }, 100)
             })
 
-            $scope.btn_define = function(){
+            $scope.btn_define = function () {
                 $scope.isShowshoppingCartTable = false;
             }
 
