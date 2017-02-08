@@ -73,7 +73,7 @@ define(['btModule'], function (btModule) {
             /* end */
 
             /* begin */
-            $scope.tableControl = false;
+            $scope.tableControl = true;
             $scope.tableControl2 = false;
             $scope.showTable = function () {
                 $scope.tableControl = true;
@@ -90,7 +90,7 @@ define(['btModule'], function (btModule) {
                 "isShow": "Y",
                 "editMember": "admin",
                 "editDate": "12-10月-16"
-            },];
+            }, ];
 
             $scope.useTableData2 = [{
                 "no": "VIP",
@@ -98,7 +98,7 @@ define(['btModule'], function (btModule) {
                 "name": "贈品設定(GROUP)",
                 "editMember": "admin",
                 "editDate": "12-10月-16"
-            },];
+            }, ];
 
 
             $('#datatable_pageGearingSet').DataTable().destroy();

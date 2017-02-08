@@ -253,7 +253,7 @@ define(['btModule'], function (btModule) {
         $scope.draftData = [{
             "number": "20170111001",
             "numberType": "促代-4G",
-            "subType": "Bundle(1)",
+            "subType": "Single(5)/Bundle(3)",
         }, {
             "number": "20170111002",
             "numberType": "活動類型(1)",

@@ -35,24 +35,24 @@ define(['btModule'], function (btModule) {
             $scope.btnShow1 = true;
             $scope.btnShow2 = false;
             $scope.advancedSearch = function () {
-                    if ($scope.advancedControl) {
-                        $scope.advancedControl = false;
-                        $scope.btnShow1 = true;
-                        $scope.btnShow2 = false;
-                    } else {
-                        $scope.advancedControl = true;
-                        $scope.btnShow1 = false;
-                        $scope.btnShow2 = true;
-                    }
+                if ($scope.advancedControl) {
+                    $scope.advancedControl = false;
+                    $scope.btnShow1 = true;
+                    $scope.btnShow2 = false;
+                } else {
+                    $scope.advancedControl = true;
+                    $scope.btnShow1 = false;
+                    $scope.btnShow2 = true;
                 }
-                /* end */
+            }
+            /* end */
 
             /* begin */
-            $scope.tableControl = false;
+            $scope.tableControl = true;
             $scope.showTable = function () {
-                    $scope.tableControl = true;
-                }
-                /* end */
+                $scope.tableControl = true;
+            }
+            /* end */
 
 
         }
