@@ -86,10 +86,10 @@
                                                                                         <td>
                                                                                             <button type="button" class="btn btn-link" data-toggle="modal" href="#bouncedRecordItemCode" ng-bind="y.npvCode"></button>
                                                                                         </td>
-                                                                                        <td>Single</td>
-                                                                                        <td>4G續約_企業98_MVPN門市_4G新絕配1399_限24手機案-預繳12000</td>
+                                                                                        <td ng-bind="y.npvType"></td>
+                                                                                        <td ng-bind="y.npvName"></td>
                                                                                         <td ng-bind="y.npvTime"></td>
-                                                                                        <td>1.1</td>
+                                                                                        <td ng-bind="y.npvVer"></td>
                                                                                         <td><button type="button" class="btn btn-info btn-xs"><i class="fa fa-compress"></i> 版本比對</button></td>
                                                                                     </tr>
                                                                                 </tbody>
@@ -131,8 +131,21 @@
                                                             <!--<option ng-repeat="x in dataBecomeEffectiveSelect" ng-bind="x.dataName" value="{{x.dataValue}}">全部</option>-->
                                                         </select>
                                                     </div>
-                                                    <button type="button" class="btn btn-primary" ng-click="searchType()">查詢</button>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#dataBecomeEffectiveSet" ng-click="dataBecomeEffectiveSet()">修改檔案生效日</button>
+                                                    <div class="col-md-3 col-sm-3 col-xs-12">
+                                                        <button type="button" class="btn btn-primary" ng-click="searchType()">查詢</button>
+                                                        <!--<button type="button" class="btn btn-primary" data-toggle="modal" href="#dataBecomeEffectiveSet" ng-click="dataBecomeEffectiveSet()">修改檔案生效日</button>-->
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" href="#dataBecomeEffectiveSet" ng-click="dataChangeShow()">修改檔案生效日</button>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12" ng-show="showDate">
+                                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">檔案生效日:</label>
+                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                            <bt-datepicker datepicker-id="dataBecomeEffectiveSetDate" ng-model="datesingle" format="YYYY-MM-DD" show-dropdowns="true"></bt-datepicker>
+                                                        </div>
+                                                        <div>
+                                                            <button type="button" data-toggle="modal" class="btn btn-primary" href="#dataBecomeEffectiveSetOk">確定</button>
+                                                            <button type="button" data-toggle="modal" class="btn btn-default" href="#dataBecomeEffectiveSetCancel">取消</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -186,7 +199,7 @@
                     </div>
                     <!--檔案生效日期設定 end-->
                     <!--檔案生效日日期視窗 start-->
-                    <div class="modal fade bs-example-modal-sm" id="dataBecomeEffectiveSet" tabindex="-1" role="dialog">
+                    <!--<div class="modal fade bs-example-modal-sm" id="dataBecomeEffectiveSet" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -201,15 +214,15 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <label class="control-label col-md-offset-2 col-md-2 col-sm-2 col-xs-12">檔案生效日:</label>
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
-                                                <!--<input id="dataBecomeEffectiveSetDate" type="text" class="form-control" style="width: 147px; display: inline-block;">-->
-                                                <bt-datepicker datepicker-id="dataBecomeEffectiveSetDate" ng-model="datesingle" format="YYYY-MM-DD" show-dropdowns="true"></bt-datepicker>
-                                            </div>
-                                            <!--<div class="col-md-4 col-sm-4 col-xs-12">
+                                            <div class="col-md-5 col-sm-5 col-xs-12">-->
+                    <!--<input id="dataBecomeEffectiveSetDate" type="text" class="form-control" style="width: 147px; display: inline-block;">-->
+                    <!--<bt-datepicker datepicker-id="dataBecomeEffectiveSetDate" ng-model="datesingle" format="YYYY-MM-DD" show-dropdowns="true"></bt-datepicker>
+                                            </div>-->
+                    <!--<div class="col-md-4 col-sm-4 col-xs-12">
                                                 <button type="button" data-toggle="modal" class="btn btn-primary" href="#dataBecomeEffectiveSetOk">確定</button>
                                                 <button type="button" data-toggle="modal" class="btn btn-default" href="#dataBecomeEffectiveSetCancel">取消</button>
                                             </div>-->
-                                        </div>
+                    <!--</div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -220,7 +233,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!--檔案生效日日期視窗 end-->
                     <!--確定修改日期畫面 start-->
                     <div class="modal fade bs-example-modal-sm" id="dataBecomeEffectiveSetOk" tabindex="-1" role="dialog">

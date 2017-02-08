@@ -73,7 +73,7 @@ define(['btModule'], function (btModule) {
             /* end */
 
             /* begin */
-            $scope.tableControl = false;
+            $scope.tableControl = true;
             $scope.showTable = function () {
                 $scope.tableControl = true;
             }

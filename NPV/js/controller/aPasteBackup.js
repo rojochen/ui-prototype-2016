@@ -112,7 +112,7 @@ define(['btModule'], function (btModule) {
             /* notify 通知訊息 end*/
 
             /* Show Table begin */
-            $scope.isTable = false;
+            $scope.isTable = true;
             $scope.showTable = function () {
                 $scope.isTable = true;
             };

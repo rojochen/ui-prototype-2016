@@ -12,7 +12,7 @@ define(['btModule'], function (btModule) {
         function ($scope, $timeout, $log, $element, shoppingCartEntity) {
             var vm = this;
 
-           /*begin 版面縮合*/
+            /*begin 版面縮合*/
             $element.on('click', '.collapse-link', function () {
                 var $BOX_PANEL = $(this).closest('.x_panel'),
                     $ICON = $(this).find('i'),
@@ -35,24 +35,24 @@ define(['btModule'], function (btModule) {
             $scope.btnShow1 = true;
             $scope.btnShow2 = false;
             $scope.advancedSearch = function () {
-                    if ($scope.advancedControl) {
-                        $scope.advancedControl = false;
-                        $scope.btnShow1 = true;
-                        $scope.btnShow2 = false;
-                    } else {
-                        $scope.advancedControl = true;
-                        $scope.btnShow1 = false;
-                        $scope.btnShow2 = true;
-                    }
+                if ($scope.advancedControl) {
+                    $scope.advancedControl = false;
+                    $scope.btnShow1 = true;
+                    $scope.btnShow2 = false;
+                } else {
+                    $scope.advancedControl = true;
+                    $scope.btnShow1 = false;
+                    $scope.btnShow2 = true;
                 }
-                /* end */
+            }
+            /* end */
 
             /* begin */
-            $scope.tableControl = false;
+            $scope.tableControl = true;
             $scope.showTable = function () {
-                    $scope.tableControl = true;
-                }
-                /* end */
+                $scope.tableControl = true;
+            }
+            /* end */
 
 
         }

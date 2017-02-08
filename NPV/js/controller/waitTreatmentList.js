@@ -12,7 +12,8 @@ define(['btModule'], function (btModule) {
         $scope.dataBecomeEffectiveSetOkOk = function () {
             pnotifyService.pnotifySuccess('Success', '修改完成！');
             $timeout(function () {
-                $('#dataBecomeEffectiveSet').modal('hide');
+                // $('#dataBecomeEffectiveSet').modal('hide');
+                $scope.showDate = false;
             }, 400);
         }
         $scope.designationDoubleOk = function () {
@@ -162,7 +163,7 @@ define(['btModule'], function (btModule) {
             'waitType2': 'N/A',
             'waitTime': '2016/10/21 20:00',
             'waitPM': 'yuind',
-            'waitStatus': '代審核',
+            'waitStatus': '待審核',
             'waitDesignate': '核可'
         }, {
             'waitId': 'list2',
@@ -171,7 +172,7 @@ define(['btModule'], function (btModule) {
             'waitType2': 'Single(8)',
             'waitTime': '2016/09/11 12:00',
             'waitPM': 'yuind',
-            'waitStatus': '代審核',
+            'waitStatus': '待審核',
             'waitDesignate': '指派'
         }, {
             'waitId': 'list3',
@@ -180,7 +181,7 @@ define(['btModule'], function (btModule) {
             'waitType2': 'N/A',
             'waitTime': '2016/10/21 20:00',
             'waitPM': 'yuind',
-            'waitStatus': '代審核',
+            'waitStatus': '待審核',
             'waitDesignate': '核可'
         }];
         // 代處理 end
@@ -416,6 +417,12 @@ define(['btModule'], function (btModule) {
         //     console.log(start.toISOString(), end.toISOString(), label);
         // });
         // 檔案生效日期設定 end
+        // 點擊顯示修改日期輸入框及按鈕 start
+        $scope.showDate = false;
+        $scope.dataChangeShow = function () {
+            $scope.showDate = true;
+        };
+        // 點擊顯示修改日期輸入框及按鈕 end
         // 表格第二欄樣式 start
         $scope.waitItemStyle = {
             'padding': '0px'
@@ -495,11 +502,11 @@ define(['btModule'], function (btModule) {
         }
         // 檔案生效日按鈕 end
         // 修改檔案生效日 start
-        $scope.dataBecomeEffectiveSet = function () {
-            $timeout(function () {
-                $('#dataBecomeEffectiveSet').modal('show');
-            }, 400);
-        }
+        // $scope.dataBecomeEffectiveSet = function () {
+        //     $timeout(function () {
+        //         $('#dataBecomeEffectiveSet').modal('show');
+        //     }, 400);
+        // }
         // 修改檔案生效日 end
         // 修改檔案生效日按鈕 start
         $scope.dataBecomeEffectiveSetOk = function () {
@@ -510,7 +517,8 @@ define(['btModule'], function (btModule) {
         // 修改檔案生效日按鈕 end
         $scope.dataBecomeEffectiveSetCancelOk = function () {
             $timeout(function () {
-                $("#dataBecomeEffectiveSet").modal('hide');
+                // $("#dataBecomeEffectiveSet").modal('hide');
+                $scope.showDate = false;
             }, 400);
         }
 
