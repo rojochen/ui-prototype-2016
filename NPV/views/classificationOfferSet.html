@@ -39,29 +39,33 @@
                             </div>
                         </div>
                         <!--促代offer簡稱設定表格 start -->
-                        <table id="datatable_classificationOffer" class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th class="table-header-color col-md-4">Offer 名稱</th>
-                                    <th class="table-header-color col-md-2">Offer 簡稱</th>
-                                    <th class="table-header-color col-md-2">修改人員</th>
-                                    <th class="table-header-color col-md-2">修改日期</th>
-                                    <th class="table-header-color col-md-2"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="x in classificationOfferTableData track by $index">
-                                    <td ng-bind="x.classificationOfferName"></td>
-                                    <td ng-bind="x.classificationOfferAbbr"></td>
-                                    <td ng-bind="x.classificationOfferRole"></td>
-                                    <td ng-bind="x.classificationOfferDate"></td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#classOfferEdit"><i class="fa fa-pencil"></i>修改</button>
-                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#classOfferDelConfirm"><i class="glyphicon glyphicon-remove"></i>刪除</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="form-group">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <table id="datatable_classificationOffer" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-header-color col-md-4">Offer 名稱</th>
+                                            <th class="table-header-color col-md-2">Offer 簡稱</th>
+                                            <th class="table-header-color col-md-2">修改人員</th>
+                                            <th class="table-header-color col-md-2">修改日期</th>
+                                            <th class="table-header-color col-md-2"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="x in classificationOfferTableData track by $index">
+                                            <td ng-bind="x.classificationOfferName"></td>
+                                            <td ng-bind="x.classificationOfferAbbr"></td>
+                                            <td ng-bind="x.classificationOfferRole"></td>
+                                            <td ng-bind="x.classificationOfferDate"></td>
+                                            <td>
+                                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#classOfferEdit"><i class="fa fa-pencil"></i>修改</button>
+                                                <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#classOfferDelConfirm"><i class="glyphicon glyphicon-remove"></i>刪除</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                         <!-- 促代offer簡稱設定表格 end -->
                         <!-- 頁籤 begin -->
                         <div class="pull-right">
