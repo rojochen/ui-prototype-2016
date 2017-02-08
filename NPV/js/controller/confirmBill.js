@@ -174,17 +174,21 @@ define(['btModule'], function (btModule) {
                         "confirmBillTime": "2016/11/29 14:21",
                         "confirmBillPM": "tatakao",
                         "confirmBillStatus": "待派單",
-                        "second": [{
+                        "second":
+                        // [
+                        {
                             "id": "1",
                             "type": "N/A",
                             "secondType": "優惠折扣",
                             "time": "測試-3G大雙網165限24單門號送月租費方案-免預繳"
-                        }, {
-                            "id": "2",
-                            "type": "N/A",
-                            "secondType": "優惠折扣",
-                            "time": "帳單優惠400元*3個月(N)"
-                        }]
+                        }
+                        // , {
+                        //     "id": "2",
+                        //     "type": "N/A",
+                        //     "secondType": "優惠折扣",
+                        //     "time": "帳單優惠400元*3個月(N)"
+                        // }
+                        // ]
                     }, {
                         "confirmBillID": "list3",
                         "confirmBillNpvID": "20161129006",
@@ -193,22 +197,26 @@ define(['btModule'], function (btModule) {
                         "confirmBillTime": "2016/11/29 14:32",
                         "confirmBillPM": "tatakao",
                         "confirmBillStatus": "待派單",
-                        "second": [{
+                        "second":
+                        // [
+                        {
                             "id": "1",
                             "type": "IXC00FP-YFY4",
                             "secondType": "Single",
                             "time": "4G GOGORO方案_新絕配599限30手機案-預繳2400"
-                        }, {
-                            "id": "2",
-                            "type": "IXAVHE555435",
-                            "secondType": "Single",
-                            "time": "(附)4G新絕配599限30-手機"
-                        }, {
-                            "id": "3",
-                            "type": "IXLVHE555436",
-                            "secondType": "Single",
-                            "time": "(附)4G新絕配1199限24-手機"
-                        }]
+                        }
+                        // , {
+                        //     "id": "2",
+                        //     "type": "IXAVHE555435",
+                        //     "secondType": "Single",
+                        //     "time": "(附)4G新絕配599限30-手機"
+                        // }, {
+                        //     "id": "3",
+                        //     "type": "IXLVHE555436",
+                        //     "secondType": "Single",
+                        //     "time": "(附)4G新絕配1199限24-手機"
+                        // }
+                        // ]
                     }, {
                         "confirmBillID": "list4",
                         "confirmBillNpvID": "20161129007",
