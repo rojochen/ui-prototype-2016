@@ -51,13 +51,13 @@
                                                             <td ng-bind="x.waitTime"></td>
                                                             <td ng-bind="x.waitPM"></td>
                                                             <td>
-                                                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" ng-click="designation($event);"><i class="fa fa-id-card"></i> {{x.waitDesignate}}</button>
+                                                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" ng-click="designation($event);">{{x.waitDesignate}}</button>
                                                             </td>
                                                             <td ng-bind="x.waitStatus"></td>
                                                             <td>
-                                                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" ng-click="chargebackCause($event,x.waitNpv);"><i class="fa fa-reply"></i> 退單</button>
+                                                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" ng-click="chargebackCause($event,x.waitNpv);">退單</button>
                                                             </td>
-                                                            <td><button type="button" class="btn btn-info btn-xs" ng-click="exportSpv($event)"><i class="fa fa-download"></i> 匯出SPV</button></td>
+                                                            <td><button type="button" class="btn btn-info btn-xs" ng-click="exportSpv($event)">匯出SPV</button></td>
                                                         </tr>
                                                         <tr>
                                                             <!--NPV單號詳細 start-->
@@ -90,7 +90,7 @@
                                                                                         <td ng-bind="y.npvName"></td>
                                                                                         <td ng-bind="y.npvTime"></td>
                                                                                         <td ng-bind="y.npvVer"></td>
-                                                                                        <td><button type="button" class="btn btn-info btn-xs"><i class="fa fa-compress"></i> 版本比對</button></td>
+                                                                                        <td><button type="button" class="btn btn-info btn-xs">版本比對</button></td>
                                                                                     </tr>
                                                                                 </tbody>
                                                 </table>

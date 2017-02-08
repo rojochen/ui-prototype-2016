@@ -42,7 +42,7 @@
                                                 <table id="datatable_enforceTurnSingleData" class="table table-striped table-bordered no-footer dataTable" role="grid" aria-describedby="datatable_enforceTurnSingleData_info">
                                                     <thead>
                                                         <tr>
-                                                            <th class="table-header-color"><input type="checkbox" ng-modal="waitNpvMaster">全選</th>
+                                                            <th class="table-header-color"><input type="checkbox" ng-modal="waitNpvMaster"></th>
                                                             <th class="table-header-color">NPV 單號</th>
                                                             <th class="table-header-color">類型</th>
                                                             <th class="table-header-color">次類型</th>
@@ -61,7 +61,7 @@
                                                             <td ng-bind="z.enforceTurnSingleTime"></td>
                                                             <td ng-bind="z.enforceTurnSingleStatus"></td>
                                                             <td ng-bind="z.enforceTurnSinglePM"></td>
-                                                            <td><button type="button" class="btn btn-info btn-xs" ng-click="exportSpv($event);"><i class="fa fa-download"></i> 匯出SPV</button></td>
+                                                            <td><button type="button" class="btn btn-info btn-xs" ng-click="exportSpv($event);">匯出SPV</button></td>
                                                         </tr>
                                                         <tr>
                                                             <!--NPV單號詳細 start-->

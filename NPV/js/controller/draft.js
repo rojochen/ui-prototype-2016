@@ -257,59 +257,59 @@ define(['btModule'], function (btModule) {
         }, {
             "number": "20170111002",
             "numberType": "活動類型(1)",
-            "subType": "Single(5)/Bundle(3)",
+            "subType": "",
         }, {
             "number": "20170111003",
             "numberType": "促代-4G",
-            "subType": "Single(1)",
+            "subType": "",
         }, {
             "number": "20170111004",
             "numberType": "促代-4G/3G",
-            "subType": "Single(3)",
+            "subType": "",
         }, {
             "number": "20170111005",
             "numberType": "促代-4G",
-            "subType": "Single(1)",
+            "subType": "",
         }, {
             "number": "20170111006",
             "numberType": "促代-4G",
-            "subType": "Single(1)",
+            "subType": "",
         }, {
             "number": "20170111007",
             "numberType": "促代-4G",
-            "subType": "Single(1)",
+            "subType": "",
         }, {
             "number": "20170111008",
             "numberType": "促代-4G",
-            "subType": "Single(1)",
+            "subType": "",
         }, {
             "number": "20170111009",
             "numberType": "促代-4G",
-            "subType": "Bundle(1)",
+            "subType": "",
         }, {
             "number": "20170111010",
             "numberType": "促代3G",
-            "subType": "Single(1)",
+            "subType": "",
         }, {
             "number": "20170111011",
             "numberType": "促代4G",
-            "subType": "Single(1)",
+            "subType": "",
         }, {
             "number": "20170111012",
             "numberType": "促代4G",
-            "subType": "Bundle(1)",
+            "subType": "",
         }, {
             "number": "20170111013",
             "numberType": "促代3G",
-            "subType": "Single(1)",
+            "subType": "",
         }, {
             "number": "20170111014",
             "numberType": "促代3G",
-            "subType": "Single(1)",
+            "subType": "",
         }, {
             "number": "20170111015",
             "numberType": "促代4G",
-            "subType": "Single(1)",
+            "subType": "",
         }];
         $scope.inquire = function (numberType) {
             if (numberType === "促代-4G") {
