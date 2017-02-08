@@ -256,7 +256,7 @@ gulp.task('build-npv-war', function() {
             displayName: package.version, //form package.json.version
             version: package.version //form package.json.version
         }))
-        .pipe(zip('NPV-prototype.war'))
+        .pipe(zip('NPV.war'))
         .pipe(gulp.dest("./dist"));
 });
 gulp.task('build-all', ['build-app', 'build-style']);
