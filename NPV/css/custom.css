@@ -379,18 +379,18 @@
           border: 1px solid #666;
         }
         /* end menu tree */
-
-
-
         /* begin left menu */
+        
         .navbar {
           position: fixed;
           z-index: 2;
         }
-        .mCustomScrollBox{
+        
+        .mCustomScrollBox {
           width: 230px;
         }
-        .profile{
+        
+        .profile {
           margin-top: 50px;
           position: fixed;
           z-index: 2;
@@ -398,6 +398,7 @@
           background: #2a3f54;
           padding-bottom: 5px;
         }
+        
         .profile h3 {
           padding-left: 23px;
           color: #fff;
@@ -409,26 +410,32 @@
           margin-top: 0;
           text-shadow: 1px 1px #000;
         }
+        
         .nav-md .main_menu_side {
           margin-top: 130px;
         }
+        
         .nav-sm .main_menu_side {
           margin-top: 30px;
         }
-        .tree .tree_btn{
+        
+        .tree .tree_btn {
           text-align: end;
           width: 30%;
           float: right;
         }
-        .tree .tree-folder-name.levelOne_text{
+        
+        .tree .tree-folder-name.levelOne_text {
           width: 70%;
         }
         /* end left menu */
-
-
         /* begin shoppingCartTable */
-        #shoppingCartTable_area{
-          margin:20px 0;
+        
+        #shoppingCartTable_area {
+          margin: 20px 0;
         }
         /* end shoppingCartTable */
-
+        
+        .left_col {
+          width: 100%
+        }
