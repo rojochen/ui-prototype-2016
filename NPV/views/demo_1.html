@@ -19,6 +19,103 @@
                         <button type="button" class="btn btn-info " data-toggle="modal" data-target="#activityInquire">活動類別查詢</button>
                         <button type="button" class="btn btn-info " data-toggle="modal" data-target="#generationInquire">促代查詢</button>
                     </form>
+                </form><br>
+                <form class="form-horizontal" role="form" ng-show="isForm">
+                    <div class="form-group">
+                        <div class="table-responsive">
+                            <table class="table table-striped jambo_table table-bordered">
+                                <thead>
+                                    <tr class="headings">
+                                        <th>NO</th>
+                                        <th>活動類別</th>
+                                        <th>促代代碼</th>
+                                        <th>促代名稱</th>
+                                        <th>編輯</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td data-toggle="modal" data-target="#Modal3-1">L001 學生專案</td>
+                                        <td>S001</td>
+                                        <td>遠傳e書城149限12</td>
+                                        <td>
+                                            <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i class="fa fa-pencil"></i> 活動類別修改</a>
+                                            <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i class="glyphicon glyphicon-remove"></i> 促代修改/移除</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>L002 長壽專案</td>
+                                        <td>
+                                            <a id="headingOne1" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1" aria-controls="collapseOne">BOO1
+                                                        </a>
+                                        </td>
+                                        <td>行動3G續約專案</td>
+                                        <td>
+                                            <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
+                                                                    class="fa fa-pencil"></i> 活動類別修改 </a>
+                                            <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
+                                                                    class="glyphicon glyphicon-remove"></i> 促代修改/移除 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <!--<td colspan="5" style="padding-left: 60px; padding-top: 0px; padding-bottom: 0px;">
+                                                        <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                            ① 主要VAS服務合約：155899-遠傳e書城149<br> ② 合約期限：12個月
+                                                        </div>
+                                                    </td>-->
+                                        <td colspan="5" style="padding-left: 42px; padding-top: 0px; padding-bottom: 0px;">
+                                            <div class="container-fluid" id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="row">
+                                                    <div class="col-md-10">
+                                                        <table class="table table-bordered">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>活動類別</th>
+                                                                    <th>促代代碼</th>
+                                                                    <th>促代名稱</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>L002 長壽專案</td>
+                                                                    <td>S010</td>
+                                                                    <td>續約升級1~249手機搭765方案</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>L002 長壽專案</td>
+                                                                    <td>S015</td>
+                                                                    <td>續約升級1~249i-mode手機搭765方案</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>L002 長壽專案</td>
+                                                                    <td>S020</td>
+                                                                    <td>續約升級250~749手機開獎168方案</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>L003 學生專案</td>
+                                        <td>B001</td>
+                                        <td>行動3G續約專案</td>
+                                        <td>
+                                            <a href="#" class="btn btn-info btn-xs" style="margin: 0px;"><i
+                                                                    class="fa fa-pencil"></i> 活動類別修改  </a>
+                                            <a href="#" class="btn btn-danger btn-xs" style="margin: 0px;"><i
+                                                                    class="glyphicon glyphicon-remove"></i> 促代修改/移除 </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </form>
                 <div id="shoppingCartTable_area" ng-show="isShowshoppingCartTable">
                     <!-- begin ShowshoppingCartTable 活動-->
@@ -2152,7 +2249,7 @@
                         <!-- end IA/備援單-->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#CompoundPromptSetTable">確定</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="showTable()">確定</button>
                         <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                     </div>
                 </div>
@@ -2161,7 +2258,7 @@
     </div>
     <!--複合式促代設定 end -->
     <!--複合式促代設定table start-->
-    <div class="col-md-12 col-sm-12 col-xs-12">
+    <!--<div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal " tabindex="-1" role="dialog" aria-hidden="true" id="CompoundPromptSetTable">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -2209,13 +2306,13 @@
                                                                     class="glyphicon glyphicon-remove"></i> 促代修改/移除 </a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <!--<td colspan="5" style="padding-left: 60px; padding-top: 0px; padding-bottom: 0px;">
+                                            <tr>-->
+    <!--<td colspan="5" style="padding-left: 60px; padding-top: 0px; padding-bottom: 0px;">
                                                         <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                                             ① 主要VAS服務合約：155899-遠傳e書城149<br> ② 合約期限：12個月
                                                         </div>
                                                     </td>-->
-                                                <td colspan="5" style="padding-left: 42px; padding-top: 0px; padding-bottom: 0px;">
+    <!--<td colspan="5" style="padding-left: 42px; padding-top: 0px; padding-bottom: 0px;">
                                                     <div class="container-fluid" id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                                         <div class="row">
                                                             <div class="col-md-10">
@@ -2275,7 +2372,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!--複合式促代設定table end -->
     <!-- 活動類別查詢  -->
     <div class="col-md-12 col-sm-12 col-xs-12">
