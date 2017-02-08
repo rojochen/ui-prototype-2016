@@ -44,7 +44,7 @@
                                         <th class="table-header-color"></th>
                                         <th class="table-header-color">NPV單號</th>
                                         <th class="table-header-color">類型</th>
-                                        <!--<th class="table-header-color">次類型</th>-->
+                                        <th class="table-header-color">次類型</th>
                                         <th class="table-header-color">編輯</th>
                                     </tr>
                                 </thead>
@@ -52,7 +52,7 @@
                                     <tr ng-repeat="x in draftData track by $index">
                                         <td><input type="checkbox"></td>
                                         <td ng-bind="x.number"></td>
-                                        <!--<td ng-bind="x.numberType" ng-click="inquire(x.numberType)"></td>-->
+                                        <td ng-bind="x.numberType" ng-click="inquire(x.numberType)"></td>
                                         <td ng-bind="x.subType"></td>
                                         <td>
                                             <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" href="#editModal"><i class="fa fa-pencil"></i>編輯</button>

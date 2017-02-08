@@ -12,7 +12,7 @@
             <div class="x_content">
                 <div class="row">
                     <form class="form-horizontal form-label-left">
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label class="control-label col-md-2 col-sm-2 col-xs-12">SR NO:</label>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <input type="text" class="form-control col-md-7 col-xs-12">
@@ -62,11 +62,86 @@
                                         <option value="4專3">4專3</option>   
                                 </select>
                             </div>
+                        </div>-->
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">SR NO:</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <input type="text" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">SPV NO:</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <input type="text" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">OFFER ID:</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <input type="text" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">類型:</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <select class=" form-control" style="width:100%" tabindex="-1">
+                                        <option value selected="selected"></option>
+                                        <option value="主約促代">主約促代</option>
+                                        <option value="附約促代">附約促代</option>
+                                        <option value="KG促代">KG促代</option>   
+                                        <option value="優惠折扣">優惠折扣</option> 
+                                        <option value="寬頻促代">寬頻促代</option>    
+                                </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">CODE:</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <input type="text" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">名稱:</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <input type="text" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">種類:</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <select class=" form-control" style="width:100%" tabindex="-1">
+                                            <option value selected="selected"></option>
+                                            <option value="新啟用">新啟用</option>
+                                            <option value="續約">續約</option>
+                                            <option value="2轉3">2轉3</option>   
+                                            <option value="2轉4">2轉4</option> 
+                                            <option value="3專4">3專4</option>   
+                                            <option value="4專3">4專3</option>   
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group pull-right">
+                        <div class="form-group">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <button type="button" class="btn btn-primary" ng-click="">查詢</button>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" href="#masterMultiItemEdit">編輯勾選</button>
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-primary" ng-click="">查詢</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#masterMultiItemEdit">編輯勾選</button>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -81,7 +156,7 @@
                                             <thead>
                                                 <tr>
                                                     <th class="table-header-color">
-                                                        <input type="checkbox" ng-model="allClickMaster">全選
+                                                        <input type="checkbox" ng-model="allClickMaster">
                                                     </th>
                                                     <th class="table-header-color">
                                                         <label>NO.</label>
