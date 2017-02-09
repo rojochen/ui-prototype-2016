@@ -29,22 +29,6 @@ define(['btModule'], function (btModule) {
             });
             /*end 版面縮合*/
 
-            /* 傳送時間 begin */
-            $('#npvStatusQueryTime-1').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-
-            $('#npvStatusQueryTime-2').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-            /* 傳送時間 end */
-
             /* 展開表格 begin */
             $scope.isTable = false;
             $scope.showTable = function () {
@@ -246,6 +230,26 @@ define(['btModule'], function (btModule) {
                 toggle: false
             })
             /* 手風琴 end*/
+
+            /* 傳送時間 begin */
+            // $('#npvStatusQueryTime-1').daterangepicker({
+            //     singleDatePicker: true,
+            //     // calender_style: "picker_4"
+            // }, function (start, end, label) {
+            //     console.log(start.toISOString(), end.toISOString(), label);
+            // });
+
+            // $('#npvStatusQueryTime-2').daterangepicker({
+            //     singleDatePicker: true,
+            //     // calender_style: "picker_4"
+            // }, function (start, end, label) {
+            //     console.log(start.toISOString(), end.toISOString(), label);
+            // });
+            /* 傳送時間 end */
+
+            /* 日期選擇器 begin*/
+            $scope.npvStatusDatePicker = new Date();
+            /* 日期選擇器 end*/
         }
     ]);
     return app;

@@ -34,14 +34,9 @@
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-4 col-xs-12">活動期間</label>
-                                    <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
-                                        <div class="col-md-5 col-sm-5">
-                                            <input id="activityGroupTime-1" type="text" class="form-control">
-                                        </div>
-                                        <label class="text-center col-md-2 col-sm-2">～</label>
-                                        <div class="col-md-5 col-sm-5">
-                                            <input id="activityGroupTime-2" type="text" class="form-control">
-                                        </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <bt-datepicker-range datepicker-id="activityGroupDatePicker" ng-model="activityGroupDatePicker" format="YYYY-MM-DD" drops="down"
+                                            opens="right"></bt-datepicker-range>
                                     </div>
                                 </div>
                             </div>
@@ -103,32 +98,33 @@
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>活動群組代碼</label>
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text " class="form-control">
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>活動群組名稱</label>
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text " class="form-control">
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">活動期間</label>
-                                            <div class="col-md-7 col-sm-7col-xs-12">
+                                            <!--<div class="col-md-7 col-sm-7col-xs-12">
                                                 <input id="activityGroupTime-3" type="text" class="form-control" style="width: 147px; display: inline-block;">                                                ~
                                                 <input id="activityGroupTime-4" type="text" class="form-control" style="width: 147px; display: inline-block;">
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-4"></div>
+                                            <div class="col-md-offset-2 col-sm-offset-4"></div>-->
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <bt-datepicker-range datepicker-id="activityGroupDatePicker2" ng-model="activityGroupDatePicker2" format="YYYY-MM-DD" drops="down"
+                                                    opens="right"></bt-datepicker-range>
+                                            </div>
                                         </div>
                                         <div class="form-group ">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text " class="form-control">
                                             </div>
-                                            <div class="col-md-offset-7 col-sm-offset-7 col-xs-12"></div>
                                         </div>
                                     </form>
                                 </div>
@@ -240,32 +236,28 @@
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>活動群組代碼</label>
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text " class="form-control">
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>活動群組名稱</label>
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text " class="form-control">
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">活動期間</label>
-                                            <div class="col-md-7 col-sm-7col-xs-12">
-                                                <input type="text" class="form-control" style="width: 147px; display: inline-block;">                                                ~
-                                                <input type="text" class="form-control" style="width: 147px; display: inline-block;">
+                                            <div class="col-md-6 col-sm-6col-xs-12">
+                                                <bt-datepicker-range datepicker-id="activityGroupDatePicker3" ng-model="activityGroupDatePicker3" format="YYYY-MM-DD" drops="down"
+                                                    opens="left"></bt-datepicker-range>
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-4"></div>
                                         </div>
                                         <div class="form-group ">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">排序</label>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <input type="text " class="form-control col-md-7 col-xs-12">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text " class="form-control">
                                             </div>
-                                            <div class="col-md-offset-7 col-sm-offset-7 col-xs-12"></div>
                                         </div>
                                     </form>
                                 </div>

@@ -14,43 +14,46 @@
                 <div class="row">
                     <!-- A貼/備援單 表單 begin -->
                     <form class="form-horizontal form-label-left">
-                        <div class="form-group">
-                            <label class="control-label col-md-2 col-sm-2 col-xs-12">類別</label>
-                            <!--<div class="col-md-4 col-sm-4 col-xs-12">
-                                <select class="form-control">
-                                         <option></option>
-                                         <option>活動類別</option>
-                                         <option>促代</option>
-                                         <option>加值</option>
-                                </select>
-                            </div>-->
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="radio">
-                                    <label><input type="radio" value="option1" name="option1"> 活動類別</label>
-                                    <label><input type="radio" value="option1" name="option1"> 促代</label>
-                                    <label><input type="radio" value="option1" name="option1"> 加值</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12">A貼/備援單</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="radio">
-                                        <label><input type="radio" value="option2" name="option2"> A貼</label>
-                                        <label><input type="radio" value="option2" name="option2"> 備援單</label>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">類別</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <div class="radio">
+                                            <label><input type="radio" value="option1" name="option1"> 活動類別</label>
+                                            <label><input type="radio" value="option1" name="option1"> 促代</label>
+                                            <label><input type="radio" value="option1" name="option1"> 加值</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12">類型</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="radio">
-                                        <label><input type="radio" value="option3" name="option3"> 手機約</label>
-                                        <label><input type="radio" value="option3" name="option3"> 月租通話約</label>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">A貼/備援單</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <div class="radio">
+                                            <label><input type="radio" value="option2" name="option2"> A貼</label>
+                                            <label><input type="radio" value="option2" name="option2"> 備援單</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <label class="control-label col-md-2 col-sm-2 col-xs-12">促代類型</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <select class="form-control">
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">類型</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <div class="radio">
+                                            <label><input type="radio" value="option3" name="option3"> 手機約</label>
+                                            <label><input type="radio" value="option3" name="option3"> 月租通話約</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">促代類型</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <select class="form-control">
                                          <option></option>
                                          <option>新啟用</option>
                                          <option>223</option>
@@ -60,42 +63,43 @@
                                          <option>續約</option>
                                          <option>4G續約</option> 
                                 </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-12 col-sm-12 col-xs-12 ">
-                                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#actGroupAdd" ng-click="showAPasteTable()">新增</button>
-                                    <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
-                                </div>
-                            </div>
-                            <!--A貼/備援單 表格 start -->
-                            <table id="datatable_aPasteBackup" class="table table-striped table-bordered" ng-show="isTable">
-                                <thead>
-                                    <tr>
-                                        <th class="table-header-color">類別</th>
-                                        <th class="table-header-color">A貼/備援單</th>
-                                        <th class="table-header-color">類型</th>
-                                        <th class="table-header-color">促代類型</th>
-                                        <th class="table-header-color">範本名稱</th>
-                                        <th class="table-header-color col-md-2"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="x in aPasteBackupTableData track by $index">
-                                        <td ng-bind="x.aPasteBackupClass"></td>
-                                        <td ng-bind="x.aPasteBackupDoc"></td>
-                                        <td ng-bind="x.aPasteBackupType"></td>
-                                        <td ng-bind="x.saleType"></td>
-                                        <td ng-bind="x.exampleName"></td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-pencil"></i>修改</button>
-                                            <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#actGroupDelConfirm"><i class="glyphicon glyphicon-remove"></i>刪除</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!-- A貼/備援單 表格 end -->
                         </div>
+                        <div class="form-group">
+                            <div class="col-md-12 col-sm-12 col-xs-12 ">
+                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#actGroupAdd" ng-click="showAPasteTable()">新增</button>
+                                <button type="button" class="btn btn-primary pull-right" ng-click="showTable()">查詢</button>
+                            </div>
+                        </div>
+                        <!--A貼/備援單 表格 start -->
+                        <table id="datatable_aPasteBackup" class="table table-striped table-bordered" ng-show="isTable">
+                            <thead>
+                                <tr>
+                                    <th class="table-header-color">類別</th>
+                                    <th class="table-header-color">A貼/備援單</th>
+                                    <th class="table-header-color">類型</th>
+                                    <th class="table-header-color">促代類型</th>
+                                    <th class="table-header-color">範本名稱</th>
+                                    <th class="table-header-color col-md-2"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in aPasteBackupTableData track by $index">
+                                    <td ng-bind="x.aPasteBackupClass"></td>
+                                    <td ng-bind="x.aPasteBackupDoc"></td>
+                                    <td ng-bind="x.aPasteBackupType"></td>
+                                    <td ng-bind="x.saleType"></td>
+                                    <td ng-bind="x.exampleName"></td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-pencil"></i>修改</button>
+                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#actGroupDelConfirm"><i class="glyphicon glyphicon-remove"></i>刪除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- A貼/備援單 表格 end -->
                     </form>
                     <!-- A貼/備援單 表單 end -->
                     <!-- 新增 begin -->
@@ -151,13 +155,21 @@
                                                     </div>
                                                     <label class="control-label col-md-2 col-sm-2 col-xs-12">促代類型</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                                        <div class="radio">
+                                                        <!--<div class="radio">
                                                             <label><input type="radio" value="saleTypeOption1" name="saleTypeOption1"> 新啟用</label>
                                                             <label><input type="radio" value="saleTypeOption1" name="saleTypeOption1"> 223</label>
                                                             <label><input type="radio" value="saleTypeOption1" name="saleTypeOption1"> 224</label>
                                                             <label><input type="radio" value="saleTypeOption1" name="saleTypeOption1"> 324</label>
                                                             <label><input type="radio" value="saleTypeOption1" name="saleTypeOption1"> 423</label>
-                                                        </div>
+                                                        </div>-->
+                                                        <select class="form-control">
+                                         <option></option>
+                                         <option>新啟用</option>
+                                         <option>223</option>
+                                         <option>224</option>
+                                         <option>324</option>
+                                         <option>423</option>
+                                </select>
                                                     </div>
                                                 </div>
                                                 <hr>
