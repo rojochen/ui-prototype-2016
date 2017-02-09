@@ -15,37 +15,24 @@
                     <!-- 已處理 表單 begin -->
                     <form class="form-horizontal form-label-left">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="col-md-5 col-sm-5 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <label class="control-label col-md-4 col-sm-4 col-xs-12">NPV 單號</label>
-                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
                                         <input type="text" class="form-control col-md-7 col-xs-12" value="20161101">
                                     </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-12">
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
                                         <select class="form-control">
                                          <option>等於</option>
                                 </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-7 col-sm-7 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <!--<label class="control-label col-md-4 col-sm-4 col-xs-12">處理日期</label>
-                                    <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
-                                        <div class="col-md-5 col-sm-5">
-                                            <input id="alreadyDealTime-1" type="text" class="form-control">
-                                        </div>
-                                        <label class="text-center col-md-2 col-sm-2">～</label>
-                                        <div class="col-md-5 col-sm-5">
-                                            <input id="alreadyDealTime-2" type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-offset-4 col-sm-offset-4"></div>-->
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">處理日期</label>
-                                    <div class="col-md-9 col-sm-9 col-xs-12">
-                                        <bt-datepicker datepicker-id="npvStatusQueryTime-1" ng-model="npvStatusQueryTime-1" format="YYYY-MM-DD" drops="down" class="col-md-5 col-sm-5 col-xs-12"></bt-datepicker>
-                                        <label class="text-center col-md-1 col-sm-1 col-xs-12">～</label>
-                                        <bt-datepicker datepicker-id="npvStatusQueryTime-2" ng-model="npvStatusQueryTime-2" format="YYYY-MM-DD" drops="down" class="col-md-5 col-sm-5 col-xs-12"></bt-datepicker>
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">處理日期</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <bt-datepicker-range datepicker-id="npvStatusQueryTime" ng-model="npvStatusQueryTime" format="YYYY-MM-DD" drops="down" opens="left"></bt-datepicker-range>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +77,7 @@
                                     <td data-toggle="collapse" data-target="#accordion-1">2016/11/29 10:25</td>
                                     <td data-toggle="collapse" data-target="#accordion-1">yiyang（代理人：pm01）</td>
                                     <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-search" ng-click="aa()"></i>查詢</button>
+                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#actGroupEdit"><i class="fa fa-search"></i>查詢</button>
                                     </td>
                                 </tr>
                                 <!--展開 begin-->
