@@ -296,22 +296,6 @@ define(['btModule'], function (btModule) {
         });
 
         /* lightbox end */
-
-        // modal日期bug
-        // $(document).on('shown.bs.modal', '.modal', function () {
-        //     $('.modal:visible').length && $('.modal:visible').scroll(function () {
-        //         $('#renewalSuitableDateStart,#renewalSuitableDateEnd').blur();
-        //         $('#renewalSuitableDateStart,#renewalSuitableDateEnd').daterangepicker({
-        //                 singleDatePicker: true,
-        //                 locale: {
-        //                     cancelLabel: 'Clear'
-        //                 }
-        //             },
-        //             function (ev, picker) {
-        //                 $(this).val(picker.startDate.format('MM/DD/YYYY') && picker.endDate.format('MM/DD/YYYY'));
-        //             });
-        //     });
-        // });
         //主約類型多筆編輯維護修改按鈕動作 start
         $scope.masterMultiItemEditUploadCancelOk = function () {
             $timeout(function () {
@@ -328,18 +312,7 @@ define(['btModule'], function (btModule) {
 
         // 重置取消按鈕end
         //續約適用活動期間 start
-        $('#renewalSuitableDateStart').daterangepicker({
-            singleDatePicker: true
-            // calender_style: "picker_4"
-        }, function (start, end, label) {
-            console.log(start.toISOString(), end.toISOString(), label);
-        });
-        $('#renewalSuitableDateEnd').daterangepicker({
-            singleDatePicker: true
-            // calender_style: "picker_4"
-        }, function (start, end, label) {
-            console.log(start.toISOString(), end.toISOString(), label);
-        });
+        $scope.renewalSuitableDateStart = new Date();
         //續約適用活動期間 end
         $('#datatable_multiEditServiceData').DataTable().destroy();
 
