@@ -13,14 +13,22 @@
                 <div class="row">
                     <form class="form-horizontal form-label-left">
                         <!--LOA流程名稱 start-->
-                        <div class="form-group">
-                            <label class="control-label col-md-2 col-sm-2 col-xs-12">流程名稱:</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control" placeholder="促代維護">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">流程名稱:</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <input type="text" class="form-control" placeholder="促代維護">
+                                    </div>
+                                </div>
                             </div>
-                            <label class="control-label col-md-2 col-sm-2 col-xs-12">退單方式:</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <select class="form-control" ng-model="LOADefaultCharacter" ng-options="y.chargeName for y in chargebackFunction track by $index"></select>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">退單方式:</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <select class="form-control" ng-model="LOADefaultCharacter" ng-options="y.chargeName for y in chargebackFunction track by $index"></select>
+                                    </div>
+                                </div>
                             </div>
                             <!--<div class="row">
                                 <div class="form-group">
@@ -49,7 +57,6 @@
                                 </div>
                             </div>
                         </div>
-                        <hr>
                         <!--LOA流程名稱 end-->
                         <!--LOA表單 start-->
                         <div class="form-group">
@@ -84,10 +91,8 @@
                                                             <td ng-bind="x.LOASetGuid"></td>
                                                             <td ng-bind="x.LOASetParameter"></td>
                                                             <td>
-                                                               
-                                                                    <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-triangle-top"></button>
-                                                                    <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-triangle-bottom"></button>
-                                                            
+                                                                <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-triangle-top"></button>
+                                                                <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-triangle-bottom"></button>
                                                             </td>
                                                         </tr>
                                                     </tbody>

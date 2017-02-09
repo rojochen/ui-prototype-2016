@@ -261,55 +261,55 @@ define(['btModule'], function (btModule) {
         }, {
             "number": "20170111003",
             "numberType": "促代-4G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111004",
             "numberType": "促代-4G/3G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111005",
             "numberType": "促代-4G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111006",
             "numberType": "促代-4G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111007",
             "numberType": "促代-4G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111008",
             "numberType": "促代-4G",
-            "subType": "",
+            "subType": "Bundle(1)",
         }, {
             "number": "20170111009",
             "numberType": "促代-4G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111010",
             "numberType": "促代3G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111011",
             "numberType": "促代4G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111012",
             "numberType": "促代4G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111013",
             "numberType": "促代3G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111014",
             "numberType": "促代3G",
-            "subType": "",
+            "subType": "Single(1)",
         }, {
             "number": "20170111015",
             "numberType": "促代4G",
-            "subType": "",
+            "subType": "Single(1)",
         }];
         $scope.inquire = function (numberType) {
             if (numberType === "促代-4G") {
