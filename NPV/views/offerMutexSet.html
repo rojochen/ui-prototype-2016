@@ -126,8 +126,8 @@
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>門號類型</label>
-                                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                                <select class="form-control col-md-3 col-xs-12">
+                                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                                <select class="form-control">
                                                     <option></option>
                                                     <option>4G</option>
                                                     <option>3G</option>
@@ -148,7 +148,7 @@
                                                     <input type="text" class="form-control" placeholder="請輸入文字" ng-model="addSearchText1">
                                                     <select id="offerSelect1" class="form-control" size="8" multiple="multiple" ng-model="offerSelect1" ng-options="item for item in names | filter:addSearchText1"></select>
                                                 </div>
-                                                <div class="col-md-2 ">
+                                                <div class="col-md-2">
                                                     <button type="button" id="offerAdd1_all" class="btn btn-default btn-sm col-md-12" style="color: #73879c">
                                                         <i class="glyphicon glyphicon-forward"></i>
                                                     </button>
@@ -161,7 +161,6 @@
                                                     <select id="offerSelect2" class="form-control" size="8" multiple="multiple" ng-model="offerSelect2" ng-options="item for item in names1 | filter:addSearchText2"></select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-offset-1 col-sm-offset-1"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>互斥Offer項目</label>

@@ -125,7 +125,7 @@ define(['btModule'], function (btModule) {
             /* 手風琴 end*/
 
             /* 日期選擇器 begin*/
-            $scope.npvStatusQueryTime = new Date();
+            $scope.alreadyDealDatePicker = new Date();
             /* 日期選擇器 end*/
         }
     ]);

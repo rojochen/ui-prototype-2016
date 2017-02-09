@@ -30,22 +30,6 @@ define(['btModule'], function (btModule) {
             });
             /*end 版面縮合*/
 
-            /* 匯入日期區間 begin */
-            $('#tableQueryTime-1').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-
-            $('#tableQueryTime-2').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-            /* 匯入日期區間 end */
-
             /* 表格 begin */
             var opt = {
                 "oLanguage": {
@@ -228,6 +212,24 @@ define(['btModule'], function (btModule) {
                 $scope.isTable = true;
             }
             /* end */
+
+            /* 日期選擇器 begin */
+            $scope.tableQueryDatePicker = new Date();
+            // $('#tableQueryTime-1').daterangepicker({
+            //     singleDatePicker: true,
+            //     // calender_style: "picker_4"
+            // }, function (start, end, label) {
+            //     console.log(start.toISOString(), end.toISOString(), label);
+            // });
+
+            // $('#tableQueryTime-2').daterangepicker({
+            //     singleDatePicker: true,
+            //     // calender_style: "picker_4"
+            // }, function (start, end, label) {
+            //     console.log(start.toISOString(), end.toISOString(), label);
+            // });
+            /* 日期選擇器 end */
+
         }
     ]);
     return app;

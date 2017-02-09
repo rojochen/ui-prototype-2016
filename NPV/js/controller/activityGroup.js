@@ -47,37 +47,6 @@ define(['btModule'], function (btModule) {
             };
             /* end */
 
-            /* 查詢活動期間 begin */
-            $('#activityGroupTime-1').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-
-            $('#activityGroupTime-2').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-            /* 查詢活動期間 end */
-            /* 新增活動期間 begin */
-            $('#activityGroupTime-3').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-
-            $('#activityGroupTime-4').daterangepicker({
-                singleDatePicker: true,
-                // calender_style: "picker_4"
-            }, function (start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
-            /* 新增活動期間 end */
-
             /* 活動群組表格 begin */
             var opt = {
                 "oLanguage": {
@@ -300,6 +269,44 @@ define(['btModule'], function (btModule) {
                 }, 100)
             }
             /* 取消鍵 end */
+
+            /* 日期選擇器 - 查詢 begin */
+            $scope.activityGroupDatePicker = new Date();
+            // $('#activityGroupTime-1').daterangepicker({
+            //     singleDatePicker: true,
+            //     // calender_style: "picker_4"
+            // }, function (start, end, label) {
+            //     console.log(start.toISOString(), end.toISOString(), label);
+            // });
+
+            // $('#activityGroupTime-2').daterangepicker({
+            //     singleDatePicker: true,
+            //     // calender_style: "picker_4"
+            // }, function (start, end, label) {
+            //     console.log(start.toISOString(), end.toISOString(), label);
+            // });
+            /* 日期選擇器 - 查詢 end */
+
+            /* 日期選擇器 - 新增 begin */
+            $scope.activityGroupDatePicker2 = new Date();
+            // $('#activityGroupTime-3').daterangepicker({
+            //     singleDatePicker: true,
+            //     // calender_style: "picker_4"
+            // }, function (start, end, label) {
+            //     console.log(start.toISOString(), end.toISOString(), label);
+            // });
+
+            // $('#activityGroupTime-4').daterangepicker({
+            //     singleDatePicker: true,
+            //     // calender_style: "picker_4"
+            // }, function (start, end, label) {
+            //     console.log(start.toISOString(), end.toISOString(), label);
+            // });
+            /* 日期選擇器 - 新增 end */
+
+            /* 日期選擇器 - 修改 begin */
+            $scope.activityGroupDatePicker3 = new Date();
+            /* 日期選擇器 - 修改 end */
         }
     ]);
     return app;
