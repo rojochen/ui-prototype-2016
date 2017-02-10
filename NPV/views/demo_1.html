@@ -66,7 +66,7 @@
                                                         </div>
                                                     </td>-->
                                         <td colspan="5" style="padding-left: 42px; padding-top: 0px; padding-bottom: 0px;">
-                                            <div class="container-fluid" id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="container-fluid panel-collapse collapse in" id="collapseOne1" role="tabpanel" aria-labelledby="headingOne">
                                                 <div class="row">
                                                     <div class="col-md-10">
                                                         <table class="table table-bordered">
@@ -188,6 +188,225 @@
                         <button type="button" class="btn btn-primary" ng-click="btn_define()">確定</button>
                     </div>
                 </div>
+                <!-- 新增活動類別 確認送出顯示表格 start-->
+                <div ng-show="activityClassTable">
+                    <table id="activityClassTable" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="table-header-color">NO</th>
+                                <th class="table-header-color">類別</th>
+                                <th class="table-header-color">活動代碼</th>
+                                <th class="table-header-color">活動類別名稱</th>
+                                <th class="table-header-color"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Single</td>
+                                <td><button type="button" class="btn btn-link" data-toggle="modal">L001</button></td>
+                                <td>學生專案</td>
+                                <td><button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#activityEdit"><i class="fa fa-pencil"></i>修改</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-dismiss="modal" ng-click="pnotifyAddSuccess()">確定</button>
+                    </div>
+                </div>
+                <!-- 新增活動類別 確認送出顯示表格 end -->
+                <!-- 新增單一促代 促代 確認送出顯示表格 start-->
+                <div ng-show="addSingleSaleTable">
+                    <table id="showAddSingleSaleTable" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="table-header-color">NO</th>
+                                <th class="table-header-color">活動類別</th>
+                                <th class="table-header-color">促代代碼</th>
+                                <th class="table-header-color">促代名稱</th>
+                                <th class="table-header-color"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><button type="button" class="btn btn-link">L001學生專案</button></td>
+                                <td><button type="button" class="btn btn-link" data-toggle="modal" href="#generationEdit">S002</button></td>
+                                <td>3G終極管家Plus月租699A限24</td>
+                                <td><button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#generationEdit"><i class="fa fa-pencil"></i>修改</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-dismiss="modal" ng-click="pnotifyAddSuccess()">確定</button>
+                    </div>
+                </div>
+                <!-- 新增單一促代 促代 確認送出顯示表格 end -->
+                <!-- 新增單一促代 加值服務 確認送出顯示表格 start-->
+                <div ng-show="valueAddTable">
+                    <table id="showValueAddTable" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="table-header-color">NO</th>
+                                <th class="table-header-color">活動類別</th>
+                                <th class="table-header-color">促代代碼</th>
+                                <th class="table-header-color">促代名稱</th>
+                                <th class="table-header-color"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><button type="button" class="btn btn-link">L001學生專案</button></td>
+                                <td><button type="button" class="btn btn-link" data-toggle="modal" href="#generationEdit">S002</button></td>
+                                <td>3G終極管家Plus月租699A限24</td>
+                                <td><button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#generationEdit"><i class="fa fa-pencil"></i>修改</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-dismiss="modal" ng-click="pnotifyAddSuccess()">確定</button>
+                    </div>
+                </div>
+                <!-- 新增單一促代 加值服務 確認送出顯示表格 end -->
+                <!-- 新增複合式促代 複合式促代設定 顯示表格 start -->
+                <div ng-show="compositeSaleTable">
+                    <form id="compositeSaleTable" class="form-horizontal" role="form">
+                        <table class="table table-striped jambo_table table-bordered">
+                            <thead>
+                                <tr class="headings">
+                                    <th>NO</th>
+                                    <th>活動類別</th>
+                                    <th>促代代碼</th>
+                                    <th>促代名稱</th>
+                                    <th>編輯</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td data-toggle="modal" data-target="#Modal3-1">L001 學生專案</td>
+                                    <td>S001</td>
+                                    <td>遠傳e書城149限12</td>
+                                    <td rowspan="4" align="center"><button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#activityEdit"><i class="fa fa-pencil"></i>修改</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>L002 長壽專案</td>
+                                    <td>
+                                        <a id="headingOne1" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1" aria-controls="collapseOne">BOO1</a>
+                                    </td>
+                                    <td>行動3G續約專案</td>
+                                </tr>
+                                <tr>
+                                    <!--<td colspan="5" style="padding-left: 60px; padding-top: 0px; padding-bottom: 0px;">
+                                                        <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                            ① 主要VAS服務合約：155899-遠傳e書城149<br> ② 合約期限：12個月
+                                                        </div>
+                                                    </td>-->
+                                    <td colspan="4" style="padding-left: 42px; padding-top: 0px; padding-bottom: 0px;">
+                                        <div class="container-fluid panel-collapse collapse in" id="collapseOne1" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>活動類別</th>
+                                                                <th>促代代碼</th>
+                                                                <th>促代名稱</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>L002 長壽專案</td>
+                                                                <td>S010</td>
+                                                                <td>續約升級1~249手機搭765方案</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>L002 長壽專案</td>
+                                                                <td>S015</td>
+                                                                <td>續約升級1~249i-mode手機搭765方案</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>L002 長壽專案</td>
+                                                                <td>S020</td>
+                                                                <td>續約升級250~749手機開獎168方案</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>L001 學生專案</td>
+                                    <td>S002</td>
+                                    <td>3G終極管家Plus月租699A限24</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-dismiss="modal" ng-click="pnotifyAddSuccess()">確定</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- 新增複合式促代 複合式促代設定 顯示表格 end -->
+                <!-- 活動類別查詢 重新上架 顯示表格 start-->
+                <div ng-show="activityClassTable1">
+                    <table id="activityClassTable1" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="table-header-color">NO</th>
+                                <th class="table-header-color">類別</th>
+                                <th class="table-header-color">活動代碼</th>
+                                <th class="table-header-color">活動類別名稱</th>
+                                <th class="table-header-color"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Single</td>
+                                <td><button type="button" class="btn btn-link" data-toggle="modal">L001</button></td>
+                                <td>學生專案</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-dismiss="modal" ng-click="pnotifyAddSuccess()">確定</button>
+                    </div>
+                </div>
+                <!-- 活動類別查詢 重新上架 顯示表格 顯示表格 end -->
+                <!-- 匯入至新NPV 顯示表格 start-->
+                <div ng-show="activityClassTable2">
+                    <table id="activityClassTable2" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="table-header-color">NO</th>
+                                <th class="table-header-color">類別</th>
+                                <th class="table-header-color">活動代碼</th>
+                                <th class="table-header-color">活動類別名稱</th>
+                                <th class="table-header-color"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Single</td>
+                                <td><button type="button" class="btn btn-link" data-toggle="modal">L001</button></td>
+                                <td>學生專案</td>
+                                <td><button type="button" class="btn btn-info btn-xs" data-toggle="modal" href="#activityEdit"><i class="fa fa-pencil"></i>修改</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-dismiss="modal" ng-click="pnotifyAddSuccess()">確定</button>
+                    </div>
+                </div>
+                <!-- 匯入至新NPV end -->
             </div>
         </div>
     </div>
@@ -853,7 +1072,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" href="#addConfirm">確定</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" ng-click="showActivityClassTable()">確定</button>
                         <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
                     </div>
                 </div>
@@ -883,7 +1102,7 @@
                                 </div>
                                 <div class="radio-inline">
                                     <label class="radio-inline">
-                                  <input type="radio"  ng-model="offerItem" value="2" > 加值服務
+                                  <input type="radio"  ng-model="offerItem" value="2"> 加值服務
                                 </label>
                                 </div>
                             </div>
@@ -892,7 +1111,7 @@
                     <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" ng-click="definiteOffer()">確定</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="definiteOffer()">確定</button>
                     <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                 </div>
             </div>
@@ -1413,7 +1632,7 @@
                     </div>
                     <div class="modal-footer">
                         <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" href="#addConfirm">確定</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="showAddSingleSaleTable()">確定</button>
                     </div>
                 </div>
             </div>
@@ -1833,13 +2052,41 @@
                     </div>
                     <div class="modal-footer">
                         <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" href="#addConfirm">確定</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="showValueAddTable()">確定</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--加值服務  end  -->
+    <!-- 新增單一促代 促代 新增確認畫面 start -->
+    <div class="modal  bs-example-modal-lg" id="addConfirm" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+                    <h4 class="modal-title" id="13-2">確認畫面</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <br>
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <h3>確定新增?</h3>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="pnotifyAddSuccess()" href="#showAddSingleSaleTable">確定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 新增單一促代 促代 新增確認畫面 end -->
     <!--Boundle Promotion start-->
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="modal fullscreen-modal " tabindex="-1" role="dialog" aria-hidden="true" id="Boundle">
@@ -2249,7 +2496,7 @@
                         <!-- end IA/備援單-->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="showTable()">確定</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" ng-click="showCompositeSaleTable()">確定</button>
                         <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelAddModal">取消</button>
                     </div>
                 </div>
@@ -2543,7 +2790,7 @@
                         <form class="form-inline" role="form">
                             <div class="container-fluid">
                                 <button type="submit" class="btn btn-primary col-md-offset-2 col-md-1" ng-click="activities_Advanced()">查詢</button>
-                                <button type="submit" class="btn btn-primary col-md-1 ">重新上架</button>
+                                <button type="submit" class="btn btn-primary col-md-1" data-dismiss="modal" ng-click="showActivityClassTable1()">重新上架</button>
                                 <div class="col-md-2 text-center">
                                     <div class="checkbox">
                                         <label>
@@ -2551,9 +2798,9 @@
                                         </label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary col-md-2">匯入至新NPV
+                                <button type="submit" class="btn btn-primary col-md-2" data-dismiss="modal" ng-click="showActivityClassTable2()">匯入至新NPV
                                 </button>
-                                <button type="submit" class="btn btn-primary col-md-1 " disabled>匯出EXCEL</button>
+                                <button type="submit" class="btn btn-primary col-md-1" disabled>匯出EXCEL</button>
                             </div>
                         </form>
                         <!-- begin 活動進階搜尋表格 -->
@@ -2663,7 +2910,6 @@
                         <!-- end 活動進階搜尋表格 -->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">重新上架</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     </div>
@@ -2868,7 +3114,7 @@
                     <form class="form-inline" role="form">
                         <div class="container-fluid">
                             <button type="submit" class="btn btn-primary col-md-offset-2 col-md-1" ng-click="activities_Advanced()">查詢</button>
-                            <button type="submit" class="btn btn-primary col-md-1 ">重新上架</button>
+                            <button type="submit" class="btn btn-primary col-md-1" data-dismiss="modal" ng-click="showActivityClassTable()">重新上架</button>
                             <div class="col-md-2 text-center">
                                 <div class="checkbox">
                                     <label>
@@ -2876,7 +3122,7 @@
                                         </label>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">匯入至新NPV
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal" ng-click="showActivityClassTable()">匯入至新NPV
                                 </button>
                             <button type="submit" class="btn btn-primary" disabled>匯出EXCEL</button>
                             <button type="submit" class="btn btn-primary" disabled>匯出前次出檔異動比對</button>
