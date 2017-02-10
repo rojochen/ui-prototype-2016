@@ -851,9 +851,41 @@ define(['btModule'], function (btModule) {
             $scope.showTable = function () {
                 $scope.isForm = true;
             }
+
+            /*（活動類別查詢）*/
+            $scope.activityClassTable = false;
+            $scope.showActivityClassTable = function () {
+                $scope.activityClassTable = true;
+            }
+            /*（新增單一促代）*/
+            //促代
+            $scope.addSingleSaleTable = false;
+            $scope.showAddSingleSaleTable = function () {
+                $scope.addSingleSaleTable = true;
+            }
+            //加值服務
+            $scope.valueAddTable = false;
+            $scope.showValueAddTable = function () {
+                $scope.valueAddTable = true;
+            }
+            /*（新增複合式促代）*/
+            $scope.compositeSaleTable = false;
+            $scope.showCompositeSaleTable = function () {
+                $scope.compositeSaleTable = true;
+            }
+            /*（活動類別查詢）*/
+            //重新上架
+            $scope.activityClassTable1 = false;
+            $scope.showActivityClassTable1 = function () {
+                $scope.activityClassTable1 = true;
+            }
+            //匯入至新NPV
+            $scope.activityClassTable2 = false;
+            $scope.showActivityClassTable2 = function () {
+                $scope.activityClassTable2 = true;
+            }
+
             /* 展開表格 end */
-
-
 
             $scope.addList = function () {
                 $timeout(function () {
@@ -959,6 +991,13 @@ define(['btModule'], function (btModule) {
             // Success
             $scope.pnotifyAddSuccess = function () {
                 pnotifyService.pnotifySuccess('Success', '新增完成！');
+                $scope.activityClassTable = false;
+                $scope.addSingleSaleTable = false;
+                $scope.compositeSaleTable = false;
+                $scope.valueAddTable = false;
+                $scope.valuedAddTable = false;
+                $scope.activityClassTable1 = false;
+                $scope.activityClassTable2 = false;
 
                 $timeout(function () {
                     $('#valueAdded').modal('hide')
