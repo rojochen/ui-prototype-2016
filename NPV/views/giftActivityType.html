@@ -14,31 +14,38 @@
                 <div class="row">
                     <!-- 贈品/加碼活動條件類型維護 表單 begin -->
                     <form class="form-horizontal form-label-left">
-                        <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">條件類型代碼</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
-                            </div>
-                            <div class="col-md-offset-4 col-sm-offset-4"></div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">條件類型中文說明</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-2">
-                                <button type="button" class="btn btn-default" style="color: #73879c" ng-click="vm.searchAdv=!vm.searchAdv">進階查詢</button>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-if="vm.searchAdv">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">是否顯示</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="radio">
-                                    <label><input type="radio" value="option2" name="optionsRadios" checked="checked">是</label>                                    <label><input type="radio" value="option1" name="optionsRadios">否</label>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">條件類型代碼</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-offset-4 col-sm-offset-4"></div>
                                 </div>
                             </div>
-                        </div>
-                        <!--<div class="form-group" ng-if="vm.searchAdv">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">條件類型中文說明</label>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <button type="button" class="btn btn-default" style="color: #73879c" ng-click="vm.searchAdv=!vm.searchAdv">進階查詢</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group" ng-if="vm.searchAdv">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">是否顯示</label>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <div class="radio">
+                                            <label><input type="radio" value="option2" name="optionsRadios" checked="checked">是</label>                                            <label><input type="radio" value="option1" name="optionsRadios">否</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="form-group" ng-if="vm.searchAdv">
                             <label class="control-label col-md-4 col-sm-4 col-xs-12">是否顯示</label>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <select class="form-control">
@@ -48,10 +55,11 @@
                                 </select>
                             </div>
                         </div>-->
-                        <div class="form-group" ng-if="vm.searchAdv">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">適用兌換方式</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <select class="form-control">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group" ng-if="vm.searchAdv">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">適用兌換方式</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <select class="form-control">
                                          <option></option>
                                          <option>禮遇專區</option>
                                          <option>申辦加碼禮</option>
@@ -59,6 +67,8 @@
                                          <option>QR Code</option>
                                          <option>現有客戶加碼禮</option>
                                 </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
