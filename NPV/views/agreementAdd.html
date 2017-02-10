@@ -14,39 +14,51 @@
                 <div class="row">
                     <!-- 合約相關新增/維護表單 begin -->
                     <form class="form-horizontal form-label-left">
-                        <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">群組類型</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <select class="form-control col-md-3 col-xs-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">群組類型</label>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <select class="form-control col-md-3 col-xs-12">
                                          <option></option>
                                          <option>WAIVED</option>
                                          <option>TEST</option>
                                 </select>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-2">
+                                        <button type="button" class="btn btn-default" style="color: #73879c" ng-click="vm.searchAdv=!vm.searchAdv">進階查詢</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-2">
-                                <button type="button" class="btn btn-default" style="color: #73879c" ng-click="vm.searchAdv=!vm.searchAdv">進階查詢</button>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">代碼</label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <input type="text" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">代碼</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
-                            </div>
-                            <div class="col-md-offset-4 col-sm-offset-4"></div>
-                        </div>
-                        <div class="form-group" ng-if="vm.searchAdv">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">名稱</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
-                            </div>
-                            <div class="col-md-offset-4 col-sm-offset-4"></div>
-                        </div>
-                        <div class="form-group" ng-if="vm.searchAdv">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">是否可修改</label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                <div class="radio">
-                                    <label><input type="radio" value="option1" name="optionsRadios">Y</label>
-                                    <label><input type="radio" value="option2" name="optionsRadios">N</label>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group" ng-if="vm.searchAdv">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">名稱</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group" ng-if="vm.searchAdv">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">是否可修改</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <div class="radio">
+                                                    <label><input type="radio" value="option1" name="optionsRadios">Y</label>
+                                                    <label><input type="radio" value="option2" name="optionsRadios">N</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

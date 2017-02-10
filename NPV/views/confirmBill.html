@@ -34,16 +34,42 @@
                                                 <tr>
                                                     <th class="table-header-color"><input type="checkbox"></th>
                                                     <th class="table-header-color" data-toggle="collapse" ng-href="#{{x.confirmBillID[0]}}" aria-expanded="true" data-parent="#accordion"
-                                                        aria-controls="{{x.confirmBillID[0]}}">NPV單號</th>
-                                                        <th class="table-header-color">類型</th>
+                                                        aria-controls="{{x.confirmBillID[0]}" data-target="#accordion-1">NPV單號</th>
+                                                        <th class="table-header-color col-md-2">類型</th>
                                                         <th class="table-header-color">次類型</th>
-                                                        <th class="table-header-color">傳送時間</th>
+                                                        <th class="table-header-color col-md-2">傳送時間</th>
                                                         <th class="table-header-color">PM</th>
-                                                        <th class="table-header-color">狀態(關卡)</th>
-                                                        <th class="table-header-color">匯出SPV</th>
+                                                        <th class="table-header-color col-md-2">狀態(關卡)</th>
+                                                        <th class="table-header-color col-md-2">匯出SPV</th>
                                                 </tr>
                                             </thead>
                                             <tbody ng-repeat="x in confirmBillTableData track by $index">
+                                                <!--展開 begin-->
+                                                <tr id="accordion-1" class="collapse">
+                                                    <td colspan="8">
+                                                        <table class="table table-bordered table-hover" style="margin:0px;">
+                                                            <thead>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="table-header-color">NO</td>
+                                                                    <td class="table-header-color">代碼</td>
+                                                                    <td class="table-header-color">類型</td>
+                                                                    <td class="table-header-color">名稱</td>
+                                                                    <td class="table-header-color">版本比對</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>BB01</td>
+                                                                    <td>Bundle(團結力量大)</td>
+                                                                    <td>3G團體優惠專案</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <!--展開 end-->
                                                 <tr>
                                                     <td><input type="checkbox"></td>
                                                     <td ng-bind="x.confirmBillNpvID" data-toggle="collapse" ng-href="#{{x.confirmBillID}}" aria-expanded="true" data-parent="#accordion"

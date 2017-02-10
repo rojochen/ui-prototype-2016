@@ -14,104 +14,108 @@
                 <div class="row">
                     <!-- offer互斥設定維護 表單 begin -->
                     <form class="form-horizontal form-label-left">
-                        <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Offer ID</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
-                            </div>
-                            <div class="col-md-offset-4 col-sm-offset-4"></div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Offer Name</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-2">
-                                <button type="button" class="btn btn-default" style="color: #73879c" ng-click="vm.searchAdv=!vm.searchAdv">進階查詢</button>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-if="vm.searchAdv">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">訊息描述</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
-                            </div>
-                            <div class="col-md-offset-4 col-sm-offset-4"></div>
-                        </div>
-                        <div class="form-group" ng-if="vm.searchAdv">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">是否提示警訊</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="radio">
-                                    <label><input type="radio" value="option2" name="optionsRadios">是</label>
-                                    <label><input type="radio" value="option1" name="optionsRadios">否</label>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-12">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">Offer ID</label>
+                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                            <input type="text" class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">Offer Name</label>
+                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                            <input type="text" class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-2">
+                                            <button type="button" class="btn btn-default" style="color: #73879c" ng-click="vm.searchAdv=!vm.searchAdv">進階查詢</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--<div class="form-group" ng-if="vm.searchAdv">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">是否提示警訊</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <select class="form-control col-md-3 col-xs-12">
-                                         <option></option>
-                                         <option>是</option>
-                                         <option>否</option>
-                                </select>
-                            </div>
-                        </div>-->
-                        <div class="form-group" ng-if="vm.searchAdv">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">設定互斥原因</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
-                            </div>
-                            <div class="col-md-offset-4 col-sm-offset-4"></div>
-                        </div>
-                        <div class="form-group">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="pull-right">
-                                    <button type="button" class="btn btn-primary" ng-click="showTable()">查詢</button>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#offerMutexSetAdd">新增</button>
-                                    <button type="button" class="btn btn-primary">重置</button>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group" ng-if="vm.searchAdv">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">訊息描述</label>
+                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                            <input type="text" class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group" ng-if="vm.searchAdv">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">是否提示警訊</label>
+                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                            <div class="radio">
+                                                <label><input type="radio" value="option2" name="optionsRadios">是</label>
+                                                <label><input type="radio" value="option1" name="optionsRadios">否</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--offer互斥設定維護 表格 start -->
-                        <table id="datatable_offerMutexSet" class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th class="table-header-color col-md-1">OfferID</th>
-                                    <th class="table-header-color col-md-2">OfferName</th>
-                                    <th class="table-header-color col-md-1">互斥OfferID</th>
-                                    <th class="table-header-color col-md-1">互斥OfferName</th>
-                                    <th class="table-header-color col-md-1">訊息描述</th>
-                                    <th class="table-header-color col-md-1">是否提示警訊</th>
-                                    <th class="table-header-color col-md-1">設定互斥原因</th>
-                                    <th class="table-header-color col-md-1">修改人員</th>
-                                    <th class="table-header-color col-md-2">修改日期</th>
-                                    <th class="table-header-color col-md-1"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat=" x in offerMutexSetTableData track by $index">
-                                    <td ng-bind="x.offerMutexID"></td>
-                                    <td ng-bind="x.offerMutexName"></td>
-                                    <td ng-bind="x.offerMutexMutexID"></td>
-                                    <td ng-bind="x.offerMutexMutexName"></td>
-                                    <td ng-bind="x.offerMutexMessage"></td>
-                                    <td ng-bind="x.offerMutexAlert"></td>
-                                    <td ng-bind="x.offerMutexReason"></td>
-                                    <td ng-bind="x.offerMutexRole"></td>
-                                    <td ng-bind="x.offerMutexDate"></td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#offerMutexSetEdit"><i class="fa fa-pencil"></i>修改</button>
-                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#offerMutexSetDelConfirm"><i class="glyphicon glyphicon-remove"></i>刪除</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- offer互斥設定維護 表格 end -->
-                        <!-- 頁籤 begin -->
-                        <div class="pull-right">
-                            <div bt-pagination ng-model="tableInfo" page-size="2" page-count=-9></div>
-                        </div>
-                        <!-- 頁籤 end -->
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group" ng-if="vm.searchAdv">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">設定互斥原因</label>
+                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                            <input type="text" class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="pull-right">
+                                        <button type="button" class="btn btn-primary" ng-click="showTable()">查詢</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#offerMutexSetAdd">新增</button>
+                                        <button type="button" class="btn btn-primary">重置</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--offer互斥設定維護 表格 start -->
+                            <table id="datatable_offerMutexSet" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="table-header-color col-md-1">OfferID</th>
+                                        <th class="table-header-color col-md-2">OfferName</th>
+                                        <th class="table-header-color col-md-1">互斥OfferID</th>
+                                        <th class="table-header-color col-md-1">互斥OfferName</th>
+                                        <th class="table-header-color col-md-1">訊息描述</th>
+                                        <th class="table-header-color col-md-1">是否提示警訊</th>
+                                        <th class="table-header-color col-md-1">設定互斥原因</th>
+                                        <th class="table-header-color col-md-1">修改人員</th>
+                                        <th class="table-header-color col-md-2">修改日期</th>
+                                        <th class="table-header-color col-md-1"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat=" x in offerMutexSetTableData track by $index">
+                                        <td ng-bind="x.offerMutexID"></td>
+                                        <td ng-bind="x.offerMutexName"></td>
+                                        <td ng-bind="x.offerMutexMutexID"></td>
+                                        <td ng-bind="x.offerMutexMutexName"></td>
+                                        <td ng-bind="x.offerMutexMessage"></td>
+                                        <td ng-bind="x.offerMutexAlert"></td>
+                                        <td ng-bind="x.offerMutexReason"></td>
+                                        <td ng-bind="x.offerMutexRole"></td>
+                                        <td ng-bind="x.offerMutexDate"></td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#offerMutexSetEdit"><i class="fa fa-pencil"></i>修改</button>
+                                            <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#offerMutexSetDelConfirm"><i class="glyphicon glyphicon-remove"></i>刪除</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- offer互斥設定維護 表格 end -->
+                            <!-- 頁籤 begin -->
+                            <div class="pull-right">
+                                <div bt-pagination ng-model="tableInfo" page-size="2" page-count=-9></div>
+                            </div>
+                            <!-- 頁籤 end -->
                     </form>
                     <!-- offer互斥設定維護 表單 end -->
                     <!-- 新增 begin -->
@@ -569,8 +573,8 @@
                         </div>
                     </div>-->
                     <!-- 刪除完成 end -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
