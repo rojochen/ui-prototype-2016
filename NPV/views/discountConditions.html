@@ -35,53 +35,53 @@
                             <label class="control-label col-md-4 col-sm-4 col-xs-12">TYPE:</label>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <input type="text" class="form-control col-md-7 col-xs-12">
-                            </div>
-                        </div>-->
-                            <div class="form-group">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="pull-right">
-                                        <button type="button" class="btn btn-primary">查詢</button>
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">新增</button>
-                                        <button type="button" class="btn btn-primary">重置</button>
-                                    </div>
+                            </div>-->
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-primary">查詢</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">新增</button>
+                                    <button type="button" class="btn btn-primary">重置</button>
                                 </div>
                             </div>
-                            <!--  表格 -->
-                            <table id="datatable_discountConditions" class="table table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th class="table-header-color col-md-1">排序</th>
-                                        <th class="table-header-color col-md-2">名稱</th>
-                                        <th class="table-header-color">Type</th>
-                                        <th class="table-header-color">預設值</th>
-                                        <th class="table-header-color">重新上架異動</th>
-                                        <th class="table-header-color">開立ITSR</th>
-                                        <th class="table-header-color">走PC流程</th>
-                                        <th class="table-header-color">修改人員</th>
-                                        <th class="table-header-color">修改日期</th>
-                                        <th class="table-header-color col-md-2"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="x in discountConditionsTableData track by $index">
-                                        <td ng-bind="x.discountConditionSort"></td>
-                                        <td ng-bind="x.discountConditionName"></td>
-                                        <td ng-bind="x.discountConditionType"></td>
-                                        <td ng-bind="x.defaultValue"></td>
-                                        <td ng-bind="x.restocking"></td>
-                                        <td ng-bind="x.ITSR"></td>
-                                        <td ng-bind="x.PC"></td>
-                                        <td ng-bind="x.modifyPersonnel"></td>
-                                        <td ng-bind="x.modifyDate"></td>
-                                        <td>
-                                            <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" data-target="#editModal"><i class="fa fa-pencil"></i> 修改</button>
-                                            <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteModal"><i
+                        </div>
+                        <!--  表格 -->
+                        <table id="datatable_discountConditions" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="table-header-color col-md-1">排序</th>
+                                    <th class="table-header-color col-md-2">名稱</th>
+                                    <th class="table-header-color">Type</th>
+                                    <th class="table-header-color">預設值</th>
+                                    <th class="table-header-color">重新上架異動</th>
+                                    <th class="table-header-color">開立ITSR</th>
+                                    <th class="table-header-color">走PC流程</th>
+                                    <th class="table-header-color">修改人員</th>
+                                    <th class="table-header-color">修改日期</th>
+                                    <th class="table-header-color col-md-2"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in discountConditionsTableData track by $index">
+                                    <td ng-bind="x.discountConditionSort"></td>
+                                    <td ng-bind="x.discountConditionName"></td>
+                                    <td ng-bind="x.discountConditionType"></td>
+                                    <td ng-bind="x.defaultValue"></td>
+                                    <td ng-bind="x.restocking"></td>
+                                    <td ng-bind="x.ITSR"></td>
+                                    <td ng-bind="x.PC"></td>
+                                    <td ng-bind="x.modifyPersonnel"></td>
+                                    <td ng-bind="x.modifyDate"></td>
+                                    <td>
+                                        <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" data-target="#editModal"><i class="fa fa-pencil"></i> 修改</button>
+                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteModal"><i
                                                     class="glyphicon glyphicon-remove"></i> 刪除</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!-- end 門號類型設定表格 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- end 門號類型設定表格 -->
                     </form>
                     <!-- 新增畫面-->
                     <div class="modal  bs-example-modal-lg" id="addModal" tabindex="-1" role="dialog">
@@ -95,65 +95,78 @@
                                 <div class="modal-body">
                                     <div class="container">
                                         <form class="form-horizontal form-label-left">
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-3 col-xs-12"><span style="color:red;">*</span>名稱:</label>
-                                                <div class="col-md-7 col-sm-7 col-xs-12">
-                                                    <input type="text " class="form-control col-md-7 col-xs-12">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>名稱:</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <input type="text " class="form-control col-md-7 col-xs-12">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-3 col-xs-12">出檔Type:</label>
-                                                <div class="col-md-7 col-sm-7 col-xs-12">
-                                                    <input type="text " class="form-control col-md-7 col-xs-12">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">出檔Type:</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <input type="text " class="form-control col-md-7 col-xs-12">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-3 col-xs-12">預設值</label>
-                                                <div class="col-md-7 col-sm-7 col-xs-12">
-                                                    <select class="form-control">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">預設值</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <select class="form-control">
                                                         <option value="">否</option>
                                                         <option value="">是</option>
                                                     </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-3 col-xs-12">重新上架異動</label>
-                                                <div class="col-md-7 col-sm- col-xs-12">
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">否</option>
-                                                        <option value="">是</option>
-                                                       
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-3 col-xs-12">開立ITSR</label>
-                                                <div class="col-md-7 col-sm- col-xs-12">
-                                                    <select name="" id="" class="form-control">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">重新上架異動</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <select name="" id="" class="form-control">
                                                         <option value="">否</option>
                                                         <option value="">是</option>
                                                        
                                                     </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-3 col-xs-12">走PC流程</label>
-                                                <div class="col-md-7 col-sm- col-xs-12">
-                                                    <select name="" id="" class="form-control">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">開立ITSR</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <select name="" id="" class="form-control">
                                                         <option value="">否</option>
                                                         <option value="">是</option>
                                                        
                                                     </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group ">
-                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
-                                                <div class="col-md-2 col-sm-2 col-xs-12">
-                                                    <input type="text " class="form-control col-md-7 col-xs-12">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">走PC流程</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <select name="" id="" class="form-control">
+                                                        <option value="">否</option>
+                                                        <option value="">是</option>
+                                                       
+                                                    </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-offset-7 col-sm-offset-7 col-xs-12"></div>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group ">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">排序</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <input type="text " class="form-control col-md-7 col-xs-12">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
@@ -206,66 +219,79 @@
                                 <div class="modal-body">
                                     <div class="container">
                                         <form class="form-horizontal form-label-left">
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>名稱:</label>
-                                                <div class="col-md-7 col-sm-7 col-xs-12">
-                                                    <input type="text " class="form-control col-md-7 col-xs-12">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>名稱:</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <input type="text " class="form-control col-md-7 col-xs-12">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>Type:</label>
-                                                <div class="col-md-7 col-sm-7 col-xs-12">
-                                                    <input type="text " class="form-control col-md-7 col-xs-12">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>Type:</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <input type="text " class="form-control col-md-7 col-xs-12">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-offset-2 col-sm-offset-2 col-xs-12"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>預設值</label>
-                                                <div class="col-md-7 col-sm- col-xs-12">
-                                                    <select name="" id="" class="form-control">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>預設值</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <select name="" id="" class="form-control">
                                                         <option value="">否</option>
                                                         <option value="">是</option>
                                                        
                                                     </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>重新上架異動</label>
-                                                <div class="col-md-7 col-sm- col-xs-12">
-                                                    <select name="" id="" class="form-control">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>重新上架異動</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <select name="" id="" class="form-control">
                                                         <option value="">否</option>
                                                         <option value="">是</option>
                                                        
                                                     </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">開立ITSR</label>
-                                                <div class="col-md-7 col-sm- col-xs-12">
-                                                    <select name="" id="" class="form-control">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">開立ITSR</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <select name="" id="" class="form-control">
                                                         <option value="">否</option>
                                                         <option value="">是</option>
                                                        
                                                     </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">走PC流程</label>
-                                                <div class="col-md-7 col-sm- col-xs-12">
-                                                    <select name="" id="" class="form-control">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">走PC流程</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <select name="" id="" class="form-control">
                                                         <option value="">否</option>
                                                         <option value="">是</option>
                                                        
                                                     </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group ">
-                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
-                                                <div class="col-md-2 col-sm-2 col-xs-12">
-                                                    <input type="text " class="form-control col-md-7 col-xs-12">
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="form-group ">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">排序</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <input type="text " class="form-control col-md-7 col-xs-12">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-offset-7 col-sm-offset-7 col-xs-12"></div>
                                             </div>
                                         </form>
                                     </div>
@@ -390,8 +416,8 @@
                         </div>
                     </div>
                     <!-- end 確認畫面  取消 modal -->
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>

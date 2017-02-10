@@ -14,88 +14,116 @@
                 <div class="row">
                     <!-- 贈品加碼活動條件項目維護內容 -->
                     <form class="form-horizontal form-label-left">
-                        <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">條件項目代碼:</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-md-12">
-                            </div>
-                            <div class="col-md-offset-4 col-sm-offset-4"></div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">條件項目中文說明:</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-md-12">
-                            </div>
-                            <div class="col-md-offset-4 col-sm-offset-4"></div>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <button type="button" class="btn btn-info" ng-show="btnShow1" ng-click="advancedSearch()">進階查詢</button>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-if="advancedControl">
-                            <div class="form-group">
-                                <label class="control-label col-md-4 col-sm-4 col-xs-12">是否顯示:</label>
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <select class="form-control">
-                                        <option>是</option>
-                                        <option>否</option>
-                                    </select>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">條件項目代碼</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-md-12">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">條件項目中文說明</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-md-12">
+                                            </div>
+                                            <div class="col-md-offset-4 col-sm-offset-4"></div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <button type="button" class="btn btn-info" ng-show="btnShow1" ng-click="advancedSearch()">進階查詢</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Min:</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group" ng-if="advancedControl">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">是否顯示</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <select class="form-control">
+                                                <option>是</option>
+                                                <option>否</option>
+                                            </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group" ng-if="advancedControl">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">Min</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-offset-4 col-sm-offset-4"></div>
-                        </div>
-                        <div class="form-group" ng-if="advancedControl">
-                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Max:</label>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" class="form-control col-md-7 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group" ng-if="advancedControl">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4 col-sm-4 col-xs-12">Max</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                            </div>
+                                            <!--<div class="col-md-4 col-sm-4 col-xs-12">
+                                        <button type="button" class="btn btn-info" ng-show="btnShow2" ng-click="advancedSearch()">進階查詢</button>
+                                    </div>-->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <button type="button" class="btn btn-info" ng-show="btnShow2" ng-click="advancedSearch()">進階查詢</button>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-primary">查詢</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#addModal">新增</button>
+                                    <button type="button" class="btn btn-primary">重置</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-offset-4 col-md-4 col-sm-4 col-xs-12">
-                                <button type="button" class="btn btn-primary" style="margin-right: 15px">查詢</button>
-                                <button type="button" class="btn btn-primary" style="margin-right: 15px" data-toggle="modal" href="#addModal">新增</button>
-                                <button type="button" class="btn btn-primary">重置</button>
+                            <br>
+                            <div class="form-group ">
+                                <table id="datatable_giftActivityItem" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-header-color">資料來源</th>
+                                            <th class="table-header-color">條件項目代碼</th>
+                                            <th class="table-header-color">條件項目中文說明</th>
+                                            <th class="table-header-color">Min(包含)</th>
+                                            <th class="table-header-color">Max(包含)</th>
+                                            <th class="table-header-color">是否顯示</th>
+                                            <th class="table-header-color">修改人員</th>
+                                            <th class="table-header-color">修改日期</th>
+                                            <th class="table-header-color col-md-2"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="x in giftActivityItemTableData track by $index">
+                                            <td ng-bind="x.giftActivityItemSource"></td>
+                                            <td ng-bind="x.giftActivityItemNumber"></td>
+                                            <td ng-bind="x.giftActivityItemDescription"></td>
+                                            <td ng-bind="x.giftActivityItemMin"></td>
+                                            <td ng-bind="x.giftActivityItemMax"></td>
+                                            <td ng-bind="x.giftActivityItemDisplay"></td>
+                                            <td ng-bind="x.modifyPersonnel"></td>
+                                            <td ng-bind="x.modifyDate"></td>
+                                            <td>
+                                                <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" data-target="#editModal"><i class="fa fa-pencil"></i> 修改</button>
+                                                <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteModal"><i class="glyphicon glyphicon-remove"></i>刪除</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                        </div>
-                        <br>
-                        <div class="form-group ">
-                            <table id="datatable_giftActivityItem" class="table table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th class="table-header-color">資料來源</th>
-                                        <th class="table-header-color">條件項目代碼</th>
-                                        <th class="table-header-color">條件項目中文說明</th>
-                                        <th class="table-header-color">Min(包含)</th>
-                                        <th class="table-header-color">Max(包含)</th>
-                                        <th class="table-header-color">是否顯示</th>
-                                        <th class="table-header-color">修改人員</th>
-                                        <th class="table-header-color">修改日期</th>
-                                        <th class="table-header-color col-md-2"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="x in giftActivityItemTableData track by $index">
-                                        <td ng-bind="x.giftActivityItemSource"></td>
-                                        <td ng-bind="x.giftActivityItemNumber"></td>
-                                        <td ng-bind="x.giftActivityItemDescription"></td>
-                                        <td ng-bind="x.giftActivityItemMin"></td>
-                                        <td ng-bind="x.giftActivityItemMax"></td>
-                                        <td ng-bind="x.giftActivityItemDisplay"></td>
-                                        <td ng-bind="x.modifyPersonnel"></td>
-                                        <td ng-bind="x.modifyDate"></td>
-                                        <td>
-                                            <button type="button" class="btn  btn-info btn-xs" data-toggle="modal" data-target="#editModal"><i class="fa fa-pencil"></i> 修改</button>
-                                            <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteModal"><i class="glyphicon glyphicon-remove"></i>刪除</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </form>
                     <!-- 贈品加碼活動條件項目維護 end -->
@@ -111,10 +139,11 @@
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件類型:</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <select class="form-control">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件類型</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <select class="form-control">
                                                     <option></option>
                                                     <option></option>
                                                     <option></option>
@@ -126,65 +155,66 @@
                                                     <option></option>
                                                     <option>FET</option>
                                                 </select>
+                                                </div>
+                                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" href="#SQL">SQL</button>
+                                                </div>
                                             </div>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <button type="button" class="btn btn-info" data-toggle="modal" href="#SQL">SQL</button>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目代碼</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                                <div class="col-md-offset-2 col-sm-offset-2"></div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目代碼:</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目中文說明</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                </div>
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目中文說明:</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>是否顯示:</label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <select class="form-control">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>是否顯示</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <select class="form-control">
                                                     <option>是</option>
                                                     <option>否</option>
                                                 </select>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>Min(包含):
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>Min(包含)
                                             </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                                <div class="col-md-offset-2 col-sm-offset-2"></div>
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>Max(包含):
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                                <span style="color:red;">*</span>Max(包含)
                                             </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                                <div class="col-md-offset-2 col-sm-offset-2"></div>
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註:
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">備註
                                             </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <textarea class="form-control" rows="3"></textarea>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                                <div class="col-md-offset-2 col-sm-offset-2"></div>
                                             </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序:</label>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
-                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
+                                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                                    <input type="text" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                                <div class="col-md-offset-2 col-sm-offset-2"></div>
                                             </div>
-                                            <div class="col-md-offset-8 col-sm-offset-8"></div>
                                         </div>
                                     </form>
                                 </div>
@@ -209,7 +239,7 @@
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件類型:</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件類型</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <select class="form-control">
                                                     <option></option>
@@ -229,20 +259,20 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目代碼:</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目代碼</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
                                             <div class="col-md-offset-2 col-sm-offset-2"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目中文說明:</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>條件項目中文說明</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>是否顯示:</label>
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12"><span style="color:red;">*</span>是否顯示</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <select class="form-control">
                                                     <option>是</option>
@@ -252,7 +282,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>Min(包含):
+                                                <span style="color:red;">*</span>Min(包含)
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
@@ -261,7 +291,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                                                <span style="color:red;">*</span>Max(包含):
+                                                <span style="color:red;">*</span>Max(包含)
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
@@ -269,7 +299,7 @@
                                             <div class="col-md-offset-2 col-sm-offset-2"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註:
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">備註
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <textarea class="form-control" rows="3"></textarea>
@@ -277,11 +307,11 @@
                                             <div class="col-md-offset-2 col-sm-offset-2"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序:</label>
-                                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">排序</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="col-md-offset-8 col-sm-offset-8"></div>
+                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
                                         </div>
                                     </form>
                                 </div>
@@ -304,35 +334,31 @@
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal form-label-left">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2 col-sm-2 col-xs-12">SQL:
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">SQL
                                             </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <textarea class="form-control" rows="5"></textarea>
-                                            </div>
-                                            <div class="col-md-offset-2 col-sm-offset-2"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-offset-2 col-sm-offset-2">
-                                                <div class="col-md-8 col-sm-8 col-xs-12">
-                                                    <div class="checkbox">
-                                                        <label class="text-danger"><input type="checkbox">自動更新
-                                                    </label>
-                                                    </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <textarea class="form-control" rows="5"></textarea>
                                                 </div>
+                                                <div class="col-md-offset-3 col-sm-offset-3"></div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-offset-2 col-sm-offset-2">
-                                                <div class="col-md-8 col-sm-8 col-xs-12">
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#editConfirm">儲存SQL</button>
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">執行</button>
+                                            <div class="form-group">
+                                                <div class="col-md-offset-3 col-sm-offset-3">
+                                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                                        <div class="checkbox">
+                                                            <label class="text-danger"><input type="checkbox">自動更新
+                                                    </label>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#editConfirm">儲存SQL</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">執行</button>
                                     <button type="button" class="btn btn-default" data-toggle="modal" href="#cancelEditModal2">取消</button>
                                 </div>
                             </div>
