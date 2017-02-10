@@ -14,57 +14,65 @@
                 <div class="row">
                     <form class="form-horizontal form-label-left">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">條件項目代碼</label>
-                                    <div class="col-md-8 col-sm-8 col-xs-12">
-                                        <input type="text" class="form-control col-md-7 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">條件項目代碼</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">條件項目中文說明</label>
-                                    <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="text" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <button type="button" class="btn btn-info" ng-show="btnShow1" ng-click="advancedSearch()">進階查詢
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">條件項目中文說明</label>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <button type="button" class="btn btn-info" ng-show="btnShow1" ng-click="advancedSearch()">進階查詢
                                 </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group" ng-if="advancedControl">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">Min</label>
-                                    <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
-                                        <div class="col-md-5 col-sm-5">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <label class="text-center col-md-2 col-sm-2">～</label>
-                                        <div class="col-md-5 col-sm-5">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-offset-4 col-sm-offset-4"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group" ng-if="advancedControl">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">Max</label>
-                                    <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
-                                        <div class="col-md-5 col-sm-5">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <label class="text-center col-md-2 col-sm-2">～</label>
-                                        <div class="col-md-5 col-sm-5">
-                                            <input type="text" class="form-control">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group" ng-if="advancedControl">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Min</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+                                                <div class="col-md-5 col-sm-5">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <label class="text-center col-md-2 col-sm-2">～</label>
+                                                <div class="col-md-5 col-sm-5">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-offset-4 col-sm-offset-4"></div>
                                         </div>
                                     </div>
-                                    <!--<div class="col-md-4 col-sm-4 col-xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group" ng-if="advancedControl">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Max</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+                                                <div class="col-md-5 col-sm-5">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <label class="text-center col-md-2 col-sm-2">～</label>
+                                                <div class="col-md-5 col-sm-5">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!--<div class="col-md-4 col-sm-4 col-xs-12">
                                         <button type="button" class="btn btn-info" ng-show="btnShow2" ng-click="advancedSearch()">進階查詢
                                 </button>
                                     </div>-->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

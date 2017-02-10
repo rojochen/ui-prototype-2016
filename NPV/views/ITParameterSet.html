@@ -15,25 +15,29 @@
                     <!-- IT參數設定內容 -->
                     <form class="form-horizontal form-label-left">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">目錄:</label>
-                                    <div class="col-md-8 col-sm-8 col-xs-12">
-                                        <select class="form-control">
-                                    <option></option>
-                                    <option>FET</option>
-                                </select>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">目錄:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>FET</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">分類:</label>
-                                    <div class="col-md-8 col-sm-8 col-xs-12">
-                                        <select class="form-control">
-                                    <option></option>
-                                    <option>F</option>
-                                </select>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">分類:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>F</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -44,22 +48,22 @@
                                             <label class="control-label col-md-4 col-sm-4 col-xs-12">類型:</label>
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                                 <select class="form-control">
-                                    <option></option>
-                                    <option >CARRYING_AMOUNT-帳面金額</option>
-                                    <option>DISC_GPRS_ELEMENT-GPRS</option>
-                                    <option>DISC_IDD_ELEMENT-IDD</option>
-                                    <option>DISC_MMS_ELEMENT-MMS費用</option>
-                                    <option>DISC_OC_ELEMENT-OC Charge</option>
-                                    <option>DISC_SMS_ELEMENT-簡訊費用</option>
-                                    <option>DISC_TAPIN_ELEMENT-TAPIN</option>
-                                    <option>DISC_TAPOUT_ELEMENT-TAPOUT</option>
-                                    <option>DOMESTIC_CALLING-國內通話費</option>
-                                    <option>REMOVE_METHOD-合約到期移除方式</option>
-                                    <option>VAS_VALIDITY-服務合約有效期限</option>
-                                    <option>VAS_VIDEO_ELEMENT-影音(Video)加值服務</option>
-                                    <option>VAS_VOICE_ELEMENT(Voice)加值服務</option>
-    
-                                </select>
+                                                    <option></option>
+                                                    <option >CARRYING_AMOUNT-帳面金額</option>
+                                                    <option>DISC_GPRS_ELEMENT-GPRS</option>
+                                                    <option>DISC_IDD_ELEMENT-IDD</option>
+                                                    <option>DISC_MMS_ELEMENT-MMS費用</option>
+                                                    <option>DISC_OC_ELEMENT-OC Charge</option>
+                                                    <option>DISC_SMS_ELEMENT-簡訊費用</option>
+                                                    <option>DISC_TAPIN_ELEMENT-TAPIN</option>
+                                                    <option>DISC_TAPOUT_ELEMENT-TAPOUT</option>
+                                                    <option>DOMESTIC_CALLING-國內通話費</option>
+                                                    <option>REMOVE_METHOD-合約到期移除方式</option>
+                                                    <option>VAS_VALIDITY-服務合約有效期限</option>
+                                                    <option>VAS_VIDEO_ELEMENT-影音(Video)加值服務</option>
+                                                    <option>VAS_VOICE_ELEMENT(Voice)加值服務</option>
+                    
+                                                </select>
                                             </div>
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                                 <button type="button" class="btn btn-info" ng-show="btnShow1" ng-click="advancedSearch()">進階查詢</button>
@@ -68,7 +72,7 @@
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <div class="form-group" ng-if="advancedControl">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">KEY:</label>
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">KEY</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" class="form-control col-md-7 col-xs-12">
                                             </div>
@@ -76,15 +80,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="form-group" ng-if="advancedControl">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">值:</label>
-                                    <div class="col-md-8 col-sm-8 col-xs-12">
-                                        <input type="text" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                    <!--<div class="col-md-2 col-sm-2 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group" ng-if="advancedControl">
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">值:</label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input type="text" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                            <!--<div class="col-md-2 col-sm-2 col-xs-12">
                                         <button type="button" class="btn btn-info" ng-show="btnShow2" ng-click="advancedSearch()">進階查詢</button>
                                     </div>-->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +157,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>目錄:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>目錄</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <select class="form-control">
                                                     <option></option>
@@ -160,7 +168,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>分類:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>分類</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                                         <select class="form-control">
                                                     <option></option>
@@ -174,7 +182,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>類型:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>類型</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <select class="form-control" ng-model="type">
                                                      <option></option>
@@ -198,7 +206,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group" ng-show="type==='momey'">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>群組:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>群組</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                                         <select class="form-control">
                                                     <option></option>
@@ -222,7 +230,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>值: </label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>值</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
                                                     </div>
@@ -230,7 +238,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">PARAMETMR:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">PARAMETMR</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
                                                     </div>
@@ -238,7 +246,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md4 col-sm-4 col-xs-12">排序:</label>
+                                                    <label class="control-label col-md4 col-sm-4 col-xs-12">排序</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
                                                     </div>
@@ -270,7 +278,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>目錄:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>目錄</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <select class="form-control" disabled>
                                                     <option></option>
@@ -281,7 +289,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>分類:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>分類</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <select class="form-control" disabled>
                                                     <option></option>
@@ -292,7 +300,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>類型:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>類型</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <select class="form-control" disabled>
                                                     <option></option>
@@ -316,7 +324,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>群組:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"><span style="color:red;">*</span>群組</label>
                                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                                         <select class="form-control">
                                                     <option></option>
@@ -330,7 +338,7 @@
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
                                                     <label class="control-label col-md-4 col-sm-4 col-xs-12">
-                                                <span style="color:red;">*</span>KEY:
+                                                <span style="color:red;">*</span>KEY
                                             </label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
@@ -340,7 +348,7 @@
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
                                                     <label class="control-label col-md-4 col-sm-4 col-xs-12">
-                                                <span style="color:red;">*</span>值:
+                                                <span style="color:red;">*</span>值
                                             </label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
@@ -349,7 +357,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">PARAMETMR:
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">PARAMETMR
                                             </label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
@@ -358,7 +366,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">排序:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">排序</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
                                                     </div>
@@ -390,7 +398,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">目錄:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">目錄</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
                                                     </div>
@@ -399,7 +407,7 @@
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
                                                     <label class="control-label col-md-4 col-sm-4 col-xs-12">
-                                                分類:
+                                                分類
                                             </label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
@@ -408,7 +416,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">類型:
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">類型
                                             </label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
@@ -473,7 +481,7 @@
                                     <form class="form-horizontal form-label-left">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>目錄:</label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>目錄</label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
                                                 </div>
@@ -481,7 +489,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>
-                                            分類:
+                                            分類
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
@@ -490,7 +498,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>
-                                            類型:
+                                            類型
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
@@ -499,7 +507,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>
-                                            類型中文名稱:
+                                            類型中文名稱
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
@@ -508,7 +516,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">是否有群組
-                                            :
+                                
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <select class="form-control">
@@ -521,7 +529,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">是否有預設值
-                                            :
+                                            
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <select class="form-control">
@@ -557,7 +565,7 @@
                                     <form class="form-horizontal form-label-left">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>目錄:</label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>目錄</label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
                                                 </div>
@@ -566,7 +574,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>
-                                            分類:
+                                            分類
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
@@ -575,7 +583,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>
-                                            類型:
+                                            類型
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
@@ -584,7 +592,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12"><span style="color:red;">*</span>
-                                            類型中文名稱:
+                                            類型中文名稱
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
@@ -593,7 +601,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">是否有群組
-                                            :
+                                            
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <select class="form-control">
@@ -606,7 +614,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">是否有預設值
-                                            :
+                                            
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <select class="form-control">
@@ -643,7 +651,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">類型:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">類型</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12" disabled>
                                                     </div>
@@ -651,7 +659,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">群組代碼:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">群組代碼</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
                                                     </div>
@@ -659,7 +667,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"> 群組名稱:</label>
+                                                    <label class="control-label col-md-4 col-sm-4 col-xs-12"> 群組名稱</label>
                                                     <div class="col-md-8 col-sm-8 col-xs-12">
                                                         <input type="text" class="form-control col-md-7 col-xs-12">
                                                     </div>
@@ -721,7 +729,7 @@
                                     <form class="form-horizontal form-label-left">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">群組代碼:</label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">群組代碼</label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
                                                 </div>
@@ -729,7 +737,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">
-                                                群組名稱:
+                                                群組名稱
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
@@ -761,7 +769,7 @@
                                     <form class="form-horizontal form-label-left">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">群組代碼:</label>
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">群組代碼</label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
                                                 </div>
@@ -769,7 +777,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">
-                                                群組名稱:
+                                                群組名稱
                                             </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <input type="text" class="form-control col-md-7 col-xs-12">
